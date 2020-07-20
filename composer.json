@@ -1,6 +1,6 @@
 {
-	"name": "pvc/core",
-	"description": "pvc INTERFACES library",
+	"name": "pvc/interfaces",
+	"description": "pvc interfaces library",
 	"type": "project",
 	"authors": [
 		{
