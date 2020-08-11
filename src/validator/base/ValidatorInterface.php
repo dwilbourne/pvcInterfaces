@@ -3,7 +3,6 @@
 namespace pvc\validator\base;
 
 use pvc\msg\MsgRetrievalInterface;
-use pvc\msg\UserMsgInterface;
 
 interface ValidatorInterface
 {
