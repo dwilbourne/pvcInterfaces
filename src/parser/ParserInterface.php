@@ -17,14 +17,12 @@ interface ParserInterface
      */
     public function parse(string $data): bool;
 
-
     /**
      * @function getParsedValue
      * @return mixed
      */
     public function getParsedValue();
-
-
+    
     /**
      * @function getErrmsg
      * @return MsgRetrievalInterface|null

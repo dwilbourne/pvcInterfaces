@@ -6,11 +6,9 @@
 
 namespace pvc\msg;
 
-
 interface MsgFormatterInterface
 {
     public function format(MsgRetrievalInterface $msg) : string;
 
     public function outputMsgVars(bool $value) : void;
-
 }
