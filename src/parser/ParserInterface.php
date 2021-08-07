@@ -22,7 +22,7 @@ interface ParserInterface
      * @return mixed
      */
     public function getParsedValue();
-    
+
     /**
      * @function getErrmsg
      * @return MsgRetrievalInterface|null
