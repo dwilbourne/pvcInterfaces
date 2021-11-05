@@ -1,34 +1,25 @@
 <?php declare(strict_types = 1);
 /**
- * @package: pvc
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
- * @version: 1.0
  */
 
 namespace pvc\msg;
 
 /**
  * Interface MsgInterface
- * @package pvc\msg
  */
-interface MsgInterface extends MsgRetrievalInterface
+interface MsgInterface
 {
     /**
-     * addMsgVar
-     * @param null $var
+     * getMsgVars
+     * @return string[]
      */
-    public function addMsgVar($var) : void;
+    public function getMsgVars() : array;
 
     /**
-     * setMsgVars
-     * @param mixed[] $vars
+     * getMsgText
+     * @return string
      */
-    public function setMsgVars(array $vars) : void;
+    public function getMsgText(): string;
 
-
-    /**
-     * setMsgText
-     * @param string $msgText
-     */
-    public function setMsgText(string $msgText): void;
 }
