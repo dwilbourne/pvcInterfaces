@@ -4,7 +4,7 @@
  * @version 1.0
  */
 
-namespace pvc\validator\base;
+namespace pvc\validator;
 
 
 /**
