@@ -7,12 +7,12 @@
 
 namespace pvc\struct\lists\factory;
 
-use pvc\struct\lists\ListUnordered;
+use pvc\struct\lists\ListUnorderedInterface;
 
 /**
  * Class ListFactoryInterface
  */
 interface ListUnorderedFactoryInterface
 {
-    public function makeList() : ListUnordered;
+    public function makeList() : ListUnorderedInterface;
 }

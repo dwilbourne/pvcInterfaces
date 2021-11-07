@@ -21,5 +21,4 @@ interface MsgInterface
      * @return string
      */
     public function getMsgText(): string;
-
 }

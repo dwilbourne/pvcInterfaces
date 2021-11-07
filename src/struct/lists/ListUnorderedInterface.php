@@ -10,7 +10,6 @@ namespace pvc\struct\lists;
 use ArrayAccess;
 use Countable;
 use Iterator;
-use pvc\validator\base\ValidatorInterface;
 
 /**
  * Interface ListUnorderedInterface
@@ -19,7 +18,7 @@ use pvc\validator\base\ValidatorInterface;
  * This interface is shared by both ordered lists and unordered lists.  Ordered lists must use
  * non-negative integers as keys (kept in sequence order) whereas unordered lists can, like
  * php arrays, use either strings or integers.  Because the interface is shared, the arguments
- * to the methods cannot by specifically typed in the call signature of the method.
+ * to the methods cannot be specifically typed in the call signature of the method.
  *
  */
 interface ListUnorderedInterface extends Iterator, ArrayAccess, Countable
@@ -39,7 +38,7 @@ interface ListUnorderedInterface extends Iterator, ArrayAccess, Countable
 
     /**
      * @function getElements
-     * @return mixed[]
+     * @return array
      */
     public function getElements(): array;
 

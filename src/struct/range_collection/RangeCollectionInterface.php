@@ -6,7 +6,6 @@
 
 namespace pvc\struct\range_collection;
 
-
 interface RangeCollectionInterface
 {
     public function getRangeElements() : array;

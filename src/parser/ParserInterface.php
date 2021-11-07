@@ -2,7 +2,7 @@
 
 namespace pvc\parser;
 
-use pvc\msg\MsgRetrievalInterface;
+use pvc\msg\MsgInterface;
 
 /**
  * Interface ParserInterface
@@ -25,7 +25,7 @@ interface ParserInterface
 
     /**
      * @function getErrmsg
-     * @return MsgRetrievalInterface|null
+     * @return MsgInterface|null
      */
-    public function getErrmsg(): ?MsgRetrievalInterface;
+    public function getErrmsg(): ?MsgInterface;
 }

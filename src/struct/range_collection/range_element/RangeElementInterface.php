@@ -6,8 +6,6 @@
 
 namespace pvc\struct\range_collection\range_element;
 
-
 interface RangeElementInterface
 {
-
 }

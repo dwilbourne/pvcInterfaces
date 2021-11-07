@@ -5,10 +5,10 @@
  * @version: 1.0
  */
 
-namespace pvc\struct\tree\iface\node;
+namespace pvc\struct\tree\node;
 
 use pvc\struct\lists\ListOrderedInterface;
-use pvc\struct\tree\iface\tree\TreeOrderedInterface;
+use pvc\struct\tree\TreeOrderedInterface;
 
 /**
  * Interface TreenodeOrderedInterface

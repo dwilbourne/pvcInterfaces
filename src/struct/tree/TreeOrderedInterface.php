@@ -1,9 +1,8 @@
 <?php declare(strict_types = 1);
 
-namespace pvc\struct\tree\iface\tree;
+namespace pvc\struct\tree;
 
-use pvc\struct\lists\ListOrderedInterface;
-use pvc\struct\tree\iface\node\TreenodeOrderedInterface;
+use pvc\struct\tree\node\TreenodeOrderedInterface;
 
 interface TreeOrderedInterface
 {

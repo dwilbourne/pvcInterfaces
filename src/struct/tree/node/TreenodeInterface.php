@@ -5,9 +5,9 @@
  * @version: 1.0
  */
 
-namespace pvc\struct\tree\iface\node;
+namespace pvc\struct\tree\node;
 
-use pvc\validator\base\ValidatorInterface;
+use pvc\validator\ValidatorInterface;
 
 /**
  * Interface TreenodeUnorderedInterface.
@@ -37,7 +37,7 @@ interface TreenodeInterface
      * @function getParentId
      * @return int|null
      */
-    public function getParentId();
+    public function getParentId() :? int;
 
     /**
      * @function getTreeId
@@ -56,7 +56,7 @@ interface TreenodeInterface
      * @param int|null $parentId
      * @return void
      */
-    public function setParentId($parentId) : void;
+    public function setParentId(?int $parentId) : void;
 
     /**
      * @function setTreeId

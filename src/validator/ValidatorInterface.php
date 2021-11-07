@@ -2,7 +2,7 @@
 
 namespace pvc\validator;
 
-use pvc\msg\MsgRetrievalInterface;
+use pvc\msg\MsgInterface;
 
 interface ValidatorInterface
 {
@@ -15,7 +15,7 @@ interface ValidatorInterface
 
     /**
      * @function getErrMsg
-     * @return MsgRetrievalInterface|null
+     * @return MsgInterface|null
      */
-    public function getErrMsg(): ?MsgRetrievalInterface;
+    public function getErrMsg(): ?MsgInterface;
 }
