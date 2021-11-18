@@ -2,13 +2,13 @@
 
 namespace pvc\parser;
 
-use pvc\msg\MsgInterface;
+use pvc\msg\HasMsgInterface;
 
 /**
  * Interface ParserInterface
  * @package pvc\parser
  */
-interface ParserInterface
+interface ParserInterface extends HasMsgInterface
 {
     /**
      * @function parse
@@ -23,9 +23,4 @@ interface ParserInterface
      */
     public function getParsedValue();
 
-    /**
-     * @function getErrmsg
-     * @return MsgInterface|null
-     */
-    public function getErrmsg(): ?MsgInterface;
 }

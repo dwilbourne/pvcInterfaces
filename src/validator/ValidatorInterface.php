@@ -2,9 +2,9 @@
 
 namespace pvc\validator;
 
-use pvc\msg\MsgInterface;
+use pvc\msg\HasMsgInterface;
 
-interface ValidatorInterface
+interface ValidatorInterface extends HasMsgInterface
 {
     /**
      * @function validate
@@ -13,9 +13,4 @@ interface ValidatorInterface
      */
     public function validate($data): bool;
 
-    /**
-     * @function getErrMsg
-     * @return MsgInterface|null
-     */
-    public function getErrMsg(): ?MsgInterface;
 }
