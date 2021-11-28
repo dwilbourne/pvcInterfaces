@@ -20,5 +20,5 @@ interface MsgInterface
      * getMsgText
      * @return string
      */
-    public function getMsgText(): string;
+    public function getMsgId(): int;
 }
