@@ -5,7 +5,7 @@ declare (strict_types=1);
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 
-namespace pvc\msg;
+namespace pvc\msg\extractors;
 
 interface MsgExtractorInterface
 {
