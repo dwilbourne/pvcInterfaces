@@ -12,7 +12,8 @@ interface MsgExtractorInterface
     /**
      * extract
      * @param int $msgId
+     * @param bool $plural
      * @return string
      */
-    public function extract(int $msgId): string;
+    public function extract(int $msgId, bool $plural = false): string;
 }
