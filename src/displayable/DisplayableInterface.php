@@ -13,5 +13,9 @@ namespace pvc\displayable;
  */
 interface DisplayableInterface
 {
+    /**
+     * display
+     * @return string
+     */
     public function display(): string;
 }
