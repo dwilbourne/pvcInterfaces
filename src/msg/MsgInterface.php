@@ -5,20 +5,20 @@
 
 namespace pvc\msg;
 
+use pvc\displayable\DisplayableInterface;
+
 /**
  * Interface MsgInterface
  */
-interface MsgInterface
+interface MsgInterface extends DisplayableInterface
 {
     /**
-     * getMsgVars
-     * @return string[]
+     * outputMsgVars
+     * @param bool $outputYn
+     *
+     * controls whether variables containing data should be displayed when the message is displayed.
+     * Usually user messages should not contain data, error messages (which users do not see) should
+     * contain data (for debugging purposes)
      */
-    public function getMsgVars() : array;
-
-    /**
-     * getMsgText
-     * @return string
-     */
-    public function getMsgId(): int;
+    public function outputMsgVars(bool $outputYn): void;
 }
