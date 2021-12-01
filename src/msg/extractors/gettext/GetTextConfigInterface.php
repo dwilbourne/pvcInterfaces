@@ -13,11 +13,11 @@ namespace pvc\msg\extractors\gettext;
 interface GetTextConfigInterface
 {
     /**
-     * getGetTextMsgId
+     * getGetTextMsgIds
      * @param int $msgId
-     * @return string
+     * @return array|string[]
      */
-    public function getGetTextMsgId(int $msgId, bool $plural = false): string;
+    public function getGetTextMsgIds(int $msgId): array;
 
     /**
      * getTextDomain
