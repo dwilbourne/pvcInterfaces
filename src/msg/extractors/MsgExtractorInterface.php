@@ -16,16 +16,7 @@ interface MsgExtractorInterface
      * extract
      * @param int $msgId
      * @return string
-     * this method should be used when the message does not have plural forms
      */
-    public function extract(int $msgId): string;
+    public function extract(int $msgId, int $itemCount = 0): string;
 
-    /**
-     * extractPlural
-     * @param int $msgId
-     * @param int $itemCount
-     * @return string
-     * this method should be used when the messages has plural forms.
-     */
-    public function extractPlural(int $msgId, int $itemCount): string;
 }

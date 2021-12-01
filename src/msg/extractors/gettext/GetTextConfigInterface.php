@@ -17,7 +17,7 @@ interface GetTextConfigInterface
      * @param int $msgId
      * @return string
      */
-    public function getGetTextMsgId(int $msgId): string;
+    public function getGetTextMsgId(int $msgId, bool $plural = false): string;
 
     /**
      * getTextDomain
