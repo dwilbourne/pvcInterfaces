@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace pvc\validator;
 
@@ -12,5 +14,4 @@ interface ValidatorInterface extends HasMsgInterface
      * @return bool
      */
     public function validate($data): bool;
-
 }
