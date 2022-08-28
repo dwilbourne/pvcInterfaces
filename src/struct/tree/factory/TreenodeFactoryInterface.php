@@ -5,9 +5,9 @@
  * @version: 1.0
  */
 
-namespace pvc\struct\tree\iface\factory;
+namespace pvc\struct\tree\factory;
 
-use pvc\struct\tree\iface\node\TreenodeInterface;
+use pvc\struct\tree\node\TreenodeInterface;
 
 /**
  * Interface TreenodeFactoryInterface

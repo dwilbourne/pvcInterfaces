@@ -7,7 +7,6 @@
 
 namespace pvc\struct\lists;
 
-use pvc\validator\base\ValidatorInterface;
 use Iterator;
 use ArrayAccess;
 use Countable;
@@ -32,7 +31,7 @@ interface ListOrderedInterface extends Iterator, ArrayAccess, Countable
 
     /**
      * @function getElements
-     * @return mixed[]
+     * @return array
      */
     public function getElements(): array;
 

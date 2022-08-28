@@ -1,34 +1,16 @@
 <?php declare(strict_types = 1);
 /**
- * @package: pvc
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
- * @version: 1.0
  */
 
 namespace pvc\msg;
 
+use Symfony\Contracts\Translation\TranslatableInterface;
+
 /**
- * Interface MsgInterface
- * @package pvc\msg
+ * Interface MsgInterface.  Private-label the Symfony Translatable interface.  Messages must implement the following
+ * method: trans(Translatorinterface $translator, string $locale).
  */
-interface MsgInterface extends MsgRetrievalInterface
+interface MsgInterface extends TranslatableInterface
 {
-    /**
-     * addMsgVar
-     * @param null $var
-     */
-    public function addMsgVar($var) : void;
-
-    /**
-     * setMsgVars
-     * @param mixed[] $vars
-     */
-    public function setMsgVars(array $vars) : void;
-
-
-    /**
-     * setMsgText
-     * @param string $msgText
-     */
-    public function setMsgText(string $msgText): void;
 }

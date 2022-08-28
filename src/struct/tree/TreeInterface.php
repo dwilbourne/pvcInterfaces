@@ -1,9 +1,8 @@
 <?php declare(strict_types = 1);
 
-namespace pvc\struct\tree\iface\tree;
+namespace pvc\struct\tree;
 
-use pvc\struct\tree\iface\node\TreenodeInterface;
-use pvc\struct\tree\node\Treenode;
+use pvc\struct\tree\node\TreenodeInterface;
 
 interface TreeInterface
 {
@@ -106,7 +105,7 @@ interface TreeInterface
 
     /**
      * @function deleteNode
-     * @param Treenode $node
+     * @param TreenodeInterface $node
      * @param bool $deleteBranchOK
      */
     public function deleteNode(TreenodeInterface $node, bool $deleteBranchOK = false): void;

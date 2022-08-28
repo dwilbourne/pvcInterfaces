@@ -10,18 +10,20 @@
 	],
 	"license": "MIT",
 	"config": {
-		"php": "7.4.3"
+		"php": "7.4.26"
 	},
 	"autoload": {
 		"psr-4": {
-			"pvc\\": "src/",
-			"tests\\": "tests/"
+			"pvc\\": "src/"
 		}
 	},
 	"minimum-stability": "dev",
 	"require-dev": {
-		"squizlabs/php_codesniffer": "^3.5",
-		"friendsofphp/php-cs-fixer": "^3",
-		"phpstan/phpstan": "^0.12"
+		"squizlabs/php_codesniffer": "4.0.x-dev",
+		"friendsofphp/php-cs-fixer": "dev-master",
+		"phpstan/phpstan": "1.4.x-dev"
+	},
+	"require": {
+		"symfony/translation-contracts": "2.5.x-dev"
 	}
 }
