@@ -11,11 +11,11 @@ use Locale;
 
 interface FrmtrInterface
 {
-    public function setFormat(string $format) : void;
+    public function setFormat(string $format) : bool;
 
     public function getFormat() : string;
 
-    public function setLocale(Locale $locale) : void;
+    public function setLocale(Locale $locale) : bool;
 
     public function getLocale() : Locale;
 }
