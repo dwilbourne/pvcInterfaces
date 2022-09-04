@@ -6,7 +6,4 @@
     <file>src</file>
     <file>tests</file>
 
-    <!-- these fixtures do not have namespaces or proper class names.... -->
-    <exclude-pattern>tests/parser/file/php/fixtures*</exclude-pattern>
-
 </ruleset>

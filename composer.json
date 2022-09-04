@@ -17,10 +17,11 @@
 			"pvc\\": "src/"
 		}
 	},
-	"minimum-stability": "dev",
+	"require": {
+		"ext-intl": "*"
+	},
 	"require-dev": {
-		"squizlabs/php_codesniffer": "^4",
-		"friendsofphp/php-cs-fixer": "dev-master",
+		"squizlabs/php_codesniffer": "^3",
 		"phpstan/phpstan": "^1"
 	}
 }
