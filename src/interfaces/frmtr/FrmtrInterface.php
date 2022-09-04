@@ -7,15 +7,13 @@ declare (strict_types=1);
 
 namespace pvc\interfaces\frmtr;
 
-use Locale;
-
 interface FrmtrInterface
 {
     public function setFormat(string $format) : bool;
 
     public function getFormat() : string;
 
-    public function setLocale(Locale $locale) : bool;
+    public function setLocale(string $locale) : bool;
 
-    public function getLocale() : Locale;
+    public function getLocale() : string;
 }
