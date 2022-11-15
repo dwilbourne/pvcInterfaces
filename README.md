@@ -1,1 +1,1 @@
-The pvc Interfaces package bundles all the interfaces used in the pvc umbrella into a single package.  This is useful when implementing polymorphism, specifically when you want a class to imlement an interface but don't need all the code in a library which is the primary implementation of the interface.
+The pvc Interfaces package bundles all the interfaces used in the pvc libraries into a single package.
