@@ -9,5 +9,11 @@ namespace pvc\interfaces\msg;
 
 interface DomainCatalogFileLoaderInterface
 {
-    public function loadCatalogFile(DomainCatalogInterface $domainCatalog, string $filename) : void;
+    public function loadCatalogFile(string $filename) : void;
+
+    public function getDomain() : string;
+
+    public function getLocale(): string;
+
+    public function getMessages(): array;
 }
