@@ -7,13 +7,12 @@ declare (strict_types=1);
 
 namespace pvc\interfaces\msg;
 
-interface DomainCatalogFileLoaderInterface
+interface DomainCatalogLoaderInterface
 {
     /**
-     * loadCatalogFile
-     * @param string $filename
+     * loadCatalog
      */
-    public function loadCatalogFile(string $filename) : void;
+    public function loadCatalog() : void;
 
     /**
      * getDomain
