@@ -11,15 +11,15 @@ interface DomainCatalogInterface
 {
     /**
      * getDomain
-     * @return string|null
+     * @return string
      */
-    public function getDomain():? string;
+    public function getDomain(): string;
 
     /**
      * getLocale
-     * @return string|null
+     * @return string
      */
-    public function getLocale():? string;
+    public function getLocale(): string;
 
     /**
      * getMessages
