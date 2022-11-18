@@ -28,7 +28,7 @@ interface DomainCatalogLoaderInterface
 
     /**
      * getMessages
-     * @return array<MsgInterface>
+     * @return array<string>
      */
     public function getMessages(): array;
 }
