@@ -23,7 +23,7 @@ interface DomainCatalogInterface
 
     /**
      * getMessages
-     * @return array<MsgInterface>
+     * @return array<string>
      */
     public function getMessages(): array;
 
