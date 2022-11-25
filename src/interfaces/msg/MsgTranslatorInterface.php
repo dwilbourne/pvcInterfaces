@@ -15,5 +15,5 @@ interface MsgTranslatorInterface
      * @param mixed[] $parameters
      * @return string
      */
-    public function trans(string $messageId, array $parameters): string;
+    public function trans(MsgInterface $msg): string;
 }
