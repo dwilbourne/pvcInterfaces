@@ -7,11 +7,9 @@ declare (strict_types=1);
 
 namespace pvc\interfaces\err;
 
-use pvc\interfaces\msg\MsgInterface;
-
 interface ExceptionInterface
 {
-	public function setMsg(MsgInterface $msg): void;
+	public function setMsg(ExceptionMsgInterface $msg): void;
 
-	public function getMsg(): ?MsgInterface;
+	public function getMsg(): ExceptionMsgInterface;
 }
