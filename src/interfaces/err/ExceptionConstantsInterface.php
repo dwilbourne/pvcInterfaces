@@ -20,5 +20,10 @@ interface ExceptionConstantsInterface
 	 */
 	public function getMsgCode(string $msgId): ?int;
 
+	/**
+	 * getMsgId
+	 * @param int $code
+	 * @return string|null
+	 */
 	public function getMsgId(int $code): ?string;
 }
