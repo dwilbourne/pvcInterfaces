@@ -10,15 +10,21 @@ namespace pvc\interfaces\msg;
 
 interface MsgInterface
 {
-    /**
-     * getMsgId
-     * @return string
-     */
-    public function getMsgId(): string;
+	/**
+	 * getMsgId
+	 * @return string
+	 */
+	public function getMsgId(): string;
 
-    /**
-     * getParameters
-     * @return mixed[]
-     */
-    public function getParameters(): array;
+	/**
+	 * getDomain
+	 * @return string
+	 */
+	public function getDomain(): string;
+
+	/**
+	 * getParameters
+	 * @return mixed[]
+	 */
+	public function getParameters(): array;
 }
