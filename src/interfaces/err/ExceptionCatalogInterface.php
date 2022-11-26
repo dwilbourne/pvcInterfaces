@@ -7,11 +7,13 @@ declare (strict_types=1);
 
 namespace pvc\interfaces\err;
 
+use pvc\interfaces\msg\DomainCatalogInterface;
+
 /**
  * Interface ExceptionConstantsInterface
  * @package pvc\interfaces\err
  */
-interface ExceptionConstantsInterface
+interface ExceptionCatalogInterface extends DomainCatalogInterface
 {
 	/**
 	 * getMsgCode
@@ -20,10 +22,4 @@ interface ExceptionConstantsInterface
 	 */
 	public function getMsgCode(string $msgId): ?int;
 
-	/**
-	 * getMsgId
-	 * @param int $code
-	 * @return string|null
-	 */
-	public function getMsgId(int $code): ?string;
 }
