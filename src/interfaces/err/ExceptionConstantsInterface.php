@@ -7,7 +7,16 @@ declare (strict_types=1);
 
 namespace pvc\interfaces\err;
 
+/**
+ * Interface ExceptionConstantsInterface
+ * @package pvc\interfaces\err
+ */
 interface ExceptionConstantsInterface
 {
+	/**
+	 * getMsgCode
+	 * @param string $msgId
+	 * @return int|null
+	 */
 	public function getMsgCode(string $msgId): ?int;
 }
