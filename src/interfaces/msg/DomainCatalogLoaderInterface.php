@@ -16,12 +16,6 @@ interface DomainCatalogLoaderInterface
     public function loadCatalog(): void;
 
     /**
-     * getDomainId
-     * @return int
-     */
-    public function getDomainId(): int;
-
-    /**
      * getDomain
      * @return string
      */

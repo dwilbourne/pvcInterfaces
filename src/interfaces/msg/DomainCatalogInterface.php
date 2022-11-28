@@ -11,12 +11,6 @@ namespace pvc\interfaces\msg;
 interface DomainCatalogInterface
 {
     /**
-     * getDomainId
-     * @return int
-     */
-    public function getDomainId(): int;
-
-    /**
      * getDomain
      * @return string
      */
