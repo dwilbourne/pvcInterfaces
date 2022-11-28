@@ -1,6 +1,7 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
@@ -11,5 +12,7 @@ use pvc\interfaces\msg\DomainCatalogLoaderInterface;
 
 interface MsgConfigInterface
 {
-	public static function getDomainCatalogLoader(string $domain): DomainCatalogLoaderInterface;
+    public static function getDomainCatalogLoader(string $domain): DomainCatalogLoaderInterface;
+
+    public static function getDomainId(string $domain): int;
 }
