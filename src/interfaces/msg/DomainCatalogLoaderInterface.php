@@ -1,6 +1,7 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
@@ -12,13 +13,19 @@ interface DomainCatalogLoaderInterface
     /**
      * loadCatalog
      */
-    public function loadCatalog() : void;
+    public function loadCatalog(): void;
+
+    /**
+     * getDomainId
+     * @return int
+     */
+    public function getDomainId(): int;
 
     /**
      * getDomain
      * @return string
      */
-    public function getDomain() : string;
+    public function getDomain(): string;
 
     /**
      * getLocale
