@@ -1,6 +1,7 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
@@ -9,6 +10,12 @@ namespace pvc\interfaces\msg;
 
 interface DomainCatalogInterface
 {
+    /**
+     * getDomainId
+     * @return int
+     */
+    public function getDomainId(): int;
+
     /**
      * getDomain
      * @return string
@@ -32,5 +39,5 @@ interface DomainCatalogInterface
      * @param string $messageId
      * @return string
      */
-    public function getMessage(string $messageId) : string;
+    public function getMessage(string $messageId): string;
 }
