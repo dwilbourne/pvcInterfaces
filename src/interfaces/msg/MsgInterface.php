@@ -27,10 +27,4 @@ interface MsgInterface
 	 * @return mixed[]
 	 */
 	public function getParameters(): array;
-
-	/**
-	 * getLocale
-	 * @return string|null
-	 */
-	public function getLocale(): ?string;
 }
