@@ -17,9 +17,6 @@
 			"pvc\\": "src/"
 		}
 	},
-	"require": {
-		"ext-intl": "*"
-	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "*",
 		"phpstan/phpstan": "*"
