@@ -21,5 +21,4 @@ interface ExceptionCatalogInterface extends DomainCatalogInterface
 	 * @return int|null
 	 */
 	public function getMsgCode(string $msgId): ?int;
-
 }
