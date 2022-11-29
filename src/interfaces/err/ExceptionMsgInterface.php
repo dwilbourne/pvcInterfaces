@@ -1,6 +1,7 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
@@ -15,15 +16,21 @@ use pvc\interfaces\msg\MsgInterface;
  */
 interface ExceptionMsgInterface extends MsgInterface
 {
-	/**
-	 * setCode
-	 * @param int $code
-	 */
-	public function setCode(int $code): void;
+    /**
+     * getMsgId
+     * @return string
+     */
+    public function getMsgId(): string;
 
-	/**
-	 * getCode
-	 * @return int
-	 */
-	public function getCode(): int;
+    /**
+     * getParameters
+     * @return mixed[]
+     */
+    public function getParameters(): array;
+
+    /**
+     * getCode
+     * @return int
+     */
+    public function getCode(): int;
 }
