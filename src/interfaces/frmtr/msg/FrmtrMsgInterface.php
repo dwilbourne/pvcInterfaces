@@ -1,6 +1,7 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
@@ -12,5 +13,5 @@ use pvc\interfaces\msg\MsgInterface;
 
 interface FrmtrMsgInterface extends FrmtrInterface
 {
-    public function format(MsgInterface $msg) : string;
+	public function format(MsgInterface $msg): string;
 }

@@ -1,6 +1,7 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
@@ -21,4 +22,10 @@ interface ExceptionCatalogInterface extends DomainCatalogInterface
 	 * @return int|null
 	 */
 	public function getMsgCode(string $msgId): ?int;
+
+	/**
+	 * getMessages
+	 * @return array<string <array<mixed>>
+	 */
+	public function getMessages(): array;
 }
