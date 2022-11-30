@@ -27,10 +27,4 @@ interface ExceptionMsgInterface extends MsgInterface
      * @return mixed[]
      */
     public function getParameters(): array;
-
-    /**
-     * getCode
-     * @return int
-     */
-    public function getCode(): int;
 }

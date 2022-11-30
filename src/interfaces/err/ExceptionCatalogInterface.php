@@ -8,24 +8,29 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\err;
 
-use pvc\interfaces\msg\DomainCatalogInterface;
-
 /**
  * Interface ExceptionConstantsInterface
  * @package pvc\interfaces\err
  */
-interface ExceptionCatalogInterface extends DomainCatalogInterface
+interface ExceptionCatalogInterface
 {
 	/**
 	 * getMsgCode
 	 * @param string $msgId
-	 * @return int|null
+	 * @return int
 	 */
-	public function getMsgCode(string $msgId): ?int;
+	public function getMsgCode(string $msgId): int;
 
 	/**
 	 * getMessages
-	 * @return array<string <array<mixed>>
+	 * @return array<string, string>
 	 */
 	public function getMessages(): array;
+
+	/**
+	 * getMessage
+	 * @param string $msgId
+	 * @return string
+	 */
+	public function getMessage(string $msgId): string;
 }
