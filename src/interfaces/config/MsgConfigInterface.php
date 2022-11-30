@@ -13,6 +13,4 @@ use pvc\interfaces\msg\DomainCatalogLoaderInterface;
 interface MsgConfigInterface
 {
     public static function getDomainCatalogLoader(string $domain): DomainCatalogLoaderInterface;
-
-    public static function getDomainId(string $domain): int;
 }
