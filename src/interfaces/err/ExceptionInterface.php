@@ -1,11 +1,14 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 
 namespace pvc\interfaces\err;
+
+use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Interface ExceptionInterface
@@ -13,15 +16,27 @@ namespace pvc\interfaces\err;
  */
 interface ExceptionInterface
 {
-	/**
-	 * setMsg
-	 * @param ExceptionMsgInterface $msg
-	 */
-	public function setMsg(ExceptionMsgInterface $msg): void;
+    /**
+     * setMsg
+     * @param MsgInterface $msg
+     */
+    public function setMsg(MsgInterface $msg): void;
 
-	/**
-	 * getMsg
-	 * @return ExceptionMsgInterface
-	 */
-	public function getMsg(): ExceptionMsgInterface;
+    /**
+     * getMsg
+     * @return MsgInterface
+     */
+    public function getMsg(): MsgInterface;
+
+    /**
+     * setCode
+     * @param int $code
+     */
+    public function setCode(int $code): void;
+
+    /**
+     * getCode
+     * @return int
+     */
+    public function getCode(): int;
 }
