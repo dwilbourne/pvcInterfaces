@@ -9,9 +9,8 @@ declare(strict_types=1);
 namespace pvc\interfaces\frmtr\msg;
 
 use pvc\interfaces\frmtr\FrmtrInterface;
-use pvc\interfaces\msg\MsgInterface;
 
 interface FrmtrMsgInterface extends FrmtrInterface
 {
-	public function format(MsgInterface $msg): string;
+    public function format(array $params): string;
 }
