@@ -27,16 +27,4 @@ interface ExceptionInterface
      * @return MsgInterface
      */
     public function getMsg(): MsgInterface;
-
-    /**
-     * setCode
-     * @param int $code
-     */
-    public function setCode(int $code): void;
-
-    /**
-     * getCode
-     * @return int
-     */
-    public function getCode(): int;
 }
