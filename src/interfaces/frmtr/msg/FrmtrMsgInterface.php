@@ -16,10 +16,10 @@ use pvc\interfaces\msg\MsgInterface;
  */
 interface FrmtrMsgInterface extends FrmtrInterface
 {
-	/**
-	 * format
-	 * @param MsgInterface $msg
-	 * @return string
-	 */
-	public function format(MsgInterface $msg): string;
+    /**
+     * format
+     * @param MsgInterface $msg
+     * @return string
+     */
+    public function format(MsgInterface $msg): string;
 }

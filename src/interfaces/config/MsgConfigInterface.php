@@ -8,10 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\config;
 
-/**
- *
- */
-
 use pvc\interfaces\msg\DomainCatalogLoaderInterface;
 
 /**

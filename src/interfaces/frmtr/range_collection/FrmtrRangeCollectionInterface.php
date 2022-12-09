@@ -19,7 +19,7 @@ interface FrmtrRangeCollectionInterface extends FrmtrInterface
 {
 	/**
 	 * format
-	 * @param RangeCollectionInterface $rangeCollection <RangeElement>
+	 * @param RangeCollectionInterface<RangeElement> $rangeCollection
 	 * @return string
 	 */
 	public function format(RangeCollectionInterface $rangeCollection): string;
