@@ -1,16 +1,25 @@
 <?php
 
-declare (strict_types=1);
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
+declare(strict_types=1);
 
 namespace pvc\interfaces\frmtr\date_time;
 
 use DateTime;
 use pvc\interfaces\frmtr\FrmtrInterface;
 
+/**
+ * Interface FrmtrDateTimeInterface
+ */
 interface FrmtrDateTimeInterface extends FrmtrInterface
 {
-    public function format(DateTime $value) : string;
+	/**
+	 * format
+	 * @param DateTime $value
+	 * @return string
+	 */
+	public function format(DateTime $value): string;
 }

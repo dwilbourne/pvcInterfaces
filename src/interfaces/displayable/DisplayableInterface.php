@@ -1,20 +1,20 @@
 <?php
 
-declare (strict_types=1);
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 
-namespace pvc\interfaces\displayable;
+declare(strict_types=1);
 
+namespace pvc\interfaces\displayable;
 
 /**
  * Class DisplayableInterface
  */
 interface DisplayableInterface
 {
-    /**
-     * display
+	/**
+	 * display
      * @return string
      */
     public function display(): string;

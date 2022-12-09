@@ -1,11 +1,12 @@
-<?php declare(strict_types = 1);
+<?php
+
 /**
- * @package: pvc
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
- * @version: 1.0
  */
 
-namespace pvc\interfaces\struct\lists;
+declare(strict_types=1);
+
+namespace pvc\interfaces\struct\lists\ordered;
 
 use ArrayAccess;
 use Countable;
@@ -13,7 +14,11 @@ use Iterator;
 
 /**
  * Interface ListOrderedInterface
+ * @template ListElementType
+ * @extends Iterator<int, ListElementType>
+ * @extends ArrayAccess<int, ListElementType>
  */
+
 interface ListOrderedInterface extends Iterator, ArrayAccess, Countable
 {
     /**
@@ -22,17 +27,17 @@ interface ListOrderedInterface extends Iterator, ArrayAccess, Countable
      */
     public function isEmpty(): bool;
 
-    /**
-     * @function getElement
-     * @param int $key
-     * @return mixed
-     */
+	/**
+	 * @function getElement
+	 * @param int $key
+	 * @return ListElementType
+	 */
     public function getElement(int $key);
 
-    /**
-     * @function getElements
-     * @return array
-     */
+	/**
+	 * @function getElements
+	 * @return array<int, ListElementType>
+	 */
     public function getElements(): array;
 
     /**
@@ -45,18 +50,18 @@ interface ListOrderedInterface extends Iterator, ArrayAccess, Countable
      * crud operations
      */
 
-    /**
-     * @function add
-     * @param int $key
-     * @param mixed $value
-     */
+	/**
+	 * @function add
+	 * @param int $key
+	 * @param ListElementType $value
+	 */
     public function add(int $key, $value): void;
 
-    /**
-     * @function update
-     * @param int $key
-     * @param mixed $value
-     */
+	/**
+	 * @function update
+	 * @param int $key
+	 * @param ListElementType $value
+	 */
     public function update(int $key, $value): void;
 
     /**
@@ -65,10 +70,10 @@ interface ListOrderedInterface extends Iterator, ArrayAccess, Countable
      */
     public function delete(int $key): void;
 
-    /**
-     * @function push
-     * @param mixed $value
-     */
+	/**
+	 * @function push
+	 * @param ListElementType $value
+	 */
     public function push($value): void;
 
     /**

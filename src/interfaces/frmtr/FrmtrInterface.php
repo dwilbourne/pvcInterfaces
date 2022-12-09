@@ -1,19 +1,41 @@
 <?php
 
-declare (strict_types=1);
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 
+declare(strict_types=1);
+
 namespace pvc\interfaces\frmtr;
 
+/**
+ * Interface FrmtrInterface
+ */
 interface FrmtrInterface
 {
-    public function setFormat(string $format) : bool;
+	/**
+	 * setFormat
+	 * @param string $format
+	 * @return bool
+	 */
+	public function setFormat(string $format): bool;
 
-    public function getFormat() : string;
+	/**
+	 * getFormat
+	 * @return string
+	 */
+	public function getFormat(): string;
 
-    public function setLocale(string $locale) : bool;
+	/**
+	 * setLocale
+	 * @param string $locale
+	 * @return bool
+	 */
+	public function setLocale(string $locale): bool;
 
-    public function getLocale() : string;
+	/**
+	 * getLocale
+	 * @return string
+	 */
+	public function getLocale(): string;
 }

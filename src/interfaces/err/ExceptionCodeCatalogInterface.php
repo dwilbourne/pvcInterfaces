@@ -1,16 +1,15 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
+declare(strict_types=1);
 
 namespace pvc\interfaces\err;
 
 /**
  * Interface ExceptionCodeCatalogInterface
- * @package pvc\interfaces\err
  */
 interface ExceptionCodeCatalogInterface
 {

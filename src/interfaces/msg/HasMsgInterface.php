@@ -1,13 +1,21 @@
 <?php
 
-declare(strict_types=1);
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 
+declare(strict_types=1);
+
 namespace pvc\interfaces\msg;
 
+/**
+ * Interface HasMsgInterface
+ */
 interface HasMsgInterface
 {
-    public function getMsg(): ?MsgInterface;
+	/**
+	 * getMsg
+	 * @return MsgInterface|null
+	 */
+	public function getMsg(): ?MsgInterface;
 }
