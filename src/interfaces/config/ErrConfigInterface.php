@@ -14,8 +14,10 @@ namespace pvc\interfaces\config;
 interface ErrConfigInterface
 {
 	/**
-	 * getExceptionMsgLocale
-	 * @return string
+	 * createGlobalExceptionCode
+	 * @param string $exceptionCatalogClassname
+	 * @param int $localCatalogCode
+	 * @return int
 	 */
-	public static function getExceptionMsgLocale(): string;
+	public static function createGlobalExceptionCode(string $exceptionCatalogClassname, int $localCatalogCode) : int;
 }
