@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\config;
+namespace pvc\interfaces\err;
 
 /**
  * Interface ErrConfigInterface
