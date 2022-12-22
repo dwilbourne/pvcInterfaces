@@ -13,18 +13,6 @@ namespace pvc\interfaces\config;
  */
 interface ErrConfigInterface
 {
-	/**
-	 * registerLibrary
-	 * @param string $libraryName
-	 * @param int $libraryCode
-	 */
-	public function registerLibrary(string $libraryName, int $libraryCode) : void;
-
-	/**
-	 * isLibraryRegistered
-	 * @param string $libraryName
-	 * @return bool
-	 */
 	public function isLibraryRegistered(string $libraryName) : bool;
 
 	/**
