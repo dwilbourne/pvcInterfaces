@@ -18,7 +18,7 @@ interface ErrConfigInterface
 	 * @param string $libraryName
 	 * @return int
 	 */
-	public function getLibraryCode(string $libraryName) : int;
+	public static function getLibraryCode(string $libraryName) :? int;
 
 	/**
 	 * createExceptionCode
@@ -26,5 +26,5 @@ interface ErrConfigInterface
 	 * @param int $localExceptionCode
 	 * @return int
 	 */
-	public function createExceptionCode(string $libraryName, int $localExceptionCode) : int;
+	public static function createExceptionCode(string $libraryName, int $localExceptionCode) : int;
 }
