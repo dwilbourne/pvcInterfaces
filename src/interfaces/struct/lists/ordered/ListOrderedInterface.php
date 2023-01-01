@@ -41,12 +41,6 @@ interface ListOrderedInterface extends Iterator, ArrayAccess, Countable
     public function getElements(): array;
 
     /**
-     * @function getKeys
-     * @return int[]
-     */
-    public function getKeys(): array;
-
-    /**
      * crud operations
      */
 
