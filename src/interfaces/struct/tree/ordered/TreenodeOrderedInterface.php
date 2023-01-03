@@ -18,107 +18,101 @@ use pvc\interfaces\struct\tree\unordered\TreenodeInterface;
  */
 interface TreenodeOrderedInterface extends TreenodeInterface
 {
-	/**
-	 * @function setReferences
-	 * @template NodeTypeForTree of TreeOrderedInterface
-	 * @param NodeTypeForTree $tree
-	 */
-	public function setReferences(TreeOrderedInterface $tree): void;
+    /**
+     * @function setReferences
+     * @template NodeTypeForTree of TreeOrderedInterface
+     * @param NodeTypeForTree $tree
+     */
+    public function setReferences(TreeOrderedInterface $tree): void;
 
-	/**
-	 * @function hasReferencesSet
-	 * @return bool
-	 */
-	public function hasReferencesSet(): bool;
+    /**
+     * @function getTree
+     * @return TreeOrderedInterface<OrderedNodeType>|null
+     */
+    public function getTree(): ?TreeOrderedInterface;
 
-	/**
-	 * @function getTree
-	 * @return TreeOrderedInterface<OrderedNodeType>|null
-	 */
-	public function getTree(): ?TreeOrderedInterface;
+    /**
+     * @function getParent
+     * @return TreenodeOrderedInterface<OrderedNodeType>|null
+     */
+    public function getParent(): ?TreenodeOrderedInterface;
 
-	/**
-	 * @function getParent
-	 * @return TreenodeOrderedInterface<OrderedNodeType>|null
-	 */
-	public function getParent(): ?TreenodeOrderedInterface;
+    /**
+     * @function getChild
+     * @param int $nodeid
+     * @return TreenodeOrderedInterface<OrderedNodeType>|null
+     */
+    public function getChild(int $nodeid): ?TreenodeOrderedInterface;
 
-	/**
-	 * @function getChild
-	 * @param int $nodeid
-	 * @return TreenodeOrderedInterface<OrderedNodeType>|null
-	 */
-	public function getChild(int $nodeid): ?TreenodeOrderedInterface;
+    /**
+     * @function getChildren
+     * @return ListOrderedInterface<OrderedNodeType>
+     */
+    public function getChildren(): ListOrderedInterface;
 
-	/**
-	 * @function getChildren
-	 * @return ListOrderedInterface<OrderedNodeType>
-	 */
-	public function getChildren(): ListOrderedInterface;
+    /**
+     * @function getChildrenArray
+     * @return OrderedNodeType[]
+     */
+    public function getChildrenArray(): array;
 
-	/**
-	 * @function getChildrenArray
-	 * @return OrderedNodeType[]
-	 */
-	public function getChildrenArray(): array;
+    /**
+     * @function getSiblings
+     * @return ListOrderedInterface<OrderedNodeType>|null
+     */
+    public function getSiblings(): ?ListOrderedInterface;
 
-	/**
-	 * @function getSiblings
-	 * @return ListOrderedInterface<OrderedNodeType>|null
-	 */
-	public function getSiblings(): ?ListOrderedInterface;
+    /**
+     * @function isLeaf
+     * @return bool
+     */
+    public function isLeaf(): bool;
 
-	/**
-	 * @function isLeaf
-	 * @return bool
-	 */
-	public function isLeaf(): bool;
+    /**
+     * @function isInteriorNode
+     * @return bool
+     */
+    public function isInteriorNode(): bool;
 
-	/**
-	 * @function isInteriorNode
-	 * @return bool
-	 */
-	public function isInteriorNode(): bool;
+    /**
+     * @function isRoot
+     * @return bool
+     */
+    public function isRoot(): bool;
 
-	/**
-	 * @function isRoot
-	 * @return bool
-	 */
-	public function isRoot(): bool;
+    /**
+     * @function isDescendantOf
+     * @param TreenodeOrderedInterface<OrderedNodeType> $node
+     * @return bool
+     */
+    public function isDescendantOf(TreenodeOrderedInterface $node): bool;
 
-	/**
-	 * @function isDescendantOf
-	 * @param TreenodeOrderedInterface<OrderedNodeType> $node
-	 * @return bool
-	 */
-	public function isDescendantOf(TreenodeOrderedInterface $node): bool;
+    /**
+     * @function isAncestorOf
+     * @param TreenodeOrderedInterface<OrderedNodeType> $node
+     * @return bool
+     */
+    public function isAncestorOf(TreenodeOrderedInterface $node): bool;
 
-	/**
-	 * @function isAncestorOf
-	 * @param TreenodeOrderedInterface<OrderedNodeType> $node
-	 * @return bool
-	 */
-	public function isAncestorOf(TreenodeOrderedInterface $node): bool;
+    /**
+     * @function setIndex
+     * @param int $index
+     */
+    public function setIndex(int $index): void;
 
-	/**
-	 * @function setIndex
-	 * @param int $index
-	 */
-	public function setIndex(int $index): void;
-
-	/**
-	 * @function getIndex
+    /**
+     * @function getIndex
      * @return int
      */
     public function getIndex(): int;
 
-	/**
+    /**
      * @function setHydrationIndex
      * @param int $index
      */
     public function setHydrationIndex(int $index): void;
 
-	/**
+    /**
      * @function getHydrationIndex
      * @return int|null
      */
