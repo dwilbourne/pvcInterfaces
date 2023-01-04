@@ -33,20 +33,6 @@ interface TreeInterface
     public function getRoot(): ?TreenodeInterface;
 
     /**
-     * @function getNode
-     * @param int $nodeId
-     * @return TreenodeInterface<NodeType>|null
-     */
-    public function getNode(int $nodeId): ?TreenodeInterface;
-
-    /**
-     * @function hasNode
-     * @param TreenodeInterface<NodeType> $node
-     * @return bool
-     */
-    public function hasNode(TreenodeInterface $node): bool;
-
-    /**
      * @function getNodes
      * @return TreenodeInterface<NodeType>[]
      */
@@ -59,7 +45,14 @@ interface TreeInterface
      */
     public function setNodes(array $nodeCollection): void;
 
-    /**
+	/**
+	 * @function getNode
+	 * @param int $nodeId
+	 * @return TreenodeInterface<NodeType>|null
+	 */
+	public function getNode(int $nodeId): ?TreenodeInterface;
+
+	/**
      * @function isEmpty
      * @return bool
      */
@@ -84,20 +77,6 @@ interface TreeInterface
      * @return NodeType[]
      */
     public function getChildrenOf(TreenodeInterface $parent): array;
-
-    /**
-     * @function hasLeafWithId
-     * @param int $nodeId
-     * @return bool
-     */
-    public function hasLeafWithId(int $nodeId): bool;
-
-    /**
-     * @function hasInteriorNodeWithId
-     * @param int $nodeId
-     * @return bool
-     */
-    public function hasInteriorNodeWithId(int $nodeId): bool;
 
     /**
      * @function addNode
@@ -133,13 +112,27 @@ interface TreeInterface
         int $levels = null
     ): array;
 
-    /**
+	/**
+	 * @function hasLeafWithId
+	 * @param int $nodeId
+	 * @return bool
+	 */
+	public function hasLeafWithId(int $nodeId): bool;
+
+	/**
      * @function getLeaves
      * @return NodeType[]
      */
     public function getLeaves(): array;
 
-    /**
+	/**
+	 * @function hasInteriorNodeWithId
+	 * @param int $nodeId
+	 * @return bool
+	 */
+	public function hasInteriorNodeWithId(int $nodeId): bool;
+
+	/**
      * @function getInteriorNodes
      * @return NodeType[]
      */
