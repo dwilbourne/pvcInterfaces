@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
+use pvc\interfaces\validator\ValidatorInterface;
+
 /**
  * Interface TreenodeUnorderedInterface.
  * @template NodeType
@@ -34,9 +36,9 @@ interface TreenodeUnorderedInterface
 
 	/**
 	 * getValueValidator
-	 * @return callable|null
+	 * @return ValidatorInterface|null
 	 */
-	public function getValueValidator() : ?callable;
+	public function getValueValidator() : ?ValidatorInterface;
 
 	/**
 	 * @function getValue
