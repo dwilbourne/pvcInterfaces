@@ -6,13 +6,13 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\unordered;
+namespace pvc\interfaces\struct\tree\node;
 
 /**
  * Interface TreenodeUnorderedInterface.
  * @template NodeType
  */
-interface TreenodeInterface
+interface TreenodeUnorderedInterface
 {
 	/**
 	 * getNodeId
@@ -33,6 +33,12 @@ interface TreenodeInterface
 	public function getTreeId(): ?int;
 
 	/**
+	 * getValueValidator
+	 * @return callable|null
+	 */
+	public function getValueValidator() : ?callable;
+
+	/**
 	 * @function getValue
 	 * @return NodeType
 	 */
@@ -50,6 +56,12 @@ interface TreenodeInterface
 	 * @param int $treeId
 	 */
 	public function setTreeId(int $treeId): void;
+
+	/**
+	 * setValueValidator
+	 * @param callable $callable
+	 */
+	public function setValueValidator(callable $callable) : void;
 
 	/**
 	 * @function setValue

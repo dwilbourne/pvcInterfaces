@@ -6,17 +6,17 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\ordered;
+namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\lists\ordered\ListOrderedInterface;
-use pvc\interfaces\struct\tree\unordered\TreenodeInterface;
+use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
 /**
  * Interface TreenodeOrderedInterface
  * @template OrderedNodeType
- * @extends TreenodeInterface<OrderedNodeType>
+ * @extends TreenodeUnorderedInterface<OrderedNodeType>
  */
-interface TreenodeOrderedInterface extends TreenodeInterface
+interface TreenodeOrderedUnorderedInterface extends TreenodeUnorderedInterface
 {
     /**
      * @function setReferences
@@ -27,22 +27,22 @@ interface TreenodeOrderedInterface extends TreenodeInterface
 
     /**
      * @function getTree
-     * @return TreeOrderedInterface<OrderedNodeType>|null
+     * @return \pvc\interfaces\struct\tree\tree\TreeOrderedInterface<OrderedNodeType>|null
      */
     public function getTree(): ?TreeOrderedInterface;
 
     /**
      * @function getParent
-     * @return TreenodeOrderedInterface<OrderedNodeType>|null
+     * @return TreenodeOrderedUnorderedInterface<OrderedNodeType>|null
      */
-    public function getParent(): ?TreenodeOrderedInterface;
+    public function getParent(): ?TreenodeOrderedUnorderedInterface;
 
     /**
      * @function getChild
      * @param int $nodeid
-     * @return TreenodeOrderedInterface<OrderedNodeType>|null
+     * @return TreenodeOrderedUnorderedInterface<OrderedNodeType>|null
      */
-    public function getChild(int $nodeid): ?TreenodeOrderedInterface;
+    public function getChild(int $nodeid): ?TreenodeOrderedUnorderedInterface;
 
     /**
      * @function getChildren
@@ -82,17 +82,17 @@ interface TreenodeOrderedInterface extends TreenodeInterface
 
     /**
      * @function isDescendantOf
-     * @param TreenodeOrderedInterface<OrderedNodeType> $node
+     * @param TreenodeOrderedUnorderedInterface<OrderedNodeType> $node
      * @return bool
      */
-    public function isDescendantOf(TreenodeOrderedInterface $node): bool;
+    public function isDescendantOf(TreenodeOrderedUnorderedInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param TreenodeOrderedInterface<OrderedNodeType> $node
+     * @param TreenodeOrderedUnorderedInterface<OrderedNodeType> $node
      * @return bool
      */
-    public function isAncestorOf(TreenodeOrderedInterface $node): bool;
+    public function isAncestorOf(TreenodeOrderedUnorderedInterface $node): bool;
 
     /**
      * @function setIndex
