@@ -29,15 +29,18 @@ interface TreeUnorderedInterface
     public function getTreeId(): ? int;
 
 	/**
-	 * setRoot
-	 * @param int $rootNodeId
+	 * @function addNode
+	 * @param TreenodeUnorderedInterface<NodeType> $node
 	 */
-	public function setRoot(int $rootNodeId) : void;
-    /**
-     * @function getRoot
-     * @return TreenodeUnorderedInterface<NodeType>|null
-     */
-    public function getRoot(): ?TreenodeUnorderedInterface;
+	public function addNode(TreenodeUnorderedInterface $node): void;
+
+	/**
+	 * @function deleteNode
+	 * @param TreenodeUnorderedInterface<NodeType> $node
+	 * @param bool $deleteBranchOK
+	 */
+	public function deleteNode(TreenodeUnorderedInterface $node, bool $deleteBranchOK = false): void;
+
 
 	/**
 	 * @function setNodes
@@ -73,6 +76,12 @@ interface TreeUnorderedInterface
 	public function hasNode(TreenodeUnorderedInterface $node) : bool;
 
 	/**
+	 * @function getRoot
+	 * @return TreenodeUnorderedInterface<NodeType>|null
+	 */
+	public function getRoot(): ?TreenodeUnorderedInterface;
+
+	/**
      * @function isEmpty
      * @return bool
      */
@@ -97,19 +106,6 @@ interface TreeUnorderedInterface
      * @return NodeType[]
      */
     public function getChildrenOf(TreenodeUnorderedInterface $parent): array;
-
-    /**
-     * @function addNode
-     * @param TreenodeUnorderedInterface<NodeType> $node
-     */
-    public function addNode(TreenodeUnorderedInterface $node): void;
-
-    /**
-     * @function deleteNode
-     * @param TreenodeUnorderedInterface<NodeType> $node
-     * @param bool $deleteBranchOK
-     */
-    public function deleteNode(TreenodeUnorderedInterface $node, bool $deleteBranchOK = false): void;
 
     /**
      * @function getTreeDepthFirst

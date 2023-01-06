@@ -78,12 +78,8 @@ cannot change the treeid on a tree that has nodes).
 public function setTreeId(int $treeid) : void;
 public function getTreeId(): int;
 
-SetRoot will throw an exception if the root of the tree has already been set.  Also, setRoot and addNode work with 
-each other such that if you use setRoot, it will add the node to the tree for you automatically if necessary.  And if 
-you use addNode to add a root to the tree, it will call setRoot to set that property for you.
-
-public function setRoot(TreenodeInterface $root) : void;
-public function getRoot(): ?TreenodeInterface;
+public function addNode(TreenodeInterface $node): void;
+public function deleteNode(TreenodeInterface $node, bool $deleteBranchOK = false): void;
 
 public function setNodes(array $nodeCollection): void;
 public function getNodes(): array;
@@ -97,12 +93,15 @@ certain nodeid as follows: !is_null($tree->getNode($nodeid).  This is different 
 to make sure that the nodeid matches, but that everything else matches as well (parentage, value, etc).  hasNode 
 uses object equality (obj1 == obj2) and is not testing for the same instance (obj1 === obj2).
 
+public function getRoot() : ? TreenodeInterface;
+
+the root of the tree cannot be explicitly set through the public interface. By definition, the root is the (only) 
+node that has a null parentid.  It is added to the tree like any other node: through the addNode method or the 
+setNodes method.
 
 public function nodeCount(): int;
 public function getParentOf(TreenodeInterface $node): ?TreenodeInterface;
 public function getChildrenOf(TreenodeInterface $parent): array;
-public function addNode(TreenodeInterface $node): void;
-public function deleteNode(TreenodeInterface $node, bool $deleteBranchOK = false): void;
 public function getTreeDepthFirst(TreenodeInterface $startNode = null, callable $callback = null): array;
 public function getTreeBreadthFirst(TreenodeInterface $startNode = null, callable $callback = null, int $levels = null): array;
 public function hasLeafWithId(int $nodeId): bool;
