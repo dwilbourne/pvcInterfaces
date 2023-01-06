@@ -16,7 +16,7 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  * @template OrderedNodeType
  * @extends TreenodeUnorderedInterface<OrderedNodeType>
  */
-interface TreenodeOrderedUnorderedInterface extends TreenodeUnorderedInterface
+interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
 {
     /**
      * @function setReferences
@@ -33,16 +33,16 @@ interface TreenodeOrderedUnorderedInterface extends TreenodeUnorderedInterface
 
     /**
      * @function getParent
-     * @return TreenodeOrderedUnorderedInterface<OrderedNodeType>|null
+     * @return TreenodeOrderedInterface<OrderedNodeType>|null
      */
-    public function getParent(): ?TreenodeOrderedUnorderedInterface;
+    public function getParent(): ?TreenodeOrderedInterface;
 
     /**
      * @function getChild
      * @param int $nodeid
-     * @return TreenodeOrderedUnorderedInterface<OrderedNodeType>|null
+     * @return TreenodeOrderedInterface<OrderedNodeType>|null
      */
-    public function getChild(int $nodeid): ?TreenodeOrderedUnorderedInterface;
+    public function getChild(int $nodeid): ?TreenodeOrderedInterface;
 
     /**
      * @function getChildren
@@ -82,17 +82,17 @@ interface TreenodeOrderedUnorderedInterface extends TreenodeUnorderedInterface
 
     /**
      * @function isDescendantOf
-     * @param TreenodeOrderedUnorderedInterface<OrderedNodeType> $node
+     * @param TreenodeOrderedInterface<OrderedNodeType> $node
      * @return bool
      */
-    public function isDescendantOf(TreenodeOrderedUnorderedInterface $node): bool;
+    public function isDescendantOf(TreenodeOrderedInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param TreenodeOrderedUnorderedInterface<OrderedNodeType> $node
+     * @param TreenodeOrderedInterface<OrderedNodeType> $node
      * @return bool
      */
-    public function isAncestorOf(TreenodeOrderedUnorderedInterface $node): bool;
+    public function isAncestorOf(TreenodeOrderedInterface $node): bool;
 
     /**
      * @function setIndex

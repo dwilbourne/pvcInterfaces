@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\tree\node\TreenodeOrderedUnorderedInterface;
+use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 
 /**
  * Interface TreeOrderedInterface
@@ -24,9 +24,9 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function getRoot
-	 * @return TreenodeOrderedUnorderedInterface<NodeTypeForTree>|null
+	 * @return TreenodeOrderedInterface<NodeTypeForTree>|null
 	 */
-	public function getRoot(): ?TreenodeOrderedUnorderedInterface;
+	public function getRoot(): ?TreenodeOrderedInterface;
 
 	/**
 	 * @function setNodes
@@ -44,9 +44,9 @@ interface TreeOrderedInterface
 	/**
 	 * @function getNode
 	 * @param int $nodeid
-	 * @return TreenodeOrderedUnorderedInterface<NodeTypeForTree>|null
+	 * @return TreenodeOrderedInterface<NodeTypeForTree>|null
 	 */
-	public function getNode(int $nodeid): ?TreenodeOrderedUnorderedInterface;
+	public function getNode(int $nodeid): ?TreenodeOrderedInterface;
 
 	/**
 	 * @function nodeCount
@@ -56,10 +56,10 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function hasNode
-	 * @param TreenodeOrderedUnorderedInterface<NodeTypeForTree> $node
+	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
 	 * @return bool
 	 */
-	public function hasNode(TreenodeOrderedUnorderedInterface $node): bool;
+	public function hasNode(TreenodeOrderedInterface $node): bool;
 
 	/**
 	 * @function isEmpty
@@ -77,17 +77,17 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function getParentOf
-	 * @param TreenodeOrderedUnorderedInterface<NodeTypeForTree> $node
-	 * @return TreenodeOrderedUnorderedInterface<NodeTypeForTree>|null
+	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
+	 * @return TreenodeOrderedInterface<NodeTypeForTree>|null
 	 */
-	public function getParentOf(TreenodeOrderedUnorderedInterface $node): ?TreenodeOrderedUnorderedInterface;
+	public function getParentOf(TreenodeOrderedInterface $node): ?TreenodeOrderedInterface;
 
 	/**
 	 * @function getChildrenOf
-	 * @param TreenodeOrderedUnorderedInterface<NodeTypeForTree> $parent
+	 * @param TreenodeOrderedInterface<NodeTypeForTree> $parent
 	 * @return NodeTypeForTree[]
 	 */
-	public function getChildrenOf(TreenodeOrderedUnorderedInterface $parent): array;
+	public function getChildrenOf(TreenodeOrderedInterface $parent): array;
 
 	/**
 	 * @function hasLeafWithId
@@ -105,34 +105,34 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function addNode
-	 * @param TreenodeOrderedUnorderedInterface<NodeTypeForTree> $node
+	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
 	 */
-	public function addNode(TreenodeOrderedUnorderedInterface $node): void;
+	public function addNode(TreenodeOrderedInterface $node): void;
 
 	/**
 	 * @function deleteNode
-	 * @param TreenodeOrderedUnorderedInterface<NodeTypeForTree> $node
+	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
 	 * @param bool $deleteBranchOK
 	 */
-	public function deleteNode(TreenodeOrderedUnorderedInterface $node, bool $deleteBranchOK = false): void;
+	public function deleteNode(TreenodeOrderedInterface $node, bool $deleteBranchOK = false): void;
 
 	/**
 	 * @function getTreeDepthFirst
-	 * @param TreenodeOrderedUnorderedInterface<NodeTypeForTree>|null $startNode
+	 * @param TreenodeOrderedInterface<NodeTypeForTree>|null $startNode
 	 * @param callable|null $callback
 	 * @return NodeTypeForTree[] TreenodeOrderedInterface
 	 */
-	public function getTreeDepthFirst(TreenodeOrderedUnorderedInterface $startNode = null, callable $callback = null): array;
+	public function getTreeDepthFirst(TreenodeOrderedInterface $startNode = null, callable $callback = null): array;
 
 	/**
 	 * @function getTreeBreadthFirst
-	 * @param TreenodeOrderedUnorderedInterface<NodeTypeForTree>|null $startNode
+	 * @param TreenodeOrderedInterface<NodeTypeForTree>|null $startNode
 	 * @param callable|null $callback
 	 * @param int|null $levels
 	 * @return NodeTypeForTree[]
 	 */
 	public function getTreeBreadthFirst(
-		TreenodeOrderedUnorderedInterface $startNode = null,
+		TreenodeOrderedInterface $startNode = null,
 		callable $callback = null,
 		int $levels = null
 	): array;
