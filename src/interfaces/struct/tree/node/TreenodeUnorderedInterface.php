@@ -16,35 +16,17 @@ use pvc\interfaces\validator\ValidatorInterface;
  */
 interface TreenodeUnorderedInterface
 {
+
+	/**
+	 * setNodeId
+	 * @param int $nodeId
+	 */
+	public function setNodeId(int $nodeId) : void;
 	/**
 	 * getNodeId
 	 * @return int|null
 	 */
 	public function getNodeId(): ?int;
-
-	/**
-	 * @function getParentId
-	 * @return int|null
-	 */
-	public function getParentId(): ?int;
-
-	/**
-	 * @function getTreeId
-	 * @return int|null
-	 */
-	public function getTreeId(): ?int;
-
-	/**
-	 * getValueValidator
-	 * @return ValidatorInterface|null
-	 */
-	public function getValueValidator() : ? ValidatorInterface;
-
-	/**
-	 * @function getValue
-	 * @return NodeType
-	 */
-	public function getValue();
 
 	/**
 	 * @function setParentId
@@ -54,10 +36,22 @@ interface TreenodeUnorderedInterface
 	public function setParentId(?int $parentId): void;
 
 	/**
+	 * @function getParentId
+	 * @return int|null
+	 */
+	public function getParentId(): ?int;
+
+	/**
 	 * @function setTreeId
 	 * @param int $treeId
 	 */
 	public function setTreeId(int $treeId): void;
+
+	/**
+	 * @function getTreeId
+	 * @return int|null
+	 */
+	public function getTreeId(): ?int;
 
 	/**
 	 * setValueValidator
@@ -66,10 +60,22 @@ interface TreenodeUnorderedInterface
 	public function setValueValidator(ValidatorInterface $callable) : void;
 
 	/**
+	 * getValueValidator
+	 * @return ValidatorInterface|null
+	 */
+	public function getValueValidator() : ? ValidatorInterface;
+
+	/**
 	 * @function setValue
 	 * @param NodeType $value
 	 */
 	public function setValue($value): void;
+
+	/**
+	 * @function getValue
+	 * @return NodeType
+	 */
+	public function getValue();
 
 	/**
 	 * @function unsetReferences

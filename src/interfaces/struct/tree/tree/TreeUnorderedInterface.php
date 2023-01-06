@@ -16,30 +16,42 @@ use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
  */
 interface TreeUnorderedInterface
 {
+	/**
+	 * setTreeId
+	 * @param int $treeId
+	 */
+	public function setTreeId(int $treeId) : void;
+
     /**
      * @function getTreeId
-     * @return int
+     * @return int|null
      */
-    public function getTreeId(): int;
+    public function getTreeId(): ? int;
 
+	/**
+	 * setRoot
+	 * @param int $rootNodeId
+	 */
+	public function setRoot(int $rootNodeId) : void;
     /**
      * @function getRoot
      * @return TreenodeUnorderedInterface<NodeType>|null
      */
     public function getRoot(): ?TreenodeUnorderedInterface;
 
-    /**
+	/**
+	 * @function setNodes
+	 * @param NodeType[] $nodeCollection
+	 * @return void
+	 */
+	public function setNodes(array $nodeCollection): void;
+
+	/**
      * @function getNodes
      * @return TreenodeUnorderedInterface<NodeType>[]
      */
     public function getNodes(): array;
 
-    /**
-     * @function setNodes
-     * @param NodeType[] $nodeCollection
-     * @return void
-     */
-    public function setNodes(array $nodeCollection): void;
 
 	/**
 	 * getNode returns the node in the tree whose id is $nodeid or null if there is no such node.

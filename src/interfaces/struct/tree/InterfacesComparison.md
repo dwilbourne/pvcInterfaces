@@ -33,23 +33,28 @@ interface OrderedListInterface).
 The following methods are common to both ordered and unordered nodes and are implemented in a single trait called 
 TreenodeTrait.
 
+public function setNodeId(): void;
 public function getNodeId(): int;
+
 public function setParentId(?int $parentId): void;
 public function getParentId(): ?int;
+
 public function setTreeId(int $treeId): void;
 public function getTreeId(): ?int;
+
 public function setValueValidator(callable $callable) : void;
 public function getValueValidator() : ?callable;
+
 public function setValue($value): void;
 public function getValue();
+
 public function hydrate(array $nodeData): void;
 public function dehydrate(): array;
 
 The only other method that is part of the interface for unordered nodes is unsetReferences.  Because ordered nodes 
-have addition references (actual parent, actual tree), the implementations of these methods has to be different and 
+have additional references (actual parent, actual tree), the implementations of these methods has to be different and 
 so cannot be implemented in TreenodeTrait.  UnsetReferences is implemented in each class separately.  The effect of 
-the method is the same, however.  The node ends up with no attributes set other than its nodeid, which is designed to 
-be immutable.  Nodeid is set at construction time and never changes.
+the method is the same, however.  The node ends up with no attributes set at all.
 
 Ordered nodes have several additional methods, but the first one to discuss is the setReferences method.  
 
@@ -61,23 +66,24 @@ ways you get nodes into a tree.  The tree class accepts anything that implements
 TreeOrdered class only accepts nodes that implement TreenodeOrderedInterface.  This difference comes up in two 
 different methods used to add nodes to the tree.  One of those is the setNodes method, which takes an array of nodes 
 and puts them all in the tree at once.  It is designed to make it easy to hydrate a tree from a data store.  The 
-second method is the add method, which adds nodes one at a time to the tree.  Both methods check their arguments to 
-insure the node(s) implement the proper interface.
+second method is the add method, which adds nodes one at a time to the tree.
 
-Another very minor difference pertains to methods that return nodes:  getNode($nodeid), getRoot(), getParentOf
+Another difference pertains to methods that return nodes:  getNode($nodeid), getRoot(), getParentOf
 ($nodeid). The methods for Tree return TreenodeUnorderedInterface and the methods for TreeOrdered return 
 TreenodeOrderedInterface.
 
+SetTreeId will throw an exception if you try to set the treeid on a tree that already has nodes populated (e.g. you 
+cannot change the treeid on a tree that has nodes).
+
+public function setTreeId(int $treeid) : void;
 public function getTreeId(): int;
 
-The setTree method is protected and is only called at construction.  In other words, treeid is immutable.
+SetRoot will throw an exception if the root of the tree has already been set.  Also, setRoot and addNode work with 
+each other such that if you use setRoot, it will add the node to the tree for you automatically if necessary.  And if 
+you use addNode to add a root to the tree, it will call setRoot to set that property for you.
 
+public function setRoot(TreenodeInterface $root) : void;
 public function getRoot(): ?TreenodeInterface;
-
-The setRoot method is protected and is only called when the tree is initially hydrated or when you are adding a 
-node that has a null parentid, signifying that the node wants to be the root node.  So it is not part of the public 
-interface.
-
 
 public function setNodes(array $nodeCollection): void;
 public function getNodes(): array;
