@@ -56,13 +56,17 @@ Ordered nodes have several additional methods, but the first one to discuss is t
 
 Interface for Trees
 
-Ordered and unordered trees have almost identical interfaces.  The only difference between the two pertains to the 
+Ordered and unordered trees have very similar interfaces.  One difference between the two pertains to the 
 ways you get nodes into a tree.  The tree class accepts anything that implements TreenodeInterface.  However, the 
 TreeOrdered class only accepts nodes that implement TreenodeOrderedInterface.  This difference comes up in two 
 different methods used to add nodes to the tree.  One of those is the setNodes method, which takes an array of nodes 
 and puts them all in the tree at once.  It is designed to make it easy to hydrate a tree from a data store.  The 
 second method is the add method, which adds nodes one at a time to the tree.  Both methods check their arguments to 
 insure the node(s) implement the proper interface.
+
+Another very minor difference pertains to methods that return nodes:  getNode($nodeid), getRoot(), getParentOf
+($nodeid). The methods for Tree return TreenodeUnorderedInterface and the methods for TreeOrdered return 
+TreenodeOrderedInterface.
 
 public function getTreeId(): int;
 

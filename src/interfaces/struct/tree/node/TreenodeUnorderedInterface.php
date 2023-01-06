@@ -18,9 +18,9 @@ interface TreenodeUnorderedInterface
 {
 	/**
 	 * getNodeId
-	 * @return int
+	 * @return int|null
 	 */
-	public function getNodeId(): int;
+	public function getNodeId(): ?int;
 
 	/**
 	 * @function getParentId
