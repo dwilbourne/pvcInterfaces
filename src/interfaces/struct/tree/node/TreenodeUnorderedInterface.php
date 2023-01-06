@@ -61,9 +61,9 @@ interface TreenodeUnorderedInterface
 
 	/**
 	 * setValueValidator
-	 * @param callable $callable
+	 * @param ValidatorInterface $callable
 	 */
-	public function setValueValidator(callable $callable) : void;
+	public function setValueValidator(ValidatorInterface $callable) : void;
 
 	/**
 	 * @function setValue
