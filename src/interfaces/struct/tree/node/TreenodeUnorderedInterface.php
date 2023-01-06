@@ -38,7 +38,7 @@ interface TreenodeUnorderedInterface
 	 * getValueValidator
 	 * @return ValidatorInterface|null
 	 */
-	public function getValueValidator() : ?ValidatorInterface;
+	public function getValueValidator() : ? ValidatorInterface;
 
 	/**
 	 * @function getValue
