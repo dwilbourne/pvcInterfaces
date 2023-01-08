@@ -78,11 +78,6 @@ interface TreenodeUnorderedInterface
 	public function getValue();
 
 	/**
-	 * @function unsetReferences
-	 */
-	public function unsetReferences(): void;
-
-	/**
 	 * @function hydrate
 	 * @param NodeType[] $nodeData
 	 */
