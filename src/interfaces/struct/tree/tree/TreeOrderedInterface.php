@@ -55,11 +55,15 @@ interface TreeOrderedInterface
 	public function nodeCount(): int;
 
 	/**
+	 * hasNode does an object compare between its argument and each node in the tree, returning true
+	 * if it finds a match.  The $strict parameter controls whether the method uses "==" (all properties have the
+	 * same values) or "===" ($obj1 and $obj2 are the same instance).
+	 *
 	 * @function hasNode
 	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
 	 * @return bool
 	 */
-	public function hasNode(TreenodeOrderedInterface $node): bool;
+	public function hasNode(TreenodeOrderedInterface $node, bool $strict = false): bool;
 
 	/**
 	 * @function isEmpty
