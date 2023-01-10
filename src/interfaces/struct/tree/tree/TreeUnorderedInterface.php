@@ -41,7 +41,6 @@ interface TreeUnorderedInterface
 	 */
 	public function deleteNode(TreenodeUnorderedInterface $node, bool $deleteBranchOK = false): void;
 
-
 	/**
 	 * @function setNodes
 	 * @param NodeType[] $nodeCollection
@@ -54,7 +53,6 @@ interface TreeUnorderedInterface
      * @return TreenodeUnorderedInterface<NodeType>[]
      */
     public function getNodes(): array;
-
 
 	/**
 	 * getNode returns the node in the tree whose id is $nodeid or null if there is no such node.

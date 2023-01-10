@@ -17,16 +17,29 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 interface TreeOrderedInterface
 {
 	/**
+	 * @function setTreeId
+	 * @param int $treeId
+	 */
+	public function setTreeId(int $treeId) : void;
+
+	/**
 	 * @function getTreeId
 	 * @return int
 	 */
 	public function getTreeId(): int;
 
 	/**
-	 * @function getRoot
-	 * @return TreenodeOrderedInterface<NodeTypeForTree>|null
+	 * @function addNode
+	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
 	 */
-	public function getRoot(): ?TreenodeOrderedInterface;
+	public function addNode(TreenodeOrderedInterface $node): void;
+
+	/**
+	 * @function deleteNode
+	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
+	 * @param bool $deleteBranchOK
+	 */
+	public function deleteNode(TreenodeOrderedInterface $node, bool $deleteBranchOK = false): void;
 
 	/**
 	 * @function setNodes
@@ -49,21 +62,21 @@ interface TreeOrderedInterface
 	public function getNode(int $nodeid): ?TreenodeOrderedInterface;
 
 	/**
-	 * @function nodeCount
-	 * @return int
-	 */
-	public function nodeCount(): int;
-
-	/**
 	 * hasNode does an object compare between its argument and each node in the tree, returning true
 	 * if it finds a match.  The $strict parameter controls whether the method uses "==" (all properties have the
 	 * same values) or "===" ($obj1 and $obj2 are the same instance).
 	 *
 	 * @function hasNode
-	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
+	 * @param int $nodeid
 	 * @return bool
 	 */
-	public function hasNode(TreenodeOrderedInterface $node, bool $strict = false): bool;
+	public function hasNode(TreenodeOrderedInterface $node, bool $strict = false) : bool;
+
+	/**
+	 * @function getRoot
+	 * @return TreenodeOrderedInterface<NodeTypeForTree>|null
+	 */
+	public function getRoot(): ?TreenodeOrderedInterface;
 
 	/**
 	 * @function isEmpty
@@ -71,13 +84,11 @@ interface TreeOrderedInterface
 	 */
 	public function isEmpty(): bool;
 
-
 	/**
-	 * @function dehydrateNodes
-	 * @return NodeTypeForTree[]
+	 * @function nodeCount
+	 * @return int
 	 */
-	public function dehydrateNodes(): array;
-
+	public function nodeCount(): int;
 
 	/**
 	 * @function getParentOf
@@ -92,33 +103,6 @@ interface TreeOrderedInterface
 	 * @return NodeTypeForTree[]
 	 */
 	public function getChildrenOf(TreenodeOrderedInterface $parent): array;
-
-	/**
-	 * @function hasLeafWithId
-	 * @param int $nodeid
-	 * @return bool
-	 */
-	public function hasLeafWithId(int $nodeid): bool;
-
-	/**
-	 * @function hasInteriorNodeWithId
-	 * @param int $nodeid
-	 * @return bool
-	 */
-	public function hasInteriorNodeWithId(int $nodeid): bool;
-
-	/**
-	 * @function addNode
-	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
-	 */
-	public function addNode(TreenodeOrderedInterface $node): void;
-
-	/**
-	 * @function deleteNode
-	 * @param TreenodeOrderedInterface<NodeTypeForTree> $node
-	 * @param bool $deleteBranchOK
-	 */
-	public function deleteNode(TreenodeOrderedInterface $node, bool $deleteBranchOK = false): void;
 
 	/**
 	 * @function getTreeDepthFirst
@@ -140,6 +124,20 @@ interface TreeOrderedInterface
 		callable $callback = null,
 		int $levels = null
 	): array;
+
+	/**
+	 * @function hasLeafWithId
+	 * @param int $nodeid
+	 * @return bool
+	 */
+	public function hasLeafWithId(int $nodeid): bool;
+
+	/**
+	 * @function hasInteriorNodeWithId
+	 * @param int $nodeid
+	 * @return bool
+	 */
+	public function hasInteriorNodeWithId(int $nodeid): bool;
 
 	/**
 	 * @function getLeaves

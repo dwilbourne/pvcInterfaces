@@ -89,9 +89,9 @@ public function hasNode(TreenodeUnorderedInterface $node): bool
 
 getNode and hasNode are quite similar, but there is a subtle difference.  The vanilla usage of getNode is to 
 retrieve a node with a certain id.  But it can also be used to verify that there is not already a node with a 
-certain nodeid as follows: !is_null($tree->getNode($nodeid).  This is different than hasNode, which not only checks 
-to make sure that the nodeid matches, but that everything else matches as well (parentage, value, etc).  hasNode 
-uses object equality (obj1 == obj2) and is not testing for the same instance (obj1 === obj2).
+certain nodeid as follows: !is_null($tree->getNode($nodeid).  This is different from hasNode, which checks 
+to make sure that everything matches via object comparison.  The hasNode method has a $strict parameter which controls 
+whether to use object equality (obj1 == obj2) or instance equality (obj1 === obj2).
 
 public function getRoot() : ? TreenodeInterface;
 
