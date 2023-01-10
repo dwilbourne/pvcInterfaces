@@ -26,7 +26,7 @@ interface TreeOrderedInterface
 	 * @function getTreeId
 	 * @return int
 	 */
-	public function getTreeId(): int;
+	public function getTreeId(): ? int;
 
 	/**
 	 * @function addNode
