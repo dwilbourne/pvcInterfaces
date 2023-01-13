@@ -42,7 +42,19 @@ interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
      */
     public function getTree(): ?TreeOrderedInterface;
 
-    /**
+	/**
+	 * setChildList
+	 */
+	public function setChildList() : void;
+
+	/**
+	 * @function getChildren
+	 * @return ListOrderedInterface<OrderedNodeType>
+	 */
+	public function getChildren(): ListOrderedInterface;
+
+
+	/**
      * @function getParent
      * @return TreenodeOrderedInterface<OrderedNodeType>|null
      */
@@ -54,12 +66,6 @@ interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
      * @return TreenodeOrderedInterface<OrderedNodeType>|null
      */
     public function getChild(int $nodeid): ?TreenodeOrderedInterface;
-
-    /**
-     * @function getChildren
-     * @return ListOrderedInterface<OrderedNodeType>
-     */
-    public function getChildren(): ListOrderedInterface;
 
     /**
      * @function getChildrenArray
