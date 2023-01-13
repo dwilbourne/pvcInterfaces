@@ -18,6 +18,17 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  */
 interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
 {
+	/**
+	 * @function setHydrationIndex
+	 * @param int $index
+	 */
+	public function setHydrationIndex(int $index) : void;
+
+	/**
+	 * @function getHydrationIndex
+	 * @return int|null
+	 */
+	public function getHydrationIndex() : ? int;
     /**
      * @function setReferences
      * @template NodeTypeForTree of TreeOrderedInterface
