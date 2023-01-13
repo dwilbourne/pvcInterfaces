@@ -105,16 +105,4 @@ interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
      * @return int
      */
     public function getIndex(): int;
-
-    /**
-     * @function setHydrationIndex
-     * @param int $index
-     */
-    public function setHydrationIndex(int $index): void;
-
-    /**
-     * @function getHydrationIndex
-     * @return int|null
-     */
-    public function getHydrationIndex(): ?int;
 }
