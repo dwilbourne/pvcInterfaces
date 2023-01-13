@@ -44,8 +44,9 @@ interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
 
 	/**
 	 * setChildList
+	 * @param ListOrderedInterface $list
 	 */
-	public function setChildList() : void;
+	public function setChildList(ListOrderedInterface $list) : void;
 
 	/**
 	 * @function getChildren
