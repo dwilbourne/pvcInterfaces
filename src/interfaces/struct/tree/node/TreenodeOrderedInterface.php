@@ -104,5 +104,5 @@ interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
      * @function getIndex
      * @return int
      */
-    public function getIndex(): int;
+    public function getIndex(): ? int;
 }
