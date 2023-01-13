@@ -17,7 +17,7 @@ use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
 interface TreeUnorderedInterface
 {
 	/**
-	 * setTreeId
+	 * @function setTreeId
 	 * @param int $treeId
 	 */
 	public function setTreeId(int $treeId) : void;
