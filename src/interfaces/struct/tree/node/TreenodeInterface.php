@@ -94,4 +94,11 @@ interface TreenodeInterface
 	 * @return mixed[]
 	 */
 	public function dehydrate(): array;
+
+	/**
+	 * equals
+	 * @param TreenodeInterface<NodeValueType> $testNode
+	 * @return bool
+	 */
+	public function equals(TreenodeInterface $testNode) : bool;
 }
