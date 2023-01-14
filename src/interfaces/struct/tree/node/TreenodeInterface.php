@@ -42,6 +42,12 @@ interface TreenodeInterface
 	public function getParentId(): ?int;
 
 	/**
+	 * @function isRoot
+	 * @return bool
+	 */
+	public function isRoot() : bool;
+
+	/**
 	 * @function setTreeId
 	 * @param int $treeId
 	 */
