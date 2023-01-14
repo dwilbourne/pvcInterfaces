@@ -130,10 +130,10 @@ interface TreeInterface
 
 	/**
 	 * @function hasLeafWithId
-	 * @param int $nodeId
+	 * @param ? int $nodeId
 	 * @return bool
 	 */
-	public function hasLeafWithId(int $nodeId): bool;
+	public function hasLeafWithId(int $nodeId = null): bool;
 
 	/**
      * @function getLeaves
@@ -143,10 +143,10 @@ interface TreeInterface
 
 	/**
 	 * @function hasInteriorNodeWithId
-	 * @param int $nodeId
+	 * @param ? int $nodeId
 	 * @return bool
 	 */
-	public function hasInteriorNodeWithId(int $nodeId): bool;
+	public function hasInteriorNodeWithId(int $nodeId = null): bool;
 
 	/**
      * @function getInteriorNodes
