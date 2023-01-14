@@ -8,13 +8,14 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
+use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
  * Interface TreeInterface
- * @template NodeType of TreenodeInterface
+ *
+ * @template NodeValueType
  */
-interface TreeUnorderedInterface
+interface TreeInterface
 {
 	/**
 	 * @function setTreeId
@@ -30,27 +31,27 @@ interface TreeUnorderedInterface
 
 	/**
 	 * @function addNode
-	 * @param TreenodeUnorderedInterface<NodeType> $node
+	 * @param TreenodeInterface<NodeValueType> $node
 	 */
-	public function addNode(TreenodeUnorderedInterface $node): void;
+	public function addNode(TreenodeInterface $node): void;
 
 	/**
 	 * @function deleteNode
-	 * @param TreenodeUnorderedInterface<NodeType> $node
+	 * @param TreenodeInterface<NodeValueType> $node
 	 * @param bool $deleteBranchOK
 	 */
-	public function deleteNode(TreenodeUnorderedInterface $node, bool $deleteBranchOK = false): void;
+	public function deleteNode(TreenodeInterface $node, bool $deleteBranchOK = false): void;
 
 	/**
 	 * @function setNodes
-	 * @param NodeType[] $nodeCollection
+	 * @param TreenodeInterface<NodeValueType>[] $nodeCollection
 	 * @return void
 	 */
 	public function setNodes(array $nodeCollection): void;
 
 	/**
      * @function getNodes
-     * @return TreenodeUnorderedInterface<NodeType>[]
+     * @return TreenodeInterface<NodeValueType>[]
      */
     public function getNodes(): array;
 
@@ -59,9 +60,9 @@ interface TreeUnorderedInterface
 	 *
 	 * @function getNode
 	 * @param int $nodeId
-	 * @return TreenodeUnorderedInterface<NodeType>|null
+	 * @return TreenodeInterface<NodeValueType>|null
 	 */
-	public function getNode(int $nodeId): ?TreenodeUnorderedInterface;
+	public function getNode(int $nodeId): ?TreenodeInterface;
 
 	/**
 	 * hasNode does an object compare between its argument and each node in the tree, returning true
@@ -69,16 +70,16 @@ interface TreeUnorderedInterface
 	 * same values) or "===" ($obj1 and $obj2 are the same instance).
 	 *
 	 * @function hasNode
-	 * @param int $nodeid
+	 * @param TreenodeInterface<NodeValueType> $node
 	 * @return bool
 	 */
-	public function hasNode(TreenodeUnorderedInterface $node, bool $strict = false) : bool;
+	public function hasNode(TreenodeInterface $node, bool $strict = false) : bool;
 
 	/**
 	 * @function getRoot
-	 * @return TreenodeUnorderedInterface<NodeType>|null
+	 * @return TreenodeInterface<NodeValueType>|null
 	 */
-	public function getRoot(): ?TreenodeUnorderedInterface;
+	public function getRoot(): ?TreenodeInterface;
 
 	/**
      * @function isEmpty
@@ -94,35 +95,35 @@ interface TreeUnorderedInterface
 
     /**
      * @function getParentOf
-     * @param TreenodeUnorderedInterface<NodeType> $node
-     * @return TreenodeUnorderedInterface<NodeType>|null
+     * @param TreenodeInterface<NodeValueType> $node
+     * @return TreenodeInterface<NodeValueType>|null
      */
-    public function getParentOf(TreenodeUnorderedInterface $node): ?TreenodeUnorderedInterface;
+    public function getParentOf(TreenodeInterface $node): ?TreenodeInterface;
 
     /**
      * @function getChildrenOf
-     * @param TreenodeUnorderedInterface<NodeType> $parent
-     * @return NodeType[]
+     * @param TreenodeInterface<NodeValueType> $parent
+     * @return TreenodeInterface<NodeValueType>[]
      */
-    public function getChildrenOf(TreenodeUnorderedInterface $parent): array;
+    public function getChildrenOf(TreenodeInterface $parent): array;
 
     /**
      * @function getTreeDepthFirst
-     * @param TreenodeUnorderedInterface<NodeType>|null $startNode
+     * @param TreenodeInterface<NodeValueType>|null $startNode
      * @param callable|null $callback
-     * @return NodeType[]
+     * @return TreenodeInterface<NodeValueType>[]
      */
-    public function getTreeDepthFirst(TreenodeUnorderedInterface $startNode = null, callable $callback = null): array;
+    public function getTreeDepthFirst(TreenodeInterface $startNode = null, callable $callback = null): array;
 
     /**
      * @function getTreeBreadthFirst
-     * @param TreenodeUnorderedInterface<NodeType>|null $startNode
+     * @param TreenodeInterface<NodeValueType>|null $startNode
      * @param callable|null $callback
      * @param int|null $levels
-     * @return NodeType[]
+     * @return TreenodeInterface<NodeValueType>[]
      */
     public function getTreeBreadthFirst(
-        TreenodeUnorderedInterface $startNode = null,
+        TreenodeInterface $startNode = null,
         callable $callback = null,
         int $levels = null
     ): array;
@@ -136,7 +137,7 @@ interface TreeUnorderedInterface
 
 	/**
      * @function getLeaves
-     * @return NodeType[]
+     * @return TreenodeInterface<NodeValueType>[]
      */
     public function getLeaves(): array;
 
@@ -149,7 +150,7 @@ interface TreeUnorderedInterface
 
 	/**
      * @function getInteriorNodes
-     * @return NodeType[]
+     * @return TreenodeInterface<NodeValueType>[]
      */
     public function getInteriorNodes(): array;
 }

@@ -11,10 +11,10 @@ namespace pvc\interfaces\struct\tree\node;
 use pvc\interfaces\validator\ValidatorInterface;
 
 /**
- * Interface TreenodeUnorderedInterface.
- * @template NodeType
+ * Interface TreenodeInterface.
+ * @template NodeValueType
  */
-interface TreenodeUnorderedInterface
+interface TreenodeInterface
 {
 
 	/**
@@ -67,25 +67,25 @@ interface TreenodeUnorderedInterface
 
 	/**
 	 * @function setValue
-	 * @param NodeType $value
+	 * @param NodeValueType $value
 	 */
 	public function setValue($value): void;
 
 	/**
 	 * @function getValue
-	 * @return NodeType
+	 * @return NodeValueType
 	 */
 	public function getValue();
 
 	/**
 	 * @function hydrate
-	 * @param NodeType[] $nodeData
+	 * @param mixed[] $nodeData
 	 */
 	public function hydrate(array $nodeData): void;
 
 	/**
 	 * @function dehydrate
-	 * @return NodeType[]
+	 * @return mixed[]
 	 */
 	public function dehydrate(): array;
 }

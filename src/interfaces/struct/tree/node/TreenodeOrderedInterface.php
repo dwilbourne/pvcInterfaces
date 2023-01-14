@@ -13,10 +13,10 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
 /**
  * Interface TreenodeOrderedInterface
- * @template OrderedNodeType
- * @extends TreenodeUnorderedInterface<OrderedNodeType>
+ * @template NodeValueType
+ * @extends TreenodeInterface<NodeValueType>
  */
-interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
+interface TreenodeOrderedInterface extends TreenodeInterface
 {
 	/**
 	 * @function setHydrationIndex
@@ -29,54 +29,54 @@ interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
 	 * @return int|null
 	 */
 	public function getHydrationIndex() : ? int;
+
     /**
      * @function setReferences
-     * @template NodeTypeForTree of TreeOrderedInterface
-     * @param NodeTypeForTree $tree
+     * @param TreeOrderedInterface<NodeValueType> $tree
      */
     public function setReferences(TreeOrderedInterface $tree): void;
 
     /**
      * @function getTree
-     * @return \pvc\interfaces\struct\tree\tree\TreeOrderedInterface<OrderedNodeType>|null
+     * @return TreeOrderedInterface<NodeValueType>|null
      */
     public function getTree(): ?TreeOrderedInterface;
 
 	/**
 	 * setChildList
-	 * @param ListOrderedInterface $list
+	 * @param ListOrderedInterface<TreenodeOrderedInterface<NodeValueType>> $list
 	 */
 	public function setChildList(ListOrderedInterface $list) : void;
 
 	/**
 	 * @function getChildren
-	 * @return ListOrderedInterface<OrderedNodeType>
+	 * @return ListOrderedInterface<TreenodeOrderedInterface<NodeValueType>>
 	 */
 	public function getChildren(): ListOrderedInterface;
 
 
 	/**
      * @function getParent
-     * @return TreenodeOrderedInterface<OrderedNodeType>|null
+     * @return TreenodeOrderedInterface<NodeValueType>|null
      */
     public function getParent(): ?TreenodeOrderedInterface;
 
     /**
      * @function getChild
      * @param int $nodeid
-     * @return TreenodeOrderedInterface<OrderedNodeType>|null
+     * @return TreenodeOrderedInterface<NodeValueType>|null
      */
     public function getChild(int $nodeid): ?TreenodeOrderedInterface;
 
     /**
      * @function getChildrenArray
-     * @return OrderedNodeType[]
+     * @return TreenodeOrderedInterface<NodeValueType>[]
      */
     public function getChildrenArray(): array;
 
     /**
      * @function getSiblings
-     * @return ListOrderedInterface<OrderedNodeType>|null
+     * @return ListOrderedInterface<TreenodeOrderedInterface<NodeValueType>>|null
      */
     public function getSiblings(): ?ListOrderedInterface;
 
@@ -100,14 +100,14 @@ interface TreenodeOrderedInterface extends TreenodeUnorderedInterface
 
     /**
      * @function isDescendantOf
-     * @param TreenodeOrderedInterface<OrderedNodeType> $node
+     * @param TreenodeOrderedInterface<NodeValueType> $node
      * @return bool
      */
     public function isDescendantOf(TreenodeOrderedInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param TreenodeOrderedInterface<OrderedNodeType> $node
+     * @param TreenodeOrderedInterface<NodeValueType> $node
      * @return bool
      */
     public function isAncestorOf(TreenodeOrderedInterface $node): bool;

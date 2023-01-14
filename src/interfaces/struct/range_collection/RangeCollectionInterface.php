@@ -17,7 +17,7 @@ interface RangeCollectionInterface
 {
 	/**
 	 * getRangeElements
-	 * @return array<RangeElement>
+	 * @return RangeElement[]
 	 */
 	public function getRanges(): array;
 }
