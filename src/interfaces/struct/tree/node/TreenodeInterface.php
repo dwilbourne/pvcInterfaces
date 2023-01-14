@@ -79,7 +79,7 @@ interface TreenodeInterface
 
 	/**
 	 * @function getValue
-	 * @return NodeValueType
+	 * @return NodeValueType|null
 	 */
 	public function getValue();
 
