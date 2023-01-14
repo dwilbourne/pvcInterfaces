@@ -97,9 +97,9 @@ interface TreenodeInterface
 
 	/**
 	 * @function equals
-	 * @param TreenodeInterface $testNode
+	 * @param TreenodeInterface|null $testNode
 	 * @param bool $strict
 	 * @return bool
 	 */
-	public function equals(TreenodeInterface $testNode, bool $strict) : bool;
+	public function equals(TreenodeInterface $testNode = null, bool $strict) : bool;
 }
