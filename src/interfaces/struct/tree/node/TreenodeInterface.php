@@ -96,9 +96,10 @@ interface TreenodeInterface
 	public function dehydrate(): array;
 
 	/**
-	 * equals
-	 * @param TreenodeInterface<NodeValueType> $testNode
+	 * @function equals
+	 * @param TreenodeInterface $testNode
+	 * @param bool $strict
 	 * @return bool
 	 */
-	public function equals(TreenodeInterface $testNode) : bool;
+	public function equals(TreenodeInterface $testNode, bool $strict) : bool;
 }
