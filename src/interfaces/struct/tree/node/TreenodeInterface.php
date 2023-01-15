@@ -13,7 +13,6 @@ use pvc\interfaces\validator\ValidatorInterface;
 /**
  * Interface TreenodeInterface.
  * @template NodeValueType
- * @template NodeType
  */
 interface TreenodeInterface
 {
