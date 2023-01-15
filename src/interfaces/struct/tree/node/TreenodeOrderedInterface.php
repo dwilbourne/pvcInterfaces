@@ -14,7 +14,9 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 /**
  * Interface TreenodeOrderedInterface
  * @template NodeValueType
+ * @template NodeType
  * @extends TreenodeInterface<NodeValueType>
+ * @extends TreenodeInterface<NodeType>
  */
 interface TreenodeOrderedInterface extends TreenodeInterface
 {
