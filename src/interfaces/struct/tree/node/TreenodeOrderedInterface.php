@@ -9,13 +9,11 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\lists\ordered\ListOrderedInterface;
-use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
 /**
  * Interface TreenodeOrderedInterface
  * @template NodeValueType
- * @template NodeType
  * @extends TreenodeInterface<NodeValueType>
  */
 interface TreenodeOrderedInterface extends TreenodeInterface
