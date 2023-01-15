@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\lists\ordered\ListOrderedInterface;
-use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
+use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Interface TreenodeOrderedInterface
@@ -34,15 +34,15 @@ interface TreenodeOrderedInterface extends TreenodeInterface
 
     /**
      * @function setReferences
-     * @param TreeOrderedInterface<NodeValueType, NodeType> $tree
+     * @param TreeInterface<NodeValueType, NodeType> $tree
      */
-    public function setReferences(TreeOrderedInterface $tree): void;
+    public function setReferences(TreeInterface $tree): void;
 
     /**
      * @function getTree
-     * @return TreeOrderedInterface<NodeValueType, NodeType>|null
+     * @return TreeInterface<NodeValueType, NodeType>|null
      */
-    public function getTree(): ?TreeOrderedInterface;
+    public function getTree(): ?TreeInterface;
 
 	/**
 	 * setChildList
