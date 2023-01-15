@@ -15,6 +15,7 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
  * Interface TreeOrderedInterface
  *
  * @template NodeValueType
+ * @template NodeType
  */
 interface TreeOrderedInterface
 {
@@ -52,14 +53,14 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function getNodes
-	 * @return TreenodeOrderedInterface<NodeValueType>[]
+	 * @return TreenodeOrderedInterface<NodeValueType, NodeType>[]
 	 */
 	public function getNodes(): array;
 
 	/**
 	 * @function getNode
 	 * @param int $nodeid
-	 * @return TreenodeInterface<NodeValueType>|null
+	 * @return TreenodeInterface<NodeValueType, NodeType>|null
 	 */
 	public function getNode(int $nodeid): ?TreenodeInterface;
 
@@ -76,9 +77,9 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function getRoot
-	 * @return TreenodeOrderedInterface<NodeValueType>|null
+	 * @return TreenodeInterface<NodeValueType, NodeType>|null
 	 */
-	public function getRoot(): ?TreenodeOrderedInterface;
+	public function getRoot(): ?TreenodeInterface;
 
 	/**
 	 * @function isEmpty

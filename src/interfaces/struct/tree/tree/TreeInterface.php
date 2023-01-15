@@ -14,6 +14,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * Interface TreeInterface
  *
  * @template NodeValueType
+ * @template NodeType
  */
 interface TreeInterface
 {
@@ -51,7 +52,7 @@ interface TreeInterface
 
 	/**
      * @function getNodes
-     * @return TreenodeInterface<NodeValueType>[]
+     * @return TreenodeInterface<NodeValueType, NodeType>[]
      */
     public function getNodes(): array;
 
@@ -60,7 +61,7 @@ interface TreeInterface
 	 *
 	 * @function getNode
 	 * @param int $nodeId
-	 * @return TreenodeInterface<NodeValueType>|null
+	 * @return TreenodeInterface<NodeValueType, NodeType>|null
 	 */
 	public function getNode(int $nodeId): ?TreenodeInterface;
 
@@ -77,7 +78,7 @@ interface TreeInterface
 
 	/**
 	 * @function getRoot
-	 * @return TreenodeInterface<NodeValueType>|null
+	 * @return TreenodeInterface<NodeValueType, NodeType>|null
 	 */
 	public function getRoot(): ?TreenodeInterface;
 
