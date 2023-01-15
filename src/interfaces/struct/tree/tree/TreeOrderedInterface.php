@@ -60,9 +60,9 @@ interface TreeOrderedInterface
 	/**
 	 * @function getNode
 	 * @param int $nodeid
-	 * @return TreenodeInterface<NodeValueType, NodeType>|null
+	 * @return TreenodeOrderedInterface<NodeValueType, NodeType>|null
 	 */
-	public function getNode(int $nodeid): ?TreenodeInterface;
+	public function getNode(int $nodeid): ?TreenodeOrderedInterface;
 
 	/**
 	 * hasNode does an object compare between its argument and each node in the tree, returning true

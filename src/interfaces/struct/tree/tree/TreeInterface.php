@@ -71,7 +71,7 @@ interface TreeInterface
 	 * same values) or "===" ($obj1 and $obj2 are the same instance).
 	 *
 	 * @function hasNode
-	 * @param TreenodeInterface<NodeValueType>|null $node
+	 * @param TreenodeInterface<NodeValueType, NodeType>|null $node
 	 * @return bool
 	 */
 	public function hasNode(TreenodeInterface $node = null, bool $strict = false) : bool;
