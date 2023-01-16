@@ -98,7 +98,7 @@ interface TreenodeInterface
 
 	/**
 	 * @function equals
-	 * @param TreenodeInterface<NodeValueType, NodeType>|null $testNode
+	 * @param NodeType|null $testNode
 	 * @param bool $strict
 	 * @return bool
 	 */
