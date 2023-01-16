@@ -14,6 +14,7 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
  * Interface TreeOrderedInterface
  *
  * @template NodeValueType
+ * @template NodeType
  */
 interface TreeOrderedInterface
 {
@@ -31,34 +32,34 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function addNode
-	 * @param TreenodeOrderedInterface<NodeValueType> $node
+	 * @param TreenodeOrderedInterface<NodeValueType, NodeType> $node
 	 */
 	public function addNode(TreenodeOrderedInterface $node): void;
 
 	/**
 	 * @function deleteNode
-	 * @param TreenodeOrderedInterface<NodeValueType> $node
+	 * @param TreenodeOrderedInterface<NodeValueType, NodeType> $node
 	 * @param bool $deleteBranchOK
 	 */
 	public function deleteNode(TreenodeOrderedInterface $node, bool $deleteBranchOK = false): void;
 
 	/**
 	 * @function setNodes
-	 * @param TreenodeOrderedInterface<NodeValueType>[] $nodeCollection
+	 * @param TreenodeOrderedInterface<NodeValueType, NodeType>[] $nodeCollection
 	 * @return void
 	 */
 	public function setNodes(array $nodeCollection): void;
 
 	/**
 	 * @function getNodes
-	 * @return TreenodeOrderedInterface<NodeValueType>[]
+	 * @return TreenodeOrderedInterface<NodeValueType, NodeType>[]
 	 */
 	public function getNodes(): array;
 
 	/**
 	 * @function getNode
 	 * @param int $nodeid
-	 * @return TreenodeOrderedInterface<NodeValueType>|null
+	 * @return TreenodeOrderedInterface<NodeValueType, NodeType>|null
 	 */
 	public function getNode(int $nodeid): ?TreenodeOrderedInterface;
 
@@ -68,14 +69,14 @@ interface TreeOrderedInterface
 	 * same values) or "===" ($obj1 and $obj2 are the same instance).
 	 *
 	 * @function hasNode
-	 * @param TreenodeOrderedInterface<NodeValueType> $node
+	 * @param TreenodeOrderedInterface<NodeValueType, NodeType> $node
 	 * @return bool
 	 */
 	public function hasNode(TreenodeOrderedInterface $node, bool $strict = false) : bool;
 
 	/**
 	 * @function getRoot
-	 * @return TreenodeOrderedInterface<NodeValueType>|null
+	 * @return TreenodeOrderedInterface<NodeValueType, NodeType>|null
 	 */
 	public function getRoot(): ?TreenodeOrderedInterface;
 
@@ -93,21 +94,21 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function getParentOf
-	 * @param TreenodeOrderedInterface<NodeValueType> $node
-	 * @return TreenodeOrderedInterface<NodeValueType>|null
+	 * @param TreenodeOrderedInterface<NodeValueType, NodeType> $node
+	 * @return TreenodeOrderedInterface<NodeValueType, NodeType>|null
 	 */
 	public function getParentOf(TreenodeOrderedInterface $node): ?TreenodeOrderedInterface;
 
 	/**
 	 * @function getChildrenOf
-	 * @param TreenodeOrderedInterface<NodeValueType> $parent
+	 * @param TreenodeOrderedInterface<NodeValueType, NodeType> $parent
 	 * @return NodeValueType[]
 	 */
 	public function getChildrenOf(TreenodeOrderedInterface $parent): array;
 
 	/**
 	 * @function getTreeDepthFirst
-	 * @param TreenodeOrderedInterface<NodeValueType>|null $startNode
+	 * @param TreenodeOrderedInterface<NodeValueType, NodeType>|null $startNode
 	 * @param callable|null $callback
 	 * @return NodeValueType[] TreenodeOrderedInterface
 	 */
@@ -115,7 +116,7 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function getTreeBreadthFirst
-	 * @param TreenodeOrderedInterface<NodeValueType>|null $startNode
+	 * @param TreenodeOrderedInterface<NodeValueType, NodeType>|null $startNode
 	 * @param callable|null $callback
 	 * @param int|null $levels
 	 * @return NodeValueType[]
@@ -142,13 +143,13 @@ interface TreeOrderedInterface
 
 	/**
 	 * @function getLeaves
-	 * @return TreenodeOrderedInterface<NodeValueType>[] TreenodeOrderedInterface
+	 * @return TreenodeOrderedInterface<NodeValueType, NodeType>[] TreenodeOrderedInterface
 	 */
 	public function getLeaves(): array;
 
 	/**
 	 * @function getInteriorNodes
-	 * @return TreenodeOrderedInterface<NodeValueType>[] TreenodeOrderedInterface
+	 * @return TreenodeOrderedInterface<NodeValueType, NodeType>[] TreenodeOrderedInterface
 	 */
 	public function getInteriorNodes(): array;
 }

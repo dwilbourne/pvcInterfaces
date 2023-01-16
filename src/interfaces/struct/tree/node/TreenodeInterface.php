@@ -13,6 +13,7 @@ use pvc\interfaces\validator\ValidatorInterface;
 /**
  * Interface TreenodeInterface.
  * @template NodeValueType
+ * @template NodeType
  */
 interface TreenodeInterface
 {
@@ -97,7 +98,7 @@ interface TreenodeInterface
 
 	/**
 	 * @function equals
-	 * @param TreenodeInterface<NodeValueType>|null $testNode
+	 * @param TreenodeInterface<NodeValueType, NodeType>|null $testNode
 	 * @param bool $strict
 	 * @return bool
 	 */
