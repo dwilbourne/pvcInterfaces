@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\config;
+namespace pvc\interfaces\config;
 
 /**
  * Interface AppConfigInterface
