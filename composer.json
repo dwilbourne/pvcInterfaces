@@ -14,7 +14,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"pvc\\": "src/"
+			"pvc\\interfaces\\": "src/"
 		}
 	},
 	"require-dev": {
