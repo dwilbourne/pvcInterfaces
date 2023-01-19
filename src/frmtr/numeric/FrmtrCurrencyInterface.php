@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\frmtr\numeric;
+namespace pvc\interfaces\frmtr\numeric;
 
 /**
  * Interface FrmtrCurrencyInterface

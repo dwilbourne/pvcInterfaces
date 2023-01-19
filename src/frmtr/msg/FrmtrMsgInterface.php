@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\frmtr\msg;
+namespace pvc\interfaces\frmtr\msg;
 
 use pvc\msg\DomainCatalogInterface;
 use pvc\msg\MsgInterface;

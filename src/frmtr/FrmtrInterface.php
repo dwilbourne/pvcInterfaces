@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\frmtr;
+namespace pvc\interfaces\frmtr;
 
 /**
  * Interface FrmtrInterface

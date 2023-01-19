@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace pvc\frmtr\bool;
+namespace pvc\interfaces\frmtr\bool;
 
-use pvc\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
  * Interface FrmtrBooleanInterface

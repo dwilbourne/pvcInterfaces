@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace pvc\frmtr\date_time;
+namespace pvc\interfaces\frmtr\date_time;
 
 use DateTime;
-use pvc\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
  * Interface FrmtrDateTimeInterface

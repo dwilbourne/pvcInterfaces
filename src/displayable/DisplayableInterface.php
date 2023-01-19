@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\displayable;
+namespace pvc\interfaces\displayable;
 
 /**
  * Class DisplayableInterface

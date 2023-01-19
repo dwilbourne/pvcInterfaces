@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace pvc\frmtr\text;
+namespace pvc\interfaces\frmtr\text;
 
-use pvc\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
  * Interface FrmtrTextInterface

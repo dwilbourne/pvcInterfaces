@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace pvc\frmtr\range_collection;
+namespace pvc\interfaces\frmtr\range_collection;
 
-use pvc\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrInterface;
 use pvc\struct\range_collection\RangeCollectionInterface;
 
 /**

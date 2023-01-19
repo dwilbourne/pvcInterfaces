@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace pvc\frmtr\numeric;
+namespace pvc\interfaces\frmtr\numeric;
 
-use pvc\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
  * Interface FrmtrFloatInterface
