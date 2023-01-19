@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\struct\lists\ordered;
+namespace pvc\struct\lists;
 
 use ArrayAccess;
 use Countable;

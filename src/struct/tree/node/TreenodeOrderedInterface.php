@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\struct\tree\node;
 
-use pvc\struct\lists\ordered\ListOrderedInterface;
+use pvc\struct\lists\ListOrderedInterface;
 use pvc\struct\tree\tree\TreeOrderedInterface;
 
 /**
