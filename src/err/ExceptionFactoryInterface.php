@@ -16,14 +16,11 @@ use Throwable;
 interface ExceptionFactoryInterface
 {
     /**
-     * createException
+     * @function createException
      * @param string $exceptionClassString
-     * @param array $params
+     * @param array<mixed> $params
      * @param Throwable|null $prev
      * @return Throwable
      */
-	public static function createException(string $exceptionClassString,
-                                    array $params = [],
-                                    Throwable $prev = null
-    ) : Throwable;
+	public function createException(string $exceptionClassString, array $params = [], Throwable $prev = null) : Throwable;
 }
