@@ -17,4 +17,10 @@ interface ExceptionLibraryCodesInterface
      * @return int
      */
     public function getLibraryCode(string $exceptionClassString) : int;
+
+    /**
+     * getLibraryCodes
+     * @return array<string, int>
+     */
+    public function getLibraryCodes() : array;
 }
