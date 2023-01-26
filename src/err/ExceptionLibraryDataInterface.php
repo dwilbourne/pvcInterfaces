@@ -17,6 +17,12 @@ interface ExceptionLibraryDataInterface
     public function getNamespace() : string;
 
     /**
+     * getDirectory
+     * @return string
+     */
+    public function getDirectory() : string;
+
+    /**
      * getLocalCodes
      * @return array<class-string, int>
      */
