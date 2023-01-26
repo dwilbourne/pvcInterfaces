@@ -8,7 +8,7 @@ declare (strict_types=1);
 
 namespace pvc\interfaces\err;
 
-interface ExceptionLibraryInterface
+interface ExceptionLibraryDataInterface
 {
     /**
      * getNamespace
