@@ -16,11 +16,11 @@ interface ExceptionLibraryCodePrefixesInterface
      * @param class-string $exceptionClassString
      * @return int
      */
-    public function getLibraryCode(string $exceptionClassString) : int;
+    public function getLibraryCodePrefix(string $exceptionClassString) : int;
 
     /**
      * getLibraryCodes
      * @return array<string, int>
      */
-    public function getLibraryCodes() : array;
+    public function getLibraryCodePrefixes() : array;
 }
