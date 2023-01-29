@@ -13,10 +13,10 @@ interface ExceptionLibraryCodePrefixesInterface
 {
     /**
      * getLibraryCode
-     * @param class-string $exceptionClassString
+     * @param string $namespace
      * @return int
      */
-    public function getLibraryCodePrefix(string $exceptionClassString) : int;
+    public function getLibraryCodePrefix(string $namespace) : int;
 
     /**
      * getLibraryCodes
