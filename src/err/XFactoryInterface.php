@@ -11,9 +11,9 @@ namespace pvc\interfaces\err;
 use Throwable;
 
 /**
- * Interface ExceptionFactoryInterface
+ * Interface XFactoryInterface
  */
-interface ExceptionFactoryInterface
+interface XFactoryInterface
 {
     /**
      * @function createException
