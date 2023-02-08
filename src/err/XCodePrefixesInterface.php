@@ -12,15 +12,15 @@ namespace pvc\interfaces\err;
 interface XCodePrefixesInterface
 {
     /**
-     * getLibraryCode
+     * @function getXCodePrefixes
      * @param string $namespace
      * @return int
      */
-    public function getLibraryCodePrefix(string $namespace) : int;
+    public function getXCodePrefix(string $namespace) : int;
 
     /**
-     * getLibraryCodes
+     * @function getXCodePrefixes
      * @return array<string, int>
      */
-    public function getLibraryCodePrefixes() : array;
+    public function getXCodePrefixes() : array;
 }
