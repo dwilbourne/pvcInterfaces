@@ -12,7 +12,7 @@ namespace pvc\interfaces\err;
 interface XCodePrefixesInterface
 {
     /**
-     * @function getXCodePrefixes
+     * @function getXCodePrefix
      * @param string $namespace
      * @return int
      */
