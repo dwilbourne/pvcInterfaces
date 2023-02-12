@@ -16,11 +16,11 @@ interface XCodePrefixesInterface
      * @param string $namespace
      * @return int
      */
-    public function getXCodePrefix(string $namespace) : int;
+    public static function getXCodePrefix(string $namespace) : int;
 
     /**
      * @function getXCodePrefixes
      * @return array<string, int>
      */
-    public function getXCodePrefixes() : array;
+    public static function getXCodePrefixes() : array;
 }
