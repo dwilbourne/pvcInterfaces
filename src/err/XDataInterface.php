@@ -11,17 +11,17 @@ namespace pvc\interfaces\err;
 interface XDataInterface
 {
     /**
-     * @function getXCodes
+     * @function getLocalXCodes
      * @return array<class-string, int>
      */
-    public function getXCodes() : array;
+    public function getLocalXCodes() : array;
 
     /**
-     * @function getXCode
+     * @function getLocalXCode
      * @param class-string $classString
      * @return int
      */
-    public function getXCode(string $classString) : int;
+    public function getLocalXCode(string $classString) : int;
 
     /**
      * @function getXMessages
