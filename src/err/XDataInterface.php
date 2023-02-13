@@ -24,15 +24,15 @@ interface XDataInterface
     public function getLocalXCode(string $classString) : int;
 
     /**
-     * @function getXMessages
+     * @function getXMessageTemplates
      * @return array<class-string, string>
      */
-    public function getXMessages() : array;
+    public function getXMessageTemplates() : array;
 
     /**
-     * @function getXMessage
+     * @function getXMessageTemplate
      * @param class-string $classString
      * @return string
      */
-    public function getXMessage(string $classString) : string;
+    public function getXMessageTemplate(string $classString) : string;
 }
