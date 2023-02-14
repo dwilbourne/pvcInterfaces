@@ -35,4 +35,11 @@ interface XDataInterface
      * @return string
      */
     public function getXMessageTemplate(string $classString) : string;
+
+    /**
+     * @function countXMessageVariables
+     * @param class-string $classString
+     * @return int
+     */
+    public function countXMessageVariables(string $classString): int;
 }
