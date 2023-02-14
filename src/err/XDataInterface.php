@@ -38,8 +38,8 @@ interface XDataInterface
 
     /**
      * @function countXMessageVariables
-     * @param class-string $classString
+     * @param string $messageTemplate
      * @return int
      */
-    public function countXMessageVariables(string $classString): int;
+    public function countXMessageVariables(string $messageTemplate): int;
 }
