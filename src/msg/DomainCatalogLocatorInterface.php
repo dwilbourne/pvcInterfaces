@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\msg;
+namespace pvc\interfaces\msg;
 
 /**
  * Interface DomainCatalogLocatorInterface

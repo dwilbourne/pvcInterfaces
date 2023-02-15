@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\frmtr\msg;
 
-use pvc\msg\DomainCatalogInterface;
-use pvc\msg\MsgInterface;
+use pvc\interfaces\msg\DomainCatalogInterface;
+use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Interface FrmtrMsgInterface

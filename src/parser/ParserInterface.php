@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\parser;
 
-use pvc\msg\HasMsgInterface;
+use pvc\interfaces\msg\HasMsgInterface;
 
 /**
  * Interface ParserInterface
