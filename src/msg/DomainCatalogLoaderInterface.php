@@ -19,6 +19,9 @@ interface DomainCatalogLoaderInterface
      * @param string $domain
      * @param string $locale
      * @return false|array<string, string>
+     *
+     * returns false if it is unable to find a catalog corresponding to domain and locale, otherwise returns and
+     * array of msgIds => translated strings.
      */
 	public function loadCatalog(string $domain, string $locale): bool|array;
 
