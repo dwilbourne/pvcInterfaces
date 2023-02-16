@@ -14,7 +14,10 @@ interface DomainCatalogFileParserInterface
      * @function parseDomainCatalogFile
      * @param string $directory
      * @param string $baseFileName
-     * @return array<string, string>
+     * @return false|array<string, string>
+     *
+     * returns false if the file implied by $domain and $baseFileName does not exist or is not readable.  Throws an
+     * exception if the file returns something other than array<string, string>.
      */
-    public function parseDomainCatalogFile(string $directory, string $baseFileName): array;
+    public function parseDomainCatalogFile(string $directory, string $baseFileName): false|array;
 }
