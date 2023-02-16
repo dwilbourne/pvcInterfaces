@@ -13,25 +13,27 @@ namespace pvc\interfaces\msg;
  */
 interface DomainCatalogLoaderInterface
 {
-	/**
-	 * loadCatalog
-	 */
-	public function loadCatalog(): void;
+    /**
+     * @function loadCatalog
+     * @param string $domain
+     * @param string $locale
+     */
+	public function loadCatalog(string $domain, string $locale): void;
 
 	/**
-	 * getDomain
+	 * @function getDomain
 	 * @return string
 	 */
 	public function getDomain(): string;
 
 	/**
-	 * getLocale
+	 * @function getLocale
 	 * @return string
 	 */
 	public function getLocale(): string;
 
 	/**
-	 * getMessages
+	 * @function getMessages
 	 * @return array<string>
 	 */
 	public function getMessages(): array;
