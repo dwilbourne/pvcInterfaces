@@ -10,5 +10,5 @@ namespace pvc\interfaces\msg;
 
 interface DomainCatalogFactoryInterface
 {
-    public function create(string $domain): DomainCatalogLoaderInterface;
+    public function create(string $domain): DomainCatalogInterface;
 }
