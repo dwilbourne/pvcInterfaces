@@ -8,7 +8,7 @@ declare (strict_types=1);
 
 namespace pvc\interfaces\msg;
 
-interface DomainCatalogLoaderFactoryInterface
+interface DomainCatalogFactoryInterface
 {
     public function create(string $domain): DomainCatalogLoaderInterface;
 }
