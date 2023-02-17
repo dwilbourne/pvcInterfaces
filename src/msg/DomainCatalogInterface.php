@@ -38,4 +38,11 @@ interface DomainCatalogInterface
 	 * @return string
 	 */
 	public function getMessage(string $messageId): string;
+
+    /**
+     * @function load
+     * @param string $domain
+     * @param string $locale
+     */
+    public function load(string $domain, string $locale): void;
 }
