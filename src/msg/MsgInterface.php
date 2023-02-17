@@ -41,5 +41,5 @@ interface MsgInterface
      *
      * format and output the message
      */
-    public function format(DomainCatalogInterface $catalog): string;
+    public function format(DomainCatalogInterface $catalog): false|string;
 }
