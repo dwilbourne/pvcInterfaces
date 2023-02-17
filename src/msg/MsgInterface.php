@@ -33,4 +33,13 @@ interface MsgInterface
 	 * @return array<string, mixed>
 	 */
 	public function getParameters(): array;
+
+    /**
+     * @function format
+     * @param DomainCatalogInterface $catalog
+     * @return string
+     *
+     * format and output the message
+     */
+    public function format(DomainCatalogInterface $catalog): string;
 }
