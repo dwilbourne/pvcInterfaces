@@ -28,9 +28,9 @@ interface DomainCatalogInterface
 
 	/**
 	 * getMessages
-	 * @return array<string>
+	 * @return array<string>|null
 	 */
-	public function getMessages(): array;
+	public function getMessages(): ?array;
 
 	/**
 	 * getMessage
@@ -45,4 +45,11 @@ interface DomainCatalogInterface
      * @param string $locale
      */
     public function load(string $domain, string $locale): void;
+
+    /**
+     * @function isLoadedForLocale
+     * @param string $locale
+     * @return bool
+     */
+    public function isLoadedForLocale(string $locale): bool;
 }
