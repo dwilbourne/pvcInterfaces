@@ -22,9 +22,9 @@ interface DomainCatalogInterface
 
 	/**
 	 * getLocale
-	 * @return string|null
+	 * @return string
 	 */
-	public function getLocale(): ?string;
+	public function getLocale(): string;
 
 	/**
 	 * getMessages
