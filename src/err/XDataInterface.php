@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package pvcErr
+ * @package pvcInterfaces
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 declare (strict_types=1);
