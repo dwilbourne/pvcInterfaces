@@ -52,5 +52,5 @@ interface DomainCatalogInterface
      * @param string $locale
      * @return bool
      */
-    public function isLoadedForLocale(string $locale): bool;
+    public function isLoaded(string $domain = '', string $locale = ''): bool;
 }
