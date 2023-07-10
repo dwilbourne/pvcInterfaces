@@ -18,7 +18,7 @@ interface DomainCatalogInterface
 	 * getDomain
 	 * @return string|null
 	 */
-	public function getDomain(): ?string;
+	public function getDomain(): string;
 
 	/**
 	 * getLocale
@@ -30,7 +30,7 @@ interface DomainCatalogInterface
 	 * getMessages
 	 * @return array<string>|null
 	 */
-	public function getMessages(): ?array;
+	public function getMessages(): array;
 
 	/**
 	 * getMessage
