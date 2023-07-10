@@ -27,19 +27,10 @@ interface MsgInterface
 	public function getDomain(): string;
 
 	/**
-	 * getParameters
-	 * use named parameters and make sure the first element in your message placeholders is a string
-	 * (which matches the key name of a parameter).
-	 * @return array<string, mixed>
-	 */
-	public function getParameters(): array;
-
-    /**
-     * @function format
-     * @param DomainCatalogInterface $catalog
-     * @return string
-     *
-     * format and output the message
+     * getParameters
+     * each parameter is a key-value pair where the key is the name of the parameter and the value is the value to be
+     * substituted into the message.
+     * @return array<string, mixed>
      */
-    public function format(DomainCatalogInterface $catalog): false|string;
+	public function getParameters(): array;
 }
