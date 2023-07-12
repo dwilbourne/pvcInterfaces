@@ -48,7 +48,7 @@ interface DomainCatalogInterface
     public function load(string $domain, string $locale): bool;
 
     /**
-     * @function isLoadedForLocale
+     * @function isLoaded
      * @param string $locale
      * @return bool
      */
