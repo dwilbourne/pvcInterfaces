@@ -6,7 +6,7 @@
 
 declare (strict_types=1);
 
-namespace pvc\struct\range_collection;
+namespace pvc\interfaces\struct\range_collection;
 
 /**
  * Interface DataTypeValidatorInterface

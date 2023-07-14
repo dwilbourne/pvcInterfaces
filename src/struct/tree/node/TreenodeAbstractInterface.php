@@ -5,9 +5,9 @@
  */
 declare (strict_types=1);
 
-namespace pvc\struct\tree\node;
+namespace pvc\interfaces\struct\tree\node;
 
-use pvc\validator\ValidatorInterface;
+use pvc\interfaces\validator\ValidatorInterface;
 
 /**
  * Interface TreenodeAbstractInterface
