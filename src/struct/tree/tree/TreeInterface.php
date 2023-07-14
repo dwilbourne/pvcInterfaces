@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace pvc\struct\tree\tree;
+namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\struct\tree\node\TreenodeInterface;
+use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
  * Interface TreeInterface

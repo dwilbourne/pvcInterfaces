@@ -5,7 +5,7 @@
  */
 declare (strict_types=1);
 
-namespace pvc\struct\tree\tree;
+namespace pvc\interfaces\struct\tree\tree;
 
 /**
  * Interface TreeAbstractInterface

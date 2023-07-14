@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\lists\ListOrderedInterface;
-use pvc\struct\tree\tree\TreeOrderedInterface;
+use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
 /**
  * Interface TreenodeOrderedInterface
