@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\tree\tree;
 /**
  * Interface TreeAbstractInterface
  * @template NodeType
+ * @template NodeValueType
  */
 interface TreeAbstractInterface
 {

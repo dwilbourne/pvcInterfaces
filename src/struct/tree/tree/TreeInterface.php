@@ -14,7 +14,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * Interface TreeInterface
  *
  * @template NodeValueType
- * @extends TreeAbstractInterface<TreenodeInterface>
+ * @extends TreeAbstractInterface<TreenodeInterface, NodeValueType>
  */
 interface TreeInterface extends TreeAbstractInterface
 {

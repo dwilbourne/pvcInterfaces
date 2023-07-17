@@ -12,7 +12,7 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 /**
  * Interface TreeOrderedInterface
  * @template NodeValueType
- * @extends TreeAbstractInterface<TreenodeOrderedInterface>
+ * @extends TreeAbstractInterface<TreenodeOrderedInterface, NodeValueType>
  */
 interface TreeOrderedInterface extends TreeAbstractInterface
 {
