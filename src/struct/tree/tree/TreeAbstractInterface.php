@@ -21,9 +21,9 @@ interface TreeAbstractInterface
 
 	/**
 	 * @function getTreeId
-	 * @return int|null
+	 * @return int
 	 */
-	public function getTreeId(): ? int;
+	public function getTreeId(): int;
 
 	/**
 	 * @function addNode
