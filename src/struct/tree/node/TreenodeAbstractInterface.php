@@ -7,7 +7,7 @@ declare (strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
-use pvc\interfaces\validator\ValidatorInterface;
+use pvc\interfaces\validator\ValidatorRequiredInterface;
 
 /**
  * Interface TreenodeAbstractInterface
@@ -58,17 +58,17 @@ interface TreenodeAbstractInterface
 	 */
 	public function getTreeId(): ?int;
 
-	/**
-	 * setValueValidator
-	 * @param ValidatorInterface $callable
-	 */
-	public function setValueValidator(ValidatorInterface $callable) : void;
+    /**
+     * setValueValidator
+     * @param ValidatorRequiredInterface $callable
+     */
+    public function setValueValidator(ValidatorRequiredInterface $callable): void;
 
-	/**
-	 * getValueValidator
-	 * @return ValidatorInterface|null
-	 */
-	public function getValueValidator() : ? ValidatorInterface;
+    /**
+     * getValueValidator
+     * @return ValidatorRequiredInterface|null
+     */
+    public function getValueValidator(): ?ValidatorRequiredInterface;
 
 	/**
 	 * @function setValue

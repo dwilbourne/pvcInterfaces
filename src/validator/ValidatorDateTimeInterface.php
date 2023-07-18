@@ -1,10 +1,8 @@
 <?php
 
 /**
- * @package pvcInterfaces
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
-
 declare(strict_types=1);
 
 namespace pvc\interfaces\validator;
@@ -12,14 +10,14 @@ namespace pvc\interfaces\validator;
 use pvc\interfaces\msg\HasMsgInterface;
 
 /**
- * Interface ValidatorInterface
+ * Class ValidatorDateTimeInterface
  */
-interface ValidatorInterface extends HasMsgInterface
+interface ValidatorDateTimeInterface extends HasMsgInterface
 {
     /**
-     * @function validate
-     * @param mixed $data
+     * validate
+     * @param \DateTime $data
      * @return bool
      */
-    public function validate($data): bool;
+    public function validate(\DateTime $data): bool;
 }

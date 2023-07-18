@@ -105,20 +105,31 @@ interface TreeAbstractInterface
 	public function getChildrenOf($parent): array;
 
 	/**
-	 * @function getTreeDepthFirst
-	 * @param NodeType|null $startNode
-	 * @param callable|null $callback
-	 * @return NodeType[]
-	 */
+     * @function getTreeDepthFirst
+     * @param NodeType|null $startNode
+     * @param callable|null $callback
+     * @return NodeType[]
+     *
+     * getTreeDepthFirst allows you to search the tree from a given starting node using a depth-first algorithm.
+     *
+     * The starting node would typically be the root, but it does not have to be.  Also, you can supply a callback
+     * which returns a boolean indicating whether a given node should be included in the result set.  This allows you to
+     * search the tree and filter the resultset according to a certain set of criteria.  The returned result set is
+     * an array of nodes where the key for each array element is its nodeId.
+     *
+     */
 	public function getTreeDepthFirst($startNode = null, callable $callback = null): array;
 
-	/**
-	 * @function getTreeBreadthFirst
-	 * @param NodeType|null $startNode
-	 * @param callable|null $callback
-	 * @param int|null $levels
-	 * @return NodeType[]
-	 */
+    /**
+     * @function getTreeBreadthFirst
+     * @param NodeType|null $startNode
+     * @param callable|null $callback
+     * @param int|null $levels
+     * @return NodeType[]
+     *
+     * same idea as getTreeDepthFirst but is a breadth first search, which obviously changes the ordering of the
+     * nodes in the result set.
+     */
 	public function getTreeBreadthFirst($startNode = null, callable $callback = null, int $levels = null): array;
 
 	/**
