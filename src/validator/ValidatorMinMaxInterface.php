@@ -19,5 +19,5 @@ interface ValidatorMinMaxInterface
      * @param int|float|DateTime $data
      * @return bool
      */
-    public function validate(int|float|DateTime $data): bool;
+    public function validate(int|float|DateTime $data): int;
 }
