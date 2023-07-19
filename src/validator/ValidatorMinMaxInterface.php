@@ -7,17 +7,18 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\validator;
 
-use DateTime;
+use pvc\interfaces\msg\HasMsgInterface;
 
 /**
  * Class ValidatorMinMaxInterface
+ * @template DataType
  */
-interface ValidatorMinMaxInterface
+interface ValidatorMinMaxInterface extends HasMsgInterface
 {
     /**
      * validate
-     * @param int|float|DateTime $data
+     * @param DataType $data
      * @return bool
      */
-    public function validate(int|float|DateTime $data): int;
+    public function validate($data): bool;
 }
