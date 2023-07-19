@@ -8,12 +8,11 @@ declare(strict_types=1);
 namespace pvc\interfaces\validator;
 
 use DateTime;
-use pvc\interfaces\msg\HasMsgInterface;
 
 /**
  * Class ValidatorMinMaxInterface
  */
-interface ValidatorMinMaxInterface extends HasMsgInterface
+interface ValidatorMinMaxInterface
 {
     /**
      * validate
