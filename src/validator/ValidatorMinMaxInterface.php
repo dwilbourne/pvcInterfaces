@@ -17,9 +17,8 @@ interface ValidatorMinMaxInterface extends HasMsgInterface
 {
     /**
      * validate
-     * @param int|float|DateTime $min
-     * @param int|float|DateTime $max
+     * @param int|float|DateTime $data
      * @return bool
      */
-    public function validate(int|float|DateTime $min, int|float|DateTime $max): bool;
+    public function validate(int|float|DateTime $data): bool;
 }
