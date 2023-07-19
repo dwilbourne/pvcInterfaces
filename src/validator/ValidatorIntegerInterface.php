@@ -16,8 +16,8 @@ interface ValidatorIntegerInterface extends HasMsgInterface
 {
     /**
      * validate
-     * @param int $data
+     * @param int|null $data
      * @return bool
      */
-    public function validate(int $data): bool;
+    public function validate(int $data = null): bool;
 }

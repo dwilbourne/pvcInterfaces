@@ -7,6 +7,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\validator;
 
+use DateTime;
 use pvc\interfaces\msg\HasMsgInterface;
 
 /**
@@ -16,8 +17,8 @@ interface ValidatorDateTimeInterface extends HasMsgInterface
 {
     /**
      * validate
-     * @param \DateTime $data
+     * @param DateTime|null $data
      * @return bool
      */
-    public function validate(\DateTime $data): bool;
+    public function validate(DateTime $data = null): bool;
 }

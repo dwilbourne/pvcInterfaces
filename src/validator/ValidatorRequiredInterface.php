@@ -21,5 +21,5 @@ interface ValidatorRequiredInterface extends HasMsgInterface
      * @param mixed $data
      * @return bool
      */
-    public function validate($data): bool;
+    public function validate($data = null): bool;
 }

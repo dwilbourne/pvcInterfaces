@@ -16,8 +16,8 @@ interface ValidatorFloatInterface extends HasMsgInterface
 {
     /**
      * validate
-     * @param float $data
+     * @param float|null $data
      * @return bool
      */
-    public function validate(float $data): bool;
+    public function validate(float $data = null): bool;
 }

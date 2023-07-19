@@ -19,5 +19,5 @@ interface ValidatorStringInterface extends HasMsgInterface
      * @param string $data
      * @return bool
      */
-    public function validate(string $data): bool;
+    public function validate(string $data = ''): bool;
 }
