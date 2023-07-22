@@ -12,5 +12,9 @@ use pvc\interfaces\msg\HasMsgInterface;
 
 interface RegexInterface extends HasMsgInterface
 {
+    public function getPattern(): string;
+    
+    public function getLabel(): string;
+
     public function match(string $subject, bool $matchAll = false): bool;
 }
