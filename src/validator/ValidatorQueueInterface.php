@@ -10,9 +10,9 @@ namespace pvc\interfaces\validator;
 use pvc\interfaces\msg\HasMsgInterface;
 
 /**
- * Class ValidatorInterface
+ * Class ValidatorQueueInterface
  */
-interface ValidatorInterface extends HasMsgInterface
+interface ValidatorQueueInterface extends HasMsgInterface
 {
     public function validate($data): bool;
 }
