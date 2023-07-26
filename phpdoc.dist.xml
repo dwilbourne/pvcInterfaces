@@ -13,6 +13,7 @@
         <api>
             <source dsn=".">
                 <path>src/err</path>
+                <path>src/struct/range_collection</path>
             </source>
         </api>
     </version>
