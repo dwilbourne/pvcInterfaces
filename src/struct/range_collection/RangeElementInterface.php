@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\range_collection;
 
 /**
- * @interface RangeElementInterface
+ * @interface RangeElementInterface<RangeElementType>
  * @template RangeElementType
  */
 interface RangeElementInterface
