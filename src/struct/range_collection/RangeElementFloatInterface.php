@@ -7,27 +7,26 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\range_collection;
 
-use DateTime;
-
 /**
- * @interface RangeDateTimeInterface
+ * @interface RangeElementFloatInterface
  * @template RangeElementDataType
  * @extends RangeElementInterface<RangeElementDataType>
  */
-interface RangeDateTimeInterface
+interface RangeElementFloatInterface
 {
     /**
-     * @return array<int, DateTime>
+     * getRange
+     * @return array<int, float>
      */
     public function getRange(): array;
 
     /**
-     * @return DateTime
+     * @return float
      */
-    public function getMin(): DateTime;
+    public function getMin(): float;
 
     /**
-     * @return DateTime
+     * @return float
      */
-    public function getMax(): DateTime;
+    public function getMax(): float;
 }
