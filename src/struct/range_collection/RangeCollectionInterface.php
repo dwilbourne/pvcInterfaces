@@ -28,7 +28,7 @@ interface RangeCollectionInterface
 
     /**
      * @function addRange adds a RangeElement to the collection.
-     * @param RangeElementInterface<RangeElementType> $range
+     * @param RangeElementInterface<RangeElementType> $rangeElement
      */
     public function addRange(RangeElementInterface $rangeElement): void;
 }
