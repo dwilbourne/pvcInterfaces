@@ -9,18 +9,18 @@ declare(strict_types=1);
 namespace pvc\interfaces\frmtr\range_collection;
 
 use pvc\interfaces\frmtr\FrmtrInterface;
-use pvc\struct\range_collection\RangeCollectionInterface;
+use pvc\interfaces\struct\range_collection\RangeCollectionInterface;
 
 /**
  * Interface FrmtrRangeCollectionInterface
- * @template RangeElement
+ * @template RangeElementType
  */
 interface FrmtrRangeCollectionInterface extends FrmtrInterface
 {
-	/**
-	 * format
-	 * @param RangeCollectionInterface<RangeElement> $rangeCollection
-	 * @return string
-	 */
-	public function format(RangeCollectionInterface $rangeCollection): string;
+    /**
+     * format
+     * @param RangeCollectionInterface<RangeElementType> $rangeCollection
+     * @return string
+     */
+    public function format(RangeCollectionInterface $rangeCollection): string;
 }

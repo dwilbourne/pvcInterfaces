@@ -11,13 +11,13 @@ use DateTime;
 
 /**
  * @interface RangeElementDateTimeInterface
- * @template RangeElementDataType
- * @extends RangeElementInterface<RangeElementDataType>
+ * @template RangeElementType
+ * @extends RangeElementInterface<RangeElementType>
  */
-interface RangeElementDateTimeInterface
+interface RangeElementDateTimeInterface extends RangeElementInterface
 {
     /**
-     * @return array<int, DateTime>
+     * @return array<DateTime>
      */
     public function getRange(): array;
 

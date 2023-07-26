@@ -3,16 +3,17 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\struct\range_collection;
 
 /**
  * @interface RangeElementFloatInterface
- * @template RangeElementDataType
- * @extends RangeElementInterface<RangeElementDataType>
+ * @template RangeElementType
+ * @extends RangeElementInterface<RangeElementType>
  */
-interface RangeElementFloatInterface
+interface RangeElementFloatInterface extends RangeElementInterface
 {
     /**
      * getRange

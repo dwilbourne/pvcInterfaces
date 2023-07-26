@@ -9,13 +9,13 @@ namespace pvc\interfaces\struct\range_collection;
 
 /**
  * @interface RangeElementIntegerInterface
- * @template RangeElementDataType
- * @extends RangeElementInterface<RangeElementDataType>
+ * @template RangeElementType
+ * @extends RangeElementInterface<RangeElementType>
  */
 interface RangeElementIntegerInterface extends RangeElementInterface
 {
     /**
-     * @return array<int, int>
+     * @return array<int>
      */
     public function getRange(): array;
 

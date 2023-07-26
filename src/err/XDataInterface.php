@@ -56,7 +56,7 @@ interface XDataInterface
      * @function getXMessageVariables returns an array (possibly empty) of the variables in a message template.
      *
      * @param string $messageTemplate
-     * @return array
+     * @return array<int, string>
      */
     public function getXMessageVariables(string $messageTemplate): array;
 }

@@ -15,9 +15,9 @@ namespace pvc\interfaces\msg;
 interface DomainCatalogInterface
 {
 	/**
-	 * getDomain
-	 * @return string|null
-	 */
+     * getDomain
+     * @return string
+     */
 	public function getDomain(): string;
 
 	/**
@@ -26,10 +26,10 @@ interface DomainCatalogInterface
 	 */
 	public function getLocale(): string;
 
-	/**
-	 * getMessages
-	 * @return array<string>|null
-	 */
+    /**
+     * getMessages
+     * @return array<string|null>
+     */
 	public function getMessages(): array;
 
 	/**

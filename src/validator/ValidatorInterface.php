@@ -14,5 +14,10 @@ use pvc\interfaces\msg\HasMsgInterface;
  */
 interface ValidatorInterface extends HasMsgInterface
 {
+    /**
+     * validate
+     * @param mixed $data
+     * @return bool
+     */
     public function validate($data): bool;
 }
