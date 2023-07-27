@@ -22,10 +22,22 @@ interface RangeElementInterface
     public function getRange(): array;
 
     /**
+     * setMin
+     * @param RangeElementDataType $min
+     */
+    public function setMin($min): void;
+
+    /**
      * @function getMin returns the min value of the range
      * @return RangeElementDataType
      */
     public function getMin();
+
+    /**
+     * setMax
+     * @param RangeElementDataType $max
+     */
+    public function setMax($max): void;
 
     /**
      * @function getMax gets the max value in the range
