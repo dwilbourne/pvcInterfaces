@@ -10,14 +10,13 @@ namespace pvc\interfaces\struct\range_collection;
 
 /**
  * @interface RangeElementFloatInterface
- * @template RangeElementType
- * @extends RangeElementInterface<RangeElementType>
+ * @extends RangeElementInterface<RangeElementFloatInterface, float>
  */
 interface RangeElementFloatInterface extends RangeElementInterface
 {
     /**
      * getRange
-     * @return array<int, float>
+     * @return array<float>
      */
     public function getRange(): array;
 

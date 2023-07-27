@@ -12,7 +12,7 @@ use DateTime;
 
 /**
  * @interface RangeElementDateTimeInterface
- * @extends RangeElementInterface<DateTime>
+ * @extends RangeElementInterface<RangeElementDateTimeInterface, DateTime>
  */
 interface RangeElementDateTimeInterface extends RangeElementInterface
 {
