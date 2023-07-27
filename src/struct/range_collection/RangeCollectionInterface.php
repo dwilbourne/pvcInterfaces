@@ -22,7 +22,7 @@ interface RangeCollectionInterface
 {
     /**
      * @function getRangeElements returns an array of all the RangeElements in the collection
-     * @return array<RangeElementType>
+     * @return array<RangeElementInterface<RangeElementType>>
      */
     public function getRanges(): array;
 

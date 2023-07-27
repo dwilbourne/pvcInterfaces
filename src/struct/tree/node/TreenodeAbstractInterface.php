@@ -3,7 +3,8 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
-declare (strict_types=1);
+
+declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
@@ -16,47 +17,48 @@ use pvc\interfaces\validator\ValidatorInterface;
  */
 interface TreenodeAbstractInterface
 {
-	/**
-	 * setNodeId
-	 * @param int $nodeId
-	 */
-	public function setNodeId(int $nodeId) : void;
-	/**
-	 * getNodeId
-	 * @return int
-	 */
-	public function getNodeId(): int;
+    /**
+     * setNodeId
+     * @param int $nodeId
+     */
+    public function setNodeId(int $nodeId): void;
 
-	/**
-	 * @function setParentId
-	 * @param int|null $parentId
-	 * @return void
-	 */
-	public function setParentId(?int $parentId): void;
+    /**
+     * getNodeId
+     * @return int
+     */
+    public function getNodeId(): int;
 
-	/**
-	 * @function getParentId
-	 * @return int|null
-	 */
-	public function getParentId(): ?int;
+    /**
+     * @function setParentId
+     * @param int|null $parentId
+     * @return void
+     */
+    public function setParentId(?int $parentId): void;
 
-	/**
-	 * @function isRoot
-	 * @return bool
-	 */
-	public function isRoot() : bool;
+    /**
+     * @function getParentId
+     * @return int|null
+     */
+    public function getParentId(): ?int;
 
-	/**
-	 * @function setTreeId
-	 * @param int $treeId
-	 */
-	public function setTreeId(int $treeId): void;
+    /**
+     * @function isRoot
+     * @return bool
+     */
+    public function isRoot(): bool;
 
-	/**
-	 * @function getTreeId
-	 * @return int|null
-	 */
-	public function getTreeId(): ?int;
+    /**
+     * @function setTreeId
+     * @param int $treeId
+     */
+    public function setTreeId(int $treeId): void;
+
+    /**
+     * @function getTreeId
+     * @return int|null
+     */
+    public function getTreeId(): ?int;
 
     /**
      * setValueValidator
@@ -70,28 +72,27 @@ interface TreenodeAbstractInterface
      */
     public function getValueValidator(): ?ValidatorInterface;
 
-	/**
-	 * @function setValue
-	 * @param NodeValueType $value
-	 */
-	public function setValue($value): void;
+    /**
+     * @function setValue
+     * @param NodeValueType $value
+     */
+    public function setValue($value): void;
 
-	/**
-	 * @function getValue
-	 * @return NodeValueType|null
-	 */
-	public function getValue();
+    /**
+     * @function getValue
+     * @return NodeValueType|null
+     */
+    public function getValue();
 
-	/**
-	 * @function hydrate
-	 * @param mixed[] $nodeData
-	 */
-	public function hydrate(array $nodeData): void;
+    /**
+     * @function hydrate
+     * @param mixed[] $nodeData
+     */
+    public function hydrate(array $nodeData): void;
 
-	/**
-	 * @function dehydrate
-	 * @return mixed[]
-	 */
-	public function dehydrate(): array;
-
+    /**
+     * @function dehydrate
+     * @return mixed[]
+     */
+    public function dehydrate(): array;
 }

@@ -15,7 +15,7 @@ namespace pvc\interfaces\struct\range_collection;
 interface RangeElementInterface
 {
     /**
-     * @function getRange returns an array with two elements - the "min" and the "max"
+     * @function getRange returns an array with two elements - the min and the max
      * @return array<RangeElementType>
      */
     public function getRange(): array;
