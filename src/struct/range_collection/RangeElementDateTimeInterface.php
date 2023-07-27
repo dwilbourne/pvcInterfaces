@@ -12,7 +12,6 @@ use DateTime;
 
 /**
  * @interface RangeElementDateTimeInterface
- * @template RangeElementType
  * @extends RangeElementInterface<DateTime>
  */
 interface RangeElementDateTimeInterface extends RangeElementInterface
