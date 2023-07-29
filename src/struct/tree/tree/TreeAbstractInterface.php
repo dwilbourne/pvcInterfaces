@@ -81,6 +81,13 @@ interface TreeAbstractInterface
     public function hasNode($nodeToBeTested = null, bool $strict = false): bool;
 
     /**
+     * @function hasNodeWithId
+     * @param int $nodeid
+     * @return bool
+     */
+    public function hasNodeWithId(int $nodeid): bool;
+
+    /**
      * @function getRoot
      * @return TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
