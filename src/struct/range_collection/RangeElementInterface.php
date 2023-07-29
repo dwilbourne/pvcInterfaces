@@ -9,7 +9,12 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\range_collection;
 
 /**
- * @interface RangeElementInterface<RangeElementType, RangeElementDataType>
+ * @interface RangeElementInterface<RangeElementType, RangeElementDataType> defines the interface for a RangeElement.
+ *
+ * RangeElement is a simple structure consisting of a min and max.  Abstracting this into an object permits adding
+ * behaviors to the RangeElement as well as allowing one to maintain consistent data types both within the RangeElement
+ * and within a RangeCollection.
+ *
  * @template RangeElementType
  * @template RangeElementDataType
  */

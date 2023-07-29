@@ -12,7 +12,7 @@ use DateTime;
 use DateTimeImmutable;
 
 /**
- * @interface RangeElementDateTimeInterface
+ * @interface RangeElementDateTimeInterface is the DateTime-based interface for a RangeElement.
  * @extends RangeElementInterface<RangeElementDateTimeInterface, DateTime|DateTimeImmutable>
  */
 interface RangeElementDateTimeInterface extends RangeElementInterface

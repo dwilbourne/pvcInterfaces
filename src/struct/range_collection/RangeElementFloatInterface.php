@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\range_collection;
 
 /**
- * @interface RangeElementFloatInterface
+ * @interface RangeElementFloatInterface is the float-based interface for a RangeElement.
  * @extends RangeElementInterface<RangeElementFloatInterface, float>
  */
 interface RangeElementFloatInterface extends RangeElementInterface

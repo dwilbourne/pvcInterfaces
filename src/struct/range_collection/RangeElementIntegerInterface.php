@@ -10,7 +10,7 @@ namespace pvc\interfaces\struct\range_collection;
 use pvc\struct\range_collection\RangeElementInteger;
 
 /**
- * @interface RangeElementIntegerInterface
+ * @interface RangeElementIntegerInterface is the integer-based interface for a RangeElement.
  * @extends RangeElementInterface<RangeElementIntegerInterface, int>
  */
 interface RangeElementIntegerInterface extends RangeElementInterface

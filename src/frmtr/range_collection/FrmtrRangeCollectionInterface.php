@@ -14,12 +14,13 @@ use pvc\interfaces\struct\range_collection\RangeCollectionInterface;
 /**
  * Interface FrmtrRangeCollectionInterface
  * @template RangeElementType
+ * @template RangeElementDataType
  */
 interface FrmtrRangeCollectionInterface extends FrmtrInterface
 {
     /**
      * format
-     * @param RangeCollectionInterface<RangeElementType> $rangeCollection
+     * @param RangeCollectionInterface<RangeElementType, RangeElementDataType> $rangeCollection
      * @return string
      */
     public function format(RangeCollectionInterface $rangeCollection): string;

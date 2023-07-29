@@ -3,159 +3,156 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
-declare (strict_types=1);
+
+declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
+use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+
 /**
- * Interface TreeAbstractInterface
+ * Interface TreeAbstractInterface defines the interface for a generic tree data structure.
+ *
+ * Trees have an id, allowing you to work with multiple trees at once.  Each tree consist of "nodes", and each node
+ * can carry any sort of value you would like.  Because the structure is written using generics via phpstan, you
+ * should consider using phpstan as part of the testing of your code in order to maintain type consistency throughout.
+ * A tree can be empty (e.g. it has no nodes).  If it does have nodes, then there must be a single root node.  All
+ * nodes, including the root node, can have zero or more child nodes.
+ *
  * @template NodeType
  * @template NodeValueType
  */
 interface TreeAbstractInterface
 {
-	/**
-	 * @function setTreeId
-	 * @param int $treeId
-	 */
-	public function setTreeId(int $treeId) : void;
-
-	/**
-	 * @function getTreeId
-	 * @return int
-	 */
-	public function getTreeId(): int;
-
-	/**
-	 * @function addNode
-	 * @param NodeType $node
-	 */
-	public function addNode($node): void;
-
-	/**
-	 * @function deleteNode
-	 * @param NodeType $node
-	 * @param bool $deleteBranchOK
-	 */
-	public function deleteNode($node, bool $deleteBranchOK = false): void;
-
-	/**
-	 * @function setNodes
-	 * @param NodeType[] $nodeCollection
-	 * @return void
-	 */
-	public function setNodes(array $nodeCollection): void;
-
-	/**
-	 * @function getNodes
-	 * @return NodeType[]
-	 */
-	public function getNodes(): array;
-
-	/**
-	 * getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
-	 *
-	 * @function getNode
-	 * @param int $nodeId
-	 * @return NodeType|null
-	 */
-	public function getNode(int $nodeId);
-
-	/**
-	 * hasNode does an object compare between its argument and each node in the tree, returning true
-	 * if it finds a match.  The $strict parameter controls whether the method uses "==" (all properties have the
-	 * same values) or "===" ($obj1 and $obj2 are the same instance).
-	 *
-	 * @function hasNode
-	 * @param NodeType|null $node
-	 * @return bool
-	 */
-	public function hasNode($node = null, bool $strict = false) : bool;
-
-	/**
-	 * @function getRoot
-	 * @return NodeType|null
-	 */
-	public function getRoot();
-
-	/**
-	 * @function isEmpty
-	 * @return bool
-	 */
-	public function isEmpty(): bool;
-
-	/**
-	 * @function nodeCount
-	 * @return int
-	 */
-	public function nodeCount(): int;
-
-	/**
-	 * @function getParentOf
-	 * @param NodeType $node
-	 * @return NodeType|null
-	 */
-	public function getParentOf($node);
-
-	/**
-	 * @function getChildrenOf
-	 * @param NodeType $parent
-	 * @return NodeType[]
-	 */
-	public function getChildrenOf($parent): array;
-
-	/**
-     * @function getTreeDepthFirst
-     * @param NodeType|null $startNode
-     * @param callable|null $callback
-     * @return NodeType[]
+    /**
+     * @function setTreeId sets the id of the tree.
      *
-     * getTreeDepthFirst allows you to search the tree from a given starting node using a depth-first algorithm.
+     * There is nothing that prevents you from giving two trees the
+     * same id, although of course that is not advisable.  The vision is that trees are kept in a data store which is
+     * responsible for allocating unique ids to the trees (e.g. a relational database).
+     *
+     * @param int $treeId
+     */
+    public function setTreeId(int $treeId): void;
+
+    /**
+     * @function getTreeId
+     * @return int
+     */
+    public function getTreeId(): int;
+
+    /**
+     * @function addNode adds a node to the tree
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
+     */
+    public function addNode(TreenodeAbstractInterface $node): void;
+
+    /**
+     * @function deleteNode
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
+     * @param bool $deleteBranchOK
+     */
+    public function deleteNode($node, bool $deleteBranchOK = false): void;
+
+    /**
+     * @function getNodes
+     * @return array<TreenodeAbstractInterface<NodeType, NodeValueType>>
+     */
+    public function getNodes(): array;
+
+    /**
+     * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
+     * @param int $nodeId
+     * @return TreenodeAbstractInterface<NodeType, NodeValueType>|null
+     */
+    public function getNode(int $nodeId): TreenodeAbstractInterface|null;
+
+    /**
+     *
+     * @function hasNode true of the node to be tested appears in the tree
+     *
+     * hasNode does an object compare between its argument and each node in the tree, returning true
+     * if it finds a match.  The $strict parameter controls whether the method uses "==" (all properties have the
+     * same values) or "===" ($obj1 and $obj2 are the same instance).
+     *
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType>|null $nodeToBeTested
+     * @return bool
+     */
+    public function hasNode($nodeToBeTested = null, bool $strict = false): bool;
+
+    /**
+     * @function getRoot
+     * @return TreenodeAbstractInterface<NodeType, NodeValueType>|null
+     */
+    public function getRoot(): TreenodeAbstractInterface|null;
+
+    /**
+     * @function isEmpty
+     * @return bool
+     */
+    public function isEmpty(): bool;
+
+    /**
+     * @function nodeCount
+     * @return int
+     */
+    public function nodeCount(): int;
+
+    /**
+     * @function getTreeDepthFirst allows you to search the tree from a given starting node using a depth-first
+     * algorithm.
      *
      * The starting node would typically be the root, but it does not have to be.  Also, you can supply a callback
      * which returns a boolean indicating whether a given node should be included in the result set.  This allows you to
-     * search the tree and filter the resultset according to a certain set of criteria.  The returned result set is
+     * search the tree and filter the result set according to a certain set of criteria.  The returned result set is
      * an array of nodes where the key for each array element is its nodeId.
      *
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType>|null $startNode
+     * @param callable|null $callback
+     * @return array<TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
-	public function getTreeDepthFirst($startNode = null, callable $callback = null): array;
+    public function getTreeDepthFirst(TreenodeAbstractInterface $startNode = null, callable $callback = null): array;
 
     /**
-     * @function getTreeBreadthFirst
-     * @param NodeType|null $startNode
+     * @function getTreeBreadthFirst returns the nodes in a tree using a breadth first algorithm
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType>|null $startNode
      * @param callable|null $callback
-     * @param int|null $levels
-     * @return NodeType[]
+     * @param int|null $maxLevels
+     * @return array<TreenodeAbstractInterface<NodeType, NodeValueType>>
      *
      * same idea as getTreeDepthFirst but is a breadth first search, which obviously changes the ordering of the
-     * nodes in the result set.
+     * nodes in the result set.  Also has a parameter which allows you to limit the depth to which the search will
+     * be performed.
      */
-	public function getTreeBreadthFirst($startNode = null, callable $callback = null, int $levels = null): array;
+    public function getTreeBreadthFirst(
+        TreenodeAbstractInterface $startNode = null,
+        callable $callback = null,
+        int $maxLevels = null
+    ): array;
 
-	/**
-	 * @function hasLeafWithId
-	 * @param ? int $nodeId
-	 * @return bool
-	 */
-	public function hasLeafWithId(int $nodeId = null): bool;
+    /**
+     * @function hasLeafWithId
+     * @param ? int $nodeId
+     * @return bool
+     */
+    public function hasLeafWithId(int $nodeId = null): bool;
 
-	/**
-	 * @function getLeaves
-	 * @return NodeType[]
-	 */
-	public function getLeaves(): array;
+    /**
+     * @function getLeaves
+     * @return array<TreenodeAbstractInterface<NodeType, NodeValueType>>
+     */
+    public function getLeaves(): array;
 
-	/**
-	 * @function hasInteriorNodeWithId
-	 * @param ? int $nodeId
-	 * @return bool
-	 */
-	public function hasInteriorNodeWithId(int $nodeId = null): bool;
+    /**
+     * @function hasInteriorNodeWithId
+     * @param ? int $nodeId
+     * @return bool
+     */
+    public function hasInteriorNodeWithId(int $nodeId = null): bool;
 
-	/**
-	 * @function getInteriorNodes
-	 * @return NodeType[]
-	 */
-	public function getInteriorNodes(): array;
-
+    /**
+     * @function getInteriorNodes
+     * @return array<TreenodeAbstractInterface<NodeType, NodeValueType>>
+     */
+    public function getInteriorNodes(): array;
 }
