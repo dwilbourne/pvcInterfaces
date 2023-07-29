@@ -15,10 +15,10 @@ use pvc\interfaces\frmtr\FrmtrInterface;
  */
 interface FrmtrBooleanInterface extends FrmtrInterface
 {
-	/**
-	 * format
-	 * @param bool $value
-	 * @return string
-	 */
-	public function format(bool $value): string;
+    /**
+     * format
+     * @param bool $value
+     * @return string
+     */
+    public function format(bool $value): string;
 }

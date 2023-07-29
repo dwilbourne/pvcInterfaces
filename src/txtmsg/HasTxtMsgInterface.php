@@ -1,8 +1,6 @@
 <?php
 
-
 /**
- * @package pvcInterfaces
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 
@@ -12,5 +10,5 @@ namespace pvc\interfaces\txtmsg;
 
 interface HasTxtMsgInterface
 {
-    public function getTxtMsg() : string;
+    public function getTxtMsg(): string;
 }

@@ -25,7 +25,6 @@ use Iterator;
  * @extends Iterator<int, ListElementType>
  * @extends ArrayAccess<int, ListElementType>
  */
-
 interface ListUnorderedInterface extends Iterator, ArrayAccess, Countable
 {
     /**

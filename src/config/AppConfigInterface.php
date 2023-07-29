@@ -13,9 +13,9 @@ namespace pvc\interfaces\config;
  */
 interface AppConfigInterface
 {
-	/**
-	 * getProjectRoot
-	 * @return string
-	 */
-	public static function getProjectRoot(): string;
+    /**
+     * getProjectRoot
+     * @return string
+     */
+    public static function getProjectRoot(): string;
 }

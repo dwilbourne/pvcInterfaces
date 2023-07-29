@@ -22,7 +22,7 @@ interface ParserInterface extends HasMsgInterface
      */
     public function parse(string $data): bool;
 
-	/**
+    /**
      * @function getParsedValue
      * @return mixed
      */

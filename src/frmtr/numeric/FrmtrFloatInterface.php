@@ -15,10 +15,10 @@ use pvc\interfaces\frmtr\FrmtrInterface;
  */
 interface FrmtrFloatInterface extends FrmtrInterface
 {
-	/**
-	 * format
-	 * @param float $value
-	 * @return string
-	 */
-	public function format(float $value): string;
+    /**
+     * format
+     * @param float $value
+     * @return string
+     */
+    public function format(float $value): string;
 }

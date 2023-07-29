@@ -13,8 +13,8 @@ namespace pvc\interfaces\displayable;
  */
 interface DisplayableInterface
 {
-	/**
-	 * display
+    /**
+     * display
      * @return string
      */
     public function display(): string;

@@ -16,10 +16,10 @@ use pvc\interfaces\frmtr\FrmtrInterface;
  */
 interface FrmtrDateTimeInterface extends FrmtrInterface
 {
-	/**
-	 * format
-	 * @param DateTime $value
-	 * @return string
-	 */
-	public function format(DateTime $value): string;
+    /**
+     * format
+     * @param DateTime $value
+     * @return string
+     */
+    public function format(DateTime $value): string;
 }

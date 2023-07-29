@@ -13,8 +13,6 @@ namespace pvc\interfaces\err;
  * Concrete XData classes are always child classes the XDataAbstract class, which implements most of the code needed to
  * support this interface.  Concrete classes need to implement only the two abstract methods in XDataAbstract:
  * getLocalXCodes and getMessageTemplates.
- *
- * @package pvc\interfaces\err
  */
 interface XDataInterface
 {
@@ -25,14 +23,14 @@ interface XDataInterface
      *
      * @return array<class-string, int>
      */
-    public function getLocalXCodes() : array;
+    public function getLocalXCodes(): array;
 
     /**
      * @function getLocalXCode returns the exception code for a particular exception.
      * @param class-string $classString
      * @return int
      */
-    public function getLocalXCode(string $classString) : int;
+    public function getLocalXCode(string $classString): int;
 
     /**
      * @function getXMessageTemplates returns an array of exception message templates.
@@ -43,14 +41,14 @@ interface XDataInterface
      *
      * @return array<class-string, string>
      */
-    public function getXMessageTemplates() : array;
+    public function getXMessageTemplates(): array;
 
     /**
      * @function getXMessageTemplate returns the message template corresponding to a particular exception.
      * @param class-string $classString
      * @return string
      */
-    public function getXMessageTemplate(string $classString) : string;
+    public function getXMessageTemplate(string $classString): string;
 
     /**
      * @function getXMessageVariables returns an array (possibly empty) of the variables in a message template.

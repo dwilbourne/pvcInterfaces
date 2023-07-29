@@ -17,10 +17,10 @@ use pvc\interfaces\frmtr\FrmtrInterface;
  */
 interface FrmtrRangeElementInterface extends FrmtrInterface
 {
-	/**
-	 * format
-	 * @param RangeElement $rangeElement
-	 * @return string
-	 */
-	public function format($rangeElement): string;
+    /**
+     * format
+     * @param RangeElement $rangeElement
+     * @return string
+     */
+    public function format($rangeElement): string;
 }

@@ -11,7 +11,7 @@ namespace pvc\interfaces\struct\tree\tree;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
 
 /**
- * Interface TreeAbstractInterface defines the interface for a generic tree data structure.
+ * Interface TreeAbstractInterface defines the operations common to all trees, both ordered and unordered.
  *
  * Trees have an id, allowing you to work with multiple trees at once.  Each tree consist of "nodes", and each node
  * can carry any sort of value you would like.  Because the structure is written using generics via phpstan, you

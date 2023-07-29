@@ -11,7 +11,9 @@ namespace pvc\interfaces\struct\tree\node;
 use pvc\interfaces\struct\lists\ListOrderedInterface;
 
 /**
- * Interface TreenodeOrderedInterface
+ * Interface TreenodeOrderedInterface defines the operations for "ordered" tree nodes, e.g. the children of each node
+ * are kept in a specific order
+ *
  * @template NodeValueType
  * @extends TreenodeAbstractInterface<TreenodeOrderedInterface, NodeValueType>
  */

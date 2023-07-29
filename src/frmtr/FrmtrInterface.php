@@ -13,29 +13,29 @@ namespace pvc\interfaces\frmtr;
  */
 interface FrmtrInterface
 {
-	/**
-	 * setFormat
-	 * @param string $format
-	 * @return bool
-	 */
-	public function setFormat(string $format): bool;
+    /**
+     * setFormat
+     * @param string $format
+     * @return bool
+     */
+    public function setFormat(string $format): bool;
 
-	/**
-	 * getFormat
-	 * @return string
-	 */
-	public function getFormat(): string;
+    /**
+     * getFormat
+     * @return string
+     */
+    public function getFormat(): string;
 
-	/**
-	 * setLocale
-	 * @param string $locale
-	 * @return bool
-	 */
-	public function setLocale(string $locale): bool;
+    /**
+     * setLocale
+     * @param string $locale
+     * @return bool
+     */
+    public function setLocale(string $locale): bool;
 
-	/**
-	 * getLocale
-	 * @return string
-	 */
-	public function getLocale(): string;
+    /**
+     * getLocale
+     * @return string
+     */
+    public function getLocale(): string;
 }

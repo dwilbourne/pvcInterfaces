@@ -15,10 +15,10 @@ use pvc\interfaces\msg\DomainCatalogLoaderInterface;
  */
 interface MsgConfigInterface
 {
-	/**
-	 * getDomainCatalogLoader
-	 * @param string $domain
-	 * @return DomainCatalogLoaderInterface
-	 */
-	public static function getDomainCatalogLoader(string $domain): DomainCatalogLoaderInterface;
+    /**
+     * getDomainCatalogLoader
+     * @param string $domain
+     * @return DomainCatalogLoaderInterface
+     */
+    public static function getDomainCatalogLoader(string $domain): DomainCatalogLoaderInterface;
 }

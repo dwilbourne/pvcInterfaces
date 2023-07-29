@@ -15,10 +15,10 @@ use pvc\interfaces\frmtr\FrmtrInterface;
  */
 interface FrmtrIntegerInterface extends FrmtrInterface
 {
-	/**
-	 * format
-	 * @param int $value
-	 * @return string
-	 */
-	public function format(int $value): string;
+    /**
+     * format
+     * @param int $value
+     * @return string
+     */
+    public function format(int $value): string;
 }
