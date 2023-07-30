@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
+use pvc\interfaces\struct\lists\ListAbstractInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 use pvc\interfaces\validator\ValidatorInterface;
 
@@ -119,6 +120,24 @@ interface TreenodeAbstractInterface
      * @return TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
     public function getChild(int $nodeid): ?TreenodeAbstractInterface;
+
+    /**
+     * setChildren
+     * @param ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType>> $list
+     */
+    public function setChildren(ListAbstractInterface $list): void;
+
+    /**
+     * @function getChildren
+     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType>>|null
+     */
+    public function getChildren(): ?ListAbstractInterface;
+
+    /**
+     * @function getSiblings
+     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType>>|null
+     */
+    public function getSiblings(): ?ListAbstractInterface;
 
     /**
      * @function isDescendantOf

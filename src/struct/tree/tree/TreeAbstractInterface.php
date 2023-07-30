@@ -105,6 +105,7 @@ interface TreeAbstractInterface
      */
     public function nodeCount(): int;
 
+
     /**
      * @function getTreeDepthFirst allows you to search the tree from a given starting node using a depth-first
      * algorithm.
