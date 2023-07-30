@@ -74,9 +74,9 @@ interface TreenodeAbstractInterface
 
     /**
      * @function setValueValidator sets an object that can be used to validate a value before setting it in the node
-     * @param ValidatorInterface $callable
+     * @param ValidatorInterface $validator
      */
-    public function setValueValidator(ValidatorInterface $callable): void;
+    public function setValueValidator(ValidatorInterface $validator): void;
 
     /**
      * @function getValueValidator returns a reference to the value validator
