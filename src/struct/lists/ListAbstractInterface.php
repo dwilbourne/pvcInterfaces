@@ -63,17 +63,17 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
 
     /**
      * @function add adds an element into a specific position within the list.
-     * @param int $key
+     * @param int|null $key
      * @param ListElementType $value
      */
-    public function add(int $key, $value): void;
+    public function add($value, int $key = null): void;
 
     /**
      * @function update allows you to change the value of a list element
      * list.
      *
-     * @param int $key
      * @param ListElementType $value
+     * @param int $key
      */
     public function update(int $key, $value): void;
 
