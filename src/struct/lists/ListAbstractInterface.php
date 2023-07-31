@@ -49,13 +49,13 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
     public function getElements(): array;
 
     /**
-     * @function getElementByValue returns the position of the first element in the list which is strictly equal to the
+     * @function getElementIndex returns the position of the first element in the list which is strictly equal to the
      * argument of the method call (e.g. ===).
      *
      * @param mixed $value
      * @return int|null
      */
-    public function getElementByValue($value): int|null;
+    public function getElementIndex($value): int|null;
 
     /**
      * crud operations
