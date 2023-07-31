@@ -15,7 +15,24 @@ use pvc\interfaces\validator\ValidatorInterface;
 /**
  * Interface TreenodeAbstractInterface defines the operations for a generic tree node.
  *
- * This interface defines the operations common to all tree nodes. There are two other tree node interfaces defined in
+ * This interface defines the operations common to all tree nodes.  Here are some of the design points.  The nodeid
+ * property is immutable - the only way to set the nodeid is at construction.  The same applies to the tree property.
+ * This means that there are no setters for these properties.  Together, these two design points ensure that nodes
+ * cannot be created except in the content of belonging to a tree.  That in turn makes it a bit easier to enforce the
+ * design point that all nodeids in a tree must be unique.
+ *
+ * The same is almost true for the parent property, but the difference is that the nodes are allowed to move around
+ * within the same tree, e.g. you can change a node's parent as long as the new parent is in the same tree. It is
+ * important to know that not only does a node keep a reference to its parent, but it also keeps a list of its
+ * children.  So the setParent method is responsible not only for setting the parent property, but it also take
+ * the parent and adds a node to its child list.
+ *
+ * There is no method for a node moving itself between trees.  In order to accomplish this, trees have a method which
+ * allows you to create a copy of a branch from another tree.  Then you can delete the source branch from the
+ * source tree if you want a move and not a copy.
+ *
+ *
+ * There are two other tree node interfaces defined in
  * this package, and they provide different signatures for additional operations.  Specifically, the children of a node
  * can be kept in a certain order.  Or perhaps for another use case, that is not necessary.  The tree structure uses
  * the ordered and unordered list interfaces to assist with
@@ -35,12 +52,6 @@ use pvc\interfaces\validator\ValidatorInterface;
 interface TreenodeAbstractInterface
 {
     /**
-     * @function setNodeId sets the id for the node, which must be unique within the tree.
-     * @param int $nodeId
-     */
-    public function setNodeId(int $nodeId): void;
-
-    /**
      * @function getNodeId
      * @return int
      */
@@ -48,6 +59,8 @@ interface TreenodeAbstractInterface
 
     /**
      * @function setParent sets a reference to the parent of the node.
+     *
+     * parent node must be in the same tree.
      *
      * @param TreenodeAbstractInterface<NodeType, NodeValueType> $parent
      * @return void
@@ -59,12 +72,6 @@ interface TreenodeAbstractInterface
      * @return TreenodeAbstractInterface<NodeType, NodeValueType>
      */
     public function getParent(): ?TreenodeAbstractInterface;
-
-    /**
-     * @function setTree sets a reference to the tree to which the node belongs
-     * @param TreeAbstractInterface<NodeType, NodeValueType> $tree
-     */
-    public function setTree(TreeAbstractInterface $tree): void;
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
@@ -120,12 +127,6 @@ interface TreenodeAbstractInterface
      * @return TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
     public function getChild(int $nodeid): ?TreenodeAbstractInterface;
-
-    /**
-     * setChildren
-     * @param ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType>> $list
-     */
-    public function setChildren(ListAbstractInterface $list): void;
 
     /**
      * @function getChildren
