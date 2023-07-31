@@ -20,9 +20,9 @@ namespace pvc\interfaces\struct\lists;
 interface ListOrderedInterface extends ListAbstractInterface
 {
     /**
-     * @function changeIndex allows you to change the position of an element in the list.
+     * @function setIndex allows you to change the position of an element in the list.
      * @param int $oldIndex
      * @param int $newIndex
      */
-    public function changeIndex(int $oldIndex, int $newIndex): void;
+    public function setIndex(int $oldIndex, int $newIndex): void;
 }
