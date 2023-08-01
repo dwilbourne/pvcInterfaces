@@ -39,7 +39,7 @@ interface TreenodeValueObjectInterface
 
     /**
      * getChildIds
-     * @return array<int>
+     * @return array<TreenodeValueObjectInterface>
      */
-    public function getChildIds(): array;
+    public function getChildIds(array $treenodeValueObjectArray): array;
 }
