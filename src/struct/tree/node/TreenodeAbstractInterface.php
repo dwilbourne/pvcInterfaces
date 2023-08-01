@@ -49,14 +49,8 @@ use pvc\interfaces\validator\ValidatorInterface;
  * @template NodeType
  * @template NodeValueType
  */
-interface TreenodeAbstractInterface
+interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 {
-    /**
-     * @function getNodeId
-     * @return int
-     */
-    public function getNodeId(): int;
-
     /**
      * @function setParent sets a reference to the parent of the node.
      *
@@ -98,12 +92,6 @@ interface TreenodeAbstractInterface
     public function setValue($value): void;
 
     /**
-     * @function getValue returns the value or "payload" of the node
-     * @return NodeValueType|null
-     */
-    public function getValue();
-
-    /**
      * @function isLeaf returns true if the node has no children
      * @return bool
      */
@@ -114,12 +102,6 @@ interface TreenodeAbstractInterface
      * @return bool
      */
     public function isInteriorNode(): bool;
-
-    /**
-     * @function isRoot returns true if the node is the root of the tree (e.g. has no parent)
-     * @return bool
-     */
-    public function isRoot(): bool;
 
     /**
      * @function getChild

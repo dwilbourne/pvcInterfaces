@@ -29,5 +29,12 @@ interface TreenodeValueObjectInterface
      * getNodeValue
      * @return NodeValueType
      */
-    public function getNodeValue();
+    public function getValue();
+
+    /**
+     * @function isRoot returns true if the node is the root of the tree (e.g. has no parent)
+     * @return bool
+     */
+    public function isRoot(): bool;
+    
 }
