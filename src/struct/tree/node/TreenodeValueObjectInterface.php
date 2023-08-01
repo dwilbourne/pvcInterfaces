@@ -36,5 +36,10 @@ interface TreenodeValueObjectInterface
      * @return bool
      */
     public function isRoot(): bool;
-    
+
+    /**
+     * getChildIds
+     * @return array<int>
+     */
+    public function getChildIds(): array;
 }
