@@ -44,7 +44,7 @@ interface TreeAbstractInterface
     /**
      * there is no addNode method - nodes are automatically added to a tree when they are created
      */
-    
+
     /**
      * @function deleteNode
      * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
@@ -77,13 +77,6 @@ interface TreeAbstractInterface
      * @return bool
      */
     public function hasNode($nodeToBeTested = null, bool $strict = false): bool;
-
-    /**
-     * @function hasNodeWithId
-     * @param int $nodeid
-     * @return bool
-     */
-    public function hasNodeWithId(int $nodeid): bool;
 
     /**
      * @function getRoot
@@ -137,24 +130,10 @@ interface TreeAbstractInterface
     ): array;
 
     /**
-     * @function hasLeafWithId
-     * @param ? int $nodeId
-     * @return bool
-     */
-    public function hasLeafWithId(int $nodeId = null): bool;
-
-    /**
      * @function getLeaves
      * @return array<TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
     public function getLeaves(): array;
-
-    /**
-     * @function hasInteriorNodeWithId
-     * @param ? int $nodeId
-     * @return bool
-     */
-    public function hasInteriorNodeWithId(int $nodeId = null): bool;
 
     /**
      * @function getInteriorNodes
