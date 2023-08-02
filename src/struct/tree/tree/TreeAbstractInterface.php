@@ -82,7 +82,7 @@ interface TreeAbstractInterface
      * @function getRoot
      * @return TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
-    public function getRoot(): TreenodeAbstractInterface|null;
+    public function getRoot(): ?TreenodeAbstractInterface;
 
     /**
      * @function isEmpty

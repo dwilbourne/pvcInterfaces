@@ -49,13 +49,20 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
     public function getElements(): array;
 
     /**
-     * @function getElementIndex returns the position of the first element in the list which is strictly equal to the
+     * @function getIndex returns the key/index of the first element in the list which is strictly equal to the
      * argument of the method call (e.g. ===).
      *
-     * @param mixed $value
+     * @param <ListElementType> $listElement
      * @return int|null
      */
-    public function getElementIndex($value): int|null;
+    public function getIndex($listElement): int|null;
+
+    /**
+     * @function setIndex allows you to change the key/index of an element in the list.
+     * @param int $oldIndex
+     * @param int $newIndex
+     */
+    public function setIndex(int $oldIndex, int $newIndex): void;
 
     /**
      * crud operations
