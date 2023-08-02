@@ -38,7 +38,10 @@ interface TreenodeValueObjectInterface
     public function isRoot(): bool;
 
     /**
-     * getChildIds
+     * @function getChildIds
+     *
+     * gets an array of the children.  The keys from the array argument are preserved
+     *
      * @return array<TreenodeValueObjectInterface>
      */
     public function getChildIds(array $treenodeValueObjectArray): array;

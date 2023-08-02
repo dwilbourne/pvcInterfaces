@@ -42,11 +42,9 @@ interface TreeAbstractInterface
     public function getTreeId(): int;
 
     /**
-     * @function addNode adds a node to the tree
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
+     * there is no addNode method - nodes are automatically added to a tree when they are created
      */
-    public function addNode(TreenodeAbstractInterface $node): void;
-
+    
     /**
      * @function deleteNode
      * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
