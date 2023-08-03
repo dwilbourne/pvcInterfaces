@@ -118,9 +118,9 @@ interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 
     /**
      * @function getSiblings
-     * @return ListAbstractInterface<ListType,  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>|null
+     * @return ListAbstractInterface<ListType,  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
      */
-    public function getSiblings(): ?ListAbstractInterface;
+    public function getSiblings(): ListAbstractInterface;
 
     /**
      * @function isDescendantOf
