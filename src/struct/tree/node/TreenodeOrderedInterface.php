@@ -24,7 +24,7 @@ interface TreenodeOrderedInterface extends TreenodeAbstractInterface
     public function setIndex(int $index): void;
 
     /**
-     * @function getIndex gets the ordinal position of this node in the ordered list of siblings
+     * @function getFirstKey gets the ordinal position of this node in the ordered list of siblings
      * @return int
      */
     public function getIndex(): ?int;

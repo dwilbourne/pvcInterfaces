@@ -19,4 +19,17 @@ namespace pvc\interfaces\struct\lists;
  */
 interface ListOrderedInterface extends ListAbstractInterface
 {
+    /**
+     * getIndex gets the ordinal position of the element in the list correpsonding to $key
+     * @param int $key
+     * @return int
+     */
+    public function getIndex(int $key): int;
+
+    /**
+     * setIndex sets the ordinal position of an element in the list
+     * @param int $key
+     * @param int $newIndex
+     */
+    public function setIndex(int $key, int $newIndex): void;
 }

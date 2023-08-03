@@ -14,7 +14,7 @@ namespace pvc\interfaces\struct\tree\node;
 interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterface
 {
     /**
-     * getIndex
+     * getFirstKey
      * @return int
      */
     public function getIndex(): int;

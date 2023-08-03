@@ -18,6 +18,11 @@ use Iterator;
  * These interfaces (and their implementations) are written using phpstan generics.  If you use these data
  * structures, you should consider using phpstan as part of testing your code in order to ensure tpe safety.
  *
+ * If you look carefully at the PHP documentation, you will see that there is n array function called array_is_list,
+ * where a list is defined as an array with keys that go from 0 to count(array) - 1. Pv c considers that sort of
+ * structure to be an ordered list.  An unordered list also has integer keys, but the keys mean nothing in terms of
+ * creating any sort of ordination among the elements.
+ *
  * @template ListElementType
  * @extends Iterator<int, ListElementType>
  * @extends ArrayAccess<int, ListElementType>
@@ -31,11 +36,14 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
     public function isEmpty(): bool;
 
     /**
-     * @function getElement gets the element via its key.
-     *
-     * In ordered lists, keys are sequentially ascending integers.
-     * In unordered lists, they are simply integers which are neither necessarily sequential nor are they kept in
-     * ascending order.
+     * @function getElements returns an array of all the elements in the list, keys are preserved.
+     * @return array<ListElementType>
+     */
+    public function getElements(): array;
+
+
+    /**
+     * @function getElement gets an element via its key.
      *
      * @param int $key
      * @return ListElementType
@@ -43,26 +51,27 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
     public function getElement(int $key);
 
     /**
-     * @function getElements returns an array of all the elements in the list, keys are preserved.
-     * @return array<ListElementType>
-     */
-    public function getElements(): array;
-
-    /**
-     * @function getIndex returns the key/index of the first element in the list which is strictly equal to the
+     * @function getFirstKey returns the key of the first element in the list which is strictly equal to the
      * argument of the method call (e.g. ===).
      *
      * @param <ListElementType> $listElement
      * @return int|null
      */
-    public function getIndex($listElement): int|null;
+    public function getFirstKey($listElement): int|null;
 
     /**
-     * @function setIndex allows you to change the key/index of an element in the list.
-     * @param int $oldIndex
-     * @param int $newIndex
+     * getAllKeys
+     * @param <ListElementType> $listElement
+     * @return array<int>
      */
-    public function setIndex(int $oldIndex, int $newIndex): void;
+    public function getAllKeys($listElement): array;
+
+    /**
+     * @function setKey allows you to change the key of an element in the list.
+     * @param int $oldKey
+     * @param int $newKey
+     */
+    public function setKey(int $oldKey, int $newKey): void;
 
     /**
      * crud operations
