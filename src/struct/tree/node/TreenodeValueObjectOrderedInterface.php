@@ -16,7 +16,7 @@ interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfa
 {
     /**
      * getIndex retrieves the ordinal position
-     * @return int
+     * @return non-negative-int
      */
     public function getIndex(): int;
 }

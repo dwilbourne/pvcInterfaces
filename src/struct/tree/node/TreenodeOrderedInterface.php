@@ -20,13 +20,13 @@ interface TreenodeOrderedInterface extends TreenodeAbstractInterface
     /**
      * @function setIndex sets the ordinal position of this node in the ordered list of siblings.  If the index
      * supplied is greater than any of the existing indices, then the node is tacked on to the end of the list.
-     * @param int $index
+     * @param non-negative-int $index
      */
     public function setIndex(int $index): void;
 
     /**
      * @function getIndex gets the ordinal position of this node in the ordered list of siblings
-     * @return int
+     * @return non-negative-int
      */
     public function getIndex(): ?int;
 }

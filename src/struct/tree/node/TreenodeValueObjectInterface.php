@@ -15,13 +15,13 @@ interface TreenodeValueObjectInterface
 {
     /**
      * getNodeId
-     * @return int
+     * @return non-negative-int
      */
     public function getNodeId(): int;
 
     /**
      * getParentId
-     * @return int|null
+     * @return non-negative-int|null
      */
     public function getParentId(): ?int;
 

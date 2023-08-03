@@ -31,13 +31,13 @@ interface TreeAbstractInterface
      * same id, although of course that is not advisable.  The vision is that trees are kept in a data store which is
      * responsible for allocating unique ids to the trees (e.g. a relational database).
      *
-     * @param int $treeId
+     * @param non-negative-int $treeId
      */
     public function setTreeId(int $treeId): void;
 
     /**
      * @function getTreeId
-     * @return int
+     * @return non-negative-int
      */
     public function getTreeId(): int;
 
@@ -60,7 +60,7 @@ interface TreeAbstractInterface
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
-     * @param int $nodeId
+     * @param non-negative-int $nodeId
      * @return TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
     public function getNode(int $nodeId): TreenodeAbstractInterface|null;
@@ -92,7 +92,7 @@ interface TreeAbstractInterface
 
     /**
      * @function nodeCount
-     * @return int
+     * @return non-negative-int
      */
     public function nodeCount(): int;
 
@@ -116,7 +116,7 @@ interface TreeAbstractInterface
      * @function getTreeBreadthFirst returns the nodes in a tree using a breadth first algorithm
      * @param TreenodeAbstractInterface<NodeType, NodeValueType>|null $startNode
      * @param callable|null $callback
-     * @param int|null $maxLevels
+     * @param non-negative-int|null $maxLevels
      * @return array<TreenodeAbstractInterface<NodeType, NodeValueType>>
      *
      * same idea as getTreeDepthFirst but is a breadth first search, which obviously changes the ordering of the

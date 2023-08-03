@@ -19,7 +19,7 @@ interface TreenodeFactoryInterface
     /**
      * @function makeNode creates a tree node.
      *
-     * @param int $nodeid
+     * @param non-negative-int $nodeid
      * @param TreenodeAbstractInterface<NodeType, NodeValueType> $parent
      * @param TreeAbstractInterface<NodeType, NodeValueType> $tree
      * @return TreenodeAbstractInterface<NodeType, NodeValueType>

@@ -104,7 +104,7 @@ interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 
     /**
      * @function getChild
-     * @param int $nodeid
+     * @param non-negative-int $nodeid
      * @return TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
     public function getChild(int $nodeid): ?TreenodeAbstractInterface;

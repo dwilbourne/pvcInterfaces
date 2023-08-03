@@ -37,7 +37,7 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
 
     /**
      * @function getElements returns an array of all the elements in the list, keys are preserved.
-     * @return array<ListElementType>
+     * @return array<non-negative_int, ListElementType>
      */
     public function getElements(): array;
 
@@ -45,7 +45,7 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
     /**
      * @function getElement gets an element via its key.
      *
-     * @param int $key
+     * @param non-negative-int $key
      * @return ListElementType
      */
     public function getElement(int $key);
@@ -55,7 +55,7 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
      * method call.  You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
      * @param ListElementType $listElement
-     * @return int|null
+     * @return non-negative-int|null
      */
     public function getFirstKey(mixed $listElement, bool $strict = true): int|null;
 
@@ -64,14 +64,14 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
      * the method call.  You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
      * @param ListElementType $listElement
-     * @return array<int>
+     * @return array<non-negative-int>
      */
     public function getAllKeys(mixed $listElement, bool $strict = true): array;
 
     /**
      * @function setKey allows you to change the key of an element in the list.
-     * @param int $oldKey
-     * @param int $newKey
+     * @param non-negative-int $oldKey
+     * @param non-negative-int $newKey
      */
     public function setKey(int $oldKey, int $newKey): void;
 
@@ -81,7 +81,7 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
 
     /**
      * @function add adds an element into a list using a specified key.
-     * @param int $key
+     * @param non-negative-int $key
      * @param ListElementType $value
      */
     public function add(int $key, $value): void;
@@ -91,13 +91,13 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
      * list.
      *
      * @param ListElementType $value
-     * @param int $key
+     * @param non-negative-int $key
      */
     public function update(int $key, $value): void;
 
     /**
      * @function delete deletes an element from the list.
-     * @param int $key
+     * @param non-negative-int $key
      */
     public function delete(int $key): void;
 
