@@ -13,6 +13,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * Class TreenodeFactoryInterface
  * @template NodeType
  * @template NodeValueType
+ * @template ListType
  */
 interface TreenodeFactoryInterface
 {
@@ -20,9 +21,9 @@ interface TreenodeFactoryInterface
      * @function makeNode creates a tree node.
      *
      * @param non-negative-int $nodeid
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $parent
-     * @param TreeAbstractInterface<NodeType, NodeValueType> $tree
-     * @return TreenodeAbstractInterface<NodeType, NodeValueType>
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType, ListType> $parent
+     * @param TreeAbstractInterface<NodeType, NodeValueType, ListType> $tree
+     * @return  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>
      */
     public function makeNode(int $nodeid, TreenodeAbstractInterface $parent, TreeAbstractInterface $tree):
     TreenodeAbstractInterface;

@@ -18,8 +18,9 @@ namespace pvc\interfaces\struct\lists;
  * indices are the same thing.  But in a different implementation that might not be the case, so the nomenclature
  * distinuishes between the two.
  *
+ * @template ListType
  * @template ListElementType
- * @extends ListAbstractInterface<ListElementType>
+ * @extends ListAbstractInterface<ListType, ListElementType>
  */
 interface ListOrderedInterface extends ListAbstractInterface
 {
