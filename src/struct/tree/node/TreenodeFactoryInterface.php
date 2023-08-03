@@ -17,7 +17,8 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 interface TreenodeFactoryInterface
 {
     /**
-     * makeNode
+     * @function makeNode creates a tree node.
+     *
      * @param int $nodeid
      * @param TreenodeAbstractInterface<NodeType, NodeValueType> $parent
      * @param TreeAbstractInterface<NodeType, NodeValueType> $tree

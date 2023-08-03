@@ -67,7 +67,7 @@ interface TreeAbstractInterface
 
     /**
      *
-     * @function hasNode true of the node to be tested appears in the tree
+     * @function hasNode returns true if the node to be tested appears in the tree
      *
      * hasNode does an object compare between its argument and each node in the tree, returning true
      * if it finds a match.  The $strict parameter controls whether the method uses "==" (all properties have the

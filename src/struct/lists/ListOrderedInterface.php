@@ -11,8 +11,12 @@ namespace pvc\interfaces\struct\lists;
 /**
  * Interface ListOrderedInterface is the interface for an ordered list.
  *
- * An ordered list is one where elements can be retrieved "in order", e.g. using a numeric index which defines the
- * ordinal position in the list of each of the values.
+ * An ordered list is one where elements can be retrieved "in order", e.g. using sequentially increasing integer
+ * indices which define the ordinal position of each of the values in the list.
+ *
+ * Conceptually, "indices" are separate from "keys".  In pvc's current implementation of ordered lists, keys and
+ * indices are the same thing.  But in a different implementation that might not be the case, so the nomenclature
+ * distinuishes between the two.
  *
  * @template ListElementType
  * @extends ListAbstractInterface<ListElementType>

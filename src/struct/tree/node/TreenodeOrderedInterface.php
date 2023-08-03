@@ -18,13 +18,14 @@ namespace pvc\interfaces\struct\tree\node;
 interface TreenodeOrderedInterface extends TreenodeAbstractInterface
 {
     /**
-     * @function setIndex sets the ordinal position of this node in the ordered list of siblings
+     * @function setIndex sets the ordinal position of this node in the ordered list of siblings.  If the index
+     * supplied is greater than any of the existing indices, then the node is tacked on to the end of the list.
      * @param int $index
      */
     public function setIndex(int $index): void;
 
     /**
-     * @function getFirstKey gets the ordinal position of this node in the ordered list of siblings
+     * @function getIndex gets the ordinal position of this node in the ordered list of siblings
      * @return int
      */
     public function getIndex(): ?int;

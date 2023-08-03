@@ -19,9 +19,9 @@ use Iterator;
  * structures, you should consider using phpstan as part of testing your code in order to ensure tpe safety.
  *
  * If you look carefully at the PHP documentation, you will see that there is n array function called array_is_list,
- * where a list is defined as an array with keys that go from 0 to count(array) - 1. Pv c considers that sort of
- * structure to be an ordered list.  An unordered list also has integer keys, but the keys mean nothing in terms of
- * creating any sort of ordination among the elements.
+ * where a list is defined as an array with keys that go from 0 to count(array) - 1. Pvc considers that sort of
+ * structure to be an ordered list.  In pvc land, an unordered list also has integer keys, but the keys mean nothing in
+ * terms of creating any sort of ordination among the elements.
  *
  * @template ListElementType
  * @extends Iterator<int, ListElementType>
@@ -51,8 +51,8 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
     public function getElement(int $key);
 
     /**
-     * @function getFirstKey returns the key of the first element in the list which is strictly equal to the
-     * argument of the method call (e.g. ===).
+     * @function getFirstKey returns the key of the first element in the list which is equal to the argument of the
+     * method call.  You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
      * @param <ListElementType> $listElement
      * @return int|null
@@ -60,7 +60,9 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
     public function getFirstKey($listElement, bool $strict = true): int|null;
 
     /**
-     * getAllKeys
+     * @function getAllKeys returns all the keys in the list which have elements equal to the argument of
+     * the method call.  You can control whether you want to use strict or loose comparison via the $strict parameter.
+     *
      * @param <ListElementType> $listElement
      * @return array<int>
      */

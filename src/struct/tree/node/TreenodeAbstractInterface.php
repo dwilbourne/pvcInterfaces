@@ -24,21 +24,19 @@ use pvc\interfaces\validator\ValidatorInterface;
  * The same is almost true for the parent property, but the difference is that the nodes are allowed to move around
  * within the same tree, e.g. you can change a node's parent as long as the new parent is in the same tree. It is
  * important to know that not only does a node keep a reference to its parent, but it also keeps a list of its
- * children.  So the setParent method is responsible not only for setting the parent property, but it also take
+ * children.  So the setParent method is responsible not only for setting the parent property, but it also takes
  * the parent and adds a node to its child list.
  *
  * There is no method for a node moving itself between trees.  In order to accomplish this, trees have a method which
  * allows you to create a copy of a branch from another tree.  Then you can delete the source branch from the
  * source tree if you want a move and not a copy.
  *
+ * There are two concrete tree node interfaces defined in this package: ordered and unordered. The tree structure uses
+ * the ordered and unordered list interfaces to assist with these behaviors.  Like other parts of the pvcStruct package,
+ * the tree and tree node components are written using phpstan generics.  If you use this package, you should consider
+ * using phpstan as part of the testing of your code in order to ensure type safety.
  *
- * There are two other tree node interfaces defined in
- * this package, and they provide different signatures for additional operations.  Specifically, the children of a node
- * can be kept in a certain order.  Or perhaps for another use case, that is not necessary.  The tree structure uses
- * the ordered and unordered list interfaces to assist with
- * these behaviors.  Like other parts of the pvcStruct package, the tree and tree node components are written using
- * phpstan generics.  If you use this package, you should consider using phpstan as part of the testing of your code
- * in order to ensure type safety.  Finally, you will see a reference below to an object called a ValueValidator.  It is
+ * Finally, you will see a reference below to an object called a ValueValidator.  It is
  * not necessary to use a ValueValidator, but doing so will further ensure data integrity in your tree, since type
  * safety alone is not always enough to guarantee that each value is valid.  If you choose to use a valueValidator,
  * make sure it is injected into the node object before setting the value of the node.
