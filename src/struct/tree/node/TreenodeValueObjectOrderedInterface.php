@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\tree\node;
 /**
  * Class TreenodeValueObjectOrderedInterface
  * @template NodeValueType
+ * @extends TreenodeValueObjectInterface<NodeValueType>
  */
 interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterface
 {

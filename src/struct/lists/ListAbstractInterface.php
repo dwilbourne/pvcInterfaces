@@ -54,19 +54,19 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
      * @function getFirstKey returns the key of the first element in the list which is equal to the argument of the
      * method call.  You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
-     * @param <ListElementType> $listElement
+     * @param ListElementType $listElement
      * @return int|null
      */
-    public function getFirstKey($listElement, bool $strict = true): int|null;
+    public function getFirstKey(mixed $listElement, bool $strict = true): int|null;
 
     /**
      * @function getAllKeys returns all the keys in the list which have elements equal to the argument of
      * the method call.  You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
-     * @param <ListElementType> $listElement
+     * @param ListElementType $listElement
      * @return array<int>
      */
-    public function getAllKeys($listElement, bool $strict = true): array;
+    public function getAllKeys(mixed $listElement, bool $strict = true): array;
 
     /**
      * @function setKey allows you to change the key of an element in the list.

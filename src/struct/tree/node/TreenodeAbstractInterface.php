@@ -46,6 +46,7 @@ use pvc\interfaces\validator\ValidatorInterface;
  *
  * @template NodeType
  * @template NodeValueType
+ * @extends TreenodeValueObjectInterface<NodeValueType>
  */
 interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 {
