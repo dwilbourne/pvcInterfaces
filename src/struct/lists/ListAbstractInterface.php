@@ -57,14 +57,14 @@ interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
      * @param <ListElementType> $listElement
      * @return int|null
      */
-    public function getFirstKey($listElement): int|null;
+    public function getFirstKey($listElement, bool $strict = true): int|null;
 
     /**
      * getAllKeys
      * @param <ListElementType> $listElement
      * @return array<int>
      */
-    public function getAllKeys($listElement): array;
+    public function getAllKeys($listElement, bool $strict = true): array;
 
     /**
      * @function setKey allows you to change the key of an element in the list.
