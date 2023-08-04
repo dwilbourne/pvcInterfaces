@@ -52,7 +52,8 @@ interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 {
     /**
      * getEmptyList
-     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType>>
+     * @template-covariant ListType of ListAbstractInterface
+     * @return ListType
      */
     public function getEmptyList(): ListAbstractInterface;
 
