@@ -52,6 +52,12 @@ use pvc\interfaces\validator\ValidatorInterface;
 interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 {
     /**
+     * getEmptyList
+     * @return ListAbstractInterface<ListType, TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     */
+    public function getEmptyList(): ListAbstractInterface;
+
+    /**
      * @function setParent sets a reference to the parent of the node.
      *
      * parent node must be in the same tree.

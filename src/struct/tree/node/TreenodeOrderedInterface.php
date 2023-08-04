@@ -20,8 +20,11 @@ use pvc\interfaces\struct\lists\ListOrderedInterface;
 interface TreenodeOrderedInterface extends TreenodeAbstractInterface
 {
     /**
-     * @function setIndex sets the ordinal position of this node in the ordered list of siblings.  If the index
-     * supplied is greater than any of the existing indices, then the node is tacked on to the end of the list.
+     * @function setIndex sets the ordinal position of this node in the ordered list of siblings.
+     *
+     * If the index supplied is greater than any of the existing indices, then the node is tacked on to the end of the
+     * list.
+     *
      * @param non-negative-int $index
      */
     public function setIndex(int $index): void;
