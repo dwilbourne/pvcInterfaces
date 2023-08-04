@@ -21,7 +21,6 @@ use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
  *
  * @template NodeType
  * @template NodeValueType
- * @template ListType
  */
 interface TreeAbstractInterface
 {
@@ -48,21 +47,21 @@ interface TreeAbstractInterface
 
     /**
      * @function deleteNode
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType, ListType> $node
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
      * @param bool $deleteBranchOK
      */
     public function deleteNode($node, bool $deleteBranchOK = false): void;
 
     /**
      * @function getNodes
-     * @return array< TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return array<  TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
     public function getNodes(): array;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int $nodeId
-     * @return  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>|null
+     * @return   TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
     public function getNode(int $nodeId): TreenodeAbstractInterface|null;
 
@@ -74,14 +73,14 @@ interface TreeAbstractInterface
      * if it finds a match.  The $strict parameter controls whether the method uses "==" (all properties have the
      * same values) or "===" ($obj1 and $obj2 are the same instance).
      *
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType, ListType>|null $nodeToBeTested
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType>|null $nodeToBeTested
      * @return bool
      */
     public function hasNode($nodeToBeTested = null, bool $strict = false): bool;
 
     /**
      * @function getRoot
-     * @return  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>|null
+     * @return   TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
     public function getRoot(): ?TreenodeAbstractInterface;
 
@@ -107,18 +106,18 @@ interface TreeAbstractInterface
      * search the tree and filter the result set according to a certain set of criteria.  The returned result set is
      * an array of nodes where the key for each array element is its nodeId.
      *
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType, ListType>|null $startNode
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType>|null $startNode
      * @param callable|null $callback
-     * @return array< TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return array<  TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
     public function getTreeDepthFirst(TreenodeAbstractInterface $startNode = null, callable $callback = null): array;
 
     /**
      * @function getTreeBreadthFirst returns the nodes in a tree using a breadth first algorithm
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType, ListType>|null $startNode
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType>|null $startNode
      * @param callable|null $callback
      * @param non-negative-int|null $maxLevels
-     * @return array< TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return array<  TreenodeAbstractInterface<NodeType, NodeValueType>>
      *
      * same idea as getTreeDepthFirst but is a breadth first search, which obviously changes the ordering of the
      * nodes in the result set.  Also has a parameter which allows you to limit the depth to which the search will
@@ -132,13 +131,13 @@ interface TreeAbstractInterface
 
     /**
      * @function getLeaves
-     * @return array< TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return array<  TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
     public function getLeaves(): array;
 
     /**
      * @function getInteriorNodes
-     * @return array< TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return array<  TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
     public function getInteriorNodes(): array;
 }

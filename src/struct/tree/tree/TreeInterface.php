@@ -8,14 +8,13 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\lists\ListUnorderedInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
  * Interface TreeInterface
  *
  * @template NodeValueType
- * @extends TreeAbstractInterface<TreenodeInterface, NodeValueType, ListUnorderedInterface>
+ * @extends TreeAbstractInterface<TreenodeInterface, NodeValueType>
  */
 interface TreeInterface extends TreeAbstractInterface
 {

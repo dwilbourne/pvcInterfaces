@@ -46,14 +46,13 @@ use pvc\interfaces\validator\ValidatorInterface;
  *
  * @template NodeType
  * @template NodeValueType
- * @template ListType
  * @extends TreenodeValueObjectInterface<NodeValueType>
  */
 interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 {
     /**
      * getEmptyList
-     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
     public function getEmptyList(): ListAbstractInterface;
 
@@ -62,20 +61,20 @@ interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
      *
      * parent node must be in the same tree.
      *
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType, ListType> $parent
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $parent
      * @return void
      */
     public function setParent(?TreenodeAbstractInterface $parent): void;
 
     /**
      * @function getParent
-     * @return  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>
+     * @return   TreenodeAbstractInterface<NodeType, NodeValueType>
      */
     public function getParent(): ?TreenodeAbstractInterface;
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeAbstractInterface<NodeType, NodeValueType, ListType>
+     * @return TreeAbstractInterface<NodeType, NodeValueType>
      */
     public function getTree(): ?TreeAbstractInterface;
 
@@ -112,32 +111,32 @@ interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
     /**
      * @function getChild
      * @param non-negative-int $nodeid
-     * @return  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>|null
+     * @return   TreenodeAbstractInterface<NodeType, NodeValueType>|null
      */
     public function getChild(int $nodeid): ?TreenodeAbstractInterface;
 
     /**
      * @function getChildren
-     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return ListAbstractInterface< TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
     public function getChildren(): ListAbstractInterface;
 
     /**
      * @function getSiblings
-     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return ListAbstractInterface< TreenodeAbstractInterface<NodeType, NodeValueType>>
      */
     public function getSiblings(): ListAbstractInterface;
 
     /**
      * @function isDescendantOf
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType, ListType> $node
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
      * @return bool
      */
     public function isDescendantOf(TreenodeAbstractInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType, ListType> $node
+     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
      * @return bool
      */
     public function isAncestorOf(TreenodeAbstractInterface $node): bool;
