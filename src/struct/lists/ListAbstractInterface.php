@@ -25,8 +25,8 @@ use Iterator;
  *
  * @template ListType
  * @template ListElementType
- * @extends Iterator<ListElementType>
- * @extends ArrayAccess<ListElementType>
+ * @extends Iterator<int, ListElementType>
+ * @extends ArrayAccess<int, ListElementType>
  */
 interface ListAbstractInterface extends Iterator, ArrayAccess, Countable
 {
