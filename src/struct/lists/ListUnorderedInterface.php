@@ -15,7 +15,7 @@ namespace pvc\interfaces\struct\lists;
  * elements in any particular order.
  *
  * @template ListElementType
- * @extends ListAbstractInterface<ListUnorderedInterface, ListElementType>
+ * @extends ListAbstractInterface<ListElementType>
  */
 interface ListUnorderedInterface extends ListAbstractInterface
 {

@@ -23,7 +23,6 @@ use Iterator;
  * structure to be an ordered list.  In pvc land, an unordered list also has integer keys, but the keys mean nothing in
  * terms of creating any sort of ordination among the elements.
  *
- * @template ListType
  * @template ListElementType
  * @extends Iterator<int, ListElementType>
  * @extends ArrayAccess<int, ListElementType>

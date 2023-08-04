@@ -53,8 +53,7 @@ interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 {
     /**
      * getEmptyList
-     * @return ListAbstractInterface<ListType<TreenodeAbstractInterface<NodeType, NodeValueType, ListType>,
-     *     TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
      */
     public function getEmptyList(): ListAbstractInterface;
 
@@ -119,13 +118,13 @@ interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
 
     /**
      * @function getChildren
-     * @return ListAbstractInterface<ListType,  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
      */
     public function getChildren(): ListAbstractInterface;
 
     /**
      * @function getSiblings
-     * @return ListAbstractInterface<ListType,  TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
+     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType, ListType>>
      */
     public function getSiblings(): ListAbstractInterface;
 
