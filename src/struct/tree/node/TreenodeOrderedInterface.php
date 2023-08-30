@@ -8,12 +8,15 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
+use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
+
 /**
  * Interface TreenodeOrderedInterface defines the operations for "ordered" tree nodes, e.g. the children of each node
  * are kept in a specific order
  *
- * @template NodeValueType
- * @extends TreenodeAbstractInterface<TreenodeOrderedInterface, NodeValueType>
+ * @template ValueType
+ * @extends TreenodeAbstractInterface<ValueType, TreenodeOrderedInterface, TreeOrderedInterface,
+ *     CollectionOrderedInterface>
  */
 interface TreenodeOrderedInterface extends TreenodeAbstractInterface
 {
@@ -31,5 +34,5 @@ interface TreenodeOrderedInterface extends TreenodeAbstractInterface
      * @function getIndex gets the ordinal position of this node in the ordered list of siblings
      * @return non-negative-int
      */
-    public function getIndex(): ?int;
+    public function getIndex(): int;
 }

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\range_collection;
+namespace pvc\interfaces\struct\range;
 
 /**
  * @interface RangeElementInterface<RangeElementType, RangeElementDataType> defines the interface for a RangeElement.
@@ -18,7 +18,7 @@ namespace pvc\interfaces\struct\range_collection;
  * @template RangeElementType
  * @template RangeElementDataType
  */
-interface RangeElementInterface
+interface RangeInterface
 {
     /**
      * @function getRange returns an array with two elements - the min and the max
@@ -49,4 +49,11 @@ interface RangeElementInterface
      * @return RangeElementDataType
      */
     public function getMax();
+
+    /**
+     * isInRange
+     * @param RangeElementDataType $value
+     * @return bool
+     */
+    public function isInRange($value): bool;
 }

@@ -6,25 +6,25 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\lists;
+namespace pvc\interfaces\struct\collection;
 
 /**
- * Interface ListOrderedInterface is the interface for an ordered list.
+ * Interface CollectionOrderedInterface is the interface for an ordered list.
  *
  * An ordered list is one where elements can be retrieved "in order", e.g. using sequentially increasing integer
  * indices which define the ordinal position of each of the values in the list.
  *
  * Conceptually, "indices" are separate from "keys".  In pvc's current implementation of ordered lists, keys and
  * indices are the same thing.  But in a different implementation that might not be the case, so the nomenclature
- * distinuishes between the two.
+ * distinguishes between the two.
  *
- * @template ListElementType
- * @extends ListAbstractInterface<ListElementType>
+ * @template ElementType
+ * @extends CollectionAbstractInterface<ElementType, CollectionOrderedInterface>
  */
-interface ListOrderedInterface extends ListAbstractInterface
+interface CollectionOrderedInterface extends CollectionAbstractInterface
 {
     /**
-     * getIndex gets the ordinal position of the element in the list correpsonding to $key
+     * getIndex gets the ordinal position of the element in the list corresponding to $key
      * @param non-negative-int $key
      * @return non-negative-int
      */

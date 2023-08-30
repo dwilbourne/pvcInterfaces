@@ -8,9 +8,11 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
-use pvc\interfaces\struct\lists\ListAbstractInterface;
+use pvc\interfaces\struct\collection\CollectionAbstractInterface;
+use pvc\interfaces\struct\collection\CollectionOrderedInterface;
+use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
+use pvc\interfaces\struct\payload\PayloadInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
-use pvc\interfaces\validator\ValidatorInterface;
 
 /**
  * Interface TreenodeAbstractInterface defines the operations for a generic tree node.
@@ -32,69 +34,65 @@ use pvc\interfaces\validator\ValidatorInterface;
  * source tree if you want a move and not a copy.
  *
  * There are two concrete tree node interfaces defined in this package: ordered and unordered. The tree structure uses
- * the ordered and unordered list interfaces to assist with these behaviors.  Like other parts of the pvcStruct package,
- * the tree and tree node components are written using phpstan generics.  If you use this package, you should consider
- * using phpstan as part of the testing of your code in order to ensure type safety.
+ * the ordered and unordered collection interfaces to assist with these behaviors.  Like other parts of the pvcStruct
+ * package, the tree and tree node components are written using phpstan generics.  If you use this package, you should
+ * consider using phpstan as part of the testing of your code in order to ensure type safety.
  *
  * Finally, you will see a reference below to an object called a ValueValidator.  It is
  * not necessary to use a ValueValidator, but doing so will further ensure data integrity in your tree, since type
  * safety alone is not always enough to guarantee that each value is valid.  If you choose to use a valueValidator,
  * make sure it is injected into the node object before setting the value of the node.
  *
- * @see ListUnorderedInterface
- * @see ListOrderedInterface
+ * @see CollectionUnorderedInterface
+ * @see CollectionOrderedInterface
  *
- * @template NodeType
- * @template NodeValueType
- * @extends TreenodeValueObjectInterface<NodeValueType>
+ * @template ValueType
+ * @template NodeType of TreenodeAbstractInterface
+ * @template TreeType of TreeAbstractInterface
+ * @template CollectionType of CollectionAbstractInterface
+ * @extends PayloadInterface<ValueType>
  */
-interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
+interface TreenodeAbstractInterface extends PayloadInterface
 {
     /**
-     * getEmptyList
-     * @return ListAbstractInterface<TreenodeAbstractInterface<NodeType, NodeValueType>>
+     * getNodeId
+     * @return non-negative-int
      */
-    public function getEmptyList(): ListAbstractInterface;
+    public function getNodeId(): int;
+
+    /**
+     * getParentId
+     * @return non-negative-int|null
+     */
+    public function getParentId(): ?int;
+
+    /**
+     * @function getParent
+     * @return NodeType
+     */
+    public function getParent(): ?TreenodeAbstractInterface;
+
+    /**
+     * @function getTree gets a reference to the tree to which the node belongs
+     * @return TreeType
+     */
+    public function getTree(): TreeAbstractInterface;
+
+    /**
+     * getTreeId
+     * @return non-negative-int
+     */
+    public function getTreeId(): int;
 
     /**
      * @function setParent sets a reference to the parent of the node.
      *
      * parent node must be in the same tree.
      *
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $parent
+     * @param non-negative-int|null $parentId
      * @return void
      */
-    public function setParent(?TreenodeAbstractInterface $parent): void;
-
-    /**
-     * @function getParent
-     * @return   TreenodeAbstractInterface<NodeType, NodeValueType>
-     */
-    public function getParent(): ?TreenodeAbstractInterface;
-
-    /**
-     * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeAbstractInterface<NodeType, NodeValueType>
-     */
-    public function getTree(): ?TreeAbstractInterface;
-
-    /**
-     * @function setValueValidator sets an object that can be used to validate a value before setting it in the node
-     * @param ValidatorInterface $validator
-     */
-    public function setValueValidator(ValidatorInterface $validator): void;
-
-    /**
-     * @function getValueValidator returns a reference to the value validator
-     * @return ValidatorInterface|null
-     */
-    public function getValueValidator(): ?ValidatorInterface;
-
-    /**
-     * @function setValue sets the vaslue or "payload" of the node
-     * @param NodeValueType $value
-     */
-    public function setValue($value): void;
+    public function setParent(?int $parentId): void;
 
     /**
      * @function isLeaf returns true if the node has no children
@@ -111,33 +109,50 @@ interface TreenodeAbstractInterface extends TreenodeValueObjectInterface
     /**
      * @function getChild
      * @param non-negative-int $nodeid
-     * @return   TreenodeAbstractInterface<NodeType, NodeValueType>|null
+     * @return NodeType|null
      */
     public function getChild(int $nodeid): ?TreenodeAbstractInterface;
 
     /**
      * @function getChildren
-     * @return ListAbstractInterface< TreenodeAbstractInterface<NodeType, NodeValueType>>
+     * @return CollectionType
      */
-    public function getChildren(): ListAbstractInterface;
+    public function getChildren(): CollectionAbstractInterface;
 
     /**
      * @function getSiblings
-     * @return ListAbstractInterface< TreenodeAbstractInterface<NodeType, NodeValueType>>
+     * @return CollectionType
      */
-    public function getSiblings(): ListAbstractInterface;
+    public function getSiblings(): CollectionAbstractInterface;
 
     /**
      * @function isDescendantOf
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
+     * @param NodeType $node
      * @return bool
      */
     public function isDescendantOf(TreenodeAbstractInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param TreenodeAbstractInterface<NodeType, NodeValueType> $node
+     * @param NodeType $node
      * @return bool
      */
     public function isAncestorOf(TreenodeAbstractInterface $node): bool;
+
+    /**
+     * getVisitCount
+     * maintains a count of the number of times this node has been visited by a NodeTraveler
+     * @return non-negative-int
+     */
+    public function getVisitCount(): int;
+
+    /**
+     * addVisit
+     */
+    public function addVisit(): void;
+
+    /**
+     * clearVisitCount
+     */
+    public function clearVisitCount(): void;
 }

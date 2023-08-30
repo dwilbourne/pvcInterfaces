@@ -6,16 +6,16 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\range_collection;
+namespace pvc\interfaces\struct\range;
 
 use DateTime;
 use DateTimeImmutable;
 
 /**
  * @interface RangeElementDateTimeInterface is the DateTime-based interface for a RangeElement.
- * @extends RangeElementInterface<RangeElementDateTimeInterface, DateTime|DateTimeImmutable>
+ * @extends RangeInterface<RangeDateTimeInterface, DateTime|DateTimeImmutable>
  */
-interface RangeElementDateTimeInterface extends RangeElementInterface
+interface RangeDateTimeInterface extends RangeInterface
 {
     /**
      * @return array<DateTime|DateTimeImmutable>
