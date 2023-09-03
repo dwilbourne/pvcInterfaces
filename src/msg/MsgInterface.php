@@ -23,13 +23,13 @@ interface MsgInterface
      * getMsgId
      * @return string
      */
-    public function getMsgId(): ? string;
+    public function getMsgId(): ?string;
 
     /**
      * getDomain
      * @return string
      */
-    public function getDomain(): ? string;
+    public function getDomain(): ?string;
 
     /**
      * getParameters
@@ -37,13 +37,19 @@ interface MsgInterface
      * substituted into the message.
      * @return array<string, mixed>
      */
-    public function getParameters(): ? array;
+    public function getParameters(): ?array;
+
+    /**
+     * setDomain
+     * @param string $domain
+     */
+    public function setDomain(string $domain): void;
 
     /**
      * clear
      */
     public function clear(): void;
-    
+
 
     /**
      * hydrate
@@ -51,5 +57,5 @@ interface MsgInterface
      * @param array<mixed> $parameters
      * @param string $domain
      */
-    public function hydrate(string $msgId, array $parameters, string $domain): void;
+    public function setMsgContent(string $msgId, array $parameters, string $domain = null): void;
 }
