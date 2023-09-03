@@ -18,17 +18,18 @@ namespace pvc\interfaces\msg;
  */
 interface MsgInterface
 {
+
     /**
      * getMsgId
      * @return string
      */
-    public function getMsgId(): string;
+    public function getMsgId(): ? string;
 
     /**
      * getDomain
      * @return string
      */
-    public function getDomain(): string;
+    public function getDomain(): ? string;
 
     /**
      * getParameters
@@ -36,5 +37,19 @@ interface MsgInterface
      * substituted into the message.
      * @return array<string, mixed>
      */
-    public function getParameters(): array;
+    public function getParameters(): ? array;
+
+    /**
+     * clear
+     */
+    public function clear(): void;
+    
+
+    /**
+     * hydrate
+     * @param string $msgId
+     * @param array<mixed> $parameters
+     * @param string $domain
+     */
+    public function hydrate(string $msgId, array $parameters, string $domain): void;
 }
