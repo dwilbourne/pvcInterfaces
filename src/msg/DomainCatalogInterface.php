@@ -38,9 +38,9 @@ interface DomainCatalogInterface
     /**
      * getMessage
      * @param string $messageId
-     * @return string
+     * @return string|null
      */
-    public function getMessage(string $messageId): string;
+    public function getMessage(string $messageId): ?string;
 
     /**
      * @function load
