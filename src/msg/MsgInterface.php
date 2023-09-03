@@ -37,7 +37,7 @@ interface MsgInterface
      * substituted into the message.
      * @return array<string, mixed>
      */
-    public function getParameters(): ?array;
+    public function getParameters(): array;
 
     /**
      * setDomain
