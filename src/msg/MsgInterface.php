@@ -46,16 +46,22 @@ interface MsgInterface
     public function setDomain(string $domain): void;
 
     /**
-     * clear
+     * clearContent
      */
-    public function clear(): void;
+    public function clearContent(): void;
 
 
     /**
-     * hydrate
+     * setContent
      * @param string $msgId
      * @param array<mixed> $parameters
      * @param string $domain
      */
-    public function setMsgContent(string $msgId, array $parameters = null, string $domain = null): void;
+    public function setContent(string $msgId, array $parameters = null, string $domain = null): void;
+
+    /**
+     * contentIsSet
+     * @return bool
+     */
+    public function contentIsSet(): bool;
 }
