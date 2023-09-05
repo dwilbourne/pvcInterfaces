@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
+use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
 /**
@@ -15,8 +16,7 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  * are kept in a specific order
  *
  * @template ValueType
- * @extends TreenodeAbstractInterface<ValueType, TreenodeOrderedInterface, TreeOrderedInterface,
- *     CollectionOrderedInterface>
+ * @extends TreenodeAbstractInterface<ValueType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
  */
 interface TreenodeOrderedInterface extends TreenodeAbstractInterface
 {

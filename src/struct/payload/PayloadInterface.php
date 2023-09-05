@@ -17,13 +17,13 @@ interface PayloadInterface
 {
     /**
      * setValueValidator
-     * @param ValidatorInterface $validator
+     * @param ValidatorInterface<ValueType> $validator
      */
     public function setValueValidator(ValidatorInterface $validator): void;
 
     /**
      * getValueValidator
-     * @return ValidatorInterface
+     * @return ValidatorInterface<ValueType>
      */
     public function getValueValidator(): ValidatorInterface;
 

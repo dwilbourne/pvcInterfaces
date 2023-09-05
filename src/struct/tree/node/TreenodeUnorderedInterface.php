@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
+use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
 
 /**
@@ -15,8 +16,7 @@ use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
  * are not kept in any specific order.
  *
  * @template ValueType
- * @extends TreenodeAbstractInterface<ValueType, TreenodeUnorderedInterface, TreeUnorderedInterface,
- *     CollectionUnorderedInterface>
+ * @extends TreenodeAbstractInterface<ValueType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface>
  */
 interface TreenodeUnorderedInterface extends TreenodeAbstractInterface
 {
