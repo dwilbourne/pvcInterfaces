@@ -41,10 +41,4 @@ interface ValTesterMinMaxInterface extends ValTesterInterface
      */
     public function getMax(): mixed;
 
-    /**
-     * setMinMax
-     * @param DataType $min
-     * @param DataType $max
-     */
-    public function setMinMax(mixed $min, mixed $max): void;
 }
