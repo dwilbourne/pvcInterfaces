@@ -75,5 +75,5 @@ interface RegexInterface
      * @param string $delimiter
      * @return string
      */
-    public function escapeString(string $pattern, string $delimiter): string;
+    public static function escapeString(string $pattern, string $delimiter): string;
 }
