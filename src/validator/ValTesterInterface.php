@@ -29,7 +29,7 @@ interface ValTesterInterface
 
     /**
      * getMsgParameters
-     * @return array<mixed>|null
+     * @return array<mixed>
      */
-    public function getMsgParameters(): ?array;
+    public function getMsgParameters(): array;
 }
