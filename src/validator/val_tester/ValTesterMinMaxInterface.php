@@ -3,6 +3,7 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\validator\val_tester;
@@ -16,7 +17,6 @@ use pvc\interfaces\validator\ValTesterInterface;
  */
 interface ValTesterMinMaxInterface extends ValTesterInterface
 {
-
     /**
      * setMin
      * @param DataType $min
@@ -40,5 +40,4 @@ interface ValTesterMinMaxInterface extends ValTesterInterface
      * @return DataType
      */
     public function getMax(): mixed;
-
 }

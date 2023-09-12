@@ -4,11 +4,9 @@
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace pvc\interfaces\regex;
-
-use pvc\interfaces\msg\HasMsgInterface;
 
 interface RegexInterface
 {
@@ -58,14 +56,14 @@ interface RegexInterface
 
     /**
      * getMatch
-     * @param int $index
-     * @return bool|array|string
+     * @param array-key $index
+     * @return string
      */
-    public function getMatch(int $index): bool|array|string;
+    public function getMatch(int $index): mixed;
 
     /**
      * getMatches
-     * @return array
+     * @return array<string>
      */
     public function getMatches(): array;
 
