@@ -17,9 +17,9 @@ interface ValTesterInterface
     /**
      * testValue
      * @param $value
-     * @return bool
+     * @return bool|null
      */
-    public function testValue(mixed $value): bool;
+    public function testValue(mixed $value): ?bool;
 
     /**
      * getMsgId
@@ -29,7 +29,7 @@ interface ValTesterInterface
 
     /**
      * getMsgParameters
-     * @return array<mixed>
+     * @return array<mixed>|null
      */
-    public function getMsgParameters(): array;
+    public function getMsgParameters(): ?array;
 }
