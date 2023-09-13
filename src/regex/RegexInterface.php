@@ -57,9 +57,9 @@ interface RegexInterface
     /**
      * getMatch
      * @param array-key $index
-     * @return string
+     * @return array|string
      */
-    public function getMatch(int $index): mixed;
+    public function getMatch(int $index): array|string;
 
     /**
      * getMatches
