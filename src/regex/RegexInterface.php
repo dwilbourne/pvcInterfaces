@@ -42,7 +42,7 @@ interface RegexInterface
 
     /**
      * setCaseInsensitive
-     * @param bool $value
+     * @param bool $caseSensitive
      */
     public function setCaseSensitive(bool $caseSensitive): void;
 
@@ -57,9 +57,9 @@ interface RegexInterface
     /**
      * getMatch
      * @param array-key $index
-     * @return array|string
+     * @return array<string>|string
      */
-    public function getMatch(int $index): array|string;
+    public function getMatch(int|string $index): array|string;
 
     /**
      * getMatches
