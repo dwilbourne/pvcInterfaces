@@ -16,4 +16,6 @@ use pvc\interfaces\displayable\DisplayableInterface;
 interface TagInterface extends DisplayableInterface
 {
     public function display(): string;
+
+    public function setAttribute(string $attributeName, string $value): void;
 }
