@@ -32,4 +32,10 @@ interface ValTesterInterface
      * @return array<mixed>
      */
     public function getMsgParameters(): array;
+
+    /**
+     * getLabel
+     * @return string
+     */
+    public function getLabel(): string;
 }
