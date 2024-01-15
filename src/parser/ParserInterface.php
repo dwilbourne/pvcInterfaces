@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\parser;
+namespace pvc\interfaces\parser;
 
 use pvc\interfaces\msg\HasMsgInterface;
 
