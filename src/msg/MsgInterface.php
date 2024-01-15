@@ -18,7 +18,6 @@ namespace pvc\interfaces\msg;
  */
 interface MsgInterface
 {
-
     /**
      * getMsgId
      * @return string
