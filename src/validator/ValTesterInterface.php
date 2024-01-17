@@ -20,16 +20,4 @@ interface ValTesterInterface
      * @return bool
      */
     public function testValue(mixed $value): bool;
-
-    /**
-     * getMsgId
-     * @return string
-     */
-    public function getMsgId(): string;
-
-    /**
-     * getMsgParameters
-     * @return array<mixed>
-     */
-    public function getMsgParameters(): array;
 }
