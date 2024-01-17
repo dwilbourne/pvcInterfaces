@@ -27,13 +27,13 @@ interface ValidatorInterface extends HasMsgInterface
      * setTester
      * @param ValTesterInterface<DataType> $tester
      */
-    public function setTester(ValTesterInterface $tester): void;
+    public function setValTester(ValTesterInterface $tester): void;
 
     /**
      * getTester
      * @return ValTesterInterface<DataType>
      */
-    public function getTester(): ValTesterInterface;
+    public function getValTester(): ValTesterInterface;
 
     /**
      * setRequired
