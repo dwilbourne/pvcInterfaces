@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\validator;
 
 use pvc\interfaces\msg\HasMsgInterface;
-use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class ValidatorInterface
@@ -25,18 +24,6 @@ interface ValidatorInterface extends HasMsgInterface
     public function validate($data): bool;
 
     /**
-     * setTester
-     * @param ValTesterInterface<DataType> $tester
-     */
-    public function setValTester(ValTesterInterface $tester): void;
-
-    /**
-     * getTester
-     * @return ValTesterInterface<DataType>
-     */
-    public function getValTester(): ValTesterInterface;
-
-    /**
      * setRequired
      * @param bool $required
      */
@@ -47,16 +34,4 @@ interface ValidatorInterface extends HasMsgInterface
      * @return bool
      */
     public function isRequired(): bool;
-
-    /**
-     * setMsg
-     * @param MsgInterface $msg
-     */
-    public function setMsg(MsgInterface $msg): void;
-
-    /**
-     * getMsg
-     * @return MsgInterface
-     */
-    public function getMsg(): MsgInterface;
 }
