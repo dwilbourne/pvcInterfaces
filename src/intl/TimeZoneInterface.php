@@ -14,17 +14,16 @@ namespace pvc\interfaces\intl;
 interface TimeZoneInterface
 {
     /**
-     * exists
-     * @param string $tz
-     * @return bool
+     * __toString
+     * @return string
      */
-    public static function exists(string $tz): bool;
+    public function __toString(): string;
 
     /**
      * getRawOffset
      * @param string $tz
      * @return int
      */
-    public static function getRawOffset(string $tz, int $timeStamp = null): int;
+    public function getRawOffset(int $timeStamp = null): int;
 
 }
