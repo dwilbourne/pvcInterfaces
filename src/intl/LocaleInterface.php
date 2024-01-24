@@ -14,10 +14,28 @@ namespace pvc\interfaces\intl;
 interface LocaleInterface
 {
     /**
+     * setLocaleString
+     * @param string $localeString
+     */
+    public function setLocaleString(string $localeString): void;
+
+    /**
+     * getLocaleString
+     * @return string
+     */
+    public function getLocaleString(): string;
+
+    /**
      * exists
      * @param string $locale
      * @return bool
      */
     public static function exists(string $locale): bool;
+
+    /**
+     * __toString
+     * @return mixed
+     */
+    public function __toString();
 
 }

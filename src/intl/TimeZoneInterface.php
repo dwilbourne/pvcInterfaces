@@ -14,6 +14,18 @@ namespace pvc\interfaces\intl;
 interface TimeZoneInterface
 {
     /**
+     * setTimeZoneString
+     * @param string $tzString
+     */
+    public function setTimeZoneString(string $tzString): void;
+
+    /**
+     * getTimeZoneString
+     * @return string
+     */
+    public function getTimeZoneString(): string;
+
+    /**
      * __toString
      * @return string
      */
@@ -25,5 +37,4 @@ interface TimeZoneInterface
      * @return int
      */
     public function getRawOffset(int $timeStamp = null): int;
-
 }
