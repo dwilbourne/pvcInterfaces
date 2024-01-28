@@ -21,7 +21,7 @@ interface HasMsgInterface
 
     /**
      * getMsg
-     * @return MsgInterface|null
+     * @return MsgInterface
      */
-    public function getMsg(): ?MsgInterface;
+    public function getMsg(): MsgInterface;
 }
