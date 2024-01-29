@@ -4,7 +4,7 @@
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
 
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace pvc\interfaces\err;
 
@@ -23,9 +23,9 @@ interface XCodePrefixesInterface
      * Prefixes are
      *
      * @param string $namespace
-     * @return int
+     * @return int|false
      */
-    public static function getXCodePrefix(string $namespace): int;
+    public static function getXCodePrefix(string $namespace): int|false;
 
     /**
      * @function getXCodePrefixes returns an array of exception code prefixes.
