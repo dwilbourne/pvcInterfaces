@@ -18,6 +18,14 @@ namespace pvc\interfaces\msg;
 interface TranslationResourcePHPInterface
 {
     /**
+     * getMessages
+     * returns an array of all the translation strings in the catalog for a particular language in a msgId => message
+     * format
+     * @return array<string, string>
+     */
+    public function getMessages(): array;
+
+    /**
      * getMessage
      * returns the translation string corresponding to the messageid
      *
