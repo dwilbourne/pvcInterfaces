@@ -16,7 +16,7 @@ interface MsgConfigInterface
     /**
      * getDomainCatalogConfig
      * @param string $domain
-     * @return array
+     * @return array<string, string>
      */
     public static function getDomainCatalogConfig(string $domain): array;
 }
