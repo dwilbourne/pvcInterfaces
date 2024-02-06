@@ -27,10 +27,10 @@ interface TranslationResourcePHPInterface
 
     /**
      * getMessage
-     * returns the translation string corresponding to the messageid
+     * returns the translation string corresponding to the messageid or null if an invalid msgId is passed
      *
      * @param string $msgId
      * @return string
      */
-    public function getMessage(string $msgId): string;
+    public function getMessage(string $msgId): ?string;
 }
