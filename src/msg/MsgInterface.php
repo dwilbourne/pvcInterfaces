@@ -39,16 +39,9 @@ interface MsgInterface
     public function getParameters(): array;
 
     /**
-     * setDomain
-     * @param string $domain
-     */
-    public function setDomain(string $domain): void;
-
-    /**
      * clearContent
      */
     public function clearContent(): void;
-
 
     /**
      * setContent
@@ -56,7 +49,7 @@ interface MsgInterface
      * @param array<mixed> $parameters
      * @param string $domain
      */
-    public function setContent(string $msgId, array $parameters = null, string $domain = null): void;
+    public function setContent(string $domain, string $msgId, array $parameters): void;
 
     /**
      * contentIsSet

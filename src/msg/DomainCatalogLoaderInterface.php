@@ -24,5 +24,4 @@ interface DomainCatalogLoaderInterface
      * to parse such a catalog if it exists.  Otherwise, it returns an array of msgIds => translated strings.
      */
     public function loadCatalog(string $domain, string $locale): array;
-
 }
