@@ -45,9 +45,9 @@ interface MsgInterface
 
     /**
      * setContent
+     * @param string $domain
      * @param string $msgId
      * @param array<mixed> $parameters
-     * @param string $domain
      */
     public function setContent(string $domain, string $msgId, array $parameters): void;
 

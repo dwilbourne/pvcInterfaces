@@ -19,4 +19,11 @@ interface MsgConfigInterface
      * @return array<string, string>
      */
     public static function getDomainCatalogConfig(string $domain): array;
+
+    /**
+     * domainExists
+     * @param string $domain
+     * @return bool
+     */
+    public static function domainExists(string $domain): bool;
 }
