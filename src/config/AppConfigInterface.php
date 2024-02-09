@@ -17,11 +17,11 @@ interface AppConfigInterface
      * setProjectRoot
      * @param string $dirName
      */
-    public function setProjectRoot(string $dirName): void;
+    public static function setProjectRoot(string $dirName): void;
 
     /**
      * getProjectRoot
      * @return string
      */
-    public function getProjectRoot(): string;
+    public static function getProjectRoot(): string;
 }
