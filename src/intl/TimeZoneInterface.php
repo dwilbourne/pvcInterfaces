@@ -33,7 +33,7 @@ interface TimeZoneInterface
 
     /**
      * getRawOffset
-     * @param string $tz
+     * @param int|null $timeStamp
      * @return int
      */
     public function getRawOffset(int $timeStamp = null): int;

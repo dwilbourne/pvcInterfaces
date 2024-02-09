@@ -6,12 +6,12 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\config;
+namespace pvc\interfaces\msg;
 
 /**
- * Interface MsgConfigInterface
+ * Interface DomainCatalogRegistryInterface
  */
-interface MsgConfigInterface
+interface DomainCatalogRegistryInterface
 {
     /**
      * getDomainCatalogConfig
@@ -19,6 +19,15 @@ interface MsgConfigInterface
      * @return array<string, string>
      */
     public static function getDomainCatalogConfig(string $domain): array;
+
+    /**
+     * addDomainCatalogConfig
+     * @param string $domain
+     * @param array<string, string> $parameters
+     * @param bool $overwrite
+     * @return bool
+     */
+    public static function addDomainCatalogConfig(string $domain, array $parameters, bool $overwrite = false): bool;
 
     /**
      * domainExists

@@ -46,7 +46,7 @@ interface FilterVarInterface
 
     /**
      * getOptions
-     * @return array
+     * @return array<string, mixed>
      */
     public function getOptions(): array;
 
@@ -58,13 +58,13 @@ interface FilterVarInterface
 
     /**
      * getFlags
-     * @return array
+     * @return int []
      */
     public function getFlags(): array;
 
     /**
      * getOptionsFlagsArray
-     * @return array
+     * @return array<string, mixed>
      */
     public function getOptionsFlagsArray(): array;
 }
