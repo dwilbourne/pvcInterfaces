@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @author: Doug Wilbourne (dougwilbourne@gmail.com)
+ */
+declare(strict_types=1);
+
+namespace pvc\interfaces\http;
+
+use pvc\interfaces\validator\ValTesterInterface;
+
+/**
+ * Class QueryStringInterface
+ */
+interface QueryStringInterface
+{
+    /**
+     * getQuerystringParamNameTester
+     * @return ValTesterInterface|null
+     */
+    public function getQuerystringParamNameTester(): ?ValTesterInterface;
+
+    /**
+     * setQuerystringParamNameTester
+     * @param ValTesterInterface $querystringParamNameTester
+     */
+    public function setQuerystringParamNameTester(ValTesterInterface $querystringParamNameTester): void;
+
+    /**
+     * addParam
+     * @param string $varName
+     * @param string $value
+     */
+    public function addParam(string $varName, string $value): void;
+
+    /**
+     * getParams
+     * @return array<string, string>
+     */
+    public function getParams(): array;
+
+    /**
+     * setQueryEncoding
+     * @param int $encoding
+     */
+    public function setQueryEncoding(int $encoding): void;
+
+    /**
+     * getQueryEncoding
+     * @return int
+     */
+    public function getQueryEncoding(): int;
+
+    /**
+     * render
+     * @return string
+     */
+    public function render(): string;
+}
