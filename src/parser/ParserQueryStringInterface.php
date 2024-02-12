@@ -13,9 +13,4 @@ namespace pvc\interfaces\parser;
  */
 interface ParserQueryStringInterface extends ParserInterface
 {
-    /**
-     * setParams
-     * @param array<string, string> $params
-     */
-    public function setParams(array $params): void;
 }

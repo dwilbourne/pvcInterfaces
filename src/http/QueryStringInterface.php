@@ -27,6 +27,12 @@ interface QueryStringInterface
     public function setQuerystringParamNameTester(ValTesterInterface $querystringParamNameTester): void;
 
     /**
+     * setParams
+     * @param array<string, string> $params
+     */
+    public function setParams(array $params): void;
+
+    /**
      * addParam
      * @param string $varName
      * @param string $value
