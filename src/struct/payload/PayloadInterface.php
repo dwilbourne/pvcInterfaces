@@ -3,6 +3,7 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\struct\payload;
@@ -23,9 +24,9 @@ interface PayloadInterface
 
     /**
      * getValueValidator
-     * @return ValidatorInterface<ValueType>
+     * @return ValidatorInterface<ValueType>|null
      */
-    public function getValueValidator(): ValidatorInterface;
+    public function getValueValidator(): ?ValidatorInterface;
 
     /**
      * setValue
