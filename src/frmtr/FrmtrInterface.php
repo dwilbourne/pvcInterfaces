@@ -21,7 +21,7 @@ interface FrmtrInterface
      * @param string $format
      * @return bool
      */
-    public function setFormat(string $format): bool;
+    public function setFormat(string $format): void;
 
     /**
      * getFormat
@@ -34,7 +34,7 @@ interface FrmtrInterface
      * @param LocaleInterface $locale
      * @return bool
      */
-    public function setLocale(LocaleInterface $locale): bool;
+    public function setLocale(LocaleInterface $locale): void;
 
     /**
      * getLocale
