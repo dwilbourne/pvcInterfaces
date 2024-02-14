@@ -12,6 +12,7 @@ use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
  * Interface FrmtrBooleanInterface
+ * @extends FrmtrInterface<bool>
  */
 interface FrmtrBooleanInterface extends FrmtrInterface
 {
@@ -20,5 +21,5 @@ interface FrmtrBooleanInterface extends FrmtrInterface
      * @param bool $value
      * @return string
      */
-    public function format(bool $value): string;
+    public function format($value): string;
 }

@@ -3,6 +3,7 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\http;
@@ -16,13 +17,13 @@ interface QueryStringInterface
 {
     /**
      * getQuerystringParamNameTester
-     * @return ValTesterInterface|null
+     * @return ValTesterInterface<string>|null
      */
     public function getQuerystringParamNameTester(): ?ValTesterInterface;
 
     /**
      * setQuerystringParamNameTester
-     * @param ValTesterInterface $querystringParamNameTester
+     * @param ValTesterInterface<string> $querystringParamNameTester
      */
     public function setQuerystringParamNameTester(ValTesterInterface $querystringParamNameTester): void;
 

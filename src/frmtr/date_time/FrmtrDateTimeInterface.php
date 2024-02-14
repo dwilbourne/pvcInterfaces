@@ -13,6 +13,7 @@ use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
  * Interface FrmtrDateTimeInterface
+ * @extends FrmtrInterface<DateTime>
  */
 interface FrmtrDateTimeInterface extends FrmtrInterface
 {
@@ -21,5 +22,5 @@ interface FrmtrDateTimeInterface extends FrmtrInterface
      * @param DateTime $value
      * @return string
      */
-    public function format(DateTime $value): string;
+    public function format($value): string;
 }

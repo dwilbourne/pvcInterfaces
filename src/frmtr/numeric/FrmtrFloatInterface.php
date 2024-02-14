@@ -12,6 +12,7 @@ use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
  * Interface FrmtrFloatInterface
+ * @extends FrmtrInterface<float>
  */
 interface FrmtrFloatInterface extends FrmtrInterface
 {
@@ -20,5 +21,5 @@ interface FrmtrFloatInterface extends FrmtrInterface
      * @param float $value
      * @return string
      */
-    public function format(float $value): string;
+    public function format($value): string;
 }

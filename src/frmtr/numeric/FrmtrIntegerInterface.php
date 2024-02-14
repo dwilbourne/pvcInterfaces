@@ -12,6 +12,7 @@ use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
  * Interface FrmtrIntegerInterface
+ * @extends FrmtrInterface<int>
  */
 interface FrmtrIntegerInterface extends FrmtrInterface
 {
@@ -20,5 +21,5 @@ interface FrmtrIntegerInterface extends FrmtrInterface
      * @param int $value
      * @return string
      */
-    public function format(int $value): string;
+    public function format($value): string;
 }
