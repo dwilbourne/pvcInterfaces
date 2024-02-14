@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\frmtr\msg;
 
 use pvc\interfaces\frmtr\FrmtrInterface;
-use pvc\interfaces\msg\DomainCatalogInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
@@ -19,15 +18,9 @@ use pvc\interfaces\msg\MsgInterface;
 interface FrmtrMsgInterface extends FrmtrInterface
 {
     /**
-     * setDomainCatalog
-     * @param DomainCatalogInterface $catalog
-     */
-    public function setDomainCatalog(DomainCatalogInterface $catalog): void;
-
-    /**
      * format
-     * @param MsgInterface $msg
+     * @param MsgInterface $value
      * @return string
      */
-    public function format($msg): string;
+    public function format($value): string;
 }
