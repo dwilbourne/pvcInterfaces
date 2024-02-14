@@ -16,7 +16,7 @@ interface LoaderFactoryInterface
     /**
      * makeLoader
      * @param string $loaderType
-     * @param array $parameters <string, string>
+     * @param array $parameters <string, string[]>
      * @return LoaderFactoryInterface
      */
     public function makeLoader(string $loaderType, array $parameters): LoaderFactoryInterface;
