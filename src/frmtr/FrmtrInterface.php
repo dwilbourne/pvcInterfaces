@@ -18,21 +18,19 @@ interface FrmtrInterface
 {
     /**
      * setFormat
-     * @param string $format
-     * @return bool
+     * @param string $pattern
      */
-    public function setFormat(string $format): void;
+    public function setPattern(string $pattern): void;
 
     /**
      * getFormat
      * @return string
      */
-    public function getFormat(): string;
+    public function getPattern(): string;
 
     /**
      * setLocale
      * @param LocaleInterface $locale
-     * @return bool
      */
     public function setLocale(LocaleInterface $locale): void;
 
