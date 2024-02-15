@@ -17,18 +17,6 @@ use pvc\interfaces\intl\LocaleInterface;
 interface FrmtrInterface
 {
     /**
-     * setFormat
-     * @param string $pattern
-     */
-    public function setPattern(string $pattern): void;
-
-    /**
-     * getFormat
-     * @return string
-     */
-    public function getPattern(): string;
-
-    /**
      * setLocale
      * @param LocaleInterface $locale
      */
