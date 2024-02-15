@@ -15,16 +15,17 @@ namespace pvc\interfaces\struct\range;
 interface RangeInterface
 {
     /**
-     * getMin
-     * @return DataType
+     * setRange
+     * @param DataType $min
+     * @param DataType $max
      */
-    public function getMin(): mixed;
+    public function setRange($min, $max): void;
 
     /**
-     * getMax
-     * @return DataType
+     * getRange
+     * @return array<DataType>
      */
-    public function getMax(): mixed;
+    public function getRange(): array;
 
     /**
      * isInRange
