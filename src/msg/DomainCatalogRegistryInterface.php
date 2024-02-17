@@ -16,14 +16,14 @@ interface DomainCatalogRegistryInterface
     /**
      * getDomainCatalogConfig
      * @param string $domain
-     * @return array<string, string[]>
+     * @return array<string, array<string>>
      */
     public function getDomainCatalogConfig(string $domain): array;
 
     /**
      * addDomainCatalogConfig
      * @param string $domain
-     * @param array<string, string> $parameters
+     * @param array<string, array<string>> $parameters
      * @param bool $overwrite
      * @return bool
      */
