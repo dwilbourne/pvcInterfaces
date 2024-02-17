@@ -18,7 +18,7 @@ interface DomainCatalogRegistryInterface
      * @param string $domain
      * @return array<string, string[]>
      */
-    public static function getDomainCatalogConfig(string $domain): array;
+    public function getDomainCatalogConfig(string $domain): array;
 
     /**
      * addDomainCatalogConfig
@@ -27,12 +27,12 @@ interface DomainCatalogRegistryInterface
      * @param bool $overwrite
      * @return bool
      */
-    public static function addDomainCatalogConfig(string $domain, array $parameters, bool $overwrite = false): bool;
+    public function addDomainCatalogConfig(string $domain, array $parameters, bool $overwrite = false): bool;
 
     /**
      * domainExists
      * @param string $domain
      * @return bool
      */
-    public static function domainExists(string $domain): bool;
+    public function domainExists(string $domain): bool;
 }

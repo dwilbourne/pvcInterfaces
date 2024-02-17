@@ -14,6 +14,18 @@ namespace pvc\interfaces\msg;
 interface LoaderFactoryInterface
 {
     /**
+     * setProjectRoot
+     * @param string $root
+     */
+    public function setProjectRoot(string $root): void;
+
+    /**
+     * getProjectRoot
+     * @return string
+     */
+    public function getProjectRoot(): string;
+
+    /**
      * makeLoader
      * @param string $loaderType
      * @param array $parameters <string, string[]>
