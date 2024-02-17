@@ -16,7 +16,7 @@ interface DomainCatalogRegistryInterface
     /**
      * getDomainCatalogConfig
      * @param string $domain
-     * @return array<string, array<string>>
+     * @return array<string, array<string, string>|string>
      */
     public function getDomainCatalogConfig(string $domain): array;
 
