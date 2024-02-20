@@ -28,7 +28,7 @@ interface LoaderFactoryInterface
     /**
      * makeLoader
      * @param string $loaderType
-     * @param array $parameters <string, string[]>
+     * @param array<string, array<string, string>> $parameters
      * @return DomainCatalogLoaderInterface
      */
     public function makeLoader(string $loaderType, array $parameters): DomainCatalogLoaderInterface;
