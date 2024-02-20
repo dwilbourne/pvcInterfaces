@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\html;
+namespace pvc\interfaces\html\tag;
 
 use pvc\interfaces\displayable\DisplayableInterface;
 
