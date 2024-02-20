@@ -8,12 +8,14 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
-use pvc\interfaces\displayable\DisplayableInterface;
-
 /**
  * Class TagInterface
  */
-interface TagInterface extends DisplayableInterface
+interface TagInterface extends TagVoidInterface
 {
-    public function display(): string;
+    /**
+     * addInnerHtml
+     * @param string|TagVoidInterface $innerHtml
+     */
+    public function addInnerHtml(string|TagVoidInterface $innerHtml): void;
 }
