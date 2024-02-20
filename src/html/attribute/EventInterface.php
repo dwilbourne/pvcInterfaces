@@ -18,7 +18,7 @@ interface EventInterface extends AttributeInterface
      * @param string $eventName
      * @return bool
      */
-    public function isValidEventName(string $eventName): bool;
+    public static function isValidEventName(string $eventName): bool;
 
     /**
      * setScript
