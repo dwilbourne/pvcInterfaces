@@ -35,7 +35,7 @@ interface AttributeInterface
 
     /**
      * getTester
-     * @return ValTesterInterface<string>
+     * @return ValTesterInterface<string>|null
      */
-    public function getTester(): ValTesterInterface;
+    public function getTester(): ?ValTesterInterface;
 }
