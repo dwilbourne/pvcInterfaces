@@ -30,9 +30,10 @@ interface TagVoidInterface extends DisplayableInterface
 
     /**
      * getAttribute
-     * @return AttributeInterface
+     * @param string $attributeName
+     * @return AttributeInterface|null
      */
-    public function getAttribute(): AttributeInterface;
+    public function getAttribute(string $attributeName): ?AttributeInterface;
 
     /**
      * setAttributes
@@ -54,9 +55,10 @@ interface TagVoidInterface extends DisplayableInterface
 
     /**
      * getEvent
-     * @return EventInterface
+     * @param string $eventName
+     * @return EventInterface|null
      */
-    public function getEvent(): EventInterface;
+    public function getEvent(string $eventName): ?EventInterface;
 
     /**
      * getEvents
