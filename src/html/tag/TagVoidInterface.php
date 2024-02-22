@@ -65,4 +65,10 @@ interface TagVoidInterface extends DisplayableInterface
      * @return array<EventInterface>
      */
     public function getEvents(): array;
+
+    /**
+     * generateOpeningTag
+     * @return string
+     */
+    public function generateOpeningTag(): string;
 }
