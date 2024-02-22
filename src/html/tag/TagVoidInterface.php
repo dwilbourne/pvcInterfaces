@@ -3,18 +3,18 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
-use pvc\interfaces\displayable\DisplayableInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 
 /**
  * Class TagVoidInterface
  */
-interface TagVoidInterface extends DisplayableInterface
+interface TagVoidInterface
 {
     /**
      * getTagName
