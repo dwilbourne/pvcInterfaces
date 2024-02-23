@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
-use pvc\interfaces\html\attribute\EventInterface;
-
 /**
  * Class TagVoidInterface
  */
@@ -49,20 +47,21 @@ interface TagVoidInterface
 
     /**
      * setEvent
-     * @param EventInterface $event
+     * @param string $eventName
+     * @param string $script
      */
-    public function setEvent(EventInterface $event): void;
+    public function setEvent(string $eventName, string $script): void;
 
     /**
      * getEvent
      * @param string $eventName
-     * @return EventInterface|null
+     * @return string|null
      */
-    public function getEvent(string $eventName): ?EventInterface;
+    public function getEvent(string $eventName): ?string;
 
     /**
      * getEvents
-     * @return array<EventInterface>
+     * @return array<string, string>
      */
     public function getEvents(): array;
 
