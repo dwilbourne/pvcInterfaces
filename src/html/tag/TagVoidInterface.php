@@ -25,9 +25,9 @@ interface TagVoidInterface
     /**
      * setAttribute
      * @param string $name
-     * @param string $value
+     * @param string|array<string>|bool $value
      */
-    public function setAttribute(string $name, string $value): void;
+    public function setAttribute(string $name, string|array|bool $value): void;
 
     /**
      * getAttribute
@@ -38,7 +38,7 @@ interface TagVoidInterface
 
     /**
      * setAttributes
-     * @param array<string, string> $attributes
+     * @param array<string, string|array<string>|bool> $attributes
      */
     public function setAttributes(array $attributes): void;
 
