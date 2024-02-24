@@ -12,6 +12,7 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class AttributeInterface
+ * @template DataType
  */
 interface AttributeInterface
 {
@@ -26,6 +27,18 @@ interface AttributeInterface
      * @return string
      */
     public function render(): string;
+
+    /**
+     * setValue
+     * @param DataType $value
+     */
+    public function setValue(mixed $value): void;
+
+    /**
+     * getValue
+     * @return DataType
+     */
+    public function getValue(): mixed;
 
     /**
      * setTester

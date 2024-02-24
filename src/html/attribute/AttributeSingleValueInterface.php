@@ -10,18 +10,8 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeSingleValueInterface
+ * @extends AttributeInterface<string>
  */
 interface AttributeSingleValueInterface extends AttributeInterface
 {
-    /**
-     * setValue
-     * @param string $value
-     */
-    public function setValue(string $value): void;
-
-    /**
-     * getValue
-     * @return string|null
-     */
-    public function getValue(): ?string;
 }

@@ -10,19 +10,8 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class EventInterface
+ * @extends AttributeInterface<string>
  */
 interface EventInterface extends AttributeInterface
 {
-    /**
-     * setScript
-     * @param string $script
-     * @return mixed
-     */
-    public function setScript(string $script);
-
-    /**
-     * getScript
-     * @return string|null
-     */
-    public function getScript(): ?string;
 }

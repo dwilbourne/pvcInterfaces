@@ -10,18 +10,8 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeMultiValueInterface
+ * @extends AttributeInterface<array<string>>
  */
 interface AttributeMultiValueInterface extends AttributeInterface
 {
-    /**
-     * setValues
-     * @param array<string> $values
-     */
-    public function setValues(array $values): void;
-
-    /**
-     * getValues
-     * @return array<string>
-     */
-    public function getValues(): array;
 }
