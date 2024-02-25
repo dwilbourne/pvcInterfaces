@@ -10,8 +10,7 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class EventInterface
- * @extends AttributeInterface<string>
  */
-interface EventInterface extends AttributeInterface
+interface EventInterface extends AttributeSingleValueInterface
 {
 }
