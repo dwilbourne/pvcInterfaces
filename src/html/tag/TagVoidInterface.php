@@ -27,11 +27,11 @@ interface TagVoidInterface
     public function setAttribute(string $name, string|array|bool $value): void;
 
     /**
-     * getAttribute
+     * getAttributeValue
      * @param string $attributeName
      * @return string|array<string>|bool|null
      */
-    public function getAttribute(string $attributeName): string|array|bool|null;
+    public function getAttributeValue(string $attributeName): string|array|bool|null;
 
     /**
      * setAttributes
@@ -53,11 +53,11 @@ interface TagVoidInterface
     public function setEvent(string $eventName, string $script): void;
 
     /**
-     * getEvent
+     * getEventScript
      * @param string $eventName
      * @return string|null
      */
-    public function getEvent(string $eventName): ?string;
+    public function getEventScript(string $eventName): ?string;
 
     /**
      * getEvents
