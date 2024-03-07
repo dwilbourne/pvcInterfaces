@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace pvc\interfaces\file;
 
 /**
- * Class FileSearchResultObjectInterface
+ * Class FileSearchResultInterface
  */
-interface FileSearchResultObjectInterface
+interface FileSearchResultInterface
 {
     /**
      * behaviorBeforeRecurse
