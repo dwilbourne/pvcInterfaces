@@ -14,6 +14,13 @@ namespace pvc\interfaces\file;
 interface FileSearchResultInterface
 {
     /**
+     * initialize
+     * this method is called at the beginning of every search and should restore this object to its initial state so
+     * that it can be used in successive searches
+     */
+    public function initialize(): void;
+
+    /**
      * behaviorBeforeRecurse
      * @param string $filePath
      */
