@@ -14,13 +14,13 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
- * Class TreeAbstractEventsInterface
+ * Class TreeAbstractEventHandlerInterface
  * @template ValueType
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  */
-interface TreeAbstractEventsInterface
+interface TreeAbstractEventHandlerInterface
 {
     /**
      * beforeDeleteNode

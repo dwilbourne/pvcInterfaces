@@ -12,12 +12,12 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
 /**
- * Class TreeOrderedEventsInterface
+ * Class TreeOrderedEventHandlerInterface
  * @template ValueType
  * @phpcs:ignore -- generics must all be on one line to be processed correctly
- * @extends TreeAbstractEventsInterface<ValueType, TreenodeOrderedInterface, TreeOrderedInterface,
+ * @extends TreeAbstractEventHandlerInterface<ValueType, TreenodeOrderedInterface, TreeOrderedInterface,
  *     CollectionOrderedInterface>
  */
-interface TreeOrderedEventsInterface extends TreeAbstractEventsInterface
+interface TreeOrderedEventHandlerInterface extends TreeAbstractEventHandlerInterface
 {
 }
