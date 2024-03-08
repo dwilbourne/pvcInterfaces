@@ -10,7 +10,6 @@ namespace pvc\interfaces\struct\tree\tree\events;
 
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
@@ -36,13 +35,13 @@ interface TreeAbstractEventHandlerInterface
 
     /**
      * beforeAddNode
-     * @param TreenodeValueObjectInterface<ValueType> $valueObject
+     * @param TreenodeAbstractInterface<ValueType, NodeType, TreeType, CollectionType> $node
      */
-    public function beforeAddNode(TreenodeValueObjectInterface $valueObject): void;
+    public function beforeAddNode(TreenodeAbstractInterface $node): void;
 
     /**
      * afterAddNode
-     * @param TreenodeValueObjectInterface<ValueType> $valueObject
+     * @param TreenodeAbstractInterface<ValueType, NodeType, TreeType, CollectionType> $node
      */
-    public function afterAddNode(TreenodeValueObjectInterface $valueObject): void;
+    public function afterAddNode(TreenodeAbstractInterface $node): void;
 }
