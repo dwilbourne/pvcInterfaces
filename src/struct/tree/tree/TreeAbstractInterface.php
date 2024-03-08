@@ -2,6 +2,7 @@
 
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
+ * @noinspection PhpCSValidationInspection
  */
 
 declare(strict_types=1);
@@ -23,6 +24,7 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
  *
  * @template ValueType
  * @template NodeType of TreenodeAbstractInterface
+ * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  */
 interface TreeAbstractInterface
@@ -67,7 +69,7 @@ interface TreeAbstractInterface
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int|null $nodeId
-     * @return NodeType|null
+     * @return TreenodeAbstractInterface<ValueType, NodeType, TreeType, CollectionType>|null
      */
     public function getNode(?int $nodeId): TreenodeAbstractInterface|null;
 
@@ -79,7 +81,7 @@ interface TreeAbstractInterface
 
     /**
      * rootTest
-     * @param NodeType|TreenodeValueObjectInterface<ValueType> $nodeItem
+     * @param TreenodeAbstractInterface<ValueType, NodeType, TreeType, CollectionType>|TreenodeValueObjectInterface<ValueType> $nodeItem
      * @return bool
      */
     public function rootTest(TreenodeAbstractInterface|TreenodeValueObjectInterface $nodeItem): bool;

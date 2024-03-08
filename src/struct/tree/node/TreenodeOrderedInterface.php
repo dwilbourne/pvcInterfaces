@@ -16,6 +16,7 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  * are kept in a specific order
  *
  * @template ValueType
+ * @phpcs:ignore -- generics must all be on one line to be processed correctly
  * @extends TreenodeAbstractInterface<ValueType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
  */
 interface TreenodeOrderedInterface extends TreenodeAbstractInterface
