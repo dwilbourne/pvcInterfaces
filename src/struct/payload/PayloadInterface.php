@@ -40,5 +40,5 @@ interface PayloadInterface
      * getValue
      * @return ValueType|null
      */
-    public function getValue();
+    public function getValue(): mixed;
 }
