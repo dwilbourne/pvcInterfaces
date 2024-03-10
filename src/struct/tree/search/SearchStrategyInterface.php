@@ -3,17 +3,20 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
+use Iterator;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
 
 /**
  * Class StrategyInterface
  * @template NodeType of TreenodeAbstractInterface
+ * @extends Iterator<int, NodeType>
  */
-interface SearchStrategyInterface
+interface SearchStrategyInterface extends Iterator
 {
     /**
      * setStartNode
@@ -26,20 +29,6 @@ interface SearchStrategyInterface
      * @return NodeType|null
      */
     public function getStartNode(): TreenodeAbstractInterface|null;
-
-    /**
-     * resetSearch
-     *
-     * resets the "current node" to the original node from which the search started
-     */
-    public function resetSearch(): void;
-
-    /**
-     * getNextNode
-     * gets nodes one at a time
-     * @return NodeType|null
-     */
-    public function getNextNode(): TreenodeAbstractInterface|null;
 
     /**
      * getNodes
