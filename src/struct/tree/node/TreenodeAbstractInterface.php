@@ -46,7 +46,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @see CollectionUnorderedInterface
  * @see CollectionOrderedInterface
  *
- * @template ValueType
+ * @template ValueType of PayloadInterface
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface

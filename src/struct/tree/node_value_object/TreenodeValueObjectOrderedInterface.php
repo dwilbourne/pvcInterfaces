@@ -7,11 +7,12 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node_value_object;
 
+use pvc\interfaces\struct\payload\PayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 
 /**
  * Class TreenodeValueObjectOrderedInterface
- * @template ValueType
+ * @template ValueType of PayloadInterface
  * @extends TreenodeValueObjectInterface<ValueType>
  */
 interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterface

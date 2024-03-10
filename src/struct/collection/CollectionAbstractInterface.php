@@ -37,7 +37,7 @@ interface CollectionAbstractInterface extends Iterator, Countable
 
     /**
      * @function getElements returns an array of all the elements in the list, keys are preserved.
-     * @return array<non-negative_int, ElementType>
+     * @return array<non-negative-int, ElementType>
      */
     public function getElements(): array;
 

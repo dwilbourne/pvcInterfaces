@@ -12,6 +12,8 @@ use pvc\interfaces\validator\ValidatorInterface;
 
 /**
  * Class PayloadInterface
+ * All data structures should extend PayloadInterface so that the methods for accessing the data within the structure
+ * remain consistent across all types of data structures
  * @template ValueType
  */
 interface PayloadInterface
