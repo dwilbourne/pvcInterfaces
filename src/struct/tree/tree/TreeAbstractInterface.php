@@ -93,9 +93,9 @@ interface TreeAbstractInterface
     public function isEmpty(): bool;
 
     /**
-     * makeEmpty
+     * initialize
      */
-    public function makeEmpty(): void;
+    public function initialize(): void;
 
     /**
      * @function nodeCount
