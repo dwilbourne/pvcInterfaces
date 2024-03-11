@@ -32,11 +32,11 @@ interface PayloadInterface
      * setValue
      * @param ValueType $value
      */
-    public function setValue(mixed $value): void;
+    public function setValue($value): void;
 
     /**
      * getValue
      * @return ValueType|null
      */
-    public function getValue(): mixed;
+    public function getValue();
 }
