@@ -8,11 +8,11 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node_value_object;
 
-use pvc\interfaces\struct\payload\PayloadInterface;
+use pvc\interfaces\struct\payload\ValidatorPayloadInterface;
 
 /**
  * Class TreenodeValueObjectDataSrcInterface
- * @template ValueType of PayloadInterface
+ * @template ValueType of ValidatorPayloadInterface
  */
 interface TreenodeValueObjectDataSrcInterface
 {

@@ -8,27 +8,25 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\payload;
 
-use pvc\interfaces\validator\ValidatorInterface;
-
 /**
  * Class PayloadInterface
  * All data structures should extend PayloadInterface so that the methods for accessing the data within the structure
  * remain consistent across all types of data structures
- * @template ValueType
+ * @template ValueType of ValidatorPayloadInterface
  */
 interface PayloadInterface
 {
     /**
      * setValueValidator
-     * @param ValidatorInterface<ValueType> $validator
+     * @param ValidatorPayloadInterface<ValueType> $validator
      */
-    public function setValueValidator(ValidatorInterface $validator): void;
+    public function setValueValidator(ValidatorPayloadInterface $validator): void;
 
     /**
      * getValueValidator
-     * @return ValidatorInterface<ValueType>|null
+     * @return ValidatorPayloadInterface<ValueType>|null
      */
-    public function getValueValidator(): ?ValidatorInterface;
+    public function getValueValidator(): ?ValidatorPayloadInterface;
 
     /**
      * setValue
