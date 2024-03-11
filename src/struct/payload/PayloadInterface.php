@@ -30,7 +30,7 @@ interface PayloadInterface
 
     /**
      * setValue
-     * @param ValueType $value
+     * @param ValueType|null $value
      */
     public function setValue($value): void;
 
