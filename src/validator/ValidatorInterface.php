@@ -18,7 +18,7 @@ interface ValidatorInterface extends HasMsgInterface
 {
     /**
      * validate
-     * @param DataType $data
+     * @param DataType|null $data
      * @return bool
      */
     public function validate($data): bool;
