@@ -26,9 +26,9 @@ interface NodeTypeFactoryInterface
     /**
      * makeNodeType
      * @param TreenodeValueObjectInterface<ValueType> $valueObject
-     * @param TreeType $tree
-     * @param CollectionType $collectionAbstract
-     * @return NodeType
+     * @param TreeAbstractInterface<ValueType, NodeType, TreeType, CollectionType> $tree
+     * @param CollectionAbstractInterface<ValueType, CollectionType> $collectionAbstract
+     * @return TreenodeAbstractInterface<ValueType, NodeType, TreeType, CollectionType>
      */
     public function makeNodeType(
         TreenodeValueObjectInterface $valueObject,
