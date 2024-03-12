@@ -7,11 +7,11 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
-use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\node\TreenodeAbstractInterfaceHasHas;
 
 /**
  * Class NodeTravelerInterface
- * @template NodeType of TreenodeAbstractInterface
+ * @template NodeType of TreenodeAbstractInterfaceHasHas
  * @extends SearchStrategyInterface<NodeType>
  */
 interface NodeTravelerInterface extends SearchStrategyInterface

@@ -9,11 +9,11 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\search;
 
 use Iterator;
-use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\node\TreenodeAbstractInterfaceHasHas;
 
 /**
  * Class StrategyInterface
- * @template NodeType of TreenodeAbstractInterface
+ * @template NodeType of TreenodeAbstractInterfaceHasHas
  * @extends Iterator<int, NodeType>
  */
 interface SearchStrategyInterface extends Iterator
@@ -22,13 +22,13 @@ interface SearchStrategyInterface extends Iterator
      * setStartNode
      * @param NodeType $node
      */
-    public function setStartNode(TreenodeAbstractInterface $node): void;
+    public function setStartNode(TreenodeAbstractInterfaceHasHas $node): void;
 
     /**
      * getStartNode
      * @return NodeType|null
      */
-    public function getStartNode(): TreenodeAbstractInterface|null;
+    public function getStartNode(): TreenodeAbstractInterfaceHasHas|null;
 
     /**
      * getNodes

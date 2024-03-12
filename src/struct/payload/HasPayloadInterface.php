@@ -9,22 +9,22 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\payload;
 
 /**
- * Class PayloadInterface
- * All data structures should extend PayloadInterface so that the methods for accessing the data within the structure
+ * Class HasPayloadInterface
+ * All data structures should extend HasPayloadInterface so that the methods for accessing the data within the structure
  * remain consistent across all types of data structures
  * @template ValueType
  */
-interface PayloadInterface
+interface HasPayloadInterface
 {
     /**
      * setValue
      * @param ValueType|null $value
      */
-    public function setValue($value): void;
+    public function setPayload($value): void;
 
     /**
      * getValue
      * @return ValueType|null
      */
-    public function getValue();
+    public function getPayload();
 }

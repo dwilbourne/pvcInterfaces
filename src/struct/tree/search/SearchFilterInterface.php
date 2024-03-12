@@ -7,11 +7,11 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
-use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\node\TreenodeAbstractInterfaceHasHas;
 
 /**
  * Class SearchFilterInterface
- * @template NodeType of TreenodeAbstractInterface
+ * @template NodeType of TreenodeAbstractInterfaceHasHas
  */
 interface SearchFilterInterface
 {
@@ -20,5 +20,5 @@ interface SearchFilterInterface
      * @param NodeType $node
      * @return bool
      */
-    public function testNode(TreenodeAbstractInterface $node): bool;
+    public function testNode(TreenodeAbstractInterfaceHasHas $node): bool;
 }

@@ -8,15 +8,15 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node_value_object;
 
-use pvc\interfaces\struct\payload\PayloadInterface;
+use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
 
 /**
  * Class TreenodeValueObjectUnorderedInterface
- * @template ValueType of PayloadInterface
- * @extends TreenodeValueObjectInterface<ValueType>
+ * @template ValueType of HasPayloadInterface
+ * @extends TreenodeValueObjectInterfaceHas<ValueType>
  */
-interface TreenodeValueObjectUnorderedInterface extends TreenodeValueObjectInterface
+interface TreenodeValueObjectUnorderedInterface extends TreenodeValueObjectInterfaceHas
 {
     /**
      * hydrateFromNode
