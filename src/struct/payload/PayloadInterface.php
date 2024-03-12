@@ -17,18 +17,6 @@ namespace pvc\interfaces\struct\payload;
 interface PayloadInterface
 {
     /**
-     * setValueValidator
-     * @param ValidatorPayloadInterface<ValueType> $validator
-     */
-    public function setValueValidator(ValidatorPayloadInterface $validator): void;
-
-    /**
-     * getValueValidator
-     * @return ValidatorPayloadInterface<ValueType>|null
-     */
-    public function getValueValidator(): ?ValidatorPayloadInterface;
-
-    /**
      * setValue
      * @param ValueType|null $value
      */
