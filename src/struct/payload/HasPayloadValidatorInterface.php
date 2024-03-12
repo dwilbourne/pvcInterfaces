@@ -10,19 +10,19 @@ namespace pvc\interfaces\struct\payload;
 
 /**
  * Class HasPayloadValidatorInterface
- * @template ValueType of HasPayloadInterface
+ * @template PayloadType of HasPayloadInterface
  */
 interface HasPayloadValidatorInterface
 {
     /**
      * setValueValidator
-     * @param ValidatorPayloadInterface<ValueType> $validator
+     * @param ValidatorPayloadInterface<PayloadType> $validator
      */
     public function setPayloadValidator(ValidatorPayloadInterface $validator): void;
 
     /**
      * getValueValidator
-     * @return ValidatorPayloadInterface<ValueType>|null
+     * @return ValidatorPayloadInterface<PayloadType>|null
      */
     public function getPayloadValidator(): ?ValidatorPayloadInterface;
 }

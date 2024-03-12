@@ -12,19 +12,19 @@ namespace pvc\interfaces\struct\payload;
  * Class HasPayloadInterface
  * All data structures should extend HasPayloadInterface so that the methods for accessing the data within the structure
  * remain consistent across all types of data structures
- * @template ValueType
+ * @template PayloadType
  */
 interface HasPayloadInterface
 {
     /**
      * setValue
-     * @param ValueType|null $value
+     * @param PayloadType|null $value
      */
     public function setPayload($value): void;
 
     /**
      * getValue
-     * @return ValueType|null
+     * @return PayloadType|null
      */
     public function getPayload();
 }

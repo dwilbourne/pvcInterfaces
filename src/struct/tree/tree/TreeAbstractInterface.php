@@ -23,7 +23,7 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterfaceHas
  * A tree can be empty (e.g. it has no nodes).  If it does have nodes, then there must be a single root node.  All
  * nodes, including the root node, can have zero or more child nodes.
  *
- * @template ValueType of HasPayloadInterface
+ * @template PayloadType of HasPayloadInterface
  * @template NodeType of TreenodeAbstractInterfaceHasHas
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
@@ -50,7 +50,7 @@ interface TreeAbstractInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeValueObjectInterfaceHas<ValueType> $valueObject
+     * @param TreenodeValueObjectInterfaceHas<PayloadType> $valueObject
      */
     public function addNode(TreenodeValueObjectInterfaceHas $valueObject): void;
 
@@ -70,7 +70,7 @@ interface TreeAbstractInterface
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int|null $nodeId
-     * @return TreenodeAbstractInterfaceHasHas<ValueType, NodeType, TreeType, CollectionType>|null
+     * @return TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType>|null
      */
     public function getNode(?int $nodeId): TreenodeAbstractInterfaceHasHas|null;
 
@@ -82,7 +82,7 @@ interface TreeAbstractInterface
 
     /**
      * rootTest
-     * @param TreenodeAbstractInterfaceHasHas<ValueType, NodeType, TreeType, CollectionType>|TreenodeValueObjectInterfaceHas<ValueType> $nodeItem
+     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType>|TreenodeValueObjectInterfaceHas<PayloadType> $nodeItem
      * @return bool
      */
     public function rootTest(TreenodeAbstractInterfaceHasHas|TreenodeValueObjectInterfaceHas $nodeItem): bool;

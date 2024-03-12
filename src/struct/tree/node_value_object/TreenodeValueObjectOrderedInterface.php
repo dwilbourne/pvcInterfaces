@@ -13,8 +13,8 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 
 /**
  * Class TreenodeValueObjectOrderedInterface
- * @template ValueType of HasPayloadInterface
- * @extends TreenodeValueObjectInterfaceHas<ValueType>
+ * @template PayloadType of HasPayloadInterface
+ * @extends TreenodeValueObjectInterfaceHas<PayloadType>
  */
 interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfaceHas
 {
@@ -32,7 +32,7 @@ interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfa
 
     /**
      * dehydrateNode
-     * @param TreenodeOrderedInterface<ValueType> $node
+     * @param TreenodeOrderedInterface<PayloadType> $node
      * @return void
      */
     public function hydrateFromNode(TreenodeOrderedInterface $node): void;
@@ -43,7 +43,7 @@ interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfa
      *     'nodeId': non-negative-int,
      *     'parentId': non-negative-int|null,
      *     'treeId': non-negative-int,
-     *     'value': ValueType,
+     *     'value': PayloadType,
      *     'index': non-negative-int
      * } $nodeData
      */
@@ -55,7 +55,7 @@ interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfa
      *        0: non-negative-int,
      *        1: non-negative-int|null,
      *        2: non-negative-int,
-     *        3: ValueType,
+     *        3: PayloadType,
      *        4: non-negative-int,
      *    } $nodeData
      */

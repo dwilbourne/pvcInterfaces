@@ -16,9 +16,9 @@ use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
 /**
  * Class TreeUnorderedEventHandlerInterface
  *
- * @template ValueType of HasPayloadInterface
+ * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore -- generics must all be on one line to be processed correctly
- * @extends TreeAbstractEventHandlerInterface<ValueType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface>
+ * @extends TreeAbstractEventHandlerInterface<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface>
  */
 interface TreeUnorderedEventHandlerInterface extends TreeAbstractEventHandlerInterface
 {

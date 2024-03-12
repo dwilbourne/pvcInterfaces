@@ -47,12 +47,12 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @see CollectionUnorderedInterface
  * @see CollectionOrderedInterface
  *
- * @template ValueType of HasPayloadInterface
+ * @template PayloadType of HasPayloadInterface
  * @template NodeType of TreenodeAbstractInterfaceHasHas
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @extends HasPayloadInterface<ValueType>
- * @extends HasPayloadValidatorInterface<ValueType>
+ * @extends HasPayloadInterface<PayloadType>
+ * @extends HasPayloadValidatorInterface<PayloadType>
  */
 interface TreenodeAbstractInterfaceHasHas extends HasPayloadInterface, HasPayloadValidatorInterface
 {

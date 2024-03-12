@@ -15,8 +15,8 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 /**
  * Interface TreeOrderedInterface
  *
- * @template ValueType of HasPayloadInterface
- * @extends TreeAbstractInterface<ValueType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
+ * @template PayloadType of HasPayloadInterface
+ * @extends TreeAbstractInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
  */
 interface TreeOrderedInterface extends TreeAbstractInterface
 {

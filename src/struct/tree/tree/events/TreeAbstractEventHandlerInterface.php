@@ -15,7 +15,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
  * Class TreeAbstractEventHandlerInterface
- * @template ValueType of HasPayloadInterface
+ * @template PayloadType of HasPayloadInterface
  * @template NodeType of TreenodeAbstractInterfaceHasHas
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
@@ -24,25 +24,25 @@ interface TreeAbstractEventHandlerInterface
 {
     /**
      * beforeDeleteNode
-     * @param TreenodeAbstractInterfaceHasHas<ValueType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType> $node
      */
     public function beforeDeleteNode(TreenodeAbstractInterfaceHasHas $node): void;
 
     /**
      * afterDeleteNode
-     * @param TreenodeAbstractInterfaceHasHas<ValueType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType> $node
      */
     public function afterDeleteNode(TreenodeAbstractInterfaceHasHas $node): void;
 
     /**
      * beforeAddNode
-     * @param TreenodeAbstractInterfaceHasHas<ValueType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType> $node
      */
     public function beforeAddNode(TreenodeAbstractInterfaceHasHas $node): void;
 
     /**
      * afterAddNode
-     * @param TreenodeAbstractInterfaceHasHas<ValueType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType> $node
      */
     public function afterAddNode(TreenodeAbstractInterfaceHasHas $node): void;
 }

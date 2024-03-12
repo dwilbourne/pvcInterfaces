@@ -12,8 +12,8 @@ use pvc\interfaces\validator\ValidatorInterface;
 
 /**
  * Class ValidatorPayloadInterface
- * @template ValueType of HasPayloadInterface
- * @extends ValidatorInterface<ValueType>
+ * @template PayloadType of HasPayloadInterface
+ * @extends ValidatorInterface<PayloadType>
  */
 interface ValidatorPayloadInterface extends ValidatorInterface
 {

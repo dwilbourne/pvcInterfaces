@@ -12,8 +12,8 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
  * Class TreenodeValueObjectInterfaceHas
- * @template ValueType of HasPayloadInterface
- * @extends HasPayloadInterface<ValueType>
+ * @template PayloadType of HasPayloadInterface
+ * @extends HasPayloadInterface<PayloadType>
  */
 interface TreenodeValueObjectInterfaceHas extends HasPayloadInterface
 {

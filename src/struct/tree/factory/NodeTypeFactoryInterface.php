@@ -16,7 +16,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
  * Class NodeTypeFactoryInterface
- * @template ValueType of HasPayloadInterface
+ * @template PayloadType of HasPayloadInterface
  * @template NodeType of TreenodeAbstractInterfaceHasHas
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
@@ -25,10 +25,10 @@ interface NodeTypeFactoryInterface
 {
     /**
      * makeNodeType
-     * @param TreenodeValueObjectInterfaceHas<ValueType> $valueObject
-     * @param TreeAbstractInterface<ValueType, NodeType, TreeType, CollectionType> $tree
-     * @param CollectionAbstractInterface<ValueType, CollectionType> $collectionAbstract
-     * @return TreenodeAbstractInterfaceHasHas<ValueType, NodeType, TreeType, CollectionType>
+     * @param TreenodeValueObjectInterfaceHas<PayloadType> $valueObject
+     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $tree
+     * @param CollectionAbstractInterface<PayloadType, CollectionType> $collectionAbstract
+     * @return TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType>
      */
     public function makeNodeType(
         TreenodeValueObjectInterfaceHas $valueObject,

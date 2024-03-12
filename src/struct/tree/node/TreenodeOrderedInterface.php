@@ -16,9 +16,9 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  * Interface TreenodeOrderedInterface defines the operations for "ordered" tree nodes, e.g. the children of each node
  * are kept in a specific order
  *
- * @template ValueType of HasPayloadInterface
+ * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore -- generics must all be on one line to be processed correctly
- * @extends TreenodeAbstractInterfaceHasHas<ValueType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
+ * @extends TreenodeAbstractInterfaceHasHas<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
  */
 interface TreenodeOrderedInterface extends TreenodeAbstractInterfaceHasHas
 {
