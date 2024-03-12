@@ -18,8 +18,8 @@ use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
  *
  * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore -- generics must all be on one line to be processed correctly
- * @extends TreenodeAbstractInterfaceHasHas<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface>
+ * @extends TreenodeAbstractInterface<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface>
  */
-interface TreenodeUnorderedInterface extends TreenodeAbstractInterfaceHasHas
+interface TreenodeUnorderedInterface extends TreenodeAbstractInterface
 {
 }

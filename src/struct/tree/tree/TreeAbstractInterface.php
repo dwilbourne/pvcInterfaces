@@ -11,8 +11,8 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\node\TreenodeAbstractInterfaceHasHas;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterfaceHas;
+use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 
 /**
  * Interface TreeAbstractInterface defines the operations common to all trees, both ordered and unordered.
@@ -24,7 +24,7 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterfaceHas
  * nodes, including the root node, can have zero or more child nodes.
  *
  * @template PayloadType of HasPayloadInterface
- * @template NodeType of TreenodeAbstractInterfaceHasHas
+ * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  */
@@ -50,9 +50,9 @@ interface TreeAbstractInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeValueObjectInterfaceHas<PayloadType> $valueObject
+     * @param TreenodeValueObjectInterface<PayloadType> $valueObject
      */
-    public function addNode(TreenodeValueObjectInterfaceHas $valueObject): void;
+    public function addNode(TreenodeValueObjectInterface $valueObject): void;
 
     /**
      * @function deleteNode
@@ -70,22 +70,22 @@ interface TreeAbstractInterface
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int|null $nodeId
-     * @return TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType>|null
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
      */
-    public function getNode(?int $nodeId): TreenodeAbstractInterfaceHasHas|null;
+    public function getNode(?int $nodeId): TreenodeAbstractInterface|null;
 
     /**
      * @function getRoot
      * @return   NodeType|null
      */
-    public function getRoot(): ?TreenodeAbstractInterfaceHasHas;
+    public function getRoot(): ?TreenodeAbstractInterface;
 
     /**
      * rootTest
-     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType>|TreenodeValueObjectInterfaceHas<PayloadType> $nodeItem
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|TreenodeValueObjectInterface<PayloadType> $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeAbstractInterfaceHasHas|TreenodeValueObjectInterfaceHas $nodeItem): bool;
+    public function rootTest(TreenodeAbstractInterface|TreenodeValueObjectInterface $nodeItem): bool;
 
     /**
      * @function isEmpty

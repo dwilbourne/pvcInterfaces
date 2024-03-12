@@ -14,9 +14,9 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 /**
  * Class TreenodeValueObjectOrderedInterface
  * @template PayloadType of HasPayloadInterface
- * @extends TreenodeValueObjectInterfaceHas<PayloadType>
+ * @extends TreenodeValueObjectInterface<PayloadType>
  */
-interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfaceHas
+interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterface
 {
     /**
      * getIndex retrieves the ordinal position

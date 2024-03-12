@@ -16,7 +16,7 @@ use pvc\interfaces\struct\payload\HasPayloadValidatorInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
- * Interface TreenodeAbstractInterfaceHasHas defines the operations for a generic tree node.
+ * Interface TreenodeAbstractInterface defines the operations for a generic tree node.
  *
  * This interface defines the operations common to all tree nodes.  Here are some of the design points.  The nodeid
  * property is immutable - the only way to set the nodeid is at construction.  The same applies to the tree property.
@@ -48,13 +48,13 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @see CollectionOrderedInterface
  *
  * @template PayloadType of HasPayloadInterface
- * @template NodeType of TreenodeAbstractInterfaceHasHas
+ * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  * @extends HasPayloadInterface<PayloadType>
  * @extends HasPayloadValidatorInterface<PayloadType>
  */
-interface TreenodeAbstractInterfaceHasHas extends HasPayloadInterface, HasPayloadValidatorInterface
+interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValidatorInterface
 {
     /**
      * getNodeId
@@ -72,7 +72,7 @@ interface TreenodeAbstractInterfaceHasHas extends HasPayloadInterface, HasPayloa
      * @function getParent
      * @return NodeType
      */
-    public function getParent(): ?TreenodeAbstractInterfaceHasHas;
+    public function getParent(): ?TreenodeAbstractInterface;
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
@@ -113,7 +113,7 @@ interface TreenodeAbstractInterfaceHasHas extends HasPayloadInterface, HasPayloa
      * @param non-negative-int $nodeid
      * @return NodeType|null
      */
-    public function getChild(int $nodeid): ?TreenodeAbstractInterfaceHasHas;
+    public function getChild(int $nodeid): ?TreenodeAbstractInterface;
 
     /**
      * @function getChildren
@@ -132,14 +132,14 @@ interface TreenodeAbstractInterfaceHasHas extends HasPayloadInterface, HasPayloa
      * @param NodeType $node
      * @return bool
      */
-    public function isDescendantOf(TreenodeAbstractInterfaceHasHas $node): bool;
+    public function isDescendantOf(TreenodeAbstractInterface $node): bool;
 
     /**
      * @function isAncestorOf
      * @param NodeType $node
      * @return bool
      */
-    public function isAncestorOf(TreenodeAbstractInterfaceHasHas $node): bool;
+    public function isAncestorOf(TreenodeAbstractInterface $node): bool;
 
     /**
      * getVisitCount

@@ -18,9 +18,9 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  *
  * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore -- generics must all be on one line to be processed correctly
- * @extends TreenodeAbstractInterfaceHasHas<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
+ * @extends TreenodeAbstractInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
  */
-interface TreenodeOrderedInterface extends TreenodeAbstractInterfaceHasHas
+interface TreenodeOrderedInterface extends TreenodeAbstractInterface
 {
     /**
      * @function setIndex sets the ordinal position of this node in the ordered list of siblings.

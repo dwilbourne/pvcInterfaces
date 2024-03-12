@@ -10,13 +10,13 @@ namespace pvc\interfaces\struct\tree\tree\events;
 
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\node\TreenodeAbstractInterfaceHasHas;
+use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
  * Class TreeAbstractEventHandlerInterface
  * @template PayloadType of HasPayloadInterface
- * @template NodeType of TreenodeAbstractInterfaceHasHas
+ * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  */
@@ -24,25 +24,25 @@ interface TreeAbstractEventHandlerInterface
 {
     /**
      * beforeDeleteNode
-     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $node
      */
-    public function beforeDeleteNode(TreenodeAbstractInterfaceHasHas $node): void;
+    public function beforeDeleteNode(TreenodeAbstractInterface $node): void;
 
     /**
      * afterDeleteNode
-     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $node
      */
-    public function afterDeleteNode(TreenodeAbstractInterfaceHasHas $node): void;
+    public function afterDeleteNode(TreenodeAbstractInterface $node): void;
 
     /**
      * beforeAddNode
-     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $node
      */
-    public function beforeAddNode(TreenodeAbstractInterfaceHasHas $node): void;
+    public function beforeAddNode(TreenodeAbstractInterface $node): void;
 
     /**
      * afterAddNode
-     * @param TreenodeAbstractInterfaceHasHas<PayloadType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $node
      */
-    public function afterAddNode(TreenodeAbstractInterfaceHasHas $node): void;
+    public function afterAddNode(TreenodeAbstractInterface $node): void;
 }

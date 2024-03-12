@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\factory;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterfaceHas;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 
 /**
  * Class TreenodeValueObjectFactoryInterface
@@ -19,7 +19,7 @@ interface TreenodeValueObjectFactoryInterface
 {
     /**
      * makeValueObject
-     * @return TreenodeValueObjectInterfaceHas<PayloadType>
+     * @return TreenodeValueObjectInterface<PayloadType>
      */
-    public function makeValueObject(): TreenodeValueObjectInterfaceHas;
+    public function makeValueObject(): TreenodeValueObjectInterface;
 }

@@ -14,9 +14,9 @@ use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
 /**
  * Class TreenodeValueObjectUnorderedInterface
  * @template PayloadType of HasPayloadInterface
- * @extends TreenodeValueObjectInterfaceHas<PayloadType>
+ * @extends TreenodeValueObjectInterface<PayloadType>
  */
-interface TreenodeValueObjectUnorderedInterface extends TreenodeValueObjectInterfaceHas
+interface TreenodeValueObjectUnorderedInterface extends TreenodeValueObjectInterface
 {
     /**
      * hydrateFromNode

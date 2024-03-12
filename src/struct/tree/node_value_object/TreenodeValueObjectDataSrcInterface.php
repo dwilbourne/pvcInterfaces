@@ -18,7 +18,7 @@ interface TreenodeValueObjectDataSrcInterface
 {
     /**
      * getValueObjects
-     * @return array<TreenodeValueObjectInterfaceHas<PayloadType>>
+     * @return array<TreenodeValueObjectInterface<PayloadType>>
      */
     public function getValueObjects(): array;
 }
