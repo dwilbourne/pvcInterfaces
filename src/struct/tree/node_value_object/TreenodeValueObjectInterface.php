@@ -54,12 +54,6 @@ interface TreenodeValueObjectInterface extends PayloadInterface
     public function setTreeId(int $treeId): void;
 
     /**
-     * getNodeValue
-     * @return ValueType
-     */
-    public function getValue(): mixed;
-
-    /**
      * hydrateFromNumericArray
      *
      * this method is in the abstract class and the number of elements in the array is left indeterminate, meaning
