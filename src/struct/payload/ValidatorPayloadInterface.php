@@ -12,7 +12,7 @@ use pvc\interfaces\validator\ValidatorInterface;
 
 /**
  * Class ValidatorPayloadInterface
- * @template ValueType
+ * @template ValueType of PayloadInterface
  * @extends ValidatorInterface<ValueType>
  */
 interface ValidatorPayloadInterface extends ValidatorInterface

@@ -10,7 +10,7 @@ namespace pvc\interfaces\struct\payload;
 
 /**
  * Class PayloadValidatorInterface
- * @template ValueType of ValidatorPayloadInterface
+ * @template ValueType of PayloadInterface
  */
 interface PayloadValidatorInterface
 {

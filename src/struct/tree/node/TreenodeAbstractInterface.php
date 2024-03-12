@@ -12,7 +12,8 @@ use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\PayloadInterface;
-use pvc\interfaces\struct\payload\ValidatorPayloadInterface;
+use pvc\interfaces\struct\payload\PayloadInterface;
+use pvc\interfaces\struct\payload\PayloadValidatorInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
@@ -47,13 +48,13 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @see CollectionUnorderedInterface
  * @see CollectionOrderedInterface
  *
- * @template ValueType of ValidatorPayloadInterface
+ * @template ValueType of PayloadInterface
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  * @extends PayloadInterface<ValueType>
  */
-interface TreenodeAbstractInterface extends PayloadInterface
+interface TreenodeAbstractInterface extends PayloadInterface, PayloadValidatorInterface
 {
     /**
      * getNodeId

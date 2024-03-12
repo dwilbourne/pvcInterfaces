@@ -9,13 +9,13 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree\events;
 
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
-use pvc\interfaces\struct\payload\ValidatorPayloadInterface;
+use pvc\interfaces\struct\payload\PayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
  * Class TreeAbstractEventHandlerInterface
- * @template ValueType of ValidatorPayloadInterface
+ * @template ValueType of PayloadInterface
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
