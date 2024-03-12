@@ -38,7 +38,7 @@ interface TreenodeFactoryInterface
 
     /**
      * makeCollection
-     * @return CollectionAbstractInterface<CollectionType<NodeType>>
+     * @return CollectionAbstractInterface<ValueType, NodeType>
      */
     public function makeCollection(): CollectionAbstractInterface;
 }
