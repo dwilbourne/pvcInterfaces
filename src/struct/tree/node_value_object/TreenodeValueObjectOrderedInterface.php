@@ -25,6 +25,12 @@ interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfa
     public function getIndex(): int;
 
     /**
+     * setIndex
+     * @param int $index
+     */
+    public function setIndex(int $index): void;
+
+    /**
      * dehydrateNode
      * @param TreenodeOrderedInterface<ValueType> $node
      * @return void
