@@ -43,7 +43,7 @@ interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfa
      *     'nodeId': non-negative-int,
      *     'parentId': non-negative-int|null,
      *     'treeId': non-negative-int,
-     *     'value': PayloadType,
+     *     'payload': PayloadType,
      *     'index': non-negative-int
      * } $nodeData
      */
