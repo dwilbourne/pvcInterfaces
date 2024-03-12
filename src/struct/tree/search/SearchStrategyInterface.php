@@ -9,31 +9,37 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\search;
 
 use Iterator;
+use pvc\interfaces\struct\collection\CollectionAbstractInterface;
+use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
  * Class StrategyInterface
+ * @template PayloadType of HasPayloadInterface
  * @template NodeType of TreenodeAbstractInterface
- * @extends Iterator<int, NodeType>
+ * @template TreeType of TreeAbstractInterface
+ * @template CollectionType of CollectionAbstractInterface
+ * @extends Iterator<int, TreenodeAbstractInterface>
  */
 interface SearchStrategyInterface extends Iterator
 {
     /**
      * setStartNode
-     * @param NodeType $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $node
      */
     public function setStartNode(TreenodeAbstractInterface $node): void;
 
     /**
      * getStartNode
-     * @return NodeType|null
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
      */
     public function getStartNode(): TreenodeAbstractInterface|null;
 
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<NodeType>
+     * @return array<TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>>
      */
     public function getNodes(): array;
 }
