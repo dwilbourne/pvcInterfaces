@@ -30,7 +30,7 @@ interface TreenodeValueObjectUnorderedInterface extends TreenodeValueObjectInter
      *     'nodeId': non-negative-int,
      *     'parentId': non-negative-int|null,
      *     'treeId': non-negative-int,
-     *     'value': PayloadType
+     *     'payload': PayloadType
      * } $nodeData
      */
     public function hydrateFromAssociativeArray(array $nodeData): void;
