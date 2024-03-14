@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\collection;
 
 use Countable;
 use Iterator;
+use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
  * Class CollectionAbstractInterface provides the generic behaviors for collections.
@@ -23,9 +24,9 @@ use Iterator;
  * unordered collection also has non-negative integer keys, but the keys mean nothing in terms of creating any sort
  * of ordination among the elements.
  *
- * @template ElementType
+ * @template PayloadType of HasPayloadInterface
  * @template CollectionType
- * @extends Iterator<int, ElementType>
+ * @extends Iterator<int, PayloadType>
  */
 interface CollectionAbstractInterface extends Iterator, Countable
 {
@@ -37,7 +38,7 @@ interface CollectionAbstractInterface extends Iterator, Countable
 
     /**
      * @function getElements returns an array of all the elements in the list, keys are preserved.
-     * @return array<non-negative-int, ElementType>
+     * @return array<non-negative-int, PayloadType>
      */
     public function getElements(): array;
 
@@ -46,7 +47,7 @@ interface CollectionAbstractInterface extends Iterator, Countable
      * @function getElement gets an element via its key
      *
      * @param non-negative-int $key
-     * @return ElementType
+     * @return PayloadType
      */
     public function getElement(int $key);
 
@@ -56,7 +57,7 @@ interface CollectionAbstractInterface extends Iterator, Countable
      *
      * You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
-     * @param ElementType $listElement
+     * @param PayloadType $listElement
      * @return non-negative-int|null
      */
     public function getKey(mixed $listElement, bool $strict = true): int|null;
@@ -67,7 +68,7 @@ interface CollectionAbstractInterface extends Iterator, Countable
      *
      * You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
-     * @param ElementType $listElement
+     * @param PayloadType $listElement
      * @return array<non-negative-int>
      */
     public function getKeys(mixed $listElement, bool $strict = true): array;
@@ -79,18 +80,18 @@ interface CollectionAbstractInterface extends Iterator, Countable
     /**
      * @function add adds an element into a list using a specified key.
      * @param non-negative-int $key
-     * @param ElementType $value
+     * @param PayloadType $payload
      */
-    public function add(int $key, $value): void;
+    public function add(int $key, $payload): void;
 
     /**
-     * @function update allows you to change the value of a list element
+     * @function update allows you to change the payload of a list element
      * list.
      *
-     * @param ElementType $value
+     * @param PayloadType $payload
      * @param non-negative-int $key
      */
-    public function update(int $key, $value): void;
+    public function update(int $key, $payload): void;
 
     /**
      * @function delete deletes an element from the list.
@@ -99,8 +100,8 @@ interface CollectionAbstractInterface extends Iterator, Countable
     public function delete(int $key): void;
 
     /**
-     * @function push adds a value to the end of the list.
-     * @param ElementType $value
+     * @function push adds a payload to the end of the list.
+     * @param PayloadType $payload
      */
-    public function push($value): void;
+    public function push($payload): void;
 }
