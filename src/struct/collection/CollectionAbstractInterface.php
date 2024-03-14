@@ -57,10 +57,10 @@ interface CollectionAbstractInterface extends Iterator, Countable
      *
      * You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
-     * @param PayloadType $listElement
+     * @param PayloadType $element
      * @return non-negative-int|null
      */
-    public function getKey(mixed $listElement, bool $strict = true): int|null;
+    public function getKey(mixed $element, bool $strict = true): int|null;
 
     /**
      * @function getKeys returns all the keys in the list which have elements equal to the argument of
@@ -68,10 +68,10 @@ interface CollectionAbstractInterface extends Iterator, Countable
      *
      * You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
-     * @param PayloadType $listElement
+     * @param PayloadType $element
      * @return array<non-negative-int>
      */
-    public function getKeys(mixed $listElement, bool $strict = true): array;
+    public function getKeys(mixed $element, bool $strict = true): array;
 
     /**
      * crud operations
