@@ -25,6 +25,18 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 interface SearchStrategyInterface extends Iterator
 {
     /**
+     * setStartNode
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $startNode
+     */
+    public function setStartNode(TreenodeAbstractInterface $startNode): void;
+
+    /**
+     * getStartNode
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
+     */
+    public function getStartNode(): TreenodeAbstractInterface|null;
+
+    /**
      * getNodes
      * @return array<TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>>
      */
