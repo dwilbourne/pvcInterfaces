@@ -3,6 +3,7 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
@@ -18,10 +19,21 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @extends SearchStrategyInterface<PayloadType, NodeType, TreeType, CollectionType>
  */
-interface NodeTravelerInterface extends SearchStrategyInterface
+interface NodeTravelerInterface
 {
+    /**
+     * setStartNode
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $node
+     */
+    public function setStartNode(TreenodeAbstractInterface $node): void;
+
+    /**
+     * getStartNode
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
+     */
+    public function getStartNode(): TreenodeAbstractInterface|null;
+
     /**
      * setSearchStrategy
      * @param SearchStrategyInterface<PayloadType, NodeType, TreeType, CollectionType> $strategy
