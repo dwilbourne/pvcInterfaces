@@ -32,7 +32,7 @@ interface SearchStrategyInterface extends Iterator
 
     /**
      * current
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
      */
-    public function current(): TreenodeAbstractInterface;
+    public function current(): TreenodeAbstractInterface|null;
 }
