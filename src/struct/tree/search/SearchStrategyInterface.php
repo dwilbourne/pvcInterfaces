@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
+use Iterator;
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
@@ -19,8 +20,9 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
+ * @extends Iterator<int, TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>>
  */
-interface SearchStrategyInterface
+interface SearchStrategyInterface extends Iterator
 {
     /**
      * getNodes
@@ -29,12 +31,8 @@ interface SearchStrategyInterface
     public function getNodes(): array;
 
     /**
-     * rewind
+     * current
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>
      */
-    public function rewind(): void;
-
-    /**
-     * next
-     */
-    public function next(): void;
+    public function current(): TreenodeAbstractInterface;
 }
