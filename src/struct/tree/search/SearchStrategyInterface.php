@@ -37,12 +37,6 @@ interface SearchStrategyInterface extends Iterator
     public function getStartNode(): TreenodeAbstractInterface|null;
 
     /**
-     * getNodes
-     * @return array<TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>>
-     */
-    public function getNodes(): array;
-
-    /**
      * current
      * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
      */
