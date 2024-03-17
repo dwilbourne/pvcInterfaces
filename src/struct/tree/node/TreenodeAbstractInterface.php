@@ -142,19 +142,14 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValid
     public function isAncestorOf(TreenodeAbstractInterface $node): bool;
 
     /**
-     * getVisitCount
+     * getVisitStatus
      * maintains a count of the number of times this node has been visited by a NodeTraveler
      * @return non-negative-int
      */
-    public function getVisitCount(): int;
+    public function getVisitStatus(): int;
 
     /**
-     * addVisit
+     * setVisitStatus
      */
-    public function addVisit(): void;
-
-    /**
-     * clearVisitCount
-     */
-    public function clearVisitCount(): void;
+    public function setVisitStatus(): void;
 }
