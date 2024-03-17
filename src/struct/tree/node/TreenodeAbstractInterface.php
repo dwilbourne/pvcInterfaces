@@ -143,13 +143,13 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValid
 
     /**
      * getVisitStatus
-     * maintains a count of the number of times this node has been visited by a NodeTraveler
      * @return non-negative-int
      */
     public function getVisitStatus(): int;
 
     /**
      * setVisitStatus
+     * @param non-negative-int $status
      */
     public function setVisitStatus(int $status): void;
 }
