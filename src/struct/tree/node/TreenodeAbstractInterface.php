@@ -151,5 +151,5 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValid
     /**
      * setVisitStatus
      */
-    public function setVisitStatus(): void;
+    public function setVisitStatus(int $status): void;
 }
