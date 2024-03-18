@@ -48,13 +48,13 @@ interface NodeTravelerInterface
 
     /**
      * setSearchFilter
-     * @param SearchFilterInterface<NodeType> $filter
+     * @param SearchFilterInterface<PayloadType, NodeType, TreeType, CollectionType> $filter
      */
     public function setSearchFilter(SearchFilterInterface $filter): void;
 
     /**
      * getSearchFilter
-     * @return SearchFilterInterface<NodeType>
+     * @return SearchFilterInterface<PayloadType, NodeType, TreeType, CollectionType>
      */
     public function getSearchFilter(): SearchFilterInterface;
 }
