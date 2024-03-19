@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
+use Iterator;
+
 /**
  * Class NodeDepthMapInterface
  */
@@ -37,4 +39,10 @@ interface NodeDepthMapInterface
      * @param non-negative-int $depth
      */
     public function setNodeDepth(int $nodeId, int $depth): void;
+
+    /**
+     * getIterator
+     * @return Iterator
+     */
+    public function getIterator(): Iterator;
 }
