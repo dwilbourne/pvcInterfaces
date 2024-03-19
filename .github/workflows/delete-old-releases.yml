@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: Nats-ji/delete-old-releases@v1
-    with:
-      token: ${{ secrets.GITHUB_TOKEN }}
-      keep-count: 5
-      keep-old-minor-releases: false
+        with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        keep-count: 5
+        keep-old-minor-releases: false
