@@ -1,5 +1,4 @@
 name: 'Delete Old Releases'
-description: 'Delete old releases automatically - keep last 5'
 on: [push]
 jobs:
   delete_old_releases:
