@@ -3,6 +3,7 @@ description: 'Delete old releases automatically'
 branding:
   icon: 'trash-2'
   color: 'red'
+on: [push]
 inputs:
   token:
     description: 'Github token'
