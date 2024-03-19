@@ -1,0 +1,14 @@
+name: 'Delete Old Releases'
+on: [push]
+jobs:
+  delete_old_releases:
+    name: Delete Old Releases
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Nats-ji/delete-old-releases@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          keep-count: 5
+          keep-old-minor-releases: false
+          remove-tags: true
