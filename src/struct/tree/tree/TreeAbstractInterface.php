@@ -27,6 +27,7 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
+ * @template ValueObjectType of TreenodeValueObjectInterface
  */
 interface TreeAbstractInterface
 {
@@ -50,7 +51,7 @@ interface TreeAbstractInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeValueObjectInterface<PayloadType> $valueObject
+     * @param TreenodeValueObjectInterface<ValueObjectType, PayloadType> $valueObject
      */
     public function addNode(TreenodeValueObjectInterface $valueObject): void;
 
@@ -82,7 +83,8 @@ interface TreeAbstractInterface
 
     /**
      * rootTest
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|TreenodeValueObjectInterface<PayloadType> $nodeItem
+     * @phpcs ignore-next-line
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|TreenodeValueObjectInterface<ValueObjectType, PayloadType> $nodeItem
      * @return bool
      */
     public function rootTest(TreenodeAbstractInterface|TreenodeValueObjectInterface $nodeItem): bool;

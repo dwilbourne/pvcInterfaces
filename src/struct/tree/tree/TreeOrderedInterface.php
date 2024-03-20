@@ -11,12 +11,15 @@ namespace pvc\interfaces\struct\tree\tree;
 use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 
 /**
  * Interface TreeOrderedInterface
  *
  * @template PayloadType of HasPayloadInterface
- * @extends TreeAbstractInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface>
+ * @template ValueObjectType of TreenodeValueObjectInterface
+ * @phpcs ignore-next-line
+ * @extends TreeAbstractInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface, ValueObjectType>
  */
 interface TreeOrderedInterface extends TreeAbstractInterface
 {

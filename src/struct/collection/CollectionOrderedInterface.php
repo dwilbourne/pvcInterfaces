@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\collection;
 
+use pvc\interfaces\struct\payload\HasPayloadInterface;
+
 /**
  * Interface CollectionOrderedInterface is the interface for an ordered list.
  *
@@ -18,8 +20,8 @@ namespace pvc\interfaces\struct\collection;
  * indices are the same thing.  But in a different implementation that might not be the case, so the nomenclature
  * distinguishes between the two.
  *
- * @template ElementType
- * @extends CollectionAbstractInterface<ElementType, CollectionOrderedInterface>
+ * @template PayloadType of HasPayloadInterface
+ * @extends CollectionAbstractInterface<PayloadType, CollectionOrderedInterface>
  */
 interface CollectionOrderedInterface extends CollectionAbstractInterface
 {

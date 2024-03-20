@@ -20,13 +20,14 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
+ * @template ValueObjectType of TreenodeValueObjectInterface
  */
 interface NodeTypeFactoryInterface
 {
     /**
      * makeNodeType
-     * @param TreenodeValueObjectInterface<PayloadType> $valueObject
-     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $tree
+     * @param TreenodeValueObjectInterface<ValueObjectType, PayloadType> $valueObject
+     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $tree
      * @param CollectionAbstractInterface<PayloadType, CollectionType> $collectionAbstract
      * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>
      */
