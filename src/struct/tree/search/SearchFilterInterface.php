@@ -11,6 +11,7 @@ namespace pvc\interfaces\struct\tree\search;
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
@@ -19,12 +20,13 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
+ * @template ValueObjectType of TreenodeValueObjectInterface
  */
 interface SearchFilterInterface
 {
     /**
      * testNode
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $node
      * @return bool
      */
     public function testNode(TreenodeAbstractInterface $node): bool;

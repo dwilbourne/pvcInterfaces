@@ -10,6 +10,9 @@ namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectUnorderedInterface;
+use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
 
 /**
@@ -17,9 +20,16 @@ use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
  * are not kept in any specific order.
  *
  * @template PayloadType of HasPayloadInterface
+ * @template ValueObjectType of TreenodeValueObjectInterface
  * @phpcs:ignore -- generics must all be on one line to be processed correctly
- * @extends TreenodeAbstractInterface<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface>
+ * @extends TreenodeAbstractInterface<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface, ValueObjectType>
  */
 interface TreenodeUnorderedInterface extends TreenodeAbstractInterface
 {
+    /**
+     * hydrate
+     * @param TreenodeValueObjectUnorderedInterface<PayloadType> $valueObject
+     * @param TreeUnorderedInterface<PayloadType> $tree
+     */
+    public function hydrate(TreenodeValueObjectInterface $valueObject, TreeAbstractInterface $tree): void;
 }

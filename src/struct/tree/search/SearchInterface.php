@@ -11,6 +11,7 @@ namespace pvc\interfaces\struct\tree\search;
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
@@ -19,14 +20,15 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @extends NodeTravelerInterface<PayloadType, NodeType, TreeType, CollectionType>
+ * @template ValueObjectType of TreenodeValueObjectInterface
+ * @extends NodeTravelerInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
  */
 interface SearchInterface extends NodeTravelerInterface
 {
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>>
+     * @return array<TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>>
      */
     public function getNodes(): array;
 }

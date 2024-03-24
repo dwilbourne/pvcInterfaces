@@ -31,7 +31,7 @@ interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterfa
     public function setIndex(int $index): void;
 
     /**
-     * dehydrateNode
+     * hydrateFromNode
      * @param TreenodeOrderedInterface<PayloadType> $node
      * @return void
      */

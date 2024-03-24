@@ -77,7 +77,7 @@ interface TreeAbstractInterface
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int|null $nodeId
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null
      */
     public function getNode(?int $nodeId): TreenodeAbstractInterface|null;
 
@@ -90,7 +90,7 @@ interface TreeAbstractInterface
     /**
      * rootTest
      * @phpcs ignore-next-line
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|TreenodeValueObjectInterface<ValueObjectType, PayloadType> $nodeItem
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|TreenodeValueObjectInterface<ValueObjectType, PayloadType> $nodeItem
      * @return bool
      */
     public function rootTest(TreenodeAbstractInterface|TreenodeValueObjectInterface $nodeItem): bool;

@@ -33,7 +33,7 @@ interface TreenodeFactoryInterface
     /**
      * makeNode
      * @param TreenodeValueObjectInterface<PayloadType, ValueObjectType> $valueObject
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
      */
     public function makeNode(TreenodeValueObjectInterface $valueObject): TreenodeAbstractInterface;
 

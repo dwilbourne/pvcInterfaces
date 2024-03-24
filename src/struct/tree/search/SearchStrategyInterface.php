@@ -12,6 +12,7 @@ use Iterator;
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
@@ -20,25 +21,26 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @extends Iterator<int, TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>>
+ * @template ValueObjectType of TreenodeValueObjectInterface
+ * @extends Iterator<int, TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>>
  */
 interface SearchStrategyInterface extends Iterator
 {
     /**
      * setStartNode
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType> $startNode
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $startNode
      */
     public function setStartNode(TreenodeAbstractInterface $startNode): void;
 
     /**
      * getStartNode
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null
      */
     public function getStartNode(): TreenodeAbstractInterface|null;
 
     /**
      * current
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType>|null
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null
      */
     public function current(): TreenodeAbstractInterface|null;
 }

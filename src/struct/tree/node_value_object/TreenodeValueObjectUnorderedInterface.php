@@ -20,7 +20,7 @@ interface TreenodeValueObjectUnorderedInterface extends TreenodeValueObjectInter
 {
     /**
      * hydrateFromNode
-     * @param TreenodeUnorderedInterface<PayloadType> $node
+     * @param TreenodeUnorderedInterface<PayloadType, TreenodeValueObjectUnorderedInterface<PayloadType>> $node
      */
     public function hydrateFromNode(TreenodeUnorderedInterface $node): void;
 
