@@ -56,6 +56,12 @@ interface TreeAbstractInterface
     public function addNode(TreenodeValueObjectInterface $valueObject): void;
 
     /**
+     * hydrate
+     * @param array<TreenodeValueObjectInterface<PayloadType, ValueObjectType>> $valueObjects
+     */
+    public function hydrate(array $valueObjects): void;
+
+    /**
      * @function deleteNode
      * @param non-negative-int $nodeId
      * @param bool $deleteBranchOK
