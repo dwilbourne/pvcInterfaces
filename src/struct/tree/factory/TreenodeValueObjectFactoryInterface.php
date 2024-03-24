@@ -14,13 +14,13 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 /**
  * Class TreenodeValueObjectFactoryInterface
  * @template PayloadType of HasPayloadInterface
- * @template TreenodeValueObjectType of TreenodeValueObjectInterface
+ * @template ValueObjectType of TreenodeValueObjectInterface
  */
 interface TreenodeValueObjectFactoryInterface
 {
     /**
      * makeValueObject
-     * @return TreenodeValueObjectInterface<TreenodeValueObjectType, PayloadType>
+     * @return TreenodeValueObjectInterface<ValueObjectType, PayloadType>
      */
     public function makeValueObject(): TreenodeValueObjectInterface;
 }

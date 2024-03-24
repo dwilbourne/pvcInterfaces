@@ -18,7 +18,7 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
  *
  * @template PayloadType of HasPayloadInterface
  * @template ValueObjectType of TreenodeValueObjectInterface
- * @phpcs ignore-next-line
+ * @phpcs:ignore  -- generics must all be on one line to be processed correctly
  * @extends TreeAbstractInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface, ValueObjectType>
  */
 interface TreeOrderedInterface extends TreeAbstractInterface

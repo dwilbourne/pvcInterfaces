@@ -13,13 +13,13 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 /**
  * Class TreenodeValueObjectDataSrcInterface
  * @template PayloadType of HasPayloadInterface
- * @template TreenodeValueObjectType of TreenodeValueObjectInterface
+ * @template ValueObjectType of TreenodeValueObjectInterface
  */
 interface TreenodeValueObjectDataSrcInterface
 {
     /**
      * getValueObjects
-     * @return array<TreenodeValueObjectInterface<TreenodeValueObjectType, PayloadType>>
+     * @return array<TreenodeValueObjectInterface<ValueObjectType, PayloadType>>
      */
     public function getValueObjects(): array;
 }
