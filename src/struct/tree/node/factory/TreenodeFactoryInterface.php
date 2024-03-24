@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\factory;
+namespace pvc\interfaces\struct\tree\node\factory;
 
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
@@ -26,7 +26,7 @@ interface TreenodeFactoryInterface
 {
     /**
      * setTree
-     * @param TreeType $tree
+     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $tree
      */
     public function setTree(TreeAbstractInterface $tree): void;
 

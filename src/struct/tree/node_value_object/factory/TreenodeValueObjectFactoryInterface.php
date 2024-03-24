@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\factory;
+namespace pvc\interfaces\struct\tree\node_value_object\factory;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
