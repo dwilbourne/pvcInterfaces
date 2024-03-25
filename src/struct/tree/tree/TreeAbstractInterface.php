@@ -11,6 +11,7 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\node\factory\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
 use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 
@@ -47,6 +48,19 @@ interface TreeAbstractInterface
      * @return non-negative-int
      */
     public function getTreeId(): int;
+
+    /**
+     * getTreenodeFactory
+     * @return TreenodeFactoryInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
+     */
+    public function getTreenodeFactory(): TreenodeFactoryInterface;
+
+    /**
+     * setTreenodeFactory
+     * @phpcs:ignore
+     * @param TreenodeFactoryInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $treenodeFactory
+     */
+    public function setTreenodeFactory(TreenodeFactoryInterface $treenodeFactory): void;
 
     /**
      * addNode puts a node into the tree's list of nodes.
