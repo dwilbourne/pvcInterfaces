@@ -111,10 +111,4 @@ interface TreeAbstractInterface
      * @return non-negative-int
      */
     public function nodeCount(): int;
-
-    /**
-     * makeCollection
-     * @return CollectionType
-     */
-    public function makeCollection(): CollectionAbstractInterface;
 }
