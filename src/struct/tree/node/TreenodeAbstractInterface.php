@@ -59,6 +59,13 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValidatorInterface
 {
     /**
+     * isEmpty
+     * true if the not has not yet been hydrated with nodeId, parent, etc
+     * @return bool
+     */
+    public function isEmpty(): bool;
+
+    /**
      * hydrate
      * @param TreenodeValueObjectInterface<PayloadType, ValueObjectType> $valueObject
      * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $tree
