@@ -39,7 +39,7 @@ interface TreenodeFactoryInterface
 
     /**
      * getCollectionFactory
-     * @return CollectionFactoryInterface<CollectionType>
+     * @return CollectionFactoryInterface<PayloadType, CollectionType>
      */
     public function getCollectionFactory(): CollectionFactoryInterface;
 }

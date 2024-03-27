@@ -44,7 +44,6 @@ interface TreenodeOrderedInterface extends TreenodeAbstractInterface
     /**
      * hydrate
      * @param TreenodeValueObjectOrderedInterface<PayloadType> $valueObject
-     * @phpcs:ignore
      * @param TreeOrderedInterface<PayloadType> $tree
      */
     public function hydrate(TreenodeValueObjectInterface $valueObject, TreeAbstractInterface $tree): void;
