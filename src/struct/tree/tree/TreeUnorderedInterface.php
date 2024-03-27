@@ -18,7 +18,7 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectUnorderedInt
  *
  * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore -- generics must all be on one line to be processed correctly
- * @extends TreeAbstractInterface<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface, TreenodeValueObjectUnorderedInterface>
+ * @extends TreeAbstractInterface<PayloadType, TreenodeUnorderedInterface<PayloadType>, TreeUnorderedInterface, CollectionUnorderedInterface<PayloadType>, TreenodeValueObjectUnorderedInterface<PayloadType>>
  */
 interface TreeUnorderedInterface extends TreeAbstractInterface
 {
