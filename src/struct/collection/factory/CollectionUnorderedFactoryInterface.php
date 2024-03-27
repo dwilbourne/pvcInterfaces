@@ -14,9 +14,8 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 /**
  * Class CollectionUnorderedFactoryInterface
  * @template PayloadType of HasPayloadInterface
- * @extends CollectionFactoryInterface<PayloadType, CollectionUnorderedInterface>
  */
-interface CollectionUnorderedFactoryInterface extends CollectionFactoryInterface
+interface CollectionUnorderedFactoryInterface
 {
     /**
      * makeCollection
