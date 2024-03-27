@@ -85,13 +85,13 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValid
 
     /**
      * @function getParent
-     * @return NodeType
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null
      */
     public function getParent(): ?TreenodeAbstractInterface;
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeType
+     * @return TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
      */
     public function getTree(): TreeAbstractInterface;
 
@@ -126,7 +126,7 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValid
     /**
      * @function getChild
      * @param non-negative-int $nodeid
-     * @return NodeType|null
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null
      */
     public function getChild(int $nodeid): ?TreenodeAbstractInterface;
 
@@ -144,14 +144,14 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValid
 
     /**
      * @function isDescendantOf
-     * @param NodeType $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null $node
      * @return bool
      */
     public function isDescendantOf(TreenodeAbstractInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param NodeType $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null $node
      * @return bool
      */
     public function isAncestorOf(TreenodeAbstractInterface $node): bool;
