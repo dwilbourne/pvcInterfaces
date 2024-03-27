@@ -3,6 +3,7 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\struct\collection\factory;
@@ -17,7 +18,7 @@ interface CollectionFactoryInterface
 {
     /**
      * makeCollection
-     * @return CollectionType
+     * @return CollectionAbstractInterface<CollectionType>
      */
     public function makeCollection(): CollectionAbstractInterface;
 }
