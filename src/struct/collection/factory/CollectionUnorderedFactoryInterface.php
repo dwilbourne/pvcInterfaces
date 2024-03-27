@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\collection\factory;
 
+use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 
@@ -19,7 +20,7 @@ interface CollectionUnorderedFactoryInterface
 {
     /**
      * makeCollection
-     * @return CollectionUnorderedInterface<PayloadType>
+     * @return CollectionAbstractInterface<PayloadType, CollectionUnorderedInterface<PayloadType>>
      */
-    public function makeCollection(): CollectionUnorderedInterface;
+    public function makeCollection(): CollectionAbstractInterface;
 }
