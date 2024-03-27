@@ -132,26 +132,26 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadValid
 
     /**
      * @function getChildren
-     * @return CollectionType
+     * @return CollectionAbstractInterface<PayloadType, CollectionType>
      */
     public function getChildren(): CollectionAbstractInterface;
 
     /**
      * @function getSiblings
-     * @return CollectionType
+     * @return CollectionAbstractInterface<PayloadType, CollectionType>
      */
     public function getSiblings(): CollectionAbstractInterface;
 
     /**
      * @function isDescendantOf
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $node
      * @return bool
      */
     public function isDescendantOf(TreenodeAbstractInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null $node
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $node
      * @return bool
      */
     public function isAncestorOf(TreenodeAbstractInterface $node): bool;

@@ -14,13 +14,13 @@ use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
 /**
  * Class TreenodeValueObjectUnorderedInterface
  * @template PayloadType of HasPayloadInterface
- * @extends TreenodeValueObjectInterface<TreenodeValueObjectUnorderedInterface, PayloadType>
+ * @extends TreenodeValueObjectInterface<PayloadType, TreenodeValueObjectUnorderedInterface>
  */
 interface TreenodeValueObjectUnorderedInterface extends TreenodeValueObjectInterface
 {
     /**
      * hydrateFromNode
-     * @param TreenodeUnorderedInterface<PayloadType, TreenodeValueObjectUnorderedInterface<PayloadType>> $node
+     * @param TreenodeUnorderedInterface<PayloadType> $node
      */
     public function hydrateFromNode(TreenodeUnorderedInterface $node): void;
 
