@@ -10,8 +10,8 @@ namespace pvc\interfaces\struct\payload;
 
 /**
  * Class HasPayloadInterface
- * All data structures should extend HasPayloadInterface so that the methods for accessing the data within the structure
- * remain consistent across all types of data structures
+ * All data structure interfaces should extend HasPayloadInterface so that the methods for accessing the data within
+ * the structures remain consistent across all types
  * @template PayloadType
  */
 interface HasPayloadInterface

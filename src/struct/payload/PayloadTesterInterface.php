@@ -8,13 +8,13 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\payload;
 
-use pvc\interfaces\validator\ValidatorInterface;
+use pvc\interfaces\validator\ValTesterInterface;
 
 /**
- * Class ValidatorPayloadInterface
+ * Class PayloadTesterInterface
  * @template PayloadType of HasPayloadInterface
- * @extends ValidatorInterface<PayloadType>
+ * @extends ValTesterInterface<PayloadType>
  */
-interface ValidatorPayloadInterface extends ValidatorInterface
+interface PayloadTesterInterface extends ValTesterInterface
 {
 }
