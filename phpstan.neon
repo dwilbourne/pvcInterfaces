@@ -2,3 +2,5 @@ parameters:
 	level: max
 	paths:
 		- src
+	typeAliases:
+		TreenodeAbstractIFace: "pvc\\interfaces\\struct\\tree\\node\\TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>"

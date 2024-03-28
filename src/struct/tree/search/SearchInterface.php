@@ -28,7 +28,7 @@ interface SearchInterface extends NodeTravelerInterface
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>>
+     * @return array<int, TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>>
      */
     public function getNodes(): array;
 }
