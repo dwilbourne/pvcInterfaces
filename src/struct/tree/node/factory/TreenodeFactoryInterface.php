@@ -36,4 +36,10 @@ interface TreenodeFactoryInterface
      * @return CollectionFactoryInterface<PayloadType, CollectionType>
      */
     public function getCollectionFactory(): CollectionFactoryInterface;
+
+    /**
+     * setTree
+     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $tree
+     */
+    public function setTree(TreeAbstractInterface $tree): void;
 }
