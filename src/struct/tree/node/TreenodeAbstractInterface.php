@@ -20,9 +20,9 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * Interface TreenodeAbstractInterface defines the operations for a generic tree node.
  *
  * This interface defines the operations common to all tree nodes.  Here are some of the design points.  The nodeid
- * property is immutable - the only way to set the nodeid is at construction.  The same applies to the tree property.
+ * property is immutable - the only way to set the nodeid is at hydration.  The same applies to the tree property.
  * This means that there are no setters for these properties.  Together, these two design points ensure that nodes
- * cannot be created except in the content of belonging to a tree.  That in turn makes it a bit easier to enforce the
+ * cannot be hydrated except in the content of belonging to a tree.  That in turn makes it a bit easier to enforce the
  * design point that all nodeids in a tree must be unique.
  *
  * The same is almost true for the parent property, but the difference is that the nodes are allowed to move around
@@ -31,18 +31,14 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * children.  So the setParent method is responsible not only for setting the parent property, but it also takes
  * the parent and adds a node to its child list.
  *
- * There is no method for a node moving itself between trees.  In order to accomplish this, trees have a method which
- * allows you to create a copy of a branch from another tree.  Then you can delete the source branch from the
- * source tree if you want a move and not a copy.
- *
  * There are two concrete tree node interfaces defined in this package: ordered and unordered. The tree structure uses
  * the ordered and unordered collection interfaces to assist with these behaviors.  Like other parts of the pvcStruct
  * package, the tree and tree node components are written using phpstan generics.  If you use this package, you should
  * consider using phpstan as part of the testing of your code in order to ensure type safety.
  *
- * Finally, you will see a reference below to an object called a ValueValidator.  It is
- * not necessary to use a ValueValidator, but doing so will further ensure data integrity in your tree, since type
- * safety alone is not always enough to guarantee that each value is valid.  If you choose to use a valueValidator,
+ * Finally, you will see a reference below to an object called a PayloadTester.  It is
+ * not necessary to use a PayloadTester, but doing so will further ensure data integrity in your tree, since type
+ * safety alone is not always enough to guarantee that each value is valid.  If you choose to use a PayloadTester,
  * make sure it is injected into the node object before setting the value of the node.
  *
  * @see CollectionUnorderedInterface
@@ -55,6 +51,9 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template ValueObjectType of TreenodeValueObjectInterface
  * @extends HasPayloadInterface<PayloadType>
  * @extends HasPayloadTesterInterface<PayloadType>
+ *
+ * @phpcs:ignore
+ * @phpstan-type NodeInterface TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
  */
 interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTesterInterface
 {
@@ -85,7 +84,7 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
 
     /**
      * @function getParent
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null
+     * @return NodeInterface|null
      */
     public function getParent(): ?TreenodeAbstractInterface;
 
@@ -126,7 +125,7 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
     /**
      * @function getChild
      * @param non-negative-int $nodeid
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null
+     * @return NodeInterface|null
      */
     public function getChild(int $nodeid): ?TreenodeAbstractInterface;
 
@@ -144,14 +143,14 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
 
     /**
      * @function isDescendantOf
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $node
+     * @param NodeInterface $node
      * @return bool
      */
     public function isDescendantOf(TreenodeAbstractInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $node
+     * @param NodeInterface $node
      * @return bool
      */
     public function isAncestorOf(TreenodeAbstractInterface $node): bool;
