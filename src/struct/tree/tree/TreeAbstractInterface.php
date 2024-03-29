@@ -65,7 +65,7 @@ interface TreeAbstractInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeValueObjectInterface<ValueObjectType, PayloadType> $valueObject
+     * @param TreenodeValueObjectInterface<PayloadType, ValueObjectType> $valueObject
      */
     public function addNode(TreenodeValueObjectInterface $valueObject): void;
 
