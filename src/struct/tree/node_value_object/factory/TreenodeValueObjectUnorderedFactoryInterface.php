@@ -10,17 +10,18 @@ namespace pvc\interfaces\struct\tree\node_value_object\factory;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectUnorderedInterface;
 
 /**
- * Class TreenodeValueObjectFactoryInterface
+ * Class TreenodeValueObjectUnorderedFactoryInterface
  * @template PayloadType of HasPayloadInterface
- * @template ValueObjectType of TreenodeValueObjectInterface
+ * @extends TreenodeValueObjectFactoryInterface<PayloadType, TreenodeValueObjectUnorderedInterface>
  */
-interface TreenodeValueObjectFactoryInterface
+interface TreenodeValueObjectUnorderedFactoryInterface extends TreenodeValueObjectFactoryInterface
 {
     /**
      * makeValueObject
-     * @return TreenodeValueObjectInterface<PayloadType, ValueObjectType>
+     * @return TreenodeValueObjectUnorderedInterface<PayloadType>
      */
     public function makeValueObject(): TreenodeValueObjectInterface;
 }
