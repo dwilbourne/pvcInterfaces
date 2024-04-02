@@ -16,7 +16,7 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
- * Class SearchStrategyInterface
+ * Class NodeSearchStrategyInterface
  * @template PayloadType of HasPayloadInterface
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
@@ -24,7 +24,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template ValueObjectType of TreenodeValueObjectInterface
  * @extends Iterator<int, TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>>
  */
-interface SearchStrategyInterface extends Iterator
+interface NodeSearchStrategyInterface extends Iterator
 {
     /**
      * setStartNode
