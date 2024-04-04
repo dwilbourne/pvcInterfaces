@@ -48,9 +48,10 @@ interface TagVoidInterface
 
     /**
      * setEvent
-     * @param EventInterface $event;
+     * @param string $eventName
+     * @param string $script
      */
-    public function setEvent(string $eventName): void;
+    public function setEvent(string $eventName, string $script): void;
 
     /**
      * getAttributes
