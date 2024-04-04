@@ -50,13 +50,19 @@ interface TagVoidInterface
      * setEvent
      * @param EventInterface $event;
      */
-    public function setEvent(EventInterface $event): void;
+    public function setEvent(string $eventName): void;
 
     /**
      * getAttributes
      * @return array<AttributeInterface>
      */
     public function getAttributes(): array;
+
+    /**
+     * getEvents
+     * @return array<EventInterface>
+     */
+    public function getEvents(): array;
 
     /**
      * render
