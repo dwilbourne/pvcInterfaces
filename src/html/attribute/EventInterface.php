@@ -36,7 +36,7 @@ interface EventInterface extends AttributeAbstractInterface
 
     /**
      * getScript
-     * @return string
+     * @return string|null
      */
-    public function getScript(): string;
+    public function getScript(): string|null;
 }
