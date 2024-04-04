@@ -44,7 +44,7 @@ interface TagVoidInterface
      * @param ValTesterInterface<string>|null $tester
      * @return mixed
      */
-    public function setCustomDataAttribute(string $name, mixed $value, ValTesterInterface $tester = null);
+    public function setCustomDataAttribute(string $name, string $value, ValTesterInterface $tester = null);
 
     /**
      * setEvent
