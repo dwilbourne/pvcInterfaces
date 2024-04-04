@@ -16,6 +16,22 @@ namespace pvc\interfaces\html\attribute;
  */
 interface EventInterface extends AttributeAbstractInterface
 {
+    /**
+     * setValue
+     * @param string $value
+     */
+    public function setValue($value): void;
+
+    /**
+     * getValue
+     * @return string|null
+     */
+    public function getValue(): mixed;
+
+    /**
+     * setScript
+     * @param string $script
+     */
     public function setScript(string $script): void;
 
     /**

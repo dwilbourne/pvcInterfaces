@@ -18,4 +18,10 @@ interface AttributeMultiValueInterface extends AttributeInterface
      * @param array<string> $value
      */
     public function setValue($value): void;
+
+    /**
+     * getValue
+     * @return array<string>
+     */
+    public function getValue(): array;
 }

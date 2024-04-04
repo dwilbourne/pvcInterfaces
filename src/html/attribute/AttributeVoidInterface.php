@@ -18,4 +18,10 @@ interface AttributeVoidInterface extends AttributeInterface
      * @param bool $value
      */
     public function setValue($value): void;
+
+    /**
+     * getValue
+     * @return bool
+     */
+    public function getValue(): mixed;
 }

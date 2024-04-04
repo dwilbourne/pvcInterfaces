@@ -18,4 +18,10 @@ interface AttributeSingleValueInterface extends AttributeInterface
      * @param string $value
      */
     public function setValue($value): void;
+
+    /**
+     * getValue
+     * @return string|null
+     */
+    public function getValue(): mixed;
 }
