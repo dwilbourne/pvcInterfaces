@@ -23,7 +23,7 @@ use pvc\interfaces\validator\ValTesterInterface;
  * attribute rendered.  In the case of void attributes (for example, 'hidden') the attribute is not rendered if the
  * value is false.
  */
-interface AttributeInterface
+interface AttributeInterface extends AttributeAbstractInterface
 {
     /**
      * setTester
