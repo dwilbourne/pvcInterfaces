@@ -10,8 +10,12 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeVoidInterface
- * @extends AttributeInterface<bool>
  */
 interface AttributeVoidInterface extends AttributeInterface
 {
+    /**
+     * setValue
+     * @param string $value
+     */
+    public function setValue(string $value): void;
 }

@@ -27,10 +27,4 @@ interface TagInterface extends TagVoidInterface
      * @return array<TagInterface|TagVoidInterface|MsgInterface>
      */
     public function getInnerHtml(): array;
-
-    /**
-     * generateClosingTag
-     * @return string
-     */
-    public function generateClosingTag(): string;
 }

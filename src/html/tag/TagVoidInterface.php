@@ -8,66 +8,59 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
+use pvc\interfaces\html\attribute\AttributeInterface;
+use pvc\interfaces\html\attribute\EventInterface;
+use pvc\interfaces\validator\ValTesterInterface;
+
 /**
  * Class TagVoidInterface
  */
 interface TagVoidInterface
 {
     /**
-     * getTagName
+     * getName
      * @return string
      */
-    public function getTagName(): string;
+    public function getName(): string;
+
+    /**
+     * setName
+     * @param string $name
+     * @return mixed
+     */
+    public function setName(string $name);
 
     /**
      * setAttribute
      * @param string $name
-     * @param string|array<string>|bool $value
+     * @param string|array<string> $value
      */
-    public function setAttribute(string $name, string|array|bool $value): void;
+    public function setAttribute(string $name, string|array $value): void;
 
     /**
-     * getAttributeValue
-     * @param string $attributeName
-     * @return string|array<string>|bool|null
+     * setCustomDataAttribute
+     * @param string $name
+     * @param mixed $value
+     * @param ValTesterInterface<string>|null $tester
+     * @return mixed
      */
-    public function getAttributeValue(string $attributeName): string|array|bool|null;
+    public function setCustomDataAttribute(string $name, mixed $value, ValTesterInterface $tester = null);
 
     /**
-     * setAttributes
-     * @param array<string, string|array<string>|bool> $attributes
+     * setEvent
+     * @param EventInterface $event;
      */
-    public function setAttributes(array $attributes): void;
+    public function setEvent(EventInterface $event): void;
 
     /**
      * getAttributes
-     * @return array<string, string|array<string>|bool>
+     * @return array<AttributeInterface>
      */
     public function getAttributes(): array;
 
     /**
-     * setEvent
-     * @param string $eventName
-     * @param string $script
-     */
-    public function setEvent(string $eventName, string $script): void;
-
-    /**
-     * getEventScript
-     * @param string $eventName
-     * @return string|null
-     */
-    public function getEventScript(string $eventName): ?string;
-
-    /**
-     * getEvents
-     * @return array<string, string>
-     */
-    public function getEvents(): array;
-
-    /**
-     * generateOpeningTag
+     * render
      * @return string
      */
-    public function generateOpeningTag(): string;
+    public function render(): string;
 }

@@ -12,34 +12,19 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class AttributeInterface
- * @template DataType
+ *
+ * This interface applies to attributes but not events.
+ *
+ * Attributes (but not events) optionally have a ValTester object which can validate the value(s) as it/they are
+ * being set.
+ *
+ * Because there are no methods to remove attributes or "unset them", if the value is not set then the attribute will
+ * not be rendered.  Thus, you can set the value to null if you have set it and later decide you don't want the
+ * attribute rendered.  In the case of void attributes (for example, 'hidden') the attribute is not rendered if the
+ * value is false.
  */
 interface AttributeInterface
 {
-    /**
-     * getName
-     * @return string
-     */
-    public function getName(): string;
-
-    /**
-     * render
-     * @return string
-     */
-    public function render(): string;
-
-    /**
-     * setValue
-     * @param DataType $value
-     */
-    public function setValue(mixed $value): void;
-
-    /**
-     * getValue
-     * @return DataType
-     */
-    public function getValue(): mixed;
-
     /**
      * setTester
      * @param ValTesterInterface<string> $tester

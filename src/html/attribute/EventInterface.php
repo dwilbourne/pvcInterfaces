@@ -10,7 +10,16 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class EventInterface
+ *
+ * events have scripts, not values, so keep the language a little cleaner......
  */
-interface EventInterface extends AttributeSingleValueInterface
+interface EventInterface extends AttributeAbstractInterface
 {
+    public function setScript(string $script): void;
+
+    /**
+     * getScript
+     * @return string
+     */
+    public function getScript(): string;
 }
