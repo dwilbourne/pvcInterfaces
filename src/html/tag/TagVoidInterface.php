@@ -66,8 +66,8 @@ interface TagVoidInterface
     public function getEvents(): array;
 
     /**
-     * render
+     * generateOpeningTag
      * @return string
      */
-    public function render(): string;
+    public function generateOpeningTag(): string;
 }
