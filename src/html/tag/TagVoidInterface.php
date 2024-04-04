@@ -40,7 +40,7 @@ interface TagVoidInterface
     /**
      * setCustomDataAttribute
      * @param string $name
-     * @param mixed $value
+     * @param string $value
      * @param ValTesterInterface<string>|null $tester
      * @return mixed
      */
