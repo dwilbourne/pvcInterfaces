@@ -15,7 +15,7 @@ interface AttributeVoidInterface extends AttributeInterface
 {
     /**
      * setValue
-     * @param string $value
+     * @param bool $value
      */
-    public function setValue(string $value): void;
+    public function setValue($value): void;
 }

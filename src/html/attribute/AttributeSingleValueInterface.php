@@ -17,6 +17,5 @@ interface AttributeSingleValueInterface extends AttributeInterface
      * setValue
      * @param string $value
      */
-    public function setValue(string $value): void;
-
+    public function setValue($value): void;
 }

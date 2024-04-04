@@ -11,7 +11,8 @@ namespace pvc\interfaces\html\attribute;
 /**
  * Class EventInterface
  *
- * events have scripts, not values, so keep the language a little cleaner......
+ * events have scripts, so this may make the code a little easier to read.  in real life these
+ * methods just call setValue and getValue.
  */
 interface EventInterface extends AttributeAbstractInterface
 {
