@@ -117,10 +117,10 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
     public function isLeaf(): bool;
 
     /**
-     * @function isInteriorNode returns true of the node does have children
+     * @function hasChildren returns true of the node does have children
      * @return bool
      */
-    public function isInteriorNode(): bool;
+    public function hasChildren(): bool;
 
     /**
      * @function getChild
