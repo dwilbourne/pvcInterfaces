@@ -17,14 +17,14 @@ interface TagInterface extends TagVoidInterface
 {
     /**
      * addInnerHtml
-     * @param TagInterface|TagVoidInterface|MsgInterface $innerHtml
+     * @param TagVoidInterface|TagInterface|MsgInterface|string $innerHtml
      */
-    public function addInnerHtml(TagInterface|TagVoidInterface|MsgInterface $innerHtml): void;
+    public function addInnerHtml(TagVoidInterface|TagInterface|MsgInterface|string $innerHtml): void;
 
 
     /**
      * getInnerHtml
-     * @return array<TagInterface|TagVoidInterface|MsgInterface>
+     * @return array<TagVoidInterface|TagInterface|MsgInterface|string>
      */
     public function getInnerHtml(): array;
 
