@@ -162,16 +162,16 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
     public function getVisitStatus(): int;
 
     /**
-     * neverVisisted
+     * neverVisited
      * @return bool
      */
-    public function neverVisisted(): bool;
+    public function neverVisited(): bool;
 
     /**
-     * partiallyVisisted
+     * partiallyVisited
      * @return bool
      */
-    public function partiallyVisisted(): bool;
+    public function partiallyVisited(): bool;
 
     /**
      * fullyVisited
