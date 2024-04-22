@@ -54,6 +54,13 @@ interface TagVoidInterface
     public function setEvent(string $eventName, string $script): void;
 
     /**
+     * getAttribute
+     * @param string $name
+     * @return string|null
+     */
+    public function getAttribute(string $name): ?string;
+
+    /**
      * getAttributes
      * @return array<AttributeInterface>
      */
