@@ -19,7 +19,14 @@ interface TagFactoryInterface
     /**
      * makeTag
      * @param string $tagName
-     * @return TagInterface|TagVoidInterface
+     * @return TagInterface
      */
-    public function makeTag(string $tagName): TagInterface|TagVoidInterface;
+    public function makeTag(string $tagName): TagInterface;
+
+    /**
+     * makeTagVoid
+     * @param string $tagName
+     * @return TagVoidInterface
+     */
+    public function makeTagVoid(string $tagName): TagVoidInterface;
 }
