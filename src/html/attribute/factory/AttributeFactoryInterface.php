@@ -15,7 +15,6 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class AttributeFactoryInterface
- * @template ValueType of AttributeInterface
  */
 interface AttributeFactoryInterface
 {
