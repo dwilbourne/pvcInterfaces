@@ -56,9 +56,9 @@ interface TagVoidInterface
     /**
      * getAttribute
      * @param string $name
-     * @return string|null
+     * @return AttributeInterface|null
      */
-    public function getAttribute(string $name): ?string;
+    public function getAttribute(string $name): ?AttributeInterface;
 
     /**
      * getAttributes
