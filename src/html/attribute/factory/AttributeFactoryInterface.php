@@ -29,13 +29,11 @@ interface AttributeFactoryInterface
     /**
      * makeCustomDataAttribute
      * @param string $name
-     * @param mixed $value
      * @param ValTesterInterface<string> $tester
      * @return AttributeSingleValueInterface
      */
     public function makeCustomDataAttribute(
         string $name,
-        mixed $value,
         ValTesterInterface $tester
     ): AttributeSingleValueInterface;
 
