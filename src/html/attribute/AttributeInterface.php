@@ -39,9 +39,9 @@ interface AttributeInterface extends AttributeAbstractInterface
 
     /**
      * getValue
-     * @return mixed
+     * @return string|array<string>
      */
-    public function getValue(): mixed;
+    public function getValue(): string|array;
 
     /**
      * setValue
