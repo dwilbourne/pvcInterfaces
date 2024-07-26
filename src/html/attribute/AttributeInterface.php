@@ -36,4 +36,16 @@ interface AttributeInterface extends AttributeAbstractInterface
      * @return ValTesterInterface<string>|null
      */
     public function getTester(): ?ValTesterInterface;
+
+    /**
+     * getValue
+     * @return mixed
+     */
+    public function getValue(): mixed;
+
+    /**
+     * setValue
+     * @param mixed $value
+     */
+    public function setValue(mixed $value): void;
 }

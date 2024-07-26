@@ -27,17 +27,6 @@ interface AttributeAbstractInterface
      */
     public function setName(string $name): void;
 
-    /**
-     * getValue
-     * @return mixed
-     */
-    public function getValue(): mixed;
-
-    /**
-     * setValue
-     * @param mixed $value
-     */
-    public function setValue(mixed $value): void;
 
     /**
      * render

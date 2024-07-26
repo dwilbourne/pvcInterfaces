@@ -11,17 +11,6 @@ namespace pvc\interfaces\html\attribute;
 /**
  * Class AttributeVoidInterface
  */
-interface AttributeVoidInterface extends AttributeInterface
+interface AttributeVoidInterface extends AttributeAbstractInterface
 {
-    /**
-     * setValue
-     * @param bool $value
-     */
-    public function setValue($value): void;
-
-    /**
-     * getValue
-     * @return bool
-     */
-    public function getValue(): mixed;
 }
