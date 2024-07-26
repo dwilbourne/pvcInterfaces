@@ -38,13 +38,6 @@ interface AttributeInterface extends AttributeAbstractInterface
     public function getTester(): ?ValTesterInterface;
 
     /**
-     * testValue
-     * @param string|array<string> $value
-     * @return bool
-     */
-    public function testValue(string|array $value): bool;
-
-    /**
      * getValue
      * @return string|array<string>
      */
