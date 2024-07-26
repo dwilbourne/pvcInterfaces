@@ -23,5 +23,5 @@ interface AttributeSingleValueInterface extends AttributeInterface
      * getValue
      * @return string|null
      */
-    public function getValue(): mixed;
+    public function getValue(): string|null;
 }
