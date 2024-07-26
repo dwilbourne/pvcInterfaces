@@ -73,6 +73,18 @@ interface TagVoidInterface
     public function getEvents(): array;
 
     /**
+     * removeAttribute
+     * @param string $name
+     */
+    public function removeAttribute(string $name): void;
+
+    /**
+     * removeEvent
+     * @param string $name
+     */
+    public function removeEvent(string $name): void;
+
+    /**
      * generateOpeningTag
      * @return string
      */
