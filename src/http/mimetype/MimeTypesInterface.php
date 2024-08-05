@@ -18,14 +18,14 @@ interface MimeTypesInterface
      * @param string $fileExt
      * @return ?string
      */
-    public function getMimeTypeFromExtension(string $fileExt): ?string;
+    public function getMimeTypeNameFromExtension(string $fileExt): ?string;
 
     /**
      * getExtensions
-     * @param string $mimeType
+     * @param string $mimeTypeName
      * @return array<string>
      */
-    public function getExtensionsFromMimeType(string $mimeType): array;
+    public function getExtensionsFromMimeTypeName(string $mimeTypeName): array;
 
     /**
      * isValidMimeType
