@@ -21,10 +21,10 @@ interface MimeTypeInterface
 
     /**
      * getMimeTypeName
-     * @return string
+     * @return string|null
      * full name of the mime type, e.g. 'application/javascript'
      */
-    public function getMimeTypeName(): string;
+    public function getMimeTypeName(): ?string;
 
     /**
      * setFileExtensions
