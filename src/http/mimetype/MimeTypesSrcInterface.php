@@ -14,6 +14,11 @@ namespace pvc\interfaces\http\mimetype;
 interface MimeTypesSrcInterface
 {
     /**
+     * getMimeTypeData
+     */
+    public function getMimeTypeData(): void;
+
+    /**
      * getMimeTypes
      * @return array<string, MimeTypeInterface>
      * the key in the array is the name of the mime type
