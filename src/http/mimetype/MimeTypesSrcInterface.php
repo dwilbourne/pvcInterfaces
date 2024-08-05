@@ -14,9 +14,9 @@ namespace pvc\interfaces\http\mimetype;
 interface MimeTypesSrcInterface
 {
     /**
-     * getMimeTypeData
+     * initializeMimeTypeData
      */
-    public function getMimeTypeData(): void;
+    public function initializeMimeTypeData(): void;
 
     /**
      * getMimeTypes
