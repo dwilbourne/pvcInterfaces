@@ -32,5 +32,5 @@ interface MimeTypesInterface
      * @param string $mimeType
      * @return bool
      */
-    public function isValidMimeType(string $mimeType): bool;
+    public function isValidMimeTypeName(string $mimeTypeName): bool;
 }
