@@ -33,4 +33,11 @@ interface MimeTypesInterface
      * @return bool
      */
     public function isValidMimeTypeName(string $mimeTypeName): bool;
+
+    /**
+     * isValidMimeTypeFileExtension
+     * @param string $fileExt
+     * @return bool
+     */
+    public function isValidMimeTypeFileExtension(string $fileExt): bool;
 }
