@@ -14,28 +14,28 @@ namespace pvc\interfaces\http\mimetype;
 interface MimeTypeInterface
 {
     /**
-     * setMimeType
-     * @param string $mimeType
+     * setMimeTypeName
+     * @param string $mimeTypeName
      */
-    public function setMimeType(string $mimeType): void;
+    public function setMimeTypeName(string $mimeTypeName): void;
 
     /**
-     * getMimeType
+     * getMimeTypeName
      * @return string
      * full name of the mime type, e.g. 'application/javascript'
      */
-    public function getMimeType(): string;
+    public function getMimeTypeName(): string;
 
     /**
-     * setExtensions
-     * @param array $extensions
+     * setFileExtensions
+     * @param array<string> $fileExtensions
      */
-    public function setExtensions(array $extensions): void;
+    public function setFileExtensions(array $fileExtensions): void;
 
     /**
-     * getExtensions
+     * getFileExtensions
      * @return array<string>
      * an array of the file extensions associated with this mime type
      */
-    public function getExtensions(): array;
+    public function getFileExtensions(): array;
 }
