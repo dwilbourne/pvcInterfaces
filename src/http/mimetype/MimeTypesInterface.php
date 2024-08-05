@@ -14,21 +14,21 @@ namespace pvc\interfaces\http\mimetype;
 interface MimeTypesInterface
 {
     /**
-     * getMimeTypeName
+     * getMimeTypeNameFromFileExtension
      * @param string $fileExt
      * @return ?string
      */
     public function getMimeTypeNameFromFileExtension(string $fileExt): ?string;
 
     /**
-     * getFileExtensions
+     * getFileExtensionsFromMimeTypeName
      * @param string $mimeTypeName
      * @return array<string>
      */
     public function getFileExtensionsFromMimeTypeName(string $mimeTypeName): array;
 
     /**
-     * isValidMimeType
+     * isValidMimeTypeName
      * @param string $mimeTypeName
      * @return bool
      */
