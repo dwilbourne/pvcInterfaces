@@ -3,6 +3,7 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\filtervar;
@@ -12,7 +13,6 @@ namespace pvc\interfaces\filtervar;
  */
 interface FilterVarInterface
 {
-
     /**
      * getLabel
      * @return string
