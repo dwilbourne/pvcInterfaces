@@ -26,6 +26,13 @@ interface TimeZoneInterface
     public function getTimeZoneString(): string;
 
     /**
+     * exists
+     * @param string $tzString
+     * @return bool
+     */
+    public static function exists(string $tzString): bool;
+
+    /**
      * __toString
      * @return string
      */
