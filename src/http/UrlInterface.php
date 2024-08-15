@@ -111,7 +111,7 @@ interface UrlInterface
 
     /**
      * setAttributesFromArray
-     * @param array<string, string> $urlParts
+     * @param array<string, string|int<0, 65535>> $urlParts
      */
     public function setAttributesFromArray(array $urlParts): void;
 
