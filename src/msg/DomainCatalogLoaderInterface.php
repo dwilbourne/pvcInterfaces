@@ -21,7 +21,7 @@ interface DomainCatalogLoaderInterface
      * @return array<string, string>
      *
      * throws an exception if it is unable to find a catalog corresponding to domain and locale, or is unable
-     * to parse such a catalog if it exists.  Otherwise, it returns an array of msgIds => translated strings.
+     * to parse such a catalog if it timeZoneNameExists.  Otherwise, it returns an array of msgIds => translated strings.
      */
     public function loadCatalog(string $domain, string $locale): array;
 }

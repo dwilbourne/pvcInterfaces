@@ -26,7 +26,7 @@ interface LocaleInterface
     public function getLocaleString(): string;
 
     /**
-     * exists
+     * timeZoneNameExists
      * @param string $locale
      * @return bool
      */
