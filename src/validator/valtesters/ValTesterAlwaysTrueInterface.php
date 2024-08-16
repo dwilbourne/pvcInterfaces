@@ -12,8 +12,7 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class ValTesterAlwaysTrueInterface
- * @template DataType
- * @extends ValTesterInterface<DataType>
+ * @extends ValTesterInterface<mixed>
  */
 interface ValTesterAlwaysTrueInterface extends ValTesterInterface
 {
