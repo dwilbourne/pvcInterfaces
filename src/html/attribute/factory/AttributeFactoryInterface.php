@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\attribute\factory;
 
+use pvc\interfaces\html\attribute\AttributeAbstractInterface;
 use pvc\interfaces\html\attribute\AttributeSingleValueInterface;
-use pvc\interfaces\html\attribute\AttributeWithValueInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
@@ -22,9 +22,9 @@ interface AttributeFactoryInterface
      * makeAttribute
      * This makes an empty attribute (no value))
      * @param string $attributeName
-     * @return AttributeWithValueInterface
+     * @return AttributeAbstractInterface
      */
-    public function makeAttribute(string $attributeName): AttributeWithValueInterface;
+    public function makeAttribute(string $attributeName): AttributeAbstractInterface;
 
     /**
      * makeCustomDataAttribute
