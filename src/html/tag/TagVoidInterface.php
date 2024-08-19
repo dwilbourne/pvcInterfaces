@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
-use pvc\interfaces\html\attribute\AttributeWithValueInterface;
+use pvc\interfaces\html\attribute\AttributeAbstractInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
@@ -56,13 +56,13 @@ interface TagVoidInterface
     /**
      * getAttribute
      * @param string $name
-     * @return AttributeWithValueInterface|null
+     * @return AttributeAbstractInterface|null
      */
-    public function getAttribute(string $name): ?AttributeWithValueInterface;
+    public function getAttribute(string $name): ?AttributeAbstractInterface;
 
     /**
      * getAttributes
-     * @return array<AttributeWithValueInterface>
+     * @return array<AttributeAbstractInterface>
      */
     public function getAttributes(): array;
 
