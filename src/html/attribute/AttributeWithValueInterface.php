@@ -11,7 +11,7 @@ namespace pvc\interfaces\html\attribute;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
- * Class AttributeInterface
+ * Class AttributeWithValueInterface
  *
  * This interface applies to attributes but not events.
  *
@@ -23,7 +23,7 @@ use pvc\interfaces\validator\ValTesterInterface;
  * attribute rendered.  In the case of void attributes (for example, 'hidden') the attribute is not rendered if the
  * value is false.
  */
-interface AttributeInterface extends AttributeAbstractInterface
+interface AttributeWithValueInterface extends AttributeAbstractInterface
 {
     /**
      * setTester

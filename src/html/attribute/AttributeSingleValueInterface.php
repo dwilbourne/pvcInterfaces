@@ -11,7 +11,7 @@ namespace pvc\interfaces\html\attribute;
 /**
  * Class AttributeSingleValueInterface
  */
-interface AttributeSingleValueInterface extends AttributeInterface
+interface AttributeSingleValueInterface extends AttributeWithValueInterface
 {
     /**
      * setValue
