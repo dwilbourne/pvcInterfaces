@@ -16,13 +16,14 @@ use pvc\interfaces\intl\LocaleInterface;
 
 /**
  * Class FrmtrHtmlInterface
- * @extends FrmtrInterface<TagInterface|TagVoidInterface>
+ * @template AttributeValueType
+ * @extends FrmtrInterface<TagInterface|TagVoidInterface<AttributeValueType>>
  */
 interface FrmtrHtmlInterface extends FrmtrInterface
 {
     /**
      * format
-     * @param TagInterface|TagVoidInterface $value
+     * @param TagInterface<AttributeValueType>|TagVoidInterface<AttributeValueType> $value
      * @return string
      */
     public function format($value): string;

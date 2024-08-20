@@ -12,19 +12,21 @@ use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class TagInterface
+ * @template AttributeValueType
+ * @extends TagVoidInterface<AttributeValueType>
  */
 interface TagInterface extends TagVoidInterface
 {
     /**
      * addInnerHtml
-     * @param TagVoidInterface|TagInterface|MsgInterface|string $innerHtml
+     * @param TagVoidInterface<AttributeValueType>|TagInterface<AttributeValueType>|MsgInterface|string $innerHtml
      */
     public function addInnerHtml(TagVoidInterface|TagInterface|MsgInterface|string $innerHtml): void;
 
 
     /**
      * getInnerHtml
-     * @return array<TagVoidInterface|TagInterface|MsgInterface|string>
+     * @return array<TagVoidInterface<AttributeValueType>|TagInterface<AttributeValueType>|MsgInterface|string>
      */
     public function getInnerHtml(): array;
 

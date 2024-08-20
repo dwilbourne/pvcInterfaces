@@ -9,20 +9,20 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\attribute;
 
 /**
- * Class AttributeSingleValueInterface
- * @extends AttributeNotVoidInterface<string>
+ * Class AttributeVoidInterface
+ * @extends AttributeInterface<bool>
  */
-interface AttributeSingleValueInterface extends AttributeNotVoidInterface
+interface AttributeVoidInterface extends AttributeInterface
 {
     /**
      * setValue
-     * @param string $value
+     * @param bool $value
      */
     public function setValue($value): void;
 
     /**
      * getValue
-     * @return string|null
+     * @return bool|null
      */
-    public function getValue(): ?string;
+    public function getValue(): ?bool;
 }

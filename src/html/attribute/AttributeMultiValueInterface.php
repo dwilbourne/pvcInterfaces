@@ -10,8 +10,9 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeMultiValueInterface
+ * @extends AttributeNotVoidInterface<array<string>>
  */
-interface AttributeMultiValueInterface extends AttributeWithValueInterface
+interface AttributeMultiValueInterface extends AttributeNotVoidInterface
 {
     /**
      * setValue

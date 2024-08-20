@@ -13,20 +13,21 @@ use pvc\interfaces\html\tag\TagVoidInterface;
 
 /**
  * Class TagFactoryInterface
+ * @template AttributeValueType
  */
 interface TagFactoryInterface
 {
     /**
      * makeTag
      * @param string $tagName
-     * @return TagInterface
+     * @return TagInterface<AttributeValueType>
      */
     public function makeTag(string $tagName): TagInterface;
 
     /**
      * makeTagVoid
      * @param string $tagName
-     * @return TagVoidInterface
+     * @return TagVoidInterface<AttributeValueType>
      */
     public function makeTagVoid(string $tagName): TagVoidInterface;
 }

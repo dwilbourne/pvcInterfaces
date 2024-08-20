@@ -10,9 +10,9 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class EventInterface
+ * @extends AttributeAbstractInterface<string>
  *
- * events have scripts, so this may make the code a little easier to read.  in real life these
- * methods just call setValue and getValue.
+ * events have scripts, so to make the code a little easier to read, there are setScript and getScript methods
  */
 interface EventInterface extends AttributeAbstractInterface
 {
@@ -38,5 +38,5 @@ interface EventInterface extends AttributeAbstractInterface
      * getScript
      * @return string|null
      */
-    public function getScript(): string|null;
+    public function getScript(): ?string;
 }

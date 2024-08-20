@@ -14,6 +14,7 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class TagVoidInterface
+ * @template AttributeValueType
  */
 interface TagVoidInterface
 {
@@ -33,9 +34,9 @@ interface TagVoidInterface
     /**
      * setAttribute
      * @param string $name
-     * @param string|array<string> $value
+     * @param string|array<string>|bool $value
      */
-    public function setAttribute(string $name, string|array $value): void;
+    public function setAttribute(string $name, string|array|bool $value): void;
 
     /**
      * setCustomDataAttribute
@@ -56,13 +57,13 @@ interface TagVoidInterface
     /**
      * getAttribute
      * @param string $name
-     * @return AttributeAbstractInterface|null
+     * @return AttributeAbstractInterface<AttributeValueType>|null
      */
     public function getAttribute(string $name): ?AttributeAbstractInterface;
 
     /**
      * getAttributes
-     * @return array<AttributeAbstractInterface>
+     * @return array<AttributeAbstractInterface<AttributeValueType>>
      */
     public function getAttributes(): array;
 

@@ -10,6 +10,9 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeInterface
+ * @template ValueType
+ * @extends AttributeAbstractInterface<ValueType>
+ *
  * This interface is meant to distinguish between events and attributes.  Events inherit from AttributeAbstractInterface
  * as well.  All attributes inherit from this.
  */
