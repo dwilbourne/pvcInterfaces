@@ -57,7 +57,7 @@ interface TagVoidInterface
      * getAttributes
      * @return array<AttributeInterface<AttributeValueType>>
      */
-    public function getAttributes(int $attributeType): array;
+    public function getAttributes(int $attributeTypes): array;
 
     /**
      * removeAttribute
