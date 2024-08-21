@@ -28,12 +28,12 @@ interface AttributeFactoryInterface
     public function makeAttribute(string $attributeName): AttributeInterface|EventInterface;
 
     /**
-     * makeCustomDataAttribute
+     * makeCustomData
      * @param string $name
      * @param ValTesterInterface<string> $tester
      * @return AttributeSingleValueInterface
      */
-    public function makeCustomDataAttribute(
+    public function makeCustomData(
         string $name,
         ValTesterInterface $tester
     ): AttributeSingleValueInterface;
