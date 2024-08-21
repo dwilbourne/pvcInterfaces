@@ -23,9 +23,9 @@ interface AttributeFactoryInterface
      * makeAttribute
      * This makes an empty attribute (no value)
      * @param string $attributeName
-     * @return AttributeInterface<ValueType>
+     * @return AttributeInterface<ValueType>|EventInterface
      */
-    public function makeAttribute(string $attributeName): AttributeInterface;
+    public function makeAttribute(string $attributeName): AttributeInterface|EventInterface;
 
     /**
      * makeCustomDataAttribute
@@ -37,11 +37,4 @@ interface AttributeFactoryInterface
         string $name,
         ValTesterInterface $tester
     ): AttributeSingleValueInterface;
-
-    /**
-     * makeEvent
-     * @param string $eventName
-     * @return EventInterface
-     */
-    public function makeEvent(string $eventName): EventInterface;
 }
