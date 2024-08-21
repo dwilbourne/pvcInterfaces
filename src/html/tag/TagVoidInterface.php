@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\tag;
 
 use pvc\interfaces\html\attribute\AttributeAbstractInterface;
-use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
@@ -39,20 +38,13 @@ interface TagVoidInterface
     public function setAttribute(string $name, string|array|bool $value): void;
 
     /**
-     * setCustomDataAttribute
+     * setCustomData
      * @param string $name
      * @param string $value
      * @param ValTesterInterface<string> $tester
      * @return mixed
      */
-    public function setCustomDataAttribute(string $name, string $value, ValTesterInterface $tester);
-
-    /**
-     * setEvent
-     * @param string $eventName
-     * @param string $script
-     */
-    public function setEvent(string $eventName, string $script): void;
+    public function setCustomData(string $name, string $value, ValTesterInterface $tester);
 
     /**
      * getAttribute
@@ -65,25 +57,13 @@ interface TagVoidInterface
      * getAttributes
      * @return array<AttributeAbstractInterface<AttributeValueType>>
      */
-    public function getAttributes(): array;
-
-    /**
-     * getEvents
-     * @return array<EventInterface>
-     */
-    public function getEvents(): array;
+    public function getAttributes(int $attributeType): array;
 
     /**
      * removeAttribute
      * @param string $name
      */
     public function removeAttribute(string $name): void;
-
-    /**
-     * removeEvent
-     * @param string $name
-     */
-    public function removeEvent(string $name): void;
 
     /**
      * generateOpeningTag
