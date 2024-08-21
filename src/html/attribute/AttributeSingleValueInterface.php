@@ -10,9 +10,9 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeSingleValueInterface
- * @extends AttributeNotVoidInterface<string>
+ * @extends AttributeInterface<string|bool>
  */
-interface AttributeSingleValueInterface extends AttributeNotVoidInterface
+interface AttributeSingleValueInterface extends AttributeInterface
 {
     /**
      * setValue

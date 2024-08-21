@@ -8,16 +8,38 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\attribute;
 
+use pvc\interfaces\validator\ValTesterInterface;
+
 /**
  * Class AttributeInterface
  * @template ValueType
- * @extends AttributeAbstractInterface<ValueType>
- *
- * This interface is meant to distinguish between events and attributes.  Events inherit from AttributeAbstractInterface
- * as well.  All attributes inherit from this.  Attributes have values, events have scripts
  */
-interface AttributeInterface extends AttributeAbstractInterface
+interface AttributeInterface
 {
+    /**
+     * getName
+     * @return string
+     */
+    public function getName(): string;
+
+    /**
+     * setName
+     * @param string $name
+     */
+    public function setName(string $name): void;
+
+    /**
+     * setTester
+     * @param ValTesterInterface<string|bool> $tester
+     */
+    public function setTester(ValTesterInterface $tester): void;
+
+    /**
+     * getTester
+     * @return ValTesterInterface<string|bool>|null
+     */
+    public function getTester(): ?ValTesterInterface;
+
     /**
      * getValue
      * @return ValueType
@@ -29,4 +51,10 @@ interface AttributeInterface extends AttributeAbstractInterface
      * @param  ValueType $value
      */
     public function setValue(mixed $value): void;
+
+    /**
+     * render
+     * @return string
+     */
+    public function render(): string;
 }
