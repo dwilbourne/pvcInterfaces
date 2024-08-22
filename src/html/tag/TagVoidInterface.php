@@ -32,10 +32,9 @@ interface TagVoidInterface
 
     /**
      * setAttribute
-     * @param string $name
-     * @param string|array<string>|bool $value
+     * @param AttributeInterface $attribute
      */
-    public function setAttribute(string $name, string|array|bool $value): void;
+    public function setAttribute(AttributeInterface $attribute): void;
 
     /**
      * setCustomData
