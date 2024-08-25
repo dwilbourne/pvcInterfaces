@@ -39,5 +39,19 @@ interface HtmlConfigInterface
      * @param string $name
      * @return bool
      */
-    public function isValidSubtag(string $name): bool;
+    public function isValidSubTag(string $subTagName, $parentTagName): bool;
+
+    /**
+     * isInlineTag
+     * @param string $name
+     * @return bool
+     */
+    public function isInlineTag(string $name): bool;
+
+    /**
+     * isBlockTag
+     * @param string $name
+     * @return bool
+     */
+    public function isBlockTag(string $name): bool;
 }
