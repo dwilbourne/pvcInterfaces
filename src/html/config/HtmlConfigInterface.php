@@ -33,4 +33,11 @@ interface HtmlConfigInterface
      * @return bool
      */
     public function innerTextNotAllowed(string $tagName): bool;
+
+    /**
+     * isValidSubtag
+     * @param string $name
+     * @return bool
+     */
+    public function isValidSubtag(string $name): bool;
 }
