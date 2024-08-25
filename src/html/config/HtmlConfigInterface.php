@@ -19,4 +19,6 @@ interface HtmlConfigInterface
      * @return bool
      */
     public function isValidAttributeName(string $name): bool;
+
+    public function isValidTagName(string $name): bool;
 }
