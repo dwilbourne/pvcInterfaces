@@ -20,5 +20,17 @@ interface HtmlConfigInterface
      */
     public function isValidAttributeName(string $name): bool;
 
+    /**
+     * isValidTagName
+     * @param string $name
+     * @return bool
+     */
     public function isValidTagName(string $name): bool;
+
+    /**
+     * innerTextNotAllowed
+     * @param string $tagName
+     * @return bool
+     */
+    public function innerTextNotAllowed(string $tagName): bool;
 }
