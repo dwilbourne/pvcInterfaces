@@ -19,7 +19,7 @@ interface TagInterface extends TagVoidInterface
 {
     /**
      * addInnerHtml
-     * @param TagVoidInterface<AttributeValueType>|TagInterface<AttributeValueType>|MsgInterface|string $innerHtml
+     * @param TagVoidInterface<AttributeValueType>|MsgInterface|string $innerHtml
      */
     public function addInnerHtml(TagVoidInterface|TagInterface|MsgInterface|string $innerHtml): void;
 
