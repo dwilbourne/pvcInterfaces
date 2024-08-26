@@ -16,7 +16,7 @@ interface ValTesterInterface
 {
     /**
      * testValue
-     * @param DataType|null $value
+     * @param DataType $value
      * @return bool
      */
     public function testValue(mixed $value): bool;
