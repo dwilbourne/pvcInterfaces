@@ -26,11 +26,11 @@ interface AttributeFactoryInterface
     /**
      * makeCustomData
      * @param string $name
-     * @param ValTesterInterface<ValueType> $valueTester
+     * @param ValTesterInterface<ValueType>|null $valueTester
      * @return AttributeInterface<ValueType>
      */
     public function makeCustomData(
         string $name,
-        ValTesterInterface $valueTester
+        ValTesterInterface $valueTester = null
     ): AttributeInterface;
 }
