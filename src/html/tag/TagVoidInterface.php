@@ -13,7 +13,7 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class TagVoidInterface
- * @template AttributeValueType
+ * @template ValueType
  */
 interface TagVoidInterface
 {
@@ -48,13 +48,13 @@ interface TagVoidInterface
     /**
      * getAttribute
      * @param string $name
-     * @return AttributeInterface<AttributeValueType>|null
+     * @return AttributeInterface<ValueType>|null
      */
     public function getAttribute(string $name): ?AttributeInterface;
 
     /**
      * getAttributes
-     * @return array<AttributeInterface<AttributeValueType>>
+     * @return array<AttributeInterface<ValueType>>
      */
     public function getAttributes(int $attributeTypes): array;
 
