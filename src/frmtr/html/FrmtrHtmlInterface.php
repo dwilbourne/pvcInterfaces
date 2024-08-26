@@ -10,20 +10,20 @@ namespace pvc\interfaces\frmtr\html;
 
 use pvc\interfaces\frmtr\FrmtrInterface;
 use pvc\interfaces\frmtr\msg\FrmtrMsgInterface;
-use pvc\interfaces\html\tag\TagInterface;
 use pvc\interfaces\html\tag\TagVoidInterface;
 use pvc\interfaces\intl\LocaleInterface;
 
 /**
  * Class FrmtrHtmlInterface
  * @template AttributeValueType
- * @extends FrmtrInterface<TagInterface|TagVoidInterface<AttributeValueType>>
+ * @template ValTesterType
+ * @extends FrmtrInterface<TagVoidInterface<AttributeValueType, ValTesterType>>
  */
 interface FrmtrHtmlInterface extends FrmtrInterface
 {
     /**
      * format
-     * @param TagInterface<AttributeValueType>|TagVoidInterface<AttributeValueType> $value
+     * @param TagVoidInterface<AttributeValueType, ValTesterType> $value
      * @return string
      */
     public function format($value): string;

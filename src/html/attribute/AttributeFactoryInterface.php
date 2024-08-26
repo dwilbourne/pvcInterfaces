@@ -13,13 +13,14 @@ use pvc\interfaces\validator\ValTesterInterface;
 /**
  * Class AttributeFactoryInterface
  * @template ValueType
+ * @template ValTesterType
  */
 interface AttributeFactoryInterface
 {
     /**
      * makeAttribute
      * @param string $attributeName
-     * @return AttributeInterface<ValueType>
+     * @return AttributeInterface<ValueType, ValTesterType>
      */
     public function makeAttribute(string $attributeName): AttributeInterface;
 
@@ -27,7 +28,7 @@ interface AttributeFactoryInterface
      * makeCustomData
      * @param string $name
      * @param ValTesterInterface<string>|null $valueTester
-     * @return AttributeInterface<string>
+     * @return AttributeInterface<string, string>
      */
     public function makeCustomData(
         string $name,

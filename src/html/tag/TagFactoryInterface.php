@@ -11,20 +11,14 @@ namespace pvc\interfaces\html\tag;
 /**
  * Class TagFactoryInterface
  * @template ValueType
+ * @template ValTesterType
  */
 interface TagFactoryInterface
 {
     /**
      * makeTag
      * @param string $tagName
-     * @return TagInterface<ValueType>
+     * @return TagInterface<ValueType, ValTesterType>
      */
     public function makeTag(string $tagName): TagInterface;
-
-    /**
-     * makeTagVoid
-     * @param string $tagName
-     * @return TagVoidInterface<ValueType>
-     */
-    public function makeTagVoid(string $tagName): TagVoidInterface;
 }
