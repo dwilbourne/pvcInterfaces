@@ -32,6 +32,18 @@ interface TagVoidInterface
     public function setName(string $name);
 
     /**
+     * setAllowedAttributes
+     * @param array<string> $allowedAttributes
+     */
+    public function setAllowedAttributes(array $allowedAttributes): void;
+
+    /**
+     * getAllowedAttributes
+     * @return array<string>
+     */
+    public function getAllowedAttributes(): array;
+
+    /**
      * setAttribute
      * @param AttributeInterface<ValueType, ValTesterType> $attribute
      */
