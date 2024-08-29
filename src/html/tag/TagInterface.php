@@ -24,6 +24,41 @@ interface TagInterface extends TagVoidInterface
      */
     public function addInnerHtml(TagVoidInterface|TagInterface|MsgInterface|string $innerHtml): void;
 
+    /**
+     * setAllowedSubtags
+     * @param array<string> $subTagNames
+     */
+    public function setAllowedSubtags(array $subTagNames): void;
+
+    /**
+     * getAllowedSubTags
+     * @return array<string>
+     */
+    public function getAllowedSubTags(): array;
+
+    /**
+     * setInnerTextAllowed
+     * @param bool $innerTextAllowed
+     */
+    public function setInnerTextAllowed(bool $innerTextAllowed): void;
+
+    /**
+     * innerTextAllowed
+     * @return bool
+     */
+    public function isInnerTextAllowed(): bool;
+
+    /**
+     * isInlineElement
+     * @return bool
+     */
+    public function isInlineElement(): bool;
+
+    /**
+     * isBlockElement
+     * @return bool
+     */
+    public function isBlockElement(): bool;
 
     /**
      * getInnerHtml
