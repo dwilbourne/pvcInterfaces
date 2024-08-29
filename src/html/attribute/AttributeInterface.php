@@ -33,6 +33,19 @@ interface AttributeInterface
     public function setName(string $name): void;
 
     /**
+     * setValueIsCaseSensitive
+     * @param bool $isCaseSensitive
+     * @return mixed
+     */
+    public function setValueIsCaseSensitive(bool $isCaseSensitive);
+
+    /**
+     * valueIsCaseSensitive
+     * @return bool
+     */
+    public function valueIsCaseSensitive(): bool;
+
+    /**
      * setTester
      * @param ValTesterInterface<ValTesterType> $tester
      */
