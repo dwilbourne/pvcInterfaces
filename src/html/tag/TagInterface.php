@@ -49,6 +49,12 @@ interface TagInterface extends TagVoidInterface
     public function isInnerTextAllowed(): bool;
 
     /**
+     * setIsInlineElement
+     * @param bool $isInlineElement
+     * @return mixed
+     */
+    public function setIsInlineElement(bool $isInlineElement);
+    /**
      * isInlineElement
      * @return bool
      */
