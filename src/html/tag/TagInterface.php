@@ -39,32 +39,23 @@ interface TagInterface extends TagVoidInterface
     /**
      * setInnerTextAllowed
      * @param bool $innerTextAllowed
+     * TODO: decide whether to implement this feature
+     * public function setInnerTextAllowed(bool $innerTextAllowed): void;
      */
-    public function setInnerTextAllowed(bool $innerTextAllowed): void;
 
     /**
      * innerTextAllowed
      * @return bool
+     * TODO: decide whether to implement this feature
+     * public function isInnerTextAllowed(): bool;
      */
-    public function isInnerTextAllowed(): bool;
 
     /**
-     * setIsInlineElement
-     * @param bool $isInlineElement
-     * @return mixed
+     * setDefaultCSSDisplayValue
+     * @param string $displayValue
+     * TODO: decide whether to implement this feature
+     * public function setDefaultCSSDisplayValue(string $displayValue): void;
      */
-    public function setIsInlineElement(bool $isInlineElement);
-    /**
-     * isInlineElement
-     * @return bool
-     */
-    public function isInlineElement(): bool;
-
-    /**
-     * isBlockElement
-     * @return bool
-     */
-    public function isBlockElement(): bool;
 
     /**
      * getInnerHtml
