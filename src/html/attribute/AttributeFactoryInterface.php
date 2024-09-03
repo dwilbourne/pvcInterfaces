@@ -34,4 +34,11 @@ interface AttributeFactoryInterface
         string $name,
         ValTesterInterface $valueTester = null
     ): AttributeInterface;
+
+    /**
+     * makeEvent
+     * @param string $eventName
+     * @return AttributeInterface<ValueType, ValTesterType>
+     */
+    public function makeEvent(string $eventName): AttributeInterface;
 }
