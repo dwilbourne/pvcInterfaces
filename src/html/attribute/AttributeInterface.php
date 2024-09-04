@@ -16,7 +16,11 @@ use pvc\interfaces\validator\ValTesterInterface;
  * @template ValTesterType
  *
  * ValueType and ValTesterType would be the same, but multivalued attributes store values as an array and
- * so in that case the tester type is for an element of the array and the value type is the array
+ * so in that case the tester type is for an element of the array and the value type is the array.
+ *
+ * There are no publicly available setters for the name or the value tester of the attribute.  This interface
+ * presumes they are set at construction and are immutable since changing one without the other could lead to
+ * an invalid object state.
  */
 interface AttributeInterface
 {
@@ -25,12 +29,6 @@ interface AttributeInterface
      * @return string
      */
     public function getName(): string;
-
-    /**
-     * setName
-     * @param string $name
-     */
-    public function setName(string $name): void;
 
     /**
      * setCaseSensitive
@@ -44,12 +42,6 @@ interface AttributeInterface
      * @return bool
      */
     public function isCaseSensitive(): bool;
-
-    /**
-     * setTester
-     * @param ValTesterInterface<ValTesterType> $tester
-     */
-    public function setTester(ValTesterInterface $tester): void;
 
     /**
      * getTester
