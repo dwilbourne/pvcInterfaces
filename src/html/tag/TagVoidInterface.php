@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\tag;
 
 use pvc\interfaces\html\attribute\AttributeInterface;
-use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class TagVoidInterface
@@ -48,15 +47,6 @@ interface TagVoidInterface
      * @param AttributeInterface<ValueType, ValTesterType> $attribute
      */
     public function setAttribute(AttributeInterface $attribute): void;
-
-    /**
-     * setCustomData
-     * @param string $name
-     * @param string $value
-     * @param ValTesterInterface<string> $tester
-     * @return mixed
-     */
-    public function setCustomData(string $name, string $value, ValTesterInterface $tester);
 
     /**
      * getAttribute
