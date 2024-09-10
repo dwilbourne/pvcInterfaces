@@ -12,19 +12,24 @@ namespace pvc\interfaces\storage\filesys;
  */
 interface FileAccessInterface
 {
+    public function fileEntryExists(string $fileEntryName): bool;
     public function fileExists(string $fileName): bool;
 
     public function fileIsReadable(string $fileName): bool;
 
     public function fileIsWriteable(string $fileName): bool;
 
+    public function directoryExists(string $dirName): bool;
+
+    public function directoryIsReadable(string $dirName): bool;
+
+    public function directoryIsWriteable(string $dirName): bool;
+
+    public function getDirectoryContents(string $dirName, bool $withDots = false, int $sortOrder = SCANDIR_SORT_ASCENDING): array|false;
+
     public function fileGetContents(string $fileName): string|false;
 
     public function filePutContents(string $fileName, string $data): bool;
-
-    public function fileGetLine(): string|false;
-
-    public function filePutLine(string $data): bool;
 
     public function openFile(string $fileName, string $mode): bool;
 
@@ -36,11 +41,10 @@ interface FileAccessInterface
 
     public function eof(): bool;
 
-    public function directoryExists(string $dirName): bool;
+    public function fileGetLine(): string|false;
 
-    public function directoryIsWriteable(string $dirName): bool;
+    public function filePutLine(string $data): bool;
 
-    public function directoryIsReadable(string $dirName): bool;
 
-    public function getDirectoryContents(string $dirName, bool $withDots = false): ?array;
+
 }
