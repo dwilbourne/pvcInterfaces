@@ -30,7 +30,7 @@ interface FileAccessInterface
 
     public function fileGetContents(string $fileName): string|false;
 
-    public function filePutContents(string $fileName, string $data): bool;
+    public function filePutContents(string $fileName, string $data): int|false;
 
     public function openFile(string $fileName, string $mode): bool;
 
