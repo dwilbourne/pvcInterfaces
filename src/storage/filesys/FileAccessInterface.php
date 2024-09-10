@@ -25,7 +25,8 @@ interface FileAccessInterface
 
     public function directoryIsWriteable(string $dirName): bool;
 
-    public function getDirectoryContents(string $dirName, bool $withDots = false, int $sortOrder = SCANDIR_SORT_ASCENDING): array|false;
+    public function directoryGetContents(string $dirName, bool $withDots = false, int $sortOrder =
+    SCANDIR_SORT_ASCENDING): array|false;
 
     public function fileGetContents(string $fileName): string|false;
 
