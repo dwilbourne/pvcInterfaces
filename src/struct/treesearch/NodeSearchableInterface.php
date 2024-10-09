@@ -17,5 +17,5 @@ interface NodeSearchableInterface
      * getNodeId
      * @return array-key
      */
-    public function getNodeId(): int|string;
+    public function getNodeId(): mixed;
 }
