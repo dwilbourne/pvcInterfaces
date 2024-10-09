@@ -28,13 +28,13 @@ interface TreeSearchInterface
 
     /**
      * setSearchStrategy
-     * @param TreeSearchStrategyInterface<NodeIdType, NodeSearchableInterface> $strategy
+     * @param TreeSearchStrategyInterface<NodeIdType> $strategy
      */
     public function setSearchStrategy(TreeSearchStrategyInterface $strategy): void;
 
     /**
      * getSearchStrategy
-     * @return TreeSearchStrategyInterface<NodeIdType, NodeSearchableInterface>
+     * @return TreeSearchStrategyInterface<NodeIdType>
      */
     public function getSearchStrategy(): TreeSearchStrategyInterface;
 
