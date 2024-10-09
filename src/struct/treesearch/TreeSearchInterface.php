@@ -11,56 +11,55 @@ namespace pvc\interfaces\struct\treesearch;
 /**
  * Class TreeSearchInterface
  * @template NodeIdType of array-key
- * @template NodeType of NodeSearchableInterface
  */
 interface TreeSearchInterface
 {
     /**
      * setStartNode
-     * @param NodeType $node
+     * @param NodeSearchableInterface $node
      */
     public function setStartNode($node): void;
 
     /**
      * getStartNode
-     * @return NodeType|null
+     * @return NodeSearchableInterface|null
      */
     public function getStartNode(): mixed;
 
     /**
      * setSearchStrategy
-     * @param TreeSearchStrategyInterface<NodeIdType, NodeType> $strategy
+     * @param TreeSearchStrategyInterface<NodeIdType, NodeSearchableInterface> $strategy
      */
     public function setSearchStrategy(TreeSearchStrategyInterface $strategy): void;
 
     /**
      * getSearchStrategy
-     * @return TreeSearchStrategyInterface<NodeIdType, NodeType>
+     * @return TreeSearchStrategyInterface<NodeIdType, NodeSearchableInterface>
      */
     public function getSearchStrategy(): TreeSearchStrategyInterface;
 
     /**
      * setSearchFilter
-     * @param NodeFilterInterface<NodeType> $nodeFilter
+     * @param NodeFilterInterface $nodeFilter
      */
     public function setSearchFilter(NodeFilterInterface $nodeFilter): void;
 
     /**
      * getSearchFilter
-     * @return NodeFilterInterface<NodeType>
+     * @return NodeFilterInterface
      */
     public function getSearchFilter(): NodeFilterInterface;
 
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<int, NodeType>
+     * @return array<int, NodeSearchableInterface>
      */
     public function getNodes(): array;
 
     /**
      * current
-     * @return NodeType|null
+     * @return NodeSearchableInterface|null
      */
     public function current(): mixed;
 

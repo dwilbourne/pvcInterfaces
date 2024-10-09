@@ -13,22 +13,21 @@ use Iterator;
 /**
  * Class TreeSearchStrategyInterface
  * @template NodeIdType of array-key
- * @template NodeType of NodeSearchableInterface
  *
- * @extends Iterator<NodeIdType, NodeType>
+ * @extends Iterator<NodeIdType, NodeSearchableInterface>
  */
 interface TreeSearchStrategyInterface extends Iterator
 {
     /**
      * setStartNode
-     * @param NodeType $startNode
+     * @param NodeSearchableInterface $startNode
      */
     public function setStartNode($startNode): void;
 
     /**
      * getStartNode
-     * @return NodeType
-     */
+     * @return NodeSearchableInterface
+    NodeSearchableInterface
     public function getStartNode(): mixed;
 
     /**
@@ -39,7 +38,7 @@ interface TreeSearchStrategyInterface extends Iterator
 
     /**
      * current
-     * @return NodeType|null
+     * @return NodeSearchableInterface|null
      */
     public function current(): mixed;
 }
