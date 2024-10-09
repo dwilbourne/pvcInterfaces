@@ -13,5 +13,9 @@ namespace pvc\interfaces\struct\treesearch;
  */
 interface NodeSearchableInterface
 {
-
+    /**
+     * getNodeId
+     * @return array-key
+     */
+    public function getNodeId(): int|string;
 }
