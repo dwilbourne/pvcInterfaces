@@ -3,6 +3,7 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\storage\filesys;
@@ -25,8 +26,18 @@ interface FileAccessInterface
 
     public function directoryIsWriteable(string $dirName): bool;
 
-    public function directoryGetContents(string $dirName, bool $withDots = false, int $sortOrder =
-    SCANDIR_SORT_ASCENDING): array|false;
+    /**
+     * directoryGetContents
+     * @param string $dirName
+     * @param bool $withDots
+     * @param int $sortOrder
+     * @return array<string>|false
+     */
+    public function directoryGetContents(
+        string $dirName,
+        bool $withDots = false,
+        int $sortOrder = SCANDIR_SORT_ASCENDING
+    ): array|false;
 
     public function fileGetContents(string $fileName): string|false;
 
@@ -34,7 +45,7 @@ interface FileAccessInterface
 
     public function openFile(string $fileName, string $mode): bool;
 
-    public function readFile(int $length = 8096);
+    public function readFile(int $length = 8096): string;
 
     public function writeFile(string $data): bool;
 
@@ -45,7 +56,4 @@ interface FileAccessInterface
     public function fileGetLine(): string|false;
 
     public function filePutLine(string $data): bool;
-
-
-
 }

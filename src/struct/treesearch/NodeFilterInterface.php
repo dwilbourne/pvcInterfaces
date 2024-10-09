@@ -6,11 +6,11 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\search;
+namespace pvc\interfaces\struct\treesearch;
 
 /**
  * Class NodeFilterInterface
- * @template NodeType
+ * @template NodeType of NodeSearchableInterface
  */
 interface NodeFilterInterface
 {
