@@ -12,8 +12,9 @@ use Iterator;
 
 /**
  * Class TreeSearchStrategyInterface
- * @template NodeType of NodeSearchableInterface
  * @template NodeIdType of array-key
+ * @template NodeType of NodeSearchableInterface
+ *
  * @extends Iterator<NodeIdType, NodeType>
  */
 interface TreeSearchStrategyInterface extends Iterator

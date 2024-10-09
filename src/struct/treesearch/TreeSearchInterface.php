@@ -10,8 +10,8 @@ namespace pvc\interfaces\struct\treesearch;
 
 /**
  * Class TreeSearchInterface
- * @template NodeType of NodeSearchableInterface
  * @template NodeIdType of array-key
+ * @template NodeType of NodeSearchableInterface
  */
 interface TreeSearchInterface
 {
@@ -29,13 +29,13 @@ interface TreeSearchInterface
 
     /**
      * setSearchStrategy
-     * @param TreeSearchStrategyInterface<NodeType, NodeIdType> $strategy
+     * @param TreeSearchStrategyInterface<NodeIdType, NodeType> $strategy
      */
     public function setSearchStrategy(TreeSearchStrategyInterface $strategy): void;
 
     /**
      * getSearchStrategy
-     * @return TreeSearchStrategyInterface<NodeType, NodeIdType>
+     * @return TreeSearchStrategyInterface<NodeIdType, NodeType>
      */
     public function getSearchStrategy(): TreeSearchStrategyInterface;
 
