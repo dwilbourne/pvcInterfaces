@@ -27,7 +27,7 @@ interface TreeSearchStrategyInterface extends Iterator
     /**
      * getStartNode
      * @return NodeSearchableInterface
-    NodeSearchableInterface
+     */
     public function getStartNode(): mixed;
 
     /**
