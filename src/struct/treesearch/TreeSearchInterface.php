@@ -31,7 +31,7 @@ interface TreeSearchInterface
      * setSearchStrategy
      * @param TreeSearchStrategyInterface<NodeType, NodeIdType> $strategy
      */
-    public function setSearchStrategy(mixed $strategy): void;
+    public function setSearchStrategy(TreeSearchStrategyInterface $strategy): void;
 
     /**
      * getSearchStrategy
@@ -43,7 +43,7 @@ interface TreeSearchInterface
      * setSearchFilter
      * @param NodeFilterInterface<NodeType> $nodeFilter
      */
-    public function setSearchFilter(mixed $nodeFilter): void;
+    public function setSearchFilter(NodeFilterInterface $nodeFilter): void;
 
     /**
      * getSearchFilter
