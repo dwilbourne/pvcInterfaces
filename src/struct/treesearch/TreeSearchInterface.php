@@ -49,7 +49,7 @@ interface TreeSearchInterface
      * getSearchFilter
      * @return NodeFilterInterface<NodeType>
      */
-    public function getSearchFilter(): mixed;
+    public function getSearchFilter(): NodeFilterInterface;
 
     /**
      * getNodes
