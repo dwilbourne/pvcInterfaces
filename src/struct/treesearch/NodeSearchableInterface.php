@@ -18,4 +18,10 @@ interface NodeSearchableInterface
      * @return array-key
      */
     public function getNodeId(): mixed;
+
+    /**
+     * getChildren
+     * @return array<NodeSearchableInterface>
+     */
+    public function getChildren(): array;
 }
