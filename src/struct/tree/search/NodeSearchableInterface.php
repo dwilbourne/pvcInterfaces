@@ -35,4 +35,10 @@ interface NodeSearchableInterface
      * @return non-negative-int|null
      */
     public function getParentId(): ?int;
+
+    /**
+     * getParent
+     * @return NodeSearchableInterface<PayloadType, CollectionType>|null
+     */
+    public function getParent(): ?NodeSearchableInterface;
 }
