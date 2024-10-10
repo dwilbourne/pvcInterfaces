@@ -29,16 +29,4 @@ interface NodeSearchableInterface
      * @return CollectionAbstractInterface<PayloadType, CollectionType>
      */
     public function getChildren(): CollectionAbstractInterface;
-
-    /**
-     * getParentId
-     * @return non-negative-int|null
-     */
-    public function getParentId(): ?int;
-
-    /**
-     * getParentForSearch
-     * @return NodeSearchableInterface<PayloadType, CollectionType>|null
-     */
-    public function getParentForSearch(): ?NodeSearchableInterface;
 }
