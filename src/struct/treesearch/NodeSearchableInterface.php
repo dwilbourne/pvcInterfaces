@@ -24,4 +24,10 @@ interface NodeSearchableInterface
      * @return array<NodeSearchableInterface>
      */
     public function getChildren(): array;
+
+    /**
+     * getParentId
+     * @return mixed
+     */
+    public function getParentId(): mixed;
 }
