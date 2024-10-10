@@ -20,7 +20,7 @@ interface NodeSearchableInterface
 {
     /**
      * getNodeId
-     * @return int
+     * @return non-negative-int
      */
     public function getNodeId(): int;
 
@@ -32,7 +32,7 @@ interface NodeSearchableInterface
 
     /**
      * getParentId
-     * @return int
+     * @return non-negative-int
      */
     public function getParentId(): int;
 }
