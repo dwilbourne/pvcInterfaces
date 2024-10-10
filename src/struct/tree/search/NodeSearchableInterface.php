@@ -32,7 +32,7 @@ interface NodeSearchableInterface
 
     /**
      * getParentId
-     * @return non-negative-int
+     * @return non-negative-int|null
      */
-    public function getParentId(): int;
+    public function getParentId(): ?int;
 }
