@@ -15,7 +15,7 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
  * Class NodeVisitableInterface
  * @template PayloadType of HasPayloadInterface
  * @template CollectionType of CollectionAbstractInterface
- * @extends NodeSearchableInterface<PayloadType, CollectionType, NodeVisitableInterface>
+ * @extends NodeSearchableInterface<PayloadType, CollectionType>
  */
 interface NodeVisitableInterface extends NodeSearchableInterface
 {
