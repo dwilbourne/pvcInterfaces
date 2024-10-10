@@ -8,26 +8,31 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\treesearch;
 
+use pvc\interfaces\struct\collection\CollectionAbstractInterface;
+use pvc\interfaces\struct\payload\HasPayloadInterface;
+
 /**
  * Class NodeSearchableInterface
+ * @template PayloadType of HasPayloadInterface
+ * @template CollectionType of CollectionAbstractInterface
  */
 interface NodeSearchableInterface
 {
     /**
      * getNodeId
-     * @return array-key
+     * @return int
      */
-    public function getNodeId(): mixed;
+    public function getNodeId(): int;
 
     /**
      * getChildren
-     * @return array<NodeSearchableInterface>
+     * @return CollectionAbstractInterface<PayloadType, CollectionType>
      */
-    public function getChildren(): array;
+    public function getChildren(): CollectionAbstractInterface;
 
     /**
      * getParentId
-     * @return array-key
+     * @return int
      */
-    public function getParentId(): mixed;
+    public function getParentId(): int;
 }

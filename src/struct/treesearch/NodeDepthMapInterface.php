@@ -12,7 +12,6 @@ use Iterator;
 
 /**
  * Class NodeDepthMapInterface
- * @template KeyType<array-key>
  *
  * nodes can have primary keys which are either integers or strings.
  */
@@ -31,14 +30,14 @@ interface NodeDepthMapInterface
 
     /**
      * getNodeDepth
-     * @param KeyType $nodeId
+     * @param non-negative-int $nodeId
      * @return non-negative-int|null
      */
     public function getNodeDepth($nodeId): ?int;
 
     /**
      * setNodeDepth
-     * @param KeyType $nodeId
+     * @param non-negative-int $nodeId
      * @param non-negative-int $depth
      */
     public function setNodeDepth($nodeId, int $depth): void;
