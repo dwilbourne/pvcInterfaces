@@ -6,19 +6,19 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\treesearch;
+namespace pvc\interfaces\struct\tree\search;
 
 use Iterator;
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
- * Class TreeSearchStrategyInterface
+ * Class SearchStrategyInterface
  * @template PayloadType of HasPayloadInterface
  * @template CollectionType of CollectionAbstractInterface
  * @extends Iterator<NodeSearchableInterface>
  */
-interface TreeSearchStrategyInterface extends Iterator
+interface SearchStrategyInterface extends Iterator
 {
     /**
      * setStartNode

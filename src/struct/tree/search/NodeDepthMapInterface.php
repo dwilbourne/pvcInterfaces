@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\treesearch;
+namespace pvc\interfaces\struct\tree\search;
 
 use Iterator;
 

@@ -6,17 +6,17 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\treesearch;
+namespace pvc\interfaces\struct\tree\search;
 
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
- * Class TreeSearchInterface
+ * Class SearchInterface
  * @template PayloadType of HasPayloadInterface
  * @template CollectionType of CollectionAbstractInterface
  */
-interface TreeSearchInterface
+interface SearchInterface
 {
     /**
      * setStartNode
@@ -32,15 +32,15 @@ interface TreeSearchInterface
 
     /**
      * setSearchStrategy
-     * @param TreeSearchStrategyInterface<PayloadType, CollectionType> $strategy
+     * @param SearchStrategyInterface<PayloadType, CollectionType> $strategy
      */
-    public function setSearchStrategy(TreeSearchStrategyInterface $strategy): void;
+    public function setSearchStrategy(SearchStrategyInterface $strategy): void;
 
     /**
      * getSearchStrategy
-     * @return TreeSearchStrategyInterface<PayloadType, CollectionType>
+     * @return SearchStrategyInterface<PayloadType, CollectionType>
      */
-    public function getSearchStrategy(): TreeSearchStrategyInterface;
+    public function getSearchStrategy(): SearchStrategyInterface;
 
     /**
      * setSearchFilter
