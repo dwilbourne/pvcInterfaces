@@ -154,33 +154,4 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
      * @return bool
      */
     public function isAncestorOf(TreenodeAbstractInterface $node): bool;
-
-    /**
-     * getVisitStatus
-     * @return non-negative-int
-     */
-    public function getVisitStatus(): int;
-
-    /**
-     * neverVisited
-     * @return bool
-     */
-    public function neverVisited(): bool;
-
-    /**
-     * partiallyVisited
-     * @return bool
-     */
-    public function partiallyVisited(): bool;
-
-    /**
-     * fullyVisited
-     * @return bool
-     */
-    public function fullyVisited(): bool;
-    /**
-     * setVisitStatus
-     * @param non-negative-int $status
-     */
-    public function setVisitStatus(int $status): void;
 }
