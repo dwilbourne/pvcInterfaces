@@ -24,13 +24,13 @@ interface SearchStrategyInterface extends Iterator
      * setStartNode
      * @param NodeSearchableInterface<PayloadType, CollectionType> $startNode
      */
-    public function setStartNode($startNode): void;
+    public function setStartNode(NodeSearchableInterface $startNode): void;
 
     /**
      * getStartNode
      * @return NodeSearchableInterface<PayloadType, CollectionType>
      */
-    public function getStartNode(): mixed;
+    public function getStartNode(): NodeSearchableInterface;
 
     /**
      * startNodeIsSet
@@ -42,5 +42,5 @@ interface SearchStrategyInterface extends Iterator
      * current
      * @return NodeSearchableInterface<PayloadType, CollectionType>|null
      */
-    public function current(): mixed;
+    public function current(): NodeSearchableInterface;
 }
