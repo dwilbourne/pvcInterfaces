@@ -33,12 +33,6 @@ interface SearchStrategyInterface extends Iterator
     public function getStartNode(): ?NodeSearchableInterface;
 
     /**
-     * startNodeIsSet
-     * @return bool
-     */
-    public function startNodeIsSet(): bool;
-
-    /**
      * current
      * @return NodeSearchableInterface<PayloadType, CollectionType>|null
      */
