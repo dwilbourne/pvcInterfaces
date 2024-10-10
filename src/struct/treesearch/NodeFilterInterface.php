@@ -15,12 +15,13 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
  * Class NodeFilterInterface
  * @template PayloadType of HasPayloadInterface
  * @template CollectionType of CollectionAbstractInterface
+ * @template NodeType of NodeSearchableInterface
  */
 interface NodeFilterInterface
 {
     /**
      * testNode
-     * @param NodeSearchableInterface<PayloadType, CollectionType> $node
+     * @param NodeSearchableInterface<PayloadType, CollectionType, NodeType> $node
      * @return bool
      */
     public function testNode($node): bool;

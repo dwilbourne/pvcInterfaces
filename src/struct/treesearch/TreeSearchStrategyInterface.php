@@ -16,6 +16,7 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
  * Class TreeSearchStrategyInterface
  * @template PayloadType of HasPayloadInterface
  * @template CollectionType of CollectionAbstractInterface
+ * @template NodeType of NodeSearchableInterface
  *
  * @extends Iterator<NodeSearchableInterface>
  */
@@ -23,13 +24,13 @@ interface TreeSearchStrategyInterface extends Iterator
 {
     /**
      * setStartNode
-     * @param NodeSearchableInterface<PayloadType, CollectionType> $startNode
+     * @param NodeSearchableInterface<PayloadType, CollectionType, NodeType> $startNode
      */
     public function setStartNode($startNode): void;
 
     /**
      * getStartNode
-     * @return NodeSearchableInterface<PayloadType, CollectionType>
+     * @return NodeSearchableInterface<PayloadType, CollectionType, NodeType>
      */
     public function getStartNode(): mixed;
 
@@ -41,7 +42,7 @@ interface TreeSearchStrategyInterface extends Iterator
 
     /**
      * current
-     * @return NodeSearchableInterface<PayloadType, CollectionType>|null
+     * @return NodeSearchableInterface<PayloadType, CollectionType, NodeType>|null
      */
     public function current(): mixed;
 }
