@@ -28,9 +28,9 @@ interface SearchStrategyInterface extends Iterator
 
     /**
      * getStartNode
-     * @return NodeSearchableInterface<PayloadType, CollectionType>
+     * @return ?NodeSearchableInterface<PayloadType, CollectionType>
      */
-    public function getStartNode(): NodeSearchableInterface;
+    public function getStartNode(): ?NodeSearchableInterface;
 
     /**
      * startNodeIsSet
