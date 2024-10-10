@@ -40,5 +40,5 @@ interface NodeSearchableInterface
      * getParent
      * @return NodeSearchableInterface<PayloadType, CollectionType>|null
      */
-    public function getParent(): ?NodeSearchableInterface;
+    public function getNode(): ?NodeSearchableInterface;
 }
