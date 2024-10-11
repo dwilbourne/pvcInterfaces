@@ -21,23 +21,6 @@ interface NodeVisitableInterface extends NodeInterface
     public function getVisitStatus(): int;
 
     /**
-     * neverVisited
-     * @return bool
-     */
-    public function neverVisited(): bool;
-
-    /**
-     * partiallyVisited
-     * @return bool
-     */
-    public function partiallyVisited(): bool;
-
-    /**
-     * fullyVisited
-     * @return bool
-     */
-    public function fullyVisited(): bool;
-    /**
      * setVisitStatus
      * @param non-negative-int $status
      */
