@@ -36,9 +36,10 @@ interface NodeMapInterface
 
     /**
      * getNodeItem
+     * @param non-negative-int $nodeId
      * @return NodeItemInterface<NodeType>
      */
-    public function getNodeItem(): NodeItemInterface;
+    public function getNodeItem(int $nodeId): NodeItemInterface;
 
     /**
      * getIterator
