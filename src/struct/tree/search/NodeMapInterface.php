@@ -53,9 +53,8 @@ interface NodeMapInterface
      * @param non-negative-int $nodeId
      * @param non-negative-int $parentId
      * @param NodeType $node
-     * @param non-negative-int $depth
      */
-    public function setNode(int $nodeId, int $parentId, mixed $node, int $depth): void;
+    public function setNode(int $nodeId, int $parentId, mixed $node): void;
 
     /**
      * getIterator
