@@ -12,7 +12,7 @@ use Iterator;
 
 /**
  * Class NodeMapInterface
- * @template NodeType of NodeInterface
+ * helper object for DepthFirst Searches
  */
 interface NodeMapInterface
 {
@@ -30,14 +30,14 @@ interface NodeMapInterface
     /**
      * setNodeItem
      * @param non-negative-int $nodeId
-     * @param NodeItemInterface<NodeType> $nodeItem
+     * @param NodeItemInterface $nodeItem
      */
     public function setNodeItem(int $nodeId, NodeItemInterface $nodeItem): void;
 
     /**
      * getNodeItem
      * @param non-negative-int $nodeId
-     * @return NodeItemInterface<NodeType>
+     * @return NodeItemInterface
      */
     public function getNodeItem(int $nodeId): NodeItemInterface;
 

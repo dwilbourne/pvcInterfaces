@@ -10,7 +10,6 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class NodeItemInterface
- * @template NodeType of NodeInterface
  */
 interface NodeItemInterface
 {
@@ -28,13 +27,13 @@ interface NodeItemInterface
 
     /**
      * setNode
-     * @param NodeType $node
+     * @param NodeVisitableInterface $node
      */
-    public function setNode(mixed $node): void;
+    public function setNode(NodeVisitableInterface $node): void;
 
     /**
      * getNode
-     * @return NodeType
+     * @return NodeVisitableInterface
      */
-    public function getNode(): mixed;
+    public function getNode(): NodeVisitableInterface;
 }
