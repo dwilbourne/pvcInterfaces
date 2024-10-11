@@ -28,13 +28,6 @@ interface NodeMapInterface
     public function isEmpty(): bool;
 
     /**
-     * getNodeDepth
-     * @param non-negative-int $nodeId
-     * @return non-negative-int
-     */
-    public function getDepth($nodeId): int;
-
-    /**
      * getParentId
      * @param non-negative-int $nodeId
      * @return int
