@@ -28,26 +28,16 @@ interface NodeMapInterface
     public function isEmpty(): bool;
 
     /**
-     * getParentId
-     * @param non-negative-int $nodeId
-     * @return ?int
+     * setNodeItem
+     * @param NodeItemInterface<NodeType> $nodeItem
      */
-    public function getParentId(int $nodeId): ?int;
+    public function setNodeItem(NodeItemInterface $nodeItem): void;
 
     /**
-     * getNode
-     * @param non-negative-int $nodeId
-     * @return NodeType
+     * getNodeItem
+     * @return NodeItemInterface<NodeType>
      */
-    public function getNode(int $nodeId): mixed;
-
-    /**
-     * setNode
-     * @param non-negative-int $nodeId
-     * @param non-negative-int|null $parentId
-     * @param NodeType $node
-     */
-    public function setNode(int $nodeId, ?int $parentId, mixed $node): void;
+    public function getNodeItem(): NodeItemInterface;
 
     /**
      * getIterator
