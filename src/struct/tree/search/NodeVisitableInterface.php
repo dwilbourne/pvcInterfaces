@@ -10,9 +10,9 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class NodeVisitableInterface
- * @extends NodeSearchableInterface<NodeVisitableInterface>
+ * @extends NodeInterface<NodeVisitableInterface>
  */
-interface NodeVisitableInterface extends NodeSearchableInterface
+interface NodeVisitableInterface extends NodeInterface
 {
     /**
      * getVisitStatus
