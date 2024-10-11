@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
-use Iterator;
-
 /**
  * Class NodeMapInterface
  * helper object for DepthFirst Searches
@@ -40,10 +38,4 @@ interface NodeMapInterface
      * @return NodeMapItemInterface
      */
     public function getNodeItem(int $nodeId): NodeMapItemInterface;
-
-    /**
-     * getIterator
-     * @return Iterator
-     */
-    public function getIterator(): Iterator;
 }
