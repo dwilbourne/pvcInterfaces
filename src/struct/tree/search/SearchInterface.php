@@ -10,7 +10,7 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class SearchInterface
- * @template NodeType of NodeSearchableInterface
+ * @template NodeType of NodeInterface
  */
 interface SearchInterface
 {

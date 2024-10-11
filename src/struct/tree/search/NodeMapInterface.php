@@ -12,7 +12,7 @@ use Iterator;
 
 /**
  * Class NodeMapInterface
- * @template NodeType of NodeSearchableInterface
+ * @template NodeType of NodeInterface
  */
 interface NodeMapInterface
 {
