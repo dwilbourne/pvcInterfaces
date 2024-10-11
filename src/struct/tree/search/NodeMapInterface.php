@@ -29,9 +29,10 @@ interface NodeMapInterface
 
     /**
      * setNodeItem
+     * @param non-negative-int $nodeId
      * @param NodeItemInterface<NodeType> $nodeItem
      */
-    public function setNodeItem(NodeItemInterface $nodeItem): void;
+    public function setNodeItem(int $nodeId, NodeItemInterface $nodeItem): void;
 
     /**
      * getNodeItem
