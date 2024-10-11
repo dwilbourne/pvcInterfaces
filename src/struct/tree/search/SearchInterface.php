@@ -8,62 +8,58 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
-use pvc\interfaces\struct\collection\CollectionAbstractInterface;
-use pvc\interfaces\struct\payload\HasPayloadInterface;
-
 /**
  * Class SearchInterface
- * @template PayloadType of HasPayloadInterface
- * @template CollectionType of CollectionAbstractInterface
+ * @template NodeType of NodeSearchableInterface
  */
 interface SearchInterface
 {
     /**
      * setStartNode
-     * @param NodeSearchableInterface<PayloadType, CollectionType> $node
+     * @param NodeType $node
      */
     public function setStartNode($node): void;
 
     /**
      * getStartNode
-     * @return NodeSearchableInterface<PayloadType, CollectionType>|null
+     * @return NodeType|null
      */
     public function getStartNode(): mixed;
 
     /**
      * setSearchStrategy
-     * @param SearchStrategyInterface<PayloadType, CollectionType> $strategy
+     * @param SearchStrategyInterface<NodeType> $strategy
      */
     public function setSearchStrategy(SearchStrategyInterface $strategy): void;
 
     /**
      * getSearchStrategy
-     * @return SearchStrategyInterface<PayloadType, CollectionType>
+     * @return SearchStrategyInterface<NodeType>
      */
     public function getSearchStrategy(): SearchStrategyInterface;
 
     /**
      * setSearchFilter
-     * @param NodeFilterInterface<PayloadType, CollectionType> $nodeFilter
+     * @param NodeFilterInterface<NodeType> $nodeFilter
      */
     public function setSearchFilter(NodeFilterInterface $nodeFilter): void;
 
     /**
      * getSearchFilter
-     * @return NodeFilterInterface<PayloadType, CollectionType>
+     * @return NodeFilterInterface<NodeType>
      */
     public function getSearchFilter(): NodeFilterInterface;
 
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<int, NodeSearchableInterface<PayloadType, CollectionType>>
+     * @return array<int, NodeType>
      */
     public function getNodes(): array;
 
     /**
      * current
-     * @return NodeSearchableInterface<PayloadType, CollectionType>|null
+     * @return NodeType|null
      */
     public function current(): mixed;
 

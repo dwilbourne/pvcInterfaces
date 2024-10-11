@@ -8,14 +8,9 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
-use pvc\interfaces\struct\collection\CollectionAbstractInterface;
-use pvc\interfaces\struct\payload\HasPayloadInterface;
-
 /**
  * Class NodeVisitableInterface
- * @template PayloadType of HasPayloadInterface
- * @template CollectionType of CollectionAbstractInterface
- * @extends NodeSearchableInterface<PayloadType, CollectionType>
+ * @extends NodeSearchableInterface<NodeVisitableInterface>
  */
 interface NodeVisitableInterface extends NodeSearchableInterface
 {

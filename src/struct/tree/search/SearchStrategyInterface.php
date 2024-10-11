@@ -9,32 +9,29 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\search;
 
 use Iterator;
-use pvc\interfaces\struct\collection\CollectionAbstractInterface;
-use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
  * Class SearchStrategyInterface
- * @template PayloadType of HasPayloadInterface
- * @template CollectionType of CollectionAbstractInterface
- * @extends Iterator<NodeSearchableInterface>
+ * @template NodeType of NodeSearchableInterface
+ * @extends Iterator<NodeType>
  */
 interface SearchStrategyInterface extends Iterator
 {
     /**
      * setStartNode
-     * @param NodeSearchableInterface<PayloadType, CollectionType> $startNode
+     * @param NodeType $startNode
      */
-    public function setStartNode(NodeSearchableInterface $startNode): void;
+    public function setStartNode(mixed $startNode): void;
 
     /**
      * getStartNode
-     * @return ?NodeSearchableInterface<PayloadType, CollectionType>
+     * @return NodeType|null
      */
-    public function getStartNode(): ?NodeSearchableInterface;
+    public function getStartNode(): mixed;
 
     /**
      * current
-     * @return NodeSearchableInterface<PayloadType, CollectionType>|null
+     * @return NodeType|null
      */
-    public function current(): NodeSearchableInterface;
+    public function current(): mixed;
 }

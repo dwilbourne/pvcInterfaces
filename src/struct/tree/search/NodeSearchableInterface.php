@@ -8,13 +8,9 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\search;
 
-use pvc\interfaces\struct\collection\CollectionAbstractInterface;
-use pvc\interfaces\struct\payload\HasPayloadInterface;
-
 /**
  * Class NodeSearchableInterface
- * @template PayloadType of HasPayloadInterface
- * @template CollectionType of CollectionAbstractInterface
+ * @template NodeType
  */
 interface NodeSearchableInterface
 {
@@ -26,7 +22,7 @@ interface NodeSearchableInterface
 
     /**
      * getChildren
-     * @return CollectionAbstractInterface<PayloadType, CollectionType>
+     * @return array<NodeType>
      */
-    public function getChildren(): CollectionAbstractInterface;
+    public function getChildrenAsArray(): array;
 }
