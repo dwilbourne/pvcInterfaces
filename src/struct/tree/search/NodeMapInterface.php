@@ -30,9 +30,9 @@ interface NodeMapInterface
     /**
      * getParentId
      * @param non-negative-int $nodeId
-     * @return int
+     * @return ?int
      */
-    public function getParentId(int $nodeId): int;
+    public function getParentId(int $nodeId): ?int;
 
     /**
      * getNode
@@ -44,10 +44,10 @@ interface NodeMapInterface
     /**
      * setNode
      * @param non-negative-int $nodeId
-     * @param non-negative-int $parentId
+     * @param non-negative-int|null $parentId
      * @param NodeType $node
      */
-    public function setNode(int $nodeId, int $parentId, mixed $node): void;
+    public function setNode(int $nodeId, ?int $parentId, mixed $node): void;
 
     /**
      * getIterator
