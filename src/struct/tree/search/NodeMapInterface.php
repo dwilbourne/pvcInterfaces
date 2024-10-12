@@ -38,4 +38,10 @@ interface NodeMapInterface
      * @return NodeMapItemInterface
      */
     public function getNodeItem(int $nodeId): NodeMapItemInterface;
+
+    /**
+     * getNodes
+     * @return array<int, NodeVisitableInterface>
+     */
+    public function getNodes(): array;
 }
