@@ -25,7 +25,7 @@ interface SearchStrategyInterface extends Iterator
 
     /**
      * getStartNode
-     * @return NodeType|null
+     * @return NodeType
      */
     public function getStartNode(): mixed;
 
