@@ -40,15 +40,15 @@ interface SearchInterface
 
     /**
      * setSearchFilter
-     * @param NodeFilterInterface<NodeType> $nodeFilter
+     * @param callable $nodeFilter
      */
-    public function setSearchFilter(NodeFilterInterface $nodeFilter): void;
+    public function setSearchFilter(callable $nodeFilter): void;
 
     /**
      * getSearchFilter
-     * @return NodeFilterInterface<NodeType>
+     * @return callable
      */
-    public function getSearchFilter(): NodeFilterInterface;
+    public function getSearchFilter(): callable;
 
     /**
      * getNodes

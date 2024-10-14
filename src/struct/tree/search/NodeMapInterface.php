@@ -26,16 +26,31 @@ interface NodeMapInterface
     public function isEmpty(): bool;
 
     /**
-     * setNodeItem
+     * setNode
      * @param non-negative-int $nodeId
-     * @param NodeMapItemInterface $nodeItem
+     * @param non-negative-int|null $parentId
+     * @param NodeVisitableInterface $node
      */
-    public function setNodeItem(int $nodeId, NodeMapItemInterface $nodeItem): void;
+    public function setNode(int $nodeId, ?int $parentId, NodeVisitableInterface $node): void;
 
     /**
-     * getNodeItem
-     * @param non-negative-int|null $nodeId
-     * @return NodeMapItemInterface
+     * getParentId
+     * @param non-negative-int $nodeId
+     * @return int|null
      */
-    public function getNodeItem(int $nodeId): ?NodeMapItemInterface;
+    public function getParentId(int $nodeId): ?int;
+
+    /**
+     * getParent
+     * @param int $nodeId
+     * @return NodeVisitableInterface|null
+     */
+    public function getParent(int $nodeId): ?NodeVisitableInterface;
+
+    /**
+     * getNode
+     * @param int $nodeId
+     * @return NodeVisitableInterface|null
+     */
+    public function getNode(int $nodeId): ?NodeVisitableInterface;
 }
