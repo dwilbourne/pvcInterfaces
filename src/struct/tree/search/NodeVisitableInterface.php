@@ -14,6 +14,12 @@ namespace pvc\interfaces\struct\tree\search;
  */
 interface NodeVisitableInterface extends NodeInterface
 {
+
+    /**
+     * initializeVisitStatus
+     */
+    public function initializeVisitStatus(): void;
+
     /**
      * getVisitStatus
      * @return VisitStatus
