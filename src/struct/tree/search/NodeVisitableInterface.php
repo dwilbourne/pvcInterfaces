@@ -16,13 +16,13 @@ interface NodeVisitableInterface extends NodeInterface
 {
     /**
      * getVisitStatus
-     * @return int<0, 2>
+     * @return VisitStatus
      */
-    public function getVisitStatus(): int;
+    public function getVisitStatus(): VisitStatus;
 
     /**
      * setVisitStatus
-     * @param int<0, 2> $status
+     * @param VisitStatus $status
      */
-    public function setVisitStatus(int $status): void;
+    public function setVisitStatus(VisitStatus $status): void;
 }
