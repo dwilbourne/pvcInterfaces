@@ -10,7 +10,8 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class NodeInterface
- * @template NodeType
+ * @template SearchableNodeType
+ * searchable node types are either searchable or visitable
  */
 interface NodeInterface
 {
@@ -22,7 +23,7 @@ interface NodeInterface
 
     /**
      * getChildren
-     * @return array<NodeType>
+     * @return array<SearchableNodeType>
      */
     public function getChildrenAsArray(): array;
 }
