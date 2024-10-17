@@ -45,7 +45,7 @@ interface TagVoidInterface
     /**
      * setAttribute
      * @param AttributeInterface<ValueType, ValTesterType> $attribute
-     * @return TagVoidInterface
+     * @return TagVoidInterface<ValueType, ValTesterType>
      */
     public function setAttribute(AttributeInterface $attribute): TagVoidInterface;
 
