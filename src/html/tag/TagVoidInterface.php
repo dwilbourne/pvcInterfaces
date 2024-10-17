@@ -8,12 +8,10 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
-use pvc\interfaces\html\attribute\AttributeInterface;
+use pvc\interfaces\html\attribute\AttributeVoidInterface;
 
 /**
  * Class TagVoidInterface
- * @template ValueType
- * @template ValTesterType
  */
 interface TagVoidInterface
 {
@@ -44,21 +42,22 @@ interface TagVoidInterface
 
     /**
      * setAttribute
-     * @param AttributeInterface<ValueType, ValTesterType> $attribute
-     * @return TagVoidInterface<ValueType, ValTesterType>
+     * @param AttributeVoidInterface $attribute
+     * @return TagVoidInterface
      */
-    public function setAttribute(AttributeInterface $attribute): TagVoidInterface;
+    public function setAttribute(AttributeVoidInterface $attribute): TagVoidInterface;
 
     /**
      * getAttribute
      * @param string $name
-     * @return AttributeInterface<ValueType, ValTesterType>|null
+     * @return AttributeVoidInterface|null
      */
-    public function getAttribute(string $name): ?AttributeInterface;
+    public function getAttribute(string $name): ?AttributeVoidInterface;
 
     /**
      * getAttributes
-     * @return array<AttributeInterface<ValueType, ValTesterType>>
+     * @param int $attributeTypes
+     * @return array<AttributeVoidInterface>
      */
     public function getAttributes(int $attributeTypes): array;
 

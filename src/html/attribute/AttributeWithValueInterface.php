@@ -11,7 +11,7 @@ namespace pvc\interfaces\html\attribute;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
- * Class AttributeInterface
+ * Class AttributeWithValueInterface
  * @template ValueType
  * @template ValTesterType
  *
@@ -22,14 +22,8 @@ use pvc\interfaces\validator\ValTesterInterface;
  * presumes they are set at construction and are immutable since changing one without the other could lead to
  * an invalid object state.
  */
-interface AttributeInterface
+interface AttributeWithValueInterface extends AttributeVoidInterface
 {
-    /**
-     * getName
-     * @return string
-     */
-    public function getName(): string;
-
     /**
      * setCaseSensitive
      * @param bool $isCaseSensitive
@@ -60,10 +54,4 @@ interface AttributeInterface
      * @param  ValueType $value
      */
     public function setValue(mixed $value): void;
-
-    /**
-     * render
-     * @return string
-     */
-    public function render(): string;
 }
