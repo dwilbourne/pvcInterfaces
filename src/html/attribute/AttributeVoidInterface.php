@@ -30,7 +30,7 @@ interface AttributeVoidInterface
      * setGloabl
      * @param bool $global
      */
-    public function setGloabl(bool $global): void;
+    public function setGlobal(bool $global): void;
 
     /**
      * isGlobal
