@@ -25,4 +25,16 @@ interface AttributeVoidInterface
      * @return string
      */
     public function render(): string;
+
+    /**
+     * setGloabl
+     * @param bool $global
+     */
+    public function setGloabl(bool $global): void;
+
+    /**
+     * isGlobal
+     * @return bool
+     */
+    public function isGlobal(): bool;
 }
