@@ -12,10 +12,6 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class AttributeWithValueInterface
- * @template ValueType
- *
- * ValueType and ValTesterType would be the same, but multivalued attributes store values as an array and
- * so in that case the tester type is for an element of the array and the value type is the array.
  *
  * There are no publicly available setters for the name or the value tester of the attribute.  This interface
  * presumes they are set at construction and are immutable since changing one without the other could lead to
@@ -41,16 +37,4 @@ interface AttributeWithValueInterface extends AttributeVoidInterface
      * @return ValTesterInterface<string>|null
      */
     public function getTester(): ?ValTesterInterface;
-
-    /**
-     * getValue
-     * @return ValueType
-     */
-    public function getValue(): mixed;
-
-    /**
-     * setValue
-     * @param  ValueType $value
-     */
-    public function setValue(mixed $value): void;
 }
