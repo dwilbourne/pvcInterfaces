@@ -13,7 +13,6 @@ use pvc\interfaces\validator\ValTesterInterface;
 /**
  * Class AttributeWithValueInterface
  * @template ValueType
- * @template ValTesterType
  *
  * ValueType and ValTesterType would be the same, but multivalued attributes store values as an array and
  * so in that case the tester type is for an element of the array and the value type is the array.
@@ -39,7 +38,7 @@ interface AttributeWithValueInterface extends AttributeVoidInterface
 
     /**
      * getTester
-     * @return ValTesterInterface<ValTesterType>|null
+     * @return ValTesterInterface<string>|null
      */
     public function getTester(): ?ValTesterInterface;
 
