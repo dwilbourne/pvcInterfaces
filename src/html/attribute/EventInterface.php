@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @author: Doug Wilbourne (dougwilbourne@gmail.com)
+ */
+
+declare(strict_types=1);
+
+namespace pvc\interfaces\html\attribute;
+
+/**
+ * Class EventInterface
+ */
+interface EventInterface extends AttributeVoidInterface
+{
+    /**
+     * setScript
+     * @param string $script
+     */
+    public function setScript(string $script): void;
+
+    /**
+     * getScript
+     * @return string
+     */
+    public function getScript(): string;
+}
