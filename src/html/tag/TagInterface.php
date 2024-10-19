@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
+use pvc\interfaces\msg\MessagesInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
@@ -15,12 +16,6 @@ use pvc\interfaces\msg\MsgInterface;
  */
 interface TagInterface extends TagVoidInterface
 {
-    /**
-     * addInnerHtml
-     * @param TagVoidInterface|MsgInterface|string $innerHtml
-     */
-    public function addInnerHtml(TagVoidInterface|TagInterface|MsgInterface|string $innerHtml): void;
-
     /**
      * setAllowedSubtags
      * @param array<string> $subTagNames
@@ -32,6 +27,12 @@ interface TagInterface extends TagVoidInterface
      * @return array<string>
      */
     public function getAllowedSubTags(): array;
+
+    /**
+     * addSubTag
+     * @param TagVoidInterface $tag
+     */
+    public function addSubTag(TagVoidInterface $tag): void;
 
     /**
      * setInnerTextAllowed
@@ -48,11 +49,16 @@ interface TagInterface extends TagVoidInterface
      */
 
     /**
-     * setDefaultCSSDisplayValue
-     * @param string $displayValue
-     * TODO: decide whether to implement this feature
-     * public function setDefaultCSSDisplayValue(string $displayValue): void;
+     * addMessage
+     * @param MessagesInterface $msg
      */
+    public function addMessage(MessagesInterface $msg): void;
+
+    /**
+     * addText
+     * @param string $text
+     */
+    public function addText(string $text): void;
 
     /**
      * getInnerHtml
