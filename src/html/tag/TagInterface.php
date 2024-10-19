@@ -52,7 +52,7 @@ interface TagInterface extends TagVoidInterface
      * addMessage
      * @param MessagesInterface $msg
      */
-    public function addMessage(MessagesInterface $msg): void;
+    public function addMessage(MsgInterface $msg): void;
 
     /**
      * addText
