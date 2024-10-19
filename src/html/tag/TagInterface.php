@@ -29,10 +29,10 @@ interface TagInterface extends TagVoidInterface
     public function getAllowedSubTags(): array;
 
     /**
-     * addSubTag
+     * addSubTagObject
      * @param TagVoidInterface $tag
      */
-    public function addSubTag(TagVoidInterface $tag): void;
+    public function addSubTagObject(TagVoidInterface $tag): void;
 
     /**
      * setInnerTextAllowed

@@ -41,11 +41,11 @@ interface TagVoidInterface
     public function getAllowedAttributes(): array;
 
     /**
-     * setAttribute
+     * setAttributeObject
      * @param AttributeVoidInterface $attribute
      * @return TagVoidInterface
      */
-    public function setAttribute(AttributeVoidInterface $attribute): TagVoidInterface;
+    public function setAttributeObject(AttributeVoidInterface $attribute): TagVoidInterface;
 
     /**
      * getAttribute
