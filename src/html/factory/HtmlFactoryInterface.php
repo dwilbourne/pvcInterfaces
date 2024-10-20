@@ -25,6 +25,13 @@ interface HtmlFactoryInterface
     public function getDefinitionNames(string $definitionsFile): array;
 
     /**
+     * isAmbiguousName
+     * @param string $name
+     * @return bool
+     */
+    public function isAmbiguousName(string $name): bool;
+
+    /**
      * canMakeAttribute
      * @param string $attributeName
      * @return bool
