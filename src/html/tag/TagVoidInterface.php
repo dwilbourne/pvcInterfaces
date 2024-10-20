@@ -48,6 +48,14 @@ interface TagVoidInterface
     public function setAttributeObject(AttributeVoidInterface $attribute): TagVoidInterface;
 
     /**
+     * setAttribute
+     * @param string $attributeName
+     * @param array|string|null $value
+     * @return TagVoidInterface
+     */
+    public function setAttribute(string $attributeName, array|string|null $value): TagVoidInterface;
+
+    /**
      * getAttribute
      * @param string $name
      * @return AttributeVoidInterface|null
