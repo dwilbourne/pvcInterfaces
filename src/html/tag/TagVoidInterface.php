@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
-use pvc\interfaces\html\attribute\AttributeVoidInterface;
+use pvc\interfaces\html\attribute\AttributeInterface;
 
 /**
  * Class TagVoidInterface
@@ -42,15 +42,15 @@ interface TagVoidInterface
 
     /**
      * setAttributeObject
-     * @param AttributeVoidInterface $attribute
+     * @param AttributeInterface $attribute
      * @return TagVoidInterface
      */
-    public function setAttributeObject(AttributeVoidInterface $attribute): TagVoidInterface;
+    public function setAttributeObject(AttributeInterface $attribute): TagVoidInterface;
 
     /**
      * setAttribute
      * @param string $attributeName
-     * @param array<string> $value
+     * @param array<string> $values
      * @return TagVoidInterface
      */
     public function setAttribute(string $attributeName, ...$values): TagVoidInterface;
@@ -58,14 +58,14 @@ interface TagVoidInterface
     /**
      * getAttribute
      * @param string $name
-     * @return AttributeVoidInterface|null
+     * @return AttributeInterface|null
      */
-    public function getAttribute(string $name): ?AttributeVoidInterface;
+    public function getAttribute(string $name): ?AttributeInterface;
 
     /**
      * getAttributes
      * @param int $attributeTypes
-     * @return array<AttributeVoidInterface>
+     * @return array<AttributeInterface>
      */
     public function getAttributes(int $attributeTypes): array;
 

@@ -9,10 +9,10 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\attribute;
 
 /**
- * Class AttributeVoidInterface
+ * Class AttributeInterface
  *
  */
-interface AttributeVoidInterface
+interface AttributeInterface
 {
     /**
      * getName
@@ -37,4 +37,16 @@ interface AttributeVoidInterface
      * @return bool
      */
     public function isGlobal(): bool;
+
+    /**
+     * setValue
+     * @param array<string> $values
+     */
+    public function setValue(...$values): void;
+
+    /**
+     * getValue
+     * @return array<string>|string|null
+     */
+    public function getValue(): array|string|null;
 }

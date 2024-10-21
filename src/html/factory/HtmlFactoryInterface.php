@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\factory;
 
-use pvc\interfaces\html\attribute\AttributeVoidInterface;
+use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\tag\TagVoidInterface;
 
@@ -55,9 +55,9 @@ interface HtmlFactoryInterface
     /**
      * makeAttribute
      * @param string $attributeName
-     * @return AttributeVoidInterface
+     * @return AttributeInterface
      */
-    public function makeAttribute(string $attributeName): AttributeVoidInterface;
+    public function makeAttribute(string $attributeName): AttributeInterface;
 
     /**
      * makeElement

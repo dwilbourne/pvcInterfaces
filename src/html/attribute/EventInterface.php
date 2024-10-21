@@ -11,7 +11,7 @@ namespace pvc\interfaces\html\attribute;
 /**
  * Class EventInterface
  */
-interface EventInterface extends AttributeVoidInterface
+interface EventInterface extends AttributeInterface
 {
     /**
      * setScript

@@ -14,10 +14,16 @@ namespace pvc\interfaces\html\attribute;
 interface AttributeMultiValueInterface extends AttributeWithValueInterface
 {
     /**
+     * getValue
+     * @return array<string>
+     */
+    public function getValue(): array;
+
+    /**
      * setValues
      * @param array<string> $values
      */
-    public function setValues(array $values): void;
+    public function setValues(... $values): void;
 
     /**
      * getValues

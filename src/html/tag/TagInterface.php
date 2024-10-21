@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
-use pvc\interfaces\msg\MessagesInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
@@ -57,7 +56,7 @@ interface TagInterface extends TagVoidInterface
 
     /**
      * addMsg
-     * @param MessagesInterface $msg
+     * @param MsgInterface $msg
      */
     public function addMsg(MsgInterface $msg): void;
 

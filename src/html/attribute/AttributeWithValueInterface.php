@@ -17,7 +17,7 @@ use pvc\interfaces\validator\ValTesterInterface;
  * presumes they are set at construction and are immutable since changing one without the other could lead to
  * an invalid object state.
  */
-interface AttributeWithValueInterface extends AttributeVoidInterface
+interface AttributeWithValueInterface extends AttributeInterface
 {
     /**
      * setCaseSensitive
