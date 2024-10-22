@@ -36,9 +36,9 @@ interface TagInterface extends TagVoidInterface
     /**
      * addSubTag
      * @param string $tagName
-     * @return TagInterface
+     * @return TagVoidInterface
      */
-    public function addSubTag(string $tagName): TagInterface;
+    public function addSubTag(string $tagName): TagVoidInterface;
 
     /**
      * setInnerTextAllowed
