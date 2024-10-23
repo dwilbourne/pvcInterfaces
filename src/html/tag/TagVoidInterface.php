@@ -79,5 +79,5 @@ interface TagVoidInterface
      * render
      * @return string
      */
-    public function render(): string;
+    public function generateOpeningTag(): string;
 }
