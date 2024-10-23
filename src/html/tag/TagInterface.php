@@ -30,8 +30,9 @@ interface TagInterface extends TagVoidInterface
     /**
      * addSubTagObject
      * @param TagVoidInterface $tag
+     * @return TagVoidInterface
      */
-    public function addSubTagObject(TagVoidInterface $tag): TagInterface;
+    public function addSubTagObject(TagVoidInterface $tag): TagVoidInterface;
 
     /**
      * addSubTag
