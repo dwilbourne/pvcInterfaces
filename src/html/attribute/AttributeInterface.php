@@ -40,7 +40,7 @@ interface AttributeInterface
 
     /**
      * setValue
-     * @param array<string> $values
+     * @param string ...$values
      */
     public function setValue(...$values): void;
 
