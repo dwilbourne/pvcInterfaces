@@ -21,9 +21,9 @@ interface AttributeMultiValueInterface extends AttributeWithValueInterface
 
     /**
      * setValues
-     * @param array<string> $values
+     * @param string ...$values
      */
-    public function setValues(... $values): void;
+    public function setValues(...$values): void;
 
     /**
      * getValues
