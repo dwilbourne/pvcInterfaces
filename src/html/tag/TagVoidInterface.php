@@ -50,7 +50,7 @@ interface TagVoidInterface
     /**
      * setAttribute
      * @param string $attributeName
-     * @param array<string> $values
+     * @param string ...$values
      * @return TagVoidInterface
      */
     public function setAttribute(string $attributeName, ...$values): TagVoidInterface;
