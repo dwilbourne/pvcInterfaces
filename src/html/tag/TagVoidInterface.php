@@ -76,8 +76,8 @@ interface TagVoidInterface
     public function removeAttribute(string $name): void;
 
     /**
-     * generateOpeningTag
+     * render
      * @return string
      */
-    public function generateOpeningTag(): string;
+    public function render(): string;
 }
