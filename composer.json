@@ -18,6 +18,9 @@
 			"pvc\\interfaces\\": "src/"
 		}
 	},
+	"require": {
+		"psr/container": "*"
+	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "*",
 		"phpstan/phpstan": "*"
