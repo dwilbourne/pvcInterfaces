@@ -18,39 +18,11 @@ use pvc\interfaces\html\tag\TagVoidInterface;
 interface HtmlFactoryInterface
 {
     /**
-     * getDefinitionNames
-     * @param string $definitionsFile
-     * @return array<string>
-     */
-    public function getDefinitionNames(string $definitionsFile): array;
-
-    /**
      * isAmbiguousName
      * @param string $name
      * @return bool
      */
     public function isAmbiguousName(string $name): bool;
-
-    /**
-     * canMakeAttribute
-     * @param string $attributeName
-     * @return bool
-     */
-    public function canMakeAttribute(string $attributeName): bool;
-
-    /**
-     * canMakeElement
-     * @param string $elementName
-     * @return bool
-     */
-    public function canMakeElement(string $elementName): bool;
-
-    /**
-     * canMakeEvent
-     * @param string $eventName
-     * @return bool
-     */
-    public function canMakeEvent(string $eventName): bool;
 
     /**
      * makeAttribute
