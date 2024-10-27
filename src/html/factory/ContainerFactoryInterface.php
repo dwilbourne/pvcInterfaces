@@ -17,19 +17,23 @@ interface ContainerFactoryInterface
 {
     /**
      * makeElementContainer
+     * @param string $elementDefs
      * @return ContainerInterface
      */
-    public function makeElementContainer(): ContainerInterface;
+    public function makeElementContainer(string $elementDefs): ContainerInterface;
 
     /**
      * makeAttributeContainer
+     * @param string $attributeDefs
+     * @param string $attributeValueTesterDefs
      * @return ContainerInterface
      */
-    public function makeAttributeContainer(): ContainerInterface;
+    public function makeAttributeContainer(string $attributeDefs, string $attributeValueTesterDefs): ContainerInterface;
 
     /**
      * makeEventContainer
+     * @param string $eventDefs
      * @return ContainerInterface
      */
-    public function makeEventContainer(): ContainerInterface;
+    public function makeEventContainer(string $eventDefs): ContainerInterface;
 }
