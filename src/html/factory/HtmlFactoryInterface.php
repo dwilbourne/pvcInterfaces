@@ -25,6 +25,27 @@ interface HtmlFactoryInterface
     public function isAmbiguousName(string $name): bool;
 
     /**
+     * canMakeElement
+     * @param string $elementName
+     * @return bool
+     */
+    public function canMakeElement(string $elementName): bool;
+
+    /**
+     * canMakeAttribute
+     * @param string $attributeName
+     * @return bool
+     */
+    public function canMakeAttribute(string $attributeName): bool;
+
+    /**
+     * canMakeEvent
+     * @param string $eventName
+     * @return bool
+     */
+    public function canMakeEvent(string $eventName): bool;
+
+    /**
      * makeAttribute
      * @param string $attributeName
      * @return AttributeInterface
