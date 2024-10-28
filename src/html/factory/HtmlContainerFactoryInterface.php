@@ -11,9 +11,9 @@ namespace pvc\interfaces\html\factory;
 use Psr\Container\ContainerInterface;
 
 /**
- * Class ContainerFactoryInterface
+ * Class HtmlContainerFactoryInterface
  */
-interface ContainerFactoryInterface
+interface HtmlContainerFactoryInterface
 {
     /**
      * makeElementContainer
