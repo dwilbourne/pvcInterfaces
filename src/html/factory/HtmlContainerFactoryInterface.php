@@ -25,7 +25,7 @@ interface HtmlContainerFactoryInterface
 
     /**
      * makeAttributeContainer
-     * @param array{'Name':string, 'AttributeType':string, 'ValueTester':string, 'Global':string} $attributeDefs
+     * @param array{'Name':string, 'AttributeType':string, 'ValueTester':string, 'Global':bool} $attributeDefs
      * @param array{'Name':string, 'TesterType':string, 'TesterArg':string|array<string>} $attributeValueTesterDefs
      * @return ContainerInterface
      */
