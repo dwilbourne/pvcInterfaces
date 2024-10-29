@@ -17,24 +17,19 @@ interface HtmlContainerFactoryInterface
 {
     /**
      * makeElementContainer
-     * phpcs:ignore
-     * @param array{'Name':string, 'TagType':string, 'AllowedAttributes':array<string>,'AllowedSubTags':array<string>} $elementDefs
      * @return ContainerInterface
      */
-    public function makeElementContainer(array $elementDefs): ContainerInterface;
+    public function makeElementContainer(): ContainerInterface;
 
     /**
      * makeAttributeContainer
-     * @param array{'Name':string, 'AttributeType':string, 'ValueTester':string, 'Global':bool} $attributeDefs
-     * @param array{'Name':string, 'TesterType':string, 'TesterArg':string|array<string>} $attributeValueTesterDefs
      * @return ContainerInterface
      */
-    public function makeAttributeContainer(array $attributeDefs, array $attributeValueTesterDefs): ContainerInterface;
+    public function makeAttributeContainer(): ContainerInterface;
 
     /**
      * makeEventContainer
-     * @param array<string> $eventDefs
      * @return ContainerInterface
      */
-    public function makeEventContainer(array $eventDefs): ContainerInterface;
+    public function makeEventContainer(): ContainerInterface;
 }
