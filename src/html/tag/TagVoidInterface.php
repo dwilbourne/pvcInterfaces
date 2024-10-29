@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\tag;
 
 use pvc\interfaces\html\attribute\AttributeInterface;
+use pvc\interfaces\html\factory\HtmlFactoryInterface;
 
 /**
  * Class TagVoidInterface
@@ -27,6 +28,18 @@ interface TagVoidInterface
      * @return mixed
      */
     public function setName(string $name);
+
+    /**
+     * setHtmlFactory
+     * @param HtmlFactoryInterface $htmlFactory
+     */
+    public function setHtmlFactory(HtmlFactoryInterface $htmlFactory): void;
+
+    /**
+     * getHtmlFactory
+     * @return HtmlFactoryInterface
+     */
+    public function getHtmlFactory(): HtmlFactoryInterface;
 
     /**
      * setAllowedAttributes
