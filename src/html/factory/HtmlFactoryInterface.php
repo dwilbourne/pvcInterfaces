@@ -33,17 +33,17 @@ interface HtmlFactoryInterface
 
     /**
      * canMakeAttribute
-     * @param string $attributeName
+     * @param string $attributeId
      * @return bool
      */
-    public function canMakeAttribute(string $attributeName): bool;
+    public function canMakeAttribute(string $attributeId): bool;
 
     /**
      * canMakeEvent
-     * @param string $eventName
+     * @param string $eventId
      * @return bool
      */
-    public function canMakeEvent(string $eventName): bool;
+    public function canMakeEvent(string $eventId): bool;
 
     /**
      * makeAttribute
@@ -61,8 +61,8 @@ interface HtmlFactoryInterface
 
     /**
      * makeEvent
-     * @param string $eventName
+     * @param string $eventId
      * @return EventInterface
      */
-    public function makeEvent(string $eventName): EventInterface;
+    public function makeEvent(string $eventId): EventInterface;
 }
