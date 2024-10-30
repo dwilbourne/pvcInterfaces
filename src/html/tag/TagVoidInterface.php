@@ -43,15 +43,15 @@ interface TagVoidInterface
 
     /**
      * setAllowedAttributes
-     * @param array<string> $allowedAttributes
+     * @param array<string> $allowedAttributeIds
      */
-    public function setAllowedAttributes(array $allowedAttributes): void;
+    public function setAllowedAttributeIds(array $allowedAttributeIds): void;
 
     /**
      * getAllowedAttributes
      * @return array<string>
      */
-    public function getAllowedAttributes(): array;
+    public function getAllowedAttributeIds(): array;
 
     /**
      * setAttributeObject
@@ -62,18 +62,18 @@ interface TagVoidInterface
 
     /**
      * setAttribute
-     * @param string $attributeName
+     * @param string $attributeId
      * @param string ...$values
      * @return TagVoidInterface
      */
-    public function setAttribute(string $attributeName, ...$values): TagVoidInterface;
+    public function setAttribute(string $attributeId, ...$values): TagVoidInterface;
 
     /**
      * getAttribute
-     * @param string $name
+     * @param string $attributeId
      * @return AttributeInterface|null
      */
-    public function getAttribute(string $name): ?AttributeInterface;
+    public function getAttribute(string $attributeId): ?AttributeInterface;
 
     /**
      * getAttributes

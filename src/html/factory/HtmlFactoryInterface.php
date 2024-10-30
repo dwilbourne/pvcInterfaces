@@ -47,10 +47,10 @@ interface HtmlFactoryInterface
 
     /**
      * makeAttribute
-     * @param string $attributeName
+     * @param string $attributeId
      * @return AttributeInterface
      */
-    public function makeAttribute(string $attributeName): AttributeInterface;
+    public function makeAttribute(string $attributeId): AttributeInterface;
 
     /**
      * makeElement
