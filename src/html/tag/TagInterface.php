@@ -30,9 +30,9 @@ interface TagInterface extends TagVoidInterface
 
     /**
      * setAllowedChildElements
-     * @param array<string> $subTagNames
+     * @param array<string> $elementNames
      */
-    public function setAllowedChildElements(array $subTagNames): void;
+    public function setAllowedChildElements(array $elementNames): void;
 
     /**
      * getAllowedChildElements
