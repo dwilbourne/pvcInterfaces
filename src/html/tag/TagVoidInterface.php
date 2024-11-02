@@ -55,11 +55,11 @@ interface TagVoidInterface
 
     /**
      * setAttribute
-     * @param string $attributeId
+     * @param string|AttributeInterface $attributeId
      * @param string ...$values
      * @return TagVoidInterface
      */
-    public function setAttribute(string $attributeId, ...$values): TagVoidInterface;
+    public function setAttribute(string|AttributeInterface $attributeId, ...$values): TagVoidInterface;
 
     /**
      * getAttribute
@@ -70,10 +70,10 @@ interface TagVoidInterface
 
     /**
      * setCustomData
-     * @param AttributeInterface $attribute
+     * @param string|AttributeInterface $attribute
      * @return TagVoidInterface
      */
-    public function setCustomData(AttributeInterface $attribute): TagVoidInterface;
+    public function setCustomData(string|AttributeInterface $attribute): TagVoidInterface;
 
     /**
      * getAttributes
