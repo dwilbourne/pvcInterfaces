@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
+use pvc\interfaces\msg\MsgFactoryInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
@@ -16,44 +17,49 @@ use pvc\interfaces\msg\MsgInterface;
 interface TagInterface extends TagVoidInterface
 {
     /**
-     * setAllowedSubtags
+     * setMsgFactory
+     * @param MsgFactoryInterface $msgFactory
+     */
+    public function setMsgFactory(MsgFactoryInterface $msgFactory): void;
+
+    /**
+     * getMsgFactory
+     * @return MsgFactoryInterface
+     */
+    public function getMsgFactory(): MsgFactoryInterface;
+
+    /**
+     * setAllowedChildElements
      * @param array<string> $subTagNames
      */
-    public function setAllowedSubtags(array $subTagNames): void;
+    public function setAllowedChildElements(array $subTagNames): void;
 
     /**
-     * getAllowedSubTags
+     * getAllowedChildElements
      * @return array<string>
      */
-    public function getAllowedSubTags(): array;
+    public function getAllowedChildElements(): array;
 
     /**
-     * addSubTagObject
-     * @param TagVoidInterface $tag
+     * addChildElement
+     * @param string|TagVoidInterface $tag
      * @return TagVoidInterface
      */
-    public function addSubTagObject(TagVoidInterface $tag): TagVoidInterface;
+    public function addChildElement(string|TagVoidInterface $tag): TagVoidInterface;
 
     /**
-     * addSubTag
-     * @param string $tagName
-     * @return TagVoidInterface
+     * getChildElementById
+     * @param string $id
+     * @return TagVoidInterface|null
      */
-    public function addSubTag(string $tagName): TagVoidInterface;
+    public function getChildElementById(string $id): ?TagVoidInterface;
 
     /**
-     * setInnerTextAllowed
-     * @param bool $innerTextAllowed
-     * TODO: decide whether to implement this feature
-     * public function setInnerTextAllowed(bool $innerTextAllowed): void;
+     * getChildElementByName
+     * @param string $name
+     * @return array<TagVoidInterface>|TagVoidInterface|null
      */
-
-    /**
-     * innerTextAllowed
-     * @return bool
-     * TODO: decide whether to implement this feature
-     * public function isInnerTextAllowed(): bool;
-     */
+    public function getChildElementByName(string $name): array|TagVoidInterface|null;
 
     /**
      * addMsg
