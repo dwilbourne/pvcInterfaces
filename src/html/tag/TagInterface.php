@@ -49,10 +49,10 @@ interface TagInterface extends TagVoidInterface
 
     /**
      * addChildElement
-     * @param string|TagVoidInterface $tag
+     * @param string|TagVoidInterface $element
      * @return TagVoidInterface
      */
-    public function addChildElement(string|TagVoidInterface $tag): TagVoidInterface;
+    public function addChildElement(string|TagVoidInterface $element): TagVoidInterface;
 
     /**
      * getChildElementById
