@@ -55,24 +55,12 @@ interface TagInterface extends TagVoidInterface
     public function addChildElement(string|TagVoidInterface $element): TagVoidInterface;
 
     /**
-     * getChildElementById
-     * @param string $id
-     * @return TagVoidInterface|null
-     */
-    public function getChildElementById(string $id): ?TagVoidInterface;
-
-    /**
-     * getChildElementByName
-     * @param string $name
-     * @return array<TagVoidInterface>|TagVoidInterface|null
-     */
-    public function getChildElementByName(string $name): array|TagVoidInterface|null;
-
-    /**
      * addMsg
-     * @param MsgInterface $msg
+     * @param string $domain
+     * @param string $msgId
+     * @param array $parameters
      */
-    public function addMsg(MsgInterface $msg): void;
+    public function addMsg(string $domain, string $msgId, array $parameters): void;
 
     /**
      * addText
