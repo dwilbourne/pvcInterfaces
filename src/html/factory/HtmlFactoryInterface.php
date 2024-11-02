@@ -8,9 +8,11 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\factory;
 
+use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\tag\TagVoidInterface;
+use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class HtmlFactoryInterface
@@ -51,6 +53,14 @@ interface HtmlFactoryInterface
      * @return AttributeInterface
      */
     public function makeAttribute(string $attributeId): AttributeInterface;
+
+    /**
+     * makeCustomData
+     * @param string $attributeId
+     * @param ValTesterInterface<string> $valTester
+     * @return AttributeCustomDataInterface
+     */
+    public function makeCustomData(string $attributeId, ValTesterInterface $valTester): AttributeCustomDataInterface;
 
     /**
      * makeElement
