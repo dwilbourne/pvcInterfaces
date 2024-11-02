@@ -57,7 +57,7 @@ interface HtmlFactoryInterface
     /**
      * makeCustomData
      * @param string $attributeId
-     * @param ValTesterInterface<string> $valTester
+     * @param ValTesterInterface<string>|null $valTester
      * @return AttributeCustomDataInterface
      */
     public function makeCustomData(string $attributeId, ValTesterInterface $valTester): AttributeCustomDataInterface;
