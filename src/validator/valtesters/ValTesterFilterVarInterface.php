@@ -14,7 +14,7 @@ use pvc\interfaces\validator\ValTesterInterface;
 /**
  * Class ValTesterFilterVarInterface
  * @template DataType
- * @extends ValTesterInterface<DataType>, FilterVarInterface
+ * @extends ValTesterInterface<DataType> FilterVarInterface
  */
 interface ValTesterFilterVarInterface extends ValTesterInterface, FilterVarInterface
 {

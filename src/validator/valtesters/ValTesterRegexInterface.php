@@ -14,7 +14,7 @@ use pvc\interfaces\validator\ValTesterInterface;
 /**
  * Class ValTesterRegexInterface
  * @template DataType
- * @extends ValTesterInterface<DataType>, RegexInterface
+ * @extends ValTesterInterface<DataType> RegexInterface
  */
 interface ValTesterRegexInterface extends ValTesterInterface, RegexInterface
 {
