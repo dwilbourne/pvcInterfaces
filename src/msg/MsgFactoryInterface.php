@@ -13,5 +13,9 @@ namespace pvc\interfaces\msg;
  */
 interface MsgFactoryInterface
 {
-    public function makeMsg(string $domain): MsgInterface;
+    /**
+     * makeMsg
+     * @return MsgInterface
+     */
+    public function makeMsg(): MsgInterface;
 }
