@@ -54,13 +54,6 @@ interface TagVoidInterface
     public function getAllowedAttributeIds(): array;
 
     /**
-     * setAttributeObject
-     * @param AttributeInterface $attribute
-     * @return TagVoidInterface
-     */
-    public function setAttributeObject(AttributeInterface $attribute): TagVoidInterface;
-
-    /**
      * setAttribute
      * @param string $attributeId
      * @param string ...$values
@@ -74,6 +67,13 @@ interface TagVoidInterface
      * @return AttributeInterface|null
      */
     public function getAttribute(string $attributeId): ?AttributeInterface;
+
+    /**
+     * setCustomData
+     * @param AttributeInterface $attribute
+     * @return TagVoidInterface
+     */
+    public function setCustomData(AttributeInterface $attribute): TagVoidInterface;
 
     /**
      * getAttributes
