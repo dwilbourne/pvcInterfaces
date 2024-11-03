@@ -34,10 +34,10 @@ interface TagVoidInterface
 
     /**
      * setparentId
-     * @param string $parentid
+     * @param string $parentId
      * @return mixed
      */
-    public function setparentId(string $parentid);
+    public function setParentId(string $parentId);
 
     /**
      * getParentId
