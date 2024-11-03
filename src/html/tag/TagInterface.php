@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\tag;
 
 use pvc\interfaces\msg\MsgFactoryInterface;
-use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class TagInterface
@@ -48,32 +47,19 @@ interface TagInterface extends TagVoidInterface
     public function canAddElement(string $elementName): bool;
 
     /**
-     * addChildElement
+     * setChildElement
      * @param string|TagVoidInterface $element
      * @param string|null $id
      * @return TagVoidInterface
      */
-    public function addChildElement(string|TagVoidInterface $element, string $id = null): TagVoidInterface;
+    public function setChildElement(string|TagVoidInterface $element, string $id = null): TagVoidInterface;
 
     /**
-     * addMsg
-     * @param string $domain
-     * @param string $msgId
-     * @param array $parameters
+     * getChildElement
+     * @param string $id
+     * @return TagVoidInterface
      */
-    public function addMsg(string $domain, string $msgId, array $parameters): void;
-
-    /**
-     * addText
-     * @param string $text
-     */
-    public function addText(string $text): void;
-
-    /**
-     * getInnerHtml
-     * @return array<TagVoidInterface|MsgInterface|string>
-     */
-    public function getInnerHtml(): array;
+    public function getChildElement(string $id): TagVoidInterface;
 
     /**
      * getChildElements
@@ -81,6 +67,20 @@ interface TagInterface extends TagVoidInterface
      * @return array<TagVoidInterface>
      */
     public function getChildElements(callable $filter): array;
+
+    /**
+     * setMsg
+     * @param string $domain
+     * @param string $msgId
+     * @param array $parameters
+     */
+    public function setMsg(string $domain, string $msgId, array $parameters): void;
+
+    /**
+     * setText
+     * @param string $text
+     */
+    public function setText(string $text): void;
 
     /**
      * generateClosingTag
