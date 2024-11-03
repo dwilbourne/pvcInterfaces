@@ -15,25 +15,13 @@ namespace pvc\interfaces\html\attribute;
 interface AttributeInterface
 {
     /**
-     * getId
-     * @return string
-     */
-    public function getId(): string;
-
-    /**
      * getName
      * @return string
      */
     public function getName(): string;
 
     /**
-     * render
-     * @return string
-     */
-    public function render(): string;
-
-    /**
-     * setGloabl
+     * setGlobal
      * @param bool $global
      */
     public function setGlobal(bool $global): void;
@@ -55,4 +43,10 @@ interface AttributeInterface
      * @return array<string>|string|null
      */
     public function getValue(): array|string|null;
+
+    /**
+     * render
+     * @return string
+     */
+    public function render(): string;
 }

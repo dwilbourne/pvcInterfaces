@@ -33,19 +33,6 @@ interface TagVoidInterface
     public function getId(): string;
 
     /**
-     * setparentId
-     * @param string $parentId
-     * @return mixed
-     */
-    public function setParentId(string $parentId);
-
-    /**
-     * getParentId
-     * @return string|null
-     */
-    public function getParentId(): ?string;
-
-    /**
      * getName
      * @return string
      */
