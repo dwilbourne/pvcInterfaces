@@ -48,26 +48,26 @@ interface TagInterface extends TagVoidInterface
     public function isAllowedChildElement(string $elementName): bool;
 
     /**
-     * setChildElement
+     * setChild
      * @param string|TagVoidInterface $element
      * @param string|null $id
      * @return TagVoidInterface
      */
-    public function setChildElement(string|TagVoidInterface $element, string $id = null): TagVoidInterface;
+    public function setChild(string|TagVoidInterface $element, string $id = null): TagVoidInterface;
 
     /**
-     * getChildElement
+     * getChild
      * @param string $id
      * @return ?TagVoidInterface
      */
-    public function getChildElement(string $id): ?TagVoidInterface;
+    public function getChild(string $id): ?TagVoidInterface;
 
     /**
-     * getChildElements
+     * getChildChildren
      * @param callable $filter
      * @return array<TagVoidInterface>
      */
-    public function getChildElements(callable $filter): array;
+    public function getChildChildren(callable $filter): array;
 
     /**
      * setInnerText
