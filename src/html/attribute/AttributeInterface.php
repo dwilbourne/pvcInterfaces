@@ -15,6 +15,13 @@ namespace pvc\interfaces\html\attribute;
 interface AttributeInterface
 {
     /**
+     * getAttributeDefId
+     * @return string
+     * returns the definition id from which the attribute was constructed
+     */
+    public function getAttributeDefId(): string;
+
+    /**
      * getName
      * @return string
      */

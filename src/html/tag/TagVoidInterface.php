@@ -58,16 +58,16 @@ interface TagVoidInterface
     public function getHtmlFactory(): HtmlFactoryInterface;
 
     /**
-     * setAllowedAttributeDefs
-     * @param array<string> $allowedAttributeDefs
+     * setAllowedAttributeDefIds
+     * @param array<string> $allowedAttributeDefIds
      */
-    public function setAllowedAttributeDefs(array $allowedAttributeDefs): void;
+    public function setAllowedAttributeDefIds(array $allowedAttributeDefIds): void;
 
     /**
-     * getAllowedAttributeDefs
+     * getAllowedAttributeDefIds
      * @return array<string>
      */
-    public function getAllowedAttributeDefs(): array;
+    public function getAllowedAttributeDefIds(): array;
 
     /**
      * setAttribute
@@ -79,7 +79,7 @@ interface TagVoidInterface
 
     /**
      * $attributeName
-     * @param string $attributeId
+     * @param string $attributeName
      * @return AttributeInterface|null
      */
     public function getAttribute(string $attributeName): ?AttributeInterface;
