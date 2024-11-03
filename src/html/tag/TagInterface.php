@@ -76,6 +76,13 @@ interface TagInterface extends TagVoidInterface
     public function getInnerHtml(): array;
 
     /**
+     * getChildElements
+     * @param callable $filter
+     * @return array<TagVoidInterface>
+     */
+    public function getChildElements(callable $filter): array;
+
+    /**
      * generateClosingTag
      * @return string
      */

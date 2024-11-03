@@ -22,7 +22,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * This interface defines the operations common to all tree nodes.  Here are some of the design points.  The nodeid
  * property is immutable - the only way to set the nodeid is at hydration.  The same applies to the tree property.
  * This means that there are no setters for these properties.  Together, these two design points ensure that nodes
- * cannot be hydrated except in the content of belonging to a tree.  That in turn makes it a bit easier to enforce the
+ * cannot be hydrated except in the context of belonging to a tree.  That in turn makes it a bit easier to enforce the
  * design point that all nodeids in a tree must be unique.
  *
  * The same is almost true for the parent property, but the difference is that the nodes are allowed to move around
