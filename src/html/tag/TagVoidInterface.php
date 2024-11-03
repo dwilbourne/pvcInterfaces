@@ -20,6 +20,32 @@ use pvc\interfaces\validator\ValTesterInterface;
 interface TagVoidInterface
 {
     /**
+     * setId
+     * @param string $id
+     * @return mixed
+     */
+    public function setId(string $id);
+
+    /**
+     * getId
+     * @return string
+     */
+    public function getId(): string;
+
+    /**
+     * setparentId
+     * @param string $parentid
+     * @return mixed
+     */
+    public function setparentId(string $parentid);
+
+    /**
+     * getParentId
+     * @return string|null
+     */
+    public function getParentId(): ?string;
+
+    /**
      * getName
      * @return string
      */
