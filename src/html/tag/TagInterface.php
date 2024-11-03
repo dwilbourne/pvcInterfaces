@@ -67,7 +67,7 @@ interface TagInterface extends TagVoidInterface
      * @param callable $filter
      * @return array<TagVoidInterface>
      */
-    public function getChildChildren(callable $filter): array;
+    public function getChildren(callable $filter): array;
 
     /**
      * setInnerText
