@@ -41,11 +41,11 @@ interface TagInterface extends TagVoidInterface
     public function getAllowedChildElements(): array;
 
     /**
-     * canAddElement
+     * isAllowedChildElement
      * @param string $elementName
      * @return bool
      */
-    public function canAddElement(string $elementName): bool;
+    public function isAllowedChildElement(string $elementName): bool;
 
     /**
      * setChildElement
