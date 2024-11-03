@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\tag;
 
 use pvc\interfaces\msg\MsgFactoryInterface;
+use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class TagInterface
@@ -69,18 +70,16 @@ interface TagInterface extends TagVoidInterface
     public function getChildElements(callable $filter): array;
 
     /**
-     * setMsg
-     * @param string $domain
-     * @param string $msgId
-     * @param array $parameters
+     * setInnerText
+     * @param MsgInterface|string $innerText
      */
-    public function setMsg(string $domain, string $msgId, array $parameters): void;
+    public function setInnerText(MsgInterface|string $innerText): void;
 
     /**
-     * setText
-     * @param string $text
+     * getInnerText
+     * @return MsgInterface|string
      */
-    public function setText(string $text): void;
+    public function getInnerText(): MsgInterface|string;
 
     /**
      * generateClosingTag
