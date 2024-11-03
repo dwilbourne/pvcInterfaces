@@ -57,9 +57,9 @@ interface TagInterface extends TagVoidInterface
     /**
      * getChildElement
      * @param string $id
-     * @return TagVoidInterface
+     * @return ?TagVoidInterface
      */
-    public function getChildElement(string $id): TagVoidInterface;
+    public function getChildElement(string $id): ?TagVoidInterface;
 
     /**
      * getChildElements
