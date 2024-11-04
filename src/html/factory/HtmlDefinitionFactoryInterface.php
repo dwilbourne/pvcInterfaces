@@ -13,7 +13,7 @@ namespace pvc\interfaces\html\factory;
  * @template Definition
  *
  * @phpcs:ignore
- * @phpstan-type ElementDef array{'DefId':string,'Name':string,'TagType':string,'AllowedAttributes':array<string>,'AllowedSubTags':array<string>}
+ * @phpstan-type ElementDef array{'DefId':string,'Name':string,'TagType':string,'AllowedAttributeDefIds':array<string>,'AllowedChildDefIds':array<string>}
  *
  * @phpcs:ignore
  * @phpstan-type AttributeDef array{'DefId':string,'Name':string,'AttributeType':string,'ValueTester':string,'Global':bool,'CaseSensitive':bool}
