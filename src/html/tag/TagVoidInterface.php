@@ -117,9 +117,9 @@ interface TagVoidInterface
 
     /**
      * removeAttribute
-     * @param string $name
+     * @param string $defId
      */
-    public function removeAttribute(string $name): void;
+    public function removeAttribute(string $defId): void;
 
     /**
      * render
