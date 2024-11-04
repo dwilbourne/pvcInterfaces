@@ -70,6 +70,12 @@ interface TagVoidInterface
     public function getAllowedAttributeDefIds(): array;
 
     /**
+     * isAllowedAttributeDefId
+     * @return bool
+     */
+    public function isAllowedAttributeDefId(): bool;
+
+    /**
      * setAttribute
      * @param string|AttributeInterface $attribute
      * @param string ...$values
