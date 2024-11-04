@@ -8,28 +8,27 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\factory;
 
-use Psr\Container\ContainerInterface;
-
 /**
  * Class HtmlContainerFactoryInterface
+ * @template Definition of HtmlDefinitionFactoryInterface
  */
 interface HtmlContainerFactoryInterface
 {
     /**
      * makeElementContainer
-     * @return ContainerInterface
+     * @return ContainerInterface<Definition>
      */
     public function makeElementContainer(): ContainerInterface;
 
     /**
      * makeAttributeContainer
-     * @return ContainerInterface
+     * @return ContainerInterface<Definition>
      */
     public function makeAttributeContainer(): ContainerInterface;
 
     /**
      * makeEventContainer
-     * @return ContainerInterface
+     * @return ContainerInterface<Definition>
      */
     public function makeEventContainer(): ContainerInterface;
 }
