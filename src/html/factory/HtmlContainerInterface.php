@@ -11,10 +11,10 @@ namespace pvc\interfaces\html\factory;
 use pvc\interfaces\html\factory\definitions\HtmlDefinitionFactoryInterface;
 
 /**
- * Class ContainerInterface
+ * Class HtmlContainerInterface
  * @template Definition of HtmlDefinitionFactoryInterface
  */
-interface ContainerInterface extends \Psr\Container\ContainerInterface
+interface HtmlContainerInterface extends \Psr\Container\ContainerInterface
 {
     /**
      * add

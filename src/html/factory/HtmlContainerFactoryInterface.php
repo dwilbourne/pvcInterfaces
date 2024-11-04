@@ -18,19 +18,19 @@ interface HtmlContainerFactoryInterface
 {
     /**
      * makeElementContainer
-     * @return ContainerInterface<Definition>
+     * @return HtmlContainerInterface<Definition>
      */
-    public function makeElementContainer(): ContainerInterface;
+    public function makeElementContainer(): HtmlContainerInterface;
 
     /**
      * makeAttributeContainer
-     * @return ContainerInterface<Definition>
+     * @return HtmlContainerInterface<Definition>
      */
-    public function makeAttributeContainer(): ContainerInterface;
+    public function makeAttributeContainer(): HtmlContainerInterface;
 
     /**
      * makeEventContainer
-     * @return ContainerInterface<Definition>
+     * @return HtmlContainerInterface<Definition>
      */
-    public function makeEventContainer(): ContainerInterface;
+    public function makeEventContainer(): HtmlContainerInterface;
 }
