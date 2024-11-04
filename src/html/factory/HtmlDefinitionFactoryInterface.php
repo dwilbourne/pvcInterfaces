@@ -29,21 +29,21 @@ interface HtmlDefinitionFactoryInterface
 {
     /**
      * makeAttributeDefinition
-     * @param array<AttributeDef> $attributeDef
+     * @param AttributeDef $attributeDef
      * @return Definition
      */
     public function makeAttributeDefinition(array $attributeDef): mixed;
 
     /**
      * makeElementDefinition
-     * @param array<ElementDef> $elementDef
+     * @param ElementDef $elementDef
      * @return Definition
      */
     public function makeElementDefinition(array $elementDef): mixed;
 
     /**
      * makeEventDefinition
-     * @param array<EventDef> $eventDef
+     * @param EventDef $eventDef
      * @return Definition
      */
     public function makeEventDefinition(array $eventDef): mixed;
