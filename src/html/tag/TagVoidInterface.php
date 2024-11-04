@@ -70,10 +70,15 @@ interface TagVoidInterface
     public function getAllowedAttributeDefIds(): array;
 
     /**
-     * isAllowedAttributeDefId
+     * isAllowedAttribute
+     * @param AttributeInterface $attribute
      * @return bool
+     *
+     * it turns out to be easier to work with an actual attribute rather than a definition.  This is true for two
+     * reasons: 1) there are global attributes which are always allowed and 2) the attribute could be an Event, which
+     * is also always allowed.
      */
-    public function isAllowedAttributeDefId(): bool;
+    public function isAllowedAttribute(AttributeInterface $attribute): bool;
 
     /**
      * setAttribute
