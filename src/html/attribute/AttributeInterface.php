@@ -15,12 +15,23 @@ namespace pvc\interfaces\html\attribute;
 interface AttributeInterface
 {
     /**
-     * getAttributeDefId
-     * @return string
-     * returns the definition id from which the attribute was constructed
+     * setDefId
+     * @param string $defId
+     *
+     * sets the definition id from which the attribute is constructed.  Definition ids are unique, which is not
+     * quite true for attribute names.  The type attribute can be used inside button elements and input elements, and
+     * the creation of the type attribute is different between the two.  So we cannot use the attribute name as a
+     * unique identifier.
      */
-    public function getAttributeDefId(): string;
+    public function setDefId(string $defId): void;
 
+    /**
+     * getdefId
+     * @return string
+     */
+    public function getDefId(): string;
+
+    public function setName(string $name): void;
     /**
      * getName
      * @return string

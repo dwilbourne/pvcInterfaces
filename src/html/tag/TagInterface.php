@@ -29,38 +29,38 @@ interface TagInterface extends TagVoidInterface
     public function getMsgFactory(): MsgFactoryInterface;
 
     /**
-     * setAllowedChildElements
-     * @param array<string> $elementNames
+     * setAllowedChildDefIds
+     * @param array<string> $defIds
      */
-    public function setAllowedChildElements(array $elementNames): void;
+    public function setAllowedChildDefIds(array $defIds): void;
 
     /**
-     * getAllowedChildElements
+     * getAllowedChildDefIds
      * @return array<string>
      */
-    public function getAllowedChildElements(): array;
+    public function getAllowedChildDefIds(): array;
 
     /**
-     * isAllowedChildElement
-     * @param string $elementName
+     * isAllowedChildDefId
+     * @param string $defId
      * @return bool
      */
-    public function isAllowedChildElement(string $elementName): bool;
+    public function isAllowedChildDefId(string $defId): bool;
 
     /**
      * setChild
      * @param string|TagVoidInterface $element
-     * @param string|null $id
+     * @param string|null $key
      * @return TagVoidInterface
      */
-    public function setChild(string|TagVoidInterface $element, string $id = null): TagVoidInterface;
+    public function setChild(string|TagVoidInterface $element, string $key = null): TagVoidInterface;
 
     /**
      * getChild
-     * @param string $id
+     * @param string $key
      * @return ?TagVoidInterface
      */
-    public function getChild(string $id): ?TagVoidInterface;
+    public function getChild(string $key): ?TagVoidInterface;
 
     /**
      * getChildChildren
