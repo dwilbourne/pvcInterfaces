@@ -20,17 +20,5 @@ interface HtmlContainerHydratorInterface
      * hydrateElementContainer
      * @param HtmlContainerInterface<Definition> $container
      */
-    public function hydrateElementContainer(HtmlContainerInterface $container): void;
-
-    /**
-     * HydrateAttributeContainer
-     * @param HtmlContainerInterface<Definition> $container
-     */
-    public function hydrateAttributeContainer(HtmlContainerInterface $container): void;
-
-    /**
-     * HydrateEventContainer
-     * @param HtmlContainerInterface<Definition> $container
-     */
-    public function hydrateEventContainer(HtmlContainerInterface $container): void;
+    public function hydrateContainer(HtmlContainerInterface $container): void;
 }
