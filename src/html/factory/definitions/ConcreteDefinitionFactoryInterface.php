@@ -14,10 +14,11 @@ namespace pvc\interfaces\html\factory\definitions;
  *
  * @phpstan-import-type ElementDef from AbstractDefinitionFactoryInterface
  * @phpstan-import-type AttributeDef from AbstractDefinitionFactoryInterface
+ * @phpstan-import-type AttributeValueTesterDef from AbstractDefinitionFactoryInterface
  * @phpstan-import-type EventDef from AbstractDefinitionFactoryInterface
  *
- * NONE of the definitions should be 'shared'.  When you request one of these definitions from the container, it
- * should always produce a new instance of the object.
+ * Only the value tester definitions should be 'shared'.  E.g. When you request an attribute, element or event from the
+ * container, it should produce a new instance of the object. Value Tester objects are stateless and can be shared.
  */
 interface ConcreteDefinitionFactoryInterface
 {
@@ -27,6 +28,13 @@ interface ConcreteDefinitionFactoryInterface
      * @return Definition
      */
     public function makeAttributeDefinition(array $attributeDef): mixed;
+
+    /**
+     * makeAttributeValueTesterDefinition
+     * @param array $attributeValueTesterDef
+     * @return mixed
+     */
+    public function makeAttributeValueTesterDefinition(array $attributeValueTesterDef): mixed;
 
     /**
      * makeElementDefinition
