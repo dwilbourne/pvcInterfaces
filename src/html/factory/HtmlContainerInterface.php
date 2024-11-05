@@ -20,5 +20,5 @@ interface HtmlContainerInterface extends \Psr\Container\ContainerInterface
      * add
      * @param Definition $definition
      */
-    public function add(mixed $definition): void;
+    public function add(string $defId, mixed $definition): void;
 }
