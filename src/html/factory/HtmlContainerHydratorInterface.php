@@ -20,5 +20,5 @@ interface HtmlContainerHydratorInterface
      * hydrateElementContainer
      * @param HtmlContainerInterface<Definition> $container
      */
-    public function hydrateContainer(HtmlContainerInterface $container): void;
+    public function hydrateContainer(HtmlContainerInterface $container, string $definitionsFileName): void;
 }
