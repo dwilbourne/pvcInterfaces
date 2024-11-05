@@ -9,23 +9,17 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\factory\definitions;
 
 /**
- * Class HtmlDefinitionFactoryInterface
+ * Class ConcreteDefinitionFactoryInterface
  * @template Definition
  *
- * @phpcs:ignore
- * @phpstan-type ElementDef array{'DefId':string,'Name':string,'TagType':string,'AllowedAttributeDefIds':array<string>,'AllowedChildDefIds':array<string>}
- *
- * @phpcs:ignore
- * @phpstan-type AttributeDef array{'DefId':string,'Name':string,'AttributeType':string,'ValueTester':string,'Global':bool,'CaseSensitive':bool}
- *
- * @phpstan-type AttributeValueTesterDef array{'Name':string,'TesterType':string,'TesterArg':string|array<string>}
- *
- * @phpstan-type EventDef array{'DefId':string, 'Name':string}
+ * @phpstan-import-type ElementDef from AbstractDefinitionFactoryInterface
+ * @phpstan-import-type AttributeDef from AbstractDefinitionFactoryInterface
+ * @phpstan-import-type EventDef from AbstractDefinitionFactoryInterface
  *
  * NONE of the definitions should be 'shared'.  When you request one of these definitions from the container, it
  * should always produce a new instance of the object.
  */
-interface HtmlDefinitionFactoryInterface
+interface ConcreteDefinitionFactoryInterface
 {
     /**
      * makeAttributeDefinition
