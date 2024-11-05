@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\factory;
 
-use Iterator;
+use IteratorAggregate;
 use Psr\Container\ContainerInterface;
 use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 
@@ -18,7 +18,7 @@ use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
  * @template DefId
  * @extends \Iterator<DefId, Definition>
  */
-interface HtmlContainerInterface extends ContainerInterface, Iterator
+interface HtmlContainerInterface extends ContainerInterface, IteratorAggregate
 {
     /**
      * add
