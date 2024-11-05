@@ -10,7 +10,7 @@ namespace pvc\interfaces\html\factory\definitions;
 
 /**
  * Class ConcreteDefinitionFactoryInterface
- * @template Definition
+ * @template Definition of AbstractDefinitionFactoryInterface
  *
  * @phpstan-import-type ElementDef from AbstractDefinitionFactoryInterface
  * @phpstan-import-type AttributeDef from AbstractDefinitionFactoryInterface
@@ -31,7 +31,7 @@ interface ConcreteDefinitionFactoryInterface
 
     /**
      * makeAttributeValueTesterDefinition
-     * @param array $attributeValueTesterDef
+     * @param array<AttributeValueTesterDef> $attributeValueTesterDef
      * @return mixed
      */
     public function makeAttributeValueTesterDefinition(array $attributeValueTesterDef): mixed;
