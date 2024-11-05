@@ -18,8 +18,10 @@ namespace pvc\interfaces\html\factory\definitions;
  * @phpcs:ignore
  * @phpstan-type AttributeDef array{'DefId':string,'Name':string,'Type':string,'ValueTester':string,'Global':bool,'CaseSensitive':bool}
  *
- * @phpstan-type AttributeValueTesterDef array{'Name':string,'Type':string,'TesterArg':string|array<string>}
+ * @phpcs:ignore
+ * @phpstan-type AttributeValueTesterDef array{'DefId':string,'Name':string,'Type':string,'TesterArg':string|array<string>}
  *
+ * @phpcs:ignore
  * @phpstan-type EventDef array{'DefId':string, 'Name':string, 'Type':string}
  */
 interface AbstractDefinitionFactoryInterface
