@@ -13,12 +13,13 @@ use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 /**
  * Class HtmlContainerHydratorInterface
  * @template Definition of AbstractDefinitionFactoryInterface
+ * @template DefId of HtmlContainerInterface
  */
 interface HtmlContainerHydratorInterface
 {
     /**
      * hydrateElementContainer
-     * @param HtmlContainerInterface<Definition> $container
+     * @param HtmlContainerInterface<Definition, DefId> $container
      */
     public function hydrateContainer(HtmlContainerInterface $container, string $definitionsFileName): void;
 }
