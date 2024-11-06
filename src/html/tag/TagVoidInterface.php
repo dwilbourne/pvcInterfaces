@@ -10,6 +10,7 @@ namespace pvc\interfaces\html\tag;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
+use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\factory\HtmlFactoryInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
@@ -107,6 +108,13 @@ interface TagVoidInterface
         string $value = null,
         ValTesterInterface $valTester = null
     ): TagVoidInterface;
+
+    /**
+     * setEvent
+     * @param EventInterface $event
+     * @return TagVoidInterface
+     */
+    public function setEvent(EventInterface $event): TagVoidInterface;
 
     /**
      * getAttributes
