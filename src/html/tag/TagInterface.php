@@ -77,9 +77,9 @@ interface TagInterface extends TagVoidInterface
 
     /**
      * getInnerText
-     * @return MsgInterface|string
+     * @return MsgInterface|string|null
      */
-    public function getInnerText(): MsgInterface|string;
+    public function getInnerText(): MsgInterface|string|null;
 
     /**
      * generateClosingTag
