@@ -18,6 +18,31 @@ use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 interface HtmlContainerHydratorInterface
 {
     /**
+     * setDefinitionsDir
+     * @param string $dir
+     */
+    public function setDefinitionsDir(string $dir): void;
+
+    /**
+     * getDefinitionsDir
+     * @return string
+     */
+    public function getDefinitionsDir(): string;
+
+    /**
+     * setDefinitionFactory
+     * @param AbstractDefinitionFactoryInterface<Definition> $definitionFactory
+     * @return void
+     */
+    public function setDefinitionFactory(AbstractDefinitionFactoryInterface $definitionFactory): void;
+
+    /**
+     * getDefinitionFactory
+     * @return AbstractDefinitionFactoryInterface<Definition>
+     */
+    public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
+
+    /**
      * hydrateElementContainer
      * @param HtmlContainerInterface<Definition, DefId> $container
      */
