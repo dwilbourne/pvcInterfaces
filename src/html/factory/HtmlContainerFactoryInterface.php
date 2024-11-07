@@ -13,13 +13,12 @@ use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 /**
  * Class HtmlContainerFactoryInterface
  * @template Definition of AbstractDefinitionFactoryInterface
- * @template DefId of HtmlContainerInterface
  */
 interface HtmlContainerFactoryInterface
 {
     /**
      * makeContainer
-     * @return HtmlContainerInterface<Definition, DefId>
+     * @return HtmlContainerInterface<Definition>
      */
     public function makeContainer(): HtmlContainerInterface;
 }

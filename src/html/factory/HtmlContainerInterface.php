@@ -15,8 +15,7 @@ use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 /**
  * Class HtmlContainerInterface
  * @template Definition of AbstractDefinitionFactoryInterface
- * @template DefId
- * @extends IteratorAggregate<DefId, Definition>
+ * @extends IteratorAggregate<string, Definition>
  */
 interface HtmlContainerInterface extends ContainerInterface, IteratorAggregate
 {
