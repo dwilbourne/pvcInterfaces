@@ -15,16 +15,17 @@ namespace pvc\interfaces\html\factory\definitions;
  * DefinitionType is an enum of the kinds of definitions this library supports, @see DefinitionType.php
  *
  * @phpcs:ignore
- * @phpstan-type ElementDef array{'DefId':string,'Name':string,'Comment':string,'Type':DefinitionType,'AllowedAttributeDefIds':array<string>, 'AllowedChildDefIds':array<string>}
+ * @phpstan-type ElementDef array{'DefId':string,'Name':string,'Comment':string,'Type':string,
+ *     'AllowedAttributeDefIds':array<string>, 'AllowedChildDefIds':array<string>}
  *
  * @phpcs:ignore
- * @phpstan-type AttributeDef array{'DefId':string,'Name':string,'Type':DefinitionType,'ValueTester':string,'Global':bool,'CaseSensitive':bool}
+ * @phpstan-type AttributeDef array{'DefId':string,'Name':string,'Type':string,'ValueTester':string,'Global':bool,'CaseSensitive':bool}
  *
  * @phpcs:ignore
- * @phpstan-type AttributeValueTesterDef array{'DefId':string,'Name':DefinitionType,'Type':string,'TesterArg':string|array<string>}
+ * @phpstan-type AttributeValueTesterDef array{'DefId':string,'Name':string,'Type':string,'TesterArg':string|array<string>}
  *
  * @phpcs:ignore
- * @phpstan-type EventDef array{'DefId':string, 'Name':string, 'Type':DefinitionType}
+ * @phpstan-type EventDef array{'DefId':string, 'Name':string, 'Type':string}
  *
  * @phpcs:ignore
  * @phpstan-type DefinitionFileNames array{'Attribute':string,'AttributeValueTester':string,'Element':string,'Event':string}
