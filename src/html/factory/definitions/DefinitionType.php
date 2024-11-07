@@ -11,10 +11,10 @@ namespace pvc\interfaces\html\factory\definitions;
 /**
  * Enum DefinitionType
  */
-enum DefinitionType
+enum DefinitionType: string
 {
-    case Attribute;
-    case AttributeValueTester;
-    case Element;
-    case Event;
+    case Attribute = 'Attribute';
+    case AttributeValueTester = 'AttributeValueTester';
+    case Element = 'Element';
+    case Event = 'Event';
 }
