@@ -14,6 +14,7 @@ use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
  * Class HtmlContainerHydratorInterface
  * @template Definition of AbstractDefinitionFactoryInterface
  * @template DefId of HtmlContainerInterface
+ * @template DefinitionFileNames of AbstractDefinitionFactoryInterface
  */
 interface HtmlContainerHydratorInterface
 {
@@ -41,6 +42,18 @@ interface HtmlContainerHydratorInterface
      * @return AbstractDefinitionFactoryInterface<Definition>
      */
     public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
+
+    /**
+     * setDefinitionFileNames
+     * @param array<DefinitionFileNames> $definitionFileNames
+     */
+    public function setDefinitionFileNames(array $definitionFileNames): void;
+
+    /**
+     * getDefinitionFileNames
+     * @return array<DefinitionFileNames>
+     */
+    public function getDefinitionFileNames(): array;
 
     /**
      * hydrateElementContainer
