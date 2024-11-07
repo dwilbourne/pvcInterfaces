@@ -23,12 +23,15 @@ namespace pvc\interfaces\html\factory\definitions;
  *
  * @phpcs:ignore
  * @phpstan-type EventDef array{'DefId':string, 'Name':string, 'Type':string}
+ *
+ * @phpcs:ignore
+ * @phpstan-type DefinitionFileNames array{'Attribute':string,'AttributeValueTester':string,'Element':string,'Event':string}
  */
 interface AbstractDefinitionFactoryInterface
 {
     /**
      * makeDefinition
-     * @param array<mixed> $def;
+     * @param array<ElementDef|AttributeDef|AttributeValueTesterDef|EventDef> $def;
      * @return Definition
      */
     public function makeDefinition(array $def): mixed;
