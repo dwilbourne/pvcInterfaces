@@ -15,7 +15,8 @@ use pvc\interfaces\html\factory\definitions\DefinitionType;
  * Class HtmlContainerHydratorInterface
  * @template Definition of AbstractDefinitionFactoryInterface
  * @template DefId of HtmlContainerInterface
- * @template DefinitionFileNames of AbstractDefinitionFactoryInterface
+ *
+ * @phpstan-import-type  DefinitionFileNames of AbstractDefinitionFactoryInterface
  */
 interface HtmlContainerHydratorInterface
 {
