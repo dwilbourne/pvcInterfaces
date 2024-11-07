@@ -16,7 +16,7 @@ use pvc\interfaces\html\factory\definitions\DefinitionType;
  * @template Definition of AbstractDefinitionFactoryInterface
  * @template DefId of HtmlContainerInterface
  *
- * @phpstan-import-type  DefinitionFileNames of AbstractDefinitionFactoryInterface
+ * @phpstan-import-type  DefinitionFileNames from AbstractDefinitionFactoryInterface
  */
 interface HtmlContainerHydratorInterface
 {
@@ -47,13 +47,13 @@ interface HtmlContainerHydratorInterface
 
     /**
      * setDefinitionFileNames
-     * @param array<DefinitionFileNames> $definitionFileNames
+     * @param DefinitionFileNames $definitionFileNames
      */
     public function setDefinitionFileNames(array $definitionFileNames): void;
 
     /**
      * getDefinitionFileNames
-     * @return array<DefinitionFileNames>
+     * @return DefinitionFileNames
      */
     public function getDefinitionFileNames(): array;
 
