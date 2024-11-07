@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\factory;
 
 use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
+use pvc\interfaces\html\factory\definitions\DefinitionType;
 
 /**
  * Class HtmlContainerHydratorInterface
@@ -18,18 +19,6 @@ use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
  */
 interface HtmlContainerHydratorInterface
 {
-    /**
-     * setDefinitionsDir
-     * @param string $dir
-     */
-    public function setDefinitionsDir(string $dir): void;
-
-    /**
-     * getDefinitionsDir
-     * @return string
-     */
-    public function getDefinitionsDir(): string;
-
     /**
      * setDefinitionFactory
      * @param AbstractDefinitionFactoryInterface<Definition> $definitionFactory
@@ -42,6 +31,18 @@ interface HtmlContainerHydratorInterface
      * @return AbstractDefinitionFactoryInterface<Definition>
      */
     public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
+
+    /**
+     * setDefinitionsDir
+     * @param string $dir
+     */
+    public function setDefinitionsDir(string $dir): void;
+
+    /**
+     * getDefinitionsDir
+     * @return string
+     */
+    public function getDefinitionsDir(): string;
 
     /**
      * setDefinitionFileNames
@@ -59,5 +60,5 @@ interface HtmlContainerHydratorInterface
      * hydrateElementContainer
      * @param HtmlContainerInterface<Definition, DefId> $container
      */
-    public function hydrateContainer(HtmlContainerInterface $container, string $definitionsFileName): void;
+    public function hydrateContainer(HtmlContainerInterface $container, DefinitionType $definitionType): void;
 }
