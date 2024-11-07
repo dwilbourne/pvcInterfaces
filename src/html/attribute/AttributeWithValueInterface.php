@@ -33,6 +33,12 @@ interface AttributeWithValueInterface extends AttributeInterface
     public function isCaseSensitive(): bool;
 
     /**
+     * setTester
+     * @param ValTesterInterface<string> $valTester
+     */
+    public function setTester(ValTesterInterface $valTester): void;
+
+    /**
      * getTester
      * @return ValTesterInterface<string>|null
      */

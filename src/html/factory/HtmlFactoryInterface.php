@@ -21,54 +21,54 @@ interface HtmlFactoryInterface
 {
     /**
      * canMakeElement
-     * @param string $elementName
+     * @param string $elementDefId
      * @return bool
      */
-    public function canMakeElement(string $elementName): bool;
+    public function canMakeElement(string $elementDefId): bool;
 
     /**
      * canMakeAttribute
-     * @param string $attributeId
+     * @param string $attributeDefId
      * @return bool
      */
-    public function canMakeAttribute(string $attributeId): bool;
+    public function canMakeAttribute(string $attributeDefId): bool;
 
     /**
      * canMakeEvent
-     * @param string $eventId
+     * @param string $eventDefId
      * @return bool
      */
-    public function canMakeEvent(string $eventId): bool;
+    public function canMakeEvent(string $eventDefId): bool;
 
     /**
      * makeAttribute
-     * @param string $attributeId
+     * @param string $attributeDefId
      * @return AttributeInterface
      */
-    public function makeAttribute(string $attributeId): AttributeInterface;
+    public function makeAttribute(string $attributeDefId): AttributeInterface;
 
     /**
      * makeCustomData
-     * @param string $attributeId
+     * @param string $attributeDefId
      * @param ValTesterInterface<string>|null $valTester
      * @return AttributeCustomDataInterface
      */
     public function makeCustomData(
-        string $attributeId,
+        string $attributeDefId,
         ValTesterInterface $valTester = null
     ): AttributeCustomDataInterface;
 
     /**
      * makeElement
-     * @param string $elementName
+     * @param string $elementDefId
      * @return TagVoidInterface
      */
-    public function makeElement(string $elementName): TagVoidInterface;
+    public function makeElement(string $elementDefId): TagVoidInterface;
 
     /**
      * makeEvent
-     * @param string $eventId
+     * @param string $eventDefId
      * @return EventInterface
      */
-    public function makeEvent(string $eventId): EventInterface;
+    public function makeEvent(string $eventDefId): EventInterface;
 }
