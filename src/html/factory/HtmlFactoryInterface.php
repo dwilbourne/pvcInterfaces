@@ -20,13 +20,6 @@ use pvc\interfaces\validator\ValTesterInterface;
 interface HtmlFactoryInterface
 {
     /**
-     * isAmbiguousName
-     * @param string $name
-     * @return bool
-     */
-    public function isAmbiguousName(string $name): bool;
-
-    /**
      * canMakeElement
      * @param string $elementName
      * @return bool
