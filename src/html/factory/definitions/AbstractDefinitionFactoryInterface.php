@@ -33,7 +33,7 @@ interface AbstractDefinitionFactoryInterface
 {
     /**
      * makeDefinition
-     * @param array<ElementDef|AttributeDef|AttributeValueTesterDef|EventDef> $def;
+     * @param ElementDef|AttributeDef|AttributeValueTesterDef|EventDef $def;
      * @return Definition
      */
     public function makeDefinition(array $def): mixed;
