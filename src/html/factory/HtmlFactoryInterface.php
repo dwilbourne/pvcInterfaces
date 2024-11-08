@@ -11,14 +11,54 @@ namespace pvc\interfaces\html\factory;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
+use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 use pvc\interfaces\html\tag\TagVoidInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class HtmlFactoryInterface
+ * @template Definition of AbstractDefinitionFactoryInterface
+ * @phpstan-import-type  DefinitionFileNames from AbstractDefinitionFactoryInterface
  */
 interface HtmlFactoryInterface
 {
+    /**
+     * setDefinitionFactory
+     * @param AbstractDefinitionFactoryInterface<Definition> $definitionFactory
+     * @return void
+     */
+    public function setDefinitionFactory(AbstractDefinitionFactoryInterface $definitionFactory): void;
+
+    /**
+     * getDefinitionFactory
+     * @return AbstractDefinitionFactoryInterface<Definition>
+     */
+    public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
+
+    /**
+     * setDefinitionsDir
+     * @param string $dir
+     */
+    public function setDefinitionsDir(string $dir): void;
+
+    /**
+     * getDefinitionsDir
+     * @return string
+     */
+    public function getDefinitionsDir(): string;
+
+    /**
+     * setDefinitionFileNames
+     * @param DefinitionFileNames $definitionFileNames
+     */
+    public function setDefinitionFileNames(array $definitionFileNames): void;
+
+    /**
+     * getDefinitionFileNames
+     * @return DefinitionFileNames
+     */
+    public function getDefinitionFileNames(): array;
+
     /**
      * canMakeElement
      * @param string $elementDefId
