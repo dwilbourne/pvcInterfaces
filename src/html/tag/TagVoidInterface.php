@@ -99,13 +99,13 @@ interface TagVoidInterface
     /**
      * setCustomData
      * @param string|AttributeCustomDataInterface $attribute
-     * @param string|null $value
+     * @param string $value
      * @param ValTesterInterface<string>|null $valTester
      * @return TagVoidInterface
      */
     public function setCustomData(
         string|AttributeCustomDataInterface $attribute,
-        string $value = null,
+        string $value,
         ValTesterInterface $valTester = null
     ): TagVoidInterface;
 
