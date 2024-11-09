@@ -36,18 +36,6 @@ interface HtmlFactoryInterface
     public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
 
     /**
-     * setDefinitionsFile
-     * @param string $dir
-     */
-    public function setDefinitionsFile(string $dir): void;
-
-    /**
-     * getDefinitionsFile
-     * @return string
-     */
-    public function getDefinitionsFile(): string;
-
-    /**
      * canMake
      * @param string $defId
      * @return bool
