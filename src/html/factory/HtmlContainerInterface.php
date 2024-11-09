@@ -8,16 +8,18 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\factory;
 
-use IteratorAggregate;
+use Iterator;
 use Psr\Container\ContainerInterface;
 use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 
 /**
  * Class HtmlContainerInterface
  * @template Definition of AbstractDefinitionFactoryInterface
- * @extends IteratorAggregate<string, Definition>
+ * @extends Iterator<string>
+ *
+ * The iterator interface is intended to yield definition ids that exist in the container
  */
-interface HtmlContainerInterface extends ContainerInterface, IteratorAggregate
+interface HtmlContainerInterface extends ContainerInterface, Iterator
 {
     /**
      * add
