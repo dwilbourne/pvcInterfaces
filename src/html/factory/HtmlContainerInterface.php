@@ -8,18 +8,15 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\factory;
 
-use Iterator;
+use Generator;
 use Psr\Container\ContainerInterface;
 use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 
 /**
  * Class HtmlContainerInterface
  * @template Definition of AbstractDefinitionFactoryInterface
- * @extends Iterator<string>
- *
- * The iterator interface is intended to yield definition ids that exist in the container
  */
-interface HtmlContainerInterface extends ContainerInterface, Iterator
+interface HtmlContainerInterface extends ContainerInterface
 {
     /**
      * add
@@ -27,4 +24,10 @@ interface HtmlContainerInterface extends ContainerInterface, Iterator
      * @param Definition $definition
      */
     public function add(string $defId, mixed $definition): void;
+
+    /**
+     * definitionGenerator
+     * @return Generator
+     */
+    public function definitionGenerator(): Generator;
 }
