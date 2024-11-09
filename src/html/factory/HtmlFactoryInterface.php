@@ -36,28 +36,16 @@ interface HtmlFactoryInterface
     public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
 
     /**
-     * setDefinitionsDir
+     * setDefinitionsFile
      * @param string $dir
      */
-    public function setDefinitionsDir(string $dir): void;
+    public function setDefinitionsFile(string $dir): void;
 
     /**
-     * getDefinitionsDir
+     * getDefinitionsFile
      * @return string
      */
-    public function getDefinitionsDir(): string;
-
-    /**
-     * setDefinitionFileNames
-     * @param DefinitionFileNames $definitionFileNames
-     */
-    public function setDefinitionFileNames(array $definitionFileNames): void;
-
-    /**
-     * getDefinitionFileNames
-     * @return DefinitionFileNames
-     */
-    public function getDefinitionFileNames(): array;
+    public function getDefinitionsFile(): string;
 
     /**
      * canMakeElement
