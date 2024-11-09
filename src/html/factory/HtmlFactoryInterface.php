@@ -48,25 +48,11 @@ interface HtmlFactoryInterface
     public function getDefinitionsFile(): string;
 
     /**
-     * canMakeElement
-     * @param string $elementDefId
+     * canMake
+     * @param string $defId
      * @return bool
      */
-    public function canMakeElement(string $elementDefId): bool;
-
-    /**
-     * canMakeAttribute
-     * @param string $attributeDefId
-     * @return bool
-     */
-    public function canMakeAttribute(string $attributeDefId): bool;
-
-    /**
-     * canMakeEvent
-     * @param string $eventDefId
-     * @return bool
-     */
-    public function canMakeEvent(string $eventDefId): bool;
+    public function canMake(string $defId): bool;
 
     /**
      * makeAttribute
