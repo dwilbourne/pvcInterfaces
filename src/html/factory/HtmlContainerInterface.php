@@ -21,9 +21,9 @@ interface HtmlContainerInterface extends ContainerInterface
     /**
      * add
      * @param string $defId
-     * @param Definition $definition
+     * @param Definition|null $definition
      */
-    public function add(string $defId, mixed $definition): void;
+    public function add(string $defId, mixed $definition = null): void;
 
     /**
      * definitionGenerator
