@@ -12,6 +12,7 @@ use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
+use pvc\interfaces\html\factory\definitions\DefinitionType;
 use pvc\interfaces\html\tag\TagVoidInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
@@ -34,6 +35,13 @@ interface HtmlFactoryInterface
      * @return AbstractDefinitionFactoryInterface<Definition>
      */
     public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
+
+    /**
+     * getDefinitionsTypes
+     * @param DefinitionType|null $type
+     * @return array
+     */
+    public function getDefinitionsTypes(DefinitionType $type = null): array;
 
     /**
      * canMake
