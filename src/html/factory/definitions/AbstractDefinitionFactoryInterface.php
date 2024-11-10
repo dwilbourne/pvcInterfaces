@@ -23,14 +23,13 @@ namespace pvc\interfaces\html\factory\definitions;
  *     'ValueTester':string,'CaseSensitive':bool,'Global':bool}
  *
  * @phpcs:ignore
- * @phpstan-type AttributeValueTesterDef array{'DefId':string,'DefType':string,'Name':string,'Concrete':string,
- * 'TesterArg':string|array<string>}
+ * @phpstan-type AttributeValueTesterDef array{'DefId':string,'DefType':string,'Concrete':string,'Arg':string|array<string>}
  *
  * @phpcs:ignore
- * @phpstan-type EventDef array{'DefId':string,'DefType':string,'Name':string, 'Concrete':string}
+ * @phpstan-type EventDef array{'DefId':string,'DefType':string,'Concrete':string}
  *
  * @phpcs:ignore
- * @phpstan-type DefinitionFileNames array{'Attribute':string,'AttributeValueTester':string,'Element':string,'Event':string}
+ * @phpstan-type OtherDef array{'DefId':string,'DefType':string,'Concrete':string,'Arg':string}
  */
 interface AbstractDefinitionFactoryInterface
 {
