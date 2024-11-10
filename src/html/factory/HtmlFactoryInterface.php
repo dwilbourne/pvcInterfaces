@@ -37,11 +37,18 @@ interface HtmlFactoryInterface
     public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
 
     /**
-     * getDefinitionsTypes
+     * getDefinitionTypes
+     * @param DefinitionType|null $type
+     * @return array<string, string>
+     */
+    public function getDefinitionTypes(DefinitionType $type = null): array;
+
+    /**
+     * getDefinitionIds
      * @param DefinitionType|null $type
      * @return array
      */
-    public function getDefinitionsTypes(DefinitionType $type = null): array;
+    public function getDefinitionIds(DefinitionType $type = null): array;
 
     /**
      * canMake
