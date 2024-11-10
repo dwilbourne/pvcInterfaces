@@ -58,6 +58,13 @@ interface HtmlFactoryInterface
     public function canMake(string $defId): bool;
 
     /**
+     * make
+     * @param string $defId
+     * @return AttributeInterface|TagVoidInterface|EventInterface
+     */
+    public function make(string $defId): AttributeInterface|TagVoidInterface|EventInterface;
+
+    /**
      * makeAttribute
      * @param string $attributeDefId
      * @return AttributeInterface
