@@ -29,7 +29,7 @@ namespace pvc\interfaces\html\factory\definitions;
  * @phpstan-type EventDef array{'DefId':string,'DefType':string,'Concrete':string}
  *
  * @phpcs:ignore
- * @phpstan-type OtherDef array{'DefId':string,'DefType':string,'Concrete':string,'Arg':string}
+ * @phpstan-type OtherDef array{'DefId':string,'DefType':string,'Concrete':string,'Arg':string,'Shared':bool}
  */
 interface AbstractDefinitionFactoryInterface
 {
