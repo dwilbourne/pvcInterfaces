@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\http\mimetype;
+namespace pvc\interfaces\http\mime;
 
 /**
  * Class MimeTypesSrcInterface
