@@ -56,12 +56,5 @@ interface ConcreteDefinitionFactoryInterface
      * @param array<OtherDef> $otherDef
      * @return mixed
      */
-    public function makeOtherSharedDefinition(array $otherDef): mixed;
-
-    /**
-     * makeOtherNonSharedDefinition
-     * @param array<OtherDef> $otherDef
-     * @return mixed
-     */
-    public function makeOtherNonSharedDefinition(array $otherDef): mixed;
+    public function makeOtherDefinition(array $otherDef): mixed;
 }
