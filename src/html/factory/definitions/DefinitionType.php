@@ -17,4 +17,5 @@ enum DefinitionType: string
     case AttributeValueTester = 'AttributeValueTester';
     case Element = 'Element';
     case Event = 'Event';
+    case Other = 'Other';
 }
