@@ -11,11 +11,13 @@ namespace pvc\interfaces\html\tag;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
+use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 use pvc\interfaces\html\factory\HtmlFactoryInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class TagVoidInterface
+ * @template Definition of AbstractDefinitionFactoryInterface
  * @noinspection PhpCSValidationInspection
  */
 interface TagVoidInterface
@@ -48,13 +50,13 @@ interface TagVoidInterface
 
     /**
      * setHtmlFactory
-     * @param HtmlFactoryInterface $htmlFactory
+     * @param HtmlFactoryInterface<Definition> $htmlFactory
      */
     public function setHtmlFactory(HtmlFactoryInterface $htmlFactory): void;
 
     /**
      * getHtmlFactory
-     * @return HtmlFactoryInterface
+     * @return HtmlFactoryInterface<Definition>
      */
     public function getHtmlFactory(): HtmlFactoryInterface;
 
@@ -85,7 +87,7 @@ interface TagVoidInterface
      * setAttribute
      * @param string|AttributeInterface $attribute
      * @param string ...$values
-     * @return TagVoidInterface
+     * @return TagVoidInterface<Definition>
      */
     public function setAttribute(string|AttributeInterface $attribute, ...$values): TagVoidInterface;
 
@@ -101,7 +103,7 @@ interface TagVoidInterface
      * @param string|AttributeCustomDataInterface $attribute
      * @param string $value
      * @param ValTesterInterface<string>|null $valTester
-     * @return TagVoidInterface
+     * @return TagVoidInterface<Definition>
      */
     public function setCustomData(
         string|AttributeCustomDataInterface $attribute,
@@ -112,7 +114,7 @@ interface TagVoidInterface
     /**
      * setEvent
      * @param EventInterface $event
-     * @return TagVoidInterface
+     * @return TagVoidInterface<Definition>
      */
     public function setEvent(EventInterface $event): TagVoidInterface;
 

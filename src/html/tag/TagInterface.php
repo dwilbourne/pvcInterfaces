@@ -8,11 +8,14 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
+use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 use pvc\interfaces\msg\MsgFactoryInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class TagInterface
+ * @template Definition of AbstractDefinitionFactoryInterface
+ * @extends TagVoidInterface<Definition>
  */
 interface TagInterface extends TagVoidInterface
 {
@@ -49,23 +52,23 @@ interface TagInterface extends TagVoidInterface
 
     /**
      * setChild
-     * @param string|TagVoidInterface $element
+     * @param string|TagVoidInterface<Definition> $element
      * @param string|null $key
-     * @return TagVoidInterface
+     * @return TagVoidInterface<Definition>
      */
     public function setChild(string|TagVoidInterface $element, string $key = null): TagVoidInterface;
 
     /**
      * getChild
      * @param string $key
-     * @return ?TagVoidInterface
+     * @return ?TagVoidInterface<Definition>
      */
     public function getChild(string $key): ?TagVoidInterface;
 
     /**
      * getChildChildren
      * @param callable $filter
-     * @return array<TagVoidInterface>
+     * @return array<TagVoidInterface<Definition>>
      */
     public function getChildren(callable $filter): array;
 

@@ -19,7 +19,6 @@ use pvc\interfaces\validator\ValTesterInterface;
 /**
  * Class HtmlFactoryInterface
  * @template Definition of AbstractDefinitionFactoryInterface
- * @phpstan-import-type  DefinitionFileNames from AbstractDefinitionFactoryInterface
  */
 interface HtmlFactoryInterface
 {
@@ -46,7 +45,7 @@ interface HtmlFactoryInterface
     /**
      * getDefinitionIds
      * @param DefinitionType|null $type
-     * @return array
+     * @return array<string>
      */
     public function getDefinitionIds(DefinitionType $type = null): array;
 
@@ -60,7 +59,7 @@ interface HtmlFactoryInterface
     /**
      * make
      * @param string $defId
-     * @return AttributeInterface|TagVoidInterface|EventInterface
+     * @return AttributeInterface|TagVoidInterface<Definition>|EventInterface|ValTesterInterface<string>
      */
     public function make(string $defId): AttributeInterface|TagVoidInterface|EventInterface|ValTesterInterface;
 
@@ -87,7 +86,7 @@ interface HtmlFactoryInterface
     /**
      * makeElement
      * @param string $elementDefId
-     * @return TagVoidInterface
+     * @return TagVoidInterface<Definition>
      */
     public function makeElement(string $elementDefId): TagVoidInterface;
 
