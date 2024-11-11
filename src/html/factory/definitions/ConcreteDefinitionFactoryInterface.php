@@ -32,7 +32,7 @@ interface ConcreteDefinitionFactoryInterface
 
     /**
      * makeAttributeValueTesterDefinition
-     * @param array<AttributeValueTesterDef> $attributeValueTesterDef
+     * @param AttributeValueTesterDef $attributeValueTesterDef
      * @return mixed
      */
     public function makeAttributeValueTesterDefinition(array $attributeValueTesterDef): mixed;
@@ -53,7 +53,7 @@ interface ConcreteDefinitionFactoryInterface
 
     /**
      * makeOtherSharedDefinition
-     * @param array<OtherDef> $otherDef
+     * @param OtherDef $otherDef
      * @return mixed
      */
     public function makeOtherDefinition(array $otherDef): mixed;
