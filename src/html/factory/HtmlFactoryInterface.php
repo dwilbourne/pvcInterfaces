@@ -23,24 +23,18 @@ use pvc\interfaces\validator\ValTesterInterface;
 interface HtmlFactoryInterface
 {
     /**
-     * setDefinitionFactory
-     * @param DefinitionFactoryInterface<Definition> $definitionFactory
-     * @return void
-     */
-    public function setDefinitionFactory(DefinitionFactoryInterface $definitionFactory): void;
-
-    /**
-     * getDefinitionFactory
-     * @return DefinitionFactoryInterface<Definition>
-     */
-    public function getDefinitionFactory(): DefinitionFactoryInterface;
-
-    /**
      * getDefinitionTypes
      * @param DefinitionType|null $type
      * @return array<string, string>
      */
     public function getDefinitionTypes(DefinitionType $type = null): array;
+
+    /**
+     * getDefinitionType
+     * @param string $defId
+     * @return string
+     */
+    public function getDefinitionType(string $defId): string;
 
     /**
      * getDefinitionIds
@@ -59,9 +53,9 @@ interface HtmlFactoryInterface
     /**
      * make
      * @param string $defId
-     * @return AttributeInterface|TagVoidInterface<Definition>|EventInterface|ValTesterInterface<string>
+     * @return AttributeInterface|TagVoidInterface<Definition>|EventInterface
      */
-    public function make(string $defId): AttributeInterface|TagVoidInterface|EventInterface|ValTesterInterface;
+    public function make(string $defId): AttributeInterface|TagVoidInterface|EventInterface;
 
     /**
      * makeAttribute
