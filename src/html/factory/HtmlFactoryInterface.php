@@ -11,29 +11,29 @@ namespace pvc\interfaces\html\factory;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
-use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
+use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\html\factory\definitions\DefinitionType;
 use pvc\interfaces\html\tag\TagVoidInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class HtmlFactoryInterface
- * @template Definition of AbstractDefinitionFactoryInterface
+ * @template Definition of DefinitionFactoryInterface
  */
 interface HtmlFactoryInterface
 {
     /**
      * setDefinitionFactory
-     * @param AbstractDefinitionFactoryInterface<Definition> $definitionFactory
+     * @param DefinitionFactoryInterface<Definition> $definitionFactory
      * @return void
      */
-    public function setDefinitionFactory(AbstractDefinitionFactoryInterface $definitionFactory): void;
+    public function setDefinitionFactory(DefinitionFactoryInterface $definitionFactory): void;
 
     /**
      * getDefinitionFactory
-     * @return AbstractDefinitionFactoryInterface<Definition>
+     * @return DefinitionFactoryInterface<Definition>
      */
-    public function getDefinitionFactory(): AbstractDefinitionFactoryInterface;
+    public function getDefinitionFactory(): DefinitionFactoryInterface;
 
     /**
      * getDefinitionTypes
