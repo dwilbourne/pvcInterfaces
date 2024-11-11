@@ -12,7 +12,8 @@ namespace pvc\interfaces\html\factory\definitions;
  * Class DefinitionFactoryInterface
  * @template Definition
  *
- * creates a definition which is native to the container from a definition object (which was created from the json)
+ * creates a definition which is native to the container from a definition array which was created from the
+ * Definitions.json file.
  *
  * Only the value tester definitions should be 'shared'.  E.g. When you request an attribute, element or event from the
  * container, it should produce a new instance of the object. Value Tester objects are stateless and can be shared.
@@ -21,8 +22,8 @@ interface DefinitionFactoryInterface
 {
     /**
      * makeDefinition
-     * @param DefinitionInterface $def
+     * @param array<mixed> $def
      * @return Definition
      */
-    public function makeDefinition(DefinitionInterface $def): mixed;
+    public function makeDefinition(array $def): mixed;
 }
