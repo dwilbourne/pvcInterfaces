@@ -10,6 +10,7 @@ namespace pvc\interfaces\html\factory\definitions;
 
 /**
  * Class DefinitionFactoryInterface
+ * @template Definition
  *
  * Only the value tester definitions should be 'shared'.  E.g. When you request an attribute, element or event from the
  * container, it should produce a new instance of the object. Value Tester objects are stateless and can be shared.
@@ -19,7 +20,7 @@ interface DefinitionFactoryInterface
     /**
      * makeDefinition
      * @param array<mixed> $defArray
-     * @return DefinitionInterface
+     * @return Definition
      */
-    public function makeDefinition(array $defArray): DefinitionInterface;
+    public function makeDefinition(array $defArray): mixed;
 }
