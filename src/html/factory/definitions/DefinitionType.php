@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\factory\definitions;
 
 /**
- * Enum DefinitionType
+ * Class DefinitionType
  */
 enum DefinitionType: string
 {
