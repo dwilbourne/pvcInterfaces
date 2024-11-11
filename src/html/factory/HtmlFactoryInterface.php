@@ -62,7 +62,7 @@ interface HtmlFactoryInterface
      * @param string $defId
      * @return AttributeInterface|TagVoidInterface|EventInterface
      */
-    public function make(string $defId): AttributeInterface|TagVoidInterface|EventInterface;
+    public function make(string $defId): AttributeInterface|TagVoidInterface|EventInterface|ValTesterInterface;
 
     /**
      * makeAttribute
