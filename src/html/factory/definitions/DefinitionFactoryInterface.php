@@ -22,8 +22,8 @@ interface DefinitionFactoryInterface
 {
     /**
      * makeDefinition
-     * @param array<mixed> $def
+     * @param DefinitionInterface $def
      * @return Definition
      */
-    public function makeDefinition(array $def): mixed;
+    public function makeDefinition(DefinitionInterface $def): mixed;
 }
