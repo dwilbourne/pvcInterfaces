@@ -14,7 +14,6 @@ namespace pvc\interfaces\html\factory\definitions;
  * @phpstan-type AttributeDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Name':string,
  * 'ValTester':string, 'CaseSensitive':bool, 'Global':bool}
  *
- * @template DefinitionType
  * @template VendorSpecificDefinition
  *
  * creates a definition which is native to the container from a definition array which was created from the
@@ -27,6 +26,7 @@ interface DefinitionFactoryInterface
 {
     /**
      * makeDefinition
+     * @template DefinitionType
      * @param array<DefinitionType> $defArray
      * @return VendorSpecificDefinition
      */
