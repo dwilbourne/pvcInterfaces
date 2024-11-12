@@ -10,9 +10,9 @@ namespace pvc\interfaces\html\factory\definitions;
 
 use pvc\interfaces\html\factory\definitions\classes\AttributeDefInterface;
 use pvc\interfaces\html\factory\definitions\classes\AttributeValueTesterDefInterface;
-use pvc\interfaces\html\factory\definitions\classes\ElementDefinterface;
+use pvc\interfaces\html\factory\definitions\classes\ElementDefInterface;
 use pvc\interfaces\html\factory\definitions\classes\EventDefInterface;
-use pvc\interfaces\html\factory\definitions\classes\OtherDefinterface;
+use pvc\interfaces\html\factory\definitions\classes\OtherDefInterface;
 
 /**
  * Class DefinitionFactoryInterface
@@ -42,10 +42,10 @@ interface DefinitionFactoryInterface
 
     /**
      * makeElementDefinition
-     * @param ElementDefinterface $elementDef
+     * @param ElementDefInterface $elementDef
      * @return Definition
      */
-    public function makeElementDefinition(ElementDefinterface $elementDef): mixed;
+    public function makeElementDefinition(ElementDefInterface $elementDef): mixed;
 
     /**
      * makeEventDefinition
@@ -56,8 +56,8 @@ interface DefinitionFactoryInterface
 
     /**
      * makeOtherDefinition
-     * @param OtherDefinterface $otherDef
+     * @param OtherDefInterface $otherDef
      * @return Definition
      */
-    public function makeOtherDefinition(OtherDefinterface $otherDef): mixed;
+    public function makeOtherDefinition(OtherDefInterface $otherDef): mixed;
 }
