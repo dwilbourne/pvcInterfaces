@@ -13,5 +13,15 @@ namespace pvc\interfaces\html\factory\definitions\classes;
  */
 interface OtherDefInterface extends DefinitionInterface
 {
+    /**
+     * getArg
+     * @return class-string|null
+     */
+    public function getArg(): ?string;
 
+    /**
+     * isShared
+     * @return bool
+     */
+    public function isShared(): bool;
 }
