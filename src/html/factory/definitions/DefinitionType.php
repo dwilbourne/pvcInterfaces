@@ -18,4 +18,14 @@ enum DefinitionType: string
     case Element = 'Element';
     case Event = 'Event';
     case Other = 'Other';
+
+    public static function fromName(string $name): string
+    {
+        foreach (self::cases() as $status) {
+            if ($name === $status->name) {
+                return $status->value;
+            }
+        }
+        return '';
+    }
 }
