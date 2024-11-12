@@ -11,17 +11,18 @@ namespace pvc\interfaces\html\factory\definitions;
 /**
  * Class DefinitionFactoryInterface
  *
- * @phpstan-type AttributeDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Name':string,
- * 'ValTester':string, 'CaseSensitive':bool, 'Global':bool}
+ * @phpstan-type AttributeDefArray array{'DefId':string, 'DefType':string, 'Concrete':class-string, 'Name':string,
+ * 'ValTester':class-string, 'CaseSensitive':bool, 'Global':bool}
  *
- * @phpstan-type AttributeValTesterDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Arg':string}
+ * @phpstan-type AttributeValTesterDefArray array{'DefId':string, 'DefType':string, 'Concrete':class-string,
+ *     'Arg':class-string|null}
  *
- * @phpstan-type ElementDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Name':string,
+ * @phpstan-type ElementDefArray array{'DefId':string, 'DefType':string, 'Concrete':class-string, 'Name':string,
  *     'AllowedAttributeDefIds':array, 'AllowedChildDefIds':array}
  *
- * @phpstan-type EventDefArray array{'DefId':string, 'DefType':string, 'Concrete':string}
+ * @phpstan-type EventDefArray array{'DefId':string, 'DefType':string, 'Concrete':class-string}
  *
- * @phpstan-type OtherDefArray array{'DefId':string, 'DefType':string, 'Concrete':string,'Arg':string}
+ * @phpstan-type OtherDefArray array{'DefId':string, 'DefType':string, 'Concrete':class-string,'Arg':class-string|null}
  *
  * @template VendorSpecificDefinition
  *
