@@ -35,10 +35,10 @@ interface DefinitionFactoryInterface
 
     /**
      * makeAttributeValueTesterDefinition
-     * @param AttributeValueTesterDefInterface $attributeDef
+     * @param AttributeValueTesterDefInterface $attributeValueTesterDef
      * @return Definition
      */
-    public function makeAttributeValueTesterDefinition(AttributeValueTesterDefInterface $attributeDef): mixed;
+    public function makeAttributeValueTesterDefinition(AttributeValueTesterDefInterface $attributeValueTesterDef): mixed;
 
     /**
      * makeElementDefinition
