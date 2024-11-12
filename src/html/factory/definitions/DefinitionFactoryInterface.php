@@ -14,7 +14,7 @@ namespace pvc\interfaces\html\factory\definitions;
  * @phpstan-type AttributeDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Name':string,
  * 'ValTester':string, 'CaseSensitive':bool, 'Global':bool}
  *
- * @phpstan-type AttributeValTesterArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Arg':string}
+ * @phpstan-type AttributeValTesterDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Arg':string}
  *
  * @phpstan-type ElementDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Name':string,
  *     'AllowedAttributeDefIds':array, 'AllowedChildDefIds':array}
