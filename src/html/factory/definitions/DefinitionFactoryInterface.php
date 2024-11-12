@@ -55,10 +55,9 @@ interface DefinitionFactoryInterface
     public function makeEventDefinition(EventDefInterface $eventDef): mixed;
 
     /**
-     * makeOtherDef
+     * makeOtherDefinition
      * @param OtherDefinterface $otherDef
      * @return Definition
      */
-    public function makeOtherDef(OtherDefinterface $otherDef): mixed;
-
+    public function makeOtherDefinition(OtherDefinterface $otherDef): mixed;
 }
