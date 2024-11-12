@@ -14,6 +14,15 @@ namespace pvc\interfaces\html\factory\definitions;
  * @phpstan-type AttributeDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Name':string,
  * 'ValTester':string, 'CaseSensitive':bool, 'Global':bool}
  *
+ * @phpstan-type AttributeValTesterArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Arg':string}
+ *
+ * @phpstan-type ElementDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Name':string,
+ *     'AllowedAttributeDefIds':array, 'AllowedChildDefIds':array}
+ *
+ * @phpstan-type EventDefArray array{'DefId':string, 'DefType':string, 'Concrete':string}
+ *
+ * @phpstan-type OtherDefArray array{'DefId':string, 'DefType':string, 'Concrete':string,'Arg':string}
+ *
  * @template VendorSpecificDefinition
  *
  * creates a definition which is native to the container from a definition array which was created from the
