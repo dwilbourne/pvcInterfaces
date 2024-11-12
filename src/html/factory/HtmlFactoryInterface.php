@@ -34,7 +34,7 @@ interface HtmlFactoryInterface
      * @param string $defId
      * @return string
      */
-    public function getDefinitionType(string $defId): string;
+    public function getDefinitionType(string $defId): ?string;
 
     /**
      * getDefinitionIds
