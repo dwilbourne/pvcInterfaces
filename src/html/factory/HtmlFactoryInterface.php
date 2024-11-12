@@ -18,7 +18,7 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class HtmlFactoryInterface
- * @template Definition of DefinitionFactoryInterface
+ * @template VendorSpecificDefinition of DefinitionFactoryInterface
  */
 interface HtmlFactoryInterface
 {
@@ -53,7 +53,7 @@ interface HtmlFactoryInterface
     /**
      * make
      * @param string $defId
-     * @return AttributeInterface|TagVoidInterface<Definition>|EventInterface
+     * @return AttributeInterface|TagVoidInterface<VendorSpecificDefinition>|EventInterface
      */
     public function make(string $defId): AttributeInterface|TagVoidInterface|EventInterface;
 
@@ -80,7 +80,7 @@ interface HtmlFactoryInterface
     /**
      * makeElement
      * @param string $elementDefId
-     * @return TagVoidInterface<Definition>
+     * @return TagVoidInterface<VendorSpecificDefinition>
      */
     public function makeElement(string $elementDefId): TagVoidInterface;
 

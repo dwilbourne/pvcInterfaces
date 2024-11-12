@@ -14,8 +14,8 @@ use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class TagInterface
- * @template Definition of DefinitionFactoryInterface
- * @extends TagVoidInterface<Definition>
+ * @template VendorSpecificDefinition of DefinitionFactoryInterface
+ * @extends TagVoidInterface<VendorSpecificDefinition>
  */
 interface TagInterface extends TagVoidInterface
 {
@@ -52,23 +52,23 @@ interface TagInterface extends TagVoidInterface
 
     /**
      * setChild
-     * @param string|TagVoidInterface<Definition> $element
+     * @param string|TagVoidInterface<VendorSpecificDefinition> $element
      * @param string|null $key
-     * @return TagVoidInterface<Definition>
+     * @return TagVoidInterface<VendorSpecificDefinition>
      */
     public function setChild(string|TagVoidInterface $element, string $key = null): TagVoidInterface;
 
     /**
      * getChild
      * @param string $key
-     * @return ?TagVoidInterface<Definition>
+     * @return ?TagVoidInterface<VendorSpecificDefinition>
      */
     public function getChild(string $key): ?TagVoidInterface;
 
     /**
      * getChildChildren
      * @param callable $filter
-     * @return array<TagVoidInterface<Definition>>
+     * @return array<TagVoidInterface<VendorSpecificDefinition>>
      */
     public function getChildren(callable $filter): array;
 

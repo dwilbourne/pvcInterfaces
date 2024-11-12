@@ -13,14 +13,14 @@ use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 
 /**
  * Class HtmlContainerInterface
- * @template Definition of DefinitionFactoryInterface
+ * @template VendorSpecificDefinition of DefinitionFactoryInterface
  */
 interface HtmlContainerInterface extends ContainerInterface
 {
     /**
      * add
      * @param string $defId
-     * @param Definition|null $definition
+     * @param VendorSpecificDefinition|null $definition
      */
     public function add(string $defId, mixed $definition = null): void;
 }
