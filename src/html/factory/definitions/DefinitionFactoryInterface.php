@@ -10,6 +10,10 @@ namespace pvc\interfaces\html\factory\definitions;
 
 /**
  * Class DefinitionFactoryInterface
+ *
+ * @phpstan-type AttributeDefArray array{'DefId':string, 'DefType':string, 'Concrete':string, 'Name':string,
+ * 'ValTester':string, 'CaseSensitive':bool, 'Global':bool}
+ *
  * @template DefinitionType
  * @template VendorSpecificDefinition
  *
