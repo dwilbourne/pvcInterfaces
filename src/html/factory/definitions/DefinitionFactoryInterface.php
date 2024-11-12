@@ -18,7 +18,7 @@ namespace pvc\interfaces\html\factory\definitions;
  *     'Arg':class-string|null}
  *
  * @phpstan-type ElementDefArray array{'DefId':string, 'DefType':string, 'Concrete':class-string, 'Name':string,
- *     'AllowedAttributeDefIds':array, 'AllowedChildDefIds':array}
+ *     'AllowedAttributeDefIds':array<string>, 'AllowedChildDefIds':array<string>}
  *
  * @phpstan-type EventDefArray array{'DefId':string, 'DefType':string, 'Concrete':class-string}
  *
@@ -35,10 +35,37 @@ namespace pvc\interfaces\html\factory\definitions;
 interface DefinitionFactoryInterface
 {
     /**
-     * makeDefinition
-     * @template DefinitionType
-     * @param array<DefinitionType> $defArray
+     * makeAttributeDefinition
+     * @param AttributeDefArray $definitionArray
      * @return VendorSpecificDefinition
      */
-    public function makeDefinition(array $defArray): mixed;
+    public function makeAttributeDefinition(array $definitionArray): mixed;
+
+    /**
+     * makeAttributeValueTesterDefinition
+     * @param AttributeValTesterDefArray $definitionArray
+     * @return VendorSpecificDefinition
+     */
+    public function makeAttributeValueTesterDefinition(array $definitionArray): mixed;
+
+    /**
+     * makeElementDefinition
+     * @param ElementDefArray $definitionArray
+     * @return VendorSpecificDefinition
+     */
+    public function makeElementDefinition(array $definitionArray): mixed;
+
+    /**
+     * makeEventDefinition
+     * @param EventDefArray $definitionArray
+     * @return VendorSpecificDefinition
+     */
+    public function makeEventDefinition(array $definitionArray): mixed;
+
+    /**
+     * makeOtherDefinition
+     * @param OtherDefArray $definitionArray
+     * @return VendorSpecificDefinition
+     */
+    public function makeOtherDefinition(array $definitionArray): mixed;
 }
