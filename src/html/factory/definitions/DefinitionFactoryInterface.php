@@ -8,6 +8,12 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\factory\definitions;
 
+use pvc\interfaces\html\factory\definitions\classes\AttributeDefInterface;
+use pvc\interfaces\html\factory\definitions\classes\AttributeValueTesterDefInterface;
+use pvc\interfaces\html\factory\definitions\classes\ElementDefinterface;
+use pvc\interfaces\html\factory\definitions\classes\EventDefInterface;
+use pvc\interfaces\html\factory\definitions\classes\OtherDefinterface;
+
 /**
  * Class DefinitionFactoryInterface
  * @template Definition
@@ -21,9 +27,38 @@ namespace pvc\interfaces\html\factory\definitions;
 interface DefinitionFactoryInterface
 {
     /**
-     * makeDefinition
-     * @param DefinitionInterface $def
+     * makeAttributeDefinition
+     * @param AttributeDefInterface $attributeDef
      * @return Definition
      */
-    public function makeDefinition(DefinitionInterface $def): mixed;
+    public function makeAttributeDefinition(AttributeDefInterface $attributeDef): mixed;
+
+    /**
+     * makeAttributeValueTesterDefinition
+     * @param AttributeValueTesterDefInterface $attributeDef
+     * @return Definition
+     */
+    public function makeAttributeValueTesterDefinition(AttributeValueTesterDefInterface $attributeDef): mixed;
+
+    /**
+     * makeElementDefinition
+     * @param ElementDefinterface $elementDef
+     * @return Definition
+     */
+    public function makeElementDefinition(ElementDefinterface $elementDef): mixed;
+
+    /**
+     * makeEventDefinition
+     * @param EventDefInterface $eventDef
+     * @return Definition
+     */
+    public function makeEventDefinition(EventDefInterface $eventDef): mixed;
+
+    /**
+     * makeOtherDef
+     * @param OtherDefinterface $otherDef
+     * @return Definition
+     */
+    public function makeOtherDef(OtherDefinterface $otherDef): mixed;
+
 }
