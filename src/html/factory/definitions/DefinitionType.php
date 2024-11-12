@@ -19,13 +19,13 @@ enum DefinitionType: string
     case Event = 'Event';
     case Other = 'Other';
 
-    public static function fromName(string $name): string
+    public static function fromName(string $name): ?DefinitionType
     {
         foreach (self::cases() as $status) {
             if ($name === $status->name) {
-                return $status->value;
+                return $status;
             }
         }
-        return '';
+        return null;
     }
 }
