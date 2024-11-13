@@ -9,11 +9,11 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\factory;
 
 use Psr\Container\ContainerInterface;
-use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
+use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
 
 /**
  * Class HtmlContainerInterface
- * @template VendorSpecificDefinition of DefinitionFactoryInterface
+ * @template VendorSpecificDefinition of AbstractDefinitionFactoryInterface
  */
 interface HtmlContainerInterface extends ContainerInterface
 {
