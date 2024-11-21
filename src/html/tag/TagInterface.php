@@ -70,7 +70,7 @@ interface TagInterface extends TagVoidInterface
      * @param callable $filter
      * @return array<TagVoidInterface<VendorSpecificDefinition>|MsgInterface|string>
      */
-    public function getChildren(callable $filter): array;
+    public function getChildren(callable $filter = null): array;
 
     /**
      * setInnerText
