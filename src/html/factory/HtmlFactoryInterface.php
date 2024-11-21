@@ -44,38 +44,11 @@ interface HtmlFactoryInterface
     public function getDefinitionIds(DefinitionType $type = null): array;
 
     /**
-     * canMake
-     * @param string $defId
-     * @return bool
-     */
-    public function canMake(string $defId): bool;
-
-    /**
-     * make
-     * @param string $defId
-     * @return AttributeInterface|TagVoidInterface<VendorSpecificDefinition>|EventInterface
-     */
-    public function make(string $defId): AttributeInterface|TagVoidInterface|EventInterface;
-
-    /**
      * makeAttribute
      * @param string $attributeDefId
      * @return AttributeInterface
      */
     public function makeAttribute(string $attributeDefId): AttributeInterface;
-
-    /**
-     * makeCustomData
-     * @param string $attributeDefId
-     * @param string $value
-     * @param ValTesterInterface<string>|null $valTester
-     * @return AttributeCustomDataInterface
-     */
-    public function makeCustomData(
-        string $attributeDefId,
-        string $value,
-        ValTesterInterface $valTester = null
-    ): AttributeCustomDataInterface;
 
     /**
      * makeElement
@@ -90,4 +63,17 @@ interface HtmlFactoryInterface
      * @return EventInterface
      */
     public function makeEvent(string $eventDefId): EventInterface;
+
+    /**
+     * makeCustomData
+     * @param string $attributeDefId
+     * @param string $value
+     * @param ValTesterInterface<string>|null $valTester
+     * @return AttributeCustomDataInterface
+     */
+    public function makeCustomData(
+        string $attributeDefId,
+        string $value,
+        ValTesterInterface $valTester = null
+    ): AttributeCustomDataInterface;
 }
