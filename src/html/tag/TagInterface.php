@@ -66,9 +66,9 @@ interface TagInterface extends TagVoidInterface
     public function getChild(string $key): ?TagVoidInterface;
 
     /**
-     * getChildChildren
+     * getChildren
      * @param callable $filter
-     * @return array<TagVoidInterface<VendorSpecificDefinition>>
+     * @return array<TagVoidInterface<VendorSpecificDefinition>|MsgInterface|string>
      */
     public function getChildren(callable $filter): array;
 
