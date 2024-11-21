@@ -45,34 +45,34 @@ interface HtmlFactoryInterface
 
     /**
      * makeAttribute
-     * @param string $attributeDefId
+     * @param string $attributeName
      * @return AttributeInterface
      */
-    public function makeAttribute(string $attributeDefId): AttributeInterface;
+    public function makeAttribute(string $attributeName): AttributeInterface;
 
     /**
      * makeElement
-     * @param string $elementDefId
+     * @param string $elementName
      * @return TagVoidInterface<VendorSpecificDefinition>
      */
-    public function makeElement(string $elementDefId): TagVoidInterface;
+    public function makeElement(string $elementName): TagVoidInterface;
 
     /**
      * makeEvent
-     * @param string $eventDefId
+     * @param string $eventName
      * @return EventInterface
      */
-    public function makeEvent(string $eventDefId): EventInterface;
+    public function makeEvent(string $eventName): EventInterface;
 
     /**
      * makeCustomData
-     * @param string $attributeDefId
+     * @param string $attributeName
      * @param string $value
      * @param ValTesterInterface<string>|null $valTester
      * @return AttributeCustomDataInterface
      */
     public function makeCustomData(
-        string $attributeDefId,
+        string $attributeName,
         string $value,
         ValTesterInterface $valTester = null
     ): AttributeCustomDataInterface;
