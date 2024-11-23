@@ -11,13 +11,13 @@ namespace pvc\interfaces\html\tag;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
-use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
+use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\html\factory\HtmlFactoryInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class TagVoidInterface
- * @template VendorSpecificDefinition of AbstractDefinitionFactoryInterface
+ * @template VendorSpecificDefinition of DefinitionFactoryInterface
  * @noinspection PhpCSValidationInspection
  */
 interface TagVoidInterface

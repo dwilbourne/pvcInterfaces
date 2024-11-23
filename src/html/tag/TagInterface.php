@@ -8,13 +8,13 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\tag;
 
-use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
+use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\msg\MsgFactoryInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class TagInterface
- * @template VendorSpecificDefinition of AbstractDefinitionFactoryInterface
+ * @template VendorSpecificDefinition of DefinitionFactoryInterface
  * @extends TagVoidInterface<VendorSpecificDefinition>
  */
 interface TagInterface extends TagVoidInterface

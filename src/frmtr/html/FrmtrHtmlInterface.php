@@ -10,13 +10,13 @@ namespace pvc\interfaces\frmtr\html;
 
 use pvc\interfaces\frmtr\FrmtrInterface;
 use pvc\interfaces\frmtr\msg\FrmtrMsgInterface;
-use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
+use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\html\tag\TagVoidInterface;
 use pvc\interfaces\intl\LocaleInterface;
 
 /**
  * Class FrmtrHtmlInterface
- * @template VendorSpecificDefinition of AbstractDefinitionFactoryInterface
+ * @template VendorSpecificDefinition of DefinitionFactoryInterface
  * @extends FrmtrInterface<TagVoidInterface<VendorSpecificDefinition>>
  */
 interface FrmtrHtmlInterface extends FrmtrInterface
