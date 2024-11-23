@@ -11,14 +11,14 @@ namespace pvc\interfaces\html\factory;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
-use pvc\interfaces\html\factory\definitions\AbstractDefinitionFactoryInterface;
+use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\html\factory\definitions\DefinitionType;
 use pvc\interfaces\html\tag\TagVoidInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class HtmlFactoryInterface
- * @template VendorSpecificDefinition of AbstractDefinitionFactoryInterface
+ * @template VendorSpecificDefinition of DefinitionFactoryInterface
  */
 interface HtmlFactoryInterface
 {
