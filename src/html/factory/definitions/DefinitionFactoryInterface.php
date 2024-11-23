@@ -10,7 +10,7 @@ namespace pvc\interfaces\html\factory\definitions;
 
 /**
  * Class DefinitionFactoryInterface
- * @phpstan-import-type DefArray from AbstractDefinitionFactoryInterface
+ * @phpstan-type DefArray array{'defId':string,'defType':string}
  * @template VendorSpecificDefinition
  *
  * creates a definition which is native to the container from a definition array which was created from the
