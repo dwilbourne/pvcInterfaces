@@ -61,9 +61,10 @@ interface TagInterface extends TagVoidInterface
     /**
      * getChild
      * @param string $key
-     * @return ?TagVoidInterface<VendorSpecificDefinition>
+     * @return TagVoidInterface<VendorSpecificDefinition>|MsgInterface|string|null
+     * the innerText is kept in the child array, so the return type must include MsgInterface and string
      */
-    public function getChild(string $key): ?TagVoidInterface;
+    public function getChild(string $key): TagVoidInterface|MsgInterface|string|null;
 
     /**
      * getChildren
