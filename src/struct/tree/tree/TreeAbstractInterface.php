@@ -13,7 +13,7 @@ use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\factory\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOInterface;
 
 /**
  * Interface TreeAbstractInterface defines the operations common to all trees, both ordered and unordered.
@@ -28,7 +28,7 @@ use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @template ValueObjectType of TreenodeValueObjectInterface
+ * @template ValueObjectType of TreenodeDTOInterface
  */
 interface TreeAbstractInterface
 {
@@ -65,13 +65,13 @@ interface TreeAbstractInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeValueObjectInterface<PayloadType, ValueObjectType> $valueObject
+     * @param TreenodeDTOInterface<PayloadType, ValueObjectType> $valueObject
      */
-    public function addNode(TreenodeValueObjectInterface $valueObject): void;
+    public function addNode(TreenodeDTOInterface $valueObject): void;
 
     /**
      * hydrate
-     * @param array<TreenodeValueObjectInterface<PayloadType, ValueObjectType>> $valueObjects
+     * @param array<TreenodeDTOInterface<PayloadType, ValueObjectType>> $valueObjects
      */
     public function hydrate(array $valueObjects): void;
 
@@ -104,10 +104,10 @@ interface TreeAbstractInterface
     /**
      * rootTest
      * @phpcs ignore-next-line
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|TreenodeValueObjectInterface<ValueObjectType, PayloadType> $nodeItem
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|TreenodeDTOInterface<ValueObjectType, PayloadType> $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeAbstractInterface|TreenodeValueObjectInterface $nodeItem): bool;
+    public function rootTest(TreenodeAbstractInterface|TreenodeDTOInterface $nodeItem): bool;
 
     /**
      * @function isEmpty

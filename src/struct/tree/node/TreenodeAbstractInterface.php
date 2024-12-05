@@ -13,7 +13,7 @@ use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\payload\HasPayloadTesterInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
@@ -48,7 +48,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @template ValueObjectType of TreenodeValueObjectInterface
+ * @template ValueObjectType of TreenodeDTOInterface
  * @extends HasPayloadInterface<PayloadType>
  * @extends HasPayloadTesterInterface<PayloadType>
  *
@@ -66,10 +66,10 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
 
     /**
      * hydrate
-     * @param TreenodeValueObjectInterface<PayloadType, ValueObjectType> $valueObject
+     * @param TreenodeDTOInterface<PayloadType, ValueObjectType> $valueObject
      * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $tree
      */
-    public function hydrate(TreenodeValueObjectInterface $valueObject, TreeAbstractInterface $tree): void;
+    public function hydrate(TreenodeDTOInterface $valueObject, TreeAbstractInterface $tree): void;
     /**
      * getNodeId
      * @return non-negative-int

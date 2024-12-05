@@ -12,7 +12,7 @@ use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\collection\factory\CollectionFactoryInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
@@ -21,7 +21,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @template ValueObjectType of TreenodeValueObjectInterface
+ * @template ValueObjectType of TreenodeDTOInterface
  */
 interface TreenodeFactoryInterface
 {

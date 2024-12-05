@@ -12,11 +12,11 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
 
 /**
- * Class TreenodeValueObjectUnorderedInterface
+ * Class TreenodeDTOUnorderedInterface
  * @template PayloadType of HasPayloadInterface
- * @extends TreenodeValueObjectInterface<PayloadType, TreenodeValueObjectUnorderedInterface>
+ * @extends TreenodeDTOInterface<PayloadType, TreenodeDTOUnorderedInterface>
  */
-interface TreenodeValueObjectUnorderedInterface extends TreenodeValueObjectInterface
+interface TreenodeDTOUnorderedInterface extends TreenodeDTOInterface
 {
     /**
      * hydrateFromNode

@@ -12,14 +12,14 @@ use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
 use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectUnorderedInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOUnorderedInterface;
 use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
 
 /**
  * Class TreenodeUnorderedFactoryInterface
  * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore
- * @extends TreenodeFactoryInterface<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface, TreenodeValueObjectUnorderedInterface>
+ * @extends TreenodeFactoryInterface<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface, TreenodeDTOUnorderedInterface>
  */
 interface TreenodeUnorderedFactoryInterface extends TreenodeFactoryInterface
 {

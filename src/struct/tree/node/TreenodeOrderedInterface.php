@@ -10,8 +10,8 @@ namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeValueObjectOrderedInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOInterface;
+use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOOrderedInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
@@ -21,7 +21,7 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  *
  * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore -- generics must all be on one line to be processed correctly
- * @extends TreenodeAbstractInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface, TreenodeValueObjectOrderedInterface>
+ * @extends TreenodeAbstractInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface, TreenodeDTOOrderedInterface>
  */
 interface TreenodeOrderedInterface extends TreenodeAbstractInterface
 {
@@ -43,8 +43,8 @@ interface TreenodeOrderedInterface extends TreenodeAbstractInterface
 
     /**
      * hydrate
-     * @param TreenodeValueObjectOrderedInterface<PayloadType> $valueObject
+     * @param TreenodeDTOOrderedInterface<PayloadType> $valueObject
      * @param TreeOrderedInterface<PayloadType> $tree
      */
-    public function hydrate(TreenodeValueObjectInterface $valueObject, TreeAbstractInterface $tree): void;
+    public function hydrate(TreenodeDTOInterface $valueObject, TreeAbstractInterface $tree): void;
 }

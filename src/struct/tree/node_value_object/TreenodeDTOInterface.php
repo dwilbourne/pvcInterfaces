@@ -11,12 +11,12 @@ namespace pvc\interfaces\struct\tree\node_value_object;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
- * Class TreenodeValueObjectInterface
+ * Class TreenodeDTOInterface
  * @template PayloadType of HasPayloadInterface
  * @template ValueObjectType
  * @extends HasPayloadInterface<PayloadType>
  */
-interface TreenodeValueObjectInterface extends HasPayloadInterface
+interface TreenodeDTOInterface extends HasPayloadInterface
 {
     /**
      * getNodeId

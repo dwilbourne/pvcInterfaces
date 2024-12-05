@@ -12,11 +12,11 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 
 /**
- * Class TreenodeValueObjectOrderedInterface
+ * Class TreenodeDTOOrderedInterface
  * @template PayloadType of HasPayloadInterface
- * @extends TreenodeValueObjectInterface<PayloadType, TreenodeValueObjectOrderedInterface>
+ * @extends TreenodeDTOInterface<PayloadType, TreenodeDTOOrderedInterface>
  */
-interface TreenodeValueObjectOrderedInterface extends TreenodeValueObjectInterface
+interface TreenodeDTOOrderedInterface extends TreenodeDTOInterface
 {
     /**
      * getIndex retrieves the ordinal position
