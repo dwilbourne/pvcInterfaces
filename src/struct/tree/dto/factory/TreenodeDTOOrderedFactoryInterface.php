@@ -20,8 +20,8 @@ use pvc\interfaces\struct\tree\dto\TreenodeDTOOrderedInterface;
 interface TreenodeDTOOrderedFactoryInterface extends TreenodeDTOFactoryInterface
 {
     /**
-     * makeValueObject
+     * makeDTO
      * @return TreenodeDTOOrderedInterface<PayloadType>
      */
-    public function makeValueObject(): TreenodeDTOInterface;
+    public function makeDTO(): TreenodeDTOInterface;
 }
