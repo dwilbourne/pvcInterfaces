@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\node_value_object;
+namespace pvc\interfaces\struct\tree\dto;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;

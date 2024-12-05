@@ -10,9 +10,9 @@ namespace pvc\interfaces\struct\tree\node\factory;
 
 use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOUnorderedInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
 use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOUnorderedInterface;
 use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
 
 /**

@@ -13,7 +13,7 @@ use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\payload\HasPayloadTesterInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**

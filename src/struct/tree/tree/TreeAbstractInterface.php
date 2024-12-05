@@ -11,9 +11,9 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOInterface;
 use pvc\interfaces\struct\tree\node\factory\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOInterface;
 
 /**
  * Interface TreeAbstractInterface defines the operations common to all trees, both ordered and unordered.

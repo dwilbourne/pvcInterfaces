@@ -6,11 +6,11 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\node_value_object\factory;
+namespace pvc\interfaces\struct\tree\dto\factory;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOInterface;
-use pvc\interfaces\struct\tree\node_value_object\TreenodeDTOUnorderedInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOUnorderedInterface;
 
 /**
  * Class TreenodeDTOUnorderedFactoryInterface
