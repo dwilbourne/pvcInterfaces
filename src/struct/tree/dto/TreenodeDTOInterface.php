@@ -53,14 +53,4 @@ interface TreenodeDTOInterface extends HasPayloadInterface
      * @param int $treeId
      */
     public function setTreeId(int $treeId): void;
-
-    /**
-     * hydrateFromNumericArray
-     *
-     * this method is in the abstract class and the number of elements in the array is left indeterminate, meaning
-     * that this method can be used for both ordered and unordered value objects.
-     *
-     * @param array<int, mixed> $nodeData
-     */
-    public function hydrateFromNumericArray(array $nodeData): void;
 }
