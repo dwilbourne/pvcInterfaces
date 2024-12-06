@@ -13,7 +13,7 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 /**
  * Class TreenodeDTOInterface
  * @template PayloadType of HasPayloadInterface
- * @template ValueObjectType
+ * @template DtoType
  * @extends HasPayloadInterface<PayloadType>
  */
 interface TreenodeDTOInterface extends HasPayloadInterface
