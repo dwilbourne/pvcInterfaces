@@ -14,22 +14,9 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 /**
  * Class TreenodeDTOOrderedInterface
  * @template PayloadType of HasPayloadInterface
- * @extends TreenodeDTOInterface<PayloadType, TreenodeDTOOrderedInterface>
  */
-interface TreenodeDTOOrderedInterface extends TreenodeDTOInterface
+interface TreenodeDTOOrderedInterface
 {
-    /**
-     * getIndex retrieves the ordinal position
-     * @return non-negative-int
-     */
-    public function getIndex(): int;
-
-    /**
-     * setIndex
-     * @param int $index
-     */
-    public function setIndex(int $index): void;
-
     /**
      * hydrateFromNode
      * @param TreenodeOrderedInterface<PayloadType> $node
@@ -38,7 +25,7 @@ interface TreenodeDTOOrderedInterface extends TreenodeDTOInterface
     public function hydrateFromNode(TreenodeOrderedInterface $node): void;
 
     /**
-     * hydrateFromAssociativeArray
+     * hydrateFromArray
      * @param array{
      *     'nodeId': non-negative-int,
      *     'parentId': non-negative-int|null,
@@ -47,17 +34,5 @@ interface TreenodeDTOOrderedInterface extends TreenodeDTOInterface
      *     'index': non-negative-int
      * } $nodeData
      */
-    public function hydrateFromAssociativeArray(array $nodeData): void;
-
-    /**
-     * hydrateFromNumericArray
-     * @param array{
-     *        0: non-negative-int,
-     *        1: non-negative-int|null,
-     *        2: non-negative-int,
-     *        3: PayloadType,
-     *        4: non-negative-int,
-     *    } $nodeData
-     */
-    public function hydrateFromNumericArray(array $nodeData): void;
+    public function hydrateFromArray(array $nodeData): void;
 }

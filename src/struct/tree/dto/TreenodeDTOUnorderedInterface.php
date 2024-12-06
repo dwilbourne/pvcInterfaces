@@ -14,9 +14,8 @@ use pvc\interfaces\struct\tree\node\TreenodeUnorderedInterface;
 /**
  * Class TreenodeDTOUnorderedInterface
  * @template PayloadType of HasPayloadInterface
- * @extends TreenodeDTOInterface<PayloadType, TreenodeDTOUnorderedInterface>
  */
-interface TreenodeDTOUnorderedInterface extends TreenodeDTOInterface
+interface TreenodeDTOUnorderedInterface
 {
     /**
      * hydrateFromNode
@@ -25,7 +24,7 @@ interface TreenodeDTOUnorderedInterface extends TreenodeDTOInterface
     public function hydrateFromNode(TreenodeUnorderedInterface $node): void;
 
     /**
-     * hydrateFromAssociativeArray
+     * hydrateFromArray
      * @param array{
      *     'nodeId': non-negative-int,
      *     'parentId': non-negative-int|null,
@@ -34,15 +33,4 @@ interface TreenodeDTOUnorderedInterface extends TreenodeDTOInterface
      * } $nodeData
      */
     public function hydrateFromAssociativeArray(array $nodeData): void;
-
-    /**
-     * hydrateFromNumericArray
-     * @param array{
-     *        0: non-negative-int,
-     *        1: non-negative-int|null,
-     *        2: non-negative-int,
-     *        3: PayloadType
-     *    } $nodeData
-     */
-    public function hydrateFromNumericArray(array $nodeData): void;
 }
