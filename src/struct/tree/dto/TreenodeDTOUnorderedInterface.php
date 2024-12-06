@@ -32,5 +32,5 @@ interface TreenodeDTOUnorderedInterface
      *     'payload': PayloadType
      * } $nodeData
      */
-    public function hydrateFromAssociativeArray(array $nodeData): void;
+    public function hydrateFromArray(array $nodeData): void;
 }
