@@ -27,9 +27,9 @@ interface TreenodeUnorderedInterface extends TreenodeAbstractInterface
 {
     /**
      * hydrate
-     * @param TreenodeDTOUnorderedInterface<PayloadType> $valueObject
+     * @param TreenodeDTOUnorderedInterface<PayloadType> $dto
      * @phpcs:ignore
      * @param TreeUnorderedInterface<PayloadType> $tree
      */
-    public function hydrate(TreenodeDTOInterface $valueObject, TreeAbstractInterface $tree): void;
+    public function hydrate(TreenodeDTOInterface $dto, TreeAbstractInterface $tree): void;
 }

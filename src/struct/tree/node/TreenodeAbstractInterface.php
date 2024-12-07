@@ -48,12 +48,12 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @template ValueObjectType of TreenodeDTOInterface
+ * @template DtoType of TreenodeDTOInterface
  * @extends HasPayloadInterface<PayloadType>
  * @extends HasPayloadTesterInterface<PayloadType>
  *
  * @phpcs:ignore
- * @phpstan-type NodeInterface TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
+ * @phpstan-type NodeInterface TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
  */
 interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTesterInterface
 {
@@ -66,10 +66,10 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
 
     /**
      * hydrate
-     * @param TreenodeDTOInterface<PayloadType, ValueObjectType> $valueObject
-     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $tree
+     * @param TreenodeDTOInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $dto
+     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $tree
      */
-    public function hydrate(TreenodeDTOInterface $valueObject, TreeAbstractInterface $tree): void;
+    public function hydrate(TreenodeDTOInterface $dto, TreeAbstractInterface $tree): void;
     /**
      * getNodeId
      * @return non-negative-int
@@ -90,7 +90,7 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTeste
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
+     * @return TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
      */
     public function getTree(): TreeAbstractInterface;
 

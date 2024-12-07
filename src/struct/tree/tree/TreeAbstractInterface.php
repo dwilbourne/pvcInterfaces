@@ -28,7 +28,7 @@ use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @template ValueObjectType of TreenodeDTOInterface
+ * @template DtoType of TreenodeDTOInterface
  */
 interface TreeAbstractInterface
 {
@@ -51,29 +51,29 @@ interface TreeAbstractInterface
 
     /**
      * getTreenodeFactory
-     * @return TreenodeFactoryInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
+     * @return TreenodeFactoryInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
      */
     public function getTreenodeFactory(): TreenodeFactoryInterface;
 
     /**
      * setTreenodeFactory
      * @phpcs:ignore
-     * @param TreenodeFactoryInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $treenodeFactory
+     * @param TreenodeFactoryInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $treenodeFactory
      */
     public function setTreenodeFactory(TreenodeFactoryInterface $treenodeFactory): void;
 
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeDTOInterface<PayloadType, ValueObjectType> $valueObject
+     * @param TreenodeDTOInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $dto
      */
-    public function addNode(TreenodeDTOInterface $valueObject): void;
+    public function addNode(TreenodeDTOInterface $dto): void;
 
     /**
      * hydrate
-     * @param array<TreenodeDTOInterface<PayloadType, ValueObjectType>> $valueObjects
+     * @param array<TreenodeDTOInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>> $dtos
      */
-    public function hydrate(array $valueObjects): void;
+    public function hydrate(array $dtos): void;
 
     /**
      * @function deleteNode
@@ -91,7 +91,7 @@ interface TreeAbstractInterface
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int|null $nodeId
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|null
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>|null
      */
     public function getNode(?int $nodeId): TreenodeAbstractInterface|null;
 
@@ -104,7 +104,7 @@ interface TreeAbstractInterface
     /**
      * rootTest
      * @phpcs ignore-next-line
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>|TreenodeDTOInterface<ValueObjectType, PayloadType> $nodeItem
+     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>|TreenodeDTOInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $nodeItem
      * @return bool
      */
     public function rootTest(TreenodeAbstractInterface|TreenodeDTOInterface $nodeItem): bool;

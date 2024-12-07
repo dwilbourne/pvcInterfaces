@@ -8,22 +8,19 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\dto;
 
+use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
+use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
 /**
  * Class TreenodeDTOOrderedInterface
  * @template PayloadType of HasPayloadInterface
+ * @phpcs:ignore
+ * @extends TreenodeDTOInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface, TreenodeDTOOrderedInterface>
  */
-interface TreenodeDTOOrderedInterface
+interface TreenodeDTOOrderedInterface extends TreenodeDTOInterface
 {
-    /**
-     * hydrateFromNode
-     * @param TreenodeOrderedInterface<PayloadType> $node
-     * @return void
-     */
-    public function hydrateFromNode(TreenodeOrderedInterface $node): void;
-
     /**
      * hydrateFromArray
      * @param array{

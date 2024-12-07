@@ -43,8 +43,8 @@ interface TreenodeOrderedInterface extends TreenodeAbstractInterface
 
     /**
      * hydrate
-     * @param TreenodeDTOOrderedInterface<PayloadType> $valueObject
+     * @param TreenodeDTOOrderedInterface<PayloadType> $dto
      * @param TreeOrderedInterface<PayloadType> $tree
      */
-    public function hydrate(TreenodeDTOInterface $valueObject, TreeAbstractInterface $tree): void;
+    public function hydrate(TreenodeDTOInterface $dto, TreeAbstractInterface $tree): void;
 }
