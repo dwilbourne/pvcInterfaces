@@ -20,9 +20,8 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  * @template DtoType of TreenodeDTOInterface
- * @extends HasPayloadInterface<PayloadType>
  */
-interface TreenodeDTOInterface extends HasPayloadInterface
+interface TreenodeDTOInterface
 {
     /**
      * hydrateFromNode
