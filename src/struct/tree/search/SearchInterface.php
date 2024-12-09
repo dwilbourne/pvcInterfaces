@@ -11,11 +11,11 @@ namespace pvc\interfaces\struct\tree\search;
 use Iterator;
 
 /**
- * Class SearchStrategyInterface
+ * Class SearchInterface
  * @template NodeType of NodeInterface
  * @extends Iterator<NodeType>
  */
-interface SearchStrategyInterface extends Iterator
+interface SearchInterface extends Iterator
 {
     /**
      * setStartNode
