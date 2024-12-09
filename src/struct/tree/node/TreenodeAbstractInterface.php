@@ -14,6 +14,7 @@ use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\payload\HasPayloadTesterInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDTOInterface;
+use pvc\interfaces\struct\tree\search\NodeSearchableInterface;
 use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 
 /**
@@ -55,7 +56,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @phpcs:ignore
  * @phpstan-type NodeInterface TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
  */
-interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTesterInterface
+interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTesterInterface, NodeSearchableInterface
 {
     /**
      * isEmpty
