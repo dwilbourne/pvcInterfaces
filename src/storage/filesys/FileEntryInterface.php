@@ -3,6 +3,7 @@
 /**
  * @author: Doug Wilbourne (dougwilbourne@gmail.com)
  */
+
 declare(strict_types=1);
 
 namespace pvc\interfaces\storage\filesys;
@@ -16,12 +17,6 @@ namespace pvc\interfaces\storage\filesys;
  */
 interface FileEntryInterface
 {
-    /**
-     * setFilePath
-     * @param string $filePath
-     */
-    public function setFilePath(string $filePath): void;
-
     /**
      * getFilePath
      * @return string|null
