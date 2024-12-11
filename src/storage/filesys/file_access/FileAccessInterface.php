@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\storage\filesys;
+namespace pvc\interfaces\storage\filesys\file_access;
 
 /**
  * Class FileAccessInterface
