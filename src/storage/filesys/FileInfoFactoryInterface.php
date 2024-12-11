@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace pvc\interfaces\storage\filesys;
 
 /**
- * Class FileIinfoFactoryInterface
+ * Class FileInfoFactoryInterface
  */
-interface FileIinfoFactoryInterface
+interface FileInfoFactoryInterface
 {
     /**
      * makeFileEntry
