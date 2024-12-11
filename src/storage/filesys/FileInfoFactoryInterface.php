@@ -17,5 +17,5 @@ interface FileInfoFactoryInterface
      * makeFileEntry
      * @return FileInfoInterface
      */
-    public function makeFileInfo(): FileInfoInterface;
+    public function makeFileInfo(string $pathName): FileInfoInterface;
 }
