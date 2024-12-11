@@ -9,13 +9,13 @@ declare(strict_types=1);
 namespace pvc\interfaces\storage\filesys;
 
 /**
- * Class FileEntryFactoryInterface
+ * Class FileIinfoFactoryInterface
  */
-interface FileEntryFactoryInterface
+interface FileIinfoFactoryInterface
 {
     /**
      * makeFileEntry
-     * @return FileEntryInterface
+     * @return FileInfoInterface
      */
-    public function makeFileEntry(): FileEntryInterface;
+    public function makeFileInfo(): FileInfoInterface;
 }
