@@ -21,13 +21,13 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template NodeType of TreenodeAbstractInterface
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
- * @template ValueObjectType of TreenodeDTOInterface
+ * @template DtoType of TreenodeDTOInterface
  */
 interface TreenodeFactoryInterface
 {
     /**
      * makeNode
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType>
+     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
      */
     public function makeNode(): TreenodeAbstractInterface;
 
@@ -39,7 +39,7 @@ interface TreenodeFactoryInterface
 
     /**
      * setTree
-     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, ValueObjectType> $tree
+     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $tree
      */
     public function setTree(TreeAbstractInterface $tree): void;
 }
