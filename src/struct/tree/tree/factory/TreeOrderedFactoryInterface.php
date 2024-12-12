@@ -11,8 +11,6 @@ namespace pvc\interfaces\struct\tree\tree\factory;
 use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDTOOrderedInterface;
-use pvc\interfaces\struct\tree\node\factory\TreenodeFactoryInterface;
-use pvc\interfaces\struct\tree\node\factory\TreenodeOrderedFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
@@ -27,8 +25,7 @@ interface TreeOrderedFactoryInterface extends TreeFactoryInterface
     /**
      * makeTree
      * @param int $treeId
-     * @param TreenodeOrderedFactoryInterface<PayloadType> $treenodeFactory
      * @return TreeOrderedInterface<PayloadType>
      */
-    public function makeTree(int $treeId, TreenodeFactoryInterface $treenodeFactory): TreeOrderedInterface;
+    public function makeTree(int $treeId): TreeOrderedInterface;
 }
