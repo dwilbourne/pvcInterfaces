@@ -10,9 +10,18 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class NodeSearchableInterface
- * @extends NodeInterface<NodeSearchableInterface>
- *
  */
-interface NodeSearchableInterface extends NodeInterface
+interface NodeSearchableInterface
 {
+    /**
+     * getNodeId
+     * @return non-negative-int
+     */
+    public function getNodeId(): int;
+
+    /**
+     * getChildren
+     * @return array<NodeSearchableInterface>
+     */
+    public function getChildrenAsArray(): array;
 }
