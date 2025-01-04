@@ -10,6 +10,8 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class NodeVisitableInterface
+ * @template NodeType of NodeSearchableInterface
+ * @extends NodeSearchableInterface<NodeType>
  */
 interface NodeVisitableInterface extends NodeSearchableInterface
 {

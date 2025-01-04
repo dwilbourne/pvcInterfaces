@@ -12,7 +12,7 @@ use Iterator;
 
 /**
  * Class SearchInterface
- * @template NodeType of NodeInterface
+ * @template NodeType of NodeSearchableInterface
  * @extends Iterator<NodeType>
  */
 interface SearchInterface extends Iterator
