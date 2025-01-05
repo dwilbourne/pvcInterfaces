@@ -54,4 +54,16 @@ interface SearchInterface extends Iterator
      * @return NodeType|null
      */
     public function current(): mixed;
+
+    /**
+     * getParent
+     * @return NodeType|null
+     */
+    public function getParent(): mixed;
+
+    /**
+     * getParentId
+     * @return int|null
+     */
+    public function getParentId(): ?int;
 }
