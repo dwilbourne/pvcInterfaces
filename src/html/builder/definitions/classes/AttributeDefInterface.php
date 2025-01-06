@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\html\factory\definitions\classes;
+namespace pvc\interfaces\html\builder\definitions\classes;
 
 /**
  * Class AttributeDefInterface

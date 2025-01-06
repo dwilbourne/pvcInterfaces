@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
-use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
+use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\msg\MsgFactoryInterface;
 use pvc\interfaces\msg\MsgInterface;
 

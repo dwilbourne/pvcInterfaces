@@ -6,22 +6,22 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\html\factory;
+namespace pvc\interfaces\html\builder;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
+use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
+use pvc\interfaces\html\builder\definitions\DefinitionType;
 use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\html\element\ElementVoidInterface;
-use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
-use pvc\interfaces\html\factory\definitions\DefinitionType;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
- * Class HtmlFactoryInterface
+ * Class HtmlBuilderInterface
  * @template VendorSpecificDefinition of DefinitionFactoryInterface
  */
-interface HtmlFactoryInterface
+interface HtmlBuilderInterface
 {
     /**
      * getDefinitionTypes

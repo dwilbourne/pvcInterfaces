@@ -10,8 +10,8 @@ namespace pvc\interfaces\frmtr\html;
 
 use pvc\interfaces\frmtr\FrmtrInterface;
 use pvc\interfaces\frmtr\msg\FrmtrMsgInterface;
+use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\html\element\ElementVoidInterface;
-use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\intl\LocaleInterface;
 
 /**

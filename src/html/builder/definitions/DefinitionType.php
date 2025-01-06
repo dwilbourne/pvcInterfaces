@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\html\factory\definitions;
+namespace pvc\interfaces\html\builder\definitions;
 
 /**
  * Class DefinitionType

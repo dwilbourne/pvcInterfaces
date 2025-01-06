@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\html\factory;
+namespace pvc\interfaces\html\builder;
 
 use Psr\Container\ContainerInterface;
-use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
+use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
 
 /**
  * Class HtmlContainerInterface

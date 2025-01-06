@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\displayable;
 
+use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\html\element\ElementVoidInterface;
-use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 
 /**
  * Class RenderableInterface
