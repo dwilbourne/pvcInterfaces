@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\html\tag;
+namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
@@ -16,11 +16,11 @@ use pvc\interfaces\html\factory\HtmlFactoryInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
- * Class TagVoidInterface
+ * Class ElementVoidInterface
  * @template VendorSpecificDefinition of DefinitionFactoryInterface
  * @noinspection PhpCSValidationInspection
  */
-interface TagVoidInterface
+interface ElementVoidInterface
 {
     /**
      * setDefId
@@ -87,9 +87,9 @@ interface TagVoidInterface
      * setAttribute
      * @param string|AttributeInterface $attribute
      * @param string ...$values
-     * @return TagVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface<VendorSpecificDefinition>
      */
-    public function setAttribute(string|AttributeInterface $attribute, ...$values): TagVoidInterface;
+    public function setAttribute(string|AttributeInterface $attribute, ...$values): ElementVoidInterface;
 
     /**
      * $defId
@@ -103,20 +103,20 @@ interface TagVoidInterface
      * @param string|AttributeCustomDataInterface $attribute
      * @param string $value
      * @param ValTesterInterface<string>|null $valTester
-     * @return TagVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface<VendorSpecificDefinition>
      */
     public function setCustomData(
         string|AttributeCustomDataInterface $attribute,
         string $value,
         ValTesterInterface $valTester = null
-    ): TagVoidInterface;
+    ): ElementVoidInterface;
 
     /**
      * setEvent
      * @param EventInterface $event
-     * @return TagVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface<VendorSpecificDefinition>
      */
-    public function setEvent(EventInterface $event): TagVoidInterface;
+    public function setEvent(EventInterface $event): ElementVoidInterface;
 
     /**
      * getAttributes

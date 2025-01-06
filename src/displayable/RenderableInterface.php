@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\displayable;
 
+use pvc\interfaces\html\element\ElementVoidInterface;
 use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
-use pvc\interfaces\html\tag\TagVoidInterface;
 
 /**
  * Class RenderableInterface
@@ -19,7 +19,7 @@ interface RenderableInterface
 {
     /**
      * makeHtml
-     * @return TagVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface<VendorSpecificDefinition>
      */
-    public function makeHtml(): TagVoidInterface;
+    public function makeHtml(): ElementVoidInterface;
 }

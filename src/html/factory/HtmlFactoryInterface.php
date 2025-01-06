@@ -11,10 +11,10 @@ namespace pvc\interfaces\html\factory;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
+use pvc\interfaces\html\element\ElementInterface;
+use pvc\interfaces\html\element\ElementVoidInterface;
 use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\html\factory\definitions\DefinitionType;
-use pvc\interfaces\html\tag\TagInterface;
-use pvc\interfaces\html\tag\TagVoidInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
@@ -54,9 +54,9 @@ interface HtmlFactoryInterface
     /**
      * makeElement
      * @param string $elementName
-     * @return TagVoidInterface<VendorSpecificDefinition>|TagInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface<VendorSpecificDefinition>|ElementInterface<VendorSpecificDefinition>
      */
-    public function makeElement(string $elementName): TagVoidInterface|TagInterface;
+    public function makeElement(string $elementName): ElementVoidInterface|ElementInterface;
 
     /**
      * makeEvent

@@ -6,18 +6,18 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\html\tag;
+namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\factory\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\msg\MsgFactoryInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
- * Class TagInterface
+ * Class ElementInterface
  * @template VendorSpecificDefinition of DefinitionFactoryInterface
- * @extends TagVoidInterface<VendorSpecificDefinition>
+ * @extends ElementVoidInterface<VendorSpecificDefinition>
  */
-interface TagInterface extends TagVoidInterface
+interface ElementInterface extends ElementVoidInterface
 {
     /**
      * setMsgFactory
@@ -52,24 +52,24 @@ interface TagInterface extends TagVoidInterface
 
     /**
      * setChild
-     * @param string|TagVoidInterface<VendorSpecificDefinition> $element
+     * @param string|ElementVoidInterface<VendorSpecificDefinition> $element
      * @param string|null $key
-     * @return TagVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface<VendorSpecificDefinition>
      */
-    public function setChild(string|TagVoidInterface $element, string $key = null): TagVoidInterface;
+    public function setChild(string|ElementVoidInterface $element, string $key = null): ElementVoidInterface;
 
     /**
      * getChild
      * @param string $key
-     * @return TagVoidInterface<VendorSpecificDefinition>|MsgInterface|string|null
+     * @return ElementVoidInterface<VendorSpecificDefinition>|MsgInterface|string|null
      * the innerText is kept in the child array, so the return type must include MsgInterface and string
      */
-    public function getChild(string $key): TagVoidInterface|MsgInterface|string|null;
+    public function getChild(string $key): ElementVoidInterface|MsgInterface|string|null;
 
     /**
      * getChildren
      * @param callable $filter
-     * @return array<TagVoidInterface<VendorSpecificDefinition>|MsgInterface|string>
+     * @return array<ElementVoidInterface<VendorSpecificDefinition>|MsgInterface|string>
      */
     public function getChildren(callable $filter = null): array;
 
