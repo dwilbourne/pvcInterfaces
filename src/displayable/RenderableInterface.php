@@ -21,5 +21,5 @@ interface RenderableInterface
      * makeHtml
      * @return ElementVoidInterface<VendorSpecificDefinition>
      */
-    public function makeHtml(): ElementVoidInterface;
+    public function render(): ElementVoidInterface;
 }
