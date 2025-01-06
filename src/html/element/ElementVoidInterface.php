@@ -49,16 +49,16 @@ interface ElementVoidInterface
     public function setName(string $name);
 
     /**
-     * setHtmlFactory
+     * setHtmlBuilder
      * @param HtmlBuilderInterface<VendorSpecificDefinition> $htmlFactory
      */
-    public function setHtmlFactory(HtmlBuilderInterface $htmlFactory): void;
+    public function setHtmlBuilder(HtmlBuilderInterface $htmlFactory): void;
 
     /**
-     * getHtmlFactory
+     * getHtmlBuilder
      * @return HtmlBuilderInterface<VendorSpecificDefinition>
      */
-    public function getHtmlFactory(): HtmlBuilderInterface;
+    public function getHtmlBuilder(): HtmlBuilderInterface;
 
     /**
      * setAllowedAttributeDefIds
