@@ -50,9 +50,9 @@ interface ElementVoidInterface
 
     /**
      * setHtmlBuilder
-     * @param HtmlBuilderInterface<VendorSpecificDefinition> $htmlFactory
+     * @param HtmlBuilderInterface<VendorSpecificDefinition> $htmlBuilder
      */
-    public function setHtmlBuilder(HtmlBuilderInterface $htmlFactory): void;
+    public function setHtmlBuilder(HtmlBuilderInterface $htmlBuilder): void;
 
     /**
      * getHtmlBuilder
