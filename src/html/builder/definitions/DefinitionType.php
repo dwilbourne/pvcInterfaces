@@ -19,6 +19,8 @@ enum DefinitionType: string
     case Event = 'Event';
     case Other = 'Other';
 
+    /*
+     * TODO: see about removing this code although it does look useful
     public static function fromName(string $name): ?DefinitionType
     {
         foreach (self::cases() as $status) {
@@ -28,4 +30,5 @@ enum DefinitionType: string
         }
         return null;
     }
+    */
 }
