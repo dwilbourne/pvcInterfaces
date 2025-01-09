@@ -45,6 +45,13 @@ interface HtmlBuilderInterface
     public function getDefinitionIds(DefinitionType $type = null): array;
 
     /**
+     * isGlobalAttributeDefId
+     * @param string $defId
+     * @return bool
+     */
+    public function isGlobalAttributeDefId(string $defId): bool;
+
+    /**
      * makeAttribute
      * @param string $attributeName
      * @return AttributeInterface
