@@ -26,7 +26,7 @@ interface HtmlBuilderInterface
     /**
      * getDefinitionTypes
      * @param DefinitionType|null $type
-     * @return array<string, string>
+     * @return array<string, DefinitionType>
      */
     public function getDefinitionTypes(DefinitionType $type = null): array;
 
