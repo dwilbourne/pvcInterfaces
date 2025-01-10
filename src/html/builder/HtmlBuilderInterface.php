@@ -45,12 +45,6 @@ interface HtmlBuilderInterface
     public function getDefinitionIds(DefinitionType $type = null): array;
 
     /**
-     * getGlobalAttributeDefIds
-     * @return array<string>
-     */
-    public function getGlobalAttributeDefIds(): array;
-
-    /**
      * makeAttribute
      * @param string $attributeName
      * @return AttributeInterface

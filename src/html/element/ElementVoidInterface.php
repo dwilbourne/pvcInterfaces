@@ -73,6 +73,12 @@ interface ElementVoidInterface
     public function getAllowedAttributeDefIds(): array;
 
     /**
+     * getGlobalAttributeDefIds
+     * @return array<string>
+     */
+    public function getGlobalAttributeDefIds(): array;
+    
+    /**
      * isAllowedAttribute
      * @param AttributeInterface $attribute
      * @return bool
