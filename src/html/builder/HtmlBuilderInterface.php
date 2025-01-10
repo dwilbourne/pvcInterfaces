@@ -33,9 +33,9 @@ interface HtmlBuilderInterface
     /**
      * getDefinitionType
      * @param string $defId
-     * @return string
+     * @return DefinitionType|null
      */
-    public function getDefinitionType(string $defId): ?string;
+    public function getDefinitionType(string $defId): ?DefinitionType;
 
     /**
      * getDefinitionIds
