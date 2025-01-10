@@ -77,7 +77,7 @@ interface ElementVoidInterface
      * @return array<string>
      */
     public function getGlobalAttributeDefIds(): array;
-    
+
     /**
      * isAllowedAttribute
      * @param AttributeInterface $attribute
@@ -126,10 +126,10 @@ interface ElementVoidInterface
 
     /**
      * getAttributes
-     * @param int $attributeTypes
+     * @param int $defTypeMask
      * @return array<AttributeInterface>
      */
-    public function getAttributes(int $attributeTypes): array;
+    public function getAttributes(int $defTypeMask): array;
 
     /**
      * removeAttribute
