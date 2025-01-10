@@ -25,10 +25,10 @@ interface HtmlBuilderInterface
 {
     /**
      * getDefinitionTypes
-     * @param DefinitionType|null $type
+     * @param DefinitionType|null $typeFilter
      * @return array<string, DefinitionType>
      */
-    public function getDefinitionTypes(DefinitionType $type = null): array;
+    public function getDefinitionTypes(DefinitionType $typeFilter = null): array;
 
     /**
      * getDefinitionType
