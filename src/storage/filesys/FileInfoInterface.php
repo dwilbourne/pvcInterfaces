@@ -22,4 +22,10 @@ interface FileInfoInterface
      * @return string|null
      */
     public function getFilePath(): ?string;
+
+    /**
+     * isDir
+     * @return bool
+     */
+    public function isDir(): bool;
 }
