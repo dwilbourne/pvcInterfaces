@@ -25,7 +25,7 @@ interface TreenodeDTOInterface
 {
     /**
      * hydrateFromNode
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $node
+     * @param NodeType $node
      */
     public function hydrateFromNode(TreenodeAbstractInterface $node): void;
 

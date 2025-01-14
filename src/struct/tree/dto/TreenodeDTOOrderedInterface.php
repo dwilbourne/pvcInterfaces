@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\tree\dto;
 
 use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
 use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
@@ -23,6 +24,13 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  */
 interface TreenodeDTOOrderedInterface extends TreenodeDTOInterface
 {
+    /**
+     * hydrateFromNode
+     * @phpcs:ignore
+     * @param TreenodeOrderedInterface<PayloadType> $node
+     */
+    public function hydrateFromNode(TreenodeAbstractInterface $node): void;
+
     /**
      * hydrateFromArray
      * @param NodeDataOrdered $nodeData
