@@ -20,6 +20,8 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  * @template DtoType of TreenodeDTOInterface
+ * @phpcs:ignore
+ * @phpstan-type NodeData array{'nodeId': non-negative-int,'parentId': non-negative-int|null, 'treeId':non-negative-int,'payload': PayloadType, 'index'?:non-negative-int}
  */
 interface TreenodeDTOInterface
 {
@@ -31,7 +33,7 @@ interface TreenodeDTOInterface
 
     /**
      * hydrateFromArray
-     * @param array<mixed> $values
+     * @param NodeData $values
      */
     public function hydrateFromArray(array $values): void;
 }
