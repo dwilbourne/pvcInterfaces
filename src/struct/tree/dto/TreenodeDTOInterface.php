@@ -20,6 +20,8 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  * @template DtoType of TreenodeDTOInterface
+ *
+ * @phpstan-type NodeData array{'nodeId': non-negative-int,'parentId': non-negative-int|null,'treeId': non-negative-int,'payload': PayloadType}
  */
 interface TreenodeDTOInterface
 {

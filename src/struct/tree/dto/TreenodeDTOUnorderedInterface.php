@@ -18,7 +18,7 @@ use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
  * Class TreenodeDTOUnorderedInterface
  * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore
- * @phpstan-type NodeDataUnordered array{'nodeId': non-negative-int,'parentId': non-negative-int|null,'treeId': non-negative-int,'payload': PayloadType}
+ * @phpstan-import-type NodeData from TreenodeDTOInterface
  * @phpcs:ignore
  * @extends TreenodeDTOInterface<PayloadType, TreenodeUnorderedInterface, TreeUnorderedInterface, CollectionUnorderedInterface, TreenodeDTOUnorderedInterface, >
  */
@@ -34,7 +34,7 @@ interface TreenodeDTOUnorderedInterface extends TreenodeDTOInterface
 
     /**
      * hydrateFromArray
-     * @param NodeDataUnordered $nodeData
+     * @param NodeData $nodeData
      */
     public function hydrateFromArray(array $nodeData): void;
 }
