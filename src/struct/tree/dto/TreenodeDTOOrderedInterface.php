@@ -17,19 +17,15 @@ use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
  * Class TreenodeDTOOrderedInterface
  * @template PayloadType of HasPayloadInterface
  * @phpcs:ignore
+ * @phpstan-type NodeDataOrdered array{'nodeId': non-negative-int,'parentId': non-negative-int|null,'treeId':non-negative-int,'payload': PayloadType,'index':non-negative-int }
+ * @phpcs:ignore
  * @extends TreenodeDTOInterface<PayloadType, TreenodeOrderedInterface, TreeOrderedInterface, CollectionOrderedInterface, TreenodeDTOOrderedInterface>
  */
 interface TreenodeDTOOrderedInterface extends TreenodeDTOInterface
 {
     /**
      * hydrateFromArray
-     * @param array{
-     *     'nodeId': non-negative-int,
-     *     'parentId': non-negative-int|null,
-     *     'treeId': non-negative-int,
-     *     'payload': PayloadType,
-     *     'index': non-negative-int
-     * } $nodeData
+     * @param NodeDataOrdered $nodeData
      */
     public function hydrateFromArray(array $nodeData): void;
 }
