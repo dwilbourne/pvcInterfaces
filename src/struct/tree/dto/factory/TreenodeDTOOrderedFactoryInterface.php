@@ -12,6 +12,7 @@ use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDTOOrderedInterface;
 use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
+use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
 use pvc\interfaces\struct\tree\tree\TreeOrderedInterface;
 
 /**
@@ -35,5 +36,12 @@ interface TreenodeDTOOrderedFactoryInterface extends TreenodeDTOFactoryInterface
      * @param array<NodeDataOrdered> $arrayNodeData
      * @return array<TreenodeDTOOrderedInterface<PayloadType>>
      */
-    public function makeDTOArray(array $arrayNodeData): array;
+    public function makeDTOArrayFromArray(array $arrayNodeData): array;
+
+    /**
+     * makeDTOArray
+     * @param TreeOrderedInterface<PayloadType> $tree
+     * @return array<TreenodeDTOOrderedInterface<PayloadType>>
+     */
+    public function makeDTOArrayFromTree(TreeAbstractInterface $tree): array;
 }

@@ -32,9 +32,16 @@ interface TreenodeDTOFactoryInterface
     public function makeDTO(array $nodeData): mixed;
 
     /**
-     * makeDtoArray
+     * makeDtoArrayFromArray
      * @param array<mixed> $arrayNodeData
      * @return array<DtoType>
      */
-    public function makeDtoArray(array $arrayNodeData): array;
+    public function makeDtoArrayFromArray(array $arrayNodeData): array;
+
+    /**
+     * makeDtoArrayFromTree
+     * @param TreeType $tree
+     * @return array<DtoType>
+     */
+    public function makeDtoArrayFromTree(TreeAbstractInterface $tree): array;
 }
