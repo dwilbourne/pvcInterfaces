@@ -33,7 +33,7 @@ interface TreenodeDTOOrderedInterface extends TreenodeDTOInterface
 
     /**
      * hydrateFromArray
-     * @param NodeDataOrdered $nodeData
+     * @param NodeDataOrdered $values
      */
     public function hydrateFromArray(array $values): void;
 }

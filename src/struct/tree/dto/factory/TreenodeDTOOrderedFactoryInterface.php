@@ -26,10 +26,9 @@ interface TreenodeDTOOrderedFactoryInterface extends TreenodeDTOFactoryInterface
 {
     /**
      * makeDTO
-     * @param NodeDataOrdered $nodeData
      * @return TreenodeDTOOrderedInterface<PayloadType>
      */
-    public function makeDTO(array $nodeData): TreenodeDTOOrderedInterface;
+    public function makeDTO(): TreenodeDTOOrderedInterface;
 
     /**
      * makeDTOArray

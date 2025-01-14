@@ -26,10 +26,9 @@ interface TreenodeDTOFactoryInterface
 {
     /**
      * makeDTO
-     * @param array<mixed> $nodeData
      * @return DtoType
      */
-    public function makeDTO(array $nodeData): mixed;
+    public function makeDTO(): mixed;
 
     /**
      * makeDtoArrayFromArray
