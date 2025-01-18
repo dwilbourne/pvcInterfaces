@@ -29,7 +29,7 @@ interface TreenodeDTOFactoryInterface
      * makeDTO
      * @return DtoType
      */
-    public function makeDTO(): TreenodeDTOInterface;
+    public function makeDTO(): mixed;
 
     /**
      * makeDtoArrayFromArray
