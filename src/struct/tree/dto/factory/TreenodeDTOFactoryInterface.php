@@ -21,6 +21,7 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template TreeType of TreeAbstractInterface
  * @template CollectionType of CollectionAbstractInterface
  * @template DtoType of TreenodeDTOInterface
+ * @phpstan-import-type NodeData from TreenodeDTOInterface
  */
 interface TreenodeDTOFactoryInterface
 {
@@ -32,7 +33,7 @@ interface TreenodeDTOFactoryInterface
 
     /**
      * makeDtoArrayFromArray
-     * @param array<mixed> $arrayNodeData
+     * @param array<NodeData> $arrayNodeData
      * @return array<DtoType>
      */
     public function makeDtoArrayFromArray(array $arrayNodeData): array;
