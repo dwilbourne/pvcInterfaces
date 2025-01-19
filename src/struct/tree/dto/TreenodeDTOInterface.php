@@ -36,4 +36,9 @@ interface TreenodeDTOInterface
      * @param NodeData $values
      */
     public function hydrateFromArray(array $values): void;
+
+    public function getNodeId(): int;
+    public function getParentId(): ?int;
+    public function getTreeId(): int;
+    public function getPayload(): mixed;
 }
