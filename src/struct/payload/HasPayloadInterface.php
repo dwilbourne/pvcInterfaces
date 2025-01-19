@@ -8,9 +8,11 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\payload;
 
+use pvc\interfaces\validator\ValTesterInterface;
+
 /**
  * Class HasPayloadInterface
- * All data structure interfaces should extend HasPayloadInterface so that the methods for accessing the data within
+ * All data structures implement HasPayloadInterface so that the methods for accessing the data within
  * the structures remain consistent across all types
  * @template PayloadType
  */
@@ -27,4 +29,16 @@ interface HasPayloadInterface
      * @return PayloadType|null
      */
     public function getPayload();
+
+    /**
+     * setPayloadTester
+     * @param ValTesterInterface<PayloadType> $tester
+     */
+    public function setPayloadTester(ValTesterInterface $tester): void;
+
+    /**
+     * getPayloadTester
+     * @return ValTesterInterface<PayloadType>|null
+     */
+    public function getPayloadTester(): ?ValTesterInterface;
 }

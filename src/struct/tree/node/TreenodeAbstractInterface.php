@@ -51,13 +51,10 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * @template CollectionType of CollectionAbstractInterface
  * @template DtoType of TreenodeDTOInterface
  * @extends HasPayloadInterface<PayloadType>
- * @extends HasPayloadTesterInterface<PayloadType>
  * @extends NodeSearchableInterface<NodeType>
- *
- * @phpcs:ignore
  * @phpstan-type NodeInterface TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
  */
-interface TreenodeAbstractInterface extends HasPayloadInterface, HasPayloadTesterInterface, NodeSearchableInterface
+interface TreenodeAbstractInterface extends HasPayloadInterface, NodeSearchableInterface
 {
     /**
      * isEmpty
