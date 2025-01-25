@@ -1,9 +1,12 @@
 <?php
+declare(strict_types=1);
 
 namespace pvc\interfaces\struct\dto;
 
+use pvc\interfaces\struct\payload\HasPayloadInterface;
+
 /**
- * @template DtoType
+ * @template PayloadType of HasPayloadInterface
  * @template EntityType
  */
 interface DtoFactoryAbstractInterface
@@ -22,13 +25,13 @@ interface DtoFactoryAbstractInterface
 
     /**
      * @param array<mixed> $values
-     * @return DtoType
+     * @return DtoInterface<PayloadType>
      */
     public function makeDtoFromArray(array $values): mixed;
 
     /**
      * @param EntityType $entity
-     * @return DtoType
+     * @return DtoInterface<PayloadType>
      */
     public function makeDtoFromEntity(mixed $entity): mixed;
 

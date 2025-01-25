@@ -10,7 +10,7 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 interface TreenodeDTOSorterInterface
 {
     /**
-     * @param array<TreenodeDTOFactoryAbstractInterface<PayloadType>> $dtos
+     * @param array<TreenodeDtoInterface<PayloadType>> $dtos
      * @return void
      */
     public function sortDtos(array &$dtos): void;
