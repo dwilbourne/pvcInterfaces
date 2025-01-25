@@ -19,4 +19,10 @@ interface DtoFactoryInterface
      * @return DtoType
      */
     public function makeDtoFromEntity(mixed $entity): mixed;
+
+    /**
+     * @param mixed $entity
+     * @return array<mixed>
+     */
+    public function makeArrayFromEntity(mixed $entity): array;
 }
