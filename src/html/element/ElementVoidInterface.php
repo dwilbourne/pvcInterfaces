@@ -114,7 +114,7 @@ interface ElementVoidInterface
     public function setCustomData(
         string|AttributeCustomDataInterface $attribute,
         string $value,
-        ValTesterInterface $valTester = null
+        ?ValTesterInterface $valTester = null
     ): ElementVoidInterface;
 
     /**

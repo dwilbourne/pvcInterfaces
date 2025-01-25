@@ -28,7 +28,7 @@ interface HtmlBuilderInterface
      * @param DefinitionType|null $typeFilter
      * @return array<string, DefinitionType>
      */
-    public function getDefinitionTypes(DefinitionType $typeFilter = null): array;
+    public function getDefinitionTypes(?DefinitionType $typeFilter = null): array;
 
     /**
      * getDefinitionType
@@ -42,7 +42,7 @@ interface HtmlBuilderInterface
      * @param DefinitionType|null $type
      * @return array<string>
      */
-    public function getDefinitionIds(DefinitionType $type = null): array;
+    public function getDefinitionIds(?DefinitionType $type = null): array;
 
     /**
      * makeAttribute
@@ -75,6 +75,6 @@ interface HtmlBuilderInterface
     public function makeCustomData(
         string $attributeName,
         string $value,
-        ValTesterInterface $valTester = null
+        ?ValTesterInterface $valTester = null
     ): AttributeCustomDataInterface;
 }

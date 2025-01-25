@@ -56,7 +56,7 @@ interface ElementInterface extends ElementVoidInterface
      * @param string|null $key
      * @return ElementVoidInterface<VendorSpecificDefinition>
      */
-    public function setChild(string|ElementVoidInterface $element, string $key = null): ElementVoidInterface;
+    public function setChild(string|ElementVoidInterface $element, ?string $key = null): ElementVoidInterface;
 
     /**
      * getChild
@@ -71,7 +71,7 @@ interface ElementInterface extends ElementVoidInterface
      * @param callable $filter
      * @return array<ElementVoidInterface<VendorSpecificDefinition>|MsgInterface|string>
      */
-    public function getChildren(callable $filter = null): array;
+    public function getChildren(?callable $filter = null): array;
 
     /**
      * setInnerText

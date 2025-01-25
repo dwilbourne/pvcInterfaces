@@ -9,14 +9,14 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDTOInterface;
-use pvc\interfaces\struct\tree\node\factory\TreenodeFactoryInterface;
-use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOFactoryInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOSorterInterface;
+use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
+use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
- * Interface TreeAbstractInterface defines the operations common to all trees, both ordered and unordered.
+ * Interface TreeInterface defines the operations common to all trees, both ordered and unordered.
  *
  * Trees have an id, allowing you to work with multiple trees at once.  Each tree consist of "nodes", and each node
  * can carry any sort of value you would like.  Because the structure is written using generics via phpstan, you
@@ -25,12 +25,8 @@ use pvc\interfaces\struct\tree\node\TreenodeAbstractInterface;
  * nodes, including the root node, can have zero or more child nodes.
  *
  * @template PayloadType of HasPayloadInterface
- * @template NodeType of TreenodeAbstractInterface
- * @template TreeType of TreeAbstractInterface
- * @template CollectionType of CollectionAbstractInterface
- * @template DtoType of TreenodeDTOInterface
  */
-interface TreeAbstractInterface
+interface TreeInterface
 {
     /**
      * @function setTreeId sets the id of the tree.
@@ -51,27 +47,38 @@ interface TreeAbstractInterface
 
     /**
      * getTreenodeFactory
-     * @return TreenodeFactoryInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
+     * @return TreenodeFactoryInterface<PayloadType>
      */
     public function getTreenodeFactory(): TreenodeFactoryInterface;
 
     /**
      * setTreenodeFactory
      * @phpcs:ignore
-     * @param TreenodeFactoryInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $treenodeFactory
+     * @param TreenodeFactoryInterface<PayloadType> $treenodeFactory
      */
     public function setTreenodeFactory(TreenodeFactoryInterface $treenodeFactory): void;
 
     /**
+     * @param TreenodeDTOSorterInterface<PayloadType> $sorter
+     * @return void
+     */
+    public function setDtoSorder(TreenodeDTOSorterInterface $sorter): void;
+
+    /**
+     * @return TreenodeDTOSorterInterface<PayloadType>
+     */
+    public function getDtoSorder(): TreenodeDTOSorterInterface;
+
+    /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeDTOInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $dto
+     * @param TreenodeDTOFactoryInterface<PayloadType> $dto
      */
-    public function addNode(TreenodeDTOInterface $dto): void;
+    public function addNode(TreenodeDTOFactoryInterface $dto): void;
 
     /**
      * hydrate
-     * @param array<TreenodeDTOInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>> $dtos
+     * @param array<TreenodeDTOFactoryInterface<PayloadType>> $dtos
      */
     public function hydrate(array $dtos): void;
 
@@ -84,30 +91,30 @@ interface TreeAbstractInterface
 
     /**
      * @function getNodes
-     * @return array<NodeType>
+     * @return array<TreenodeInterface<PayloadType>>
      */
     public function getNodes(): array;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int|null $nodeId
-     * @return TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>|null
+     * @return TreenodeInterface<PayloadType>|null
      */
-    public function getNode(?int $nodeId): TreenodeAbstractInterface|null;
+    public function getNode(?int $nodeId): TreenodeInterface|null;
 
     /**
      * @function getRoot
-     * @return   NodeType|null
+     * @return   TreenodeInterface<PayloadType>|null
      */
-    public function getRoot(): ?TreenodeAbstractInterface;
+    public function getRoot(): ?TreenodeInterface;
 
     /**
      * rootTest
      * @phpcs ignore-next-line
-     * @param TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>|TreenodeDTOInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $nodeItem
+     * @param TreenodeInterface<PayloadType>|TreenodeDTOFactoryInterface<PayloadType> $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeAbstractInterface|TreenodeDTOInterface $nodeItem): bool;
+    public function rootTest(TreenodeInterface|TreenodeDTOFactoryInterface $nodeItem): bool;
 
     /**
      * @function isEmpty

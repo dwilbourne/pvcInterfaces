@@ -8,17 +8,17 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
-use pvc\interfaces\struct\collection\CollectionAbstractInterface;
+use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\payload\HasPayloadTesterInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDTOInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOFactoryInterface;
 use pvc\interfaces\struct\tree\search\NodeSearchableInterface;
-use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
+use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
- * Interface TreenodeAbstractInterface defines the operations for a generic tree node.
+ * Interface TreenodeInterface defines the operations for a generic tree node.
  *
  * This interface defines the operations common to all tree nodes.  Here are some of the design points.  The nodeid
  * property is immutable - the only way to set the nodeid is at hydration.  The same applies to the tree property.
@@ -42,19 +42,13 @@ use pvc\interfaces\struct\tree\tree\TreeAbstractInterface;
  * safety alone is not always enough to guarantee that each value is valid.  If you choose to use a PayloadTester,
  * make sure it is injected into the node object before setting the value of the node.
  *
- * @see CollectionUnorderedInterface
- * @see CollectionOrderedInterface
+ * @see CollectionInterface
  *
  * @template PayloadType of HasPayloadInterface
- * @template NodeType of TreenodeAbstractInterface
- * @template TreeType of TreeAbstractInterface
- * @template CollectionType of CollectionAbstractInterface
- * @template DtoType of TreenodeDTOInterface
  * @extends HasPayloadInterface<PayloadType>
- * @extends NodeSearchableInterface<NodeType>
- * @phpstan-type NodeInterface TreenodeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
+ * @extends NodeSearchableInterface<TreenodeInterface>
  */
-interface TreenodeAbstractInterface extends HasPayloadInterface, NodeSearchableInterface
+interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
 {
     /**
      * isEmpty
@@ -65,10 +59,10 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, NodeSearchableI
 
     /**
      * hydrate
-     * @param TreenodeDTOInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $dto
-     * @param TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType> $tree
+     * @param TreenodeDTOFactoryInterface<PayloadType> $dto
+     * @param TreeInterface<PayloadType> $tree
      */
-    public function hydrate(TreenodeDTOInterface $dto, TreeAbstractInterface $tree): void;
+    public function hydrate(TreenodeDTOFactoryInterface $dto, TreeInterface $tree): void;
     /**
      * getNodeId
      * @return non-negative-int
@@ -83,15 +77,15 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, NodeSearchableI
 
     /**
      * @function getParent
-     * @return NodeInterface|null
+     * @return TreenodeInterface<PayloadType>|null
      */
-    public function getParent(): ?TreenodeAbstractInterface;
+    public function getParent(): ?TreenodeInterface;
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeAbstractInterface<PayloadType, NodeType, TreeType, CollectionType, DtoType>
+     * @return TreeInterface<PayloadType>
      */
-    public function getTree(): TreeAbstractInterface;
+    public function getTree(): TreeInterface;
 
     /**
      * getTreeId
@@ -124,33 +118,49 @@ interface TreenodeAbstractInterface extends HasPayloadInterface, NodeSearchableI
     /**
      * @function getChild
      * @param non-negative-int $nodeid
-     * @return NodeInterface|null
+     * @return TreenodeInterface<PayloadType>|null
      */
-    public function getChild(int $nodeid): ?TreenodeAbstractInterface;
+    public function getChild(int $nodeid): ?TreenodeInterface;
 
     /**
      * @function getChildren
-     * @return CollectionAbstractInterface<PayloadType, CollectionType>
+     * @return CollectionInterface<PayloadType>
      */
-    public function getChildren(): CollectionAbstractInterface;
+    public function getChildren(): CollectionInterface;
 
     /**
      * @function getSiblings
-     * @return CollectionAbstractInterface<PayloadType, CollectionType>
+     * @return CollectionInterface<PayloadType>
      */
-    public function getSiblings(): CollectionAbstractInterface;
+    public function getSiblings(): CollectionInterface;
 
     /**
      * @function isDescendantOf
-     * @param NodeInterface $node
+     * @param TreenodeInterface<PayloadType> $node
      * @return bool
      */
-    public function isDescendantOf(TreenodeAbstractInterface $node): bool;
+    public function isDescendantOf(TreenodeInterface $node): bool;
 
     /**
      * @function isAncestorOf
-     * @param NodeInterface $node
+     * @param TreenodeInterface<PayloadType> $node
      * @return bool
      */
-    public function isAncestorOf(TreenodeAbstractInterface $node): bool;
+    public function isAncestorOf(TreenodeInterface $node): bool;
+
+    /**
+     * @function setIndex sets the ordinal position of this node if the collection of siblings is ordered
+     *
+     * If the index supplied is greater than any of the existing indices, then the node is tacked on to the end of the
+     * list.
+     *
+     * @param non-negative-int $index
+     */
+    public function setIndex(int $index): void;
+
+    /**
+     * @function getIndex gets the ordinal position of this node in the ordered list of siblings
+     * @return non-negative-int
+     */
+    public function getIndex(): int;
 }

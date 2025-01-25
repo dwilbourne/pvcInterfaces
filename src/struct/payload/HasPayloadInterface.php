@@ -45,5 +45,5 @@ interface HasPayloadInterface
      * getPayloadTester
      * @return ValTesterInterface<PayloadType>|null
      */
-    public function getPayloadTester(): ValTesterInterface;
+    public function getPayloadTester(): ?ValTesterInterface;
 }

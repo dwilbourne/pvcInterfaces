@@ -6,21 +6,19 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\collection\factory;
+namespace pvc\interfaces\struct\collection;
 
-use pvc\interfaces\struct\collection\CollectionAbstractInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
  * Class CollectionFactoryInterface
  * @template PayloadType of HasPayloadInterface
- * @template CollectionType of CollectionAbstractInterface
  */
 interface CollectionFactoryInterface
 {
     /**
      * makeCollection
-     * @return CollectionAbstractInterface<PayloadType, CollectionType>
+     * @return CollectionInterface<PayloadType>
      */
-    public function makeCollection(): CollectionAbstractInterface;
+    public function makeCollection(): CollectionInterface;
 }

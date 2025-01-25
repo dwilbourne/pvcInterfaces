@@ -13,7 +13,7 @@ use Iterator;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
- * Class CollectionAbstractInterface provides the generic behaviors for collections.
+ * Class CollectionInterface.
  *
  * These interfaces (and their implementations) are written using phpstan generics.  If you use these data
  * structures, you should consider using phpstan as part of testing your code in order to ensure tpe safety.
@@ -25,10 +25,9 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
  * of ordination among the elements.
  *
  * @template PayloadType of HasPayloadInterface
- * @template CollectionType
  * @extends Iterator<int, PayloadType>
  */
-interface CollectionAbstractInterface extends Iterator, Countable
+interface CollectionInterface extends Iterator, Countable
 {
     /**
      * @function isEmpty
@@ -104,4 +103,18 @@ interface CollectionAbstractInterface extends Iterator, Countable
      * @param PayloadType $payload
      */
     public function push($payload): void;
+
+    /**
+     * getIndex gets the ordinal position of the element in the list corresponding to $key
+     * @param non-negative-int $key
+     * @return non-negative-int
+     */
+    public function getIndex(int $key): int;
+
+    /**
+     * setIndex sets the ordinal position of an element in the list
+     * @param non-negative-int $key
+     * @param non-negative-int $newIndex
+     */
+    public function setIndex(int $key, int $newIndex): void;
 }
