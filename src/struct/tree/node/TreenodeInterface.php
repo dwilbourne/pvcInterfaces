@@ -13,7 +13,7 @@ use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\collection\CollectionUnorderedInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\payload\HasPayloadTesterInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDTOFactoryInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOFactoryAbstractInterface;
 use pvc\interfaces\struct\tree\search\NodeSearchableInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
@@ -59,10 +59,10 @@ interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
 
     /**
      * hydrate
-     * @param TreenodeDTOFactoryInterface<PayloadType> $dto
+     * @param TreenodeDTOFactoryAbstractInterface<PayloadType> $dto
      * @param TreeInterface<PayloadType> $tree
      */
-    public function hydrate(TreenodeDTOFactoryInterface $dto, TreeInterface $tree): void;
+    public function hydrate(TreenodeDTOFactoryAbstractInterface $dto, TreeInterface $tree): void;
     /**
      * getNodeId
      * @return non-negative-int

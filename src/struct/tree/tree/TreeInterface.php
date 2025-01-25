@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDTOFactoryInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDTOFactoryAbstractInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDTOSorterInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
@@ -72,13 +72,13 @@ interface TreeInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeDTOFactoryInterface<PayloadType> $dto
+     * @param TreenodeDTOFactoryAbstractInterface<PayloadType> $dto
      */
-    public function addNode(TreenodeDTOFactoryInterface $dto): void;
+    public function addNode(TreenodeDTOFactoryAbstractInterface $dto): void;
 
     /**
      * hydrate
-     * @param array<TreenodeDTOFactoryInterface<PayloadType>> $dtos
+     * @param array<TreenodeDTOFactoryAbstractInterface<PayloadType>> $dtos
      */
     public function hydrate(array $dtos): void;
 
@@ -111,10 +111,10 @@ interface TreeInterface
     /**
      * rootTest
      * @phpcs ignore-next-line
-     * @param TreenodeInterface<PayloadType>|TreenodeDTOFactoryInterface<PayloadType> $nodeItem
+     * @param TreenodeInterface<PayloadType>|TreenodeDTOFactoryAbstractInterface<PayloadType> $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeInterface|TreenodeDTOFactoryInterface $nodeItem): bool;
+    public function rootTest(TreenodeInterface|TreenodeDTOFactoryAbstractInterface $nodeItem): bool;
 
     /**
      * @function isEmpty
