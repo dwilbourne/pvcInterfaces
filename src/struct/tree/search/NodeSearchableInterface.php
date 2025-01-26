@@ -21,8 +21,8 @@ interface NodeSearchableInterface
     public function getNodeId(): int;
 
     /**
-     * getChildren
+     * getChildrenArray
      * @return array<NodeType>
      */
-    public function getChildrenAsArray(): array;
+    public function getChildrenArray(): array;
 }
