@@ -27,13 +27,13 @@ interface DtoFactoryAbstractInterface
      * @param array<mixed> $values
      * @return DtoInterface<PayloadType>
      */
-    public function makeDtoFromArray(array $values): mixed;
+    public function makeDtoFromArray(array $values): DtoInterface;
 
     /**
      * @param EntityType $entity
      * @return DtoInterface<PayloadType>
      */
-    public function makeDtoFromEntity(mixed $entity): mixed;
+    public function makeDtoFromEntity(mixed $entity): DtoInterface;
 
     /**
      * @param mixed $entity
