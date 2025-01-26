@@ -10,8 +10,8 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDTOFactoryAbstractInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDTOSorterInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoFactoryAbstractInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoSorterInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -59,26 +59,26 @@ interface TreeInterface
     public function setTreenodeFactory(TreenodeFactoryInterface $treenodeFactory): void;
 
     /**
-     * @param TreenodeDTOSorterInterface<PayloadType> $sorter
+     * @param TreenodeDtoSorterInterface<PayloadType> $sorter
      * @return void
      */
-    public function setDtoSorder(TreenodeDTOSorterInterface $sorter): void;
+    public function setDtoSorder(TreenodeDtoSorterInterface $sorter): void;
 
     /**
-     * @return TreenodeDTOSorterInterface<PayloadType>
+     * @return TreenodeDtoSorterInterface<PayloadType>
      */
-    public function getDtoSorder(): TreenodeDTOSorterInterface;
+    public function getDtoSorder(): TreenodeDtoSorterInterface;
 
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeDTOFactoryAbstractInterface<PayloadType> $dto
+     * @param TreenodeDtoFactoryAbstractInterface<PayloadType> $dto
      */
-    public function addNode(TreenodeDTOFactoryAbstractInterface $dto): void;
+    public function addNode(TreenodeDtoFactoryAbstractInterface $dto): void;
 
     /**
      * hydrate
-     * @param array<TreenodeDTOFactoryAbstractInterface<PayloadType>> $dtos
+     * @param array<TreenodeDtoFactoryAbstractInterface<PayloadType>> $dtos
      */
     public function hydrate(array $dtos): void;
 
@@ -111,10 +111,10 @@ interface TreeInterface
     /**
      * rootTest
      * @phpcs ignore-next-line
-     * @param TreenodeInterface<PayloadType>|TreenodeDTOFactoryAbstractInterface<PayloadType> $nodeItem
+     * @param TreenodeInterface<PayloadType>|TreenodeDtoFactoryAbstractInterface<PayloadType> $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeInterface|TreenodeDTOFactoryAbstractInterface $nodeItem): bool;
+    public function rootTest(TreenodeInterface|TreenodeDtoFactoryAbstractInterface $nodeItem): bool;
 
     /**
      * @function isEmpty

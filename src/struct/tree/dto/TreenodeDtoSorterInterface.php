@@ -7,7 +7,7 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 /**
  * @template PayloadType of HasPayloadInterface
  */
-interface TreenodeDTOSorterInterface
+interface TreenodeDtoSorterInterface
 {
     /**
      * @param array<TreenodeDtoInterface<PayloadType>> $dtos

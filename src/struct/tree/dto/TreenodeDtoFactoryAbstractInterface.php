@@ -13,10 +13,10 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
- * Class TreenodeDTOFactoryAbstractInterface
+ * Class TreenodeDtoFactoryAbstractInterface
  * @template PayloadType of HasPayloadInterface
  * @extends DtoFactoryAbstractInterface<PayloadType, TreenodeInterface>
  */
-interface TreenodeDTOFactoryAbstractInterface extends DtoFactoryAbstractInterface
+interface TreenodeDtoFactoryAbstractInterface extends DtoFactoryAbstractInterface
 {
 }
