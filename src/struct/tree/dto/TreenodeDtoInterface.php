@@ -11,5 +11,4 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
  */
 interface TreenodeDtoInterface extends DtoInterface
 {
-
 }
