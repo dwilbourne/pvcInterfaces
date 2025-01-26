@@ -57,9 +57,8 @@ interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
     /**
      * hydrate
      * @param TreenodeDtoInterface<PayloadType> $dto
-     * @param TreeInterface<PayloadType> $tree
      */
-    public function hydrate(TreenodeDtoInterface $dto, TreeInterface $tree): void;
+    public function hydrate(TreenodeDtoInterface $dto): void;
 
     /**
      * getNodeId
