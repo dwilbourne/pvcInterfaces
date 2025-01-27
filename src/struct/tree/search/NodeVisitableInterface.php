@@ -34,4 +34,16 @@ interface NodeVisitableInterface extends NodeSearchableInterface
      * @param VisitStatus $status
      */
     public function setVisitStatus(VisitStatus $status): void;
+
+    /**
+     * getParent
+     * @return NodeSearchableInterface|null
+     */
+    public function getParent(): mixed;
+
+    /**
+     * getParentId
+     * @return int|null
+     */
+    public function getParentId(): ?int;
 }
