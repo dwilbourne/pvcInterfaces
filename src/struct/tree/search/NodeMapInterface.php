@@ -10,6 +10,12 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class NodeMapInterface
+ *
+ * This is clumsy, but NodeSearchableInterface has no notion of a parentid, which is done in order to keep search as
+ * generic as possible.  For example, if you are searching a conventional file system, the parent directory is not
+ * typed as an integer - it's a directory.  So this map is used as part of allocating nodeIds / parentIds.
+ *
+ * @phpstan-type NodeMapRow array{parentId:non-negative-int|null, node:NodeSearchableInterface}
  */
 interface NodeMapInterface
 {
@@ -55,7 +61,7 @@ interface NodeMapInterface
 
     /**
      * getNodeMapAsArray
-     * @return array<NodeSearchableInterface>
+     * @return array<non-negative-int, NodeMapRow>
      */
     public function getNodeMapAsArray(): array;
 }
