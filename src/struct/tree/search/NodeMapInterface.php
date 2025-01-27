@@ -11,11 +11,17 @@ namespace pvc\interfaces\struct\tree\search;
 /**
  * Class NodeMapInterface
  *
- * This is clumsy, but NodeSearchableInterface has no notion of a parentid, which is done in order to keep search as
- * generic as possible.  For example, if you are searching a conventional file system, the parent directory is not
- * typed as an integer - it's a directory.  So this map is used as part of allocating nodeIds / parentIds.
+ * NodeMapInterface and NodeVisitableInterface are used in depth-first searches.
  *
- * @phpstan-type NodeMapRow array{parentId:non-negative-int|null, node:NodeSearchableInterface}
+ * The nature of a depth first search is such that you need to
+ * be able to traverse from a child node to a parent node after you have 'hit bottom'.
+ * NodeVisitableInterface has no notion of a parent or a parentId.  This is true in order to keep search as
+ * generic as possible.  For example, if you are searching a conventional file system, the parent directory is not
+ * typed as an integer - it's a directory.  So this map is used as part of allocating nodeIds / parentIds to
+ * whatever is being searched so that is possible to move up and down the tree with integer pointers.  In turn,
+ * this facilitates inserting the nodes into a pvc tree structure for further manipulation.
+ *
+ * @phpstan-type NodeMapRow array{parentId:non-negative-int|null, node:NodeVisitableInterface}
  */
 interface NodeMapInterface
 {
@@ -36,7 +42,7 @@ interface NodeMapInterface
      * @param non-negative-int|null $parentId
      * @param NodeSearchableInterface $node
      */
-    public function setNode(int $nodeId, ?int $parentId, NodeSearchableInterface $node): void;
+    public function setNode(int $nodeId, ?int $parentId, NodeVisitableInterface $node): void;
 
     /**
      * getParentId
@@ -48,16 +54,16 @@ interface NodeMapInterface
     /**
      * getParent
      * @param int $nodeId
-     * @return NodeSearchableInterface|null
+     * @return NodeVisitableInterface|null
      */
-    public function getParent(int $nodeId): ?NodeSearchableInterface;
+    public function getParent(int $nodeId): ?NodeVisitableInterface;
 
     /**
      * getNode
      * @param ?int $nodeId
-     * @return NodeSearchableInterface|null
+     * @return NodeVisitableInterface|null
      */
-    public function getNode(?int $nodeId): ?NodeSearchableInterface;
+    public function getNode(?int $nodeId): ?NodeVisitableInterface;
 
     /**
      * getNodeMapAsArray

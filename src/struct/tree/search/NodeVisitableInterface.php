@@ -10,6 +10,11 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class NodeVisitableInterface
+ *
+ * NodeVisitableInterface is required in order to support depth-first searches.  Nodes need to implement
+ * this interface that the search can know whether the node has never been visited, has been visited at least once,
+ * or whether it has been 'fully visited' meaning that you have arrived at it and all of its children have also
+ * been fully visited.  See the VisitStatus enum.
  */
 interface NodeVisitableInterface extends NodeSearchableInterface
 {
