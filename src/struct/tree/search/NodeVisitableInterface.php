@@ -15,7 +15,6 @@ namespace pvc\interfaces\struct\tree\search;
  * this interface that the search can know whether the node has never been visited, has been visited at least once,
  * or whether it has been 'fully visited' meaning that you have arrived at it and all of its children have also
  * been fully visited.  See the VisitStatus enum.
- * @extends NodeSearchableInterface<NodeVisitableInterface>
  */
 interface NodeVisitableInterface extends NodeSearchableInterface
 {

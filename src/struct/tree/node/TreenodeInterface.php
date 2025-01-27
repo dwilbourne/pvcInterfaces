@@ -39,7 +39,6 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  *
  * @template PayloadType of HasPayloadInterface
  * @extends HasPayloadInterface<PayloadType>
- * @extends NodeSearchableInterface<TreenodeInterface>
  */
 interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
 {
