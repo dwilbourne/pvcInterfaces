@@ -14,9 +14,8 @@ use Iterator;
  * Class SearchInterface
  * @template NodeType of NodeSearchableInterface
  * @extends Iterator<NodeType>
- * @extends NodeSearchableInterface<NodeType>
  */
-interface SearchInterface extends Iterator, NodeSearchableInterface
+interface SearchInterface extends Iterator
 {
     /**
      * setStartNode
