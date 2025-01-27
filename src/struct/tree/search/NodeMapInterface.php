@@ -10,7 +10,6 @@ namespace pvc\interfaces\struct\tree\search;
 
 /**
  * Class NodeMapInterface
- * @template NodeType of NodeSearchableInterface
  */
 interface NodeMapInterface
 {
@@ -29,7 +28,7 @@ interface NodeMapInterface
      * setNode
      * @param non-negative-int $nodeId
      * @param non-negative-int|null $parentId
-     * @param NodeType $node
+     * @param NodeSearchableInterface $node
      */
     public function setNode(int $nodeId, ?int $parentId, NodeSearchableInterface $node): void;
 
@@ -43,20 +42,20 @@ interface NodeMapInterface
     /**
      * getParent
      * @param int $nodeId
-     * @return NodeType|null
+     * @return NodeSearchableInterface|null
      */
     public function getParent(int $nodeId): ?NodeSearchableInterface;
 
     /**
      * getNode
      * @param int $nodeId
-     * @return NodeType|null
+     * @return NodeSearchableInterface|null
      */
     public function getNode(int $nodeId): ?NodeSearchableInterface;
 
     /**
      * getNodeMapAsArray
-     * @return array<NodeType>
+     * @return array<NodeSearchableInterface>
      */
     public function getNodeMapAsArray(): array;
 }
