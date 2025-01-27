@@ -40,7 +40,7 @@ interface NodeMapInterface
      * setNode
      * @param non-negative-int $nodeId
      * @param non-negative-int|null $parentId
-     * @param NodeSearchableInterface $node
+     * @param NodeVisitableInterface $node
      */
     public function setNode(int $nodeId, ?int $parentId, NodeVisitableInterface $node): void;
 
