@@ -48,10 +48,10 @@ interface NodeMapInterface
 
     /**
      * getNode
-     * @param int $nodeId
+     * @param ?int $nodeId
      * @return NodeSearchableInterface|null
      */
-    public function getNode(int $nodeId): ?NodeSearchableInterface;
+    public function getNode(?int $nodeId): ?NodeSearchableInterface;
 
     /**
      * getNodeMapAsArray
