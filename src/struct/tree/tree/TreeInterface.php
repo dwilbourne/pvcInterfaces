@@ -11,6 +11,7 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoFactoryAbstractInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoSorterInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
@@ -110,11 +111,10 @@ interface TreeInterface
 
     /**
      * rootTest
-     * @phpcs ignore-next-line
-     * @param TreenodeInterface<PayloadType>|TreenodeDtoFactoryAbstractInterface<PayloadType> $nodeItem
+     * @param TreenodeInterface<PayloadType>|TreenodeDtoInterface<PayloadType> $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeInterface|TreenodeDtoFactoryAbstractInterface $nodeItem): bool;
+    public function rootTest(TreenodeInterface|TreenodeDtoInterface $nodeItem): bool;
 
     /**
      * @function isEmpty
