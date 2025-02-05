@@ -10,10 +10,8 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDtoFactoryAbstractInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoSorterInterface;
-use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
@@ -47,19 +45,6 @@ interface TreeInterface
     public function getTreeId(): int;
 
     /**
-     * getTreenodeFactory
-     * @return TreenodeFactoryInterface<PayloadType>
-     */
-    public function getTreenodeFactory(): TreenodeFactoryInterface;
-
-    /**
-     * setTreenodeFactory
-     * @phpcs:ignore
-     * @param TreenodeFactoryInterface<PayloadType> $treenodeFactory
-     */
-    public function setTreenodeFactory(TreenodeFactoryInterface $treenodeFactory): void;
-
-    /**
      * @param TreenodeDtoSorterInterface<PayloadType> $sorter
      * @return void
      */
@@ -71,15 +56,15 @@ interface TreeInterface
     public function getDtoSorder(): TreenodeDtoSorterInterface;
 
     /**
-     * addNode puts a node into the tree's list of nodes.
+     * addNode puts a dto into the tree's list of nodes.
      *
-     * @param TreenodeDtoFactoryAbstractInterface<PayloadType> $dto
+     * @param TreenodeDtoInterface<PayloadType> $dto
      */
-    public function addNode(TreenodeDtoFactoryAbstractInterface $dto): void;
+    public function addNode(TreenodeDtoInterface $dto): void;
 
     /**
      * hydrate
-     * @param array<TreenodeDtoFactoryAbstractInterface<PayloadType>> $dtos
+     * @param array<TreenodeDtoInterface<PayloadType>> $dtos
      */
     public function hydrate(array $dtos): void;
 
