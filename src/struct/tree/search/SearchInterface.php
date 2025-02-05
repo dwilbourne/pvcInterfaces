@@ -12,20 +12,21 @@ use Iterator;
 
 /**
  * Class SearchInterface
- * @template NodeType
- * @extends Iterator<NodeType>
+ * There is nothing about the interface that requires uniformity of type between nodes.  The implementation
+ * for a kind of search may require that all nodes share a common interface, but the search interface itself does not.
+ * @extends Iterator<mixed>
  */
 interface SearchInterface extends Iterator
 {
     /**
      * setStartNode
-     * @param NodeType $startNode
+     * @param mixed $startNode
      */
     public function setStartNode(mixed $startNode): void;
 
     /**
      * getStartNode
-     * @return NodeType
+     * @return mixed
      */
     public function getStartNode(): mixed;
 
@@ -44,13 +45,13 @@ interface SearchInterface extends Iterator
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<non-negative-int, NodeType>
+     * @return array<non-negative-int, mixed>
      */
     public function getNodes(): array;
 
     /**
      * current
-     * @return NodeType|null
+     * @return mixed|null
      */
     public function current(): mixed;
 }
