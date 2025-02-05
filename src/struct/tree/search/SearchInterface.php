@@ -12,19 +12,20 @@ use Iterator;
 
 /**
  * Class SearchInterface
- * @extends Iterator<NodeSearchableInterface>
+ * @template NodeType
+ * @extends Iterator<NodeType>
  */
 interface SearchInterface extends Iterator
 {
     /**
      * setStartNode
-     * @param NodeSearchableInterface $startNode
+     * @param NodeType $startNode
      */
     public function setStartNode(mixed $startNode): void;
 
     /**
      * getStartNode
-     * @return NodeSearchableInterface
+     * @return NodeType
      */
     public function getStartNode(): mixed;
 
@@ -43,13 +44,13 @@ interface SearchInterface extends Iterator
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<int, NodeSearchableInterface>
+     * @return array<non-negative-int, NodeType>
      */
     public function getNodes(): array;
 
     /**
      * current
-     * @return NodeSearchableInterface|null
+     * @return NodeType|null
      */
     public function current(): mixed;
 }
