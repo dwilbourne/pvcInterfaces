@@ -12,6 +12,7 @@ namespace pvc\interfaces\struct\tree\tree;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoSorterInterface;
+use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
@@ -28,21 +29,19 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 interface TreeInterface
 {
     /**
-     * @function setTreeId sets the id of the tree.
-     *
-     * There is nothing that prevents you from giving two trees the
-     * same id, although of course that is not advisable.  The vision is that trees are kept in a data store which is
-     * responsible for allocating unique ids to the trees (e.g. a relational database).
-     *
-     * @param non-negative-int $treeId
-     */
-    public function setTreeId(int $treeId): void;
-
-    /**
      * @function getTreeId
      * @return non-negative-int
      */
     public function getTreeId(): int;
+
+    /**
+     * @return TreenodeFactoryInterface<PayloadType>
+     * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
+     * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
+     * make a collection on the fly and put the root node into it.  TreenodeFactory has a CollectionFactory, so
+     * we need public access to TreenodeFactory in order to implement the getSiblings method in TreenodeInterface
+     */
+    public function getTreenodeFactory(): TreenodeFactoryInterface;
 
     /**
      * @param TreenodeDtoSorterInterface<PayloadType> $sorter
