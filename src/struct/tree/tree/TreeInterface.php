@@ -44,17 +44,6 @@ interface TreeInterface
     public function getTreenodeFactory(): TreenodeFactoryInterface;
 
     /**
-     * @param TreenodeDtoSorterInterface<PayloadType> $sorter
-     * @return void
-     */
-    public function setDtoSorder(TreenodeDtoSorterInterface $sorter): void;
-
-    /**
-     * @return TreenodeDtoSorterInterface<PayloadType>
-     */
-    public function getDtoSorder(): TreenodeDtoSorterInterface;
-
-    /**
      * addNode puts a dto into the tree's list of nodes.
      *
      * @param TreenodeDtoInterface<PayloadType> $dto
