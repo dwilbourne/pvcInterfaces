@@ -24,16 +24,21 @@ interface DtoFactoryInterface
     ): void;
 
     /**
+     * @return DtoInterface<PayloadType>
+     */
+    public function makeDto(): DtoInterface;
+
+    /**
      * @param array<mixed> $values
      * @return DtoInterface<PayloadType>
      */
-    public function makeDtoFromArray(array $values): DtoInterface;
+    public function hydrateDtoFromArray(array $values): DtoInterface;
 
     /**
      * @param EntityType $entity
      * @return DtoInterface<PayloadType>
      */
-    public function makeDtoFromEntity(mixed $entity): DtoInterface;
+    public function hydrateDtoFromEntity(mixed $entity): DtoInterface;
 
     /**
      * @param mixed $entity
