@@ -7,7 +7,6 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
  * @template PayloadType of HasPayloadInterface
- * @template EntityType
  */
 interface DtoFactoryAbstractInterface
 {
@@ -24,16 +23,10 @@ interface DtoFactoryAbstractInterface
     ): void;
 
     /**
-     * @param array<mixed> $values
+     * @param mixed $source
      * @return DtoInterface<PayloadType>
      */
-    public function hydrateDtoFromArray(array $values): DtoInterface;
-
-    /**
-     * @param EntityType $entity
-     * @return DtoInterface<PayloadType>
-     */
-    public function hydrateDtoFromEntity(mixed $entity): DtoInterface;
+    public function makeDto(mixed $source): DtoInterface;
 
     /**
      * @param mixed $entity
