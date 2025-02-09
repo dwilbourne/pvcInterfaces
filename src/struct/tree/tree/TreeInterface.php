@@ -9,9 +9,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
+use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDtoSorterInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -46,13 +45,13 @@ interface TreeInterface
     /**
      * addNode puts a dto into the tree's list of nodes.
      *
-     * @param TreenodeDtoInterface<PayloadType> $dto
+     * @param DtoInterface $dto
      */
-    public function addNode(TreenodeDtoInterface $dto): void;
+    public function addNode(DtoInterface $dto): void;
 
     /**
      * hydrate
-     * @param array<TreenodeDtoInterface<PayloadType>> $dtos
+     * @param array<DtoInterface> $dtos
      */
     public function hydrate(array $dtos): void;
 
@@ -84,10 +83,10 @@ interface TreeInterface
 
     /**
      * rootTest
-     * @param TreenodeInterface<PayloadType>|TreenodeDtoInterface<PayloadType> $nodeItem
+     * @param TreenodeInterface<PayloadType>|DtoInterface $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeInterface|TreenodeDtoInterface $nodeItem): bool;
+    public function rootTest(TreenodeInterface|DtoInterface $nodeItem): bool;
 
     /**
      * @function isEmpty
