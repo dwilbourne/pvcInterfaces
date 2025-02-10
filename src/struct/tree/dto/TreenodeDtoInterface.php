@@ -8,6 +8,7 @@ use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
  * @template PayloadType of HasPayloadInterface
+ * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed, 'index': ?non-negative-int}
  */
 interface TreenodeDtoInterface
 {
