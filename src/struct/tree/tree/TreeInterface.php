@@ -11,6 +11,7 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -83,10 +84,10 @@ interface TreeInterface
 
     /**
      * rootTest
-     * @param TreenodeInterface<PayloadType>|DtoInterface $nodeItem
+     * @param TreenodeInterface<PayloadType>|TreenodeDtoInterface<PayloadType> $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeInterface|DtoInterface $nodeItem): bool;
+    public function rootTest(TreenodeInterface|TreenodeDtoInterface $nodeItem): bool;
 
     /**
      * @function isEmpty
