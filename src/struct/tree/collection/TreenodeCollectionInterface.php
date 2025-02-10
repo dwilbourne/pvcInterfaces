@@ -37,15 +37,15 @@ interface TreenodeCollectionInterface extends Iterator
     public function getKey(TreenodeInterface $node): int;
 
     /**
-     * @param TreenodeInterface<PayloadType> $node
+     * @param non-negative-int $key
      * @return non-negative-int
      */
-    public function getIndex(TreenodeInterface $node): int;
+    public function getIndex(int $key): int;
 
     /**
-     * @param TreenodeInterface<PayloadType> $node
+     * @param non-negative-int $key
      * @param non-negative-int $index
      * @return void
      */
-    public function setIndex(TreenodeInterface $node, int $index): void;
+    public function setIndex(int $key, int $index): void;
 }
