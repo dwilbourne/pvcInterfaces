@@ -18,8 +18,13 @@ interface TreenodeCollectionInterface
     public function isEmpty(): bool;
 
     /**
-     * @param TreenodeInterface $treenode
+     * @param TreenodeInterface<PayloadType> $treenode
      * @return void
      */
     public function push(TreenodeInterface $treenode): void;
+
+    /**
+     * @return array<TreenodeInterface<PayloadType>>
+     */
+    public function getElements(): array;
 }
