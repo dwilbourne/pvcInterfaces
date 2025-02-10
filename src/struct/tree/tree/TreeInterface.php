@@ -9,7 +9,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
@@ -46,13 +45,13 @@ interface TreeInterface
     /**
      * addNode puts a dto into the tree's list of nodes.
      *
-     * @param DtoInterface $dto
+     * @param TreenodeDtoInterface<PayloadType> $dto
      */
-    public function addNode(DtoInterface $dto): void;
+    public function addNode(TreenodeDtoInterface $dto): void;
 
     /**
      * hydrate
-     * @param array<DtoInterface> $dtos
+     * @param array<TreenodeDtoInterface<PayloadType>> $dtos
      */
     public function hydrate(array $dtos): void;
 
