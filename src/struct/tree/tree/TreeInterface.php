@@ -24,6 +24,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.
  *
  * @template PayloadType of HasPayloadInterface
+ * @phpstan-import-type TreenodeDtoShape from TreenodeDtoInterface
  */
 interface TreeInterface
 {
@@ -45,13 +46,13 @@ interface TreeInterface
     /**
      * addNode puts a dto into the tree's list of nodes.
      *
-     * @param TreenodeDtoInterface<PayloadType> $dto
+     * @param TreenodeDtoShape&TreenodeDtoInterface<PayloadType> $dto
      */
     public function addNode(TreenodeDtoInterface $dto): void;
 
     /**
      * hydrate
-     * @param array<TreenodeDtoInterface<PayloadType>> $dtos
+     * @param array<TreenodeDtoShape&TreenodeDtoInterface<PayloadType>> $dtos
      */
     public function hydrate(array $dtos): void;
 
