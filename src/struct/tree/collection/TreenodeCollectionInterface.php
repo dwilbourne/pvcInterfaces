@@ -29,4 +29,20 @@ interface TreenodeCollectionInterface extends Iterator
      * @return array<TreenodeInterface<PayloadType>>
      */
     public function getElements(): array;
+
+    /**
+     * @return non-negative-int
+     */
+    public function getKey(): int;
+
+    /**
+     * @return non-negative-int
+     */
+    public function getIndex(): int;
+
+    /**
+     * @param non-negative-int $index
+     * @return void
+     */
+    public function setIndex(int $index): void;
 }
