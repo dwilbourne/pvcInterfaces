@@ -11,6 +11,7 @@ namespace pvc\interfaces\struct\tree\node;
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\collection\TreenodeCollectionInterface;
 use pvc\interfaces\struct\tree\search\NodeSearchableInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
@@ -116,15 +117,15 @@ interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
 
     /**
      * @function getChildren
-     * @return CollectionInterface<TreenodeInterface<PayloadType>>
+     * @return TreenodeCollectionInterface<TreenodeInterface<PayloadType>>
      */
-    public function getChildren(): CollectionInterface;
+    public function getChildren(): TreenodeCollectionInterface;
 
     /**
      * @function getSiblings
-     * @return CollectionInterface<TreenodeInterface<PayloadType>>
+     * @return TreenodeCollectionInterface<TreenodeInterface<PayloadType>>
      */
-    public function getSiblings(): CollectionInterface;
+    public function getSiblings(): TreenodeCollectionInterface;
 
     /**
      * @function isDescendantOf
