@@ -117,13 +117,13 @@ interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
 
     /**
      * @function getChildren
-     * @return TreenodeCollectionInterface<TreenodeInterface<PayloadType>>
+     * @return TreenodeCollectionInterface<PayloadType>
      */
     public function getChildren(): TreenodeCollectionInterface;
 
     /**
      * @function getSiblings
-     * @return TreenodeCollectionInterface<TreenodeInterface<PayloadType>>
+     * @return TreenodeCollectionInterface<PayloadType>
      */
     public function getSiblings(): TreenodeCollectionInterface;
 
