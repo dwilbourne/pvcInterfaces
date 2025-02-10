@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\dto;
 
-use pvc\interfaces\storage\dto\DtoInterface;
+use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
