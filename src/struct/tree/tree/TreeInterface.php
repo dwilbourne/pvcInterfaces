@@ -97,8 +97,9 @@ interface TreeInterface
 
     /**
      * initialize
+     * @param non-negative-int $treeId
      */
-    public function initialize(): void;
+    public function initialize(int $treeId): void;
 
     /**
      * @function nodeCount
