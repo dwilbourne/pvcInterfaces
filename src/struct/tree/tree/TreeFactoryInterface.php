@@ -21,12 +21,13 @@ interface TreeFactoryInterface
     /**
      * makeTree
      * @param TreenodeFactoryInterface<PayloadType> $treenodeFactory
-     * @param TreenodeDtoSorterInterface $sorter
+     * @param TreenodeDtoSorterInterface<PayloadType> $sorter
      * @param int $treeId
      * @return TreeInterface<PayloadType>
      */
     public function makeTree(
         TreenodeFactoryInterface $treenodeFactory,
         TreenodeDtoSorterInterface $sorter,
-        int $treeId): TreeInterface;
+        int $treeId
+    ): TreeInterface;
 }
