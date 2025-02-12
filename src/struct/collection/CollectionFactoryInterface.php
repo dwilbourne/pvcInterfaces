@@ -8,17 +8,15 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\collection;
 
-use pvc\interfaces\struct\payload\HasPayloadInterface;
-
 /**
  * Class CollectionFactoryInterface
- * @template PayloadType of HasPayloadInterface
+ * @template ElementType of CollectionInterface
  */
 interface CollectionFactoryInterface
 {
     /**
      * makeCollection
-     * @return CollectionInterface<PayloadType>
+     * @return CollectionInterface<ElementType>
      */
     public function makeCollection(): CollectionInterface;
 }
