@@ -26,7 +26,6 @@ interface TreenodeFactoryInterface
 
     /**
      * @param TreeInterface<PayloadType> $tree
-     * @param int $treeId
      * @return void
      *
      * TreenodeFactory and Tree have reciprocal pointers and therefore a circular dependency.  The initialize
