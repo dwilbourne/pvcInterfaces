@@ -25,7 +25,7 @@ interface TreeFactoryInterface
      * @param int $treeId
      * @return TreeInterface<PayloadType>
      */
-    public function makeTree(
+    public static function makeTree(
         TreenodeFactoryInterface $treenodeFactory,
         TreenodeDtoSorterInterface $sorter,
         int $treeId
