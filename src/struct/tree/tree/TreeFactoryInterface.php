@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 
 /**
  * Class TreeFactoryInterface
@@ -18,8 +19,9 @@ interface TreeFactoryInterface
 {
     /**
      * makeTree
+     * @param TreenodeFactoryInterface<PayloadType> $treenodeFactory
      * @param int $treeId
      * @return TreeInterface<PayloadType>
      */
-    public function makeTree(int $treeId): TreeInterface;
+    public function makeTree(TreenodeFactoryInterface $treenodeFactory, int $treeId): TreeInterface;
 }

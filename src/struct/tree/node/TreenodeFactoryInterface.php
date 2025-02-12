@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\collection\TreenodeCollectionFactoryInterface;
+use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Class TreenodeFactoryInterface
@@ -22,6 +23,17 @@ interface TreenodeFactoryInterface
      * @return TreenodeInterface<PayloadType>
      */
     public function makeNode(): TreenodeInterface;
+
+    /**
+     * @param TreeInterface<PayloadType> $tree
+     * @param int $treeId
+     * @return void
+     *
+     * TreenodeFactory and Tree have reciprocal pointers and therefore a circular dependency.  The initialize
+     * method is present so that the TreenodeFactory can be created and then the TreeFactory, in the process of
+     * creating the tree, also initializes the TreenodeFactory (e.g. sets the reciprocal pointer)
+     */
+    public function initialize(TreeInterface $tree, int $treeId): void;
 
     /**
      * @return TreenodeCollectionFactoryInterface<PayloadType>
