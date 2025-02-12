@@ -33,7 +33,7 @@ interface TreenodeFactoryInterface
      * method is present so that the TreenodeFactory can be created and then the TreeFactory, in the process of
      * creating the tree, also initializes the TreenodeFactory (e.g. sets the reciprocal pointer)
      */
-    public function initialize(TreeInterface $tree, int $treeId): void;
+    public function initialize(TreeInterface $tree): void;
 
     /**
      * @return TreenodeCollectionFactoryInterface<PayloadType>
