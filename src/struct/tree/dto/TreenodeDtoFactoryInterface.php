@@ -5,11 +5,9 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\dto;
 
 use pvc\interfaces\struct\dto\DtoFactoryInterface;
-use pvc\interfaces\struct\payload\HasPayloadInterface;
 
 /**
- * @template PayloadType of HasPayloadInterface
- * @extends DtoFactoryInterface<PayloadType>
+ * @template PayloadType
  */
 interface TreenodeDtoFactoryInterface extends DtoFactoryInterface
 {

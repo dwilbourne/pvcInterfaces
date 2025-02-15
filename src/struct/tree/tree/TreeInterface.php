@@ -9,7 +9,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
@@ -23,7 +22,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * A tree can be empty (e.g. it has no nodes).  If it does have nodes, then there must be a single root node.  All
  * nodes, including the root node, can have zero or more child nodes.
  *
- * @template PayloadType of HasPayloadInterface
+ * @template PayloadType
  * @phpstan-import-type TreenodeDtoShape from TreenodeDtoInterface
  */
 interface TreeInterface

@@ -8,13 +8,12 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoSorterInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 
 /**
  * Class TreeFactoryInterface
- * @template PayloadType of HasPayloadInterface
+ * @template PayloadType
  */
 interface TreeFactoryInterface
 {

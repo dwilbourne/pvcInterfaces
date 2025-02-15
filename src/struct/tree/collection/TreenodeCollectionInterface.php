@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\collection;
 
 use Iterator;
-use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
- * @template PayloadType of HasPayloadInterface
+ * @template PayloadType
  * @extends Iterator<TreenodeInterface<PayloadType>>
  */
 interface TreenodeCollectionInterface extends Iterator

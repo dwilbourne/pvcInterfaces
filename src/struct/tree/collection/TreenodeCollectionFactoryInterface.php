@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\collection;
 
-use pvc\interfaces\struct\payload\HasPayloadInterface;
-
 /**
- * @template PayloadType of HasPayloadInterface
+ * @template PayloadType
  */
 interface TreenodeCollectionFactoryInterface
 {

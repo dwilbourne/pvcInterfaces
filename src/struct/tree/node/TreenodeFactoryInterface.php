@@ -8,13 +8,12 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
-use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\collection\TreenodeCollectionFactoryInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Class TreenodeFactoryInterface
- * @template PayloadType of HasPayloadInterface
+ * @template PayloadType
  */
 interface TreenodeFactoryInterface
 {
