@@ -34,6 +34,11 @@ interface TreenodeFactoryInterface
     public function initialize(TreeInterface $tree): void;
 
     /**
+     * @return bool
+     */
+    public function isInitialized(): bool;
+
+    /**
      * @return TreenodeCollectionFactoryInterface<PayloadType>
      * this is in here for an edge case where someone is trying to get the siblings of the root node of the tree.
      * Because root has no siblings (e.g. there is no parent and thus there is no collection of siblings) we need
