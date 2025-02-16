@@ -29,9 +29,9 @@ interface TreeInterface
 {
     /**
      * @function getTreeId
-     * @return non-negative-int|null
+     * @return non-negative-int
      */
-    public function getTreeId(): ?int;
+    public function getTreeId(): int;
 
     /**
      * @return TreenodeFactoryInterface<PayloadType>
