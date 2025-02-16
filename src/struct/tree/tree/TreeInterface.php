@@ -35,10 +35,11 @@ interface TreeInterface
 
     /**
      * @param non-negative-int $treeId
+     * @param array<TreenodeDtoShape&TreenodeDTOInterface<PayloadType>> $dtos
      * @return void
      * initializes the tree so it is ready to use
      */
-    public function initialize(int $treeId): void;
+    public function initialize(int $treeId, array $dtos): void;
 
     /**
      * @function getTreeId
