@@ -28,6 +28,19 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 interface TreeInterface
 {
     /**
+     * @return bool
+     * returns false if the tree is in an invalid state (e.g. has been constructed but not initialized)
+     */
+    public function isInitialized(): bool;
+
+    /**
+     * @param non-negative-int $treeId
+     * @return void
+     * initializes the tree so it is ready to use
+     */
+    public function initialize(int $treeId): void;
+
+    /**
      * @function getTreeId
      * @return non-negative-int
      */
@@ -93,12 +106,6 @@ interface TreeInterface
      * @return bool
      */
     public function isEmpty(): bool;
-
-    /**
-     * initialize
-     * @param non-negative-int $treeId
-     */
-    public function initialize(int $treeId): void;
 
     /**
      * @function nodeCount
