@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
+use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoSorterInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 
@@ -22,11 +23,13 @@ interface TreeFactoryInterface
      * @param TreenodeFactoryInterface<PayloadType> $treenodeFactory
      * @param TreenodeDtoSorterInterface<PayloadType> $sorter
      * @param int $treeId
+     * @param array<TreenodeDtoInterface<PayloadType>> $dtoArray
      * @return TreeInterface<PayloadType>
      */
     public static function makeTree(
         TreenodeFactoryInterface $treenodeFactory,
         TreenodeDtoSorterInterface $sorter,
-        int $treeId
+        int $treeId,
+        array $dtoArray,
     ): TreeInterface;
 }
