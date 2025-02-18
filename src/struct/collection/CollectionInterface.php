@@ -83,30 +83,24 @@ interface CollectionInterface extends Iterator, Countable
     /**
      * @function add adds an element into a list using a specified key.
      * @param non-negative-int $key
-     * @param ElementType $payload
+     * @param ElementType $element
      */
-    public function add(int $key, $payload): void;
+    public function add(int $key, $element): void;
 
     /**
      * @function update allows you to change the payload of a list element
      * list.
      *
-     * @param ElementType $payload
+     * @param ElementType $element
      * @param non-negative-int $key
      */
-    public function update(int $key, $payload): void;
+    public function update(int $key, $element): void;
 
     /**
      * @function delete deletes an element from the list.
      * @param non-negative-int $key
      */
     public function delete(int $key): void;
-
-    /**
-     * @function push adds a payload to the end of the list.
-     * @param ElementType $payload
-     */
-    public function push($payload): void;
 
     /**
      * getIndex gets the ordinal position of the element in the list corresponding to $key
