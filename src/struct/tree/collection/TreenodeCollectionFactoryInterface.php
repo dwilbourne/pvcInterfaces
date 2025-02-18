@@ -12,5 +12,5 @@ interface TreenodeCollectionFactoryInterface
     /**
      * @return TreenodeCollectionInterface<PayloadType>
      */
-    public function makeCollection(): TreenodeCollectionInterface;
+    public function makeTreenodeCollection(): TreenodeCollectionInterface;
 }
