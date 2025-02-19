@@ -22,7 +22,7 @@ interface TreenodeCollectionInterface extends Iterator
      * @param TreenodeInterface<PayloadType> $treeNode
      * @return void
      */
-    public function add(TreenodeInterface $treeNode): void;
+    public function add(int $key, TreenodeInterface $treeNode): void;
 
     /**
      * @return array<TreenodeInterface<PayloadType>>
