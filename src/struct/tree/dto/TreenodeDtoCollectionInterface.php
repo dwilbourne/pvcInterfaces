@@ -4,12 +4,18 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\dto;
 
-use pvc\interfaces\struct\collection\CollectionInterface;
+use Iterator;
 
 /**
  * @template PayloadType
- * @extends CollectionInterface<TreenodeDtoInterface<PayloadType>>
+ * @extends Iterator<TreenodeDtoInterface<PayloadType>>
  */
-interface TreenodeDtoCollectionInterface extends CollectionInterface
+interface TreenodeDtoCollectionInterface extends Iterator
 {
+    /**
+     * @param non-negative-int $key
+     * @param TreenodeDtoInterface<PayloadType> $treenodeDto
+     * @return void
+     */
+    public function add(int $key, TreenodeDtoInterface $treenodeDto): void;
 }

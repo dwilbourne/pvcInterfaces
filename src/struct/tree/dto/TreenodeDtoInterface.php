@@ -12,4 +12,8 @@ use pvc\interfaces\struct\dto\DtoInterface;
  */
 interface TreenodeDtoInterface extends DtoInterface
 {
+    /**
+     * @return non-negative-int
+     */
+    public function getIndex(): int;
 }
