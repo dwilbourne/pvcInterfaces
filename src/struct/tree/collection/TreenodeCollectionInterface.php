@@ -25,15 +25,15 @@ interface TreenodeCollectionInterface extends Iterator
 
     /**
      * @param TreenodeInterface<PayloadType> $node
-     * @return non-negative-int|false
+     * @return non-negative-int
      */
-    public function getKey(TreenodeInterface $node): int|false;
+    public function getKey(TreenodeInterface $node): int;
 
     /**
      * @param non-negative-int $key
-     * @return non-negative-int|false
+     * @return non-negative-int
      */
-    public function getIndex(int $key): int|false;
+    public function getIndex(int $key): int;
 
     /**
      * @param non-negative-int $key

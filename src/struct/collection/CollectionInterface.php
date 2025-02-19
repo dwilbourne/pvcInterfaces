@@ -67,9 +67,9 @@ interface CollectionInterface extends Iterator, Countable
      * You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
      * @param ElementType $element
-     * @return non-negative-int|null
+     * @return non-negative-int
      */
-    public function getKey(mixed $element, bool $strict = true): int|null;
+    public function getKey(mixed $element, bool $strict = true): int;
 
     /**
      * @function getKeys returns all the keys in the list which have elements equal to the argument of
