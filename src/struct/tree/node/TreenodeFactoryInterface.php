@@ -44,5 +44,5 @@ interface TreenodeFactoryInterface
      * Because root has no siblings (e.g. there is no parent and thus there is no collection of siblings) we need
      * to be abel to make an empty Collection to return when someone asks for the siblings of the root.
      */
-    public function getCollectionFactory(): TreenodeCollectionFactoryInterface;
+    public function getTreenodeCollectionFactory(): TreenodeCollectionFactoryInterface;
 }
