@@ -19,15 +19,9 @@ interface TreenodeDtoCollectionInterface extends Iterator
     public function initialize(): void;
 
     /**
-     * @param non-negative-int $key
-     * @param TreenodeDtoInterface<PayloadType> $treenodeDto
+     * @param non-negative-int $nodeId
+     * @param array<TreenodeDtoInterface<PayloadType>> $treenodeDtos
      * @return void
      */
-    public function add(int $key, TreenodeDtoInterface $treenodeDto): void;
-
-    /**
-     * @param array<TreenodeDtoInterface> $treenodeDtos
-     * @return void
-     */
-    public function import(array $treenodeDtos): void;
+    public function importChildrenOf(int $nodeId, array $treenodeDtos): void;
 }
