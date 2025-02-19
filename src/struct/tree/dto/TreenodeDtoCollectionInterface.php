@@ -24,4 +24,10 @@ interface TreenodeDtoCollectionInterface extends Iterator
      * @return void
      */
     public function add(int $key, TreenodeDtoInterface $treenodeDto): void;
+
+    /**
+     * @param array<TreenodeDtoInterface> $treenodeDtos
+     * @return void
+     */
+    public function import(array $treenodeDtos): void;
 }
