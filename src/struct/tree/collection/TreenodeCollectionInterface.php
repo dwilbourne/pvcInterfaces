@@ -19,6 +19,12 @@ interface TreenodeCollectionInterface extends Iterator
     public function isEmpty(): bool;
 
     /**
+     * @param TreenodeInterface<PayloadType> $treeNode
+     * @return void
+     */
+    public function add(TreenodeInterface $treeNode): void;
+
+    /**
      * @return array<TreenodeInterface<PayloadType>>
      */
     public function getElements(): array;
