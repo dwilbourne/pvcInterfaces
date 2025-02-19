@@ -13,6 +13,12 @@ use Iterator;
 interface TreenodeDtoCollectionInterface extends Iterator
 {
     /**
+     * @return void
+     * initializes the collection
+     */
+    public function initialize(): void;
+
+    /**
      * @param non-negative-int $key
      * @param TreenodeDtoInterface<PayloadType> $treenodeDto
      * @return void
