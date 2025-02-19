@@ -19,6 +19,7 @@ interface TreenodeCollectionInterface extends Iterator
     public function isEmpty(): bool;
 
     /**
+     * @param non-negative-int $key
      * @param TreenodeInterface<PayloadType> $treeNode
      * @return void
      */
