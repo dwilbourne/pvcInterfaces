@@ -35,6 +35,18 @@ interface CollectionInterface extends Iterator, Countable
     public function isEmpty(): bool;
 
     /**
+     * @param non-negative-int $key
+     * @return bool
+     */
+    public function validateExistingKey(int $key): bool;
+
+    /**
+     * @param non-negative-int $key
+     * @return bool
+     */
+    public function validateNewKey(int $key): bool;
+
+    /**
      * @function getElements returns an array of all the elements in the list, keys are preserved.
      * @return array<non-negative-int, ElementType>
      */
