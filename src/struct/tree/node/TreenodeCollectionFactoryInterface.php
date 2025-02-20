@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\collection;
-
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
+namespace pvc\interfaces\struct\tree\node;
 
 /**
  * @template PayloadType
@@ -12,7 +10,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 interface TreenodeCollectionFactoryInterface
 {
     /**
-     * @param array<TreenodeInterface<PayloadType>> $treenodes
+     * @param TreenodeInterface $treenodes
      * @return TreenodeCollectionInterface<PayloadType>
      */
     public function makeTreenodeCollection(array $treenodes): TreenodeCollectionInterface;

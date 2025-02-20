@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\tree\collection;
+namespace pvc\interfaces\struct\tree\node;
 
 use Iterator;
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
  * @template PayloadType
@@ -32,7 +31,7 @@ interface TreenodeCollectionInterface extends Iterator
     public function delete(int $key): void;
 
     /**
-     * @return array<TreenodeInterface<PayloadType>>
+     * @return TreenodeInterface
      */
     public function getElements(): array;
 

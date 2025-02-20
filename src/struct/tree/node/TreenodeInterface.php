@@ -10,7 +10,6 @@ namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\collection\TreenodeCollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\search\NodeSearchableInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
