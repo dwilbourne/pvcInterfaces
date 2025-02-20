@@ -41,12 +41,6 @@ interface CollectionInterface extends Iterator, Countable
     public function getElements(): array;
 
     /**
-     * @param array<ElementType> $array
-     * @return void
-     */
-    public function import(array $array): void;
-
-    /**
      * @function getElement gets an element via its key
      *
      * @param non-negative-int $key
