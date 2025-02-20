@@ -41,7 +41,9 @@ interface CollectionInterface extends Iterator, Countable
     public function getElements(): array;
 
     /**
-     * @function getElement gets an element via its key
+     * @function getElement gets an element via its key.  Because null and false and any other value you can think
+     * of are legitimate types of elements, the implementing code will throw an exception if the key does not
+     * exist.  There is no sensible return value that indicates the operation failed.
      *
      * @param non-negative-int $key
      * @return ElementType
@@ -50,14 +52,14 @@ interface CollectionInterface extends Iterator, Countable
 
     /**
      * @function getKey returns the key of the first element in the collection which is equal to the argument of the
-     * method call.
+     * method call.  Returns false if the element is not found in the collection.
      *
      * You can control whether you want to use strict or loose comparison via the $strict parameter.
      *
      * @param ElementType $element
-     * @return non-negative-int
+     * @return non-negative-int|false
      */
-    public function getKey(mixed $element, bool $strict = true): int;
+    public function getKey(mixed $element, bool $strict = true): int|false;
 
     /**
      * @function getKeys returns all the keys in the list which have elements equal to the argument of
@@ -82,8 +84,7 @@ interface CollectionInterface extends Iterator, Countable
     public function add(int $key, $element): void;
 
     /**
-     * @function update allows you to change the payload of a list element
-     * list.
+     * @function update allows you to change the payload of an element in the collection.
      *
      * @param ElementType $element
      * @param non-negative-int $key
@@ -91,7 +92,7 @@ interface CollectionInterface extends Iterator, Countable
     public function update(int $key, $element): void;
 
     /**
-     * @function delete deletes an element from the list.
+     * @function delete deletes an element from the collection.
      * @param non-negative-int $key
      */
     public function delete(int $key): void;
