@@ -26,6 +26,12 @@ interface TreenodeCollectionInterface extends Iterator
     public function add(int $key, TreenodeInterface $treeNode): void;
 
     /**
+     * @param non-negative-int $key
+     * @return void
+     */
+    public function delete(int $key): void;
+
+    /**
      * @return array<TreenodeInterface<PayloadType>>
      */
     public function getElements(): array;
