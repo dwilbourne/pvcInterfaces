@@ -12,10 +12,4 @@ use Iterator;
  */
 interface TreenodeDtoCollectionInterface extends Iterator
 {
-    /**
-     * @param non-negative-int $nodeId
-     * @param array<TreenodeDtoInterface<PayloadType>> $treenodeDtos
-     * @return void
-     */
-    public function importChildrenOf(int $nodeId, array $treenodeDtos): void;
 }
