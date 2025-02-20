@@ -29,12 +29,6 @@ use Iterator;
 interface CollectionInterface extends Iterator, Countable
 {
     /**
-     * @return void
-     * removes any elements from the collection and initializes internal pointers
-     */
-    public function initialize(): void;
-
-    /**
      * @function isEmpty
      * @return bool
      */
