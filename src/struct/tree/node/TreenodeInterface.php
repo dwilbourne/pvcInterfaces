@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
+use pvc\interfaces\struct\collection\CollectionElementInterface;
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
@@ -40,7 +41,7 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  * @template PayloadType
  * @extends HasPayloadInterface<PayloadType>
  */
-interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
+interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface, CollectionElementInterface
 {
     /**
      * isEmpty
