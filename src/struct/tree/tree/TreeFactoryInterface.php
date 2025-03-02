@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionFactoryInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
+use pvc\interfaces\struct\tree\node\TreenodeInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
@@ -20,7 +21,7 @@ interface TreeFactoryInterface
 {
     /**
      * makeTree
-     * @param CollectionFactoryInterface<PayloadType> $collectionFactory
+     * @param CollectionFactoryInterface<TreenodeInterface<PayloadType>> $collectionFactory
      * @param int $treeId
      * @param ?array<TreenodeDtoInterface<PayloadType>> $dtoArray
      * @param ?ValTesterInterface<PayloadType> $payloadTester,

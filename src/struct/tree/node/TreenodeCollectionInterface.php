@@ -36,7 +36,7 @@ interface TreenodeCollectionInterface extends Iterator
     public function delete(int $key): void;
 
     /**
-     * @return TreenodeInterface
+     * @return array<TreenodeInterface<PayloadType>>
      */
     public function getElements(): array;
 
