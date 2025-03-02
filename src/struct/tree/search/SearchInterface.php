@@ -31,18 +31,6 @@ interface SearchInterface extends Iterator
     public function getStartNode(): mixed;
 
     /**
-     * setNodeFilter
-     * @param callable $nodeFilter
-     */
-    public function setNodeFilter(callable $nodeFilter): void;
-
-    /**
-     * getNodeFilter
-     * @return callable
-     */
-    public function getNodeFilter(): callable;
-
-    /**
      * getNodes
      * gets all the nodes at once
      * @return array<non-negative-int, mixed>
