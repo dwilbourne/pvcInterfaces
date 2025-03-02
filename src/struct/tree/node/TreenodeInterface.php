@@ -13,6 +13,7 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\search\NodeSearchableInterface;
+use pvc\interfaces\struct\tree\search\NodeVisitableInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
@@ -41,7 +42,7 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  * @template PayloadType
  * @extends HasPayloadInterface<PayloadType>
  */
-interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface, CollectionElementInterface
+interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface, NodeVisitableInterface, CollectionElementInterface
 {
     /**
      * isEmpty
