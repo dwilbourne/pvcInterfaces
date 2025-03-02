@@ -21,15 +21,15 @@ interface TreeFactoryInterface
     /**
      * makeTree
      * @param CollectionFactoryInterface<PayloadType> $collectionFactory
-     * @param ValTesterInterface<PayloadType> $payloadTester,
      * @param int $treeId
-     * @param array<TreenodeDtoInterface<PayloadType>> $dtoArray
+     * @param ?array<TreenodeDtoInterface<PayloadType>> $dtoArray
+     * @param ?ValTesterInterface<PayloadType> $payloadTester,
      * @return TreeInterface<PayloadType>
      */
     public static function makeTree(
         CollectionFactoryInterface $collectionFactory,
-        ValTesterInterface $payloadTester,
         int                        $treeId,
-        array                      $dtoArray,
+        ?array                      $dtoArray = [],
+        ?ValTesterInterface $payloadTester = null,
     ): TreeInterface;
 }
