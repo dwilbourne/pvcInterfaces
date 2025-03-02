@@ -10,8 +10,8 @@ namespace pvc\interfaces\struct\tree\node;
 interface TreenodeCollectionFactoryInterface
 {
     /**
-     * @param ?array<TreenodeInterface<PayloadType>> $treenodes
+     * @param array<TreenodeInterface<PayloadType>> $treenodes
      * @return TreenodeCollectionInterface<PayloadType>
      */
-    public function makeTreenodeCollection(?array $treenodes = []): TreenodeCollectionInterface;
+    public function makeTreenodeCollection(array $treenodes = []): TreenodeCollectionInterface;
 }
