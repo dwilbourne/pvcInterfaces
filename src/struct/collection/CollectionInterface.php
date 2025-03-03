@@ -23,8 +23,11 @@ use Iterator;
  * unordered collection also has non-negative integer keys, but the keys mean nothing in terms of creating any sort
  * of ordination among the elements.
  *
+ * there are more specialized collections that are derived from this.  We need to add a template to make this base
+ * class aware of its derivatives (see https://phpstan.org/blog/generics-by-examples#couple-relevant-classes-together).
+ *
  * @template ElementType of CollectionElementInterface
- * @extends Iterator<int, ElementType>
+ * @extends Iterator<non-negative-int, ElementType>
  */
 interface CollectionInterface extends Iterator, Countable
 {
