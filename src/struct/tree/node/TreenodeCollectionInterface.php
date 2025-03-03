@@ -8,7 +8,7 @@ use Iterator;
 
 /**
  * @template PayloadType
- * @extends Iterator<TreenodeInterface<PayloadType>>
+ * @extends Iterator<PayloadType>
  */
 interface TreenodeCollectionInterface extends Iterator
 {

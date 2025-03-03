@@ -9,7 +9,7 @@ use Iterator;
 
 /**
  * @template PayloadType
- * @extends Iterator<TreenodeDtoInterface<PayloadType>>
+ * @extends Iterator<PayloadType>
  */
 interface TreenodeDtoCollectionInterface extends Iterator, Countable
 {
