@@ -58,9 +58,9 @@ interface CollectionInterface extends Iterator, Countable
      * exist.  There is no sensible return value that indicates the operation failed.
      *
      * @param non-negative-int $key
-     * @return ElementType
+     * @return ElementType|null
      */
-    public function getElement(int $key);
+    public function getElement(int $key): mixed;
 
     /**
      * @function getKey returns the key of the first element in the collection which is equal to the argument of the
