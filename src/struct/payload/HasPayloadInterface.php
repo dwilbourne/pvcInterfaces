@@ -13,7 +13,7 @@ use pvc\interfaces\validator\ValTesterInterface;
 /**
  * Class HasPayloadInterface
  *
- * All data structures in this namespapce implement HasPayloadInterface so that the methods for accessing the data
+ * All data structures in this namespace implement HasPayloadInterface so that the methods for accessing the data
  * within the structures remain consistent across all types.
  *
  * The data typing in the interface is set up so that payloads can be null in implementation if you want them to be
