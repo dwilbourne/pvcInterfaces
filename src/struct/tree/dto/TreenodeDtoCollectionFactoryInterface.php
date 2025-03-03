@@ -9,7 +9,7 @@ interface TreenodeDtoCollectionFactoryInterface
 {
     /**
      * @param array<TreenodeDtoInterface<PayloadType>> $dtoArray
-     * @return TreenodeDtoCollectionInterface<PayloadType>
+     * @return TreenodeDtoCollectionInterface<TreenodeDtoInterface<PayloadType>>
      */
     public function makeTreenodeDtoCollection(array $dtoArray) : TreenodeDtoCollectionInterface;
 }

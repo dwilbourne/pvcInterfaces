@@ -11,7 +11,7 @@ interface TreenodeCollectionFactoryInterface
 {
     /**
      * @param array<TreenodeInterface<PayloadType>> $treenodes
-     * @return TreenodeCollectionInterface<PayloadType>
+     * @return TreenodeCollectionInterface<TreenodeInterface<PayloadType>>
      */
     public function makeTreenodeCollection(array $treenodes = []): TreenodeCollectionInterface;
 }
