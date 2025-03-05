@@ -24,12 +24,6 @@ interface DtoFactoryAbstractInterface
     public function makeDto(array|object $source): DtoInterface;
 
     /**
-     * @param array<mixed>|object $source
-     * @return void
-     */
-    public function hydrate(array|object $source): void;
-
-    /**
      * @param object $entity
      * @return array<mixed>
      */
