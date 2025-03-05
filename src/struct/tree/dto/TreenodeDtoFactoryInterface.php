@@ -12,7 +12,8 @@ use pvc\interfaces\struct\dto\DtoFactoryInterface;
 interface TreenodeDtoFactoryInterface extends DtoFactoryInterface
 {
     /**
+     * @param array<mixed>|object $source
      * @return TreenodeDtoInterface<PayloadType>
      */
-    public function makeDto(): TreenodeDtoInterface;
+    public function makeDto(array|object $source): TreenodeDtoInterface;
 }
