@@ -65,6 +65,12 @@ interface NodeMapInterface
     public function getNode(?int $nodeId): ?NodeVisitableInterface;
 
     /**
+     * @param NodeVisitableInterface $node
+     * @return bool
+     */
+    public function hasNode(NodeVisitableInterface $node): bool;
+
+    /**
      * getNodeMapArray
      * @return array<non-negative-int, NodeMapRow>
      */
