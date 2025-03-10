@@ -68,7 +68,7 @@ interface NodeMapInterface
      * @param NodeVisitableInterface $node
      * @return bool
      */
-    public function hasNode(NodeVisitableInterface $node): bool;
+    public function hasNode(NodeVisitableInterface|null $node): bool;
 
     /**
      * getNodeMapArray
