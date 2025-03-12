@@ -26,9 +26,9 @@ namespace pvc\interfaces\struct\tree\search;
 interface NodeMapInterface
 {
     /**
-     * initialize
+     * initialize with the start node
      */
-    public function initialize(): void;
+    public function initialize(NodeVisitableInterface $node): void;
 
     /**
      * isEmpty
