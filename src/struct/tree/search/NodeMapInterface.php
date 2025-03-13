@@ -31,12 +31,6 @@ interface NodeMapInterface
     public function initialize(NodeVisitableInterface $node): void;
 
     /**
-     * isEmpty
-     * @return bool
-     */
-    public function isEmpty(): bool;
-
-    /**
      * setNode
      * @param NodeVisitableInterface $node
      * @param non-negative-int|null $parentId
