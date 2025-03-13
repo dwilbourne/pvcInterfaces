@@ -12,9 +12,9 @@ use pvc\interfaces\struct\collection\CollectionElementInterface;
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
-use pvc\interfaces\struct\tree\search\NodeSearchableInterface;
-use pvc\interfaces\struct\tree\search\NodeVisitableInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
+use pvc\interfaces\struct\treesearch\NodeSearchableInterface;
+use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
 /**
  * Interface TreenodeInterface defines the operations for a generic tree node.
