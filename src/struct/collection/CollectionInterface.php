@@ -17,14 +17,11 @@ use Iterator;
  * These interfaces (and their implementations) are written using phpstan generics.  If you use these data
  * structures, you should consider using phpstan as part of testing your code in order to ensure tpe safety.
  *
- * If you look carefully at the PHP documentation, you will see that there is an array function called array_is_list,
+ * In the PHP documentation, you will see that there is an array function called array_is_list,
  * where a list is defined as an array with non-negative integer keys that start at 0 and increase in increments of 1
  * until count(array) - 1.  Pvc considers that sort of structure to be an ordered collection.  In pvc land, an
  * unordered collection also has non-negative integer keys, but the keys mean nothing in terms of creating any sort
  * of ordination among the elements.
- *
- * there are more specialized collections that are derived from this.  We need to add a template to make this base
- * class aware of its derivatives (see https://phpstan.org/blog/generics-by-examples#couple-relevant-classes-together).
  *
  * @template ElementType of CollectionElementInterface
  * @extends Iterator<non-negative-int, ElementType>
