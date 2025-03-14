@@ -16,30 +16,35 @@ use Iterator;
  * for a kind of search may require that all nodes share a common interface, but the search interface itself does not.
  * @extends Iterator<mixed>
  */
+
+/**
+ * @template NodeType of NodeSearchableInterface
+ * @extends Iterator<non-negative-int, NodeType>
+ */
 interface SearchInterface extends Iterator
 {
     /**
      * setStartNode
-     * @param mixed $startNode
+     * @param NodeType $startNode
      */
     public function setStartNode(mixed $startNode): void;
 
     /**
      * getStartNode
-     * @return mixed
+     * @return NodeType
      */
     public function getStartNode(): mixed;
 
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<non-negative-int, mixed>
+     * @return array<non-negative-int, NodeType>
      */
     public function getNodes(): array;
 
     /**
      * current
-     * @return mixed|null
+     * @return NodeType|null
      */
     public function current(): mixed;
 }
