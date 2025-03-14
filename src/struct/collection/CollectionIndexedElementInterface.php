@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\collection;
 
-interface CollectionIndexedElementInterface
+interface CollectionIndexedElementInterface extends CollectionElementInterface
 {
     /**
      * @return non-negative-int
