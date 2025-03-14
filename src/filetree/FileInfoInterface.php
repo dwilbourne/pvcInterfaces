@@ -13,9 +13,4 @@ namespace pvc\interfaces\filetree;
  */
 interface FileInfoInterface
 {
-    /**
-     * getFilePath
-     * @return string|null
-     */
-    public function setFilePath(): ?string;
 }
