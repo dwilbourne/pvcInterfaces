@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\filetree;
+namespace pvc\interfaces\filetree;
 
 /**
  * Class FileInfoFactoryInterface
