@@ -10,7 +10,7 @@ namespace pvc\interfaces\struct\collection;
 
 /**
  * Class CollectionFactoryInterface
- * @template ElementType of CollectionElementInterface
+ * @template ElementType
  */
 interface CollectionFactoryInterface
 {

@@ -23,7 +23,7 @@ use Iterator;
  * unordered collection also has non-negative integer keys, but the keys mean nothing in terms of creating any sort
  * of ordination among the elements.
  *
- * @template ElementType of CollectionElementInterface
+ * @template ElementType
  * @extends Iterator<non-negative-int, ElementType>
  */
 interface CollectionInterface extends Iterator, Countable
