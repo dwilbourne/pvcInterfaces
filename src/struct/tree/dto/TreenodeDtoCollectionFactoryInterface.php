@@ -7,11 +7,12 @@ use pvc\interfaces\struct\collection\CollectionFactoryInterface;
 /**
  * @template PayloadType
  * @extends CollectionFactoryInterface<TreenodeDtoInterface<PayloadType>>
+ * @phpstan-import-type TreenodeDtoShape from TreenodeDtoInterface
  */
 interface TreenodeDtoCollectionFactoryInterface extends CollectionFactoryInterface
 {
     /**
-     * @param array<TreenodeDtoInterface<PayloadType>> $elements
+     * @param array<non-negative-int, TreenodeDtoInterface<PayloadType>&TreenodeDtoShape> $elements
      * @return TreenodeDtoCollectionInterface<PayloadType>
      */
     public function MakeCollection(array $elements) : TreenodeDtoCollectionInterface;
