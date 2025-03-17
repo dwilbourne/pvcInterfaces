@@ -8,19 +8,20 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
+use pvc\interfaces\struct\tree\node\TreenodeInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class TreeFactoryInterface
  * @template PayloadType
+ * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
  */
 interface TreeFactoryInterface
 {
     /**
      * makeTree
      * @param int $treeId
-     * @param ?array<TreenodeDtoInterface<PayloadType>> $dtoArray
+     * @param ?array<TreenodeDtoShape> $dtoArray
      * @param ?ValTesterInterface<PayloadType> $payloadTester,
      * @return TreeInterface<PayloadType>
      */

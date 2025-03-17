@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
+use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -23,7 +23,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.
  *
  * @template PayloadType
- * @phpstan-import-type TreenodeDtoShape from TreenodeDtoInterface
+ * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
  */
 interface TreeInterface
 {
@@ -35,7 +35,7 @@ interface TreeInterface
 
     /**
      * @param non-negative-int $treeId
-     * @param array<TreenodeDtoShape&TreenodeDTOInterface<PayloadType>> $dtos
+     * @param array<TreenodeDtoShape> $dtos
      * @return void
      * initializes the tree so it is ready to use
      */
@@ -59,9 +59,9 @@ interface TreeInterface
     /**
      * addNode puts a dto into the tree's list of nodes.
      *
-     * @param TreenodeDtoShape&TreenodeDtoInterface<PayloadType> $dto
+     * @param TreenodeDtoShape&DtoInterface $dto
      */
-    public function addNode(TreenodeDtoInterface $dto): void;
+    public function addNode(DtoInterface $dto): void;
 
     /**
      * @function deleteNode
@@ -91,10 +91,10 @@ interface TreeInterface
 
     /**
      * rootTest
-     * @param TreenodeInterface<PayloadType>|TreenodeDtoInterface<PayloadType> $nodeItem
+     * @param TreenodeInterface<PayloadType>|(DtoInterface&TreenodeDtoShape) $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeInterface|TreenodeDtoInterface $nodeItem): bool;
+    public function rootTest(TreenodeInterface|DtoInterface $nodeItem): bool;
 
     /**
      * @function isEmpty
