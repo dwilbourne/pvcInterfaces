@@ -35,7 +35,7 @@ interface TreeInterface
 
     /**
      * @param non-negative-int $treeId
-     * @param array<TreenodeDtoShape> $dtos
+     * @param array<TreenodeDtoShape&DtoInterface> $dtos
      * @return void
      * initializes the tree so it is ready to use
      */
