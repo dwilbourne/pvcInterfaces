@@ -23,5 +23,5 @@ interface FileInfoFactoryInterface
      * makeFileInfoObject
      * @return FileInfoInterface
      */
-    public static function makeFileInfo(): FileInfoInterface;
+    public static function makeFileInfo(string $filePath): FileInfoInterface;
 }
