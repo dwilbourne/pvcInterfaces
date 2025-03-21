@@ -14,8 +14,12 @@ namespace pvc\interfaces\filetree;
 interface FileInfoInterface
 {
     /**
-     * @return string
-     * returns the full path and filename plus extension
+     * @return non-negative-int
      */
-    public function getPathName(): string;
+    public function getNodeId(): int;
+
+    /**
+     * @return string
+     */
+    public function getFileId(): string;
 }
