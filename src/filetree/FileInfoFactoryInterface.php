@@ -24,4 +24,20 @@ interface FileInfoFactoryInterface
      * @return FileInfoInterface
      */
     public static function makeFileInfo(string $fileId): FileInfoInterface;
+
+    /**
+     * @return bool
+     */
+    public function isFolder(string $fileId): bool;
+
+    /**
+     * @return bool
+     */
+    public function isReadable(string $fileId): bool;
+
+    /**
+     * @param string $fileId
+     * @return array<FileInfoInterface>
+     */
+    public function getChildrenArray(string $fileId): array;
 }
