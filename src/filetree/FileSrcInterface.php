@@ -11,7 +11,7 @@ interface FileSrcInterface
 
     /**
      * @param string $fileId
-     * @return array
+     * @return array<FileInfoInterface>
      */
-    public function getChhildrenArray(string $fileId): array;
+    public function getChildrenArray(string $fileId): array;
 }
