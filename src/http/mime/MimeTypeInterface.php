@@ -40,17 +40,9 @@ interface MimeTypeInterface
     public function getFileExtensions(): array;
 
     /**
-     * @param int $mimeTypeDetection
-     * @return void
-     * gives you control over whether you want to inspect the contents of the file, simply use the file extension,
-     * or both.  If both, throws an exception if the file extension does not match what is detected in the contents.
-     */
-    public function setMimeTypeDetection(int $mimeTypeDetection): void;
-
-    /**
      * @param string $filePath
      * @return string
      * detects the mime type based on the contents, the file extension or both
      */
-    public function detect(string $filePath): string;
+    public function detect(string $filePath, int $detectionMethods): string;
 }
