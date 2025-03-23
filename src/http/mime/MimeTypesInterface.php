@@ -15,10 +15,10 @@ interface MimeTypesInterface
 {
     /**
      * @param string $mimeTypeName
-     * @return MimeTypeInterface
+     * @return MimeTypeInterface|null
      * returns a MimeType object from the corresponding name
      */
-    public function getMimeType(string $mimeTypeName): MimeTypeInterface;
+    public function getMimeType(string $mimeTypeName): ?MimeTypeInterface;
 
     /**
      * getMimeTypeNameFromFileExtension
