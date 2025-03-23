@@ -39,10 +39,4 @@ interface MimeTypeInterface
      */
     public function getFileExtensions(): array;
 
-    /**
-     * @param string $filePath
-     * @return string
-     * detects the mime type based on the contents, the file extension or both
-     */
-    public function detect(string $filePath, int $detectionMethods): string;
 }

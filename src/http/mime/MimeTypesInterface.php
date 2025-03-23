@@ -14,6 +14,13 @@ namespace pvc\interfaces\http\mime;
 interface MimeTypesInterface
 {
     /**
+     * @param string $mimeTypename
+     * @return MimeTypeInterface
+     * returns a MimeType object from the corresponding name
+     */
+    public function getMimeType(string $mimeTypename): MimeTypeInterface;
+
+    /**
      * getMimeTypeNameFromFileExtension
      * @param string $fileExt
      * @return ?string
@@ -40,4 +47,12 @@ interface MimeTypesInterface
      * @return bool
      */
     public function isValidMimeTypeFileExtension(string $fileExt): bool;
+
+    /**
+     * @param string $filePath
+     * @return string
+     * detects the mime type based on the contents, the file extension or both
+     */
+    public function detect(string $filePath, int $detectionMethods): string;
+
 }
