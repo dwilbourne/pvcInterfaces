@@ -50,9 +50,8 @@ interface MimeTypesInterface
 
     /**
      * @param string $filePath
-     * @return string
+     * @return MimeTypeInterface
      * detects the mime type based on the contents, the file extension or both
      */
-    public function detect(string $filePath, int $detectionMethods): string;
-
+    public function detect(string $filePath, int $detectionMethods): MimeTypeInterface;
 }
