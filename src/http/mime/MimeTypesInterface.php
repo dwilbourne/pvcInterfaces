@@ -13,6 +13,9 @@ namespace pvc\interfaces\http\mime;
  */
 interface MimeTypesInterface
 {
+    public const DETECT_FROM_CONTENTS = 1;
+    public const USE_FILE_EXTENSION = 2;
+
     /**
      * @param string $mimeTypeName
      * @return MimeTypeInterface|null
