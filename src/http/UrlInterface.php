@@ -87,15 +87,15 @@ interface UrlInterface
 
     /**
      * setQuery
-     * @param string $queryString
+     * @param QueryStringInterface $queryString
      */
-    public function setQuery(string $queryString): void;
+    public function setQuery(QueryStringInterface $queryString): void;
 
     /**
      * getQuery
-     * @return string
+     * @return QueryStringInterface
      */
-    public function getQuery(): string;
+    public function getQuery(): QueryStringInterface;
 
     /**
      * setFragment
