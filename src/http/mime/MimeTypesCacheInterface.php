@@ -19,7 +19,7 @@ interface MimeTypesCacheInterface extends CacheInterface
 
     /**
      * @param string $key
-     * @param MimeTypeInterface $value
+     * @param array<string, MimeTypeInterface> $value
      * @param int|DateInterval|null $ttl
      * @return bool
      */
