@@ -19,7 +19,8 @@
 		}
 	},
 	"require": {
-		"psr/container": "*"
+		"psr/container": "*",
+		"psr/simple-cache": "*"
 	},
 	"require-dev": {
 		"phpstan/phpstan": "*"
