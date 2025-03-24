@@ -13,7 +13,7 @@ interface MimeTypesCacheInterface extends CacheInterface
     /**
      * @param string $key
      * @param mixed|null $default
-     * @return MimeTypeInterface|null
+     * @return array<string, MimeTypeInterface>|null
      */
     public function get(string $key, mixed $default = null): mixed;
 
