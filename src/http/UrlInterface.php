@@ -93,9 +93,9 @@ interface UrlInterface
 
     /**
      * getQuery
-     * @return ?QueryStringInterface
+     * @return QueryStringInterface
      */
-    public function getQueryString(): ?QueryStringInterface;
+    public function getQueryString(): QueryStringInterface;
 
     /**
      * setFragment
