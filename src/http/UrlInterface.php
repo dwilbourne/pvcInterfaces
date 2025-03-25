@@ -121,4 +121,10 @@ interface UrlInterface
      * @return string
      */
     public function generateURLString(bool $encoded = true): string;
+
+    /**
+     * @return bool
+     * tests if the url is valid or not
+     */
+    public function isValid(): bool;
 }
