@@ -3,12 +3,12 @@
 namespace pvc\interfaces\http\mime;
 
 use DateInterval;
-use Psr\SimpleCache\CacheInterface;
 
 /**
- * use phpdocs to narrow the types via a static type checker
+ * use phpdocs to narrow the types via a static type checker.  This is just a small subset of the methods that are
+ * part of PSR16.
  */
-interface MimeTypesCacheInterface extends CacheInterface
+interface MimeTypesCacheInterface
 {
     /**
      * @param string $key
