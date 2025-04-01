@@ -14,22 +14,10 @@ namespace pvc\interfaces\http;
 interface UrlInterface
 {
     /**
-     * setScheme
-     * @param string $scheme
-     */
-    public function setScheme(string $scheme): void;
-
-    /**
      * getScheme
      * @return string
      */
     public function getScheme(): string;
-
-    /**
-     * setHost
-     * @param string $host
-     */
-    public function setHost(string $host): void;
 
     /**
      * getHost
@@ -38,22 +26,10 @@ interface UrlInterface
     public function getHost(): string;
 
     /**
-     * setPort
-     * @param int|string $port
-     */
-    public function setPort(int|string $port): void;
-
-    /**
      * getPort
      * @return string
      */
     public function getPort(): string;
-
-    /**
-     * setUser
-     * @param string $user
-     */
-    public function setUser(string $user): void;
 
     /**
      * getUser
@@ -62,22 +38,10 @@ interface UrlInterface
     public function getUser(): string;
 
     /**
-     * setPassword
-     * @param string $pwd
-     */
-    public function setPassword(string $pwd): void;
-
-    /**
      * getPassword
      * @return string
      */
     public function getPassword(): string;
-
-    /**
-     * setPath
-     * @param string $path
-     */
-    public function setPath(string $path): void;
 
     /**
      * getPath
@@ -86,22 +50,10 @@ interface UrlInterface
     public function getPath(): string;
 
     /**
-     * setQuery
-     * @param QueryStringInterface $queryString
-     */
-    public function setQueryString(QueryStringInterface $queryString): void;
-
-    /**
      * getQuery
      * @return QueryStringInterface
      */
     public function getQueryString(): QueryStringInterface;
-
-    /**
-     * setFragment
-     * @param string $fragment
-     */
-    public function setFragment(string $fragment): void;
 
     /**
      * getFragment
