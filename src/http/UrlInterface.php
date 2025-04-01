@@ -110,10 +110,10 @@ interface UrlInterface
     public function getFragment(): string;
 
     /**
-     * setAttributesFromArray
-     * @param array<string, string|int<0, 65535>> $urlParts
+     * hydrate
+     * @param string $url
      */
-    public function setAttributesFromArray(array $urlParts): void;
+    public function hydrate(string $url): void;
 
     /**
      * generateURLString
