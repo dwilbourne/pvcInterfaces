@@ -24,4 +24,9 @@ interface HasMsgInterface
      * @return MsgInterface
      */
     public function getMsg(): MsgInterface;
+
+    /**
+     * @return DomainCatalogInterface
+     */
+    public function getDomainCatalog(): DomainCatalogInterface;
 }
