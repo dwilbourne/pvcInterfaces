@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\msg;
 
 /**
- * a Msg has the all components neccesary to render a localized message except for the locale.
+ * a Msg has the all components necessary to render a localized message except for the locale.
  *
  * In other words, a Msg has a domain which is used to determine which catalog from which to get a message.  It
  * contains a message id which is used to get a particular message from the domain catalog.  And it contains
@@ -22,13 +22,13 @@ interface MsgInterface
      * getMsgId
      * @return string
      */
-    public function getMsgId(): ?string;
+    public function getMsgId(): string;
 
     /**
      * getDomain
      * @return string
      */
-    public function getDomain(): ?string;
+    public function getDomain(): string;
 
     /**
      * getParameters
