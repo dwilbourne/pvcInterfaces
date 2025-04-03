@@ -41,19 +41,4 @@ interface DomainCatalogInterface
      * @return string|null
      */
     public function getMessage(string $messageId): ?string;
-
-    /**
-     * @function load
-     * @param string $domain
-     * @param string $locale
-     * @return void
-     */
-    public function load(string $domain, string $locale): void;
-
-    /**
-     * @function isLoaded
-     * @param string $locale
-     * @return bool
-     */
-    public function isLoaded(string $domain = '', string $locale = ''): bool;
 }
