@@ -49,10 +49,10 @@ interface MimeTypesInterface
     public function isValidMimeTypeFileExtension(string $fileExt): bool;
 
     /**
-     * @param resource|string $fileResource
+     * @param string $url
      * @return MimeTypeInterface
      * detects the mime type based on the contents of the fileResource.  fileResource can be any stream (including
      * a file on the local file system) that is supported by file_exists and is_readable
      */
-    public function detect($fileResource): MimeTypeInterface;
+    public function detect(string $url): MimeTypeInterface;
 }
