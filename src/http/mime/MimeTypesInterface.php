@@ -13,9 +13,6 @@ namespace pvc\interfaces\http\mime;
  */
 interface MimeTypesInterface
 {
-    public const DETECT_FROM_CONTENTS = 1;
-    public const USE_FILE_EXTENSION = 2;
-
     /**
      * @param string $mimeTypeName
      * @return MimeTypeInterface|null
@@ -54,7 +51,7 @@ interface MimeTypesInterface
     /**
      * @param string $filePath
      * @return MimeTypeInterface
-     * detects the mime type based on the contents, the file extension or both
+     * detects the mime type based on the contents
      */
-    public function detect(string $filePath, int $detectionMethods): MimeTypeInterface;
+    public function detect(string $filePath): MimeTypeInterface;
 }
