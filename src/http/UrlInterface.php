@@ -27,9 +27,9 @@ interface UrlInterface
 
     /**
      * getPort
-     * @return string
+     * @return non-negative-int
      */
-    public function getPort(): string;
+    public function getPort(): int;
 
     /**
      * getUser
