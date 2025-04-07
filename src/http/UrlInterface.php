@@ -63,9 +63,10 @@ interface UrlInterface
 
     /**
      * hydrate
-     * @param string $url
+     * all the array values are strings except the port number
+     * @param array<string|non-negative-int> $urlParts
      */
-    public function hydrate(string $url): void;
+    public function hydrateFromArray(array $urlParts): void;
 
     /**
      * generateURLString
