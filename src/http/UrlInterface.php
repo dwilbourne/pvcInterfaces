@@ -69,9 +69,9 @@ interface UrlInterface
     public function hydrateFromArray(array $urlParts): void;
 
     /**
-     * generateURLString
+     * render
      * @param bool $encoded
      * @return string
      */
-    public function generateURLString(bool $encoded = true): string;
+    public function render(bool $encoded = true): string;
 }
