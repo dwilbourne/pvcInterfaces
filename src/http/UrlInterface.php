@@ -14,52 +14,10 @@ namespace pvc\interfaces\http;
 interface UrlInterface
 {
     /**
-     * getScheme
-     * @return string
-     */
-    public function getScheme(): string;
-
-    /**
-     * getHost
-     * @return string
-     */
-    public function getHost(): string;
-
-    /**
-     * getPort
-     * @return non-negative-int|null
-     */
-    public function getPort(): int|null;
-
-    /**
-     * getUser
-     * @return string
-     */
-    public function getUser(): string;
-
-    /**
-     * getPassword
-     * @return string
-     */
-    public function getPassword(): string;
-
-    /**
-     * getPath
-     * @return string
-     */
-    public function getPath(): string;
-
-    /**
      * getQuery
      * @return QueryStringInterface
      */
     public function getQueryString(): QueryStringInterface;
-
-    /**
-     * getFragment
-     * @return string
-     */
-    public function getFragment(): string;
 
     /**
      * hydrate
@@ -71,7 +29,8 @@ interface UrlInterface
     /**
      * render
      * @param bool $encoded
+     * @param bool $validateBeforeRender
      * @return string
      */
-    public function render(bool $encoded = true): string;
+    public function render(bool $encoded = true, bool $validateBeforeRender = true): string;
 }
