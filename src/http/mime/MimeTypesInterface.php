@@ -54,7 +54,7 @@ interface MimeTypesInterface
      * @param UrlInterface $url
      * @return MimeTypeInterface
      * detects the mime type based on the contents of the fileResource.  fileResource can be any stream (including
-     * a file on the local file system) that is supported by file_exists and is_readable
+     * a file on the local file system) that exists and is readable
      */
     public function detect(UrlInterface $url): MimeTypeInterface;
 }
