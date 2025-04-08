@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\http\mime;
 
+use pvc\interfaces\http\UrlInterface;
+
 /**
  * Class MimeTypesInterface
  */
@@ -49,10 +51,10 @@ interface MimeTypesInterface
     public function isValidMimeTypeFileExtension(string $fileExt): bool;
 
     /**
-     * @param string $url
+     * @param UrlInterface $url
      * @return MimeTypeInterface
      * detects the mime type based on the contents of the fileResource.  fileResource can be any stream (including
      * a file on the local file system) that is supported by file_exists and is_readable
      */
-    public function detect(string $url): MimeTypeInterface;
+    public function detect(UrlInterface $url): MimeTypeInterface;
 }
