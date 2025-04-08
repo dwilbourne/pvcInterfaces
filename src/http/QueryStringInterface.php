@@ -34,11 +34,11 @@ interface QueryStringInterface
     public function setParams(array $params): void;
 
     /**
-     * addParam
+     * setParam
      * @param string $varName
      * @param string $value
      */
-    public function addParam(string $varName, string $value): void;
+    public function setParam(string $varName, string $value): void;
 
     /**
      * getParams
