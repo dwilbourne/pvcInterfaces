@@ -28,9 +28,8 @@ interface UrlInterface
 
     /**
      * render
-     * @param bool $encoded
      * @param bool $validateBeforeRender
      * @return string
      */
-    public function render(bool $encoded = true, bool $validateBeforeRender = true): string;
+    public function render(bool $validateBeforeRender = true): string;
 }
