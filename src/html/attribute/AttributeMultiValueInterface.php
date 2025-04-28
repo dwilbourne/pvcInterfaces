@@ -11,7 +11,7 @@ namespace pvc\interfaces\html\attribute;
 /**
  * Class AttributeMultiValueInterface
  */
-interface AttributeMultiValueInterface extends AttributeWithValueInterface
+interface AttributeMultiValueInterface extends AttributeInterface
 {
     /**
      * getValue

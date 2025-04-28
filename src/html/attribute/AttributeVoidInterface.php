@@ -13,5 +13,14 @@ namespace pvc\interfaces\html\attribute;
  */
 interface AttributeVoidInterface extends AttributeInterface
 {
-    public function getValue(): null;
+    /**
+     * @param bool $value
+     * @return self
+     */
+    public function setValue(bool $value): self;
+
+    /**
+     * @return bool
+     */
+    public function getValue(): bool;
 }
