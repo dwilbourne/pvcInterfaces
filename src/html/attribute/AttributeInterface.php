@@ -25,9 +25,10 @@ interface AttributeInterface
     public function getName(): string;
 
     /**
-     * setValue is implemented in the other attribute interfaces which extend this interface
+     * @param string ...$values
+     * @return void
      */
-
+    public function setValue(...$values): void;
     /**
      * getValue
      * @return array<string>|string|bool|null

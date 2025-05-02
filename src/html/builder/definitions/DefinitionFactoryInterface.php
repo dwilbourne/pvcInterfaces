@@ -23,35 +23,46 @@ interface DefinitionFactoryInterface
 {
     /**
      * makeAttributeDefinition
-     * @param DefArray $definitionArray
+     *
+     * @param  DefArray  $definitionArray
+     *
      * @return VendorSpecificDefinition
      */
     public function makeAttributeDefinition(array $definitionArray): mixed;
 
     /**
      * makeAttributeValueTesterDefinition
-     * @param DefArray $definitionArray
+     *
+     * @param  DefArray  $definitionArray
+     *
      * @return VendorSpecificDefinition
      */
-    public function makeAttributeValueTesterDefinition(array $definitionArray): mixed;
+    public function makeAttributeValueTesterDefinition(array $definitionArray
+    ): mixed;
 
     /**
      * makeElementDefinition
-     * @param DefArray $definitionArray
+     *
+     * @param  DefArray  $definitionArray
+     *
      * @return VendorSpecificDefinition
      */
     public function makeElementDefinition(array $definitionArray): mixed;
 
     /**
      * makeEventDefinition
-     * @param DefArray $definitionArray
+     *
+     * @param  DefArray  $definitionArray
+     *
      * @return VendorSpecificDefinition
      */
     public function makeEventDefinition(array $definitionArray): mixed;
 
     /**
      * makeOtherDefinition
-     * @param DefArray $definitionArray
+     *
+     * @param  DefArray  $definitionArray
+     *
      * @return VendorSpecificDefinition
      */
     public function makeOtherDefinition(array $definitionArray): mixed;
