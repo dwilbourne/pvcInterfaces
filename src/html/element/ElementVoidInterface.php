@@ -8,11 +8,9 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
-use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
-use pvc\interfaces\html\builder\HtmlBuilderInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
@@ -22,13 +20,6 @@ use pvc\interfaces\validator\ValTesterInterface;
  */
 interface ElementVoidInterface
 {
-    /**
-     * setDefId
-     * @param string $defId
-     * @return mixed
-     */
-    public function setDefId(string $defId);
-
     /**
      * getDefId
      * @return string
@@ -42,54 +33,6 @@ interface ElementVoidInterface
     public function getName(): string;
 
     /**
-     * setName
-     * @param string $name
-     * @return mixed
-     */
-    public function setName(string $name);
-
-    /**
-     * setHtmlBuilder
-     * @param HtmlBuilderInterface<VendorSpecificDefinition> $htmlBuilder
-     */
-    public function setHtmlBuilder(HtmlBuilderInterface $htmlBuilder): void;
-
-    /**
-     * getHtmlBuilder
-     * @return HtmlBuilderInterface<VendorSpecificDefinition>
-     */
-    public function getHtmlBuilder(): HtmlBuilderInterface;
-
-    /**
-     * setAllowedAttributeDefIds
-     * @param array<string> $allowedAttributeDefIds
-     */
-    public function setAllowedAttributeDefIds(array $allowedAttributeDefIds): void;
-
-    /**
-     * getAllowedAttributeDefIds
-     * @return array<string>
-     */
-    public function getAllowedAttributeDefIds(): array;
-
-    /**
-     * getGlobalAttributeDefIds
-     * @return array<string>
-     */
-    public function getGlobalAttributeDefIds(): array;
-
-    /**
-     * isAllowedAttribute
-     * @param AttributeInterface $attribute
-     * @return bool
-     *
-     * it turns out to be easier to work with an actual attribute rather than a definition.  This is true for two
-     * reasons: 1) there are global attributes which are always allowed and 2) the attribute could be an Event, which
-     * is also always allowed.
-     */
-    public function isAllowedAttribute(AttributeInterface $attribute): bool;
-
-    /**
      * setAttribute
      * @param string|AttributeInterface $attribute
      * @param string ...$values
@@ -98,21 +41,21 @@ interface ElementVoidInterface
     public function setAttribute(string|AttributeInterface $attribute, ...$values): ElementVoidInterface;
 
     /**
-     * $defId
-     * @param string $defId
-     * @return AttributeInterface|null
+     * @param string $name
+     * @return array<string>|string|bool|null
+     * returns the value of the attribute
      */
-    public function getAttribute(string $defId): ?AttributeInterface;
+    public function getAttribute(string $name): array|string|bool|null;
 
     /**
      * setCustomData
-     * @param string|AttributeCustomDataInterface $attribute
+     * @param string $customAttributeName
      * @param string $value
      * @param ValTesterInterface<string>|null $valTester
      * @return ElementVoidInterface<VendorSpecificDefinition>
      */
     public function setCustomData(
-        string|AttributeCustomDataInterface $attribute,
+        string $customAttributeName,
         string $value,
         ?ValTesterInterface $valTester = null
     ): ElementVoidInterface;
@@ -126,16 +69,26 @@ interface ElementVoidInterface
 
     /**
      * getAttributes
-     * @param int $defTypeMask
-     * @return array<AttributeInterface>
+     * @return array<string, array<string>|string|bool>
      */
-    public function getAttributes(int $defTypeMask): array;
+    public function getAttributes(): array;
+
+    /**
+     * @return array<string, string>
+     */
+    public function getEvents(): array;
 
     /**
      * removeAttribute
-     * @param string $defId
+     * @param string $attributeName
      */
-    public function removeAttribute(string $defId): void;
+    public function removeAttribute(string $attributeName): void;
+
+    /**
+     * @param  string  $eventName
+     * @return void
+     */
+    public function removeEvent(string $eventName): void;
 
     /**
      * render
