@@ -8,9 +8,9 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
+use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
-use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class ElementVoidInterface
@@ -48,15 +48,11 @@ interface ElementVoidInterface
 
     /**
      * setCustomData
-     * @param string $customAttributeName
-     * @param string $value
-     * @param ValTesterInterface<string>|null $valTester
+     * @param AttributeCustomDataInterface $attribute
      * @return ElementVoidInterface<VendorSpecificDefinition>
      */
     public function setCustomData(
-        string $customAttributeName,
-        string $value,
-        ?ValTesterInterface $valTester = null
+        AttributeCustomDataInterface $attribute
     ): ElementVoidInterface;
 
     /**
