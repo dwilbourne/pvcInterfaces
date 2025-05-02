@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
+use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
 
@@ -41,10 +42,10 @@ interface ElementVoidInterface
 
     /**
      * @param string $name
-     * @return array<string>|string|bool|null
-     * returns the value of the attribute
+     * @return AttributeInterface
+     * returns the attribute object backing the attribute name
      */
-    public function getAttribute(string $name): array|string|bool|null;
+    public function getAttribute(string $name): AttributeInterface;
 
     /**
      * setCustomData
@@ -56,12 +57,23 @@ interface ElementVoidInterface
     ): ElementVoidInterface;
 
     /**
+     * @param  ?string  $customAttributeName
+     * @return AttributeCustomDataInterface
+     */
+    public function getCustomData(?string $customAttributeName): AttributeCustomDataInterface;
+
+    /**
      * setEvent
      * @param EventInterface $event
      * @return ElementVoidInterface<VendorSpecificDefinition>
      */
     public function setEvent(EventInterface $event): ElementVoidInterface;
 
+    /**
+     * @param  string  $eventName
+     * @return EventInterface
+     */
+    public function getEvent(string $eventName): EventInterface;
     /**
      * getAttributes
      * @return array<string, array<string>|string|bool>
@@ -72,11 +84,6 @@ interface ElementVoidInterface
      * @return array<string, EventInterface>
      */
     public function getEvents(): array;
-
-    /**
-     * @return array<string, AttributeCustomDataInterface>
-     */
-    public function getCustomData(): array;
 
     /**
      * removeAttribute
