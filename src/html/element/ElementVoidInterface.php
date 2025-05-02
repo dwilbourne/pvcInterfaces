@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
-use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\validator\ValTesterInterface;
@@ -34,11 +33,11 @@ interface ElementVoidInterface
 
     /**
      * setAttribute
-     * @param string|AttributeInterface $attribute
+     * @param string $attribute
      * @param string ...$values
      * @return ElementVoidInterface<VendorSpecificDefinition>
      */
-    public function setAttribute(string|AttributeInterface $attribute, ...$values): ElementVoidInterface;
+    public function setAttribute(string $attribute, ...$values): ElementVoidInterface;
 
     /**
      * @param string $name
