@@ -67,4 +67,11 @@ interface FilterVarInterface
      * @return array<string, mixed>
      */
     public function getOptionsFlagsArray(): array;
+
+    /**
+     * @param  string  $value
+     * @return mixed
+     * returns whatever the underlying filter_var verb returns
+     */
+    public function filter(string $value): mixed;
 }
