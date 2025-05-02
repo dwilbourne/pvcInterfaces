@@ -29,6 +29,7 @@ interface AttributeInterface
      * @return void
      */
     public function setValue(...$values): void;
+
     /**
      * getValue
      * @return array<string>|string|bool|null
