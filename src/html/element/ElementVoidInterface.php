@@ -58,9 +58,9 @@ interface ElementVoidInterface
 
     /**
      * @param  ?string  $customAttributeName
-     * @return AttributeCustomDataInterface
+     * @return AttributeCustomDataInterface|array<AttributeCustomDataInterface>
      */
-    public function getCustomData(?string $customAttributeName): AttributeCustomDataInterface;
+    public function getCustomData(?string $customAttributeName): array|AttributeCustomDataInterface;
 
     /**
      * setEvent
@@ -76,7 +76,7 @@ interface ElementVoidInterface
     public function getEvent(string $eventName): EventInterface;
     /**
      * getAttributes
-     * @return array<string, array<string>|string|bool>
+     * @return array<string, AttributeInterface>
      */
     public function getAttributes(): array;
 
