@@ -60,7 +60,7 @@ interface ElementVoidInterface
      * @param  ?string  $customAttributeName
      * @return AttributeCustomDataInterface|array<AttributeCustomDataInterface>
      */
-    public function getCustomData(?string $customAttributeName): array|AttributeCustomDataInterface;
+    public function getCustomData(?string $customAttributeName = null): array|AttributeCustomDataInterface;
 
     /**
      * setEvent
