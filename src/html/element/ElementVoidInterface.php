@@ -33,11 +33,11 @@ interface ElementVoidInterface
 
     /**
      * setAttribute
-     * @param string $attribute
+     * @param string $name
      * @param string ...$values
      * @return ElementVoidInterface<VendorSpecificDefinition>
      */
-    public function setAttribute(string $attribute, ...$values): ElementVoidInterface;
+    public function setAttribute(string $name, ...$values): ElementVoidInterface;
 
     /**
      * @param string $name
