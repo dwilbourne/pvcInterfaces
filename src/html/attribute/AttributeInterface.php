@@ -37,6 +37,11 @@ interface AttributeInterface
     public function getValue(): array|string|bool|null;
 
     /**
+     * @return void
+     */
+    public function unsetValue(): void;
+
+    /**
      * render
      * @return string
      */
