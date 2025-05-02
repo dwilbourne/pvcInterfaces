@@ -69,9 +69,14 @@ interface ElementVoidInterface
     public function getAttributes(): array;
 
     /**
-     * @return array<string, string>
+     * @return array<string, EventInterface>
      */
     public function getEvents(): array;
+
+    /**
+     * @return array<string, AttributeCustomDataInterface>
+     */
+    public function getCustomData(): array;
 
     /**
      * removeAttribute
@@ -84,6 +89,12 @@ interface ElementVoidInterface
      * @return void
      */
     public function removeEvent(string $eventName): void;
+
+    /**
+     * @param  string  $customAttributeName
+     * @return void
+     */
+    public function removeCustomData(string $customAttributeName): void;
 
     /**
      * render
