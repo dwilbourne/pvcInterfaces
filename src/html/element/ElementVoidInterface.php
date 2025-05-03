@@ -8,17 +8,16 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
+use pvc\interfaces\displayable\RenderableInterface;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
-use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
 
 /**
  * Class ElementVoidInterface
- * @template VendorSpecificDefinition of DefinitionFactoryInterface
  * @noinspection PhpCSValidationInspection
  */
-interface ElementVoidInterface
+interface ElementVoidInterface extends RenderableInterface
 {
     /**
      * getDefId
@@ -36,7 +35,7 @@ interface ElementVoidInterface
      * setAttribute
      * @param string $name
      * @param mixed ...$values
-     * @return ElementVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface
      */
     public function setAttributeValue(string $name, ...$values): ElementVoidInterface;
 
@@ -50,7 +49,7 @@ interface ElementVoidInterface
     /**
      * setCustomData
      * @param AttributeCustomDataInterface $attribute
-     * @return ElementVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface
      */
     public function setCustomData(
         AttributeCustomDataInterface $attribute
@@ -65,7 +64,7 @@ interface ElementVoidInterface
     /**
      * setEvent
      * @param EventInterface $event
-     * @return ElementVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface
      */
     public function setEvent(EventInterface $event): ElementVoidInterface;
 
@@ -107,5 +106,5 @@ interface ElementVoidInterface
      * render
      * @return string
      */
-    public function generateOpeningTag(): string;
+    public function render(): string;
 }

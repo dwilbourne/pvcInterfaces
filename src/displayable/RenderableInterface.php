@@ -8,18 +8,14 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\displayable;
 
-use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
-use pvc\interfaces\html\element\ElementVoidInterface;
-
 /**
  * Class RenderableInterface
- * @template VendorSpecificDefinition of DefinitionFactoryInterface
  */
 interface RenderableInterface
 {
     /**
      * makeHtml
-     * @return ElementVoidInterface<VendorSpecificDefinition>
+     * @return string
      */
-    public function render(): ElementVoidInterface;
+    public function render(): string;
 }

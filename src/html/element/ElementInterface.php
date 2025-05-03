@@ -8,14 +8,11 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
-use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
 use pvc\interfaces\msg\MsgFactoryInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class ElementInterface
- * @template VendorSpecificDefinition of DefinitionFactoryInterface
- * @extends ElementVoidInterface<VendorSpecificDefinition>
  */
 interface ElementInterface extends ElementVoidInterface
 {
@@ -52,16 +49,16 @@ interface ElementInterface extends ElementVoidInterface
 
     /**
      * setChild
-     * @param string|ElementVoidInterface<VendorSpecificDefinition> $element
+     * @param string|ElementVoidInterface $element
      * @param string|null $key
-     * @return ElementVoidInterface<VendorSpecificDefinition>
+     * @return ElementVoidInterface
      */
     public function setChild(string|ElementVoidInterface $element, ?string $key = null): ElementVoidInterface;
 
     /**
      * getChild
      * @param string $key
-     * @return ElementVoidInterface<VendorSpecificDefinition>|MsgInterface|string|null
+     * @return ElementVoidInterface|MsgInterface|string|null
      * the innerText is kept in the child array, so the return type must include MsgInterface and string
      */
     public function getChild(string $key): ElementVoidInterface|MsgInterface|string|null;
@@ -69,7 +66,7 @@ interface ElementInterface extends ElementVoidInterface
     /**
      * getChildren
      * @param callable $filter
-     * @return array<ElementVoidInterface<VendorSpecificDefinition>|MsgInterface|string>
+     * @return array<ElementVoidInterface|MsgInterface|string>
      */
     public function getChildren(?callable $filter = null): array;
 

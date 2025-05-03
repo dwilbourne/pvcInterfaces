@@ -10,20 +10,19 @@ namespace pvc\interfaces\frmtr\html;
 
 use pvc\interfaces\frmtr\FrmtrInterface;
 use pvc\interfaces\frmtr\msg\FrmtrMsgInterface;
-use pvc\interfaces\html\builder\definitions\DefinitionFactoryInterface;
+use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\html\element\ElementVoidInterface;
 use pvc\interfaces\intl\LocaleInterface;
 
 /**
  * Class FrmtrHtmlInterface
- * @template VendorSpecificDefinition of DefinitionFactoryInterface
- * @extends FrmtrInterface<ElementVoidInterface<VendorSpecificDefinition>>
+ * @extends FrmtrInterface<ElementVoidInterface>
  */
 interface FrmtrHtmlInterface extends FrmtrInterface
 {
     /**
      * format
-     * @param ElementVoidInterface<VendorSpecificDefinition> $value
+     * @param ElementVoidInterface|ElementInterface $value
      * @return string
      */
     public function format($value): string;
