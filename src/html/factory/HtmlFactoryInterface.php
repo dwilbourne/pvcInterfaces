@@ -3,7 +3,6 @@
 namespace pvc\interfaces\html\factory;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
-use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
 use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\html\element\ElementVoidInterface;
@@ -11,13 +10,6 @@ use pvc\interfaces\validator\ValTesterInterface;
 
 interface HtmlFactoryInterface
 {
-    /**
-     * makeAttribute
-     * @param string $attributeName
-     * @return AttributeInterface
-     */
-    public function makeAttribute(string $attributeName): AttributeInterface;
-
     /**
      * makeElement
      * @param string $elementName
@@ -44,5 +36,4 @@ interface HtmlFactoryInterface
         string $value,
         ?ValTesterInterface $valTester = null
     ): AttributeCustomDataInterface;
-
 }
