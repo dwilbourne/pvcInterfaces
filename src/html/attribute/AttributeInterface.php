@@ -14,12 +14,6 @@ namespace pvc\interfaces\html\attribute;
 interface AttributeInterface
 {
     /**
-     * getdefId
-     * @return string
-     */
-    public function getDefId(): string;
-
-    /**
      * @return string
      */
     public function getName(): string;
