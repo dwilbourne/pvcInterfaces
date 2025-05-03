@@ -20,12 +20,6 @@ use pvc\interfaces\html\attribute\EventInterface;
 interface ElementVoidInterface extends RenderableInterface
 {
     /**
-     * getDefId
-     * @return string
-     */
-    public function getDefId(): string;
-
-    /**
      * getName
      * @return string
      */
