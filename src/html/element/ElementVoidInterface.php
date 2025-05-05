@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
-use pvc\interfaces\displayable\RenderableInterface;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\EventInterface;
@@ -17,7 +16,7 @@ use pvc\interfaces\html\attribute\EventInterface;
  * Class ElementVoidInterface
  * @noinspection PhpCSValidationInspection
  */
-interface ElementVoidInterface extends RenderableInterface
+interface ElementVoidInterface
 {
     /**
      * getName
