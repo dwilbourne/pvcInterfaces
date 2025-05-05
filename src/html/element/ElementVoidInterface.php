@@ -94,10 +94,4 @@ interface ElementVoidInterface
      * @return void
      */
     public function removeCustomData(string $customAttributeName): void;
-
-    /**
-     * render
-     * @return string
-     */
-    public function render(): string;
 }
