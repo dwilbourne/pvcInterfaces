@@ -14,12 +14,6 @@ namespace pvc\interfaces\msg;
 interface HasMsgInterface
 {
     /**
-     * setMsg
-     * @param MsgInterface $msg
-     */
-    public function setMsg(MsgInterface $msg): void;
-
-    /**
      * getMsg
      * @return MsgInterface
      */
