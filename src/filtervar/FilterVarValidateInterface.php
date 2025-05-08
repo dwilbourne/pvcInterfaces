@@ -18,14 +18,15 @@ interface FilterVarValidateInterface extends FilterVarInterface, ValTesterInterf
 {
     /**
      * validate
-     * @param string $value
+     * @param mixed $value
      * @return bool
      */
-    public function validate(string $value): bool;
+    public function validate(mixed $value): bool;
 
     /**
      * @param  mixed  $value
      * @return bool
+     * this is an alias of the validate method.  This method implements ValTesterInterface
      */
     public function testValue(mixed $value): bool;
 }
