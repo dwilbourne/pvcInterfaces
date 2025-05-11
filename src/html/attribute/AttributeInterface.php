@@ -26,9 +26,9 @@ interface AttributeInterface
 
     /**
      * getValue
-     * @return array<string>|string|bool|null
+     * @return array<string>|string|int|bool|null
      */
-    public function getValue(): array|string|bool|null;
+    public function getValue(): array|string|int|bool|null;
 
     /**
      * @return void
