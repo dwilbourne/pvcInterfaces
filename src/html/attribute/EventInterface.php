@@ -21,7 +21,7 @@ interface EventInterface extends AttributeInterface
 
     /**
      * getScript
-     * @return string
+     * @return ?string
      */
-    public function getScript(): string;
+    public function getScript(): ?string;
 }
