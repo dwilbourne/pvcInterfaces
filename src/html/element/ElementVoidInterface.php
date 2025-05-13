@@ -18,6 +18,13 @@ use pvc\interfaces\html\attribute\EventInterface;
 interface ElementVoidInterface
 {
     /**
+     * @param  string  $name
+     * @param  mixed  $value
+     * @return void
+     */
+    public function setAttribute(string $name, mixed $value): void;
+
+    /**
      * setCustomData
      * @param AttributeCustomDataInterface $attribute
      * @return ElementVoidInterface
@@ -32,6 +39,12 @@ interface ElementVoidInterface
      * @return ElementVoidInterface
      */
     public function setEvent(EventInterface $event): ElementVoidInterface;
+
+    /**
+     * @param  string  $name
+     * @return void
+     */
+    public function removeAttribute(string $name): void;
 
     /**
      * @param  string  $eventName
