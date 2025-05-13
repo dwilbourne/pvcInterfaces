@@ -13,13 +13,12 @@ use pvc\interfaces\html\attribute\EventInterface;
 
 /**
  * Class ElementVoidInterface
- * @noinspection PhpCSValidationInspection
  */
 interface ElementVoidInterface
 {
     /**
      * @param  string  $name
-     * @param  mixed  $value
+     * @param  array<string|int>|string|int|bool  $value
      * @return void
      */
     public function setAttribute(string $name, mixed $value): void;
