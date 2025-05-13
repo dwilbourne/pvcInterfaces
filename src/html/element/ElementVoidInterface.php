@@ -18,12 +18,6 @@ use pvc\interfaces\html\attribute\EventInterface;
 interface ElementVoidInterface
 {
     /**
-     * getName
-     * @return string
-     */
-    public function getName(): string;
-
-    /**
      * setCustomData
      * @param AttributeCustomDataInterface $attribute
      * @return ElementVoidInterface
