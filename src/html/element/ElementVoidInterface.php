@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
-use pvc\interfaces\html\attribute\AttributeInterface;
 
 /**
  * Class ElementVoidInterface
@@ -21,7 +20,7 @@ interface ElementVoidInterface
      * @param  string|int|bool  ...$values
      * @return void
      */
-    public function setAttribute(string $name, ...$values): AttributeInterface;
+    public function setAttribute(string $name, ...$values): ElementVoidInterface;
 
     /**
      * setCustomData
