@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
-use pvc\interfaces\html\attribute\EventInterface;
 
 /**
  * Class ElementVoidInterface
@@ -18,10 +17,10 @@ interface ElementVoidInterface
 {
     /**
      * @param  string  $name
-     * @param  array<string|int>|string|int|bool  $value
+     * @param  string|int|bool  ...$values
      * @return void
      */
-    public function setAttribute(string $name, mixed $value): void;
+    public function setAttribute(string $name, ...$values): void;
 
     /**
      * setCustomData
@@ -33,11 +32,12 @@ interface ElementVoidInterface
     ): ElementVoidInterface;
 
     /**
-     * setEvent
-     * @param EventInterface $event
+     * @param  string  $name
+     * @param  string  $script
+     *
      * @return ElementVoidInterface
      */
-    public function setEvent(EventInterface $event): ElementVoidInterface;
+    public function setEvent(string $name, string $script): ElementVoidInterface;
 
     /**
      * @param  string  $name
