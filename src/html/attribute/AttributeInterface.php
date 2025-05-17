@@ -19,7 +19,7 @@ interface AttributeInterface
     public function getName(): string;
 
     /**
-     * @param array<string|int>|string|int|bool ...$values
+     * @param string|int|bool ...$values
      * @return void
      */
     public function setValue(...$values): void;
