@@ -26,6 +26,7 @@ interface ElementVoidInterface
     /**
      * @param  string  $name
      * @param  string  $valueType
+     * value type can be one of the following: 'string', 'int', or 'bool'
      * @param  bool  $caseSensitive
      * @param  ValTesterInterface<string|int>|null  $tester
      *
@@ -33,8 +34,8 @@ interface ElementVoidInterface
      */
     public function addCustomData(
         string $name,
-        string $valueType = 'string',
-        bool $caseSensitive = false,
+        ?string $valueType = null,
+        ?bool $caseSensitive = null,
         ?ValTesterInterface $tester = null
     ): void;
 
