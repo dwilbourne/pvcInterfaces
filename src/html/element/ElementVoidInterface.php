@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
+use pvc\htmlbuilder\definitions\types\AttributeValueDataType;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
@@ -23,14 +24,18 @@ interface ElementVoidInterface
     public function setAttribute(string $name, ...$values): ElementVoidInterface;
 
     /**
-     * setCustomData
-     * @param string $attributeName
-     * @param ValTesterInterface<string>|null $valTester
+     * @param  string  $name
+     * @param  string  $valueType
+     * @param  bool  $caseSensitive
+     * @param  ValTesterInterface<string|int>|null  $tester
+     *
      * @return void
      */
     public function addCustomData(
-        string $attributeName,
-        ?ValTesterInterface $valTester = null
+        string $name,
+        string $valueType = 'string',
+        bool $caseSensitive = false,
+        ?ValTesterInterface $tester = null
     ): void;
 
     /**
