@@ -25,9 +25,9 @@ interface ElementVoidInterface
 
     /**
      * @param  string  $name
-     * @param  string  $valueType
+     * @param  string|null  $valueType
      * value type can be one of the following: 'string', 'int', or 'bool'
-     * @param  bool  $caseSensitive
+     * @param  bool|null  $caseSensitive
      * @param  ValTesterInterface<string|int|bool>|null  $tester
      *
      * @return void
