@@ -36,4 +36,9 @@ interface ElementVoidInterface
      * @return void
      */
     public function removeAttribute(string $name): void;
+
+    /**
+     * @return string
+     */
+    public function generateOpeningTag(): string;
 }
