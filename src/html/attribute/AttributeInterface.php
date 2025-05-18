@@ -14,11 +14,6 @@ namespace pvc\interfaces\html\attribute;
 interface AttributeInterface
 {
     /**
-     * @return string
-     */
-    public function getName(): string;
-
-    /**
      * @param string|int|bool ...$values
      * @return void
      */
