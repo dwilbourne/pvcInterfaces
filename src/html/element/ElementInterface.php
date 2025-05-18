@@ -29,6 +29,11 @@ interface ElementInterface extends ElementVoidInterface
     public function setInnerText(MsgInterface|string $innerText): void;
 
     /**
+     * @return array<ElementVoidInterface|MsgInterface|string>
+     */
+    public function getNodes(): array;
+
+    /**
      * generateClosingTag
      * @return string
      */
