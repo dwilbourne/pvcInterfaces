@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
-use pvc\htmlbuilder\definitions\types\AttributeValueDataType;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
@@ -44,4 +43,9 @@ interface ElementVoidInterface
      * @return void
      */
     public function removeAttribute(string $name): void;
+
+    /**
+     * @return string
+     */
+    public function generateOpeningTag(): string;
 }
