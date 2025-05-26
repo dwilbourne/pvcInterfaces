@@ -10,7 +10,7 @@
 	],
 	"license": "MIT",
 	"config": {
-		"php": "8.1.1"
+		"php": "8.4"
 	},
 	"minimum-stability": "dev",
 	"autoload": {
@@ -23,6 +23,7 @@
 		"psr/simple-cache": "*"
 	},
 	"require-dev": {
-		"phpstan/phpstan": "*"
+		"phpstan/phpstan": "*",
+		"rector/rector": "^2"
 	}
 }

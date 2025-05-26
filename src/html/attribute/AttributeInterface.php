@@ -14,13 +14,15 @@ namespace pvc\interfaces\html\attribute;
 interface AttributeInterface
 {
     /**
-     * @param string|int|bool ...$values
+     * @param  string|int|bool  ...$values
+     *
      * @return void
      */
     public function setValue(...$values): void;
 
     /**
      * getValue
+     *
      * @return array<string|int>|string|int|bool|null
      */
     public function getValue(): array|string|int|bool|null;
@@ -32,6 +34,7 @@ interface AttributeInterface
 
     /**
      * render
+     *
      * @return string
      */
     public function render(): string;
