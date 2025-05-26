@@ -23,7 +23,7 @@
 		"psr/simple-cache": "*"
 	},
 	"require-dev": {
-		"phpstan/phpstan": "*",
+		"phpstan/phpstan": "^2",
 		"rector/rector": "^2"
 	}
 }
