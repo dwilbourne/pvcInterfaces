@@ -17,10 +17,11 @@ interface ElementInterface extends ElementVoidInterface
 {
     /**
      * setChild
-     * @param class-string|ElementVoidInterface $element
-     * @return ElementVoidInterface
+     * @param class-string|ElementVoidInterface|ElementInterface $element
+     * @return ElementInterface
      */
-    public function setChild(string|ElementVoidInterface $element): ElementVoidInterface;
+    public function setChild(string|ElementVoidInterface|ElementInterface $element): ElementInterface;
+
 
     /**
      * setInnerText
@@ -28,10 +29,6 @@ interface ElementInterface extends ElementVoidInterface
      */
     public function setInnerText(MsgInterface|string $innerText): void;
 
-    /**
-     * @return array<ElementVoidInterface|MsgInterface|string>
-     */
-    public function getNodes(): array;
 
     /**
      * generateClosingTag

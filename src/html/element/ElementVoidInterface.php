@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
+use pvc\interfaces\msg\MsgInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
@@ -43,6 +44,12 @@ interface ElementVoidInterface
      * @return void
      */
     public function removeAttribute(string $name): void;
+
+    /**
+     * @return array<ElementVoidInterface|MsgInterface|string>
+     * void elements will always return an empty array
+     */
+    public function getNodes(): array;
 
     /**
      * @return string
