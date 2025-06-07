@@ -18,9 +18,9 @@ interface ElementInterface extends ElementVoidInterface
     /**
      * setChild
      * @param class-string|ElementVoidInterface|ElementInterface $element
-     * @return ElementInterface
+     * @return void
      */
-    public function setChild(string|ElementVoidInterface|ElementInterface $element): ElementInterface;
+    public function setChild(string|ElementVoidInterface|ElementInterface $element): void;
 
 
     /**
