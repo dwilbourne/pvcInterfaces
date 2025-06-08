@@ -8,5 +8,10 @@ interface ContentModelInterface
      * @return array<string>
      */
     public function getContentCategories(): array;
+
+    /**
+     * @return array<string>
+     */
+    public function getChildContentCategories(): array;
     public function canAddChild(ContentModelInterface $child): bool;
 }
