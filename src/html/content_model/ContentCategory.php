@@ -2,8 +2,8 @@
 
 namespace pvc\interfaces\html\content_model;
 
-enum ContentCategory
+enum ContentCategory: string
 {
-    case Interactive;
-    case Transparent;
+    case Interactive = 'Interactive';
+    case Transparent = 'Transparent';
 }
