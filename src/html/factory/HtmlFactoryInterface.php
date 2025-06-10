@@ -3,7 +3,6 @@
 namespace pvc\interfaces\html\factory;
 
 use pvc\interfaces\html\element\ElementInterface;
-use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\html\text\TextNodeInterface;
 use pvc\interfaces\msg\MsgInterface;
 

@@ -11,7 +11,7 @@ namespace pvc\interfaces\html\element;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
- * Class ElementVoidInterface
+ * Class ElementInterface
  */
 interface ElementInterface
 {
