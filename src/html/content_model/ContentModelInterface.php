@@ -13,5 +13,11 @@ interface ContentModelInterface
      * @return array<string>
      */
     public function getChildContentCategories(): array;
-    public function canAddChild(ContentModelInterface $child): bool;
+
+    /**
+     * @param  ContentModelInterface  $child
+     *
+     * @return bool
+     */
+    public function canAccept(ContentModelInterface $child): bool;
 }
