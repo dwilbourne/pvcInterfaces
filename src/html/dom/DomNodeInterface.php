@@ -6,5 +6,5 @@ use pvc\interfaces\struct\dto\DtoInterface;
 
 interface DomNodeInterface
 {
-    public function canAcceptChild(DtoInterface $dto): bool;
+    public function canAccept(DtoInterface $dto): bool;
 }
