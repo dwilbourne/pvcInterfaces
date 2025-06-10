@@ -11,18 +11,21 @@ namespace pvc\interfaces\frmtr\html;
 use pvc\interfaces\frmtr\FrmtrInterface;
 use pvc\interfaces\frmtr\msg\FrmtrMsgInterface;
 use pvc\interfaces\html\element\ElementInterface;
-use pvc\interfaces\html\element\ElementVoidInterface;
+use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\intl\LocaleInterface;
 
 /**
  * Class FrmtrHtmlInterface
- * @extends FrmtrInterface<ElementVoidInterface>
+ *
+ * @extends FrmtrInterface<ElementInterface>
  */
 interface FrmtrHtmlInterface extends FrmtrInterface
 {
     /**
      * format
-     * @param ElementVoidInterface|ElementInterface $value
+     *
+     * @param  ElementInterface|ElementInterface $value
+     *
      * @return string
      */
     public function format($value): string;
