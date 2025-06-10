@@ -11,7 +11,6 @@ namespace pvc\interfaces\frmtr\html;
 use pvc\interfaces\frmtr\FrmtrInterface;
 use pvc\interfaces\frmtr\msg\FrmtrMsgInterface;
 use pvc\interfaces\html\element\ElementInterface;
-use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\intl\LocaleInterface;
 
 /**
