@@ -45,15 +45,4 @@ interface ElementInterface extends DomNodeInterface
      * @return void
      */
     public function removeAttribute(string $name): void;
-
-    /**
-     * @return string
-     */
-    public function generateOpeningTag(): string;
-
-    /**
-     * generateClosingTag
-     * @return string
-     */
-    public function generateClosingTag(): string;
 }
