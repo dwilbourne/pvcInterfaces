@@ -10,6 +10,7 @@ interface ContentRuleInterface
     /**
      * @param  TreenodeInterface<DomNodeInterface> $node
      * @return bool
+     * return false if node fails the rule test (e.g. cannot be accepted into the tree)
      */
     public function ruleTest(TreenodeInterface $node): bool;
 }
