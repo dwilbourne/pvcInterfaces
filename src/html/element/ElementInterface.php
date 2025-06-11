@@ -50,15 +50,4 @@ interface ElementInterface extends DomNodeInterface
      * @return bool
      */
     public function isVoid(): bool;
-
-    /**
-     * @return string
-     */
-    public function generateOpeningTag(): string;
-
-    /**
-     * generateClosingTag
-     * @return string
-     */
-    public function generateClosingTag(): string;
 }
