@@ -7,4 +7,8 @@ use pvc\interfaces\struct\dto\DtoInterface;
 interface DomNodeInterface
 {
     public function canAccept(DtoInterface $dto): bool;
+
+    public function renderFirstVisit(): string;
+
+    public function renderLastVisit(): string;
 }
