@@ -2,7 +2,9 @@
 
 namespace pvc\interfaces\html\text;
 
-interface TextNodeInterface
+use pvc\interfaces\html\dom\DomNodeInterface;
+
+interface TextNodeInterface extends DomNodeInterface
 {
 
 }

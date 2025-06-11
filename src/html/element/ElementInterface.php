@@ -8,12 +8,13 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
+use pvc\interfaces\html\dom\DomNodeInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class ElementInterface
  */
-interface ElementInterface
+interface ElementInterface extends DomNodeInterface
 {
     /**
      * @param  string  $name
