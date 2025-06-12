@@ -2,15 +2,17 @@
 
 namespace pvc\interfaces\html\content_rule;
 
-use pvc\interfaces\html\element\ElementInterface;
+use pvc\interfaces\html\content_model\ContentModelInterface;
+use pvc\interfaces\html\dom\DomNodeInterface;
 
 interface ContentRuleInterface
 {
     /**
-     * @param  ElementInterface $childElement
+     * @param  ContentModelInterface $parent
+     * @param  DomNodeInterface $childElement
      * @return bool
      * return false if child element fails the rule test (e.g. cannot be accepted
      * into the DOM tree)
      */
-    public function ruleTest(ElementInterface $childElement): bool;
+    public function ruleTest(ContentModelInterface $parent, DomNodeInterface $childElement): bool;
 }
