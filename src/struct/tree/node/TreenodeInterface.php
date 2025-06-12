@@ -144,6 +144,11 @@ interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
     public function isAncestorOf(TreenodeInterface $node): bool;
 
     /**
+     * @return bool
+     */
+    public function isRoot(): bool;
+
+    /**
      * @function setIndex sets the ordinal position of this node if the collection of siblings is ordered
      *
      * If the index supplied is greater than any of the existing indices, then the node is tacked on to the end of the
