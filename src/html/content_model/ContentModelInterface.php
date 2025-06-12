@@ -5,9 +5,9 @@ namespace pvc\interfaces\html\content_model;
 interface ContentModelInterface
 {
     /**
-     * @param  ContentModelInterface  $child
+     * @param  ContentModelInterface  $content
      *
      * @return bool
      */
-    public function canAcceptChild(ContentModelInterface $child): bool;
+    public function canAcceptContent(ContentModelInterface $content): bool;
 }
