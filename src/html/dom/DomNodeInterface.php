@@ -2,11 +2,16 @@
 
 namespace pvc\interfaces\html\dom;
 
-use pvc\interfaces\struct\dto\DtoInterface;
+use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 interface DomNodeInterface
 {
-    public function canAccept(DtoInterface $dto): bool;
+    /**
+     * @return TreenodeInterface<DomNodeInterface>
+     */
+    public function getContainingTreenode(): TreenodeInterface;
+
+    public function canAcceptChild(DomNodeInterface $child): bool;
 
     public function renderFirstVisit(): string;
 

@@ -9,5 +9,5 @@ interface ContentModelInterface
      *
      * @return bool
      */
-    public function canAccept(ContentModelInterface $child): bool;
+    public function canAcceptChild(ContentModelInterface $child): bool;
 }
