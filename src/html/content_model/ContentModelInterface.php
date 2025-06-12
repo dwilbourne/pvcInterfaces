@@ -5,9 +5,9 @@ namespace pvc\interfaces\html\content_model;
 interface ContentModelInterface
 {
     /**
-     * @return array<int>
+     * @return int
      */
-    public function getContentCategories(): array;
+    public function getContentCategories(): int;
 
     /**
      * @param  ContentModelInterface  $content
