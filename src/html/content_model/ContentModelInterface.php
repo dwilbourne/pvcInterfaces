@@ -2,8 +2,15 @@
 
 namespace pvc\interfaces\html\content_model;
 
+use pvc\interfaces\html\dom\DomNodeInterface;
+
 interface ContentModelInterface
 {
+    /**
+     * @return DomNodeInterface
+     */
+    public function getContainingDomNode(): DomNodeInterface;
+
     /**
      * @return int
      */
