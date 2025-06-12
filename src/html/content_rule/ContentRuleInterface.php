@@ -2,15 +2,15 @@
 
 namespace pvc\interfaces\html\content_rule;
 
-use pvc\interfaces\html\dom\DomNodeInterface;
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
+use pvc\interfaces\html\element\ElementInterface;
 
 interface ContentRuleInterface
 {
     /**
-     * @param  TreenodeInterface<DomNodeInterface> $node
+     * @param  ElementInterface $childElement
      * @return bool
-     * return false if node fails the rule test (e.g. cannot be accepted into the tree)
+     * return false if child element fails the rule test (e.g. cannot be accepted
+     * into the DOM tree)
      */
-    public function ruleTest(TreenodeInterface $node): bool;
+    public function ruleTest(ElementInterface $childElement): bool;
 }
