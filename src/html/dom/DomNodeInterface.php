@@ -14,7 +14,7 @@ interface DomNodeInterface
 
     public function getContentModel(): ContentModelInterface;
 
-    public function canAcceptChild(DomNodeInterface $child): bool;
+    public function canAcceptContent(DomNodeInterface $content): bool;
 
     public function renderFirstVisit(): string;
 
