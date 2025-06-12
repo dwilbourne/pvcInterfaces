@@ -7,12 +7,11 @@ use pvc\interfaces\html\content_model\ContentModelInterface;
 interface ContentRuleInterface
 {
     /**
-     * @param  ContentModelInterface $parent
-     * @param  ContentModelInterface $child
+     * @param  ContentModelInterface $content
      * @return bool
      *
      * return false if child fails the rule test (e.g. cannot be accepted
      * into the DOM tree)
      */
-    public function ruleTest(ContentModelInterface $parent, ContentModelInterface $child): bool;
+    public function ruleTest(ContentModelInterface $content): bool;
 }
