@@ -14,7 +14,12 @@ interface ContentModelInterface
     /**
      * @return int
      */
-    public function getContentCategories(): int;
+    public function getMyContentCategories(): int;
+
+    /**
+     * @return int
+     */
+    public function getPermittedContentCategories(): int;
 
     /**
      * @param  ContentCategory  $category
