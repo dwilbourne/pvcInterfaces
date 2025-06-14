@@ -1,6 +1,6 @@
 <?php
 
-namespace pvc\interfaces\html\content_rule;
+namespace pvc\interfaces\html\rules;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
 
