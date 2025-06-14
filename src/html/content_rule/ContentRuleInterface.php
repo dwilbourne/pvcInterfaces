@@ -13,5 +13,5 @@ interface ContentRuleInterface
      * return false if child fails the rule test (e.g. cannot be accepted
      * into the DOM tree)
      */
-    public function ruleTest(ContentModelInterface $content): bool;
+    public function test(ContentModelInterface $content): bool;
 }
