@@ -10,12 +10,12 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeInterface
- * @template AttributeValueType
+ * @template ValueType
  */
 interface AttributeInterface
 {
     /**
-     * @param  AttributeValueType  ...$values
+     * @param  ValueType  ...$values
      *
      * @return void
      */
@@ -24,7 +24,7 @@ interface AttributeInterface
     /**
      * getValue
      *
-     * @return AttributeValueType
+     * @return ValueType
      */
     public function getValue();
 
