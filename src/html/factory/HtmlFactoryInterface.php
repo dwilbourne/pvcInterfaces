@@ -13,9 +13,9 @@ interface HtmlFactoryInterface
      *
      * @param string $elementName
      *
-     * @return ElementInterface|ElementInterface
+     * @return ElementInterface
      */
-    public function makeElement(string $elementName): ElementInterface|ElementInterface;
+    public function makeElement(string $elementName): ElementInterface;
 
     /**
      * @param  string|MsgInterface  $text
