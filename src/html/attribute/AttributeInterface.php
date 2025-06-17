@@ -10,7 +10,7 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeInterface
- * @template ValueType
+ * @phpstan-type ValueType int|string|bool
  */
 interface AttributeInterface
 {
