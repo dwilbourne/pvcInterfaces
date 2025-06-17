@@ -4,7 +4,6 @@ namespace pvc\interfaces\html\factory;
 
 use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\html\text\TextNodeInterface;
-use pvc\interfaces\msg\MsgInterface;
 
 interface HtmlFactoryInterface
 {
@@ -18,10 +17,9 @@ interface HtmlFactoryInterface
     public function makeElement(string $elementName): ElementInterface;
 
     /**
-     * @param  string|MsgInterface  $text
      *
      * @return TextNodeInterface
      */
-    public function makeTextNode(string|MsgInterface $text): TextNodeInterface;
+    public function makeTextNode(): TextNodeInterface;
 
 }
