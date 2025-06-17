@@ -29,11 +29,6 @@ interface AttributeInterface
     public function getValue();
 
     /**
-     * @return void
-     */
-    public function unsetValue(): void;
-
-    /**
      * render
      *
      * @return string
