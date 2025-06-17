@@ -45,9 +45,4 @@ interface ElementInterface extends DomNodeInterface
      * @return void
      */
     public function removeAttribute(string $name): void;
-
-    /**
-     * @return bool
-     */
-    public function isVoid(): bool;
 }
