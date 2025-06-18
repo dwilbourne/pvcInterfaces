@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\html\element;
 
+use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\dom\DomNodeInterface;
 
@@ -24,6 +25,13 @@ interface ElementInterface extends DomNodeInterface
      * @return ElementInterface
      */
     public function setAttribute(string $name, ...$values): ElementInterface;
+
+    /**
+     * @param  AttributeCustomDataInterface  $customData
+     *
+     * @return void
+     */
+    public function setCustomData(AttributeCustomDataInterface $customData): void;
 
     /**
      * @param  string  $name
