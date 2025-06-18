@@ -26,7 +26,7 @@ interface ElementInterface extends DomNodeInterface
 
     /**
      * @param  string  $name
-     * @param  string|null  $valueType
+     * @param  string  $valueType
      * value type can be one of the following: 'string', 'int', or 'bool'
      * @param  bool|null  $caseSensitive
      * @param  ValTesterInterface<string|int|bool>|null  $tester
@@ -35,7 +35,7 @@ interface ElementInterface extends DomNodeInterface
      */
     public function addCustomData(
         string $name,
-        ?string $valueType = null,
+        string $valueType,
         ?bool $caseSensitive = null,
         ?ValTesterInterface $tester = null
     ): void;
