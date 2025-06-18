@@ -24,7 +24,7 @@ interface AttributeInterface
     /**
      * getValue
      *
-     * @return ValueType
+     * @return array<ValueType>
      */
     public function getValue();
 
