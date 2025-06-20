@@ -9,12 +9,9 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\collection\IndexedElementInterface;
 use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
-use pvc\interfaces\struct\treesearch\NodeSearchableInterface;
-use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
 /**
  * Interface TreenodeInterface defines the operations for a generic tree node.
@@ -43,7 +40,7 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * @extends HasPayloadInterface<PayloadType>
  * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed, 'index': ?non-negative-int}
  */
-interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface, NodeVisitableInterface, IndexedElementInterface
+interface TreenodeInterface extends HasPayloadInterface
 {
     /**
      * isEmpty
@@ -147,20 +144,4 @@ interface TreenodeInterface extends HasPayloadInterface, NodeSearchableInterface
      * @return bool
      */
     public function isRoot(): bool;
-
-    /**
-     * @function setIndex sets the ordinal position of this node if the collection of siblings is ordered
-     *
-     * If the index supplied is greater than any of the existing indices, then the node is tacked on to the end of the
-     * list.
-     *
-     * @param non-negative-int $index
-     */
-    public function setIndex(int $index): void;
-
-    /**
-     * @function getIndex gets the ordinal position of this node in the ordered list of siblings
-     * @return non-negative-int
-     */
-    public function getIndex(): int;
 }
