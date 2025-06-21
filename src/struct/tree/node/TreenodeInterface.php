@@ -10,37 +10,17 @@ namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\dto\DtoInterface;
-use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Interface TreenodeInterface defines the operations for a generic tree node.
  *
- * This interface defines the operations common to all tree nodes.  Here are some of the design points.  The nodeid
- * property is immutable - the only way to set the nodeid is at hydration.  The same applies to the tree property,
- * which is set at construction time.
- *
- * This means that there are no setters for these properties.  Together, these two design points ensure that nodes
- * cannot be hydrated except in the context of belonging to a tree.  That in turn makes it a bit easier to enforce the
- * design point that all nodeids in a tree must be unique.
- *
- * The same is almost true for the parent property, but the difference is that the nodes are allowed to move around
- * within the same tree, e.g. you can change a node's parent as long as the new parent is in the same tree. It is
- * important to know that not only does a node keep a reference to its parent, but it also keeps a list of its
- * children.  So the setParent method is responsible not only for setting the parent property, but it also takes
- * the parent and adds a node to its child list.
- *
- * You will see a reference below to an object called a PayloadTester.  It is
- * not necessary to use a PayloadTester, but doing so will further ensure data integrity in your tree, since type
- * safety alone is not always enough to guarantee that each value is valid.
  *
  * @see CollectionInterface
  *
- * @template PayloadType
- * @extends HasPayloadInterface<PayloadType>
  * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed, 'index': ?non-negative-int}
  */
-interface TreenodeInterface extends HasPayloadInterface
+interface TreenodeInterface
 {
     /**
      * isEmpty
@@ -69,13 +49,13 @@ interface TreenodeInterface extends HasPayloadInterface
 
     /**
      * @function getParent
-     * @return TreenodeInterface<PayloadType>|null
+     * @return TreenodeInterface|null
      */
     public function getParent(): ?TreenodeInterface;
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeInterface<PayloadType>
+     * @return TreeInterface
      */
     public function getTree(): TreeInterface;
 
@@ -98,13 +78,13 @@ interface TreenodeInterface extends HasPayloadInterface
     /**
      * @function getChild
      * @param non-negative-int $nodeid
-     * @return TreenodeInterface<PayloadType>|null
+     * @return TreenodeInterface|null
      */
     public function getChild(int $nodeid): ?TreenodeInterface;
 
     /**
      * @function getChildren
-     * @return TreenodeCollectionInterface<PayloadType>
+     * @return TreenodeCollectionInterface
      */
     public function getChildren(): TreenodeCollectionInterface;
 

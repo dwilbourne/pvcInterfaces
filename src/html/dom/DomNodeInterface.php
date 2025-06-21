@@ -8,7 +8,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 interface DomNodeInterface
 {
     /**
-     * @return TreenodeInterface<DomNodeInterface>
+     * @return TreenodeInterface
      */
     public function getContainingTreenode(): TreenodeInterface;
 

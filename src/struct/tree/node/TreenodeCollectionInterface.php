@@ -7,8 +7,7 @@ namespace pvc\interfaces\struct\tree\node;
 use Iterator;
 
 /**
- * @template PayloadType
- * @extends Iterator<non-negative-int, TreenodeInterface<PayloadType>>
+ * @extends Iterator<non-negative-int, TreenodeInterface>
  */
 interface TreenodeCollectionInterface extends Iterator
 {
@@ -24,7 +23,7 @@ interface TreenodeCollectionInterface extends Iterator
 
     /**
      * @param non-negative-int $key
-     * @param TreenodeInterface<PayloadType> $treeNode
+     * @param TreenodeInterface $treeNode
      * @return void
      */
     public function add(int $key, TreenodeInterface $treeNode): void;
@@ -36,12 +35,12 @@ interface TreenodeCollectionInterface extends Iterator
     public function delete(int $key): void;
 
     /**
-     * @return array<TreenodeInterface<PayloadType>>
+     * @return array<TreenodeInterface>
      */
     public function getElements(): array;
 
     /**
-     * @param TreenodeInterface<PayloadType> $node
+     * @param TreenodeInterface $node
      * @return non-negative-int|false
      */
     public function getKey(TreenodeInterface $node): int|false;

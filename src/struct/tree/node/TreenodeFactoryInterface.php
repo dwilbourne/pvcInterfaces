@@ -12,18 +12,17 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Class TreenodeFactoryInterface
- * @template PayloadType
  */
 interface TreenodeFactoryInterface
 {
     /**
      * makeNode
-     * @return TreenodeInterface<PayloadType>
+     * @return TreenodeInterface
      */
     public function makeNode(): TreenodeInterface;
 
     /**
-     * @param TreeInterface<PayloadType> $tree
+     * @param TreeInterface $tree
      * @return void
      *
      * TreenodeFactory and Tree have reciprocal pointers and therefore a circular dependency.  The initialize
@@ -38,7 +37,7 @@ interface TreenodeFactoryInterface
     public function isInitialized(): bool;
 
     /**
-     * @return TreenodeCollectionFactoryInterface<PayloadType>
+     * @return TreenodeCollectionFactoryInterface
      * this is in here for an edge case where someone is trying to get the siblings of the root node of the tree.
      * Because root has no siblings (e.g. there is no parent and thus there is no collection of siblings) we need
      * to be abel to make an empty Collection to return when someone asks for the siblings of the root.
