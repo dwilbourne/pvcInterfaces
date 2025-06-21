@@ -96,18 +96,6 @@ interface TreenodeInterface extends HasPayloadInterface
     public function setParent(?int $parentId): void;
 
     /**
-     * @function isLeaf returns true if the node has no children
-     * @return bool
-     */
-    public function isLeaf(): bool;
-
-    /**
-     * @function hasChildren returns true of the node does have children
-     * @return bool
-     */
-    public function hasChildren(): bool;
-
-    /**
      * @function getChild
      * @param non-negative-int $nodeid
      * @return TreenodeInterface<PayloadType>|null
@@ -119,26 +107,6 @@ interface TreenodeInterface extends HasPayloadInterface
      * @return TreenodeCollectionInterface<PayloadType>
      */
     public function getChildren(): TreenodeCollectionInterface;
-
-    /**
-     * @function getSiblings
-     * @return TreenodeCollectionInterface<PayloadType>
-     */
-    public function getSiblings(): TreenodeCollectionInterface;
-
-    /**
-     * @function isDescendantOf
-     * @param TreenodeInterface<PayloadType> $node
-     * @return bool
-     */
-    public function isDescendantOf(TreenodeInterface $node): bool;
-
-    /**
-     * @function isAncestorOf
-     * @param TreenodeInterface<PayloadType> $node
-     * @return bool
-     */
-    public function isAncestorOf(TreenodeInterface $node): bool;
 
     /**
      * @return bool
