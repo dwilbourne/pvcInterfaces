@@ -21,20 +21,19 @@ namespace pvc\interfaces\struct\treesearch;
  * whatever is being searched so that is possible to move up and down the tree with integer pointers.  In turn,
  * this facilitates inserting the nodes into a pvc tree structure for further manipulation.
  *
- * @template NodeType of NodeVisitableInterface
- * @phpstan-type NodeMapRow array{parentId:non-negative-int|null, node:NodeVisitableInterface<NodeType>}
+ * @phpstan-type NodeMapRow array{parentId:non-negative-int|null, node:NodeVisitableInterface}
  */
 interface NodeMapInterface
 {
     /**
      * initialize with the start node
-     * @param NodeType $node
+     * @param NodeVisitableInterface $node
      */
     public function initialize(NodeVisitableInterface $node): void;
 
     /**
      * setNode
-     * @param NodeType $node
+     * @param NodeVisitableInterface $node
      * @param non-negative-int|null $parentId
      */
     public function setNode(NodeVisitableInterface $node, ?int $parentId): void;
@@ -49,14 +48,14 @@ interface NodeMapInterface
     /**
      * getParent
      * @param int $nodeId
-     * @return NodeType|null
+     * @return NodeVisitableInterface|null
      */
     public function getParent(int $nodeId): ?NodeVisitableInterface;
 
     /**
      * getNode
      * @param ?int $nodeId
-     * @return NodeType|null
+     * @return NodeVisitableInterface|null
      */
     public function getNode(?int $nodeId): ?NodeVisitableInterface;
 

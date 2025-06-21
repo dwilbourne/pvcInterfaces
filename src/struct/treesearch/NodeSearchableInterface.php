@@ -10,7 +10,6 @@ namespace pvc\interfaces\struct\treesearch;
 
 /**
  * Class NodeSearchableInterface
- * @template NodeType of NodeSearchableInterface
  */
 interface NodeSearchableInterface
 {
@@ -22,7 +21,7 @@ interface NodeSearchableInterface
 
     /**
      * getChildrenArray
-     * @return array<NodeType>
+     * @return array<NodeSearchableInterface>
      */
     public function getChildrenArray(): array;
 }
