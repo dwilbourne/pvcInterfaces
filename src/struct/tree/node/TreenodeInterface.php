@@ -84,9 +84,9 @@ interface TreenodeInterface
 
     /**
      * @function getChildren
-     * @return CollectionInterface<TreenodeInterface>
+     * @return TreenodeCollectionInterface
      */
-    public function getChildren(): CollectionInterface;
+    public function getChildren(): TreenodeCollectionInterface;
 
     /**
      * @return bool
