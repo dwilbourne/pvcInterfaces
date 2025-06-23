@@ -92,4 +92,10 @@ interface TreenodeInterface
      * @return bool
      */
     public function isRoot(): bool;
+
+    public function isDescendantOf(TreenodeInterface $node): bool;
+
+    public function isAncestorOf(TreenodeInterface $node): bool;
+
+    public function isLeaf(): bool;
 }
