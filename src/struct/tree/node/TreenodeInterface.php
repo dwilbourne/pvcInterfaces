@@ -98,4 +98,6 @@ interface TreenodeInterface
     public function isAncestorOf(TreenodeInterface $node): bool;
 
     public function isLeaf(): bool;
+
+    public function hasChildren(): bool;
 }
