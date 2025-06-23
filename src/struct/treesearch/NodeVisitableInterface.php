@@ -46,4 +46,11 @@ interface NodeVisitableInterface extends NodeSearchableInterface
      * @return int|null
      */
     public function getParentId(): ?int;
+
+    /**
+     * getChildrenArray
+     * @return array<NodeVisitableInterface>
+     */
+    public function getChildrenArray(): array;
+
 }
