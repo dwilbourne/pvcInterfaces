@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
+use pvc\interfaces\struct\tree\tree\TreeInterface;
+
 /**
  * Class TreenodeFactoryInterface
  */
@@ -18,4 +20,6 @@ interface TreenodeFactoryInterface
      * @return TreenodeInterface
      */
     public function makeNode(): TreenodeInterface;
+
+    public function initialize(TreeInterface $tree): void;
 }
