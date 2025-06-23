@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
+use pvc\interfaces\struct\collection\CollectionFactoryInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
@@ -22,4 +23,9 @@ interface TreenodeFactoryInterface
     public function makeNode(): TreenodeInterface;
 
     public function initialize(TreeInterface $tree): void;
+
+    /**
+     * @return CollectionFactoryInterface<TreenodeInterface>
+     */
+    public function getTreenodeCollectionFactory(): CollectionFactoryInterface;
 }
