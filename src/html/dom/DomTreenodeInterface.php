@@ -10,4 +10,6 @@ interface DomTreenodeInterface extends TreenodeInterface
 
     public function getDomNode(): DomNodeInterface;
 
+    public function getParent(): ?DomTreenodeInterface;
+
 }
