@@ -8,4 +8,6 @@ interface DomTreenodeInterface extends TreenodeInterface
 {
     public function canAcceptContent(DomTreenodeInterface $domTreenode): bool;
 
+    public function getDomNode(): DomNodeInterface;
+
 }
