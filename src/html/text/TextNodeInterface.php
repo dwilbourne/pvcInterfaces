@@ -13,4 +13,6 @@ interface TextNodeInterface extends DomNodeInterface
      * @return void
      */
     public function setLocale(LocaleInterface $locale): void;
+
+    public function getName(): string;
 }
