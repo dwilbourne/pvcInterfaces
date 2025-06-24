@@ -10,6 +10,8 @@ interface DomTreenodeInterface extends TreenodeInterface
 
     public function getDomNode(): DomNodeInterface;
 
+    public function setDomNode(DomNodeInterface $domNode): void;
+
     public function getParent(): ?DomTreenodeInterface;
 
 }
