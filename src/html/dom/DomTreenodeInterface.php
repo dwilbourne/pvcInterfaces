@@ -6,7 +6,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 interface DomTreenodeInterface extends TreenodeInterface
 {
-    public function canAcceptContent(DomTreenodeInterface $domTreenode): bool;
+    public function canAcceptContent(DomNodeInterface $domNode): bool;
 
     public function getDomNode(): DomNodeInterface;
 
