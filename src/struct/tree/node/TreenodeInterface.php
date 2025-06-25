@@ -21,7 +21,7 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  *
  * @see CollectionInterface
  *
- * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': PayloadType, 'index': ?non-negative-int}
+ * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed, 'index': ?non-negative-int}
  */
 interface TreenodeInterface extends HasPayloadInterface
 {
