@@ -25,13 +25,13 @@ interface HasPayloadInterface
 {
     /**
      * setValue
-     * @param PayloadType|null $value
+     * @param PayloadType $value
      */
     public function setPayload($value): void;
 
     /**
      * getValue
-     * @return PayloadType|null
+     * @return PayloadType
      */
     public function getPayload();
 
