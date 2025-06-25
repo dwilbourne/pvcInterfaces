@@ -13,19 +13,25 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Class TreenodeFactoryInterface
+ * @template PayloadType
  */
 interface TreenodeFactoryInterface
 {
     /**
      * makeNode
-     * @return TreenodeInterface
+     * @return TreenodeInterface<PayloadType>
      */
     public function makeNode(): TreenodeInterface;
 
+    /**
+     * @param  TreeInterface<PayloadType>  $tree
+     *
+     * @return void
+     */
     public function initialize(TreeInterface $tree): void;
 
     /**
-     * @return CollectionFactoryInterface<TreenodeInterface>
+     * @return CollectionFactoryInterface<TreenodeInterface<PayloadType>>
      */
     public function getTreenodeCollectionFactory(): CollectionFactoryInterface;
 }

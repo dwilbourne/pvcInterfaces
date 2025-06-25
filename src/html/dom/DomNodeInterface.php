@@ -5,11 +5,17 @@ namespace pvc\interfaces\html\dom;
 use pvc\interfaces\html\content_model\ContentModelInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
+/**
+ * @extends TreenodeInterface<DomNodeInterface>
+ */
 interface DomNodeInterface extends TreenodeInterface
 {
     public function getName() : string;
 
-    public function getContainingDomTreenode() : DomTreenodeInterface;
+    /**
+     * @return TreenodeInterface<DomNodeInterface>
+     */
+    public function getContainingTreenode() : TreenodeInterface;
 
     public function canAcceptContent(DomNodeInterface $content): bool;
 

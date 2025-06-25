@@ -10,17 +10,20 @@ namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\dto\DtoInterface;
+use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Interface TreenodeInterface defines the operations for a generic tree node.
  *
+ * @template PayloadType
+ * @extends HasPayloadInterface<PayloadType>
  *
  * @see CollectionInterface
  *
- * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'index': ?non-negative-int}
+ * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': PayloadType, 'index': ?non-negative-int}
  */
-interface TreenodeInterface
+interface TreenodeInterface extends HasPayloadInterface
 {
     /**
      * isEmpty
@@ -49,13 +52,13 @@ interface TreenodeInterface
 
     /**
      * @function getParent
-     * @return TreenodeInterface|null
+     * @return TreenodeInterface<PayloadType>|null
      */
     public function getParent(): ?TreenodeInterface;
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeInterface
+     * @return TreeInterface<PayloadType>
      */
     public function getTree(): TreeInterface;
 
@@ -78,13 +81,13 @@ interface TreenodeInterface
     /**
      * @function getChild
      * @param non-negative-int $nodeid
-     * @return TreenodeInterface|null
+     * @return TreenodeInterface<PayloadType>|null
      */
     public function getChild(int $nodeid): ?TreenodeInterface;
 
     /**
      * @function getChildren
-     * @return CollectionInterface<TreenodeInterface>
+     * @return CollectionInterface<TreenodeInterface<PayloadType>>
      */
     public function getChildren(): CollectionInterface;
 
@@ -93,8 +96,18 @@ interface TreenodeInterface
      */
     public function isRoot(): bool;
 
+    /**
+     * @param  TreenodeInterface<PayloadType>  $node
+     *
+     * @return bool
+     */
     public function isDescendantOf(TreenodeInterface $node): bool;
 
+    /**
+     * @param  TreenodeInterface<PayloadType>  $node
+     *
+     * @return bool
+     */
     public function isAncestorOf(TreenodeInterface $node): bool;
 
     public function isLeaf(): bool;

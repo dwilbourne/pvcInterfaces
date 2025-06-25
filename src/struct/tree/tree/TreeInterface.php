@@ -21,6 +21,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
+ * @template PayloadType
  * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
  */
 interface TreeInterface
@@ -46,7 +47,7 @@ interface TreeInterface
     public function getTreeId(): int;
 
     /**
-     * @return TreenodeFactoryInterface
+     * @return TreenodeFactoryInterface<PayloadType>
      * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
      * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
      * make a collection on the fly and put the root node into it.  TreenodeFactory has a CollectionFactory, so
@@ -70,26 +71,26 @@ interface TreeInterface
 
     /**
      * @function getNodes
-     * @return array<TreenodeInterface>
+     * @return array<TreenodeInterface<PayloadType>>
      */
     public function getNodes(): array;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int|null $nodeId
-     * @return TreenodeInterface|null
+     * @return TreenodeInterface<PayloadType>|null
      */
     public function getNode(?int $nodeId): TreenodeInterface|null;
 
     /**
      * @function getRoot
-     * @return   TreenodeInterface|null
+     * @return   TreenodeInterface<PayloadType>|null
      */
     public function getRoot(): ?TreenodeInterface;
 
     /**
      * rootTest
-     * @param TreenodeInterface|(DtoInterface&TreenodeDtoShape) $nodeItem
+     * @param TreenodeInterface<PayloadType>|(DtoInterface&TreenodeDtoShape) $nodeItem
      * @return bool
      */
     public function rootTest(TreenodeInterface|DtoInterface $nodeItem): bool;

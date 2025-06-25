@@ -12,6 +12,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
  * Class TreeFactoryInterface
+ * @template PayloadType
  * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
  */
 interface TreeFactoryInterface
@@ -20,7 +21,7 @@ interface TreeFactoryInterface
      * makeTree
      * @param int $treeId
      * @param ?array<TreenodeDtoShape> $dtoArray
-     * @return TreeInterface
+     * @return TreeInterface<PayloadType>
      */
     public static function makeTree(
         int                        $treeId,
