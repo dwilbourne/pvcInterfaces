@@ -11,13 +11,6 @@ namespace pvc\interfaces\struct\treesearch;
 use Iterator;
 
 /**
- * Class SearchInterface
- * There is nothing about the interface that requires uniformity of type between nodes.  The implementation
- * for a kind of search may require that all nodes share a common interface, but the search interface itself does not.
- * @extends Iterator<mixed>
- */
-
-/**
  * @template NodeType of NodeSearchableInterface
  * @extends Iterator<non-negative-int, NodeType>
  */
