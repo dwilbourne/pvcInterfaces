@@ -12,14 +12,11 @@ interface ContentModelInterface
     public function getContainingDomNode(): DomNodeInterface;
 
     /**
+     * @param int $domain   Either the content categories to which I belong or
+     *                      the content categories that my children must belong to
      * @return int
      */
-    public function getMyContentCategories(): int;
-
-    /**
-     * @return int
-     */
-    public function getPermittedContentCategories(): int;
+    public function getContentCategories(int $domain): int;
 
     /**
      * @param  ContentCategory  $category
