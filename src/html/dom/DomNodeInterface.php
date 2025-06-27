@@ -14,7 +14,7 @@ interface DomNodeInterface
      */
     public function getContainingTreenode() : TreenodeInterface;
 
-    public function canAcceptContent(DomNodeInterface $content): bool;
+    public function canAcceptContent(DomNodeInterface $domNode): bool;
 
     public function getContentModel(): ContentModelInterface;
 
