@@ -5,7 +5,7 @@ namespace pvc\interfaces\html\text;
 use pvc\interfaces\html\dom\DomElementInterface;
 use pvc\interfaces\intl\LocaleInterface;
 
-interface TextElementInterface extends DomElementInterface
+interface DomTextInterface extends DomElementInterface
 {
     /**
      * @param  LocaleInterface  $locale
