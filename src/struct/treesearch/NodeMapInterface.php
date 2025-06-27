@@ -63,7 +63,7 @@ interface NodeMapInterface
 
     /**
      * getNodeMapArray
-     * @return array<non-negative-int, NodeMapRow>
+     * @return array<NodeMapRow>
      */
     public function getNodeMapArray(): array;
 }
