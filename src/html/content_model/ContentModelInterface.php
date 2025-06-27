@@ -2,14 +2,14 @@
 
 namespace pvc\interfaces\html\content_model;
 
-use pvc\interfaces\html\dom\DomNodeInterface;
+use pvc\interfaces\html\dom\DomElementInterface;
 
 interface ContentModelInterface
 {
     /**
-     * @return DomNodeInterface
+     * @return DomElementInterface
      */
-    public function getContainingDomNode(): DomNodeInterface;
+    public function getContainingDomNode(): DomElementInterface;
 
     /**
      * @param  ContentModelInterface  $content

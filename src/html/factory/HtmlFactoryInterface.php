@@ -3,7 +3,7 @@
 namespace pvc\interfaces\html\factory;
 
 use pvc\interfaces\html\element\ElementInterface;
-use pvc\interfaces\html\text\TextNodeInterface;
+use pvc\interfaces\html\text\TextElementInterface;
 
 interface HtmlFactoryInterface
 {
@@ -18,8 +18,8 @@ interface HtmlFactoryInterface
 
     /**
      *
-     * @return TextNodeInterface
+     * @return TextElementInterface
      */
-    public function makeTextNode(): TextNodeInterface;
+    public function makeTextNode(): TextElementInterface;
 
 }
