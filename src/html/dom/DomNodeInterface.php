@@ -5,10 +5,7 @@ namespace pvc\interfaces\html\dom;
 use pvc\interfaces\html\content_model\ContentModelInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
-/**
- * @extends TreenodeInterface<DomNodeInterface>
- */
-interface DomNodeInterface extends TreenodeInterface
+interface DomNodeInterface
 {
     public function getName() : string;
 

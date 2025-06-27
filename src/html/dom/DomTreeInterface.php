@@ -10,5 +10,5 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  */
 interface DomTreeInterface extends TreeInterface
 {
-    public function render(?LocaleInterface $locale = null): string;
+    public function render(LocaleInterface $locale): string;
 }
