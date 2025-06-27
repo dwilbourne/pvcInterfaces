@@ -3,16 +3,15 @@
 namespace pvc\interfaces\html\dom;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 interface DomElementInterface
 {
     public function getName() : string;
 
     /**
-     * @return TreenodeInterface<DomElementInterface>
+     * @return DomNodeInterface
      */
-    public function getContainingTreenode() : TreenodeInterface;
+    public function getContainingTreenode() : DomNodeInterface;
 
     public function canAcceptContent(DomElementInterface $domNode): bool;
 
