@@ -12,6 +12,11 @@ interface ContentModelInterface
     public function getContainingDomElement(): DomElementInterface;
 
     /**
+     * @return array<ContentCategory>
+     */
+    public function getCategories(): array;
+
+    /**
      * @param  ContentModelInterface  $content
      *
      * @return bool
