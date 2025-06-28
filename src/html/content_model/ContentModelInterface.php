@@ -9,7 +9,7 @@ interface ContentModelInterface
     /**
      * @return DomElementInterface
      */
-    public function getContainingDomNode(): DomElementInterface;
+    public function getContainingDomElement(): DomElementInterface;
 
     /**
      * @param  ContentModelInterface  $content
