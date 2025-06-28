@@ -6,7 +6,7 @@ use pvc\interfaces\intl\LocaleInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
- * @extends TreeInterface<DomNodeInterface>
+ * @extends TreeInterface<DomElementInterface>
  */
 interface DomTreeInterface extends TreeInterface
 {
