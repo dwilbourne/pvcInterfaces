@@ -10,8 +10,8 @@ interface ContentRuleInterface
      * @param  ContentModelInterface $content
      * @return bool
      *
-     * return false if child fails the rule test (e.g. cannot be accepted
-     * into the DOM tree)
+     * return false if content fails the rule test (e.g. cannot be accepted
+     * into the DOM tree in this position)
      */
     public function test(ContentModelInterface $content): bool;
 }
