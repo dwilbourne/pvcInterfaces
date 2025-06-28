@@ -12,9 +12,11 @@ interface ContentModelInterface
     public function getContainingDomElement(): DomElementInterface;
 
     /**
-     * @return array<ContentCategory>
+     * @return int
+     * returns a bitmask of the content categories to which this model
+     * belongs.
      */
-    public function getCategories(): array;
+    public function getCategories(): int;
 
     /**
      * @param  ContentModelInterface  $content
