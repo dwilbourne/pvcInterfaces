@@ -3,7 +3,6 @@
 namespace pvc\interfaces\html\dom;
 
 use pvc\interfaces\html\attribute\AttributeInterface;
-use pvc\interfaces\html\content_model\ContentCategory;
 use pvc\interfaces\html\content_model\ContentModelInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -17,13 +16,6 @@ interface DomElementInterface
      * @return AttributeInterface|null
      */
     public function getAttribute(string $name): ?AttributeInterface;
-
-    /**
-     * @param  ContentCategory  $category
-     *
-     * @return ContentCategory|null
-     */
-    public function getCategory(ContentCategory $category) : ?ContentCategory;
 
     /**
      * @return TreenodeInterface<DomElementInterface>

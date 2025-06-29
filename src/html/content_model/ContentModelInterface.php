@@ -19,6 +19,15 @@ interface ContentModelInterface
     public function getCategories(): int;
 
     /**
+     * @param  ContentCategory  $category
+     *
+     * @return bool
+     */
+    public function hasCategory(ContentCategory $category) : bool;
+
+
+
+    /**
      * @param  ContentModelInterface  $content
      *
      * @return bool
