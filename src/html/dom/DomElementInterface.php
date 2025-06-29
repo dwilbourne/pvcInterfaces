@@ -2,12 +2,20 @@
 
 namespace pvc\interfaces\html\dom;
 
+use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\content_model\ContentModelInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 interface DomElementInterface
 {
     public function getName() : string;
+
+    /**
+     * @param  string  $name
+     *
+     * @return AttributeInterface|null
+     */
+    public function getAttribute(string $name): ?AttributeInterface;
 
     /**
      * @return TreenodeInterface<DomElementInterface>
