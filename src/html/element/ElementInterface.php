@@ -27,13 +27,6 @@ interface ElementInterface extends DomElementInterface
     public function setAttribute(string $name, ...$values): ElementInterface;
 
     /**
-     * @param  string  $name
-     *
-     * @return AttributeInterface|null
-     */
-    public function getAttribute(string $name): ?AttributeInterface;
-
-    /**
      * @param  AttributeCustomDataInterface  $customData
      *
      * @return void
