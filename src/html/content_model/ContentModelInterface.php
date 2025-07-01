@@ -24,18 +24,22 @@ interface ContentModelInterface
     public function getCategories(): int;
 
     /**
+     * @param  ContentModelInterface  $content
+     *
+     * @return bool
+     */
+    public function canAcceptContent(ContentModelInterface $content): bool;
+
+    /**
      * @param  ContentCategory  $category
      *
      * @return bool
      */
     public function hasCategory(ContentCategory $category) : bool;
 
+    public function hasAttribute(string $attributeName) : bool;
+
+    public function hasName(string $name) : bool;
 
 
-    /**
-     * @param  ContentModelInterface  $content
-     *
-     * @return bool
-     */
-    public function canAcceptContent(ContentModelInterface $content): bool;
 }
