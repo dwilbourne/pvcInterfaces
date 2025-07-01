@@ -17,6 +17,13 @@ interface ContentModelInterface
     public function getContainingDomElement(): DomElementInterface;
 
     /**
+     * @param  array<ContentCategory>  $categories
+     *
+     * @return int
+     */
+    public function coalesceContentCategories(array $categories): int;
+
+    /**
      * @return int
      * returns a bitmask of the content categories to which this model
      * belongs.
