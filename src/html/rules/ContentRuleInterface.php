@@ -6,12 +6,17 @@ use pvc\interfaces\html\content_model\ContentModelInterface;
 
 interface ContentRuleInterface
 {
+    public const int IS_PERMITTED = 1;
+    public const int IS_NOT_APPLICABLE = 0;
+    public const int IS_NOT_PERMITTED = -1;
+
+
     /**
      * @param  ContentModelInterface $content
      * @return bool
      *
-     * return false if content fails the rule test (e.g. cannot be accepted
-     * into the DOM tree in this position)
+     * returns one of the constants defined above.
+     * @return int<-1, 1>
      */
-    public function test(ContentModelInterface $content): bool;
+    public function test(ContentModelInterface $content): int;
 }
