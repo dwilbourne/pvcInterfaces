@@ -21,7 +21,7 @@ interface ContentModelInterface
      *
      * @return int
      */
-    public function coalesceContentCategories(array $categories): int;
+    public static function coalesceContentCategories(array $categories): int;
 
     /**
      * @return int
