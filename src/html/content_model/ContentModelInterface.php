@@ -6,6 +6,11 @@ use pvc\interfaces\html\dom\DomElementInterface;
 
 interface ContentModelInterface
 {
+
+    public const int IS_PERMITTED = 1;
+    public const int IS_NOT_APPLICABLE = 0;
+    public const int IS_NOT_PERMITTED = -1;
+
     /**
      * @return DomElementInterface
      */
