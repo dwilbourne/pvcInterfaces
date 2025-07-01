@@ -11,7 +11,7 @@ interface ContentRuleInterface
      * @return bool
      *
      * returns one of the constants defined in ContentModelInterface
-     * @return int<-1, 1>
+     * @return int
      */
     public function test(ContentModelInterface $content): int;
 }
