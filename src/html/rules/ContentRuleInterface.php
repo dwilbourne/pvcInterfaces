@@ -2,17 +2,14 @@
 
 namespace pvc\interfaces\html\rules;
 
-/**
- * @template Characteristic
- */
+use pvc\interfaces\html\content_model\ContentModelInterface;
+
 interface ContentRuleInterface
 {
     /**
-     * @param  Characteristic ...$content
-     * @return bool
-     *
+     * @param  ContentModelInterface $content
      * returns one of the constants defined in ContentModelInterface
      * @return int
      */
-    public function test(...$content): int;
+    public function test(ContentModelInterface $content): int;
 }
