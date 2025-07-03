@@ -35,7 +35,7 @@ interface TreenodeFactoryInterface
     public function initialize(TreeInterface $tree): void;
 
     /**
-     * @return CollectionFactoryInterface<TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>, CollectionType>
+     * @return CollectionFactoryInterface<TreenodeType, CollectionType>
      */
     public function getTreenodeCollectionFactory(): CollectionFactoryInterface;
 }
