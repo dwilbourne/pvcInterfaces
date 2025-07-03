@@ -28,7 +28,7 @@ interface TreenodeFactoryInterface
     public function makeNode(): TreenodeInterface;
 
     /**
-     * @param  TreeInterface<PayloadType, TreenodeType, TreeType, CollectionType>  $tree
+     * @param  TreeType  $tree
      *
      * @return void
      */
