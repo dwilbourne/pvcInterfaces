@@ -23,7 +23,7 @@ interface TreenodeFactoryInterface
 {
     /**
      * makeNode
-     * @return TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>
+     * @return TreenodeType
      */
     public function makeNode(): TreenodeInterface;
 
