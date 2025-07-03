@@ -9,7 +9,19 @@ namespace pvc\interfaces\struct\collection;
 interface CollectionIndexedInterface extends CollectionInterface
 {
     /**
+     * @param non-negative-int $index
      * @return ElementType
      */
-    public function getNthElement();
+    public function getNthElement(int $index);
+
+    /**
+     * @return ElementType
+     */
+    public function getFirstElement();
+
+    /**
+     * @return ElementType
+     */
+
+    public function getLastElement();
 }
