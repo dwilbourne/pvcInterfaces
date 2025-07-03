@@ -24,9 +24,6 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * @extends HasPayloadInterface<PayloadType>
  *
  * @see CollectionInterface
- *
- * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed}
- * @phpstan-type TreenodeOrderedDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed, 'index': non-negative-int}
  */
 interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
 {
@@ -77,14 +74,14 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
     public function isRoot(): bool;
 
     /**
-     * @param  TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>  $node
+     * @param  TreenodeType  $node
      *
      * @return bool
      */
     public function isDescendantOf(TreenodeInterface $node): bool;
 
     /**
-     * @param  TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>  $node
+     * @param  TreenodeType  $node
      *
      * @return bool
      */
@@ -97,26 +94,26 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeInterface<PayloadType, TreenodeType, TreeType, CollectionType>
+     * @return TreeType
      */
     public function getTree(): TreeInterface;
 
     /**
      * @function getParent
-     * @return TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>|null
+     * @return TreenodeType|null
      */
     public function getParent(): ?TreenodeInterface;
 
     /**
      * @function getChild
      * @param non-negative-int $nodeid
-     * @return TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>|null
+     * @return TreenodeType|null
      */
     public function getChild(int $nodeid): ?TreenodeInterface;
 
     /**
      * @function getChildren
-     * @return CollectionType<TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>>
+     * @return CollectionType<TreenodeType>
      */
     public function getChildren(): CollectionInterface;
 
