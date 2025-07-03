@@ -11,13 +11,14 @@ namespace pvc\interfaces\struct\collection;
 /**
  * Class CollectionFactoryInterface
  * @template ElementType
+ * @template CollectionType of CollectionInterface
  */
 interface CollectionFactoryInterface
 {
     /**
      * makeCollection
      * @param array<ElementType> $elements
-     * @return CollectionInterface<ElementType>
+     * @return CollectionType<ElementType>
      */
     public function makeCollection(array $elements): CollectionInterface;
 }

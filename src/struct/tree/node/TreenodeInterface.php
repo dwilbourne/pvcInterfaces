@@ -9,23 +9,26 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\collection\IndexedElementInterface;
 use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
+use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
 /**
  * Interface TreenodeInterface defines the operations for a generic tree node.
  *
  * @template PayloadType
+ * @template TreenodeType of TreenodeInterface
+ * @template TreeType of TreeInterface
+ * @template CollectionType of CollectionInterface
  * @extends HasPayloadInterface<PayloadType>
  *
  * @see CollectionInterface
  *
- * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed, 'index': ?non-negative-int}
+ * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed}
  */
-interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface, IndexedElementInterface
+interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
 {
     /**
      * isEmpty
@@ -36,7 +39,7 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface,
 
     /**
      * hydrate
-     * @param TreenodeDtoShape&DtoInterface $dto
+     * @param DtoInterface $dto
      */
     public function hydrate(DtoInterface $dto): void;
 
@@ -51,18 +54,6 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface,
      * @return non-negative-int|null
      */
     public function getParentId(): ?int;
-
-    /**
-     * @function getParent
-     * @return TreenodeInterface<PayloadType>|null
-     */
-    public function getParent(): ?TreenodeInterface;
-
-    /**
-     * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeInterface<PayloadType>
-     */
-    public function getTree(): TreeInterface;
 
     /**
      * getTreeId
@@ -81,32 +72,19 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface,
     public function setParent(?int $parentId): void;
 
     /**
-     * @function getChild
-     * @param non-negative-int $nodeid
-     * @return TreenodeInterface<PayloadType>|null
-     */
-    public function getChild(int $nodeid): ?TreenodeInterface;
-
-    /**
-     * @function getChildren
-     * @return CollectionInterface<TreenodeInterface<PayloadType>>
-     */
-    public function getChildren(): CollectionInterface;
-
-    /**
      * @return bool
      */
     public function isRoot(): bool;
 
     /**
-     * @param  TreenodeInterface<PayloadType>  $node
+     * @param  TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>  $node
      *
      * @return bool
      */
     public function isDescendantOf(TreenodeInterface $node): bool;
 
     /**
-     * @param  TreenodeInterface<PayloadType>  $node
+     * @param  TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>  $node
      *
      * @return bool
      */
@@ -115,4 +93,31 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface,
     public function isLeaf(): bool;
 
     public function hasChildren(): bool;
+
+
+    /**
+     * @function getTree gets a reference to the tree to which the node belongs
+     * @return TreeInterface<PayloadType, TreenodeType, TreeType, CollectionType>
+     */
+    public function getTree(): TreeInterface;
+
+    /**
+     * @function getParent
+     * @return TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>|null
+     */
+    public function getParent(): ?TreenodeInterface;
+
+    /**
+     * @function getChild
+     * @param non-negative-int $nodeid
+     * @return TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>|null
+     */
+    public function getChild(int $nodeid): ?TreenodeInterface;
+
+    /**
+     * @function getChildren
+     * @return CollectionType<TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>>
+     */
+    public function getChildren(): CollectionInterface;
+
 }

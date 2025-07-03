@@ -9,29 +9,33 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionFactoryInterface;
+use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Class TreenodeFactoryInterface
  * @template PayloadType
+ * @template TreenodeType of TreenodeInterface
+ * @template TreeType of TreeInterface
+ * @template CollectionType of CollectionInterface
  */
 interface TreenodeFactoryInterface
 {
     /**
      * makeNode
-     * @return TreenodeInterface<PayloadType>
+     * @return TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>
      */
     public function makeNode(): TreenodeInterface;
 
     /**
-     * @param  TreeInterface<PayloadType>  $tree
+     * @param  TreeInterface<PayloadType, TreenodeType, TreeType, CollectionType>  $tree
      *
      * @return void
      */
     public function initialize(TreeInterface $tree): void;
 
     /**
-     * @return CollectionFactoryInterface<TreenodeInterface<PayloadType>>
+     * @return CollectionFactoryInterface<TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>, CollectionType>
      */
     public function getTreenodeCollectionFactory(): CollectionFactoryInterface;
 }

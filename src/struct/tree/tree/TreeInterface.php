@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
+use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
@@ -22,6 +23,9 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * must have a single parent.
  *
  * @template PayloadType
+ * @template TreenodeType of TreenodeInterface
+ * @template TreeType of TreeInterface
+ * @template CollectionType of CollectionInterface
  * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
  */
 interface TreeInterface
@@ -47,7 +51,7 @@ interface TreeInterface
     public function getTreeId(): int;
 
     /**
-     * @return TreenodeFactoryInterface<PayloadType>
+     * @return TreenodeFactoryInterface<PayloadType, TreenodeType, TreeType, CollectionType>
      * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
      * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
      * make a collection on the fly and put the root node into it.  TreenodeFactory has a CollectionFactory, so
@@ -58,7 +62,7 @@ interface TreeInterface
     /**
      * addNode puts a dto into the tree's list of nodes.
      *
-     * @param TreenodeDtoShape&DtoInterface $dto
+     * @param DtoInterface $dto
      */
     public function addNode(DtoInterface $dto): void;
 
@@ -71,26 +75,26 @@ interface TreeInterface
 
     /**
      * @function getNodes
-     * @return array<TreenodeInterface<PayloadType>>
+     * @return array<TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>>
      */
     public function getNodes(): array;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param non-negative-int|null $nodeId
-     * @return TreenodeInterface<PayloadType>|null
+     * @return TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>|null
      */
     public function getNode(?int $nodeId): TreenodeInterface|null;
 
     /**
      * @function getRoot
-     * @return   TreenodeInterface<PayloadType>|null
+     * @return   TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>|null
      */
     public function getRoot(): ?TreenodeInterface;
 
     /**
      * rootTest
-     * @param TreenodeInterface<PayloadType>|(DtoInterface&TreenodeDtoShape) $nodeItem
+     * @param TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>|DtoInterface $nodeItem
      * @return bool
      */
     public function rootTest(TreenodeInterface|DtoInterface $nodeItem): bool;
