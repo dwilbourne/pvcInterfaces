@@ -12,7 +12,6 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
-use pvc\interfaces\struct\tree\tree\TreeUnorderedInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
 /**
@@ -120,4 +119,8 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
      */
     public function getChildren(): CollectionInterface;
 
+    /**
+     * @return array<TreenodeType>
+     */
+    public function getChildrenArray(): array;
 }
