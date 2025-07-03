@@ -6,7 +6,7 @@ namespace pvc\interfaces\struct\collection;
  * @template ElementType
  * @extends CollectionInterface<ElementType>
  */
-interface CollectionIndexedInterface extends CollectionInterface
+interface CollectionOrderedInterface extends CollectionInterface
 {
     /**
      * @param non-negative-int $index
