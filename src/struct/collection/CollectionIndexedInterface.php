@@ -10,17 +10,17 @@ interface CollectionIndexedInterface extends CollectionInterface
 {
     /**
      * @param non-negative-int $index
-     * @return ElementType
+     * @return ElementType|null
      */
     public function getNth(int $index);
 
     /**
-     * @return ElementType
+     * @return ElementType|null
      */
     public function getFirst();
 
     /**
-     * @return ElementType
+     * @return ElementType|null
      */
 
     public function getLast();
