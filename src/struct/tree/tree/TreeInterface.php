@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
+use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -25,7 +25,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * @template PayloadType
  * @template TreenodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
- * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
+ * @phpstan-import-type TreenodeDto from TreenodeInterface
  */
 interface TreeInterface
 {
@@ -37,7 +37,7 @@ interface TreeInterface
 
     /**
      * @param non-negative-int $treeId
-     * @param array<TreenodeDtoShape> $dtos
+     * @param array<TreenodeDto> $dtos
      * @return void
      * initializes the tree so it is ready to use
      */
@@ -61,7 +61,7 @@ interface TreeInterface
     /**
      * addNode puts a dto into the tree's list of nodes.
      *
-     * @param TreenodeDtoShape $dto
+     * @param TreenodeDto $dto
      */
     public function addNode($dto): void;
 
@@ -93,10 +93,12 @@ interface TreeInterface
 
     /**
      * rootTest
-     * @param TreenodeType|TreenodeDtoShape $nodeItem
+     *
+     * @param  TreenodeType $nodeItem
+     *
      * @return bool
      */
-    public function rootTest($nodeItem): bool;
+    public function rootTest(TreenodeInterface|DtoInterface $nodeItem): bool;
 
     /**
      * @function isEmpty

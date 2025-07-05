@@ -10,7 +10,6 @@ namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
@@ -22,7 +21,7 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * @template CollectionType of CollectionInterface
  * @extends HasPayloadInterface<PayloadType>
  *
- * @phpstan-type TreenodeDtoShape object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed, 'index'?:non-negative-int}
+ * @phpstan-type TreenodeDto object{'nodeId': non-negative-int, 'parentId': ?non-negative-int, 'treeId': ?non-negative-int, 'payload': mixed, 'index'?:non-negative-int}
  *
  * @see CollectionInterface
  */
@@ -37,7 +36,7 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
 
     /**
      * hydrate
-     * @param TreenodeDtoShape $dto
+     * @param TreenodeDto $dto
      */
     public function hydrate($dto): void;
 
