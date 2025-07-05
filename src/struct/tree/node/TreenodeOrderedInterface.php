@@ -23,7 +23,8 @@ interface TreenodeOrderedInterface extends TreenodeInterface, IndexedElementInte
     public function getLastChild(): ?TreenodeOrderedInterface;
 
     /**
+     * @param non-negative-int $n
      * @return TreenodeOrderedInterface<PayloadType>|null
      */
-    public function getNthChild(): ?TreenodeOrderedInterface;
+    public function getNthChild(int $n): ?TreenodeOrderedInterface;
 }
