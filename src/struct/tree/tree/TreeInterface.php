@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\dto\DtoInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -36,7 +36,7 @@ interface TreeInterface
 
     /**
      * @param non-negative-int $treeId
-     * @param array<DtoInterface> $dtos
+     * @param array<TreenodeDtoInterface> $dtos
      * @return void
      * initializes the tree so it is ready to use
      */
@@ -60,9 +60,9 @@ interface TreeInterface
     /**
      * addNode puts a dto into the tree's list of nodes.
      *
-     * @param DtoInterface $dto
+     * @param TreenodeDtoInterface $dto
      */
-    public function addNode(DtoInterface $dto): void;
+    public function addNode(TreenodeDtoInterface $dto): void;
 
     /**
      * @function deleteNode
@@ -92,10 +92,10 @@ interface TreeInterface
 
     /**
      * rootTest
-     * @param TreenodeType|DtoInterface $nodeItem
+     * @param TreenodeType|TreenodeDtoInterface $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeInterface|DtoInterface $nodeItem): bool;
+    public function rootTest(TreenodeInterface|TreenodeDtoInterface $nodeItem): bool;
 
     /**
      * @function isEmpty

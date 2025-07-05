@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\payload\HasPayloadInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
@@ -35,9 +35,9 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
 
     /**
      * hydrate
-     * @param DtoInterface $dto
+     * @param TreenodeDtoInterface $dto
      */
-    public function hydrate(DtoInterface $dto): void;
+    public function hydrate(TreenodeDtoInterface $dto): void;
 
     /**
      * getNodeId
