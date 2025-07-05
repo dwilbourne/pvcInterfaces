@@ -10,7 +10,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -98,7 +97,7 @@ interface TreeInterface
      *
      * @return bool
      */
-    public function rootTest(TreenodeInterface|DtoInterface $nodeItem): bool;
+    public function rootTest($nodeItem): bool;
 
     /**
      * @function isEmpty
