@@ -94,7 +94,7 @@ interface TreeInterface
     /**
      * rootTest
      *
-     * @param  TreenodeType $nodeItem
+     * @param  TreenodeType|TreenodeDtoShape $nodeItem
      *
      * @return bool
      */
