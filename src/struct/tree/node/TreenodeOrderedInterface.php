@@ -2,18 +2,28 @@
 
 namespace pvc\interfaces\struct\tree\node;
 
-use pvc\interfaces\struct\collection\CollectionInterface;
+use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\collection\IndexedElementInterface;
-use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * @template PayloadType
- * @template TreenodeType of TreenodeInterface
- * @template TreeType of TreeInterface
- * @template CollectionType of CollectionInterface
- * @extends TreenodeInterface<PayloadType, TreenodeType, TreeType, CollectionType>
+ * @extends TreenodeInterface<PayloadType, TreenodeOrderedInterface, CollectionOrderedInterface>
  *
  */
 interface TreenodeOrderedInterface extends TreenodeInterface, IndexedElementInterface
 {
+    /**
+     * @return TreenodeOrderedInterface<PayloadType>|null
+     */
+    public function getFirstChild(): ?TreenodeOrderedInterface;
+
+    /**
+     * @return TreenodeOrderedInterface<PayloadType>|null
+     */
+    public function getLastChild(): ?TreenodeOrderedInterface;
+
+    /**
+     * @return TreenodeOrderedInterface<PayloadType>|null
+     */
+    public function getNthChild(): ?TreenodeOrderedInterface;
 }

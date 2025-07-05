@@ -24,7 +24,6 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  *
  * @template PayloadType
  * @template TreenodeType of TreenodeInterface
- * @template TreeType of TreeInterface
  * @template CollectionType of CollectionInterface
  */
 interface TreeInterface
@@ -50,7 +49,7 @@ interface TreeInterface
     public function getTreeId(): int;
 
     /**
-     * @return TreenodeFactoryInterface<PayloadType, TreenodeType, TreeType, CollectionType>
+     * @return TreenodeFactoryInterface<PayloadType, TreenodeType, CollectionType>
      * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
      * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
      * make a collection on the fly and put the root node into it.  TreenodeFactory has a CollectionFactory, so

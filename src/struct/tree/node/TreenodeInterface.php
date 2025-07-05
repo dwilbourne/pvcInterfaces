@@ -19,7 +19,6 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  *
  * @template PayloadType
  * @template TreenodeType of TreenodeInterface
- * @template TreeType of TreeInterface
  * @template CollectionType of CollectionInterface
  * @extends HasPayloadInterface<PayloadType>
  *
@@ -94,7 +93,7 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeType
+     * @return TreeInterface<PayloadType, TreenodeType, CollectionType>
      */
     public function getTree(): TreeInterface;
 
