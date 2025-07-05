@@ -25,6 +25,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * @template PayloadType
  * @template TreenodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
+ * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
  */
 interface TreeInterface
 {
@@ -36,7 +37,7 @@ interface TreeInterface
 
     /**
      * @param non-negative-int $treeId
-     * @param array<TreenodeDtoInterface> $dtos
+     * @param array<TreenodeDtoShape> $dtos
      * @return void
      * initializes the tree so it is ready to use
      */
@@ -60,9 +61,9 @@ interface TreeInterface
     /**
      * addNode puts a dto into the tree's list of nodes.
      *
-     * @param TreenodeDtoInterface $dto
+     * @param TreenodeDtoShape $dto
      */
-    public function addNode(TreenodeDtoInterface $dto): void;
+    public function addNode($dto): void;
 
     /**
      * @function deleteNode
@@ -92,10 +93,10 @@ interface TreeInterface
 
     /**
      * rootTest
-     * @param TreenodeType|TreenodeDtoInterface $nodeItem
+     * @param TreenodeType|TreenodeDtoShape $nodeItem
      * @return bool
      */
-    public function rootTest(TreenodeInterface|TreenodeDtoInterface $nodeItem): bool;
+    public function rootTest($nodeItem): bool;
 
     /**
      * @function isEmpty
