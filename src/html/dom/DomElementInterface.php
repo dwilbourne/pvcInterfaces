@@ -13,6 +13,8 @@ interface DomElementInterface
      */
     public function getContainingDomNode(): DomNodeInterface;
 
+    public function getContentModel(): ContentModelInterface;
+
     public function getName() : string;
 
     /**
@@ -27,8 +29,6 @@ interface DomElementInterface
     public function hasCategory(ContentCategory $category) : bool;
 
     public function canAcceptContent(DomElementInterface $domNode): bool;
-
-    public function getContentModel(): ContentModelInterface;
 
     public function renderFirstVisit(): string;
 
