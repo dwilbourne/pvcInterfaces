@@ -8,6 +8,11 @@ use pvc\interfaces\html\content_model\ContentModelInterface;
 
 interface DomElementInterface
 {
+    /**
+     * @return DomNodeInterface
+     */
+    public function getContainingDomNode(): DomNodeInterface;
+
     public function getName() : string;
 
     /**
