@@ -2,7 +2,7 @@
 
 namespace pvc\interfaces\html\content_model;
 
-enum Content: int
+enum ContentPermission: int
 {
     case IS_PERMITTED = 1;
     case IS_NOT_PERMITTED = -1;
