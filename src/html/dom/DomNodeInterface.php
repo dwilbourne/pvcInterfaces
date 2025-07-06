@@ -23,6 +23,11 @@ interface DomNodeInterface extends TreenodeOrderedInterface
 
     public function hasCategory(ContentCategory $category): bool;
 
+    /**
+     * @return array<ContentCategory>
+     */
+    public function getCategories(): array;
+
     public function hasParentWith(callable $callback): bool;
 
     public function hasAncestorWith(callable $callback): bool;
