@@ -2,6 +2,8 @@
 
 namespace pvc\interfaces\html\dom;
 
+use pvc\html\dom\DomNode;
+use pvc\interfaces\html\content_model\ContentCategory;
 use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
 
 /**
@@ -9,5 +11,17 @@ use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
  */
 interface DomNodeInterface extends TreenodeOrderedInterface
 {
+    public function getName(): ?string;
 
+    public function hasName(string $name): bool;
+
+    public function hasAttribute(string $name): bool;
+
+    public function hasCategory(ContentCategory $category): bool;
+
+    public function hasParentWith(callable $callback): bool;
+
+    public function hasAncestorWith(callable $callback): bool;
+
+    public function canAcceptContent(DomNodeInterface $domNode): bool;
 }
