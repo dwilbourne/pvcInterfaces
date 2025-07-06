@@ -3,6 +3,7 @@
 namespace pvc\interfaces\html\rules;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
+use pvc\interfaces\html\dom\DomElementInterface;
 use pvc\interfaces\html\dom\DomNodeInterface;
 
 interface ContentRuleInterface
@@ -11,6 +12,16 @@ interface ContentRuleInterface
      * @return ContentModelInterface
      */
     public function getContainingContentModel(): ContentModelInterface;
+
+    /**
+     * @return DomElementInterface
+     */
+    public function getContainingDomElement(): DomElementInterface;
+
+    /**
+     * @return DomNodeInterface
+     */
+    public function getContainingDomNode(): DomNodeInterface;
 
     /**
      * @param  DomNodeInterface $content
