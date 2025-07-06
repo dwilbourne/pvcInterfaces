@@ -2,14 +2,14 @@
 
 namespace pvc\interfaces\html\rules;
 
-use pvc\interfaces\html\content_model\ContentModelInterface;
+use pvc\interfaces\html\dom\DomNodeInterface;
 
 interface ContentRuleInterface
 {
     /**
-     * @param  ContentModelInterface $content
+     * @param  DomNodeInterface $content
      * returns one of the constants defined in ContentModelInterface
      * @return int
      */
-    public function test(ContentModelInterface $content): int;
+    public function test(DomNodeInterface $content): int;
 }
