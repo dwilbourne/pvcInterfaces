@@ -3,6 +3,7 @@
 namespace pvc\interfaces\html\rules;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
+use pvc\interfaces\html\content_model\ContentPermission;
 use pvc\interfaces\html\dom\DomElementInterface;
 use pvc\interfaces\html\dom\DomNodeInterface;
 
@@ -26,7 +27,7 @@ interface ContentRuleInterface
     /**
      * @param  DomNodeInterface $content
      * returns one of the constants defined in ContentModelInterface
-     * @return int
+     * @return ContentPermission
      */
-    public function test(DomNodeInterface $content): int;
+    public function test(DomNodeInterface $content): ContentPermission;
 }
