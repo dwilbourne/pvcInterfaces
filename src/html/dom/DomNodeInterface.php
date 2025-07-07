@@ -4,12 +4,13 @@ namespace pvc\interfaces\html\dom;
 
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\content_model\ContentCategory;
-use pvc\interfaces\struct\tree\node\TreenodeOrderedInterface;
+use pvc\interfaces\struct\collection\CollectionInterface;
+use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
- * @extends TreenodeOrderedInterface<DomElementInterface>
+ * @extends TreenodeInterface<DomElementInterface, TreenodeInterface, CollectionInterface>
  */
-interface DomNodeInterface extends TreenodeOrderedInterface
+interface DomNodeInterface extends TreenodeInterface
 {
     public function getDomElement() : DomElementInterface;
 
