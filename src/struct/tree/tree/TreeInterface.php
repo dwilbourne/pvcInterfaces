@@ -21,7 +21,6 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
- * @template PayloadType
  * @template TreenodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
  * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
@@ -49,7 +48,7 @@ interface TreeInterface
     public function getTreeId(): int;
 
     /**
-     * @return TreenodeFactoryInterface<PayloadType, TreenodeType, CollectionType>
+     * @return TreenodeFactoryInterface<TreenodeType, CollectionType>
      * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
      * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
      * make a collection on the fly and put the root node into it.  TreenodeFactory has a CollectionFactory, so

@@ -8,7 +8,7 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
- * @extends TreenodeInterface<DomElementInterface, TreenodeInterface, CollectionInterface>
+ * @extends TreenodeInterface<TreenodeInterface, CollectionInterface>
  */
 interface DomNodeInterface extends TreenodeInterface
 {

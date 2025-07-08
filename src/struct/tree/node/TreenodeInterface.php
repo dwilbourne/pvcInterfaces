@@ -9,23 +9,20 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\payload\HasPayloadInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
 /**
  * Interface TreenodeInterface defines the operations for a generic tree node.
  *
- * @template PayloadType
  * @template TreenodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
- * @extends HasPayloadInterface<PayloadType>
  *
  * @phpstan-type TreenodeDtoShape object{nodeId: non-negative-int, parentId: ?non-negative-int, treeId: ?non-negative-int, payload: mixed, index?:non-negative-int}
  *
  * @see CollectionInterface
  */
-interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
+interface TreenodeInterface extends NodeVisitableInterface
 {
     /**
      * isEmpty
@@ -94,7 +91,7 @@ interface TreenodeInterface extends HasPayloadInterface, NodeVisitableInterface
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeInterface<PayloadType, TreenodeType, CollectionType>
+     * @return TreeInterface<TreenodeType, CollectionType>
      */
     public function getTree(): TreeInterface;
 
