@@ -12,17 +12,17 @@ interface ContentRuleInterface
     /**
      * @return ContentModelInterface
      */
-    public function getContainingContentModel(): ContentModelInterface;
+    public function getContentModel(): ContentModelInterface;
 
     /**
      * @return DomElementInterface
      */
-    public function getContainingDomElement(): DomElementInterface;
+    public function getDomElement(): DomElementInterface;
 
     /**
      * @return DomNodeInterface
      */
-    public function getContainingDomNode(): DomNodeInterface;
+    public function getDomNode(): DomNodeInterface;
 
     /**
      * @param  DomNodeInterface $content

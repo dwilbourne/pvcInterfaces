@@ -2,8 +2,7 @@
 
 namespace pvc\interfaces\html\dom;
 
-use pvc\interfaces\html\attribute\AttributeInterface;
-use pvc\interfaces\html\content_model\ContentCategory;
+use pvc\interfaces\html\content_model\ContentModelInterface;
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -14,24 +13,9 @@ interface DomNodeInterface extends TreenodeInterface
 {
     public function getDomElement() : DomElementInterface;
 
-    public function getName(): ?string;
-
-    public function hasName(string $name): bool;
-
-    public function getAttribute(string $name): ?AttributeInterface;
-
-    public function hasAttribute(string $name): bool;
-
-    public function hasCategory(ContentCategory $category): bool;
-
-    /**
-     * @return int
-     */
-    public function getCategories(): int;
+    public function getContentModel() : ContentModelInterface;
 
     public function hasParentWith(callable $callback): bool;
 
     public function hasAncestorWith(callable $callback): bool;
-
-    public function canAcceptContent(DomNodeInterface $domNode): bool;
 }

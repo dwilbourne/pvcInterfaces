@@ -3,25 +3,14 @@
 namespace pvc\interfaces\html\content_model;
 
 use pvc\interfaces\html\dom\DomElementInterface;
+use pvc\interfaces\html\dom\DomNodeInterface;
 
 interface ContentModelInterface
 {
 
-    public const int IS_PERMITTED = 1;
-    public const int IS_NOT_APPLICABLE = 0;
-    public const int IS_NOT_PERMITTED = -1;
+    public function getDomElement(): DomElementInterface;
 
-    /**
-     * @return DomElementInterface
-     */
-    public function getContainingDomElement(): DomElementInterface;
-
-    /**
-     * @param  array<ContentCategory>  $categories
-     *
-     * @return int
-     */
-    public static function coalesceContentCategories(array $categories): int;
+    public function getDomNode(): DomNodeInterface;
 
     /**
      * @return int
@@ -31,22 +20,24 @@ interface ContentModelInterface
     public function getCategories(): int;
 
     /**
-     * @param  ContentModelInterface  $content
-     *
-     * @return bool
-     */
-    public function canAcceptContent(ContentModelInterface $content): bool;
-
-    /**
      * @param  ContentCategory  $category
      *
      * @return bool
      */
     public function hasCategory(ContentCategory $category) : bool;
 
-    public function hasAttribute(string $attributeName) : bool;
+    /**
+     * @param  array<ContentCategory>  $categories
+     *
+     * @return int
+     */
+    public static function coalesceContentCategories(array $categories): int;
 
-    public function hasName(string $name) : bool;
-
+    /**
+     * @param  ContentModelInterface  $content
+     *
+     * @return bool
+     */
+    public function canAcceptContent(ContentModelInterface $content): bool;
 
 }
