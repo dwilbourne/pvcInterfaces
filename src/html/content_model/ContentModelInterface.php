@@ -34,10 +34,10 @@ interface ContentModelInterface
     public static function coalesceContentCategories(array $categories): int;
 
     /**
-     * @param  ContentModelInterface  $content
+     * @param  DomNodeInterface  $content
      *
      * @return bool
      */
-    public function canAcceptContent(ContentModelInterface $content): bool;
+    public function canAcceptContent(DomNodeInterface $content): bool;
 
 }
