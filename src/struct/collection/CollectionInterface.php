@@ -97,5 +97,25 @@ interface CollectionInterface extends Iterator, Countable
      */
     public function delete(int $key): void;
 
+    /**
+     * the following return elements according the ordinal position of the
+     * element in the list
+     */
+
+    /**
+     * @param non-negative-int $index
+     * @return ElementType|null
+     */
+    public function getNth(int $index);
+
+    /**
+     * @return ElementType|null
+     */
+    public function getFirst();
+
+    /**
+     * @return ElementType|null
+     */
+    public function getLast();
 
 }

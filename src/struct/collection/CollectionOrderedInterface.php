@@ -21,20 +21,4 @@ interface CollectionOrderedInterface extends CollectionInterface
      * @param non-negative-int $newIndex
      */
     public function setIndex(int $key, int $newIndex): void;
-
-    /**
-     * @param non-negative-int $index
-     * @return ElementType|null
-     */
-    public function getNth(int $index);
-
-    /**
-     * @return ElementType|null
-     */
-    public function getFirst();
-
-    /**
-     * @return ElementType|null
-     */
-    public function getLast();
 }
