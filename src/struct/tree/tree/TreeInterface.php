@@ -87,7 +87,7 @@ interface TreeInterface
      * @function getRoot
      * @return   TreenodeType|null
      */
-    public function getRoot(): ?TreenodeInterface;
+    public function getRoot();
 
     /**
      * rootTest
