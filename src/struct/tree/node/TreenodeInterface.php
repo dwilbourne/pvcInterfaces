@@ -115,6 +115,21 @@ interface TreenodeInterface extends NodeVisitableInterface
     public function getChildren(): CollectionInterface;
 
     /**
+     * @return TreenodeType|null
+     */
+    public function getFirstChild();
+
+    /**
+     * @return TreenodeType|null
+     */
+    public function getLastChild();
+
+    /**
+     * @return TreenodeType|null
+     */
+    public function getNthChild();
+
+    /**
      * @return array<TreenodeType>
      */
     public function getChildrenArray(): array;
