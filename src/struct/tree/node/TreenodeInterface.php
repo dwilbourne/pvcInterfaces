@@ -99,14 +99,14 @@ interface TreenodeInterface extends NodeVisitableInterface
      * @function getParent
      * @return TreenodeType|null
      */
-    public function getParent(): ?TreenodeInterface;
+    public function getParent();
 
     /**
      * @function getChild
      * @param non-negative-int $nodeid
      * @return TreenodeType|null
      */
-    public function getChild(int $nodeid): ?TreenodeInterface;
+    public function getChild(int $nodeid);
 
     /**
      * @function getChildren

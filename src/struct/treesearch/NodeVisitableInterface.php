@@ -39,7 +39,7 @@ interface NodeVisitableInterface extends NodeSearchableInterface
      * getParent
      * @return NodeVisitableInterface|null
      */
-    public function getParent(): mixed;
+    public function getParent();
 
     /**
      * getParentId
