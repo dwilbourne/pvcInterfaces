@@ -5,7 +5,7 @@ namespace pvc\interfaces\html\rules;
 use pvc\interfaces\html\content_model\ContentCategory;
 use pvc\interfaces\html\dom\DomNodeInterface;
 
-interface CategoryRuleInterface
+interface CategoryRuleInterface  extends AbstractRuleInterface
 {
     /**
      * @param DomNodeInterface $content
