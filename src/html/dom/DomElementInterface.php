@@ -15,9 +15,9 @@ interface DomElementInterface
 
     public function getContentModel(): ContentModelInterface;
 
-    public function getName() : string;
+    public static function getName() : string;
 
-    public function getAttribute(string $name): ?AttributeInterface;
+    public static function getAttribute(string $name): ?AttributeInterface;
 
     public static function hasName(string $name) : bool;
 
