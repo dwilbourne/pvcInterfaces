@@ -15,15 +15,15 @@ interface DomElementInterface
 
     public function getContentModel(): ContentModelInterface;
 
-    public static function getName() : string;
+    public function getName() : string;
 
-    public static function getAttribute(string $name): ?AttributeInterface;
+    public function getAttribute(string $name): ?AttributeInterface;
 
-    public static function hasName(string $name) : bool;
+    public function hasName(string $name) : bool;
 
-    public static function hasAttribute(string $name) : bool;
+    public function hasAttribute(string $name) : bool;
 
-    public static function hasCategory(ContentCategory $category) : bool;
+    public function hasCategory(ContentCategory $category) : bool;
 
     public function renderFirstVisit(): string;
 
