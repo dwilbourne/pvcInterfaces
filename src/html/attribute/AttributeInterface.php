@@ -23,7 +23,7 @@ interface AttributeInterface
      * @return DataType
      *
      */
-    public function getPrimitiveDataType(): DataType;
+    public function getDataType(): DataType;
 
     /**
      * @param  ValueType  ...$values
