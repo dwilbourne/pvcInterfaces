@@ -20,6 +20,12 @@ interface AttributeInterface
     public function getName(): string;
 
     /**
+     * @return AttributePrimitiveDataType
+     *
+     */
+    public function getPrimitiveDataType(): AttributePrimitiveDataType;
+
+    /**
      * @param  ValueType  ...$values
      *
      * @return void
