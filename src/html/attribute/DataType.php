@@ -2,7 +2,7 @@
 
 namespace pvc\interfaces\html\attribute;
 
-enum AttributePrimitiveDataType: string
+enum DataType: string
 {
     case String = 'string';
     case Integer = 'int';
