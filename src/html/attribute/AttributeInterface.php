@@ -35,7 +35,7 @@ interface AttributeInterface
     /**
      * @return array<ValueType>|ValueType
      */
-    public function getValue();
+    public function getValue(): array|bool|int|string;
 
     /**
      * render
