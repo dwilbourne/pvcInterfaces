@@ -20,12 +20,6 @@ interface AttributeInterface
     public function getName(): string;
 
     /**
-     * @return DataType
-     *
-     */
-    public function getDataType(): DataType;
-
-    /**
      * @param  ValueType  ...$values
      *
      * @return void
