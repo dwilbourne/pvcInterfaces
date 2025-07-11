@@ -6,5 +6,9 @@ enum DataType: string
 {
     case String = 'string';
     case Integer = 'int';
-    case Bool = 'bool';
+
+    /**
+     * for void attributes.
+     */
+    case True = 'true';
 }
