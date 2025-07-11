@@ -10,7 +10,7 @@ namespace pvc\interfaces\html\attribute;
 
 /**
  * Class AttributeInterface
- * @phpstan-type ValueType int|string|bool
+ *
  */
 interface AttributeInterface
 {
@@ -18,18 +18,6 @@ interface AttributeInterface
      * @return string
      */
     public function getName(): string;
-
-    /**
-     * @param  ValueType  ...$values
-     *
-     * @return void
-     */
-    public function setValue(...$values): void;
-
-    /**
-     * @return array<ValueType>|ValueType
-     */
-    public function getValue();
 
     /**
      * render

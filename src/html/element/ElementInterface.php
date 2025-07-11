@@ -9,12 +9,12 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
-use pvc\interfaces\html\attribute\AttributeInterface;
+use pvc\interfaces\html\attribute\AttributeWithValueInterface;
 use pvc\interfaces\html\dom\DomElementInterface;
 
 /**
  * Class ElementInterface
- * @phpstan-import-type ValueType from AttributeInterface
+ * @phpstan-import-type ValueType from AttributeWithValueInterface
  */
 interface ElementInterface extends DomElementInterface
 {

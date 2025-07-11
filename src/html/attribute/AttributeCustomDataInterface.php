@@ -2,7 +2,7 @@
 
 namespace pvc\interfaces\html\attribute;
 
-interface AttributeCustomDataInterface extends AttributeInterface
+interface AttributeCustomDataInterface extends AttributeWithValueInterface
 {
 
 }
