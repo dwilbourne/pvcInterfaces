@@ -33,13 +33,6 @@ interface AttributeInterface
     public function setValue(...$values): void;
 
     /**
-     * getValue
-     *
-     * @return array<ValueType>
-     */
-    public function getValue();
-
-    /**
      * render
      *
      * @return string
