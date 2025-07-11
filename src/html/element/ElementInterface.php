@@ -28,10 +28,10 @@ interface ElementInterface extends DomElementInterface
 
     /**
      * @param  AttributeCustomDataInterface  $customData
-     *
+     * @param ValueType ...$values
      * @return void
      */
-    public function setCustomData(AttributeCustomDataInterface $customData): void;
+    public function setCustomData(AttributeCustomDataInterface $customData, ...$values): void;
 
     /**
      * @param  string  $name
