@@ -15,7 +15,7 @@ interface AttributeWithValueInterface extends AttributeInterface
     public function setValue(...$values): void;
 
     /**
-     * @return array<ValueType>|ValueType
+     * @return array<ValueType>|ValueType|null
      */
     public function getValue();
 
