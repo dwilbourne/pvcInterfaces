@@ -6,4 +6,5 @@ enum DataType: string
 {
     case String = 'string';
     case Integer = 'int';
+    case Boolean = 'bool';
 }
