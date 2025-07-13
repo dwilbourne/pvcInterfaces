@@ -33,6 +33,11 @@ interface TreenodeFactoryInterface
     public function setTree(TreeInterface $tree): void;
 
     /**
+     * @return TreeInterface<TreenodeType, CollectionType>
+     */
+    public function getTree(): TreeInterface;
+
+    /**
      * @return CollectionFactoryInterface<TreenodeType, CollectionType>
      */
     public function getTreenodeCollectionFactory(): CollectionFactoryInterface;
