@@ -30,7 +30,7 @@ interface TreenodeFactoryInterface
      *
      * @return void
      */
-    public function initialize(TreeInterface $tree): void;
+    public function setTree(TreeInterface $tree): void;
 
     /**
      * @return CollectionFactoryInterface<TreenodeType, CollectionType>
