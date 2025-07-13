@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
+use pvc\interfaces\struct\collection\CollectionFactoryInterface;
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\tree\node\TreenodeFactoryInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
@@ -28,18 +28,11 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 interface TreeInterface
 {
     /**
-     * @return bool
-     * returns false if the tree is in an invalid state (e.g. has been constructed but not initialized)
-     */
-    public function isInitialized(): bool;
-
-    /**
      * @param non-negative-int $treeId
-     * @param array<TreenodeDtoShape> $dtos
      * @return void
      * initializes the tree so it is ready to use
      */
-    public function initialize(int $treeId, array $dtos = []): void;
+    public function initialize(int $treeId): void;
 
     /**
      * @function getTreeId
@@ -48,20 +41,26 @@ interface TreeInterface
     public function getTreeId(): int;
 
     /**
-     * @return TreenodeFactoryInterface<TreenodeType, CollectionType>
+     * @return CollectionFactoryInterface<TreenodeType, CollectionType>
      * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
      * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
-     * make a collection on the fly and put the root node into it.  TreenodeFactory has a CollectionFactory, so
-     * we need public access to TreenodeFactory in order to implement the getSiblings method in TreenodeInterface
+     * make a collection on the fly and put the root node into it.
      */
-    public function getTreenodeFactory(): TreenodeFactoryInterface;
+    public function getCollectionFactory(): CollectionFactoryInterface;
 
     /**
-     * addNode puts a dto into the tree's list of nodes.
+     * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeDtoShape $dto
+     * @param TreenodeType $node
      */
-    public function addNode($dto): void;
+    public function addNode($node): void;
+
+    /**
+     * @param  array<TreenodeDtoShape>  $dtos
+     *
+     * @return void
+     */
+    public function hydrate(array $dtos): void;
 
     /**
      * @function deleteNode
