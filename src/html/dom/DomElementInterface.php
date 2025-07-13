@@ -8,9 +8,9 @@ use pvc\interfaces\html\content_model\ContentModelInterface;
 
 interface DomElementInterface
 {
-    public function getDomNode(): ?DomNodeInterface;
+    public function getDomNode(): DomNodeInterface;
 
-    public function getContentModel(): ?ContentModelInterface;
+    public function getContentModel(): ContentModelInterface;
 
     public function getName() : string;
 
