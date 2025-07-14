@@ -17,6 +17,7 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  *
  * @template TreenodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
+ * @template TreeType of TreeInterface
  *
  * @phpstan-type TreenodeDtoShape object{nodeId: non-negative-int, parentId: ?non-negative-int, treeId: ?non-negative-int, index?:non-negative-int}
  *
@@ -91,7 +92,7 @@ interface TreenodeInterface extends NodeVisitableInterface
 
     /**
      * @function getTree gets a reference to the tree to which the node belongs
-     * @return TreeInterface<TreenodeType, CollectionType>
+     * @return TreeType
      */
     public function getTree(): TreeInterface;
 

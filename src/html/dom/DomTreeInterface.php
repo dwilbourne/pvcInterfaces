@@ -2,11 +2,11 @@
 
 namespace pvc\interfaces\html\dom;
 
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
+use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
- * @extends TreenodeInterface<DomNodeInterface, DomCollectionInterface>
+ * @extends TreeInterface<DomNodeInterface, DomCollectionInterface>
  */
-interface DomTreeInterface extends TreenodeInterface
+interface DomTreeInterface extends TreeInterface
 {
 }

@@ -3,12 +3,11 @@
 namespace pvc\interfaces\html\dom;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
-use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
- * @extends TreenodeInterface<TreenodeInterface, CollectionInterface>
+ * @extends TreenodeInterface<DomNodeInterface, DomCollectionInterface, DomTreeInterface>
  */
 interface DomNodeInterface extends TreenodeInterface
 {

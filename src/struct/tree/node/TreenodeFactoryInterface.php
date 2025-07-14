@@ -16,6 +16,7 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  * Class TreenodeFactoryInterface
  * @template TreenodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
+ * @template TreeType of TreeInterface
  */
 interface TreenodeFactoryInterface
 {
@@ -26,14 +27,14 @@ interface TreenodeFactoryInterface
     public function makeNode(): TreenodeInterface;
 
     /**
-     * @param  TreeInterface<TreenodeType, CollectionType>  $tree
+     * @param  TreeType  $tree
      *
      * @return void
      */
     public function setTree(TreeInterface $tree): void;
 
     /**
-     * @return TreeInterface<TreenodeType, CollectionType>
+     * @return TreeType
      */
     public function getTree(): TreeInterface;
 
