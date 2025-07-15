@@ -9,7 +9,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\collection\CollectionFactoryInterface;
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -41,12 +40,12 @@ interface TreeInterface
     public function getTreeId(): int;
 
     /**
-     * @return CollectionFactoryInterface<TreenodeType, CollectionType>
+     * @return CollectionInterface<TreenodeType>
      * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
      * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
      * make a collection on the fly and put the root node into it.
      */
-    public function getCollectionFactory(): CollectionFactoryInterface;
+    public function makeCollection(): CollectionInterface;
 
     /**
      * addNode puts a node into the tree's list of nodes.
