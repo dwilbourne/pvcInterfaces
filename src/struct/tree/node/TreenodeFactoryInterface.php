@@ -27,18 +27,6 @@ interface TreenodeFactoryInterface
     public function makeNode(): TreenodeInterface;
 
     /**
-     * @param  TreeType  $tree
-     *
-     * @return void
-     */
-    public function setTree(TreeInterface $tree): void;
-
-    /**
-     * @return TreeType
-     */
-    public function getTree(): TreeInterface;
-
-    /**
      * @return CollectionFactoryInterface<TreenodeType, CollectionType>
      */
     public function getTreenodeCollectionFactory(): CollectionFactoryInterface;
