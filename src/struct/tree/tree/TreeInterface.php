@@ -14,7 +14,7 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
- * Interface TreeInterface defines the operations common to all trees, both ordered and unordered.
+ * Interface TreeInterface defines the operations common to trees
  *
  * Trees have an id, allowing you to work with multiple trees at once.  Each tree consist of "nodes".
  * If it does have nodes, then there must be a single root node.  All
