@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
@@ -23,7 +24,7 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  *
  * @see CollectionInterface
  */
-interface TreenodeInterface extends NodeVisitableInterface
+interface TreenodeInterface extends TreenodeDtoInterface, NodeVisitableInterface
 {
     /**
      * isEmpty
