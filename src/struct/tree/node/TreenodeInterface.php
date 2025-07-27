@@ -24,7 +24,7 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  *
  * @see CollectionInterface
  */
-interface TreenodeInterface extends TreenodeDtoInterface, NodeVisitableInterface
+interface TreenodeInterface extends NodeVisitableInterface
 {
     /**
      * isEmpty

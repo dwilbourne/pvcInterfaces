@@ -17,5 +17,5 @@ interface TreenodeDtoInterface
     /**
      * @return non-negative-int
      */
-    public function getTreeId(): int;
+    public function getTreeId(): ?int;
 }
