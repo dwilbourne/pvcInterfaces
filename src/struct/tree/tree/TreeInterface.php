@@ -56,7 +56,7 @@ interface TreeInterface
     public function addNode(TreenodeInterface|DtoInterface $nodeDto): void;
 
     /**
-     * @param  array<TreenodeInterface|TreenodeDtoShape>  $array
+     * @param  array<TreenodeType|TreenodeDtoShape>  $array
      *
      * @return void
      */
