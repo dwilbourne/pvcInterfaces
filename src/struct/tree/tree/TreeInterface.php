@@ -56,11 +56,11 @@ interface TreeInterface
     public function addNode(TreenodeInterface|DtoInterface $nodeDto): void;
 
     /**
-     * @param  array<TreenodeDtoShape>  $dtos
+     * @param  array<TreenodeInterface|TreenodeDtoShape>  $array
      *
      * @return void
      */
-    public function hydrate(array $dtos): void;
+    public function hydrate(array $array): void;
 
     /**
      * @function deleteNode
