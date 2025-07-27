@@ -35,12 +35,13 @@ interface TreenodeInterface extends TreenodeDtoInterface, NodeVisitableInterface
 
     /**
      * hydrate
-     * @param TreenodeDtoShape $dto
+     * @param TreenodeDtoInterface $dto
      */
-    public function hydrate($dto): void;
+    public function hydrate(TreenodeDtoInterface $dto): void;
 
     public function getNodeId(): int;
     public function getParentId(): ?int;
+
     /**
      * getTreeId
      * @return non-negative-int
