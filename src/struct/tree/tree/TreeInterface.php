@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
+use pvc\interfaces\struct\dto\DtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
@@ -50,9 +51,9 @@ interface TreeInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeType $node
+     * @param TreenodeType|(DtoInterface&TreenodeDtoShape) $nodeDto
      */
-    public function addNode($node): void;
+    public function addNode(TreenodeInterface|DtoInterface $nodeDto): void;
 
     /**
      * @param  array<TreenodeDtoShape>  $dtos
