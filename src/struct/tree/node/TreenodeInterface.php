@@ -47,6 +47,11 @@ interface TreenodeInterface extends NodeVisitableInterface
     public function getTreeId(): int;
 
     /**
+     * @return int|null
+     */
+    public function getIndex(): ?int;
+
+    /**
      * @param  TreeType  $tree
      *
      * @return void
