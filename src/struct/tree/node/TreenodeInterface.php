@@ -20,8 +20,6 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * @template CollectionType of CollectionInterface
  * @template TreeType of TreeInterface
  *
- * @phpstan-type TreenodeDtoShape object{nodeId: non-negative-int, parentId: ?non-negative-int, treeId: ?non-negative-int, index?:non-negative-int}
- *
  * @see CollectionInterface
  */
 interface TreenodeInterface extends NodeVisitableInterface

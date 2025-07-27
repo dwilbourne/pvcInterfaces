@@ -24,7 +24,6 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  *
  * @template TreenodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
- * @phpstan-import-type TreenodeDtoShape from TreenodeInterface
  */
 interface TreeInterface
 {
@@ -92,7 +91,7 @@ interface TreeInterface
     /**
      * rootTest
      *
-     * @param  TreenodeType|TreenodeDtoShape $nodeItem
+     * @param  TreenodeType|TreenodeDtoInterface $nodeItem
      *
      * @return bool
      */
