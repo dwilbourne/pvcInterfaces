@@ -26,7 +26,7 @@ interface TreenodeInterface extends NodeVisitableInterface
 {
     /**
      * isEmpty
-     * true if the not has not yet been hydrated with nodeId, parent, etc
+     * true if the node has not yet been hydrated with a nodeId
      * @return bool
      */
     public function isEmpty(): bool;
