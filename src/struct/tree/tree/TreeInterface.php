@@ -77,10 +77,10 @@ interface TreeInterface
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
-     * @param non-negative-int|null $nodeId
+     * @param non-negative-int $nodeId
      * @return TreenodeType|null
      */
-    public function getNode(?int $nodeId): TreenodeInterface|null;
+    public function getNode(int $nodeId): TreenodeInterface|null;
 
     /**
      * @function getRoot
