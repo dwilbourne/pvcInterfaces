@@ -37,14 +37,10 @@ interface TreenodeInterface extends NodeVisitableInterface
      */
     public function hydrate(TreenodeDtoInterface $dto): void;
 
-    public function getNodeId(): int;
-    public function getParentId(): ?int;
-
     /**
-     * getTreeId
-     * @return non-negative-int
+     * @return int
      */
-    public function getTreeId(): int;
+    public function getNodeId(): int;
 
     /**
      * @return int|null
