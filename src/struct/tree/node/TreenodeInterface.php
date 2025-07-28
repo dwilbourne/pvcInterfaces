@@ -56,12 +56,12 @@ interface TreenodeInterface extends NodeVisitableInterface
 
     /**
      * @function setParent sets a reference to the parent of the node.
-     * @param ?non-negative-int $parentId
+     * @param ?TreenodeType $parent
      * parent node must be in the same tree.
      *
      * @return void
      */
-    public function setParent(?int $parentId): void;
+    public function setParent(?TreenodeInterface $parent): void;
 
     /**
      * @return bool
