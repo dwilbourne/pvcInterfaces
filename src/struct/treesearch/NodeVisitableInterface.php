@@ -36,15 +36,10 @@ interface NodeVisitableInterface extends NodeSearchableInterface
     public function setVisitStatus(VisitStatus $status): void;
 
     /**
-     * getParent
-     * @return NodeVisitableInterface|null
-     */
-    public function getParent();
-
-    /**
      * getChildrenArray
      * @return array<NodeVisitableInterface>
      */
-    public function getChildrenArray(): array;
+    // already defined in parent interface....
+    // public function getChildrenArray(): array;
 
 }
