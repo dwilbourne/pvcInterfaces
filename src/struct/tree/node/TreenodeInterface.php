@@ -44,6 +44,12 @@ interface TreenodeInterface extends NodeVisitableInterface
 
     /**
      * @return int|null
+     * used only in the course of hydrating a tree from an external data source
+     */
+    public function getParentId(): ?int;
+
+    /**
+     * @return int|null
      */
     public function getIndex(): ?int;
 
