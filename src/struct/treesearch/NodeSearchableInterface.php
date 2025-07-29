@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\treesearch;
 
 /**
  * Class NodeSearchableInterface
+ * @template NodeType of NodeSearchableInterface
  */
 interface NodeSearchableInterface
 {
@@ -20,7 +21,7 @@ interface NodeSearchableInterface
     public function getNodeId(): int;
 
     /**
-     * @return NodeSearchableInterface|null
+     * @return NodeType|null
      * do not use a specific return type here (e.g. NodeSearchableInterface).
      * Different implementations of getParent will return a "wider" object,
      * and you will get a liskov substitution problem.
@@ -29,7 +30,7 @@ interface NodeSearchableInterface
 
     /**
      * getChildrenArray
-     * @return array<NodeSearchableInterface>
+     * @return array<NodeType>
      */
     public function getChildrenArray(): array;
 }
