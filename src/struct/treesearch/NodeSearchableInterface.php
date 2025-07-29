@@ -20,6 +20,11 @@ interface NodeSearchableInterface
     public function getNodeId(): int;
 
     /**
+     * @return NodeSearchableInterface|null
+     */
+    public function getParent(): ?NodeSearchableInterface;
+
+    /**
      * getChildrenArray
      * @return array<NodeSearchableInterface>
      */
