@@ -2,13 +2,9 @@
 
 namespace pvc\interfaces\html\dom;
 
-use pvc\interfaces\html\attribute\AttributeInterface;
+use pvc\interfaces\html\element\ElementInterface;
 
-interface DomElementInterface
+interface DomElementInterface extends ElementInterface
 {
-    public function getName() : string;
-
-    public function getAttribute(string $name): ?AttributeInterface;
-
     public function render(): string;
 }

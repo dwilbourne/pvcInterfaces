@@ -10,14 +10,15 @@ namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeWithValueInterface;
-use pvc\interfaces\html\dom\DomElementInterface;
 
 /**
  * Class ElementInterface
  * @phpstan-import-type ValueType from AttributeWithValueInterface
  */
-interface ElementInterface extends DomElementInterface
+interface ElementInterface
 {
+    public function getName(): string;
+
     /**
      * @param  string  $name
      * @param  ValueType  ...$values

@@ -23,21 +23,9 @@ interface SearchInterface extends Iterator
     public function setStartNode(mixed $startNode): void;
 
     /**
-     * getStartNode
-     * @return NodeType
-     */
-    public function getStartNode(): mixed;
-
-    /**
      * getNodes
      * gets all the nodes at once
      * @return array<non-negative-int, NodeType>
      */
     public function getNodes(): array;
-
-    /**
-     * current
-     * @return NodeType|null
-     */
-    public function current(): mixed;
 }
