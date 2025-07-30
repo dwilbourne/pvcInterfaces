@@ -121,18 +121,18 @@ interface TreenodeInterface extends NodeVisitableInterface
     /**
      * @return TreenodeType|null
      */
-    public function getFirstChild();
+    public function getFirstChild(): ?TreenodeInterface;
 
     /**
      * @return TreenodeType|null
      */
-    public function getLastChild();
+    public function getLastChild(): ?TreenodeInterface;
 
     /**
      * @param non-negative-int $n
      * @return TreenodeType|null
      */
-    public function getNthChild(int $n);
+    public function getNthChild(int $n): ?TreenodeInterface;
 
     /**
      * @return array<TreenodeType>
