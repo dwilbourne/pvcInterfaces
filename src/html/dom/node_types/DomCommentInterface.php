@@ -2,7 +2,9 @@
 
 namespace pvc\interfaces\html\dom\node_types;
 
-interface DomCommentInterface
+use pvc\interfaces\html\dom\NodeInterface;
+
+interface DomCommentInterface extends NodeInterface
 {
 
 }
