@@ -4,32 +4,32 @@ namespace pvc\interfaces\html\dom;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
 
-interface NodeInterface extends ContentModelInterface
+interface DomNodeInterface extends ContentModelInterface
 {
     public function getNodeType(): NodeType;
     public function getName(): string;
 
-    public function getParent(): ?NodeInterface;
+    public function getParent(): ?DomNodeInterface;
 
-    public function getChildren() : NodeCollectionInterface;
+    public function getChildren() : DomNodeCollectionInterface;
 
     /**
-     * @return NodeInterface
+     * @return DomNodeInterface
      */
     public function getFirstChild();
 
     /**
-     * @return NodeInterface
+     * @return DomNodeInterface
      */
     public function getLastChild();
 
     /**
-     * @return NodeInterface
+     * @return DomNodeInterface
      */
     public function getNthChild(int $n);
 
     /**
-     * @return NodeCollectionInterface
+     * @return DomNodeCollectionInterface
      */
     public function getSiblings();
 

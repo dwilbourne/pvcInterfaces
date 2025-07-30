@@ -3,12 +3,12 @@
 namespace pvc\interfaces\html\rules;
 
 use pvc\interfaces\html\content_model\ContentCategory;
-use pvc\interfaces\html\dom\NodeInterface;
+use pvc\interfaces\html\dom\DomNodeInterface;
 
 interface CategoryRuleInterface  extends AbstractRuleInterface
 {
     /**
-     * @param NodeInterface  $content
+     * @param DomNodeInterface  $content
      *
      * @return array<ContentCategory>
      *
@@ -17,5 +17,5 @@ interface CategoryRuleInterface  extends AbstractRuleInterface
      * categories.  The array is empty if the context does not support the
      * addition of any content categories
      */
-    public function test(NodeInterface $content): array;
+    public function test(DomNodeInterface $content): array;
 }

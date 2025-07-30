@@ -2,17 +2,17 @@
 
 namespace pvc\interfaces\html\factory;
 
-use pvc\interfaces\html\dom\node_types\DomCommentInterface;
-use pvc\interfaces\html\dom\node_types\DomElementInterface;
-use pvc\interfaces\html\dom\node_types\DomTextInterface;
+use pvc\interfaces\html\dom\node_types\DomCommentInterfaceDom;
+use pvc\interfaces\html\dom\node_types\DomElementInterfaceDom;
+use pvc\interfaces\html\dom\node_types\DomTextInterfaceDom;
 use pvc\interfaces\intl\LocaleInterface;
 
 
 interface NodeFactoryInterface
 {
-    public function makeDomElement(string $elementName): DomElementInterface;
+    public function makeDomElement(string $elementName): DomElementInterfaceDom;
 
-    public function makeDomText(LocaleInterface $locale): DomTextInterface;
+    public function makeDomText(LocaleInterface $locale): DomTextInterfaceDom;
 
-    public function makeDomComment(string $comment): DomCommentInterface;
+    public function makeDomComment(string $comment): DomCommentInterfaceDom;
 }
