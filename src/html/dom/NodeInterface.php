@@ -2,7 +2,9 @@
 
 namespace pvc\interfaces\html\dom;
 
-interface NodeInterface
+use pvc\interfaces\html\content_model\ContentModelInterface;
+
+interface NodeInterface extends ContentModelInterface
 {
     public function getNodeType(): NodeType;
     public function getName(): string;
