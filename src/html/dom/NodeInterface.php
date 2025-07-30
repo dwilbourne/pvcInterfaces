@@ -9,5 +9,27 @@ interface NodeInterface
 
     public function getParent(): ?NodeInterface;
 
+    public function getChildren() : NodeCollectionInterface;
+
+    /**
+     * @return NodeInterface
+     */
+    public function getFirstChild();
+
+    /**
+     * @return NodeInterface
+     */
+    public function getLastChild();
+
+    /**
+     * @return NodeInterface
+     */
+    public function getNthChild(int $n);
+
+    /**
+     * @return NodeCollectionInterface
+     */
+    public function getSiblings();
+
     public function render(): string;
 }
