@@ -2,15 +2,15 @@
 
 namespace pvc\interfaces\html\content_model;
 
-use pvc\interfaces\html\dom\DomNodeInterface;
+use pvc\interfaces\html\dom\NodeInterface;
 
 interface ContentModelInterface
 {
     /**
-     * @param  DomNodeInterface  $content
+     * @param  NodeInterface  $content
      *
      * @return bool
      */
-    public function canAcceptContent(DomNodeInterface $content): bool;
+    public function canAcceptContent(NodeInterface $content): bool;
 
 }

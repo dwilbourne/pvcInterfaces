@@ -3,8 +3,8 @@
 namespace pvc\interfaces\html\rules;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
-use pvc\interfaces\html\dom\DomElementInterface;
-use pvc\interfaces\html\dom\DomNodeInterface;
+use pvc\interfaces\html\dom\node_types\DomElementInterface;
+use pvc\interfaces\html\dom\NodeInterface;
 
 interface AbstractRuleInterface
 {
@@ -19,7 +19,7 @@ interface AbstractRuleInterface
     public function getDomElement(): DomElementInterface;
 
     /**
-     * @return DomNodeInterface
+     * @return NodeInterface
      */
-    public function getDomNode(): DomNodeInterface;
+    public function getDomNode(): NodeInterface;
 }

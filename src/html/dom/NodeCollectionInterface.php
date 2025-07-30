@@ -5,9 +5,9 @@ namespace pvc\interfaces\html\dom;
 use pvc\interfaces\struct\collection\CollectionInterface;
 
 /**
- * @extends CollectionInterface<DomNodeInterface>
+ * @extends CollectionInterface<NodeInterface>
  */
-interface DomCollectionInterface extends CollectionInterface
+interface NodeCollectionInterface extends CollectionInterface
 {
 
 }
