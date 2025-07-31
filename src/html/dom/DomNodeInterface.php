@@ -12,7 +12,7 @@ interface DomNodeInterface extends ContentModelInterface
 
     public function getParent(): ?DomNodeInterface;
 
-    public function getChildren() : DomTreenodeCollectionInterface;
+    public function getChildren() : DomNodeCollectionInterface;
 
     /**
      * @return DomNodeInterface
