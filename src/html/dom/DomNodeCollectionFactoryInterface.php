@@ -2,12 +2,12 @@
 
 namespace pvc\interfaces\html\dom;
 
-use pvc\interfaces\struct\collection\CollectionInterface;
+use pvc\interfaces\struct\collection\CollectionFactoryInterface;
 
 /**
- * @extends CollectionInterface<DomNodeInterface, DomNodeCollectionInterface>
+ * @extends CollectionFactoryInterface<DomNodeInterface, DomNodeCollectionInterface>
  */
-interface DomNodeCollectionFactoryInterface extends CollectionInterface
+interface DomNodeCollectionFactoryInterface extends CollectionFactoryInterface
 {
 
 }
