@@ -7,7 +7,7 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 /**
  * @extends CollectionInterface<DomTreenodeInterface>
  */
-interface DomTreeNodeCollectionInterface extends CollectionInterface
+interface DomTreenodeCollectionInterface extends CollectionInterface
 {
 
 }
