@@ -3,6 +3,7 @@
 namespace pvc\interfaces\html\dom;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
+use pvc\interfaces\html\dom\tree_impl\DomNodeCollectionInterface;
 
 interface DomNodeInterface extends ContentModelInterface
 {
