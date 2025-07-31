@@ -2,20 +2,20 @@
 
 namespace pvc\interfaces\html\dom;
 
-use pvc\interfaces\html\dom\node_types\DomCommentInterfaceDom;
-use pvc\interfaces\html\dom\node_types\DomElementInterfaceDom;
-use pvc\interfaces\html\dom\node_types\DomTextInterfaceDom;
+use pvc\interfaces\html\dom\node_types\DomCommentInterface;
+use pvc\interfaces\html\dom\node_types\DomElementInterface;
+use pvc\interfaces\html\dom\node_types\DomTextInterface;
 
 interface DocumentInterface
 {
     /**
      * creation methods
      */
-    public function createElement(string $name): DomElementInterfaceDom;
+    public function createElement(string $name): DomElementInterface;
 
-    public function createComment(string $comment): DomCommentInterfaceDom;
+    public function createComment(string $comment): DomCommentInterface;
 
-    public function createTextNode(string $text): DomTextInterfaceDom;
+    public function createTextNode(string $text): DomTextInterface;
 
     /**
      * tree oriented methods
