@@ -11,7 +11,7 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
+use pvc\interfaces\struct\tree\node\TreenodeExtendedInterface;
 
 /**
  * Interface TreeInterface defines the operations common to trees
@@ -21,7 +21,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
- * @template TreenodeType of TreenodeInterface
+ * @template TreenodeType of TreenodeExtendedInterface
  * @template CollectionType of CollectionInterface
  */
 interface TreeInterface
@@ -52,7 +52,7 @@ interface TreeInterface
      *
      * @param TreenodeType|TreenodeDtoInterface $nodeDto
      */
-    public function addNode(TreenodeInterface|TreenodeDtoInterface $nodeDto): void;
+    public function addNode(TreenodeExtendedInterface|TreenodeDtoInterface $nodeDto): void;
 
     /**
      * @param  array<TreenodeType|TreenodeDtoInterface>  $array
@@ -79,7 +79,7 @@ interface TreeInterface
      * @param non-negative-int $nodeId
      * @return TreenodeType|null
      */
-    public function getNode(int $nodeId): TreenodeInterface|null;
+    public function getNode(int $nodeId): TreenodeExtendedInterface|null;
 
     /**
      * @function getRoot

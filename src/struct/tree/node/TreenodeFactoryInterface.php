@@ -12,7 +12,7 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 
 /**
  * Class TreenodeFactoryInterface
- * @template TreenodeType of TreenodeInterface
+ * @template TreenodeType of TreenodeExtendedInterface
  * @template CollectionType of CollectionInterface
  */
 interface TreenodeFactoryInterface
@@ -21,7 +21,7 @@ interface TreenodeFactoryInterface
      * makeNode
      * @return TreenodeType
      */
-    public function makeNode(): TreenodeInterface;
+    public function makeNode(): TreenodeExtendedInterface;
 
     /**
      * @return CollectionType

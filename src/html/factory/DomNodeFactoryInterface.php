@@ -8,7 +8,7 @@ use pvc\interfaces\html\dom\node_types\DomTextInterface;
 use pvc\interfaces\intl\LocaleInterface;
 
 
-interface NodeFactoryInterface
+interface DomNodeFactoryInterface
 {
     public function makeDomElement(string $elementName): DomElementInterface;
 
