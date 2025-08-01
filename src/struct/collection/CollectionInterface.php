@@ -36,12 +36,6 @@ interface CollectionInterface extends Iterator, Countable
     public function isEmpty(): bool;
 
     /**
-     * @function getElements returns an array of all the elements in the list, keys are preserved.
-     * @return array<non-negative-int, ElementType>
-     */
-    public function getElements(): array;
-
-    /**
      * @function getElement gets an element via its key.  Because null and false and any other value you can think
      * of are legitimate types of elements, the implementing code will throw an exception if the key does not
      * exist.  There is no sensible return value that indicates the operation failed.
@@ -50,6 +44,12 @@ interface CollectionInterface extends Iterator, Countable
      * @return ElementType
      */
     public function getElement(int $key): mixed;
+
+    /**
+     * @function getElements returns an array of all the elements in the list, keys are preserved.
+     * @return array<non-negative-int, ElementType>
+     */
+    public function getElements(): array;
 
     /**
      * @function findElementKey returns the key of the first element in the collection where the ValTester
@@ -96,7 +96,7 @@ interface CollectionInterface extends Iterator, Countable
     public function delete(int $key): void;
 
     /**
-     * the following return elements according the ordinal position of the
+     * the following relate to the ordinal position of the
      * element in the list
      */
 

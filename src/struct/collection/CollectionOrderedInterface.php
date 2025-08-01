@@ -3,7 +3,7 @@
 namespace pvc\interfaces\struct\collection;
 
 /**
- * @template ElementType
+ * @template ElementType of IndexedElementInterface
  * @extends CollectionInterface<ElementType>
  */
 interface CollectionOrderedInterface extends CollectionInterface
