@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\collection;
 
 use Countable;
 use Iterator;
+use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class CollectionInterface.
@@ -51,15 +52,13 @@ interface CollectionInterface extends Iterator, Countable
     public function getElement(int $key): mixed;
 
     /**
-     * @function getKey returns the key of the first element in the collection which is equal to the argument of the
-     * method call.  Returns false if the element is not found in the collection.
+     * @function findElement returns the key of the first element in the collection where the ValTester
+     * argument returns true when applied to the element.  Returns false if the element is not found in the collection.
      *
-     * You can control whether you want to use strict or loose comparison via the $strict parameter.
-     *
-     * @param ElementType $element
+     * @param ValTesterInterface<ElementType> $valTester
      * @return non-negative-int|false
      */
-    public function getKey(mixed $element, bool $strict = true): int|false;
+    public function findElement(ValTesterInterface $valTester): int|false;
 
     /**
      * @function getKeys returns all the keys in the list which have elements equal to the argument of
