@@ -61,15 +61,14 @@ interface CollectionInterface extends Iterator, Countable
     public function findElementKey(ValTesterInterface $valTester): ?int;
 
     /**
-     * @function getKeys returns all the keys in the list which have elements equal to the argument of
-     * the method call.
+     * @function findElementKeys returns all the keys for elements in the collection where the ValTester
+     * argument returns true when applied to the element. Returns an empty array no element in the
+     * collection passes the test.
      *
-     * You can control whether you want to use strict or loose comparison via the $strict parameter.
-     *
-     * @param ElementType $element
+     * @param ValTesterInterface<ElementType> $valTester
      * @return array<non-negative-int>
      */
-    public function findElementKeys(mixed $element, bool $strict = true): array;
+    public function findElementKeys(ValTesterInterface $valTester): array;
 
     /**
      * crud operations
