@@ -69,7 +69,7 @@ interface CollectionInterface extends Iterator, Countable
      * @param ElementType $element
      * @return array<non-negative-int>
      */
-    public function getKeys(mixed $element, bool $strict = true): array;
+    public function findElementKeys(mixed $element, bool $strict = true): array;
 
     /**
      * crud operations
