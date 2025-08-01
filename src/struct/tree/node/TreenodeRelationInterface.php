@@ -12,8 +12,9 @@ use pvc\interfaces\struct\collection\CollectionInterface;
  */
 interface TreenodeRelationInterface
 {
+
     /**
-     * ancestor / descendant methods
+     * ancestor / descendant methods.
      */
 
     /**
@@ -29,7 +30,6 @@ interface TreenodeRelationInterface
      * @return bool
      */
     public function isAncestorOf(TreenodeRelationInterface $node): bool;
-
 
     /**
      * methods related to children

@@ -11,7 +11,7 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
-use pvc\interfaces\struct\tree\node\TreenodeHydrationInterface;
+use pvc\interfaces\struct\tree\node\TreenodeBaseInterface;
 
 /**
  * Interface TreeInterface defines the operations common to trees
@@ -21,7 +21,7 @@ use pvc\interfaces\struct\tree\node\TreenodeHydrationInterface;
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
- * @template TreenodeType of TreenodeHydrationInterface
+ * @template TreenodeType of TreenodeBaseInterface
  * @template CollectionType of CollectionInterface
  */
 interface TreeInterface
@@ -34,12 +34,6 @@ interface TreeInterface
     public function initialize(int $treeId): void;
 
     /**
-     * @function getTreeId
-     * @return non-negative-int
-     */
-    public function getTreeId(): int;
-
-    /**
      * @return CollectionInterface<TreenodeType>
      * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
      * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
@@ -50,16 +44,23 @@ interface TreeInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeType|TreenodeDtoInterface $nodeDto
+     * @param TreenodeType $node
+     * @param TreenodeType $parent
      */
-    public function addNode(TreenodeHydrationInterface|TreenodeDtoInterface $nodeDto): void;
+    public function addNode(TreenodeBaseInterface $node, TreenodeBaseInterface $parent): void;
 
     /**
-     * @param  array<TreenodeType|TreenodeDtoInterface>  $array
+     * @param  array<TreenodeDtoInterface>  $array
      *
      * @return void
      */
     public function hydrate(array $array): void;
+
+
+    /**
+     * @return array<TreenodeType>
+     */
+    public function dehydrate(): array;
 
     /**
      * @function deleteNode
@@ -79,7 +80,7 @@ interface TreeInterface
      * @param non-negative-int $nodeId
      * @return TreenodeType|null
      */
-    public function getNode(int $nodeId): TreenodeHydrationInterface|null;
+    public function getNode(int $nodeId): TreenodeBaseInterface|null;
 
     /**
      * @function getRoot
@@ -87,24 +88,4 @@ interface TreeInterface
      */
     public function getRoot();
 
-    /**
-     * rootTest
-     *
-     * @param  TreenodeType|TreenodeDtoInterface $nodeItem
-     *
-     * @return bool
-     */
-    public function rootTest($nodeItem): bool;
-
-    /**
-     * @function isEmpty
-     * @return bool
-     */
-    public function isEmpty(): bool;
-
-    /**
-     * @function nodeCount
-     * @return non-negative-int
-     */
-    public function nodeCount(): int;
 }

@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\tree\node\TreenodeHydrationInterface as TreenodeType;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
@@ -45,20 +44,10 @@ interface TreenodeBaseInterface extends NodeVisitableInterface
     public function getParent(): ?TreenodeBaseInterface;
 
     /**
-     * @param  TreeType  $tree
-     *
-     * @return void
-     */
-    public function setTree(TreeInterface $tree): void;
-
-    /**
-     * @return TreeType|null
-     */
-    public function getTree(): ?TreeInterface;
-
-    /**
      * @function getChildren
      * @return CollectionType<TreenodeType>
      */
     public function getChildren(): CollectionInterface;
+
+
 }
