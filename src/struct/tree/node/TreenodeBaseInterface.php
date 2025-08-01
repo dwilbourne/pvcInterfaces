@@ -49,5 +49,17 @@ interface TreenodeBaseInterface extends NodeVisitableInterface
      */
     public function getChildren(): CollectionInterface;
 
-
+    /**
+     * @param  TreenodeType  $node
+     *
+     * @return bool
+     *
+     * In order to ensure we do not create a circular graph when setting a parent,
+     * we need this method.
+     *
+     * The obvious way to implement this is via recursion.  That implementation
+     * is going to involve a call to parent->isDescendantOf, which means it must be
+     * part of the interface, even if it seems a little out of place.
+     */
+    public function isDescendantOf(TreenodeBaseInterface $node): bool;
 }
