@@ -50,6 +50,14 @@ interface TreenodeBaseInterface extends NodeVisitableInterface
     public function getParent(): ?TreenodeBaseInterface;
 
     /**
+     * @param  TreeInterface  $tree
+     * nodes need a reference to the tree when setting the parent in order
+     * to validate the proposed parent node
+     * @return void
+     */
+    public function setTree(TreeInterface $tree): void;
+
+    /**
      * @function getChildren
      * @return CollectionType<TreenodeType>
      */
