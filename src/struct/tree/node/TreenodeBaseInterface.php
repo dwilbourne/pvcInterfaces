@@ -24,8 +24,14 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 interface TreenodeBaseInterface extends NodeVisitableInterface
 {
     /**
+     * @param  int  $nodeId
+     * immutable unique identifier for the node
+     * @return void
+     */
+    public function setNodeId(int $nodeId): void;
+
+    /**
      * @return non-negative-int
-     * unique identifier for the node
      */
     public function getNodeId(): int;
 
