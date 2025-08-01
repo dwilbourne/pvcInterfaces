@@ -34,14 +34,6 @@ interface TreeInterface
     public function initialize(int $treeId): void;
 
     /**
-     * @return CollectionInterface<TreenodeType>
-     * there is an edge case that comes up when trying to get the siblings collection of the root node.  Because root
-     * has no parent, there is no existing collection of the parent's children to get.  So we need to be able to
-     * make a collection on the fly and put the root node into it.
-     */
-    public function makeCollection(): CollectionInterface;
-
-    /**
      * addNode puts a node into the tree's list of nodes.
      *
      * @param TreenodeType $node
