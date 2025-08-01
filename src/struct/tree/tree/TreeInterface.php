@@ -42,12 +42,19 @@ interface TreeInterface
     public function addNode(TreenodeBaseInterface $node, TreenodeBaseInterface $parent): void;
 
     /**
+     * @function deleteNode
+     * @param non-negative-int $nodeId
+     * @param bool $deleteBranchOK
+     */
+    public function deleteNode($nodeId, bool $deleteBranchOK = false): void;
+
+
+    /**
      * @param  array<TreenodeDtoInterface>  $array
      *
      * @return void
      */
     public function hydrate(array $array): void;
-
 
     /**
      * @return array<TreenodeType>
@@ -55,17 +62,10 @@ interface TreeInterface
     public function dehydrate(): array;
 
     /**
-     * @function deleteNode
-     * @param non-negative-int $nodeId
-     * @param bool $deleteBranchOK
-     */
-    public function deleteNode($nodeId, bool $deleteBranchOK = false): void;
-
-    /**
      * @function getNodes
      * @return array<TreenodeType>
      */
-    public function getNodes(): array;
+    public function getNodeCollection(): array;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
