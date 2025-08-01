@@ -19,7 +19,7 @@ use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
  *
  * @see CollectionInterface
  */
-interface TreenodeExtendedInterface
+interface TreenodeHydrationInterface
 {
     /**
      * hydration methods
