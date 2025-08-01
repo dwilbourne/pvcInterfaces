@@ -63,9 +63,9 @@ interface TreeInterface
 
     /**
      * @function getNodes
-     * @return array<TreenodeType>
+     * @return CollectionType
      */
-    public function getNodeCollection(): array;
+    public function getNodeCollection(): CollectionInterface;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
