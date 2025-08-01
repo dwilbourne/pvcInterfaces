@@ -80,4 +80,13 @@ interface TreeInterface
      */
     public function getRoot();
 
+    /**
+     * @param  TreenodeType|TreenodeDtoInterface  $root
+     * in the course of a node getting its siblings, it needs to know whether
+     * it is the root or not because the root has no parent and therefore
+     * no child collection.
+     * @return bool
+     */
+    public function rootTest(TreenodeBaseInterface|TreenodeDtoInterface $root): bool;
+
 }
