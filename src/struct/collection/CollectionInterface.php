@@ -52,13 +52,13 @@ interface CollectionInterface extends Iterator, Countable
     public function getElement(int $key): mixed;
 
     /**
-     * @function findElement returns the key of the first element in the collection where the ValTester
-     * argument returns true when applied to the element.  Returns false if the element is not found in the collection.
+     * @function findElementKey returns the key of the first element in the collection where the ValTester
+     * argument returns true when applied to the element.  Returns null if the element is not found in the collection.
      *
      * @param ValTesterInterface<ElementType> $valTester
-     * @return non-negative-int|false
+     * @return non-negative-int|null
      */
-    public function findElement(ValTesterInterface $valTester): int|false;
+    public function findElementKey(ValTesterInterface $valTester): ?int;
 
     /**
      * @function getKeys returns all the keys in the list which have elements equal to the argument of
