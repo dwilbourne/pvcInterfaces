@@ -15,6 +15,6 @@ interface CollectionOrderedFactoryInterface
      * @param array<ElementType> $elements
      * @return CollectionType<ElementType>
      */
-    public function makeCollection(array $elements): CollectionOrderedInterface;
+    public function makeCollection(array $elements = []): CollectionOrderedInterface;
 
 }

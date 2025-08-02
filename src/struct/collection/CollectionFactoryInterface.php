@@ -20,5 +20,5 @@ interface CollectionFactoryInterface
      * @param array<ElementType> $elements
      * @return CollectionType<ElementType>
      */
-    public function makeCollection(array $elements): CollectionInterface;
+    public function makeCollection(array $elements = []): CollectionInterface;
 }
