@@ -57,7 +57,7 @@ interface TreeInterface
     public function hydrate(array $array): void;
 
     /**
-     * @return array<TreenodeType>
+     * @return array<non-negative-int, TreenodeDtoInterface>
      */
     public function dehydrate(): array;
 
