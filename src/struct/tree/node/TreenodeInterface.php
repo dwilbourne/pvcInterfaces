@@ -101,7 +101,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
 
     /**
-     * ancestor / descendant methods.
+     * methods describing the nature of the node.
      */
 
     /**
@@ -119,6 +119,13 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      * @return bool
      */
     public function isAncestorOf(TreenodeInterface $node): bool;
+
+    public function isLeaf(): bool;
+
+    public function isInteriorNode(): bool;
+
+    public function isRoot(): bool;
+
 
     /**
      * methods related to children
