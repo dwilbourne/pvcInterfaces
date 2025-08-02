@@ -30,6 +30,11 @@ use pvc\interfaces\validator\ValTesterInterface;
 interface CollectionInterface extends Iterator, Countable
 {
     /**
+     * @return void
+     */
+    public function initialize(): void;
+
+    /**
      * @function isEmpty
      * @return bool
      */
