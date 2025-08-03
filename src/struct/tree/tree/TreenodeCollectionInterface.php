@@ -6,7 +6,8 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
- * @extends CollectionInterface<TreenodeInterface>
+ * @template TreenodeType of TreenodeInterface
+ * @extends CollectionInterface<TreenodeType>
  */
 interface TreenodeCollectionInterface extends CollectionInterface
 {
