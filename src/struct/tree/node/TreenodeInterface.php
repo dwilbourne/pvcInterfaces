@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
-use pvc\interfaces\struct\collection\CollectionOrderedInterface;
 use pvc\interfaces\struct\collection\IndexedElementInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
@@ -18,7 +17,6 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * Interface TreenodeInterface defines the basic operations for a generic tree node.
  *
  * @template TreenodeType of TreenodeInterface
- * @template CollectionType of CollectionOrderedInterface
  * @template TreeType of TreeInterface
  *
  * NodeVisitableInterface allows treenodes to participate in a depth first search
@@ -133,9 +131,9 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getChildren
-     * @return CollectionType<TreenodeType>
+     * @return TreenodeChildCollectionInterface<TreenodeType>
      */
-    public function getChildren(): CollectionInterface;
+    public function getChildren(): TreenodeChildCollectionInterface;
 
     /**
      * @return bool

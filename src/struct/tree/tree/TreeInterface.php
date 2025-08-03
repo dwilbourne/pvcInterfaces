@@ -9,7 +9,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -22,7 +21,6 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * must have a single parent.
  *
  * @template TreenodeType of TreenodeInterface
- * @template CollectionType of CollectionInterface
  */
 interface TreeInterface
 {
@@ -63,9 +61,9 @@ interface TreeInterface
 
     /**
      * @function getNodes
-     * @return CollectionType
+     * @return TreenodeCollectionInterface<TreenodeType>
      */
-    public function getNodeCollection(): CollectionInterface;
+    public function getNodeCollection(): TreenodeCollectionInterface;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
