@@ -109,16 +109,16 @@ interface CollectionInterface extends Iterator, Countable
      * @param non-negative-int $index
      * @return ElementType|null
      */
-    public function getNth(int $index);
+    public function getNth(int $index): mixed;
 
     /**
      * @return ElementType|null
      */
-    public function getFirst();
+    public function getFirst(): mixed;
 
     /**
      * @return ElementType|null
      */
-    public function getLast();
+    public function getLast(): mixed;
 
 }
