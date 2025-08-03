@@ -17,7 +17,6 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * Interface TreenodeInterface defines the basic operations for a generic tree node.
  *
  * @template TreenodeType of TreenodeInterface
- * @template TreeType of TreeInterface
  *
  * NodeVisitableInterface allows treenodes to participate in a depth first search
  *
@@ -60,7 +59,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function getParent(): ?TreenodeInterface;
 
     /**
-     * @param  TreeType  $tree
+     * @param  TreeInterface<TreenodeType>  $tree
      * nodes need a reference to the tree when setting the parent in order
      * to validate the proposed parent node
      * @return void
