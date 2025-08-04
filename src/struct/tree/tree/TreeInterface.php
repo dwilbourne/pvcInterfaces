@@ -25,6 +25,11 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 interface TreeInterface
 {
     /**
+     * @return bool
+     */
+    public function isEmpty(): bool;
+
+    /**
      * @param non-negative-int $treeId
      * @return void
      * initializes the tree so it is ready to use
