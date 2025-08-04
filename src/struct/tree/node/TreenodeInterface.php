@@ -117,10 +117,6 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      */
     public function isAncestorOf(TreenodeInterface $node): bool;
 
-    public function isLeaf(): bool;
-
-    public function isInteriorNode(): bool;
-
     public function isRoot(): bool;
 
 
