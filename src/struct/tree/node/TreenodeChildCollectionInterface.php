@@ -2,13 +2,13 @@
 
 namespace pvc\interfaces\struct\tree\node;
 
-use pvc\interfaces\struct\collection\CollectionOrderedInterface;
+use pvc\interfaces\struct\collection\CollectionInterface;
 
 /**
  * @template TreenodeType of TreenodeInterface
- * @extends CollectionOrderedInterface<TreenodeType>
+ * @extends CollectionInterface<TreenodeType>
  */
-interface TreenodeChildCollectionInterface extends CollectionOrderedInterface
+interface TreenodeChildCollectionInterface extends CollectionInterface
 {
 
 }

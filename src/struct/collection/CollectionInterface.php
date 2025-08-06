@@ -76,6 +76,21 @@ interface CollectionInterface extends Iterator, Countable
     public function findElementKeys(ValTesterInterface $valTester): array;
 
     /**
+     * getIndex gets the ordinal position of the element in the list corresponding to $key
+     * @param non-negative-int $key
+     * @return non-negative-int
+     */
+    public function getIndex(int $key): int;
+
+    /**
+     * setIndex sets the ordinal position of an element in the list.  In an
+     * unordered list, this method does nothing.
+     * @param non-negative-int $key
+     * @param non-negative-int $newIndex
+     */
+    public function setIndex(int $key, int $newIndex): void;
+
+    /**
      * crud operations
      */
 

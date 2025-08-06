@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\collection;
 
 /**
- * elements in an indexed collection must have setIndex and getIndex to support the persistence of the index
+ * elements in an ordered collection must have setIndex and getIndex to support
+ * the persistence of the index.  In an unordered collection, these methods
+ * do nothing.
  */
 interface IndexedElementInterface
 {
