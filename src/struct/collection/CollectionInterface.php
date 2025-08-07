@@ -30,6 +30,13 @@ use pvc\interfaces\validator\ValTesterInterface;
 interface CollectionInterface extends Iterator, Countable
 {
     /**
+     * @param ?callable $comparator
+     *
+     * @return void
+     */
+    public function setComparator($comparator): void;
+
+    /**
      * @return void
      */
     public function initialize(): void;
