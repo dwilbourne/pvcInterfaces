@@ -21,7 +21,7 @@ interface DomNodeInterface extends ContentModelInterface
      */
     public function getParent(): ?DomNodeInterface;
 
-    public function getChildren() : DomNodeCollectionInterface;
+    public function getChildren() : DomNodeChildCollectionInterface;
 
     /**
      * @return ?DomNodeInterface
@@ -41,7 +41,7 @@ interface DomNodeInterface extends ContentModelInterface
     /**
      * @return DomNodeCollectionInterface
      */
-    public function getSiblings(): DomNodeCollectionInterface;
+    public function getSiblings(): DomNodeChildCollectionInterface;
 
     public function render(): string;
 }
