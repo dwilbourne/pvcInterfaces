@@ -24,17 +24,17 @@ interface DomNodeInterface extends ContentModelInterface
     public function getChildren() : DomNodeCollectionInterface;
 
     /**
-     * @return DomNodeInterface
+     * @return ?DomNodeInterface
      */
     public function getFirstChild(): ?DomNodeInterface;
 
     /**
-     * @return DomNodeInterface
+     * @return ?DomNodeInterface
      */
     public function getLastChild(): ?DomNodeInterface;
 
     /**
-     * @return DomNodeInterface
+     * @return ?DomNodeInterface
      */
     public function getNthChild(int $n): ?DomNodeInterface;
 
