@@ -2,13 +2,9 @@
 
 namespace pvc\interfaces\html\factory;
 
-use pvc\interfaces\html\dom\node_types\DomTreenodeInterface;
-use pvc\interfaces\struct\tree\node\TreenodeChildCollectionFactoryInterface;
+use pvc\interfaces\html\dom\DomNodeChildCollectionInterface;
 
-/**
- * @extends TreenodeChildCollectionFactoryInterface<DomTreenodeInterface>
- */
-interface DomNodeChildCollectionFactoryInterface extends TreenodeChildCollectionFactoryInterface
+interface DomNodeChildCollectionFactoryInterface
 {
-
+    public function makeDomNodeChildCollection(): DomNodeChildCollectionInterface;
 }
