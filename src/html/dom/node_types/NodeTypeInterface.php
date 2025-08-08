@@ -2,7 +2,9 @@
 
 namespace pvc\interfaces\html\dom\node_types;
 
-interface NodeTypeInterface
+use pvc\interfaces\struct\collection\IndexedElementInterface;
+
+interface NodeTypeInterface extends IndexedElementInterface
 {
     public function getNodeType(): int;
 
