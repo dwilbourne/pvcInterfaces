@@ -9,5 +9,5 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  */
 interface DomTreenodeInterface extends TreenodeInterface
 {
-
+    public function getDomNode(): DomNodeInterface;
 }
