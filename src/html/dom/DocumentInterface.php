@@ -4,6 +4,7 @@ namespace pvc\interfaces\html\dom;
 
 use pvc\interfaces\html\dom\node_types\DomCommentInterface;
 use pvc\interfaces\html\dom\node_types\DomElementInterface;
+use pvc\interfaces\html\dom\node_types\DomNodeInterface;
 use pvc\interfaces\html\dom\node_types\DomTextInterface;
 
 interface DocumentInterface

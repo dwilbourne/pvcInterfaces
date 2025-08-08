@@ -1,6 +1,6 @@
 <?php
 
-namespace pvc\interfaces\html\dom;
+namespace pvc\interfaces\html\dom\node_types;
 
 enum NodeType: int
 {

@@ -1,20 +1,15 @@
 <?php
 
-namespace pvc\interfaces\html\dom;
+namespace pvc\interfaces\html\dom\node_types;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
+use pvc\interfaces\html\dom\DomNodeChildCollectionInterface;
 
 /**
  * all DomNodes implement ContentModelInterface
  */
-interface DomNodeInterface extends ContentModelInterface
+interface DomNodeInterface extends NodeTypeInterface, ContentModelInterface
 {
-    /**
-     * methods identifying the node
-     */
-    public function getNodeType(): NodeType;
-    public function getName(): string;
-
 
     /**
      * tree-related methods
@@ -39,7 +34,7 @@ interface DomNodeInterface extends ContentModelInterface
     public function getNthChild(int $n): ?DomNodeInterface;
 
     /**
-     * @return DomNodeCollectionInterface
+     * @return DomNodeChildCollectionInterface
      */
     public function getSiblings(): DomNodeChildCollectionInterface;
 

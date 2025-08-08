@@ -2,7 +2,7 @@
 
 namespace pvc\interfaces\html\content_model;
 
-use pvc\interfaces\html\dom\DomNodeInterface;
+use pvc\interfaces\html\dom\node_types\DomNodeInterface;
 
 interface ContentModelInterface
 {
