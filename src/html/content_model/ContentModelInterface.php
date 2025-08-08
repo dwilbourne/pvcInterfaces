@@ -20,4 +20,11 @@ interface ContentModelInterface
      */
     public function getDomNode(): DomNodeInterface;
 
+    /**
+     * getCategories
+     * @return int
+     * bitmask of the content categories to which this node belongs
+     */
+    public function getCategories(): int;
+
 }
