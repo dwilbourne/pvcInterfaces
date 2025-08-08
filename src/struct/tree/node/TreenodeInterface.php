@@ -121,7 +121,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
 
     /**
-     * methods related to children
+     * methods related to children / siblings
      */
 
     /**
@@ -162,5 +162,10 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      * @return TreenodeType|null
      */
     public function getNthChild(int $n): ?TreenodeInterface;
+
+    /**
+     * @return TreenodeChildCollectionInterface<TreenodeType>
+     */
+    public function getSiblings(): TreenodeChildCollectionInterface;
 
 }
