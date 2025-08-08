@@ -5,11 +5,14 @@ namespace pvc\interfaces\html\dom\node_types;
 use pvc\interfaces\html\content_model\ContentModelInterface;
 use pvc\interfaces\html\dom\DomNodeChildCollectionInterface;
 
-/**
- * all DomNodes implement ContentModelInterface
- */
-interface DomNodeInterface extends NodeTypeInterface, ContentModelInterface
+interface DomNodeInterface extends NodeTypeInterface
 {
+    /**
+     * getContentModel
+     * @return ContentModelInterface
+     */
+    public function getContentModel() : ContentModelInterface;
+
     /**
      * tree-related methods
      */
