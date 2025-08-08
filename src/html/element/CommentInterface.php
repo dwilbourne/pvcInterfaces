@@ -2,6 +2,7 @@
 
 namespace pvc\interfaces\html\element;
 
-interface TextInterface
+interface CommentInterface
 {
+
 }
