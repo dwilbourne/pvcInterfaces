@@ -10,7 +10,6 @@ use pvc\interfaces\html\dom\DomNodeChildCollectionInterface;
  */
 interface DomNodeInterface extends NodeTypeInterface, ContentModelInterface
 {
-
     /**
      * tree-related methods
      */
