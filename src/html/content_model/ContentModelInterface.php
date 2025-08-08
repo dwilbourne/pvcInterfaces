@@ -14,13 +14,6 @@ interface ContentModelInterface
     public function canAcceptContent(DomNodeInterface $content): bool;
 
     /**
-     * getDomNode
-     * @return DomNodeInterface
-     * DomNode to which the content model belongs
-     */
-    public function getDomNode(): DomNodeInterface;
-
-    /**
      * getCategories
      * @return int
      * bitmask of the content categories to which this node belongs
