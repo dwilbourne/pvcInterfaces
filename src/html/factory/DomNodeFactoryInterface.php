@@ -2,17 +2,14 @@
 
 namespace pvc\interfaces\html\factory;
 
-use pvc\interfaces\html\dom\node_types\DomCommentInterface;
-use pvc\interfaces\html\dom\node_types\DomElementInterface;
-use pvc\interfaces\html\dom\node_types\DomTextInterface;
-use pvc\interfaces\msg\MsgInterface;
+use pvc\interfaces\html\dom\node_types\DomNodeInterface;
 
 
 interface DomNodeFactoryInterface
 {
-    public function makeDomElement(string $elementName): DomElementInterface;
+    public function createElement(string $name): DomNodeInterface;
 
-    public function makeDomText(string|MsgInterface $textMsg): DomTextInterface;
+    public function createComment(): DomNodeInterface;
 
-    public function makeDomComment(string $comment): DomCommentInterface;
+    public function createTextNode(): DomNodeInterface;
 }

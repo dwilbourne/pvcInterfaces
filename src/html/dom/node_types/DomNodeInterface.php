@@ -4,11 +4,19 @@ namespace pvc\interfaces\html\dom\node_types;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
 use pvc\interfaces\html\dom\DomNodeChildCollectionInterface;
+use pvc\interfaces\html\element\ElementInterface;
+use pvc\interfaces\struct\collection\IndexedElementInterface;
 
-interface DomNodeInterface extends NodeTypeInterface, ContentModelInterface
+/**
+ * Elementinterface refers to html elements, IndexedElementInterface refers to
+ * collections which have elements that have indexes
+ */
+interface DomNodeInterface extends ContentModelInterface, ElementInterface, IndexedElementInterface
 {
     /**
-     * tree-related methods
+     * tree-related methods.  We don't need all the treenode methods
+     * so just list the ones we need and the implementation will use
+     * a facade pattern
      */
     public function getParent(): ?DomNodeInterface;
 
