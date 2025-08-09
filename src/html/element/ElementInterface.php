@@ -10,7 +10,6 @@ namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeWithValueInterface;
-use pvc\interfaces\html\content_model\ContentModelInterface;
 
 /**
  * Class ElementInterface
@@ -40,6 +39,4 @@ interface ElementInterface
      * @return void
      */
     public function removeAttribute(string $name): void;
-
-    public function getContentModel(): ContentModelInterface;
 }
