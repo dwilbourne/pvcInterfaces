@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\html\element;
 
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
+use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\AttributeWithValueInterface;
 
 /**
@@ -26,6 +27,8 @@ interface ElementInterface
      * @return ElementInterface
      */
     public function setAttribute(string $name, ...$values): ElementInterface;
+
+    public function getAttribute(string $name): ?AttributeInterface;
 
     /**
      * @param  AttributeCustomDataInterface  $customData
