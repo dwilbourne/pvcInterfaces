@@ -7,9 +7,9 @@ use pvc\interfaces\html\dom\node_types\DomNodeInterface;
 
 interface DomNodeFactoryInterface
 {
-    public function createElement(string $name): DomNodeInterface;
+    public function makeElement(string $name): DomNodeInterface;
 
-    public function createComment(): DomNodeInterface;
+    public function makeComment(): DomNodeInterface;
 
-    public function createTextNode(): DomNodeInterface;
+    public function makeTextNode(): DomNodeInterface;
 }
