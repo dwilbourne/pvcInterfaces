@@ -41,10 +41,4 @@ interface DomNodeInterface extends ContentModelInterface, ElementInterface, Inde
      * @return DomNodeChildCollectionInterface
      */
     public function getSiblings(): DomNodeChildCollectionInterface;
-
-    /**
-     * render
-     * @return string
-     */
-    public function render(): string;
 }
