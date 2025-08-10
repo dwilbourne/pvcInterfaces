@@ -11,6 +11,7 @@ namespace pvc\interfaces\html\element;
 use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\AttributeWithValueInterface;
+use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Class ElementInterface
@@ -42,4 +43,17 @@ interface ElementInterface
      * @return void
      */
     public function removeAttribute(string $name): void;
+
+    /**
+     * generateFirstVisitOutput
+     * @return string|MsgInterface
+     * text nodes can generate a Msg (which will need to be formatted / translated)
+     */
+    public function generateFirstVisitOutput(): string|MsgInterface;
+
+    /**
+     * generateLastVisitOutput
+     * @return string
+     */
+    public function generateLastVisitOutput(): string;
 }

@@ -8,7 +8,7 @@ use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\struct\collection\IndexedElementInterface;
 
 /**
- * Elementinterface refers to html elements, IndexedElementInterface refers to
+ * ElementInterface refers to html elements, IndexedElementInterface refers to
  * collections which have elements that have indexes
  */
 interface DomNodeInterface extends ContentModelInterface, ElementInterface, IndexedElementInterface
@@ -42,5 +42,9 @@ interface DomNodeInterface extends ContentModelInterface, ElementInterface, Inde
      */
     public function getSiblings(): DomNodeChildCollectionInterface;
 
+    /**
+     * render
+     * @return string
+     */
     public function render(): string;
 }
