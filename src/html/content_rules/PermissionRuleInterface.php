@@ -1,11 +1,11 @@
 <?php
 
-namespace pvc\interfaces\html\rules;
+namespace pvc\interfaces\html\content_rules;
 
 use pvc\interfaces\html\content_model\ContentPermission;
 use pvc\interfaces\html\dom\node_types\DomNodeInterface;
 
-interface ContentRuleInterface
+interface PermissionRuleInterface extends AbstractRuleInterface
 {
     /**
      * @param  DomNodeInterface  $content
