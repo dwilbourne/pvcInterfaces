@@ -18,44 +18,44 @@ interface DocumentInterface
     /**
      * tree oriented methods
      */
-    public function setNode(DomNodeInterface $node, DomNodeInterface $parent): void;
+    //public function setNode(DomNodeInterface $node, DomNodeInterface $parent): void;
 
-    public function deleteNode(DomNodeInterface $node): void;
+    //public function deleteNode(DomNodeInterface $node): void;
 
-    public function render(): string;
+    //public function render(): string;
 
     /**
      * element selectors
      */
-    public function getElementById(string $id): ?DomNodeInterface;
+    //public function getElementById(string $id): ?DomNodeInterface;
 
     /**
      * @param  string  $name
      *
      * @return array<DomNodeInterface>
      */
-    public function getElementsByName(string $name): array;
+    //public function getElementsByName(string $name): array;
 
     /**
      * @param  string  $className
      *
      * @return array<DomNodeInterface>
      */
-    public function getElementsByClass(string $className): array;
+    //public function getElementsByClass(string $className): array;
 
     /**
      * @param  string  $tagName
      *
      * @return array<DomNodeInterface>
      */
-    public function getElementsByTagName(string $tagName): array;
+    //public function getElementsByTagName(string $tagName): array;
 
-    public function getElementByQuerySelector(string $selector): ?DomNodeInterface;
+    //public function getElementByQuerySelector(string $selector): ?DomNodeInterface;
 
     /**
      * @param  string  $tagName
      *
      * @return array<DomNodeInterface>
      */
-    public function getElementsByQuerySelectorAll(string $tagName): array;
+    //public function getElementsByQuerySelectorAll(string $tagName): array;
 }
