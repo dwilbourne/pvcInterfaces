@@ -9,8 +9,6 @@ interface PermissionRuleInterface extends AbstractRuleInterface
 {
     /**
      * @param  DomNodeInterface  $content
-     * returns one of the constants defined in ContentModelInterface
-     *
      * @return ContentPermission
      */
     public function test(DomNodeInterface $content): ContentPermission;

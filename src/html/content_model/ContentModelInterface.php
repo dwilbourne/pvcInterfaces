@@ -18,6 +18,13 @@ interface ContentModelInterface
      * @return int
      * bitmask of the content categories to which this node belongs
      */
-    public function getContentCategories(): int;
+    public function getCategories(): int;
+
+    /**
+     * getChildCategories
+     * @return int
+     * bitmask of the permitted content categories for children
+     */
+    public function getChildCategories(): int;
 
 }
