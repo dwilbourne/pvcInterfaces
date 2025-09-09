@@ -41,4 +41,11 @@ interface DomNodeInterface extends ContentModelInterface, ElementInterface, Inde
      * @return DomNodeChildCollectionInterface
      */
     public function getSiblings(): DomNodeChildCollectionInterface;
+
+    /**
+     * hasAncestorNamed
+     * @param  string  $name
+     * @return bool
+     */
+    public function hasAncestorNamed(string $name): bool;
 }
