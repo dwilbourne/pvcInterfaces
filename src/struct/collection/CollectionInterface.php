@@ -94,11 +94,12 @@ interface CollectionInterface extends Iterator, Countable
      */
 
     /**
-     * @function add adds an element into a list using a specified key.
-     * @param non-negative-int $key
+     * @function add puts an element into the collection.  If the key is not specified,
+     * a new key is automatically generated.
      * @param ElementType $element
+     * @param non-negative-int|null $key
      */
-    public function add(int $key, $element): void;
+    public function add($element, ?int $key): void;
 
     /**
      * @function update allows you to change the payload of an element in the collection.
