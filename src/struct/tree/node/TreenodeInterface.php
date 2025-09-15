@@ -137,10 +137,10 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getChild
-     * @param non-negative-int $nodeid
+     * @param non-negative-int $nodeId
      * @return TreenodeType|null
      */
-    public function getChild(int $nodeid): ?TreenodeInterface;
+    public function getChild(int $nodeId): ?TreenodeInterface;
 
     /**
      * @return array<non-negative-int, TreenodeType>
