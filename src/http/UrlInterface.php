@@ -14,12 +14,6 @@ namespace pvc\interfaces\http;
 interface UrlInterface
 {
     /**
-     * getQuery
-     * @return QueryStringInterface
-     */
-    public function getQueryString(): QueryStringInterface;
-
-    /**
      * hydrate
      * all the array values are strings except the port number
      * @param array<string|non-negative-int> $urlParts
