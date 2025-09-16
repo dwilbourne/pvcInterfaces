@@ -17,7 +17,7 @@ interface UrlInterface
      * getQuery
      * @return QueryStringInterface
      */
-    public function getQueryString(): QueryStringInterface;
+    public function getQuery(): QueryStringInterface;
 
     /**
      * hydrate
