@@ -27,6 +27,13 @@ interface UrlInterface
     public function hydrateFromArray(array $urlParts): void;
 
     /**
+     * parse
+     * @param  string  $url
+     * @return void
+     */
+    public function parse(string $url): void;
+
+    /**
      * render
      * @param bool $validateBeforeRender
      * @return string

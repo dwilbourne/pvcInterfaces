@@ -59,6 +59,13 @@ interface QueryStringInterface
     public function getQueryEncoding(): int;
 
     /**
+     * parse
+     * @param  string  $queryString
+     * @return void
+     */
+    public function parse(string $queryString): void;
+
+    /**
      * render
      * @return string
      */
