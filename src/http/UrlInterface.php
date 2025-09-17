@@ -35,8 +35,7 @@ interface UrlInterface
 
     /**
      * render
-     * @param bool $validateBeforeRender
      * @return string
      */
-    public function render(bool $validateBeforeRender = true): string;
+    public function render(): string;
 }
