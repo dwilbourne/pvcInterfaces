@@ -13,5 +13,4 @@ use League\Uri\Contracts\QueryInterface;
  */
 interface QueryStringInterface extends QueryInterface
 {
-
 }
