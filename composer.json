@@ -20,7 +20,8 @@
 	},
 	"require": {
 		"psr/container": "*",
-		"psr/simple-cache": "*"
+		"psr/simple-cache": "*",
+		"league/uri-interfaces": "^7"
 	},
 	"require-dev": {
 		"phpstan/phpstan": "^2",

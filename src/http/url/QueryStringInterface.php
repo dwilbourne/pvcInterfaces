@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\http;
+namespace pvc\interfaces\http\url;
 
 use pvc\interfaces\validator\ValTesterInterface;
 
