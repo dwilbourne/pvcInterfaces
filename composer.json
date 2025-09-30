@@ -21,6 +21,7 @@
 	"require": {
 		"psr/container": "*",
 		"psr/simple-cache": "*",
+		"psr/http-client": "^1",
 		"league/uri-interfaces": "^7"
 	},
 	"require-dev": {
