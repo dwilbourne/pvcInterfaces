@@ -1,6 +1,6 @@
 <?php
 
-namespace pvc\interfaces\http\uri;
+namespace pvc\interfaces\http\psr7;
 
 use League\Uri\Contracts\QueryInterface;
 
@@ -13,7 +13,7 @@ use League\Uri\Contracts\QueryInterface;
  *
  * Guzzle does not have a query object per se.  It can extract the query as a
  * string from a Uri via its own Uri object.  For requests, there are several
- * options for injecting query parameters, none of which are object oriented.
+ * options for injecting query parameters, none of which are object-oriented.
  * @see https://docs.guzzlephp.org/en/stable/quickstart.html#query-string-parameters
  */
 interface QueryStringInterface extends QueryInterface
