@@ -9,12 +9,11 @@ use League\Uri\Contracts\QueryInterface;
  * of querystrings available through the ServerRequestInterface, but it is really
  * referring to a server-specific environment in the context of a request.
  *
- * So... using the League's interface.
+ * So... pvc uses the League's interface, which is rather extensive.
  *
- * Guzzle does not have a query object per se.  It can extract the query as a
- * string from a Uri via its own Uri object.  For requests, there are several
- * options for injecting query parameters, none of which are object-oriented.
- * @see https://docs.guzzlephp.org/en/stable/quickstart.html#query-string-parameters
+ * Other choices could have been homegrown or use a very simple interface
+ * that exposes the methods Guzzle implements in its Psr7 Query object.  The
+ * League's interface appears quite robust and is actively maintained.
  */
 interface QueryStringInterface extends QueryInterface
 {
