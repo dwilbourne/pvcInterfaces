@@ -2,19 +2,36 @@
 
 namespace pvc\interfaces\http\psr7;
 
-use League\Uri\Contracts\QueryInterface;
 
 /**
  * There is no PSR for a querystring interface per se.  There is some manipulation
  * of querystrings available through the ServerRequestInterface, but it is really
  * referring to a server-specific environment in the context of a request.
  *
- * So... pvc uses the League's interface, which is rather extensive.
+ * So... pvc defines a simple interface which mirrors the methods in guzzle's
+ * querystring object.
  *
- * Other choices could have been homegrown or use a very simple interface
- * that exposes the methods Guzzle implements in its Psr7 Query object.  The
- * League's interface appears quite robust and is actively maintained.
+ * Other choices could have been homegrown or use something like The
+ * League's interface, which appears quite robust but rather more complicated.
  */
-interface QueryStringInterface extends QueryInterface
+interface QueryStringInterface
 {
+    /**
+     * parse
+     * @param  string  $str
+     * @param  bool|int  $urlEncoding
+     *
+     * @return array<array-key, mixed>
+     */
+    public static function parse(string $str, bool|int $urlEncoding = true): array;
+
+    /**
+     * build
+     * @param  array<mixed>  $params
+     * @param  false|int  $encoding
+     * @param  bool  $treatBoolsAsInts
+     *
+     * @return string
+     */
+    public static function build(array $params, false|int $encoding = PHP_QUERY_RFC3986, bool $treatBoolsAsInts = true): string;
 }
