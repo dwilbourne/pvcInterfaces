@@ -86,6 +86,14 @@ interface QueryStringInterface
     public function setArrayFormatter(FrmtrArrayInterface $arrayFormatter): void;
 
     /**
+     * setSeparator
+     * @param  string  $separator
+     *
+     * @return void
+     */
+    public function setSeparator(string $separator): void;
+
+    /**
      * render
      * @return string
      */
