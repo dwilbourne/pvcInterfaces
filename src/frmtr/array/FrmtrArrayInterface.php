@@ -14,5 +14,5 @@ interface FrmtrArrayInterface
      *
      * @return string
      */
-    public function format($value): string;
+    public function format(array $value): string;
 }
