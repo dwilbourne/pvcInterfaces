@@ -11,22 +11,12 @@ namespace pvc\interfaces\http;
 use pvc\interfaces\frmtr\array\FrmtrArrayInterface;
 use pvc\interfaces\frmtr\bool\FrmtrBooleanInterface;
 use pvc\interfaces\frmtr\null\FrmtrNullInterface;
-use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Class QueryStringInterface
  */
 interface QueryStringInterface
 {
-    /**
-     * setParamNameTester
-     * There is no standard for parameter names, so the interface provides
-     * a mechanism to restrict your parameter names however you choose. See
-     * the implementation in the pvc/http library for more details.
-     * @param ValTesterInterface<string>  $paramNameTester
-     */
-    public function setParamNameTester(ValTesterInterface $paramNameTester): void;
-
     /**
      * setParams
      * @param array<string, mixed> $params
