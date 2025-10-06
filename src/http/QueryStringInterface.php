@@ -51,29 +51,29 @@ interface QueryStringInterface
     public function parse(string $queryString): void;
 
     /**
-     * setBoolFormatter
-     * @param  FrmtrBooleanInterface  $boolFormatter
+     * setBoolFrmtr
+     * @param  FrmtrBooleanInterface  $boolFrmtr
      * choose how you want your boolean values formatted
      * @return void
      */
-    public function setBoolFormatter(FrmtrBooleanInterface $boolFormatter): void;
+    public function setBoolFrmtr(FrmtrBooleanInterface $boolFrmtr): void;
 
     /**
-     * setNullFormatter
-     * @param  FrmtrNullInterface  $nullFormatter
+     * setNullFrmtr
+     * @param  FrmtrNullInterface  $nullFrmtr
      * you have a couple of choices in how you want to format a parameter with
      * a null value
      * @return void
      */
-    public function setNullFormatter(FrmtrNullInterface $nullFormatter): void;
+    public function setNullFrmtr(FrmtrNullInterface $nullFrmtr): void;
 
     /**
-     * setArrayFormatter
-     * @param  FrmtrArrayInterface  $arrayFormatter
+     * setArrayFrmtr
+     * @param  FrmtrArrayInterface  $arrayFrmtr
      * there are several ways that arrays can be formatted in a querystring...
      * @return void
      */
-    public function setArrayFormatter(FrmtrArrayInterface $arrayFormatter): void;
+    public function setArrayFrmtr(FrmtrArrayInterface $arrayFrmtr): void;
 
     /**
      * setSeparator
