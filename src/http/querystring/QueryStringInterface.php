@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\http;
+namespace pvc\interfaces\http\querystring;
 
 use pvc\interfaces\frmtr\array\FrmtrArrayInterface;
 use pvc\interfaces\frmtr\bool\FrmtrBooleanInterface;
@@ -60,12 +60,12 @@ interface QueryStringInterface
 
     /**
      * setNullFrmtr
-     * @param  FrmtrNullInterface  $nullFrmtr
-     * you have a couple of choices in how you want to format a parameter with
+     * @param  NullFrmtr  $nullFrmtr
+     * you have a choices in how you want to format a parameter with
      * a null value
      * @return void
      */
-    public function setNullFrmtr(FrmtrNullInterface $nullFrmtr): void;
+    public function setNullFrmtr(NullFrmtr $nullFrmtr): void;
 
     /**
      * setArrayFrmtr
