@@ -13,6 +13,9 @@ use pvc\interfaces\frmtr\bool\FrmtrBooleanInterface;
 
 /**
  * Class QueryStringInterface
+ *
+ * almost the same as 'is_scalar' but includes null
+ * @phpstan-type QstrParamValue string|int|float|bool|null
  */
 interface QueryStringInterface
 {
