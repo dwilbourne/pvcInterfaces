@@ -59,15 +59,6 @@ interface QueryStringInterface
     public function setBoolFrmtr(FrmtrBooleanInterface $boolFrmtr): void;
 
     /**
-     * setNullFrmtr
-     * @param  NullFrmtr  $nullFrmtr
-     * you have a choices in how you want to format a parameter with
-     * a null value
-     * @return void
-     */
-    public function setNullFrmtr(NullFrmtr $nullFrmtr): void;
-
-    /**
      * setArrayFrmtr
      * @param  FrmtrArrayInterface  $arrayFrmtr
      * there are several ways that arrays can be formatted in a querystring...
