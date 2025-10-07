@@ -10,7 +10,6 @@ namespace pvc\interfaces\http\querystring;
 
 use pvc\interfaces\frmtr\array\FrmtrArrayInterface;
 use pvc\interfaces\frmtr\bool\FrmtrBooleanInterface;
-use pvc\interfaces\frmtr\null\FrmtrNullInterface;
 
 /**
  * Class QueryStringInterface
