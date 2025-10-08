@@ -20,9 +20,8 @@ interface NumericIndexFrmtrInterface
 
     /**
      * format
-     * @param  array  $array
-     *
-     * @return array
+     * @param  array<mixed>  $array
+     * @return array<mixed>
      * returns an array where the numeric indices have been formatted into strings
      */
     public function format(array $array): array;
