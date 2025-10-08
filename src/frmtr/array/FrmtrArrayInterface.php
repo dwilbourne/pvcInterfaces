@@ -10,9 +10,11 @@ interface FrmtrArrayInterface
 {
     /**
      * format
-     * @param array<mixed> $value
+     *
+     * @param array<mixed>  $array
+     *
      * @return string
      * flattens (destructures) an array into a string
      */
-    public function format(array $value): string;
+    public function format(array $array): string;
 }
