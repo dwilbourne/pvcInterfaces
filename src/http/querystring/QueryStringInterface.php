@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\http\querystring;
 
 use pvc\interfaces\frmtr\array\FrmtrArrayInterface;
-use pvc\interfaces\frmtr\bool\FrmtrBooleanInterface;
 
 /**
  * Class QueryStringInterface
@@ -19,6 +18,20 @@ use pvc\interfaces\frmtr\bool\FrmtrBooleanInterface;
  */
 interface QueryStringInterface
 {
+    /**
+     * setSeparator
+     * @param  string  $separator
+     * @return void
+     */
+    public function setSeparator(string $separator): void;
+
+    /**
+     * setQueryEncoding
+     * the older standard is PHP_RFC1738 and the newer standard is PHP_RFC986
+     * @param int $encoding
+     */
+    public function setQueryEncoding(int $encoding): void;
+
     /**
      * setParams
      * @param array<string, mixed> $params
@@ -39,11 +52,21 @@ interface QueryStringInterface
     public function getParams(): array;
 
     /**
-     * setQueryEncoding
-     * the older standard is PHP_RFC1738 and the newer standard is PHP_RFC986
-     * @param int $encoding
+     * addArrayTransformer
+     * @param  ArrayTransformerInterface  $transformer
+     * @return void
+     * adds a transformer.  Transformers are sequentially applied to the
+     * parameters before destructuring the array.
      */
-    public function setQueryEncoding(int $encoding): void;
+    public function addArrayTransformer(ArrayTransformerInterface $transformer): void;
+
+    /**
+     * setArrayFrmtr
+     * @param  FrmtrArrayInterface  $arrayFrmtr
+     * there are several ways that arrays can be destructured into a string
+     * @return void
+     */
+    public function setArrayFrmtr(FrmtrArrayInterface $arrayFrmtr): void;
 
     /**
      * parse
@@ -51,30 +74,6 @@ interface QueryStringInterface
      * @return void
      */
     public function parse(string $queryString): void;
-
-    /**
-     * setBoolFrmtr
-     * @param  FrmtrBooleanInterface  $boolFrmtr
-     * choose how you want your boolean values formatted
-     * @return void
-     */
-    public function setBoolFrmtr(FrmtrBooleanInterface $boolFrmtr): void;
-
-    /**
-     * setArrayFrmtr
-     * @param  FrmtrArrayInterface  $arrayFrmtr
-     * there are several ways that arrays can be formatted in a querystring...
-     * @return void
-     */
-    public function setArrayFrmtr(FrmtrArrayInterface $arrayFrmtr): void;
-
-    /**
-     * setSeparator
-     * @param  string  $separator
-     *
-     * @return void
-     */
-    public function setSeparator(string $separator): void;
 
     /**
      * render
