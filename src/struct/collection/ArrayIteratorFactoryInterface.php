@@ -5,7 +5,7 @@ namespace pvc\interfaces\struct\collection;
 use ArrayIterator;
 
 /**
- * @template KeyType array-key
+ * @template KeyType of array-key
  * @template ElementType
  */
 interface ArrayIteratorFactoryInterface
