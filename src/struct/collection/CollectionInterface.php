@@ -38,11 +38,6 @@ interface CollectionInterface extends Iterator, Countable
     public function setComparator($comparator): void;
 
     /**
-     * @return void
-     */
-    public function initialize(): void;
-
-    /**
      * @function isEmpty
      * @return bool
      */
