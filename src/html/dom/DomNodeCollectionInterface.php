@@ -6,7 +6,7 @@ use pvc\interfaces\html\dom\node_types\DomNodeInterface;
 use pvc\interfaces\struct\collection\CollectionInterface;
 
 /**
- * @extends CollectionInterface<DomNodeInterface>
+ * @extends CollectionInterface<non-negative-int, DomNodeInterface>
  */
 interface DomNodeCollectionInterface extends CollectionInterface
 {

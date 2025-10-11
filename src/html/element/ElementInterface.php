@@ -12,12 +12,13 @@ use pvc\interfaces\html\attribute\AttributeCustomDataInterface;
 use pvc\interfaces\html\attribute\AttributeInterface;
 use pvc\interfaces\html\attribute\AttributeWithValueInterface;
 use pvc\interfaces\msg\MsgInterface;
+use pvc\interfaces\struct\collection\IndexedElementInterface;
 
 /**
  * Class ElementInterface
  * @phpstan-import-type ValueType from AttributeWithValueInterface
  */
-interface ElementInterface
+interface ElementInterface extends IndexedElementInterface
 {
     public function getName(): string;
 

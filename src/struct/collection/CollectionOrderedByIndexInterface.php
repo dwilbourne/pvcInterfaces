@@ -3,10 +3,17 @@
 namespace pvc\interfaces\struct\collection;
 
 /**
+ * @template KeyType
  * @template ElementType of IndexedElementInterface
- * @extends CollectionInterface<ElementType>
+ * @extends CollectionInterface<KeyType, ElementType>
  */
 interface CollectionOrderedByIndexInterface extends CollectionInterface
 {
-    public function setIndex(int $key, int $index): void;
+    /**
+     * setIndex
+     * @param KeyType $key
+     * @param  non-negative-int  $index
+     * @return void
+     */
+    public function setIndex($key, int $index): void;
 }
