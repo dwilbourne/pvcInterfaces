@@ -3,7 +3,7 @@
 namespace pvc\interfaces\html\dom\node_types;
 
 use pvc\interfaces\html\content_model\ContentModelInterface;
-use pvc\interfaces\html\dom\DomNodeChildCollectionInterface;
+use pvc\interfaces\html\dom\DomNodeChildIndexedCollectionInterface;
 use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\struct\collection\IndexedElementInterface;
 
@@ -20,7 +20,7 @@ interface DomNodeInterface extends ContentModelInterface, ElementInterface, Inde
      */
     public function getParent(): ?DomNodeInterface;
 
-    public function getChildren() : DomNodeChildCollectionInterface;
+    public function getChildren() : DomNodeChildIndexedCollectionInterface;
 
     /**
      * @return ?DomNodeInterface
@@ -38,9 +38,9 @@ interface DomNodeInterface extends ContentModelInterface, ElementInterface, Inde
     public function getNthChild(int $n): ?DomNodeInterface;
 
     /**
-     * @return DomNodeChildCollectionInterface
+     * @return DomNodeChildIndexedCollectionInterface
      */
-    public function getSiblings(): DomNodeChildCollectionInterface;
+    public function getSiblings(): DomNodeChildIndexedCollectionInterface;
 
     /**
      * hasAncestorNamed

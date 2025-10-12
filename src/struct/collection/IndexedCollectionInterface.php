@@ -7,7 +7,7 @@ namespace pvc\interfaces\struct\collection;
  * @template ElementType of IndexedElementInterface
  * @extends CollectionInterface<KeyType, ElementType>
  */
-interface CollectionOrderedByIndexInterface extends CollectionInterface
+interface IndexedCollectionInterface extends CollectionInterface
 {
     /**
      * setIndex
