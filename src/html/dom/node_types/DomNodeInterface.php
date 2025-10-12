@@ -5,13 +5,12 @@ namespace pvc\interfaces\html\dom\node_types;
 use pvc\interfaces\html\content_model\ContentModelInterface;
 use pvc\interfaces\html\dom\DomNodeChildIndexedCollectionInterface;
 use pvc\interfaces\html\element\ElementInterface;
-use pvc\interfaces\struct\collection\IndexedElementInterface;
 
 /**
  * ElementInterface refers to html elements, IndexedElementInterface refers to
  * collections which have elements that have indexes
  */
-interface DomNodeInterface extends ContentModelInterface, ElementInterface, IndexedElementInterface
+interface DomNodeInterface extends ContentModelInterface, ElementInterface
 {
     /**
      * tree-related methods.  We don't need all the treenode methods
