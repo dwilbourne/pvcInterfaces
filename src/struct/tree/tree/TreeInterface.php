@@ -23,7 +23,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  *
  * @template NodeIdType of array-key
  * @template TreeIdType of array-key
- * @template PayloadType
+ * @template NodeType of TreenodeInterface
  */
 interface TreeInterface
 {
@@ -42,8 +42,8 @@ interface TreeInterface
     /**
      * addNode puts a node into the tree's list of nodes.
      *
-     * @param TreenodeInterface<NodeIdType, TreeIdType, PayloadType> $node
-     * @param TreenodeInterface<NodeIdType, TreeIdType, PayloadType> $parent
+     * @param TreenodeInterface<NodeIdType, TreeIdType, NodeType> $node
+     * @param TreenodeInterface<NodeIdType, TreeIdType, NodeType> $parent
      */
     public function addNode(TreenodeInterface $node, TreenodeInterface $parent): void;
 
@@ -69,25 +69,25 @@ interface TreeInterface
 
     /**
      * @function getNodes
-     * @return TreenodeCollectionInterface<NodeIdType, TreeIdType, PayloadType>
+     * @return TreenodeCollectionInterface<NodeIdType, TreeIdType, NodeType>
      */
     public function getNodeCollection(): TreenodeCollectionInterface;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
      * @param NodeIdType $nodeId
-     * @return TreenodeInterface<NodeIdType, TreeIdType, PayloadType>|null
+     * @return TreenodeInterface<NodeIdType, TreeIdType, NodeType>|null
      */
     public function getNode($nodeId): TreenodeInterface|null;
 
     /**
      * @function getRoot
-     * @return   TreenodeInterface<NodeIdType, TreeIdType, PayloadType>|null
+     * @return   TreenodeInterface<NodeIdType, TreeIdType, NodeType>|null
      */
     public function getRoot();
 
     /**
-     * @param  TreenodeInterface<NodeIdType, TreeIdType, PayloadType>|TreenodeDtoInterface  $root
+     * @param  TreenodeInterface<NodeIdType, TreeIdType, NodeType>|TreenodeDtoInterface  $root
      * in the course of a node getting its siblings, it needs to know whether
      * it is the root or not because the root has no parent and therefore
      * no child collection.

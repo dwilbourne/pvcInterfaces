@@ -12,13 +12,13 @@ namespace pvc\interfaces\struct\tree\node;
  * Class TreenodeFactoryInterface
  * @template NodeIdType of array-key
  * @template TreeIdType of array-key
- * @template PayloadType
+ * @template NodeType of TreenodeInterface
  */
 interface TreenodeFactoryInterface
 {
     /**
      * makeNode
-     * @return TreenodeInterface<NodeIdType, TreeIdType, PayloadType>
+     * @return TreenodeInterface<NodeIdType, TreeIdType, NodeType>
      */
     public function makeNode();
 }
