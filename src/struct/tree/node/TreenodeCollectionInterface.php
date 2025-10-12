@@ -7,7 +7,8 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 /**
  * @template NodeIdType of array-key
  * @template TreeIdType of array-key
- * @extends CollectionInterface<NodeIdType, TreenodeInterface<NodeIdType, TreeIdType>>
+ * @template PayloadType
+ * @extends CollectionInterface<NodeIdType, TreenodeInterface<NodeIdType, TreeIdType, PayloadType>>
  */
 interface TreenodeCollectionInterface extends CollectionInterface
 {

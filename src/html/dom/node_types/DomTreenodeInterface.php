@@ -7,7 +7,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 /**
  * @template NodeIdType of array-key
  * @template TreeIdType of array-key
- * @extends TreenodeInterface<NodeIdType, TreeIdType>
+ * @extends TreenodeInterface<NodeIdType, TreeIdType, DomTreenodeInterface>
  */
 interface DomTreenodeInterface extends TreenodeInterface
 {

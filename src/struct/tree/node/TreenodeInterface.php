@@ -19,8 +19,12 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * each node has an id which is unique within the tree.  That id will be used as
  * a key in collections and arrays so it must be of type array-key
  *
+ * nodes in a tree usually have a specific kind of payload and that payload 
+ * must be of the same type in all the nodes of the tree.
+ *
  * @template NodeIdType of array-key
  * @template TreeIdType of array-key
+ * @template PayloadType
  *
  * NodeVisitableInterface allows treenodes to participate in a depth first search
  *
@@ -50,7 +54,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function getNodeId(): int|string;
 
     /**
-     * @param ?TreenodeInterface<NodeIdType, TreeIdType> $parent
+     * @param ?TreenodeInterface<NodeIdType, TreeIdType, PayloadType> $parent
      * parent node must be in the same tree.
      *
      * @return void
@@ -59,12 +63,12 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getParent
-     * @return TreenodeInterface<NodeIdType, TreeIdType>|null
+     * @return TreenodeInterface<NodeIdType, TreeIdType, PayloadType>|null
      */
     public function getParent(): ?TreenodeInterface;
 
     /**
-     * @param  TreeInterface<NodeIdType, TreeIdType>  $tree
+     * @param  TreeInterface<NodeIdType, TreeIdType, PayloadType>  $tree
      * nodes need a reference to the tree when setting the parent in order
      * to validate the proposed parent node
      * @return void
@@ -72,7 +76,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function setTree(TreeInterface $tree): void;
 
     /**
-     * @param  TreenodeInterface<NodeIdType, TreeIdType>  $node
+     * @param  TreenodeInterface<NodeIdType, TreeIdType, PayloadType>  $node
      *
      * @return bool
      *
@@ -116,7 +120,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     
 
     /**
-     * @param  TreenodeInterface<NodeIdType, TreeIdType>  $node
+     * @param  TreenodeInterface<NodeIdType, TreeIdType, PayloadType>  $node
      *
      * @return bool
      */
@@ -131,7 +135,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getChildren
-     * @return TreenodeCollectionInterface<NodeIdType, TreeIdType>
+     * @return TreenodeCollectionInterface<NodeIdType, TreeIdType, PayloadType>
      */
     public function getChildren(): TreenodeCollectionInterface;
 
@@ -143,33 +147,33 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     /**
      * @function getChild
      * @param NodeIdType $nodeId
-     * @return TreenodeInterface<NodeIdType, TreeIdType>|null
+     * @return TreenodeInterface<NodeIdType, TreeIdType, PayloadType>|null
      */
     public function getChild($nodeId): ?TreenodeInterface;
 
     /**
-     * @return array<NodeIdType, TreenodeInterface<NodeIdType, TreeIdType>>
+     * @return array<NodeIdType, TreenodeInterface<NodeIdType, TreeIdType, PayloadType>>
      */
     public function getChildrenArray(): array;
 
     /**
-     * @return TreenodeInterface<NodeIdType, TreeIdType>|null
+     * @return TreenodeInterface<NodeIdType, TreeIdType, PayloadType>|null
      */
     public function getFirstChild(): ?TreenodeInterface;
 
     /**
-     * @return TreenodeInterface<NodeIdType, TreeIdType>|null
+     * @return TreenodeInterface<NodeIdType, TreeIdType, PayloadType>|null
      */
     public function getLastChild(): ?TreenodeInterface;
 
     /**
      * @param non-negative-int $n
-     * @return TreenodeInterface<NodeIdType, TreeIdType>|null
+     * @return TreenodeInterface<NodeIdType, TreeIdType, PayloadType>|null
      */
     public function getNthChild(int $n): ?TreenodeInterface;
 
     /**
-     * @return TreenodeCollectionInterface<NodeIdType, TreeIdType>
+     * @return TreenodeCollectionInterface<NodeIdType, TreeIdType, PayloadType>
      */
     public function getSiblings(): TreenodeCollectionInterface;
 
