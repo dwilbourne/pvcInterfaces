@@ -3,14 +3,15 @@
 namespace pvc\interfaces\struct\collection;
 
 /**
+ * @template TKey of array-key
  * @template ElementType of IndexedElementInterface
- * @extends CollectionInterface<ElementType>
+ * @extends CollectionInterface<TKey, ElementType>
  */
 interface IndexedCollectionInterface extends CollectionInterface
 {
     /**
      * setIndex
-     * @param array-key $key
+     * @param TKey $key
      * @param  non-negative-int  $index
      * @return void
      */

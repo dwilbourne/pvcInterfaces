@@ -71,7 +71,7 @@ interface TreeInterface
 
     /**
      * @function getNodes
-     * @return CollectionInterface<NodeType>
+     * @return CollectionInterface<TKey, NodeType>
      */
     public function getNodeCollection(): CollectionInterface;
 

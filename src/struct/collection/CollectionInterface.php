@@ -24,6 +24,7 @@ use pvc\interfaces\validator\ValTesterInterface;
  * unordered collection also has non-negative integer keys, but the keys mean nothing in terms of creating any sort
  * of ordination among the elements.
  *
+ * @template TKey of array-key
  * @template ElementType
  * @extends Iterator<ElementType>
  */
@@ -63,7 +64,7 @@ interface CollectionInterface extends Iterator, Countable
      * argument returns true when applied to the element.  Returns null if the element is not found in the collection.
      *
      * @param ValTesterInterface<ElementType> $valTester
-     * @return array-key|null
+     * @return TKey|null
      */
     public function findElementKey(ValTesterInterface $valTester): mixed;
 
@@ -73,13 +74,13 @@ interface CollectionInterface extends Iterator, Countable
      * collection passes the test.
      *
      * @param ValTesterInterface<ElementType> $valTester
-     * @return array<array-key>
+     * @return array<TKey>
      */
     public function findElementKeys(ValTesterInterface $valTester): array;
 
     /**
      * getIndex gets the ordinal position of the element in the list corresponding to $key
-     * @param array-key $key
+     * @param TKey $key
      * @return int|null
      */
     public function getIndex($key): int|null;
@@ -92,7 +93,7 @@ interface CollectionInterface extends Iterator, Countable
      * @function add puts an element into the collection.  If the key is not specified,
      * a new key is automatically generated.
      * @param ElementType $element
-     * @param array-key $key
+     * @param TKey $key
      */
     public function add($element, $key): void;
 
@@ -100,13 +101,13 @@ interface CollectionInterface extends Iterator, Countable
      * @function update allows you to change the payload of an element in the collection.
      *
      * @param ElementType $element
-     * @param array-key $key
+     * @param TKey $key
      */
     public function update($key, $element): void;
 
     /**
      * @function delete deletes an element from the collection.
-     * @param array-key $key
+     * @param TKey $key
      */
     public function delete($key): void;
 
