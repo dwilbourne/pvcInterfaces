@@ -24,9 +24,8 @@ use pvc\interfaces\validator\ValTesterInterface;
  * unordered collection also has non-negative integer keys, but the keys mean nothing in terms of creating any sort
  * of ordination among the elements.
  *
- * @template KeyType of array-key
  * @template ElementType
- * @extends Iterator<KeyType, ElementType>
+ * @extends Iterator<ElementType>
  */
 interface CollectionInterface extends Iterator, Countable
 {
@@ -48,14 +47,14 @@ interface CollectionInterface extends Iterator, Countable
      * of are legitimate types of elements, the implementing code will throw an exception if the key does not
      * exist.  There is no sensible return value that indicates the operation failed.
      *
-     * @param KeyType $key
+     * @param array-key $key
      * @return ElementType
      */
     public function getElement($key): mixed;
 
     /**
      * @function getElements returns an array of all the elements in the list, keys are preserved.
-     * @return array<KeyType, ElementType>
+     * @return array<ElementType>
      */
     public function getElements(): array;
 
@@ -64,7 +63,7 @@ interface CollectionInterface extends Iterator, Countable
      * argument returns true when applied to the element.  Returns null if the element is not found in the collection.
      *
      * @param ValTesterInterface<ElementType> $valTester
-     * @return KeyType|null
+     * @return array-key|null
      */
     public function findElementKey(ValTesterInterface $valTester): mixed;
 
@@ -74,13 +73,13 @@ interface CollectionInterface extends Iterator, Countable
      * collection passes the test.
      *
      * @param ValTesterInterface<ElementType> $valTester
-     * @return array<KeyType>
+     * @return array<array-key>
      */
     public function findElementKeys(ValTesterInterface $valTester): array;
 
     /**
      * getIndex gets the ordinal position of the element in the list corresponding to $key
-     * @param KeyType $key
+     * @param array-key $key
      * @return int|null
      */
     public function getIndex($key): int|null;
@@ -93,7 +92,7 @@ interface CollectionInterface extends Iterator, Countable
      * @function add puts an element into the collection.  If the key is not specified,
      * a new key is automatically generated.
      * @param ElementType $element
-     * @param KeyType $key
+     * @param array-key $key
      */
     public function add($element, $key): void;
 
@@ -101,13 +100,13 @@ interface CollectionInterface extends Iterator, Countable
      * @function update allows you to change the payload of an element in the collection.
      *
      * @param ElementType $element
-     * @param KeyType $key
+     * @param array-key $key
      */
     public function update($key, $element): void;
 
     /**
      * @function delete deletes an element from the collection.
-     * @param KeyType $key
+     * @param array-key $key
      */
     public function delete($key): void;
 

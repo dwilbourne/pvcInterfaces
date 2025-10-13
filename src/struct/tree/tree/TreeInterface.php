@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
+use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
-use pvc\interfaces\struct\tree\node\TreenodeCollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
@@ -21,8 +21,6 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
- * @template NodeIdType of array-key
- * @template TreeIdType of array-key
  * @template NodeType of TreenodeInterface
  */
 interface TreeInterface
@@ -33,7 +31,7 @@ interface TreeInterface
     public function isEmpty(): bool;
 
     /**
-     * @param TreeIdType $treeId
+     * @param array-key $treeId
      * @return void
      * initializes the tree so it is ready to use
      */
@@ -49,7 +47,7 @@ interface TreeInterface
 
     /**
      * @function deleteNode
-     * @param NodeIdType $nodeId
+     * @param array-key $nodeId
      * @param bool $deleteBranchOK
      */
     public function deleteNode($nodeId, bool $deleteBranchOK = false): void;
@@ -63,19 +61,19 @@ interface TreeInterface
     public function hydrate(array $array): void;
 
     /**
-     * @return array<NodeIdType, TreenodeDtoInterface>
+     * @return array<TreenodeDtoInterface>
      */
     public function dehydrate(): array;
 
     /**
      * @function getNodes
-     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
+     * @return CollectionInterface<NodeType>
      */
-    public function getNodeCollection(): TreenodeCollectionInterface;
+    public function getNodeCollection(): CollectionInterface;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
-     * @param NodeIdType $nodeId
+     * @param array-key $nodeId
      * @return NodeType|null
      */
     public function getNode($nodeId): TreenodeInterface|null;

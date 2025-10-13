@@ -10,7 +10,6 @@ namespace pvc\interfaces\struct\collection;
 
 /**
  * Class CollectionFactoryInterface
- * @template KeyType of int|string
  * @template ElementType
  * @template CollectionType of CollectionInterface
  */
@@ -18,8 +17,8 @@ interface CollectionFactoryInterface
 {
     /**
      * makeCollection
-     * @param array<KeyType, ElementType> $elements
-     * @return CollectionType<KeyType, ElementType>
+     * @param array<ElementType> $elements
+     * @return CollectionType<ElementType>
      */
     public function makeCollection(array $elements = []): CollectionInterface;
 }

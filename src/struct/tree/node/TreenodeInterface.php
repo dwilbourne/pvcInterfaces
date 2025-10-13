@@ -19,21 +19,18 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * each node has an id which is unique within the tree.  That id will be used as
  * a key in collections and arrays so it must be of type array-key
  *
- * nodes in a tree usually have a specific kind of payload and that payload 
- * must be of the same type in all the nodes of the tree.  And since nodes will
- * almost certainly be subclassed, make the treenodes themselves generic also.
+ * Since nodes will almost certainly be subclassed, treenodes themselves are generic also.
  *
- * @template NodeIdType of array-key
- * @template TreeIdType of array-key
+ * Each node has a collection of children.  The type of collection can vary so
+ * it is also generic
+ *
  * @template NodeType of TreenodeInterface
+ * @template CollectionType of CollectionInterface
  *
  * NodeVisitableInterface allows treenodes to participate in a depth first search
  *
  * IndexedElementInterface allows treenodes to participate in an indexed collection,
  * meaning you can put the child nodes of a node into an arbitrary order
- *
- * @extends NodeVisitableInterface<NodeIdType>
- * @see CollectionInterface
  */
 interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterface
 {
@@ -43,19 +40,19 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      */
 
     /**
-     * @param  NodeIdType  $nodeId
+     * @param  array-key  $nodeId
      * immutable unique identifier for the node
      * @return void
      */
     public function setNodeId($nodeId): void;
 
     /**
-     * @return NodeIdType
+     * @return array-key
      */
     public function getNodeId(): int|string;
 
     /**
-     * @param ?TreenodeInterface<NodeIdType, TreeIdType, NodeType> $parent
+     * @param ?NodeType $parent
      * parent node must be in the same tree.
      *
      * @return void
@@ -64,12 +61,12 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getParent
-     * @return TreenodeInterface<NodeIdType, TreeIdType, NodeType>|null
+     * @return NodeType|null
      */
     public function getParent(): ?TreenodeInterface;
 
     /**
-     * @param  TreeInterface<NodeIdType, TreeIdType, NodeType>  $tree
+     * @param  TreeInterface<NodeType>  $tree
      * nodes need a reference to the tree when setting the parent in order
      * to validate the proposed parent node
      * @return void
@@ -77,7 +74,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function setTree(TreeInterface $tree): void;
 
     /**
-     * @param  TreenodeInterface<NodeIdType, TreeIdType, NodeType>  $node
+     * @param  TreenodeInterface<NodeType, CollectionType>  $node
      *
      * @return bool
      *
@@ -121,7 +118,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     
 
     /**
-     * @param  TreenodeInterface<NodeIdType, TreeIdType, NodeType>  $node
+     * @param  TreenodeInterface<NodeType, CollectionType>  $node
      *
      * @return bool
      */
@@ -136,9 +133,9 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getChildren
-     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
+     * @return CollectionType
      */
-    public function getChildren(): TreenodeCollectionInterface;
+    public function getChildren(): CollectionInterface;
 
     /**
      * @return bool
@@ -147,35 +144,35 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getChild
-     * @param NodeIdType $nodeId
-     * @return TreenodeInterface<NodeIdType, TreeIdType, NodeType>|null
+     * @param array-key $nodeId
+     * @return TreenodeInterface<NodeType, CollectionType>|null
      */
     public function getChild($nodeId): ?TreenodeInterface;
 
     /**
-     * @return array<NodeIdType, TreenodeInterface<NodeIdType, TreeIdType, NodeType>>
+     * @return array<array-key, TreenodeInterface<NodeType, CollectionType>>
      */
     public function getChildrenArray(): array;
 
     /**
-     * @return TreenodeInterface<NodeIdType, TreeIdType, NodeType>|null
+     * @return TreenodeInterface<NodeType, CollectionType>|null
      */
     public function getFirstChild(): ?TreenodeInterface;
 
     /**
-     * @return TreenodeInterface<NodeIdType, TreeIdType, NodeType>|null
+     * @return TreenodeInterface<NodeType, CollectionType>|null
      */
     public function getLastChild(): ?TreenodeInterface;
 
     /**
      * @param non-negative-int $n
-     * @return TreenodeInterface<NodeIdType, TreeIdType, NodeType>|null
+     * @return TreenodeInterface<NodeType, CollectionType>|null
      */
     public function getNthChild(int $n): ?TreenodeInterface;
 
     /**
-     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
+     * @return CollectionType
      */
-    public function getSiblings(): TreenodeCollectionInterface;
+    public function getSiblings(): CollectionInterface;
 
 }

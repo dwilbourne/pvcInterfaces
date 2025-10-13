@@ -2,8 +2,6 @@
 
 namespace pvc\interfaces\html\dom;
 
-use pvc\interfaces\html\dom\node_types\DomNodeInterface;
-
 interface DocumentInterface
 {
     /**

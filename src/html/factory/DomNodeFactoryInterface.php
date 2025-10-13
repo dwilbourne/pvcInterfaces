@@ -2,7 +2,7 @@
 
 namespace pvc\interfaces\html\factory;
 
-use pvc\interfaces\html\dom\node_types\DomNodeInterface;
+use pvc\interfaces\html\dom\DomNodeInterface;
 
 
 interface DomNodeFactoryInterface

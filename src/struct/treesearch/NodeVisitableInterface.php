@@ -16,9 +16,7 @@ namespace pvc\interfaces\struct\treesearch;
  * or whether it has been 'fully visited' meaning that you have arrived at it and all of its children have also
  * been fully visited.  See the VisitStatus enum.
  *
- * @template NodeIdType of array-key
- *
- * @extends NodeSearchableInterface<NodeIdType, NodeVisitableInterface>
+ * @extends NodeSearchableInterface<NodeVisitableInterface>
  */
 interface NodeVisitableInterface extends NodeSearchableInterface
 {

@@ -3,7 +3,7 @@
 namespace pvc\interfaces\html\content_rules;
 
 use pvc\interfaces\html\content_model\ContentCategory;
-use pvc\interfaces\html\dom\node_types\DomNodeInterface;
+use pvc\interfaces\html\dom\DomNodeInterface;
 
 interface CategoryRuleInterface extends AbstractRuleInterface
 {

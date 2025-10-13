@@ -3,7 +3,7 @@
 namespace pvc\interfaces\frmtr\html;
 
 use pvc\interfaces\frmtr\FrmtrInterface;
-use pvc\interfaces\html\dom\node_types\DomNodeInterface;
+use pvc\interfaces\html\dom\DomNodeInterface;
 
 /**
  * @extends FrmtrInterface<DomNodeInterface>
