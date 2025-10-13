@@ -4,7 +4,6 @@ namespace pvc\interfaces\html\factory;
 
 use pvc\interfaces\html\dom\DomNodeInterface;
 
-
 interface DomNodeFactoryInterface
 {
     public function makeElement(string $name): DomNodeInterface;

@@ -16,11 +16,15 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 /**
  * Interface TreeInterface defines the operations common to trees
  *
- * Trees have an id, allowing you to work with multiple trees at once.  Each tree consist of "nodes".
+ * Trees have an id, allowing you to work with multiple trees at once. It is
+ * typed as a generic array-key so it can be used in an array or collection.
+ *
+ * Each tree consist of "nodes".
  * If it does have nodes, then there must be a single root node.  All
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
+ * @template TKey of array-key
  * @template NodeType of TreenodeInterface
  */
 interface TreeInterface
@@ -31,7 +35,7 @@ interface TreeInterface
     public function isEmpty(): bool;
 
     /**
-     * @param array-key $treeId
+     * @param TKey $treeId
      * @return void
      * initializes the tree so it is ready to use
      */
@@ -47,7 +51,7 @@ interface TreeInterface
 
     /**
      * @function deleteNode
-     * @param array-key $nodeId
+     * @param TKey $nodeId
      * @param bool $deleteBranchOK
      */
     public function deleteNode($nodeId, bool $deleteBranchOK = false): void;
@@ -73,7 +77,7 @@ interface TreeInterface
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
-     * @param array-key $nodeId
+     * @param TKey $nodeId
      * @return NodeType|null
      */
     public function getNode($nodeId): TreenodeInterface|null;
