@@ -10,7 +10,7 @@ namespace pvc\interfaces\struct\treesearch;
 
 /**
  * Class NodeSearchableInterface
- * @template TKey
+ * @template TKey of array-key
  * @template NodeType of NodeSearchableInterface
  */
 interface NodeSearchableInterface

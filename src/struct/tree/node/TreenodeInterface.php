@@ -28,7 +28,7 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * Each node has a collection of children.  The type of collection can vary so
  * it is also generic
  *
- * @template TKey
+ * @template TKey of array-key
  * @template NodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
  * @extends NodeVisitableInterface<TKey>

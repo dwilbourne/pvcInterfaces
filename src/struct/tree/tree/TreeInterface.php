@@ -24,7 +24,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
- * @template TKey
+ * @template TKey of array-key
  * @template NodeType of TreenodeInterface
  */
 interface TreeInterface
