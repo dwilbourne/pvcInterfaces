@@ -7,12 +7,13 @@ use pvc\interfaces\html\element\ElementInterface;
 use pvc\interfaces\struct\collection\IndexedCollectionInterface;
 use pvc\interfaces\struct\collection\IndexedElementInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
+use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * ElementInterface refers to html elements,
  * IndexedElementInterface refers to objects that have a setIndex method
  * specifying non-negative integers as the id types in order to keep things simpler
- * @extends TreenodeInterface<non-negative-int, non-negative-int, DomNodeInterface, IndexedCollectionInterface>
+ * @extends TreenodeInterface<non-negative-int, TreeInterface, DomNodeInterface, IndexedCollectionInterface>
  */
 interface DomNodeInterface extends ContentModelInterface, ElementInterface, IndexedElementInterface, TreenodeInterface
 {

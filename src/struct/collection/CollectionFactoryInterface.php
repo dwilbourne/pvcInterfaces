@@ -10,7 +10,7 @@ namespace pvc\interfaces\struct\collection;
 
 /**
  * Class CollectionFactoryInterface
- * @template TKey of array-key
+ * @template TKey
  * @template ElementType
  * @template CollectionType of CollectionInterface
  */

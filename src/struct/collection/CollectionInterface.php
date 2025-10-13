@@ -24,7 +24,7 @@ use pvc\interfaces\validator\ValTesterInterface;
  * unordered collection also has non-negative integer keys, but the keys mean nothing in terms of creating any sort
  * of ordination among the elements.
  *
- * @template TKey of array-key
+ * @template TKey
  * @template ElementType
  * @extends Iterator<ElementType>
  */

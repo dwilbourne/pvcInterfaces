@@ -28,9 +28,9 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * Each node has a collection of children.  The type of collection can vary so
  * it is also generic
  *
- * @template TreeId of array-key
- * @template NodeId of array-key
+ * @template NodeId
  *
+ * @template TreeType of TreeInterface
  * @template NodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
  *
@@ -75,7 +75,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function getParent(): ?TreenodeInterface;
 
     /**
-     * @param  TreeInterface<TreeId, NodeId, NodeType>  $tree
+     * @param  TreeType  $tree
      * nodes need a reference to the tree when setting the parent in order
      * to validate the proposed parent node
      * @return void
