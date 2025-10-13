@@ -28,10 +28,13 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * Each node has a collection of children.  The type of collection can vary so
  * it is also generic
  *
- * @template TKey of array-key
+ * @template TreeId of array-key
+ * @template NodeId of array-key
+ *
  * @template NodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
- * @extends NodeVisitableInterface<TKey>
+ *
+ * @extends NodeVisitableInterface<NodeId>
  *
  * NodeVisitableInterface allows treenodes to participate in a depth first search
  *
@@ -46,14 +49,14 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      */
 
     /**
-     * @param  TKey  $nodeId
+     * @param  NodeId  $nodeId
      * immutable unique identifier for the node
      * @return void
      */
     public function setNodeId($nodeId): void;
 
     /**
-     * @return TKey
+     * @return NodeId
      */
     public function getNodeId();
 
@@ -72,7 +75,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function getParent(): ?TreenodeInterface;
 
     /**
-     * @param  TreeInterface<TKey, NodeType>  $tree
+     * @param  TreeInterface<TreeId, NodeId, NodeType>  $tree
      * nodes need a reference to the tree when setting the parent in order
      * to validate the proposed parent node
      * @return void
@@ -150,13 +153,13 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getChild
-     * @param TKey $nodeId
+     * @param NodeId $nodeId
      * @return NodeType|null
      */
     public function getChild($nodeId): ?TreenodeInterface;
 
     /**
-     * @return array<TKey, NodeType>
+     * @return array<NodeId, NodeType>
      */
     public function getChildrenArray(): array;
 

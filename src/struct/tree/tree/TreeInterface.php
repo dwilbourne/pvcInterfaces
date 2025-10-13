@@ -24,7 +24,8 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
- * @template TKey of array-key
+ * @template TreeId of array-key
+ * @template NodeId of array-key
  * @template NodeType of TreenodeInterface
  */
 interface TreeInterface
@@ -35,7 +36,7 @@ interface TreeInterface
     public function isEmpty(): bool;
 
     /**
-     * @param TKey $treeId
+     * @param TreeId $treeId
      * @return void
      * initializes the tree so it is ready to use
      */
@@ -51,7 +52,7 @@ interface TreeInterface
 
     /**
      * @function deleteNode
-     * @param TKey $nodeId
+     * @param NodeId $nodeId
      * @param bool $deleteBranchOK
      */
     public function deleteNode($nodeId, bool $deleteBranchOK = false): void;
@@ -71,13 +72,13 @@ interface TreeInterface
 
     /**
      * @function getNodes
-     * @return CollectionInterface<TKey, NodeType>
+     * @return CollectionInterface<NodeId, NodeType>
      */
     public function getNodeCollection(): CollectionInterface;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
-     * @param TKey $nodeId
+     * @param NodeId $nodeId
      * @return NodeType|null
      */
     public function getNode($nodeId): TreenodeInterface|null;

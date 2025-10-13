@@ -11,8 +11,8 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 /**
  * ElementInterface refers to html elements,
  * IndexedElementInterface refers to objects that have a setIndex method
- * specifying non-negative integers as the id type in order to keep things simpler
- * @extends TreenodeInterface<non-negative-int, DomNodeInterface, IndexedCollectionInterface>
+ * specifying non-negative integers as the id types in order to keep things simpler
+ * @extends TreenodeInterface<non-negative-int, non-negative-int, DomNodeInterface, IndexedCollectionInterface>
  */
 interface DomNodeInterface extends ContentModelInterface, ElementInterface, IndexedElementInterface, TreenodeInterface
 {
