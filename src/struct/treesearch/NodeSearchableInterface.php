@@ -10,15 +10,16 @@ namespace pvc\interfaces\struct\treesearch;
 
 /**
  * Class NodeSearchableInterface
+ * @template TKey
  * @template NodeType of NodeSearchableInterface
  */
 interface NodeSearchableInterface
 {
     /**
      * getNodeId
-     * @return array-key
+     * @return TKey
      */
-    public function getNodeId(): int|string;
+    public function getNodeId();
 
     /**
      * @return NodeType|null

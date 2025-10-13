@@ -28,9 +28,10 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * Each node has a collection of children.  The type of collection can vary so
  * it is also generic
  *
- * @template TKey of array-key
+ * @template TKey
  * @template NodeType of TreenodeInterface
  * @template CollectionType of CollectionInterface
+ * @extends NodeVisitableInterface<TKey>
  *
  * NodeVisitableInterface allows treenodes to participate in a depth first search
  *
@@ -54,7 +55,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     /**
      * @return TKey
      */
-    public function getNodeId(): int|string;
+    public function getNodeId();
 
     /**
      * @param ?NodeType $parent
