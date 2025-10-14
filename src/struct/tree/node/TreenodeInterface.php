@@ -81,7 +81,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      * @function getParent
      * @return NodeType|null
      */
-    public function getParent(): ?TreenodeInterface;
+    public function getParent();
 
     /**
      * @param  NodeType  $node
@@ -145,7 +145,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      * @function getChildren
      * @return CollectionType
      */
-    public function getChildren(): CollectionInterface;
+    public function getChildren();
 
     /**
      * @return bool
