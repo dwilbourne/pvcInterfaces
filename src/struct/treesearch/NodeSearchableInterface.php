@@ -35,9 +35,4 @@ interface NodeSearchableInterface
      */
     public function getChildrenArray(): array;
 
-    /**
-     * key
-     * @return TKey|null
-     */
-    public function key();
 }
