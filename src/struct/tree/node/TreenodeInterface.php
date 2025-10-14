@@ -56,17 +56,17 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function setNodeId($nodeId): void;
 
     /**
-     * @return NodeId
+     * @return NodeId|null
      */
     public function getNodeId();
 
     /**
-     * @param ?NodeType $parent
+     * @param NodeType|null $parent
      * parent node must be in the same tree.
      *
      * @return void
      */
-    public function setParent(?TreenodeInterface $parent): void;
+    public function setParent($parent): void;
 
     /**
      * @function getParent
@@ -80,7 +80,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      * to validate the proposed parent node
      * @return void
      */
-    public function setTree(TreeInterface $tree): void;
+    public function setTree($tree): void;
 
     /**
      * @param  NodeType  $node
@@ -94,7 +94,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      * is going to involve a call to parent->isDescendantOf, which means it must be
      * part of the interface, even if it seems a little out of place.
      */
-    public function isDescendantOf(TreenodeInterface $node): bool;
+    public function isDescendantOf($node): bool;
 
     /**
      * indexed elements can be put into an arbitrary order, e.g. nodes that
@@ -131,7 +131,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      *
      * @return bool
      */
-    public function isAncestorOf(TreenodeInterface $node): bool;
+    public function isAncestorOf($node): bool;
 
     public function isRoot(): bool;
 
