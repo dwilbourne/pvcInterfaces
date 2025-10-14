@@ -167,22 +167,22 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     /**
      * @return NodeType|null
      */
-    public function getFirstChild(): ?TreenodeInterface;
+    public function getFirstChild();
 
     /**
      * @return NodeType|null
      */
-    public function getLastChild(): ?TreenodeInterface;
+    public function getLastChild();
 
     /**
      * @param non-negative-int $n
      * @return NodeType|null
      */
-    public function getNthChild(int $n): ?TreenodeInterface;
+    public function getNthChild(int $n);
 
     /**
      * @return CollectionType
      */
-    public function getSiblings(): CollectionInterface;
+    public function getSiblings();
 
 }
