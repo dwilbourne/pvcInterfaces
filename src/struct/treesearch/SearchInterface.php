@@ -11,8 +11,9 @@ namespace pvc\interfaces\struct\treesearch;
 use Iterator;
 
 /**
+ * @template NodeId of array-key
  * @template NodeType of NodeSearchableInterface
- * @extends Iterator<NodeType>
+ * @extends Iterator<NodeId, NodeType>
  */
 interface SearchInterface extends Iterator
 {
