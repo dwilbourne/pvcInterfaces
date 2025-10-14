@@ -49,16 +49,6 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      */
 
     /**
-     * initialize
-     * @param NodeId $nodeId
-     * @param TreeType $tree
-     * @param ?NodeId $parentId
-     *
-     * @return mixed
-     */
-    public function initialize($nodeId, $tree, $parentId = null);
-
-    /**
      * @return NodeId
      */
     public function getNodeId();
