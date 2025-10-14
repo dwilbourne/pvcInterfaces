@@ -12,7 +12,7 @@ use Iterator;
 
 /**
  * @template NodeType of NodeSearchableInterface
- * @extends Iterator<non-negative-int, NodeType>
+ * @extends Iterator<NodeType>
  */
 interface SearchInterface extends Iterator
 {
@@ -25,7 +25,7 @@ interface SearchInterface extends Iterator
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<non-negative-int, NodeType>
+     * @return array<NodeType>
      */
     public function getNodes(): array;
 }
