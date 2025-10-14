@@ -19,7 +19,7 @@ interface TreenodeDtoInterface
     public function getParentId();
 
     /**
-     * @return TreeId
+     * @return TreeId|null
      */
     public function getTreeId();
 
