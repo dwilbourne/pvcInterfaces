@@ -59,14 +59,14 @@ interface TreeInterface
 
 
     /**
-     * @param  array<TreenodeDtoInterface>  $array
+     * @param  array<TreenodeDtoInterface<NodeId, TreeId>>  $array
      *
      * @return void
      */
     public function hydrate(array $array): void;
 
     /**
-     * @return array<TreenodeDtoInterface>
+     * @return array<TreenodeDtoInterface<NodeId, TreeId>>
      */
     public function dehydrate(): array;
 
@@ -90,7 +90,7 @@ interface TreeInterface
     public function getRoot();
 
     /**
-     * @param  NodeType|TreenodeDtoInterface  $root
+     * @param  NodeType|TreenodeDtoInterface<NodeId, TreeId>  $root
      * in the course of a node getting its siblings, it needs to know whether
      * it is the root or not because the root has no parent and therefore
      * no child collection.

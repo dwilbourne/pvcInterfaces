@@ -3,24 +3,25 @@
 namespace pvc\interfaces\struct\tree\dto;
 
 /**
- * @phpstan-type TreenodeDtoShape object{nodeId: non-negative-int, parentId: ?non-negative-int, treeId: ?non-negative-int, index:non-negative-int}
+ * @template NodeId
+ * @template TreeId
  */
 interface TreenodeDtoInterface
 {
     /**
-     * @return non-negative-int
+     * @return NodeId
      */
-    public function getNodeId(): int;
+    public function getNodeId();
 
     /**
-     * @return non-negative-int|null
+     * @return NodeId|null
      */
-    public function getParentId(): ?int;
+    public function getParentId();
 
     /**
-     * @return non-negative-int
+     * @return TreeId
      */
-    public function getTreeId(): ?int;
+    public function getTreeId();
 
     /**
      * @return non-negative-int
