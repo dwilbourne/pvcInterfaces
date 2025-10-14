@@ -19,7 +19,7 @@ interface CollectionFactoryInterface
     /**
      * makeCollection
      * @param array<TKey, ElementType> $elements
-     * @return CollectionType<TKey, ElementType>
+     * @return CollectionType
      */
     public function makeCollection(array $elements = []);
 }
