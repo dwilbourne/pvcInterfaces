@@ -56,7 +56,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function setNodeId($nodeId): void;
 
     /**
-     * @return NodeId|null
+     * @return NodeId
      */
     public function getNodeId();
 
