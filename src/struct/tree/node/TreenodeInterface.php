@@ -62,6 +62,14 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function getNodeId();
 
     /**
+     * setTree
+     * @param TreeType $tree
+     *
+     * @return void
+     */
+    public function setTree($tree): void;
+
+    /**
      * @param NodeType|null $parent
      * parent node must be in the same tree.
      *
