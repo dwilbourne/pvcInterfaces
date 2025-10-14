@@ -26,7 +26,7 @@ interface SearchInterface extends Iterator
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<NodeId, NodeType>
+     * @return array<NodeType>
      */
     public function getNodes(): array;
 }
