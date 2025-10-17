@@ -87,9 +87,9 @@ interface CollectionInterface extends Iterator, Countable
     /**
      * getIndex gets the ordinal position of the element in the list corresponding to $key
      * @param TKey $key
-     * @return int|null
+     * @return int
      */
-    public function getIndex($key): int|null;
+    public function getIndex($key): int;
 
     /**
      * crud operations
