@@ -56,6 +56,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      *
      * @return void
      * until generics are built into the language, this seems the safest course.
+     * Not everyone is doing static type analysis
      */
     public function setNodeIdTester(ValTesterInterface $nodeIdTester): void;
 
