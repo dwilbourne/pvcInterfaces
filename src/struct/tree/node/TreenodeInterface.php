@@ -12,7 +12,6 @@ use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\collection\IndexedElementInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
-use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Interface TreenodeInterface defines the basic operations for a generic tree node.
@@ -48,17 +47,6 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      * methods necessary to implement the basic rules of creating and maintaining
      * treenodes
      */
-
-    /**
-     * setNodeIdTester
-     *
-     * @param  ValTesterInterface<mixed>  $nodeIdTester
-     *
-     * @return void
-     * until generics are built into the language, this seems the safest course.
-     * Not everyone is doing static type analysis
-     */
-    public function setNodeIdTester(ValTesterInterface $nodeIdTester): void;
 
     /**
      * setNodeId

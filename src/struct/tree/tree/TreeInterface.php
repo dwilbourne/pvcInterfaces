@@ -12,7 +12,6 @@ namespace pvc\interfaces\struct\tree\tree;
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
-use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * Interface TreeInterface defines the operations common to trees
@@ -31,15 +30,6 @@ use pvc\interfaces\validator\ValTesterInterface;
  */
 interface TreeInterface
 {
-    /**
-     * setTreeIdTester
-     * @param  ValTesterInterface<mixed>  $treeIdTester
-     * @return void
-     * until generics are built into the language, this seeems safer.  Also,
-     * there are still relatively few people doing static analysis on their code...
-     */
-    public function setTreeIdTester(ValTesterInterface $treeIdTester): void;
-
     /**
      * @return bool
      */
