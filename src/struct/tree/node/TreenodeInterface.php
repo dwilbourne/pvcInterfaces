@@ -51,11 +51,13 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * setNodeIdTester
-     * @param  ValTesterInterface<mixed>  $tester
+     *
+     * @param  ValTesterInterface<mixed>  $nodeIdTester
+     *
      * @return void
      * until generics are built into the language, this seems the safest course.
      */
-    public function setNodeIdTester(ValTesterInterface $tester): void;
+    public function setNodeIdTester(ValTesterInterface $nodeIdTester): void;
 
     /**
      * setNodeId
