@@ -8,7 +8,7 @@ namespace pvc\interfaces\container;
  * @phpstan-type Args array<string|number>
  * @phpstan-type MethodCallArray array{'methodName': string, 'arguments'?: array<Args>}
  *
- * @phpstan-type ContainerDefArray array{'alias'?: string, 'resolvableString': string, 'constructorArgs'?: Args, 'methodCalls'?: array<string, Args>, 'factory'?: bool}
+ * @phpstan-type ContainerDefArray array{'alias'?: string, 'resolvableString': string, 'constructorArgs'?: Args, 'methodCalls'?: array<string, Args>, 'isFactory'?: bool}
  *
  */
 interface DefinitionInterface
