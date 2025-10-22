@@ -8,7 +8,7 @@ namespace pvc\interfaces\container;
  * @phpstan-type Args array<string|number>
  * @phpstan-type MethodCallArray array{'methodName': string, 'arguments'?: Args}
  *
- * @phpstan-type ContainerDefArray array{'alias'?: string, 'resolvableString': string, 'constructorArgs'?: Args, 'methodCalls'?: array<string, Args>}
+ * @phpstan-type ContainerDefArray array{'alias'?: string, 'resolvableString': string, 'constructorArgs'?: Args, 'methodCalls'?: array<MethodCallArray>}
  *
  * some container implementations provide a mechanism for creating a new instance of an object each time
  * it is retrieved from the container.  E.g. the concept of a factory is embedded in the definitions which
