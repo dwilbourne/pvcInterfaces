@@ -12,9 +12,9 @@ interface ContainerBuilderInterface
     /**
      * build
      *
-     * @param  array<ContainerDefArray>  $pvcDefinitions
+     * @param  array<ContainerDefArray>  $definitions
      *
      * @return ContainerInterface
      */
-    public function build(array $pvcDefinitions): ContainerInterface;
+    public function build(array $definitions): ContainerInterface;
 }
