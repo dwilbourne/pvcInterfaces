@@ -29,4 +29,19 @@ namespace pvc\interfaces\container;
  */
 interface DefinitionInterface
 {
+    public function getAlias(): string;
+
+    public function getResolvableString(): string;
+
+    /**
+     * getConstructorArgs
+     * @return Args
+     */
+    public function getConstructorArgs(): array;
+
+    /**
+     * getMethodCalls
+     * @return array<MethodCallInterface>
+     */
+    public function getMethodCalls(): array;
 }
