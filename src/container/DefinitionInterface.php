@@ -7,14 +7,14 @@ namespace pvc\interfaces\container;
  *
  * @phpstan-type Args array<string|number>
  * @phpstan-type MethodCallArray array{'methodName': string, 'arguments'?: Args}
- *
- * @phpstan-type ContainerDefArray array{'alias'?: string, 'resolvableString': string, 'constructorArgs'?: Args, 'methodCalls'?: array<MethodCallArray>}
+ * @phpstan-type DefArray array{'alias'?: string, 'resolvableString': string, 'constructorArgs'?: Args, 'methodCalls'?: array<MethodCallArray>}
+ * @phpstan-type DefinitionsArray array<DefArray>
  *
  * some container implementations provide a mechanism for creating a new instance of an object each time
  * it is retrieved from the container.  E.g. the concept of a factory is embedded in the definitions which
  * fuel the container (see League\Container from the php League)
  *
- * Other container implementations do not. (see phhpdi).
+ * Other container implementations do not. (see phpdi).
  *
  * This discrepancy arises because of the PDS-11 specification which says that when you get an object
  * from the container, it MAY or MAY NOT be the same instance each time.
