@@ -45,19 +45,11 @@ interface DefinitionInterface
 
     /**
      * addConstructorArgs
-     * @param  Args  $args
+     * @param  Arg  $args
      *
      * @return DefinitionInterface
      */
-    public function addConstructorArgs(array $args): DefinitionInterface;
-
-    /**
-     * addConstructorArg
-     * @param Arg $arg
-     *
-     * @return DefinitionInterface
-     */
-    public function addConstructorArg($arg): DefinitionInterface;
+    public function addConstructorArgs(... $args): DefinitionInterface;
 
     /**
      * getMethodCalls
