@@ -47,17 +47,17 @@ interface DefinitionInterface
      * addConstructorArgs
      * @param  Args  $args
      *
-     * @return void
+     * @return DefinitionInterface
      */
-    public function addConstructorArgs(array $args): void;
+    public function addConstructorArgs(array $args): DefinitionInterface;
 
     /**
      * addConstructorArg
      * @param Arg $arg
      *
-     * @return void
+     * @return DefinitionInterface
      */
-    public function addConstructorArg($arg): void;
+    public function addConstructorArg($arg): DefinitionInterface;
 
     /**
      * getMethodCalls
@@ -65,5 +65,12 @@ interface DefinitionInterface
      */
     public function getMethodCalls(): array;
 
-    public function addMethodCall(MethodCallInterface $methodCall): void;
+    /**
+     * addMethodCall
+     * @param  string  $methodName
+     * @param  Arg|Args  $args
+     *
+     * @return DefinitionInterface
+     */
+    public function addMethodCall(string $methodName, $args): DefinitionInterface;
 }
