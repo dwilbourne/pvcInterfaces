@@ -5,7 +5,8 @@ namespace pvc\interfaces\container;
 /**
  * create vendor-neutral definitions to build objects
  *
- * @phpstan-type Args array<string|number>
+ * @phpstan-type Arg string|number
+ * @phpstan-type Args array<Arg>
  * @phpstan-type MethodCallArray array{'methodName': string, 'arguments'?: Args}
  * @phpstan-type DefinitionArray array{'alias'?: string, 'resolvableString': string, 'constructorArgs'?: Args, 'methodCalls'?: array<MethodCallArray>}
  * @phpstan-type DefinitionsArray array<DefinitionArray>
@@ -25,13 +26,16 @@ namespace pvc\interfaces\container;
  *
  * But since that is not currently the case, the pvc Container->get method will always return the same instance
  * of an object because all implementations are capable of that much.  Of course, if that object is
- * a factory, then you can use that factory in your code to make as many new instances of something else as you want.
+ * a factory, then you can get that factory  and use it in your code to make as many new instances of
+ * something else as you want.
  */
 interface DefinitionInterface
 {
+    public function setAlias(string $alias): void;
     public function getAlias(): string;
 
-    public function getResolvableString(): string;
+    public function setClassString(string $class): void;
+    public function getClassString(): string;
 
     /**
      * getConstructorArgs
@@ -40,8 +44,26 @@ interface DefinitionInterface
     public function getConstructorArgs(): array;
 
     /**
+     * addConstructorArgs
+     * @param  Args  $args
+     *
+     * @return void
+     */
+    public function addConstructorArgs(array $args): void;
+
+    /**
+     * addConstructorArg
+     * @param Arg $arg
+     *
+     * @return void
+     */
+    public function addConstructorArg($arg): void;
+
+    /**
      * getMethodCalls
      * @return array<MethodCallInterface>
      */
     public function getMethodCalls(): array;
+
+    public function addMethodCall(MethodCallInterface $methodCall): void;
 }
