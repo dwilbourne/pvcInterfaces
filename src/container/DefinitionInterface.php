@@ -34,7 +34,7 @@ interface DefinitionInterface
     public function setAlias(string $alias): void;
     public function getAlias(): string;
 
-    public function setClassString(string $class): void;
+    public function setClassString(string $classString): void;
     public function getClassString(): string;
 
     /**
