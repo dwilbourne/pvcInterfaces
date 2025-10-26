@@ -4,15 +4,12 @@ namespace pvc\interfaces\container;
 
 use Psr\Container\ContainerInterface;
 
-/**
- * @phpstan-import-type DefinitionsArray from DefinitionInterface
- */
 interface ContainerBuilderInterface
 {
     /**
      * build
      *
-     * @param  DefinitionsArray  $definitions
+     * @param  array<DefinitionInterface>  $definitions
      *
      * @return ContainerInterface
      */

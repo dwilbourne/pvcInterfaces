@@ -5,12 +5,6 @@ namespace pvc\interfaces\container;
 /**
  * create vendor-neutral definitions to build objects
  *
- * @phpstan-type Arg string|number
- * @phpstan-type Args array<Arg>
- * @phpstan-type MethodCallArray array{'methodName': string, 'arguments'?: Args}
- * @phpstan-type DefinitionArray array{'alias'?: string, 'resolvableString': string, 'constructorArgs'?: Args, 'methodCalls'?: array<MethodCallArray>}
- * @phpstan-type DefinitionsArray array<DefinitionArray>
- *
  * some container implementations provide a mechanism for creating a new instance of an object each time
  * it is retrieved from the container.  E.g. the concept of a factory is embedded in the definitions which
  * fuel the container (see League\Container from the php League)
@@ -39,13 +33,13 @@ interface DefinitionInterface
 
     /**
      * getConstructorArgs
-     * @return Args
+     * @return array<mixed>
      */
     public function getConstructorArgs(): array;
 
     /**
      * addConstructorArgs
-     * @param  Arg  $args
+     * @param  mixed  $args
      *
      * @return DefinitionInterface
      */
@@ -60,7 +54,7 @@ interface DefinitionInterface
     /**
      * addMethodCall
      * @param  string  $methodName
-     * @param  Arg|Args  $args
+     * @param  mixed  $args
      *
      * @return DefinitionInterface
      */
