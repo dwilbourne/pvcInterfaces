@@ -50,10 +50,11 @@ interface DefinitionInterface
 
     /**
      * addMethodCall
+     *
      * @param  string  $methodName
-     * @param  mixed  $args
+     * @param  mixed|null  $args
      *
      * @return DefinitionInterface
      */
-    public function addMethodCall(string $methodName, $args): DefinitionInterface;
+    public function addMethodCall(string $methodName, mixed $args = null): DefinitionInterface;
 }
