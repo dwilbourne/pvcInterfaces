@@ -56,5 +56,5 @@ interface DefinitionInterface
      *
      * @return DefinitionInterface
      */
-    public function addMethodCall(string $methodName, mixed $args = null): DefinitionInterface;
+    public function addMethodCall(string $methodName, ... $args): DefinitionInterface;
 }
