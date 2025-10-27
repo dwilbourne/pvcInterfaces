@@ -14,12 +14,6 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
 interface TreenodeDtoInterface
 {
     /**
-     * getHydrationStatus
-     * @return non-negative-int
-     */
-    public function getHydrationStatus(): int;
-
-    /**
      * @return NodeIdType
      */
     public function getNodeId();
@@ -47,7 +41,7 @@ interface TreenodeDtoInterface
 
     /**
      * getParent
-     * @return NodeType|null
+     * @return NodeType
      */
     public function getParent(): ?TreenodeInterface;
 
@@ -60,7 +54,7 @@ interface TreenodeDtoInterface
     public function setParent(TreenodeInterface $parent): void;
 
     /**
-     * @return TreeIdType|null
+     * @return TreeIdType
      */
     public function getTreeId();
 
@@ -74,9 +68,9 @@ interface TreenodeDtoInterface
 
     /**
      * getTree
-     * @return TreeType|null
+     * @return TreeType
      */
-    public function getTree(): ?TreeInterface;
+    public function getTree(): TreeInterface;
 
     /**
      * setTree
