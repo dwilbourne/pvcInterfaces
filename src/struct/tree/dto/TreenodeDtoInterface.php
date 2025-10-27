@@ -14,6 +14,12 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
 interface TreenodeDtoInterface
 {
     /**
+     * getHydrationStatus
+     * @return non-negative-int
+     */
+    public function getHydrationStatus(): int;
+
+    /**
      * @return NodeIdType
      */
     public function getNodeId();
