@@ -41,7 +41,7 @@ interface TreenodeDtoInterface
 
     /**
      * getParent
-     * @return NodeType
+     * @return NodeType|null
      */
     public function getParent(): ?TreenodeInterface;
 
