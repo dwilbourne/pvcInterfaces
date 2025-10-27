@@ -76,12 +76,6 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function getParent();
 
     /**
-     * getTree
-     * @return TreeType|null
-     */
-    public function getTree(): ?TreeInterface;
-
-    /**
      * @param NodeType|null $parent
      * parent node must be in the same tree.
      *
