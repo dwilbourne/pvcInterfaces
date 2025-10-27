@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
-use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\collection\IndexedElementInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
@@ -32,7 +31,7 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  *
  * @template TreeType of TreeInterface
  * @template NodeType of TreenodeInterface
- * @template CollectionType of CollectionInterface
+ * @template CollectionType of TreenodeCollectionInterface
  *
  * @extends NodeVisitableInterface<NodeId>
  *
