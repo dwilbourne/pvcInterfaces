@@ -32,6 +32,12 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
 interface TreeInterface
 {
     /**
+     * getTreeId
+     * @return TreeIdType
+     */
+    public function getTreeId();
+
+    /**
      * @return bool
      */
     public function isEmpty(): bool;
