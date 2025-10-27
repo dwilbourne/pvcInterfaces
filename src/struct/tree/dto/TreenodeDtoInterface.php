@@ -33,11 +33,11 @@ interface TreenodeDtoInterface
 
     /**
      * setParentId
-     * @param NodeIdType $parentId
+     * @param NodeIdType|null $parentId
      *
      * @return void
      */
-    public function setParentId($parentId): void;
+    public function setParentId($parentId = null): void;
 
     /**
      * getParent
@@ -47,11 +47,11 @@ interface TreenodeDtoInterface
 
     /**
      * setParent
-     * @param  NodeType  $parent
+     * @param  NodeType|null  $parent
      *
      * @return void
      */
-    public function setParent(TreenodeInterface $parent): void;
+    public function setParent(?TreenodeInterface $parent = null): void;
 
     /**
      * @return TreeIdType
