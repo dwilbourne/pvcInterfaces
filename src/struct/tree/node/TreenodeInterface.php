@@ -50,7 +50,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * hydrate
-     * @param  TreenodeDtoInterface<NodeIdType, TreeIdType>  $dto
+     * @param  TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>  $dto
      *
      * should set all required properties in the node
      *
@@ -60,7 +60,7 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * dehydrate
-     * @return TreenodeDtoInterface<NodeIdType, TreeIdType>
+     * @return TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>
      */
     public function dehydrate(): TreenodeDtoInterface;
 

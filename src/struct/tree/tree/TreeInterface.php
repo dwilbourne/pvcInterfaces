@@ -25,6 +25,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * must have a single parent.
  *
  * @template TreeIdType of array-key
+ * @template TreeType of TreeInterface
  * @template NodeIdType of array-key
  * @template NodeType of TreenodeInterface
  */
@@ -44,7 +45,7 @@ interface TreeInterface
 
     /**
      * addNode puts a node into the tree's list of nodes.
-     * @param TreenodeDtoInterface<NodeIdType, TreeIdType> $dto
+     * @param TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType> $dto
      */
     public function addNode(TreenodeDtoInterface $dto): void;
 
@@ -57,14 +58,14 @@ interface TreeInterface
 
 
     /**
-     * @param  array<TreenodeDtoInterface<NodeIdType, TreeIdType>>  $array
+     * @param  array<TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>>  $array
      *
      * @return void
      */
     public function hydrate(array $array): void;
 
     /**
-     * @return array<TreenodeDtoInterface<NodeIdType, TreeIdType>>
+     * @return array<TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>>
      */
     public function dehydrate(): array;
 
@@ -88,7 +89,7 @@ interface TreeInterface
     public function getRoot();
 
     /**
-     * @param  NodeType|TreenodeDtoInterface<NodeIdType, TreeIdType>  $root
+     * @param  NodeType|TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>  $root
      * in the course of a node getting its siblings, it needs to know whether
      * it is the root or not because the root has no parent and therefore
      * no child collection.
