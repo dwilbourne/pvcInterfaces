@@ -3,8 +3,8 @@
 namespace pvc\interfaces\struct\tree\dto;
 
 /**
- * @template NodeId
- * @template TreeId
+ * @template NodeIdType of array-key
+ * @template TreeIdType of array-key
  */
 interface TreenodeDtoFactoryInterface
 {
@@ -12,7 +12,7 @@ interface TreenodeDtoFactoryInterface
      * makeTreenodeDto
      * @param  array<mixed>  $array
      *
-     * @return TreenodeDtoInterface<NodeId, TreeId>
+     * @return TreenodeDtoInterface<NodeIdType, TreeIdType>
      */
     public function makeTreenodeDto(array $array): TreenodeDtoInterface;
 }

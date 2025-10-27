@@ -3,23 +3,23 @@
 namespace pvc\interfaces\struct\tree\dto;
 
 /**
- * @template NodeId
- * @template TreeId
+ * @template NodeIdType of array-key
+ * @template TreeIdType of array-key
  */
 interface TreenodeDtoInterface
 {
     /**
-     * @return NodeId
+     * @return NodeIdType
      */
     public function getNodeId();
 
     /**
-     * @return NodeId|null
+     * @return NodeIdType|null
      */
     public function getParentId();
 
     /**
-     * @return TreeId|null
+     * @return TreeIdType|null
      */
     public function getTreeId();
 

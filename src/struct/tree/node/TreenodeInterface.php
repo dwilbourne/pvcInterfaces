@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\node;
 
 use pvc\interfaces\struct\collection\IndexedElementInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
@@ -27,13 +28,13 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * Each node has a collection of children.  The type of collection can vary so
  * it is also generic
  *
- * @template NodeId
- *
- * @template TreeType of TreeInterface
+ * @template NodeIdType of array-key
  * @template NodeType of TreenodeInterface
+ * @template TreeIdType of array-key
+ * @template TreeType of TreeInterface
  * @template CollectionType of TreenodeCollectionInterface
  *
- * @extends NodeVisitableInterface<NodeId>
+ * @extends NodeVisitableInterface<NodeIdType>
  *
  * NodeVisitableInterface allows treenodes to participate in a depth first search
  *
@@ -43,30 +44,42 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterface
 {
     /**
-     * methods necessary to implement the basic rules of creating and maintaining
+     * methods necessary to implement the basic rules of creating and using
      * treenodes
      */
 
     /**
-     * setNodeId
-     * @param NodeId $nodeId
+     * hydrate
+     * @param  TreenodeDtoInterface<NodeIdType, TreeIdType>  $dto
+     *
+     * should set all required properties in the node
      *
      * @return void
      */
-    public function setNodeId($nodeId): void;
+    public function hydrate(TreenodeDtoInterface $dto): void;
 
     /**
-     * @return NodeId
+     * dehydrate
+     * @return TreenodeDtoInterface<NodeIdType, TreeIdType>
+     */
+    public function dehydrate(): TreenodeDtoInterface;
+
+    /**
+     * @return NodeIdType
      */
     public function getNodeId();
 
     /**
-     * setTree
-     * @param TreeType $tree
-     *
-     * @return void
+     * @function getParent
+     * @return NodeType|null
      */
-    public function setTree($tree): void;
+    public function getParent();
+
+    /**
+     * getTree
+     * @return TreeType|null
+     */
+    public function getTree(): ?TreeInterface;
 
     /**
      * @param NodeType|null $parent
@@ -76,11 +89,6 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      */
     public function setParent($parent): void;
 
-    /**
-     * @function getParent
-     * @return NodeType|null
-     */
-    public function getParent();
 
     /**
      * @param  NodeType  $node
@@ -153,13 +161,13 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
 
     /**
      * @function getChild
-     * @param NodeId $nodeId
+     * @param NodeIdType $nodeId
      * @return NodeType|null
      */
     public function getChild($nodeId);
 
     /**
-     * @return array<NodeId, NodeType>
+     * @return array<NodeIdType, NodeType>
      */
     public function getChildrenArray(): array;
 

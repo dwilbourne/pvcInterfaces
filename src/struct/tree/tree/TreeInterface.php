@@ -24,8 +24,8 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * nodes, including the root node, can have zero or more child nodes.  All nodes except the root
  * must have a single parent.
  *
- * @template TreeId
- * @template NodeId
+ * @template TreeIdType of array-key
+ * @template NodeIdType of array-key
  * @template NodeType of TreenodeInterface
  */
 interface TreeInterface
@@ -36,7 +36,7 @@ interface TreeInterface
     public function isEmpty(): bool;
 
     /**
-     * @param TreeId $treeId
+     * @param TreeIdType $treeId
      * @return void
      * initializes the tree so it is ready to use
      */
@@ -46,39 +46,39 @@ interface TreeInterface
      * addNode puts a node into the tree's list of nodes.
      *
      * @param NodeType $node
-     * @param NodeType $parent
+     * @param NodeIdType $parentId
      */
-    public function addNode(TreenodeInterface $node, TreenodeInterface $parent): void;
+    public function addNode(TreenodeInterface $node, $parentId): void;
 
     /**
      * @function deleteNode
-     * @param NodeId $nodeId
+     * @param NodeIdType $nodeId
      * @param bool $deleteBranchOK
      */
     public function deleteNode($nodeId, bool $deleteBranchOK = false): void;
 
 
     /**
-     * @param  array<TreenodeDtoInterface<NodeId, TreeId>>  $array
+     * @param  array<TreenodeDtoInterface<NodeIdType, TreeIdType>>  $array
      *
      * @return void
      */
     public function hydrate(array $array): void;
 
     /**
-     * @return array<TreenodeDtoInterface<NodeId, TreeId>>
+     * @return array<TreenodeDtoInterface<NodeIdType, TreeIdType>>
      */
     public function dehydrate(): array;
 
     /**
      * @function getNodes
-     * @return CollectionInterface<NodeId, NodeType>
+     * @return CollectionInterface<NodeIdType, NodeType>
      */
     public function getNodeCollection(): CollectionInterface;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
-     * @param NodeId $nodeId
+     * @param NodeIdType $nodeId
      * @return NodeType|null
      */
     public function getNode($nodeId): TreenodeInterface|null;
@@ -90,7 +90,7 @@ interface TreeInterface
     public function getRoot();
 
     /**
-     * @param  NodeType|TreenodeDtoInterface<NodeId, TreeId>  $root
+     * @param  NodeType|TreenodeDtoInterface<NodeIdType, TreeIdType>  $root
      * in the course of a node getting its siblings, it needs to know whether
      * it is the root or not because the root has no parent and therefore
      * no child collection.
