@@ -44,11 +44,9 @@ interface TreeInterface
 
     /**
      * addNode puts a node into the tree's list of nodes.
-     *
-     * @param NodeType $node
-     * @param NodeIdType $parentId
+     * @param TreenodeDtoInterface<NodeIdType, TreeIdType> $dto
      */
-    public function addNode(TreenodeInterface $node, $parentId): void;
+    public function addNode(TreenodeDtoInterface $dto): void;
 
     /**
      * @function deleteNode
