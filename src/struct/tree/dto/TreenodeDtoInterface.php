@@ -54,7 +54,7 @@ interface TreenodeDtoInterface
     public function setParent(?TreenodeInterface $parent = null): void;
 
     /**
-     * @return TreeIdType
+     * @return TreeIdType|null
      */
     public function getTreeId();
 
