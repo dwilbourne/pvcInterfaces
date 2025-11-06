@@ -12,9 +12,9 @@ interface TreenodeCollectionInterface
 
     /**
      * @param NodeIdType $key
-     * @return NodeType
+     * @return NodeType|null
      */
-    public function getElement($key): TreenodeInterface;
+    public function getElement($key): ?TreenodeInterface;
 
     /**
      * getElements
