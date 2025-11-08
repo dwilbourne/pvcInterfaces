@@ -65,15 +65,24 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function dehydrate(): TreenodeDtoInterface;
 
     /**
-     * @return NodeIdType
+     * included in NodeVisitableInterface
+     *
+     * public function getNodeId();
      */
-    public function getNodeId();
 
     /**
-     * @function getParent
-     * @return NodeType|null
+     * There is no setNodeId method, nodes are hydrated such that all
+     * required properties are set simultaneously
      */
-    public function getParent();
+
+
+    /**
+     * included in NodeVisitableInterface
+     * @return NodeType|null
+     *
+     * public function getParent();
+     */
+
 
     /**
      * @param NodeType|null $parent
@@ -83,25 +92,23 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      */
     public function setParent($parent): void;
 
-
     /**
-     * @param  NodeType  $node
+     * Implementations of this interface might choose to keep a reference to
+     * the containing tree in order to perform certain operations more
+     * efficiently.  But there is nothing in the logic of these methods that
+     * forces an implementation to keep such a reference.  So while it might
+     * seem natural to provide a getTree method in an implementation, there
+     * is no such method in the interface.
      *
-     * @return bool
-     *
-     * In order to ensure we do not create a circular graph when setting a parent,
-     * we need this method.
-     *
-     * The obvious way to implement this is via recursion.  That implementation
-     * is going to involve a call to parent->isDescendantOf, which means it must be
-     * part of the interface, even if it seems a little out of place.
+     * Also, this interface does not provide a method for moving a node from
+     * one tree to another.  So there is no separate setTree method either.
      */
-    public function isDescendantOf($node): bool;
 
     /**
      * indexed elements can be put into an arbitrary order, e.g. nodes that
      * are part of an ordered collection must support IndexedElementInterface.
-     * these are included as result of extending IndexedElementInterface
+     *
+     * these methods are included as result of extending IndexedElementInterface
      */
 
     /**
@@ -120,13 +127,18 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      */
 
     /**
-     * isDescendandOf is included as part of the core interface and serves a dual purpose.
-     * It is both necessary to ensure a valid tree but it also o provides general method
-     * for gathering information about node relationships
-     * 
-     * public function isDescendantOf(TreenodeInterface $node): bool;
+     * @param  NodeType  $node
+     *
+     * @return bool
+     *
+     * In order to ensure we do not create a circular graph when setting a parent,
+     * we need this method.
+     *
+     * The obvious way to implement this is via recursion.  That implementation
+     * is going to involve a call to parent->isDescendantOf, which means it must be
+     * part of the interface, even if it seems a little out of place.
      */
-    
+    public function isDescendantOf($node): bool;
 
     /**
      * @param  NodeType  $node
@@ -143,12 +155,6 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      */
 
     /**
-     * @function getChildren
-     * @return CollectionType
-     */
-    public function getChildren();
-
-    /**
      * @return bool
      */
     public function hasChildren(): bool;
@@ -161,19 +167,17 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function getChild($nodeId);
 
     /**
+     * @function getChildren
+     * @return CollectionType
+     */
+    public function getChildren();
+
+    /**
      * @return array<NodeIdType, NodeType>
      */
     public function getChildrenArray(): array;
 
-    /**
-     * @return NodeType|null
-     */
-    public function getFirstChild();
 
-    /**
-     * @return NodeType|null
-     */
-    public function getLastChild();
 
     /**
      * @param non-negative-int $n

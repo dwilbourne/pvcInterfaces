@@ -23,18 +23,6 @@ interface TreenodeCollectionInterface
     public function getElements(): array;
 
     /**
-     * getFirstElement
-     * @return NodeType
-     */
-    public function getFirst(): TreenodeInterface;
-
-    /**
-     * getLast
-     * @return NodeType
-     */
-    public function getLast(): TreenodeInterface;
-
-    /**
      * getNth
      * @param  non-negative-int  $index
      *
@@ -58,4 +46,12 @@ interface TreenodeCollectionInterface
      * @return void
      */
     public function delete($nodeId): void;
+
+    /**
+     * getChildren
+     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
+     *
+     * returns a collection of all the children of the nodes in this collection
+     */
+    public function getChildren(): TreenodeCollectionInterface;
 }
