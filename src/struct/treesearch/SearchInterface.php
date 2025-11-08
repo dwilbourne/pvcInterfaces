@@ -9,11 +9,12 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\treesearch;
 
 use Iterator;
+use pvc\interfaces\struct\collection\CollectionInterface;
 
 /**
- * @template NodeId
+ * @template NodeIdType of array-key
  * @template NodeType of NodeSearchableInterface
- * @extends Iterator<NodeId, NodeType>
+ * @extends Iterator<NodeIdType, NodeType>
  */
 interface SearchInterface extends Iterator
 {
@@ -26,7 +27,7 @@ interface SearchInterface extends Iterator
     /**
      * getNodes
      * gets all the nodes at once
-     * @return array<NodeType>
+     * @return CollectionInterface<NodeIdType, NodeType>
      */
-    public function getNodes(): array;
+    public function getNodes(): CollectionInterface;
 }

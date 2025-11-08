@@ -8,20 +8,15 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\node;
 
-use pvc\interfaces\struct\collection\IndexedElementInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
-use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
 
 /**
  * Interface TreenodeInterface defines the basic operations for a generic tree node.
  *
  * each node has an id which is unique within the tree.  That id will be used as
  * a key in collections and arrays so it is typed as a generic array-key,
- * leaving the implementor to choose between integers and strings.  It is important to
- * note that the same generic is used for both tree ids and treenode ids so that
- * trees and nodes have the same type.  This is not a logic requirement, but it
- * keeps the specification of the types simpler
+ * leaving the implementor to choose between integers and strings.
  *
  * Since nodes will almost certainly be subclassed, treenodes themselves are generic also.
  *
@@ -33,15 +28,8 @@ use pvc\interfaces\struct\treesearch\NodeVisitableInterface;
  * @template TreeIdType of array-key
  * @template TreeType of TreeInterface
  * @template CollectionType of TreenodeCollectionInterface
- *
- * @extends NodeVisitableInterface<NodeIdType>
- *
- * NodeVisitableInterface allows treenodes to participate in a depth first search
- *
- * IndexedElementInterface allows treenodes to participate in an indexed collection,
- * meaning you can put the child nodes of a node into an arbitrary order
  */
-interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterface
+interface TreenodeInterface
 {
     /**
      * methods necessary to implement the basic rules of creating and using
@@ -65,24 +53,20 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
     public function dehydrate(): TreenodeDtoInterface;
 
     /**
-     * included in NodeVisitableInterface
-     *
-     * public function getNodeId();
+     * getNodeId
+     * @return mixed
      */
+    public function getNodeId();
 
     /**
      * There is no setNodeId method, nodes are hydrated such that all
      * required properties are set simultaneously
      */
 
-
     /**
-     * included in NodeVisitableInterface
      * @return NodeType|null
-     *
-     * public function getParent();
      */
-
+    public function getParent();
 
     /**
      * @param NodeType|null $parent
@@ -102,18 +86,6 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      *
      * Also, this interface does not provide a method for moving a node from
      * one tree to another.  So there is no separate setTree method either.
-     */
-
-    /**
-     * indexed elements can be put into an arbitrary order, e.g. nodes that
-     * are part of an ordered collection must support IndexedElementInterface.
-     *
-     * these methods are included as result of extending IndexedElementInterface
-     */
-
-    /**
-     * public function setIndex(int $index): void
-     * public function getIndex(int $index): int
      */
 
     /**
@@ -171,19 +143,6 @@ interface TreenodeInterface extends NodeVisitableInterface, IndexedElementInterf
      * @return CollectionType
      */
     public function getChildren();
-
-    /**
-     * @return array<NodeIdType, NodeType>
-     */
-    public function getChildrenArray(): array;
-
-
-
-    /**
-     * @param non-negative-int $n
-     * @return NodeType|null
-     */
-    public function getNthChild(int $n);
 
     /**
      * @return CollectionType
