@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\dto;
 
+use Iterator;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
 use pvc\interfaces\validator\ValTesterInterface;
@@ -13,8 +14,9 @@ use pvc\interfaces\validator\ValTesterInterface;
  * @template NodeType of TreenodeInterface
  * @template TreeIdType of array-key
  * @template TreeType of TreeInterface
+ * @extends Iterator<NodeIdType, TreenodeDtoInterface>
  */
-interface TreenodeDtoCollectionInterface
+interface TreenodeDtoCollectionInterface extends Iterator
 {
     public function isEmpty(): bool;
 
