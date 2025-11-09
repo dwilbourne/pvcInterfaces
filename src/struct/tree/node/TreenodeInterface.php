@@ -70,12 +70,12 @@ interface TreenodeInterface
     public function getParent();
 
     /**
-     * @param NodeType|null $parent
+     * @param NodeIdType|null $parentId
      * parent node must be in the same tree.
      *
      * @return void
      */
-    public function setParent($parent): void;
+    public function setParent($parentId): void;
 
     /**
      * Implementations of this interface might choose to keep a reference to
