@@ -2,11 +2,14 @@
 
 namespace pvc\interfaces\struct\tree\node;
 
+use Iterator;
+
 /**
  * @template NodeIdType of array-key
  * @template NodeType of TreenodeInterface
+ * @extends Iterator<NodeIdType, NodeType>
  */
-interface TreenodeCollectionInterface
+interface TreenodeCollectionInterface extends Iterator
 {
     public function isEmpty() : bool;
 
@@ -21,14 +24,6 @@ interface TreenodeCollectionInterface
      * @return array<NodeIdType, NodeType>
      */
     public function getElements(): array;
-
-    /**
-     * getNth
-     * @param  non-negative-int  $index
-     *
-     * @return NodeType
-     */
-    public function getNth(int $index): TreenodeInterface;
 
     /**
      * add
