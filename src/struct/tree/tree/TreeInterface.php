@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoCollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -63,12 +64,7 @@ interface TreeInterface
     public function deleteNode($nodeId, bool $deleteBranchOK = false): void;
 
 
-    /**
-     * @param  array<TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>>  $array
-     *
-     * @return void
-     */
-    public function hydrate(array $array): void;
+    public function hydrate(TreenodeDtoCollectionInterface $dtoCollection): void;
 
     /**
      * @return array<TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>>
