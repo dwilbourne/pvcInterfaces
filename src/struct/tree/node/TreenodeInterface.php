@@ -38,14 +38,13 @@ interface TreenodeInterface
 
     /**
      * hydrate
-     * @param TreeInterface<NodeIdType, NodeType, TreeIdType, TreeType> $tree
      * @param  TreenodeDtoInterface<NodeIdType, TreeIdType>  $dto
      *
      * should set all required properties in the node
      *
      * @return void
      */
-    public function hydrate(TreeInterface $tree, TreenodeDtoInterface $dto): void;
+    public function hydrate(TreenodeDtoInterface $dto): void;
 
     /**
      * dehydrate
