@@ -11,5 +11,5 @@ use Iterator;
  */
 interface NodeSearchableCollectionInterface extends Iterator
 {
-
+    public function initialize(): void;
 }
