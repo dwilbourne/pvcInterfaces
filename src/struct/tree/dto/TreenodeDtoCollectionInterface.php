@@ -18,6 +18,8 @@ interface TreenodeDtoCollectionInterface
 {
     public function isEmpty(): bool;
 
+    public function count(): int;
+
     /**
      * getDto
      * @param NodeIdType $nodeId
