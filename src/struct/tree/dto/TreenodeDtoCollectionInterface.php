@@ -13,8 +13,6 @@ use Iterator;
  */
 interface TreenodeDtoCollectionInterface extends Iterator
 {
-    public function isEmpty(): bool;
-
     /**
      * getRoot
      * @return TreenodeDtoInterface<NodeIdType, TreeIdType>

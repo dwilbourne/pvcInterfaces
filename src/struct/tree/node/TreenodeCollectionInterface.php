@@ -11,8 +11,6 @@ use Iterator;
  */
 interface TreenodeCollectionInterface extends Iterator
 {
-    public function isEmpty() : bool;
-
     /**
      * @param NodeIdType $nodeId
      * @return NodeType|null
