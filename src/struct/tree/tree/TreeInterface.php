@@ -11,7 +11,6 @@ namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoCollectionInterface;
-use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
@@ -52,9 +51,9 @@ interface TreeInterface
 
     /**
      * addNode puts a node into the tree's list of nodes.
-     * @param TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType> $dto
+     * @param NodeType $node
      */
-    public function addNode(TreenodeDtoInterface $dto): void;
+    public function addNode(TreenodeInterface $node): void;
 
     /**
      * @function deleteNode
@@ -66,7 +65,7 @@ interface TreeInterface
 
     /**
      * hydrate
-     * @param  TreenodeDtoCollectionInterface<NodeIdType>  $dtoCollection
+     * @param  TreenodeDtoCollectionInterface<NodeIdType, TreeIdType>  $dtoCollection
      *
      * @return void
      */
@@ -74,7 +73,7 @@ interface TreeInterface
 
     /**
      * dehydrate
-     * @return TreenodeDtoCollectionInterface<NodeIdType>
+     * @return TreenodeDtoCollectionInterface<NodeIdType, TreeIdType>
      */
     public function dehydrate(): TreenodeDtoCollectionInterface;
 

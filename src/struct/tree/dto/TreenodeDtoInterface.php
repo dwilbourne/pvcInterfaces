@@ -2,14 +2,9 @@
 
 namespace pvc\interfaces\struct\tree\dto;
 
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
-use pvc\interfaces\struct\tree\tree\TreeInterface;
-
 /**
  * @template NodeIdType of array-key
- * @template NodeType of TreenodeInterface
  * @template TreeIdType of array-key
- * @template TreeType of TreeInterface
  */
 interface TreenodeDtoInterface
 {
@@ -40,20 +35,6 @@ interface TreenodeDtoInterface
     public function setParentId($parentId = null): void;
 
     /**
-     * getParent
-     * @return NodeType|null
-     */
-    public function getParent(): ?TreenodeInterface;
-
-    /**
-     * setParent
-     * @param  NodeType|null  $parent
-     *
-     * @return void
-     */
-    public function setParent(?TreenodeInterface $parent = null): void;
-
-    /**
      * @return TreeIdType|null
      */
     public function getTreeId();
@@ -65,31 +46,4 @@ interface TreenodeDtoInterface
      * @return void
      */
     public function setTreeId($treeId): void;
-
-    /**
-     * getTree
-     * @return TreeType
-     */
-    public function getTree(): TreeInterface;
-
-    /**
-     * setTree
-     * @param  TreeType  $tree
-     *
-     * @return void
-     */
-    public function setTree(TreeInterface $tree): void;
-
-    /**
-     * @return non-negative-int
-     */
-    public function getIndex(): int;
-
-    /**
-     * setIndex
-     * @param  non-negative-int  $index
-     *
-     * @return void
-     */
-    public function setIndex(int $index): void;
 }
