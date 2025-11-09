@@ -14,16 +14,16 @@ interface TreenodeCollectionInterface extends Iterator
     public function isEmpty() : bool;
 
     /**
-     * @param NodeIdType $key
+     * @param NodeIdType $nodeId
      * @return NodeType|null
      */
-    public function getElement($key): ?TreenodeInterface;
+    public function getNode($nodeId): ?TreenodeInterface;
 
     /**
-     * getElements
+     * toArray
      * @return array<NodeIdType, NodeType>
      */
-    public function getElements(): array;
+    public function toArray(): array;
 
     /**
      * add
