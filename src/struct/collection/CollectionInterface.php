@@ -84,7 +84,7 @@ interface CollectionInterface extends Iterator, Countable
 
     /**
      * @function findElementKeys returns all the keys for elements in the collection where the ValTester
-     * argument returns true when applied to the element. Returns an empty array no element in the
+     * argument returns true when applied to the element. Returns an empty array when no element in the
      * collection passes the test.
      *
      * @param ValTesterInterface<ElementType> $valTester

@@ -4,22 +4,18 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\dto;
 
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
-use pvc\interfaces\struct\tree\tree\TreeInterface;
+use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * @template NodeIdType of array-key
- * @template NodeType of TreenodeInterface
- * @template TreeIdType of array-key
- * @template TreeType of TreeInterface
  */
 interface TreenodeDtoCollectionInterface
 {
     /**
-     * filter
-     * @param  callable  $callback
+     * findElementKeys
+     * @param  ValTesterInterface<NodeIdType>  $valTester
      *
-     * @return TreenodeDtoCollectionInterface<NodeIdType, NodeType, TreeIdType, TreeType>
+     * @return array<NodeIdType>
      */
-    public function filter(callable $callback): TreenodeDtoCollectionInterface;
+    public function findElementKeys(ValTesterInterface $valTester): array;
 }
