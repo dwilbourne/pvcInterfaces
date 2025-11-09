@@ -2,6 +2,7 @@
 
 namespace pvc\interfaces\struct\treesearch;
 
+use Countable;
 use Iterator;
 
 /**
@@ -9,7 +10,7 @@ use Iterator;
  * @template NodeType of NodeSearchableInterface
  * @extends Iterator<NodeIdType, NodeType>
  */
-interface NodeSearchableCollectionInterface extends Iterator
+interface NodeSearchableCollectionInterface extends Iterator, Countable
 {
     public function initialize(): void;
 
