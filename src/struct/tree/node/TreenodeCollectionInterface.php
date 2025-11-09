@@ -43,10 +43,11 @@ interface TreenodeCollectionInterface extends Iterator
     public function delete($nodeId): void;
 
     /**
-     * getChildren
+     * filter
+     * @param callable $callback
      * @return TreenodeCollectionInterface<NodeIdType, NodeType>
      *
      * returns a collection of all the children of the nodes in this collection
      */
-    public function getChildren(): TreenodeCollectionInterface;
+    public function filter(callable $callback): TreenodeCollectionInterface;
 }
