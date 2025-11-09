@@ -66,10 +66,7 @@ interface TreeInterface
 
     public function hydrate(TreenodeDtoCollectionInterface $dtoCollection): void;
 
-    /**
-     * @return array<TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>>
-     */
-    public function dehydrate(): array;
+    public function dehydrate(): TreenodeDtoCollectionInterface;
 
     /**
      * @function getNodes
