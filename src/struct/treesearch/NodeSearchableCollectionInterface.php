@@ -30,6 +30,12 @@ interface NodeSearchableCollectionInterface extends Iterator, Countable
     public function filter(callable $callback): NodeSearchableCollectionInterface;
 
     /**
+     * getChildren
+     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
+     */
+    public function getChildren(): NodeSearchableCollectionInterface;
+
+    /**
      * __toArray
      * @return array<NodeIdType, NodeType>
      */
