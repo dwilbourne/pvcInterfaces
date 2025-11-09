@@ -16,22 +16,21 @@ use pvc\interfaces\validator\ValTesterInterface;
  */
 interface TreenodeDtoCollectionInterface
 {
-
     public function isEmpty(): bool;
 
     /**
-     * getElement
+     * getDto
      * @param NodeIdType $nodeId
      *
      * @return TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>
      */
-    public function getElement($nodeId): TreenodeDtoInterface;
+    public function getDto($nodeId): TreenodeDtoInterface;
 
     /**
-     * findElementKeys
-     * @param  ValTesterInterface<NodeIdType>  $valTester
+     * getDtos
+     * @param  ValTesterInterface<TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>>  $valTester
      *
-     * @return array<NodeIdType>
+     * @return TreenodeDtoCollectionInterface<NodeIdType, NodeType, TreeIdType, TreeType>
      */
-    public function findElementKeys(ValTesterInterface $valTester): array;
+    public function getDtos(ValTesterInterface $valTester): TreenodeDtoCollectionInterface;
 }
