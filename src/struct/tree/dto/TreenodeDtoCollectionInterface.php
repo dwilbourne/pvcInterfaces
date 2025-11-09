@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\dto;
 
 use Iterator;
-use pvc\interfaces\validator\ValTesterInterface;
 
 /**
  * @template NodeIdType of array-key
@@ -32,9 +31,9 @@ interface TreenodeDtoCollectionInterface extends Iterator
 
     /**
      * getDtos
-     * @param  ValTesterInterface<TreenodeDtoInterface<NodeIdType, TreeIdType>>  $valTester
+     * @param  TreenodeDtoInterface<NodeIdType, TreeIdType>  $dto
      *
      * @return TreenodeDtoCollectionInterface<NodeIdType, TreeIdType>
      */
-    public function getDtos(ValTesterInterface $valTester): TreenodeDtoCollectionInterface;
+    public function getChildrenOf(TreenodeDtoInterface $dto): TreenodeDtoCollectionInterface;
 }
