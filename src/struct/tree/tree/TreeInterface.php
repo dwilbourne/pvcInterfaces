@@ -64,8 +64,18 @@ interface TreeInterface
     public function deleteNode($nodeId, bool $deleteBranchOK = false): void;
 
 
+    /**
+     * hydrate
+     * @param  TreenodeDtoCollectionInterface<NodeIdType>  $dtoCollection
+     *
+     * @return void
+     */
     public function hydrate(TreenodeDtoCollectionInterface $dtoCollection): void;
 
+    /**
+     * dehydrate
+     * @return TreenodeDtoCollectionInterface<NodeIdType>
+     */
     public function dehydrate(): TreenodeDtoCollectionInterface;
 
     /**
