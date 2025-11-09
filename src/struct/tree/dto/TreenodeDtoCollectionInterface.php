@@ -18,7 +18,11 @@ interface TreenodeDtoCollectionInterface
 {
     public function isEmpty(): bool;
 
-    public function count(): int;
+    /**
+     * getRoot
+     * @return TreenodeDtoInterface<NodeIdType, NodeType, TreeIdType, TreeType>
+     */
+    public function getRoot(): TreenodeDtoInterface;
 
     /**
      * getDto
