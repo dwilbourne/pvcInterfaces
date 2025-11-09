@@ -36,4 +36,12 @@ interface TreenodeDtoCollectionInterface extends Iterator
      * @return TreenodeDtoCollectionInterface<NodeIdType, TreeIdType>
      */
     public function getChildrenOf(TreenodeDtoInterface $dto): TreenodeDtoCollectionInterface;
+
+    /**
+     * add
+     * @param  TreenodeDtoInterface<NodeIdType, TreeIdType>  $dto
+     *
+     * @return void
+     */
+    public function add(TreenodeDtoInterface $dto): void;
 }
