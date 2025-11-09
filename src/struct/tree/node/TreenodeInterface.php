@@ -38,7 +38,7 @@ interface TreenodeInterface
 
     /**
      * setTree
-     * @param  TreeInterface  $tree
+     * @param  TreeInterface<NodeIdType, NodeType, TreeIdType, TreeType>  $tree
      * @return void
      */
     public function setTree(TreeInterface $tree): void;
