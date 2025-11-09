@@ -8,9 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\treesearch;
 
-use pvc\interfaces\struct\tree\node\TreenodeCollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
-use pvc\interfaces\struct\tree\tree\TreeInterface;
 
 /**
  * Class NodeVisitableInterface
@@ -22,12 +20,9 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  *
  * @template NodeIdType of array-key
  * @template NodeType of TreenodeInterface
- * @template TreeIdType of array-key
- * @template TreeType of TreeInterface
- * @template CollectionType of TreenodeCollectionInterface
- * @extends TreenodeInterface<NodeIdType, NodeType, TreeIdType, TreeType, CollectionType>
+ * @extends NodeSearchableInterface<NodeIdType, NodeType>
  */
-interface NodeVisitableInterface extends TreenodeInterface
+interface NodeVisitableInterface extends NodeSearchableInterface
 {
     /**
      * initializeVisitStatus
