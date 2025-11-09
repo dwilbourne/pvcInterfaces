@@ -11,6 +11,9 @@ use pvc\interfaces\validator\ValTesterInterface;
  */
 interface TreenodeDtoCollectionInterface
 {
+
+    public function isEmpty(): bool;
+
     /**
      * findElementKeys
      * @param  ValTesterInterface<NodeIdType>  $valTester
