@@ -15,8 +15,6 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  */
 interface TreenodeDtoCollectionInterface
 {
-    public function isEmpty(): bool;
-
     /**
      * filter
      * @param  callable  $callback
