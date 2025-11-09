@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\tree;
 
-use pvc\interfaces\struct\collection\CollectionInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoCollectionInterface;
+use pvc\interfaces\struct\tree\node\TreenodeCollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
 /**
@@ -79,9 +79,9 @@ interface TreeInterface
 
     /**
      * @function getNodes
-     * @return CollectionInterface<NodeIdType, NodeType>
+     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
      */
-    public function getNodeCollection(): CollectionInterface;
+    public function getNodeCollection(): TreenodeCollectionInterface;
 
     /**
      * @function getNode returns the node in the tree whose id is $nodeid or null if there is no such node.
