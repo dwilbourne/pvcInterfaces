@@ -37,6 +37,13 @@ interface TreenodeInterface
      */
 
     /**
+     * setTree
+     * @param  TreeInterface  $tree
+     * @return void
+     */
+    public function setTree(TreeInterface $tree): void;
+
+    /**
      * hydrate
      * @param  TreenodeDtoInterface<NodeIdType, TreeIdType>  $dto
      *
