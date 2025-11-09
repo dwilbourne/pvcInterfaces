@@ -52,6 +52,8 @@ interface TreenodeInterface
      */
     public function dehydrate(): TreenodeDtoInterface;
 
+    public function isInitialized(): bool;
+
     /**
      * getNodeId
      * @return mixed
