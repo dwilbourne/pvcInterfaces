@@ -11,7 +11,7 @@ namespace pvc\interfaces\struct\treesearch;
 /**
  * Class NodeSearchableInterface
  * @template NodeIdType of array-key
- * @template NodeType
+ * @template NodeType of NodeSearchableInterface
  *
  * methods necessary to support searches
  */

@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\treesearch;
 
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
-
 /**
  * Class NodeVisitableInterface
  *
@@ -19,7 +17,7 @@ use pvc\interfaces\struct\tree\node\TreenodeInterface;
  * been fully visited.  See the VisitStatus enum.
  *
  * @template NodeIdType of array-key
- * @template NodeType of TreenodeInterface
+ * @template NodeType of NodeSearchableInterface
  * @extends NodeSearchableInterface<NodeIdType, NodeType>
  */
 interface NodeVisitableInterface extends NodeSearchableInterface
