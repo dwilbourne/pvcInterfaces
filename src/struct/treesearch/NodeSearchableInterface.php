@@ -8,13 +8,10 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\treesearch;
 
-use pvc\interfaces\struct\tree\node\TreenodeCollectionInterface;
-use pvc\interfaces\struct\tree\node\TreenodeInterface;
-
 /**
  * Class NodeSearchableInterface
  * @template NodeIdType of array-key
- * @template NodeType of TreenodeInterface
+ * @template NodeType
  *
  * methods necessary to support searches
  */
@@ -36,8 +33,8 @@ interface NodeSearchableInterface
 
     /**
      * getChildren
-     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
+     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
      */
-    public function getChildren(): TreenodeCollectionInterface;
+    public function getChildren(): NodeSearchableCollectionInterface;
 
 }
