@@ -12,6 +12,13 @@ use Iterator;
 interface TreenodeCollectionInterface extends Iterator
 {
     /**
+     * isEmpty
+     * @return bool
+     */
+    public function isEmpty(): bool;
+
+
+    /**
      * @param NodeIdType $nodeId
      * @return NodeType|null
      */
