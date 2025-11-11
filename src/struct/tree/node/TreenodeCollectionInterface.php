@@ -45,7 +45,13 @@ interface TreenodeCollectionInterface extends Iterator
      * @param callable $callback
      * @return TreenodeCollectionInterface<NodeIdType, NodeType>
      *
-     * returns a collection of all the children of the nodes in this collection
+     * returns a collection filtered via the callback
      */
     public function filter(callable $callback): TreenodeCollectionInterface;
+
+    /**
+     * getChildren
+     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
+     */
+    public function getChildren(): TreenodeCollectionInterface;
 }
