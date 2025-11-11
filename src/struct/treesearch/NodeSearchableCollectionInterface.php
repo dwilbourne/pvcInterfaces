@@ -37,9 +37,9 @@ interface NodeSearchableCollectionInterface extends Iterator, Countable
 
     /**
      * getNthChild
-     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>|null
+     * @return NodeSearchableInterface<NodeIdType, NodeType>|null
      */
-    public function getNthChild(): ?NodeSearchableCollectionInterface;
+    public function getNth(): ?NodeSearchableInterface;
 
     /**
      * __toArray
