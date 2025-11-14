@@ -37,4 +37,10 @@ interface NodeVisitableInterface extends NodeSearchableInterface
      * @param VisitStatus $status
      */
     public function setVisitStatus(VisitStatus $status): void;
+
+    /**
+     * getNextVisitableChild
+     * @return NodeVisitableInterface<NodeIdType>|null
+     */
+    public function getNextVisitableChild(): ?NodeVisitableInterface;
 }
