@@ -18,7 +18,8 @@ namespace pvc\interfaces\struct\treesearch;
  *
  * @template NodeIdType of array-key
  * @template NodeType of NodeSearchableInterface
- * @extends NodeSearchableInterface<NodeIdType, NodeType>
+ * @template CollectionType of NodeSearchableCollectionInterface
+ * @extends NodeSearchableInterface<NodeIdType, NodeType, CollectionType>
  */
 interface NodeVisitableInterface extends NodeSearchableInterface
 {

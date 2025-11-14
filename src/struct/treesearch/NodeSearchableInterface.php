@@ -12,6 +12,7 @@ namespace pvc\interfaces\struct\treesearch;
  * Class NodeSearchableInterface
  * @template NodeIdType of array-key
  * @template NodeType of NodeSearchableInterface
+ * @template CollectionType of NodeSearchableCollectionInterface
  *
  * methods necessary to support searches
  */
@@ -33,7 +34,7 @@ interface NodeSearchableInterface
 
     /**
      * getChildren
-     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
+     * @return CollectionType
      */
     public function getChildren(): NodeSearchableCollectionInterface;
 

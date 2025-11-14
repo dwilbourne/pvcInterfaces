@@ -13,6 +13,7 @@ use Iterator;
 /**
  * @template NodeIdType of array-key
  * @template NodeType of NodeSearchableInterface
+ * @template CollectionType of NodeSearchableCollectionInterface
  * @extends Iterator<NodeIdType, NodeType>
  */
 interface SearchInterface extends Iterator
@@ -26,7 +27,7 @@ interface SearchInterface extends Iterator
     /**
      * getNodes
      * gets all the nodes at once
-     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
+     * @return CollectionType
      */
     public function getNodes(): NodeSearchableCollectionInterface;
 }
