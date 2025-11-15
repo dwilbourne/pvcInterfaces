@@ -40,8 +40,13 @@ interface NodeVisitableInterface extends NodeSearchableInterface
     public function setVisitStatus(VisitStatus $status): void;
 
     /**
-     * narrow the return types of the methods in NodeSearchableInterface
+     * narrow the return types of the methods in NodeSearchableInterface. I think
+     * this is perhaps a bug in phpstan.  The current() method in the
+     * parent interface returns NodeType and when we extend the interface,
+     * the code should infer that NodeType is now specified as NodeType of
+     * NodeVisitableInterface.......
      */
+
     /**
      * current
      * @return NodeType
