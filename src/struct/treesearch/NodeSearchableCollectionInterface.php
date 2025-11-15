@@ -8,7 +8,6 @@ use Iterator;
 /**
  * @template NodeIdType of array-key
  * @template NodeType of NodeSearchableInterface
- * @template CollectionType of NodeSearchableCollectionInterface
  * @extends Iterator<NodeIdType, NodeType>
  */
 interface NodeSearchableCollectionInterface extends Iterator, Countable
@@ -33,13 +32,13 @@ interface NodeSearchableCollectionInterface extends Iterator, Countable
     /**
      * filter
      * @param callable $callback
-     * @return CollectionType
+     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
      */
     public function filter(callable $callback): NodeSearchableCollectionInterface;
 
     /**
      * getChildren
-     * @return CollectionType
+     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
      * returns all the children of all the nodes at this level
      */
     public function getChildren(): NodeSearchableCollectionInterface;
