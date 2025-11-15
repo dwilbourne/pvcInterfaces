@@ -2,8 +2,8 @@
 
 namespace pvc\interfaces\struct\id;
 
-enum IdType
+enum IdType: string
 {
-    case Integer;
-    case String;
+    case Integer = 'integer';
+    case String = 'string';
 }
