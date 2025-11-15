@@ -15,6 +15,13 @@ interface NodeSearchableCollectionInterface extends Iterator, Countable
     public function initialize(): void;
 
     /**
+     * current
+     * @return NodeType
+     * Iterator returns mixed so we need to type hint the return value here
+     */
+    public function current(): NodeSearchableInterface;
+
+    /**
      * add
      * @param  NodeType  $nodeSearchable
      *
