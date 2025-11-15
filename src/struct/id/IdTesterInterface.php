@@ -6,5 +6,5 @@ namespace pvc\interfaces\struct\id;
 
 interface IdTesterInterface
 {
-    public function testIdType(IdType $idType) : bool;
+    public function testIdType($id) : bool;
 }
