@@ -63,9 +63,9 @@ interface TreenodeInterface
 
     /**
      * getNodeId
-     * @return mixed
+     * @return NodeIdType|null
      */
-    public function getNodeId();
+    public function getNodeId(): int|string|null;
 
     /**
      * There is no setNodeId method, nodes are hydrated such that all
@@ -75,7 +75,13 @@ interface TreenodeInterface
     /**
      * @return NodeType|null
      */
-    public function getParent();
+    public function getParent(): ?TreenodeInterface;
+
+    /**
+     * getParentId
+     * @return NodeIdType|null
+     */
+    public function getParentId(): int|string|null;
 
     /**
      * @param NodeIdType|null $parentId
