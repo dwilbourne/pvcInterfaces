@@ -64,10 +64,4 @@ interface NodeVisitableInterface extends NodeSearchableInterface
      * @return NodeVisitableCollectionInterface<NodeIdType, NodeType>
      */
     public function getChildren(): NodeVisitableCollectionInterface;
-
-    /**
-     * getNextVisitableChild
-     * @return NodeType|null
-     */
-    public function getNextVisitableChild(): ?NodeVisitableInterface;
 }

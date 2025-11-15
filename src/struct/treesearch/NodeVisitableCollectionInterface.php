@@ -9,5 +9,9 @@ namespace pvc\interfaces\struct\treesearch;
  */
 interface NodeVisitableCollectionInterface extends NodeSearchableCollectionInterface
 {
-
+    /**
+     * getNthChild
+     * @return NodeType|null
+     */
+    public function getFirstChild(): ?NodeSearchableInterface;
 }

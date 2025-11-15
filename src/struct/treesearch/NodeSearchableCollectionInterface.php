@@ -44,13 +44,6 @@ interface NodeSearchableCollectionInterface extends Iterator, Countable
     public function getChildren(): NodeSearchableCollectionInterface;
 
     /**
-     * getNthChild
-     * @param non-negative-int $n
-     * @return NodeType|null
-     */
-    public function getNth(int $n): ?NodeSearchableInterface;
-
-    /**
      * __toArray
      * @return array<NodeIdType, NodeType>
      */
