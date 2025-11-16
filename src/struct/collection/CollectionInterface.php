@@ -10,6 +10,7 @@ namespace pvc\interfaces\struct\collection;
 
 use Countable;
 use Iterator;
+use pvc\interfaces\struct\id\IdTypeInterface;
 use pvc\interfaces\validator\ValTesterInterface;
 
 /**
@@ -28,7 +29,7 @@ use pvc\interfaces\validator\ValTesterInterface;
  * @template ElementType
  * @extends Iterator<ElementType>
  */
-interface CollectionInterface extends Iterator, Countable
+interface CollectionInterface extends Iterator, Countable, IdTypeInterface
 {
     /**
      * @param ?callable $comparator
