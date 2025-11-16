@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\struct\id;
+namespace pvc\interfaces\struct\types\id;
 
 interface IdTesterInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace pvc\interfaces\struct\id;
+namespace pvc\interfaces\struct\types\id;
 
 enum IdType: string
 {
