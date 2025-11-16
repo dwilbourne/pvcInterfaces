@@ -11,7 +11,7 @@ namespace pvc\interfaces\struct\collection;
 use Countable;
 use Iterator;
 use pvc\interfaces\struct\types\id\IdTypeInterface;
-use pvc\interfaces\validator\ValTesterInterface;
+use pvc\interfaces\struct\types\value\ValTesterInterface;
 
 /**
  * Class CollectionInterface.
