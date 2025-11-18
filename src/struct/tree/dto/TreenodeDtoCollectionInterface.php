@@ -21,9 +21,9 @@ interface TreenodeDtoCollectionInterface extends Iterator
 
     /**
      * getRoot
-     * @return TreenodeDtoInterface<NodeIdType, TreeIdType>
+     * @return ?TreenodeDtoInterface<NodeIdType, TreeIdType>
      */
-    public function getRoot(): TreenodeDtoInterface;
+    public function getRoot(): ?TreenodeDtoInterface;
 
     /**
      * getDto
