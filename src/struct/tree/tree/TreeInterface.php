@@ -50,6 +50,13 @@ interface TreeInterface
     public function initialize($treeId): void;
 
     /**
+     * makeNode
+     * @return NodeType
+     * returns a new node that has this tree as its tree reference
+     */
+    public function makeNode(): TreenodeInterface;
+
+    /**
      * addNode puts a node into the tree's list of nodes.
      * @param NodeType $node
      */
