@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\dto;
 
+use Countable;
 use Iterator;
 
 /**
@@ -11,7 +12,7 @@ use Iterator;
  * @template TreeIdType of array-key
  * @extends Iterator<NodeIdType, TreenodeDtoInterface>
  */
-interface TreenodeDtoCollectionInterface extends Iterator
+interface TreenodeDtoCollectionInterface extends Iterator, Countable
 {
     /**
      * isEmpty
