@@ -48,15 +48,6 @@ interface TreenodeCollectionInterface extends Iterator
     public function delete($nodeId): void;
 
     /**
-     * filter
-     * @param callable $callback
-     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
-     *
-     * returns a collection filtered via the callback
-     */
-    public function filter(callable $callback): TreenodeCollectionInterface;
-
-    /**
      * getChildren
      * @return TreenodeCollectionInterface<NodeIdType, NodeType>
      */
