@@ -23,11 +23,12 @@ interface NodeSearchableCollectionInterface extends Iterator, Countable
 
     /**
      * add
+     * @param NodeIdType $key
      * @param  NodeType  $nodeSearchable
      *
      * @return void
      */
-    public function add(NodeSearchableInterface $nodeSearchable): void;
+    public function add($key, NodeSearchableInterface $nodeSearchable): void;
 
     /**
      * filter
