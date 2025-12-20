@@ -30,4 +30,30 @@ interface SearchInterface extends Iterator
      * @return CollectionType
      */
     public function getNodes(): NodeSearchableCollectionInterface;
+
+    /**
+     * setMaxLevels - controls how deep in the tree the search will go
+     * @param  non-negative-int  $maxLevels
+     *
+     * @return void
+     */
+    public function setMaxLevels(int $maxLevels): void;
+
+    /**
+     * getMaxLevels
+     * @return non-negative-int
+     */
+    public function getMaxLevels(): int;
+
+    /**
+     * atMaxLevels
+     * @return bool
+     */
+    public function atMaxLevels(): bool;
+
+    /**
+     * getCurrentLevel
+     * @return non-negative-int
+     */
+    public function getCurrentLevel(): int;
 }
