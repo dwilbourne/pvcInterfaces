@@ -25,6 +25,12 @@ interface SearchInterface extends Iterator
     public function initialize(mixed $startNode = null): void;
 
     /**
+     * isInitialized
+     * @return bool
+     */
+    public function isInitialized(): bool;
+
+    /**
      * getNodes
      * gets all the nodes at once
      * @return CollectionType
