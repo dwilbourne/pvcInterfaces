@@ -19,10 +19,10 @@ use Iterator;
 interface SearchInterface extends Iterator
 {
     /**
-     * setStartNode
-     * @param NodeType $startNode
+     * initialize
+     * @param NodeType|null $startNode
      */
-    public function setStartNode(mixed $startNode): void;
+    public function initialize(mixed $startNode = null): void;
 
     /**
      * getNodes
