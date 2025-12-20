@@ -63,9 +63,9 @@ interface TreenodeInterface
 
     /**
      * getNodeId
-     * @return NodeIdType|null
+     * @return NodeIdType
      */
-    public function getNodeId(): int|string|null;
+    public function getNodeId(): int|string;
 
     /**
      * There is no setNodeId method, nodes are hydrated such that all
