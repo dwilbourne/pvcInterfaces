@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace pvc\interfaces\struct\tree\tree;
 
 use pvc\interfaces\struct\tree\dto\TreenodeDtoCollectionInterface;
+use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\node\TreenodeCollectionInterface;
 use pvc\interfaces\struct\tree\node\TreenodeInterface;
 
@@ -102,4 +103,12 @@ interface TreeInterface
      * @return   NodeType|null
      */
     public function getRoot();
+
+    /**
+     * rootTest
+     * @param  NodeType |TreenodeDtoInterface<NodeIdType, TreeIdType>  $node
+     *
+     * @return bool
+     */
+    public static function rootTest(TreenodeInterface|TreenodeDtoInterface $node): bool;
 }
