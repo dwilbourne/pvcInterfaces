@@ -49,4 +49,10 @@ interface TreenodeDtoCollectionInterface extends Iterator, Countable
      * @return void
      */
     public function add(int|string $nodeId, TreenodeDtoInterface $dto): void;
+
+    /**
+     * getElements
+     * @return array<non-negative-int, TreenodeDtoInterface>
+     */
+    public function getElements(): array;
 }
