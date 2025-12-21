@@ -2,6 +2,7 @@
 
 namespace pvc\interfaces\struct\tree\node;
 
+use Countable;
 use Iterator;
 
 /**
@@ -9,7 +10,7 @@ use Iterator;
  * @template NodeType of TreenodeInterface
  * @extends Iterator<NodeIdType, NodeType>
  */
-interface TreenodeCollectionInterface extends Iterator
+interface TreenodeCollectionInterface extends Iterator, Countable
 {
     /**
      * isEmpty
