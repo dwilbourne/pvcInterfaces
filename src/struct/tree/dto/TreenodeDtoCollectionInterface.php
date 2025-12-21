@@ -52,9 +52,10 @@ interface TreenodeDtoCollectionInterface extends Iterator, Countable
 
     /**
      * add
+     * @param NodeIdType $nodeId
      * @param  TreenodeDtoInterface<NodeIdType, TreeIdType>  $dto
      *
      * @return void
      */
-    public function add(TreenodeDtoInterface $dto): void;
+    public function add(int|string $nodeId, TreenodeDtoInterface $dto): void;
 }
