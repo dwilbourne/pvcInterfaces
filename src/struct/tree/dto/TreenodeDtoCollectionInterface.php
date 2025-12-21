@@ -35,15 +35,6 @@ interface TreenodeDtoCollectionInterface extends Iterator, Countable
     public function getDto($nodeId): TreenodeDtoInterface;
 
     /**
-     * filter
-     * @param  callable $callback
-     *
-     * @return TreenodeDtoCollectionInterface<NodeIdType, TreeIdType>
-     */
-
-    public function filter(callable $callback): TreenodeDtoCollectionInterface;
-
-    /**
      * getChildKeysOf
      * @param TreenodeDtoInterface<NodeIdType, TreeIdType> $dto
      * @return array<NodeIdType>
