@@ -70,7 +70,7 @@ interface CollectionInterface extends Iterator, Countable, IdTypeInterface
      * @function findElementKey returns the key of the first element in the collection where the ValTester
      * argument returns true when applied to the element.  Returns null if the element is not found in the collection.
      *
-     * @param ValTesterInterface<ElementType> $valTester
+     * @param ValTesterInterface $valTester
      * @return TKey|null
      */
     public function findElementKey(ValTesterInterface $valTester): mixed;
@@ -88,7 +88,7 @@ interface CollectionInterface extends Iterator, Countable, IdTypeInterface
      * argument returns true when applied to the element. Returns an empty array when no element in the
      * collection passes the test.
      *
-     * @param ValTesterInterface<ElementType> $valTester
+     * @param ValTesterInterface $valTester
      * @return array<TKey>
      */
     public function findElementKeys(ValTesterInterface $valTester): array;

@@ -73,11 +73,11 @@ interface TreeInterface
 
     /**
      * hydrate
-     * @param  TreenodeDtoCollectionInterface<NodeIdType, TreeIdType>  $dtoCollection
+     * @param  array<NodeIdType, TreenodeDtoInterface<NodeIdType, TreeIdType>>  $dtoArray
      *
      * @return void
      */
-    public function hydrate(TreenodeDtoCollectionInterface $dtoCollection): void;
+    public function hydrate(array $dtoArray): void;
 
     /**
      * dehydrate
