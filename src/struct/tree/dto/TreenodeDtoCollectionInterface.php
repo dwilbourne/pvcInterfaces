@@ -15,6 +15,12 @@ use Iterator;
 interface TreenodeDtoCollectionInterface extends Iterator, Countable
 {
     /**
+     * initialize
+     * @return void
+     */
+    public function initialize(): void;
+
+    /**
      * isEmpty
      * @return bool
      */
