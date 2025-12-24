@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\tree\dto;
 
+use ArrayIterator;
 use Countable;
 use Iterator;
 
@@ -16,9 +17,10 @@ interface TreenodeDtoCollectionInterface extends Iterator, Countable
 {
     /**
      * initialize
+     * @param  ArrayIterator<NodeIdType, TreeIdType>|null  $iterator
      * @return void
      */
-    public function initialize(): void;
+    public function initialize(?ArrayIterator $iterator = null): void;
 
     /**
      * isEmpty
@@ -58,7 +60,7 @@ interface TreenodeDtoCollectionInterface extends Iterator, Countable
 
     /**
      * getElements
-     * @return array<non-negative-int, TreenodeDtoInterface>
+     * @return array<non-negative-int, TreenodeDtoInterface<NodeIdType, TreeIdType>>
      */
     public function getElements(): array;
 }

@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\collection;
 
+use ArrayIterator;
 use Countable;
 use Iterator;
 use pvc\interfaces\struct\types\id\IdTypeInterface;
@@ -25,7 +26,7 @@ use pvc\interfaces\struct\types\value\ValTesterInterface;
  * unordered collection also has non-negative integer keys, but the keys mean nothing in terms of creating any sort
  * of ordination among the elements.
  *
- * @template TKey
+ * @template TKey of array-key
  * @template ElementType
  * @extends Iterator<ElementType>
  */
@@ -39,10 +40,12 @@ interface CollectionInterface extends Iterator, Countable, IdTypeInterface
     public function setComparator($comparator): void;
 
     /**
-     * initialize - empties the collection
+     * initialize
+     * @param  ArrayIterator<TKey, ElementType>|null  $iterator
+     *
      * @return void
      */
-    public function initialize(): void;
+    public function initialize(?ArrayIterator $iterator = null): void;
 
     /**
      * @function isEmpty
@@ -55,7 +58,7 @@ interface CollectionInterface extends Iterator, Countable, IdTypeInterface
      * of are legitimate types of elements, the implementing code will throw an exception if the key does not
      * exist.  There is no sensible return value that indicates the operation failed.
      *
-     * @param array-key $key
+     * @param TKey $key
      * @return ElementType
      */
     public function getElement($key): mixed;

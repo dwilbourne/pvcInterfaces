@@ -3,7 +3,7 @@
 namespace pvc\interfaces\struct\collection;
 
 /**
- * @template TKey
+ * @template TKey of array-key
  * @template ElementType of IndexedElementInterface
  * @extends CollectionInterface<TKey, ElementType>
  */
