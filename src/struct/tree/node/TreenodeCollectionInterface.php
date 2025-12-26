@@ -61,4 +61,6 @@ interface TreenodeCollectionInterface extends Iterator, Countable
      * @return TreenodeCollectionInterface<NodeIdType, NodeType>
      */
     public function getChildren(): TreenodeCollectionInterface;
+
+    public function makeNewInstance(): TreenodeCollectionInterface;
 }

@@ -63,4 +63,6 @@ interface TreenodeDtoCollectionInterface extends Iterator, Countable
      * @return array<non-negative-int, TreenodeDtoInterface<NodeIdType, TreeIdType>>
      */
     public function getElements(): array;
+
+    public function makeNewInstance(): TreenodeDtoCollectionInterface;
 }
