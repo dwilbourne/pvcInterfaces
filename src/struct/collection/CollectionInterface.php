@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\struct\collection;
 
-use ArrayIterator;
 use Countable;
 use Iterator;
 use pvc\interfaces\struct\types\id\IdTypeInterface;
@@ -41,11 +40,12 @@ interface CollectionInterface extends Iterator, Countable, IdTypeInterface
 
     /**
      * initialize
-     * @param  ArrayIterator<TKey, ElementType>|null  $iterator
+     *
+     * @param  array<TKey, ElementType>|null  $array
      *
      * @return void
      */
-    public function initialize(?ArrayIterator $iterator = null): void;
+    public function initialize(?array $array = []): void;
 
     /**
      * @function isEmpty

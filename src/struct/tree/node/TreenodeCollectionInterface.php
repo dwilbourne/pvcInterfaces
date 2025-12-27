@@ -2,7 +2,6 @@
 
 namespace pvc\interfaces\struct\tree\node;
 
-use ArrayIterator;
 use Countable;
 use Iterator;
 
@@ -15,10 +14,12 @@ interface TreenodeCollectionInterface extends Iterator, Countable
 {
     /**
      * initialize
-     * @param  ArrayIterator<NodeIdType, NodeType>|null  $iterator
+     *
+     * @param  array<NodeIdType, NodeType>|null  $array
+     *
      * @return void
      */
-    public function initialize(?ArrayIterator $iterator = null): void;
+    public function initialize(?array $array = []): void;
 
     /**
      * isEmpty
@@ -62,5 +63,9 @@ interface TreenodeCollectionInterface extends Iterator, Countable
      */
     public function getChildren(): TreenodeCollectionInterface;
 
+    /**
+     * makeNewInstance
+     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
+     */
     public function makeNewInstance(): TreenodeCollectionInterface;
 }
