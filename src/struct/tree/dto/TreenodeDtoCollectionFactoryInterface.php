@@ -10,7 +10,8 @@ interface TreenodeDtoCollectionFactoryInterface
 {
     /**
      * makeTreenodeDtoCollection
+     * @param ?array<NodeIdType, TreenodeDtoInterface<NodeIdType, TreeidType>> $treenodeDtoArray
      * @return TreenodeDtoCollectionInterface<NodeIdType, TreeidType>
      */
-    public function makeTreenodeDtoCollection() : TreenodeDtoCollectionInterface;
+    public function makeTreenodeDtoCollection(?array $treenodeDtoArray = []) : TreenodeDtoCollectionInterface;
 }
