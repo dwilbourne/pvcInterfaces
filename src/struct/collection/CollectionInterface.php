@@ -39,15 +39,6 @@ interface CollectionInterface extends Iterator, Countable, IdTypeInterface
     public function setComparator($comparator): void;
 
     /**
-     * initialize
-     *
-     * @param  array<TKey, ElementType>|null  $array
-     *
-     * @return void
-     */
-    public function initialize(?array $array = []): void;
-
-    /**
      * @function isEmpty
      * @return bool
      */
