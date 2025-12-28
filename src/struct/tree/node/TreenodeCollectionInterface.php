@@ -56,16 +56,4 @@ interface TreenodeCollectionInterface extends Iterator, Countable
      * @return void
      */
     public function delete($nodeId): void;
-
-    /**
-     * getChildren
-     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
-     */
-    public function getChildren(): TreenodeCollectionInterface;
-
-    /**
-     * makeNewInstance
-     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
-     */
-    public function makeNewInstance(): TreenodeCollectionInterface;
 }
