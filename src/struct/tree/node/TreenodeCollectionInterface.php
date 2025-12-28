@@ -12,14 +12,6 @@ use Iterator;
  */
 interface TreenodeCollectionInterface extends Iterator, Countable
 {
-    /**
-     * initialize
-     *
-     * @param  array<NodeIdType, NodeType>|null  $array
-     *
-     * @return void
-     */
-    public function initialize(?array $array = []): void;
 
     /**
      * isEmpty
