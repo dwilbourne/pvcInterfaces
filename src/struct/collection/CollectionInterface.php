@@ -1,9 +1,5 @@
 <?php
 
-/**
- * @author: Doug Wilbourne (dougwilbourne@gmail.com)
- */
-
 declare(strict_types=1);
 
 namespace pvc\interfaces\struct\collection;
@@ -17,7 +13,7 @@ use pvc\interfaces\struct\types\value\ValTesterInterface;
  * Class CollectionInterface.
  *
  * These interfaces (and their implementations) are written using phpstan generics.  If you use these data
- * structures, you should consider using phpstan as part of testing your code in order to ensure tpe safety.
+ * structures, you should consider using phpstan as part of testing your code in order to ensure type safety.
  *
  * In the PHP documentation, you will see that there is an array function called array_is_list,
  * where a list is defined as an array with non-negative integer keys that start at 0 and increase in increments of 1
