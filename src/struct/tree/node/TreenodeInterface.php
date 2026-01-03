@@ -76,7 +76,7 @@ interface TreenodeInterface
     /**
      * @return NodeType|null
      */
-    public function getParent(): ?TreenodeInterface;
+    public function getParent();
 
     /**
      * getParentId
