@@ -43,7 +43,7 @@ interface NodeVisitableInterface extends NodeSearchableInterface
      * getParent
      * @return NodeType|null
      */
-    public function getParent(): ?NodeVisitableInterface;
+    public function getParent();
 
     /**
      * getChildren
