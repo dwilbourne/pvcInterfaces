@@ -38,16 +38,4 @@ interface NodeVisitableInterface extends NodeSearchableInterface
      * @param VisitStatus $status
      */
     public function setVisitStatus(VisitStatus $status): void;
-
-    /**
-     * getParent
-     * @return NodeType|null
-     */
-    public function getParent();
-
-    /**
-     * getChildren
-     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
-     */
-    public function getChildren();
 }

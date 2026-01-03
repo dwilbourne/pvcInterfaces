@@ -13,7 +13,6 @@ use Iterator;
 /**
  * @template NodeIdType of array-key
  * @template NodeType of NodeSearchableInterface
- * @template CollectionType of NodeSearchableCollectionInterface
  * @extends Iterator<NodeIdType, NodeType>
  */
 interface SearchInterface extends Iterator
@@ -33,9 +32,9 @@ interface SearchInterface extends Iterator
     /**
      * getNodes
      * gets all the nodes at once
-     * @return CollectionType
+     * @return array<NodeIdType, NodeType>
      */
-    public function getNodes(): NodeSearchableCollectionInterface;
+    public function getNodes(): array;
 
     /**
      * setMaxLevels - controls how deep in the tree the search will go
