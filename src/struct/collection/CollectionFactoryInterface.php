@@ -12,7 +12,7 @@ namespace pvc\interfaces\struct\collection;
  * Class CollectionFactoryInterface
  * @template TKey
  * @template ElementType
- * @template CollectionType of CollectionInterface
+ * @template CollectionType
  */
 interface CollectionFactoryInterface
 {

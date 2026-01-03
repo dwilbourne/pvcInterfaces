@@ -35,6 +35,6 @@ interface NodeSearchableInterface
      * getChildren
      * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
      */
-    public function getChildren(): NodeSearchableCollectionInterface;
+    public function getChildren();
 
 }
