@@ -34,6 +34,7 @@ interface NodeSearchableInterface
     /**
      * getChildren
      * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
+     * this return type should be compatible with TreenodeInterface::getChildren
      */
     public function getChildren(): NodeSearchableCollectionInterface;
 
