@@ -63,7 +63,7 @@ interface CollectionInterface extends Iterator, Countable, IdTypeInterface
      * @param ValTesterInterface $valTester
      * @return TKey|null
      */
-    public function findElementKey(ValTesterInterface $valTester): mixed;
+    public function findElementKey(ValTesterInterface $valTester);
 
     /**
      * hasKey
