@@ -28,8 +28,9 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  * @template TreeIdType of array-key
  * @template TreeType of TreeInterface
  * @template CollectionType of TreenodeCollectionInterface
+ * @extends TreenodeCoreInterface<NodeIdType, TreeIdType>
  */
-interface TreenodeInterface
+interface TreenodeInterface extends TreenodeCoreInterface
 {
     /**
      * methods necessary to implement the basic rules of creating and using
@@ -62,13 +63,6 @@ interface TreenodeInterface
     public function isInitialized(): bool;
 
     /**
-     * getNodeId
-     * @return NodeIdType
-     * calling getNodeId on an uninitialized node is an error
-     */
-    public function getNodeId(): int|string;
-
-    /**
      * There is no setNodeId method, nodes are hydrated such that all
      * required properties are set simultaneously
      */
@@ -77,12 +71,6 @@ interface TreenodeInterface
      * @return NodeType|null
      */
     public function getParent();
-
-    /**
-     * getParentId
-     * @return NodeIdType|null
-     */
-    public function getParentId(): int|string|null;
 
     /**
      * @param NodeIdType|null $parentId

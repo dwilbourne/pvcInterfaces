@@ -2,17 +2,15 @@
 
 namespace pvc\interfaces\struct\tree\dto;
 
+use pvc\interfaces\struct\tree\node\TreenodeCoreInterface;
+
 /**
  * @template NodeIdType of array-key
  * @template TreeIdType of array-key
+ * @extends TreenodeCoreInterface<NodeIdType, TreeIdType>
  */
-interface TreenodeDtoInterface
+interface TreenodeDtoInterface extends TreenodeCoreInterface
 {
-    /**
-     * @return NodeIdType
-     */
-    public function getNodeId();
-
     /**
      * setNodeId
      * @param NodeIdType $nodeId
@@ -22,22 +20,12 @@ interface TreenodeDtoInterface
     public function setNodeId($nodeId): void;
 
     /**
-     * @return NodeIdType|null
-     */
-    public function getParentId();
-
-    /**
      * setParentId
      * @param NodeIdType|null $parentId
      *
      * @return void
      */
     public function setParentId($parentId = null): void;
-
-    /**
-     * @return TreeIdType|null
-     */
-    public function getTreeId();
 
     /**
      * setTreeId
