@@ -33,8 +33,8 @@ interface NodeSearchableInterface
 
     /**
      * getChildren
-     * @return array<NodeIdType, NodeType>
+     * @return NodeSearchableCollectionInterface<NodeIdType, NodeType>
      */
-    public function getChildren();
+    public function getChildren(): NodeSearchableCollectionInterface;
 
 }
