@@ -24,7 +24,7 @@ interface TreenodeCollectionInterface extends Iterator, Countable
      * @param NodeIdType $nodeId
      * @return NodeType|null
      */
-    public function getNode($nodeId): ?TreenodeInterface;
+    public function getNode($nodeId);
 
     /**
      * toArray
