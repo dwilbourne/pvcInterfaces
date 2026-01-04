@@ -12,6 +12,6 @@ interface HasNodeIdInterface
      * @return NodeIdType
      * calling getNodeId on an uninitialized node is an error
      */
-    public function getNodeId(): int|string;
+    public function getNodeId();
 
 }

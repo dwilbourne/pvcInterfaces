@@ -13,7 +13,7 @@ interface TreenodeCoreInterface extends HasNodeIdInterface
      * getParentId
      * @return NodeIdType|null
      */
-    public function getParentId(): int|string|null;
+    public function getParentId();
 
     /**
      * @return TreeIdType|null
