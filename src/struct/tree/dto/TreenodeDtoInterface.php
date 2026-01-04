@@ -2,7 +2,7 @@
 
 namespace pvc\interfaces\struct\tree\dto;
 
-use pvc\interfaces\struct\tree\node\TreenodeCoreInterface;
+use pvc\interfaces\struct\tree\core\TreenodeCoreInterface;
 
 /**
  * @template NodeIdType of array-key

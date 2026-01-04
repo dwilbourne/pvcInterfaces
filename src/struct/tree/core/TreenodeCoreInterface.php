@@ -1,20 +1,14 @@
 <?php
 
-namespace pvc\interfaces\struct\tree\node;
+namespace pvc\interfaces\struct\tree\core;
 
 /**
  * @template NodeIdType of array-key
  * @template TreeIdType of array-key
+ * @extends HasNodeIdInterface<NodeIdType>
  */
-interface TreenodeCoreInterface
+interface TreenodeCoreInterface extends HasNodeIdInterface
 {
-    /**
-     * getNodeId
-     * @return NodeIdType
-     * calling getNodeId on an uninitialized node is an error
-     */
-    public function getNodeId(): int|string;
-
     /**
      * getParentId
      * @return NodeIdType|null
