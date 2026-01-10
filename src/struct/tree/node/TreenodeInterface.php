@@ -11,6 +11,7 @@ namespace pvc\interfaces\struct\tree\node;
 use pvc\interfaces\struct\tree\core\TreenodeCoreInterface;
 use pvc\interfaces\struct\tree\dto\TreenodeDtoInterface;
 use pvc\interfaces\struct\tree\tree\TreeInterface;
+use pvc\interfaces\struct\treesearch\NodeSearchableInterface;
 
 /**
  * Interface TreenodeInterface defines the basic operations for a generic tree node.
@@ -30,8 +31,9 @@ use pvc\interfaces\struct\tree\tree\TreeInterface;
  * @template TreeType of TreeInterface
  * @template CollectionType of TreenodeCollectionInterface
  * @extends TreenodeCoreInterface<NodeIdType, TreeIdType>
+ * @extends NodeSearchableInterface<NodeIdType, NodeType>
  */
-interface TreenodeInterface extends TreenodeCoreInterface
+interface TreenodeInterface extends TreenodeCoreInterface, NodeSearchableInterface
 {
     /**
      * methods necessary to implement the basic rules of creating and using
@@ -67,11 +69,6 @@ interface TreenodeInterface extends TreenodeCoreInterface
      * There is no setNodeId method, nodes are hydrated such that all
      * required properties are set simultaneously
      */
-
-    /**
-     * @return NodeType|null
-     */
-    public function getParent();
 
     /**
      * @param NodeIdType|null $parentId
@@ -142,12 +139,6 @@ interface TreenodeInterface extends TreenodeCoreInterface
      * @return NodeType|null
      */
     public function getChild($nodeId);
-
-    /**
-     * @function getChildren
-     * @return CollectionType
-     */
-    public function getChildren();
 
     /**
      * @return CollectionType
