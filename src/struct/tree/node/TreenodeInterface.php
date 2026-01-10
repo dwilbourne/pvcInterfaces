@@ -79,6 +79,17 @@ interface TreenodeInterface extends TreenodeCoreInterface, NodeSearchableInterfa
     public function setParent($parentId): void;
 
     /**
+     * getChildren
+     *
+     * override the base class because the return type here is broader than the
+     * return type in the base class, and you will get a liskov problem
+     *
+     * @return TreenodeCollectionInterface<NodeIdType, NodeType>
+     */
+    public function getChildren();
+
+
+    /**
      * Implementations of this interface might choose to keep a reference to
      * the containing tree in order to perform certain operations more
      * efficiently.  But there is nothing in the logic of these methods that
