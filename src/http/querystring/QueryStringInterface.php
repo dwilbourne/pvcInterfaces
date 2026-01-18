@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\http\querystring;
 
-use pvc\interfaces\frmtr\array\FrmtrArrayInterface;
-
 /**
  * Class QueryStringInterface
  *
@@ -34,7 +32,7 @@ interface QueryStringInterface
 
     /**
      * setParams
-     * @param array<string, mixed> $params
+     * @param array<QueryStringParamInterface> $params
      */
     public function setParams(array $params): void;
 
@@ -47,26 +45,9 @@ interface QueryStringInterface
 
     /**
      * getParams
-     * @return array<string, mixed>
+     * @return array<int, QueryStringParamInterface>
      */
     public function getParams(): array;
-
-    /**
-     * addArrayTransformer
-     * @param  ArrayTransformerInterface  $transformer
-     * @return void
-     * adds a transformer.  Transformers are sequentially applied to the
-     * parameters before destructuring the array.
-     */
-    public function addArrayTransformer(ArrayTransformerInterface $transformer): void;
-
-    /**
-     * setArrayFrmtr
-     * @param  FrmtrArrayInterface  $arrayFrmtr
-     * there are several ways that arrays can be destructured into a string
-     * @return void
-     */
-    public function setArrayFrmtr(FrmtrArrayInterface $arrayFrmtr): void;
 
     /**
      * parse

@@ -82,7 +82,7 @@ interface TreenodeInterface extends TreenodeCoreInterface, NodeSearchableInterfa
      * getChildren
      *
      * override the base class because the return type here is broader than the
-     * return type in the base class, and you will get a liskov problem
+     * return type in the base class
      *
      * @return TreenodeCollectionInterface<NodeIdType, NodeType>
      */
