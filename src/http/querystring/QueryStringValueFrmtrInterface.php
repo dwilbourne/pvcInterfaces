@@ -11,5 +11,5 @@ interface QueryStringValueFrmtrInterface
      * @return string
      * leave the value untyped, not mixed
      */
-    public function format($value): string;
+    public function format(mixed $value): string;
 }
