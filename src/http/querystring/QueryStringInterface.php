@@ -41,7 +41,7 @@ interface QueryStringInterface
      * @param string $paramName
      * @param mixed $paramValue
      */
-    public function setParam(string $paramName, $paramValue): void;
+    public function setParam(string $paramName, mixed $paramValue): void;
 
     /**
      * getParams
