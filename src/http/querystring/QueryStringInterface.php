@@ -50,6 +50,14 @@ interface QueryStringInterface
     public function getParams(): array;
 
     /**
+     * deleteParam
+     * @param  string  $paramName
+     *
+     * @return void
+     */
+    public function deleteParam(string $paramName): void;
+
+    /**
      * parse
      * @param  string  $queryString
      * @return void
