@@ -16,7 +16,7 @@ namespace pvc\interfaces\msg;
  * parameters, which will be inserted into the message template.  Msg objects are locale-agnostic - it is the
  * FrmtrMsg class which is locale-aware and is responsible for rendering the message for a particular locale.
  *
- * @phpstan-type MsgContent array{'msgid': string, 'parameters': array<mixed>}
+ * @phpstan-type MsgContent array{'msgId': string, 'parameters': array<mixed>}
  */
 interface MsgInterface
 {
