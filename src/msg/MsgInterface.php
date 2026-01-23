@@ -15,6 +15,8 @@ namespace pvc\interfaces\msg;
  * contains a message id which is used to get a particular message from the domain catalog.  And it contains
  * parameters, which will be inserted into the message template.  Msg objects are locale-agnostic - it is the
  * FrmtrMsg class which is locale-aware and is responsible for rendering the message for a particular locale.
+ *
+ * @phpstan-type MsgContent array{'msgid': string, 'parameters': array<mixed>}
  */
 interface MsgInterface
 {
@@ -46,10 +48,9 @@ interface MsgInterface
     /**
      * setContent
      * @param string $domain
-     * @param string $msgId
-     * @param array<mixed> $parameters
+     * @param MsgContent $msgContent
      */
-    public function setContent(string $domain, string $msgId, array $parameters): void;
+    public function setContent(string $domain, array $msgContent): void;
 
     /**
      * contentIsSet
