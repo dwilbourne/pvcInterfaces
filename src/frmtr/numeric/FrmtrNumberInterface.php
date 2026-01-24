@@ -1,9 +1,5 @@
 <?php
 
-/**
- * @author: Doug Wilbourne (dougwilbourne@gmail.com)
- */
-
 declare(strict_types=1);
 
 namespace pvc\interfaces\frmtr\numeric;
@@ -11,15 +7,16 @@ namespace pvc\interfaces\frmtr\numeric;
 use pvc\interfaces\frmtr\FrmtrInterface;
 
 /**
- * Interface FrmtrFloatInterface
- * @extends FrmtrInterface<float>
+ * @extends FrmtrInterface<int|float>
+ * numeric formatters (ints, floats, currency) can all take either ints or floats as arguments
  */
-interface FrmtrFloatInterface extends FrmtrInterface
+interface FrmtrNumberInterface extends FrmtrInterface
 {
     /**
      * format
-     * @param float $value
+     * @param int|float $value
      * @return string
      */
     public function format($value): string;
+
 }
