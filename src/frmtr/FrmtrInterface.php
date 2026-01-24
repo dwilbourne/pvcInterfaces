@@ -13,8 +13,9 @@ use pvc\interfaces\intl\LocaleInterface;
 /**
  * Interface FrmtrInterface
  * @template DataType
+ * @extends FrmtrSysInterface<DataType>
  */
-interface FrmtrInterface
+interface FrmtrInterface extends FrmtrSysInterface
 {
     /**
      * setLocale
@@ -28,10 +29,4 @@ interface FrmtrInterface
      */
     public function getLocale(): LocaleInterface;
 
-    /**
-     * format
-     * @param DataType $value
-     * @return string
-     */
-    public function format($value): string;
 }
