@@ -7,7 +7,8 @@ namespace pvc\interfaces\frmtr;
  * @template DataType
  *
  * no locale for the base formatter.  It is here so that we can write formatters
- * for internal (system) data.  Used, for example, in writing cookies and querystrings
+ * for internal (system) data.  Used, for example, in writing cookies and querystrings,
+ * turning basic data types into strings.
  */
 
 interface FrmtrSysInterface
