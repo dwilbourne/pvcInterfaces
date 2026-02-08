@@ -8,14 +8,14 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\frmtr;
 
+use pvc\interfaces\html\attribute\DataType;
 use pvc\interfaces\intl\LocaleInterface;
 
 /**
  * Interface FrmtrInterface
  * @template DataType
- * @extends FrmtrSysInterface<DataType>
  */
-interface FrmtrInterface extends FrmtrSysInterface
+interface FrmtrInterface
 {
     /**
      * setLocale
@@ -29,4 +29,10 @@ interface FrmtrInterface extends FrmtrSysInterface
      */
     public function getLocale(): LocaleInterface;
 
+    /**
+     * format
+     * @param DataType $value
+     * @return string
+     */
+    public function format($value): string;
 }

@@ -10,6 +10,7 @@ interface FrmtrArrayInterface
     /**
      * format
      *
+     * @param string $varName
      * @param array<mixed>  $value
      *
      * @return string
