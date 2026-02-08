@@ -49,7 +49,7 @@ interface MsgInterface
      * @param string $msgId
      * @param array<mixed> $parameters
      */
-    public function setContent(string $domain, string $msgId, array $parameters): void;
+    public function setContent(string $domain, string $msgId, array $parameters  = []): void;
 
     /**
      * contentIsSet
