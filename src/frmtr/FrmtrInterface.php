@@ -21,12 +21,6 @@ interface FrmtrInterface
     public function setLocale(LocaleInterface $locale): void;
 
     /**
-     * getLocale
-     * @return LocaleInterface
-     */
-    public function getLocale(): LocaleInterface;
-
-    /**
      * format
      * @param mixed $value
      * @return string
