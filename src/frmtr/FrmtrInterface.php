@@ -1,19 +1,16 @@
 <?php
 
-/**
- * @author: Doug Wilbourne (dougwilbourne@gmail.com)
- */
-
-declare(strict_types=1);
-
 namespace pvc\interfaces\frmtr;
 
-use pvc\interfaces\html\attribute\DataType;
 use pvc\interfaces\intl\LocaleInterface;
 
 /**
- * Interface FrmtrInterface
- * @template DataType
+ * interface common to all formatters: a formatter turns something into a string.
+ * This parent interface is not generic and implementing this interface means
+ * the code must be prepared to handle formatting a value of an arbitrary type.
+ * But FrmtrGenericInterface inherits this interface and is generic, so that
+ * formatters designed to handle individual data types can rely on the generic
+ * to guarantee the data type of the value being formatted.
  */
 interface FrmtrInterface
 {
@@ -31,8 +28,9 @@ interface FrmtrInterface
 
     /**
      * format
-     * @param DataType $value
+     * @param mixed $value
      * @return string
      */
     public function format($value): string;
+
 }

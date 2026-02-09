@@ -8,13 +8,14 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\frmtr\text;
 
-use pvc\interfaces\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrGenericInterface;
 
 /**
  * Interface FrmtrTextInterface
- * @extends FrmtrInterface<string>
+ *
+ * @extends FrmtrGenericInterface<string>
  */
-interface FrmtrTextInterface extends FrmtrInterface
+interface FrmtrTextGenericInterface extends FrmtrGenericInterface
 {
     /**
      * format

@@ -8,13 +8,14 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\frmtr\bool;
 
-use pvc\interfaces\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrGenericInterface;
 
 /**
  * Interface FrmtrBooleanInterface
- * @extends FrmtrInterface<bool>
+ *
+ * @extends FrmtrGenericInterface<bool>
  */
-interface FrmtrBooleanInterface extends FrmtrInterface
+interface FrmtrBooleanGenericInterface extends FrmtrGenericInterface
 {
     /**
      * format

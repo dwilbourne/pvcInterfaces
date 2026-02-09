@@ -8,14 +8,15 @@ declare(strict_types=1);
 
 namespace pvc\interfaces\frmtr\msg;
 
-use pvc\interfaces\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrGenericInterface;
 use pvc\interfaces\msg\MsgInterface;
 
 /**
  * Interface FrmtrMsgInterface
- * @extends FrmtrInterface<MsgInterface>
+ *
+ * @extends FrmtrGenericInterface<MsgInterface>
  */
-interface FrmtrMsgInterface extends FrmtrInterface
+interface FrmtrMsgGenericInterface extends FrmtrGenericInterface
 {
     /**
      * format

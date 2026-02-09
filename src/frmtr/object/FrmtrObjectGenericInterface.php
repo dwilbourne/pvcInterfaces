@@ -2,12 +2,12 @@
 
 namespace pvc\interfaces\frmtr\object;
 
-use pvc\interfaces\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrGenericInterface;
 
 /**
- * @extends FrmtrInterface<object>
+ * @extends FrmtrGenericInterface<object>
  */
-interface FrmtrObjectInterface extends FrmtrInterface
+interface FrmtrObjectGenericInterface extends FrmtrGenericInterface
 {
     /**
      * format

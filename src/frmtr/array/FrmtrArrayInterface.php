@@ -2,17 +2,16 @@
 
 namespace pvc\interfaces\frmtr\array;
 
+use pvc\interfaces\frmtr\FrmtrInterface;
+
 /**
  * converts an array to a string
  */
-interface FrmtrArrayInterface
+interface FrmtrArrayInterface extends FrmtrInterface
 {
     /**
      * format
-     *
-     * @param string $varName
      * @param array<mixed>  $value
-     *
      * @return string
      * flattens (destructures) an array into a string.
      */

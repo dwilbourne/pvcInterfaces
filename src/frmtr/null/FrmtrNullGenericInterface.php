@@ -2,12 +2,12 @@
 
 namespace pvc\interfaces\frmtr\null;
 
-use pvc\interfaces\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrGenericInterface;
 
 /**
- * @extends FrmtrInterface<null>
+ * @extends FrmtrGenericInterface<null>
  */
-interface FrmtrNullInterface extends FrmtrInterface
+interface FrmtrNullGenericInterface extends FrmtrGenericInterface
 {
     /**
      * format

@@ -2,13 +2,13 @@
 
 namespace pvc\interfaces\frmtr\html;
 
-use pvc\interfaces\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrGenericInterface;
 use pvc\interfaces\html\dom\DomNodeInterface;
 
 /**
- * @extends FrmtrInterface<DomNodeInterface>
+ * @extends FrmtrGenericInterface<DomNodeInterface>
  */
-interface FrmtrHtmlInterface extends FrmtrInterface
+interface FrmtrHtmlGenericInterface extends FrmtrGenericInterface
 {
     /**
      * format
