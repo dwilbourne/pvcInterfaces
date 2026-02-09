@@ -6,20 +6,20 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\frmtr\date_time;
+namespace pvc\interfaces\frmtr\bool;
 
 use pvc\interfaces\frmtr\FrmtrGenericInterface;
 
 /**
- * Class FrmtrTimestampInterface
+ * Interface FrmtrBooleanInterface
  *
- * @extends FrmtrGenericInterface<float|int>
+ * @extends FrmtrGenericInterface<bool>
  */
-interface FrmtrTimestampGenericInterface extends FrmtrGenericInterface
+interface FrmtrBooleanInterface extends FrmtrGenericInterface
 {
     /**
      * format
-     * @param float|int $value
+     * @param bool $value
      * @return string
      */
     public function format($value): string;

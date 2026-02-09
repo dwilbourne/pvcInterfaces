@@ -8,7 +8,7 @@ use pvc\interfaces\html\dom\DomNodeInterface;
 /**
  * @extends FrmtrGenericInterface<DomNodeInterface>
  */
-interface FrmtrHtmlGenericInterface extends FrmtrGenericInterface
+interface FrmtrHtmlInterface extends FrmtrGenericInterface
 {
     /**
      * format

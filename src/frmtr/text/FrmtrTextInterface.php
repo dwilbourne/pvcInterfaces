@@ -6,21 +6,20 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\frmtr\date_time;
+namespace pvc\interfaces\frmtr\text;
 
-use DateTime;
 use pvc\interfaces\frmtr\FrmtrGenericInterface;
 
 /**
- * Interface FrmtrDateTimeInterface
+ * Interface FrmtrTextInterface
  *
- * @extends FrmtrGenericInterface<DateTime>
+ * @extends FrmtrGenericInterface<string>
  */
-interface FrmtrDateTimeGenericInterface extends FrmtrGenericInterface
+interface FrmtrTextInterface extends FrmtrGenericInterface
 {
     /**
      * format
-     * @param DateTime $value
+     * @param string $value
      * @return string
      */
     public function format($value): string;

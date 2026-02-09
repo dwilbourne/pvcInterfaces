@@ -10,7 +10,7 @@ use pvc\interfaces\frmtr\FrmtrGenericInterface;
  * @extends FrmtrGenericInterface<int|float>
  * numeric formatters (ints, floats, currency) can all take either ints or floats as arguments
  */
-interface FrmtrNumberGenericInterface extends FrmtrGenericInterface
+interface FrmtrNumberInterface extends FrmtrGenericInterface
 {
     /**
      * format

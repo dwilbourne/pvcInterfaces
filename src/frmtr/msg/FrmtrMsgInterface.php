@@ -6,20 +6,21 @@
 
 declare(strict_types=1);
 
-namespace pvc\interfaces\frmtr\bool;
+namespace pvc\interfaces\frmtr\msg;
 
 use pvc\interfaces\frmtr\FrmtrGenericInterface;
+use pvc\interfaces\msg\MsgInterface;
 
 /**
- * Interface FrmtrBooleanInterface
+ * Interface FrmtrMsgInterface
  *
- * @extends FrmtrGenericInterface<bool>
+ * @extends FrmtrGenericInterface<MsgInterface>
  */
-interface FrmtrBooleanGenericInterface extends FrmtrGenericInterface
+interface FrmtrMsgInterface extends FrmtrGenericInterface
 {
     /**
      * format
-     * @param bool $value
+     * @param MsgInterface $value
      * @return string
      */
     public function format($value): string;

@@ -7,7 +7,7 @@ use pvc\interfaces\frmtr\FrmtrGenericInterface;
 /**
  * @extends FrmtrGenericInterface<object>
  */
-interface FrmtrObjectGenericInterface extends FrmtrGenericInterface
+interface FrmtrObjectInterface extends FrmtrGenericInterface
 {
     /**
      * format
