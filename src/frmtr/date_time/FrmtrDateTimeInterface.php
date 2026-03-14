@@ -21,19 +21,11 @@ interface FrmtrDateTimeInterface extends FrmtrGenericInterface
 {
     public function setCalendarType(CalendarType $calendarType): void;
 
-    public function getCalendarType(): CalendarType;
-
     public function setTimezone(DateTimeZone $timezone): void;
-
-    public function getTimezone(): DateTimeZone;
 
     public function setDateType(DateType $dateType): void;
 
-    public function getDateType(): DateType;
-
     public function setTimeType(TimeType $timeType): void;
-
-    public function getTimeType(): TimeType;
 
     /**
      * format
