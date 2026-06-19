@@ -25,7 +25,7 @@ interface XCodePrefixesInterface
      * @param string $namespace
      * @return int|false
      */
-    public static function getXCodePrefix(string $namespace): int|false;
+    public function getXCodePrefix(string $namespace): int|false;
 
     /**
      * @function getXCodePrefixes returns an array of exception code prefixes.
@@ -34,5 +34,5 @@ interface XCodePrefixesInterface
      *
      * @return array<class-string, int>
      */
-    public static function getXCodePrefixes(): array;
+    public function getXCodePrefixes(): array;
 }
