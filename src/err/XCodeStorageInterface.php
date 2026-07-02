@@ -5,10 +5,10 @@ namespace pvc\interfaces\err;
 interface XCodeStorageInterface
 {
     /**
-     * loadXCodeData
+     * @param XCodeDataTypes $dataType
      * @return array<string, int>
      */
-    public function loadXCodeData(): array;
+    public function loadXCodeData(XCodeDataTypes $dataType): array;
 
     /**
      * saveXCodeData
