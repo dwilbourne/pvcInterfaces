@@ -30,9 +30,14 @@ interface XCodePrefixesInterface
     /**
      * @function getXCodePrefixes returns an array of exception code prefixes.
      *
-     * The key in the array is the namespace of the exception library.
+     * @param XCodeDataType $dataType
+     *
+     * specify XCodeDataType::PVC_PREFIXES or XCodeDataType::APP_PREFIXES as
+     * the parameter
+     *
+     * The keys in the array are the namespaces of the exception libraries.
      *
      * @return array<string, int>
      */
-    public function getXCodePrefixes(): array;
+    public function getXCodePrefixes(XCodeDataType $dataType): array;
 }
