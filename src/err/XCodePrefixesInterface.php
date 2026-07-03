@@ -18,7 +18,7 @@ namespace pvc\interfaces\err;
 interface XCodePrefixesInterface
 {
     /**
-     * @function getXCodePrefix returns the "prefix" corresponding to an exception library.
+     * @function getXCodePrefix returns the integer "prefix" corresponding to an exception library.
      *
      * Prefixes are
      *
@@ -32,7 +32,7 @@ interface XCodePrefixesInterface
      *
      * The key in the array is the namespace of the exception library.
      *
-     * @return array<class-string, int>
+     * @return array<string, int>
      */
     public function getXCodePrefixes(): array;
 }
