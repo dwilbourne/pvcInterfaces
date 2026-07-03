@@ -2,7 +2,7 @@
 
 namespace pvc\interfaces\err;
 
-enum XCodeDataTypes
+enum XCodeDataType
 {
     case PREFIXES;
     case SEQNUM;
