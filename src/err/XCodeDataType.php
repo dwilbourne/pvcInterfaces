@@ -4,6 +4,7 @@ namespace pvc\interfaces\err;
 
 enum XCodeDataType
 {
-    case PREFIXES;
+    case PVC_PREFIXES;
+    case APP_PREFIXES;
     case SEQNUM;
 }
