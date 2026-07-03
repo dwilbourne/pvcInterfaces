@@ -5,11 +5,18 @@ namespace pvc\interfaces\err;
 interface AllocatorInterface
 {
     /**
-     * @param  XCodeDataType  $dataType
+     * @param  XCodePrefixType  $dataType
      * @return int
      *
-     * given an array of existing integer values, return a new integer value that does
-     * not already exist in the array
+     * return a new prefix for the specified prefix type
      */
-    public function allocate(XCodeDataType $dataType): int;
+    public function allocatePrefix(XCodePrefixType $dataType): int;
+
+    /**
+     * @param  string  $namespace
+     * @return int
+     *
+     * return a new exception code for the specified namespace
+     */
+    public function allocateCode(string $namespace): int;
 }
