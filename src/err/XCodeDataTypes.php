@@ -2,8 +2,8 @@
 
 namespace pvc\interfaces\err;
 
-enum XCodeDataTypes : string
+enum XCodeDataTypes
 {
-    case PREFIXES = 'PREFIXES';
-    case SEQNUM = 'SEQNUM';
+    case PREFIXES;
+    case SEQNUM;
 }
