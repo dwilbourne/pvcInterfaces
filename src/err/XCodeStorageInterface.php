@@ -9,7 +9,7 @@ interface XCodeStorageInterface
      *
      * @return array<string, int>
      */
-    public function loadXCodeData(XCodePrefixType $dataType): array;
+    public function loadPrefixes(XCodePrefixType $dataType): array;
 
     /**
      * @param  XCodePrefixType $dataType
@@ -17,7 +17,18 @@ interface XCodeStorageInterface
      *
      * @return void
      */
-    public function saveXCodeData(XCodePrefixType $dataType, array $data): void;
+    public function savePrefixes(XCodePrefixType $dataType, array $data): void;
+
+    /**
+     * @return array<string, int>
+     */
+    public function loadXCodes(): array;
+
+    /**
+     * @param  array<string, int>  $data
+     * @return void
+     */
+    public function saveXCodes(array $data): void;
 
     /**
      * @return array<string, int>
