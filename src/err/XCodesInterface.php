@@ -11,9 +11,4 @@ interface XCodesInterface
      */
     public function getXCode(string $namespace, string $className): int|false;
 
-    /**
-     * @param  ?string  $namespace
-     * @return array<string, int>
-     */
-    public function getXCodes(?string $namespace = null): array;
 }
