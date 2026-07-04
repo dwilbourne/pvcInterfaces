@@ -2,7 +2,7 @@
 
 namespace pvc\interfaces\err;
 
-interface XCodeStorageInterface
+interface XCodeRepositoryInterface
 {
     /**
      * @param XCodePrefixType  $dataType
