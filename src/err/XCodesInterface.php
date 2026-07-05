@@ -9,6 +9,6 @@ interface XCodesInterface
      * @param  class-string  $className
      * @return int|false
      */
-    public function getXCode(string $namespace, string $className): int|false;
+    public static function getXCode(string $namespace, string $className): int|false;
 
 }
