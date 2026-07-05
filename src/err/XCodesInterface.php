@@ -5,10 +5,9 @@ namespace pvc\interfaces\err;
 interface XCodesInterface
 {
     /**
-     * @param  string  $namespace
      * @param  class-string  $className
      * @return int|false
      */
-    public static function getXCode(string $namespace, string $className): int|false;
+    public static function getXCode(string $className): int|false;
 
 }
