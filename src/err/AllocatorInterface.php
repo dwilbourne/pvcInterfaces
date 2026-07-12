@@ -10,7 +10,7 @@ interface AllocatorInterface
      *
      * return a new prefix for the specified prefix type
      */
-    public function allocatePrefix(XCodePrefixType $dataType): int;
+    public static function allocatePrefix(XCodePrefixType $dataType): int;
 
     /**
      * @param  string  $namespace
@@ -18,5 +18,5 @@ interface AllocatorInterface
      *
      * return a new exception code for the specified namespace
      */
-    public function allocateCode(string $namespace): int;
+    public static function allocateCode(string $namespace): int;
 }

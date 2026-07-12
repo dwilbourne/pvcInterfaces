@@ -25,5 +25,5 @@ interface XCodePrefixesInterface
      * @param string $namespace
      * @return int|false
      */
-    public function getXCodePrefix(string $namespace): int|false;
+    public static function getXCodePrefix(string $namespace): int|false;
 }
