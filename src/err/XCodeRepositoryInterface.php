@@ -14,6 +14,13 @@ namespace pvc\interfaces\err;
 interface XCodeRepositoryInterface
 {
     /**
+     * @param  string  $path
+     * @return void
+     * path to the directory where the XCode files are stored.
+     */
+    public static function setPath(string $path): void;
+
+    /**
      * @param XCodePrefixType  $dataType
      *
      * @return array<string, int>
