@@ -2,16 +2,13 @@
 
 namespace pvc\interfaces\frmtr\array;
 
-use pvc\interfaces\frmtr\date_time\DateType;
-
 /**
  * Interface ArrayFlattenerInterface
- * @template DataType
  */
 interface ArrayFlattenerInterface
 {
     /**
-     * @param  array<DateType>  $array
+     * @param  array<string>  $array
      * @return string
      */
     public function flatten(array $array): string;
