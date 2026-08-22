@@ -2,12 +2,14 @@
 
 namespace pvc\interfaces\frmtr\array;
 
-use pvc\interfaces\frmtr\FrmtrInterface;
+use pvc\interfaces\frmtr\FrmtrGenericInterface;
+
 
 /**
  * converts an array to a string
+ * @extends FrmtrGenericInterface<array<mixed>>
  */
-interface FrmtrArrayInterface extends FrmtrInterface
+interface FrmtrArrayInterface extends FrmtrGenericInterface
 {
     /**
      * format
