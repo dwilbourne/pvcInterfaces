@@ -2,14 +2,17 @@
 
 namespace pvc\interfaces\frmtr\array;
 
-use pvc\interfaces\frmtr\FrmtrGenericInterface;
+use pvc\interfaces\frmtr\date_time\DateType;
 
 /**
  * Interface ArrayFlattenerInterface
- *
- * @extends FrmtrArrayInterface<array<string>>
+ * @template DataType
  */
-interface ArrayFlattenerInterface extends FrmtrGenericInterface
+interface ArrayFlattenerInterface
 {
-
+    /**
+     * @param  array<DateType>  $array
+     * @return string
+     */
+    public function flatten(array $array): string;
 }
