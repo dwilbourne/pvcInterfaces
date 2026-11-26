@@ -21,15 +21,15 @@ interface XCodeInterface
      * returns a string obtained from the Packages enum (located in pvcErr) corresponding to the package of the class that implements
      * this interface.
      */
-    public function Package(): string;
+    public function package(): string;
 
     /**
      * returns a string obtained from the Severities enum (located in pvcErr) corresponding to the severity of the error.
      */
-    public function Severity(): string;
+    public function severity(): string;
 
     /**
      * returns a string obtained from the ExceptionTypes enum (located in pvcErr) corresponding to the type of exception.
      */
-    public function ExceptionType(): string;
+    public function exceptionType(): string;
 }
