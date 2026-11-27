@@ -18,18 +18,18 @@ interface XCodeInterface
     public function messageTemplate(): string;
 
     /**
-     * returns a string obtained from the Packages enum (located in pvcErr) corresponding to the package of the class that implements
+     * returns an int obtained from the Packages enum (located in pvcErr) corresponding to the package of the class that implements
      * this interface.
      */
-    public function package(): string;
+    public function package(): int;
 
     /**
-     * returns a string obtained from the Severities enum (located in pvcErr) corresponding to the severity of the error.
+     * returns an int obtained from the Severities enum (located in pvcErr) corresponding to the severity of the error.
      */
-    public function severity(): string;
+    public function severity(): int;
 
     /**
-     * returns a string obtained from the ExceptionTypes enum (located in pvcErr) corresponding to the type of exception.
+     * returns an int obtained from the ExceptionTypes enum (located in pvcErr) corresponding to the type of exception.
      */
-    public function exceptionType(): string;
+    public function exceptionType(): int;
 }
