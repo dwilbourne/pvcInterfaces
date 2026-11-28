@@ -32,4 +32,9 @@ interface XCodeInterface
      * returns an int obtained from the ExceptionTypes enum (located in pvcErr) corresponding to the type of exception.
      */
     public function exceptionType(): int;
+
+    /**
+     * returns an int obtained from the RetryPolicies enum (located in pvcErr) corresponding to the retry policy.
+     */
+    public function retryPolicy(): int;
 }
