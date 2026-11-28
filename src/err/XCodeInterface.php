@@ -29,9 +29,9 @@ interface XCodeInterface
     public function severity(): int;
 
     /**
-     * returns an int obtained from the ExceptionTypes enum (located in pvcErr) corresponding to the type of exception.
+     * returns an int obtained from the ErrorCategory enum (located in pvcErr) corresponding to the type of exception.
      */
-    public function exceptionType(): int;
+    public function errorCategory(): int;
 
     /**
      * returns an int obtained from the RetryPolicies enum (located in pvcErr) corresponding to the retry policy.
